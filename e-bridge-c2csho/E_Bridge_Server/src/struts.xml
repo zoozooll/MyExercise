@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="GBK" />
+	<!--
+		struts2.0是用模板的方式来管理配置文件的， 如果有多个配置文件模板，可以通过include导进来
+	-->
+	<include file="struts-default.xml" />
+	<!-- package name不是class那个包的意思，这里只是相当于一个变量名 -->
+	<!--
+		package: struts2.0是用包的方式来给定义的action分类,一个配置文件可以有多个packae.
+		extends:继承了struts的父包
+	-->
+	<include file="struts1.xml"></include>
+</struts>
+
+
+

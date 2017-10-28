@@ -1,0 +1,35 @@
+BODY {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 14px; MARGIN: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px; FONT-FAMILY: ËÎÌו; BACKGROUND-COLOR: #fff;
+}
+#container{
+width:952px;}
+#title{
+float:left;}
+ul{
+list-style-type:none;}
+#title ul li{
+color:#000000; font:'ËÎÌו',normal; font-size:25px; font-weight:900;}
+#top{
+float:left; width:950px;
+}
+#main{
+font:bolder;
+}
+#top ul{
+MARGIN-LEFT: 95px! important; HEIGHT: 22px;
+}
+#top ul li{
+float:left; margin:0px 20px 0px 0px;font-size: 14px}
+hr{ color:#FF9900; size:5px; margin-top:-25px;}
+.red{
+color:#FF0000; }
+
+.button {
+	color: #000000;
+	background-color: #F5F4F2;
+	border: 1px solid #808080;
+	padding-top: 2px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}

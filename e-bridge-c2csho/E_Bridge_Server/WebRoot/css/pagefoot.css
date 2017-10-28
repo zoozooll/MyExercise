@@ -1,0 +1,95 @@
+﻿/*分页脚样式开始*/
+/*分页脚基本设置*/
+.mj_pagefoot{
+	padding:3px;
+	margin:3px;
+	text-align:center;
+	font-family:宋体, Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+/*分页脚超链接样式开始*/
+.mj_pagefoot a {
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #9aafe5;
+	
+	text-decoration: none; 
+	color: #2e6ab1;
+}
+.mj_pagefoot a:hover {
+	border: 1px solid #2b66a5;
+	color: #000;
+	background-color: #FFFFDF;
+}
+/*分页脚超链接样式结束*/
+/*上一页下一页按钮样式*/
+.mj_pagefoot span.current {
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid navy;
+	font-weight: bold;
+	background-color: #2e6ab1;
+	color: #FFF;
+}
+/*无效翻页按钮样式*/
+.mj_pagefoot span.disabled {
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #929292;
+	color: #929292;
+}
+/*其它信息样式*/
+.mj_pagefoot span.info{
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	color: #929292;
+}
+/*分页脚样式结束*/
+/*分页脚样式开始*/
+/*分页脚基本设置*/
+.mj_pagefoot_green{
+padding: 3px;
+		margin: 3px;
+		text-align:center;
+		font-family:Tahoma,Helvetica,sans-serif;
+		font-size:13px;
+}
+
+/*分页脚超链接样式开始*/
+.mj_pagefoot_green a {
+		border: 1px solid #ccdbe4;
+		margin-right:3px;
+		padding:2px 8px;
+
+		background-position:bottom;
+		text-decoration: none;
+
+		color: #0061de;	
+	}
+.mj_pagefoot_green a:hover {
+		border: 1px solid #2b55af;
+		background-image:none;
+		background-color:#3666d4;
+		color: #fff;
+}
+/*分页脚超链接样式结束*/
+/*上一页下一页按钮样式*/
+.mj_pagefoot_green span.current {
+		margin-right:3px;
+		padding:2px 6px;
+		
+		font-weight: bold;
+		color: #000;
+}
+/*无效翻页按钮样式*/
+.mj_pagefoot_green span.disabled {
+display:none;
+}
+/*其它信息样式*/
+.mj_pagefoot_green span.info{
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	color: #929292;
+}
+/*分页脚样式结束*/
+

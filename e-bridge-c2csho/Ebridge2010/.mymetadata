@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Ebridge2010"
+  id="myeclipse.1278084839328"
+  context-root="/Ebridge2010"
+  j2ee-spec="5.0"
+  archive="Ebridge2010.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,35 @@
+@CHARSET "GB18030";
+.container{
+	 width: 1000px;margin: 10px 120px;
+}
+.top{
+	margin-bottom: 10px;
+}
+.logo{
+	float:left;margin-top: 20px;
+}
+.title{
+	background:url('../../images/shopcart/warebuy1.jpg') no-repeat;
+	list-style-type: none; 
+	padding: 28px 1px 1px 1px;
+	margin: 2px 2px 2px 200px;
+	font-size:13px;
+	font-weight:  bold;
+}
+
+.mycart{
+	padding:30px 0px 0px 0px;
+	margin:1px; 
+	font-size: 12px;
+}
+.myselect{
+	background:#AACDED url('../../images/shopcart/shopcart_bg.jpg') no-repeat;"
+}
+.listcart{	
+	margin-top:-19px;
+	 height: auto;
+	 width:100%;
+	 border:3px solid #AACDED;
+	border-top: none;
+}
+

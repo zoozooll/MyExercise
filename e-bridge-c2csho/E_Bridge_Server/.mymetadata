@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="E_Bridge_Server"
+  id="myeclipse.1238138060343"
+  context-root="/E_Bridge"
+  j2ee-spec="5.0"
+  archive="E_Bridge_Server.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

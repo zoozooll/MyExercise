@@ -1,0 +1,22 @@
+#
+#Wed Jul 15 23:54:06 CST 2009
+genBasicCompId=false
+sessionFactoryName=
+profile=
+daoSFId=
+version=3.2
+jndiPath=
+detectM2M=false
+reStrategyClass=
+springDaoFile=
+useJavaTypes=true
+keyGenerator=native
+libInstallFolder=<no jars/zips in selected libraries>
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+reSettingsFile=/E_Bridge_Server/hibernate.reveng.xml
+configFile=/E_Bridge/src/hibernate.cfg.xml
+createConfigFile=false
+addLibs2Classpath=true

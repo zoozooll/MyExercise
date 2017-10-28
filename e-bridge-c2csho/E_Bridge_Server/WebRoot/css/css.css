@@ -1,0 +1,79 @@
+* {
+	border-top-width: 0px; padding-right: 0px; padding-left: 0px; border-left-width: 0px; border-bottom-width: 0px; padding-bottom: 0px; margin: 0px; padding-top: 0px; border-right-width: 0px
+}
+body {
+	font-size: 12px;  font-family: arial,"����",helvetica
+}
+li {
+	font-size: 12px; list-style-type: none
+}
+img {
+	border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px
+}
+a {
+	text-decoration: none
+}
+.clear {
+	clear: both
+}
+#featured {
+	overflow: hidden; width: 480px; position: relative; height: 200px
+}
+#featured .word {
+	padding-right: 5px; padding-left: 5px; z-index: 10; background:#222; left: 0px; padding-bottom: 5px; width: 470px; color: #fff; bottom: 0px; padding-top: 5px; position: absolute; height: 32px
+}
+#featured .word h3 {
+	font-size: 13px
+}
+#featured .ui-els-hide {
+	display: none
+}
+#thumbs {
+	width: 480px; list-style-type: none; height: 28px
+}
+* html #thumbs {
+	height: 100%
+}
+#thumbs li {
+	display: inline; float: left; width: 52px; margin-right: 4px; height: 24px
+}
+#thumbs ul {
+	margin-top: 3px
+}
+#thumbs li.last_img {
+	margin-right: 4px
+}
+#thumbs li.first {
+	margin: 5px 10px 0pt 15px; width: 20px; cursor: pointer; height: 13px
+}
+#thumbs li.last {
+	margin: 5px 12px 0pt 8px; width: 20px; cursor: pointer; height: 13px
+}
+#thumbs li a {
+	border-right: #9c9c9c 2px solid; border-top: #9c9c9c 2px solid; display: block; font-size: 0px; border-left: #9c9c9c 2px solid; width: 48px; border-bottom: #9c9c9c 2px solid
+}
+#thumbs li a:hover {
+	border-right: #99cc33 2px solid; border-top: #99cc33 2px solid; border-left: #99cc33 2px solid; border-bottom: #99cc33 2px solid
+}
+#thumbs li a.current {
+	border: #5fc243 2px solid;
+}
+#thumbs li.first img {
+	border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px
+}
+#thumbs li.last img {
+	border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px
+}
+#topstory {
+	margin-top: 5px;
+	margin-left: 5px;
+	background: #fff;
+	float: none;
+	width: 490px;
+	height: 237px;
+	left: 181px;
+	top: 260px;
+}
+#highlight {
+	padding-right: 5px; padding-left: 2px; float: none; padding-bottom: 5px; width: 470px; padding-top: 5px
+}

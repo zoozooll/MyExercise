@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gbk"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="GBK" />
+	<!-- 引入配置文件 -->
+	<include file="struts-default.xml" />
+	
+	<!--  -->
+	<!-- 产品配置 -->
+	<include file="struts-product.xml"></include>
+	
+</struts>
+
+
+

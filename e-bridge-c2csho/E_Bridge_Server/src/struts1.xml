@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!--<include file="struts-default.xml" />
+	--><!-- package name不是class那个包的意思，这里只是相当于一个变量名 -->
+	<!--
+		package: struts2.0是用包的方式来给定义的action分类,一个配置文件可以有多个packae.
+		extends:继承了struts的父包
+	-->
+	<package name="com.gjun" extends="struts-default">
+		<!-- 当要用自定义的方法时就要用method区分要调用哪个方法 -->
+		<action name="addProductToCartAction" class="com.action.CartAction"
+			method="addProductToCart">
+			<result name="shopcart">shopcart.jsp</result>
+		</action>
+		<action name="delProductFormCartAction" class="com.action.CartAction"
+			method="delProductFormCart">
+			<result name="shopcart">shopcart.jsp</result>
+		</action>
+		<action name="updateProductSumFromCartAction" class="com.action.CartAction"
+			method="updateProductSumFromCart">
+			<result name="shopcart">shopcart.jsp</result>
+		</action>
+		<action name="removeCartAction" class="com.action.CartAction"
+			method="removeCart">
+			<result name="shopcart">shopcart.jsp</result>
+		</action>
+
+
+		<!-- 在下订单之前先得到订单编号 -->
+		<action name="beforeCreateOrderAction" class="com.action.OrderAction"
+			method="beforeCreateOrder">
+			<result name="order">order.jsp</result>
+			<result name="login">login.jsp</result>
+		</action>
+	
+		<!-- 在下订单之前先得到订单编号 -->
+		<action name="createDeliveryBillBoImpl" class="com.action.OrderAction"
+			method="createDeliveryBillBoImpl">
+			<result name="success">Unaudited_order.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		
+		<!-- 下订单 -->
+		<action name="createOrderAction" class="com.action.OrderAction"
+			method="createOrder">
+			<result name="success">index.jsp</result>
+			<result name="error">error.jsp</result>
+
+		</action>
+
+		<!-- 查看历史 订单-->
+		<action name="findAllOrderAction" class="com.action.OrderAction"
+			method="showPurchaserOrder">
+			<result name="success">Unaudited_order.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		
+			
+		<!-- 卖家修改订单状态 -->
+		<action name="updateOrderStatus" class="com.action.OrderAction"
+			method="updateOrderStatus">
+			<result name="success">Unaudited_order.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		
+		<!-- 根据订单id删除订单 -->
+		<action name="delOrderAction" class="com.action.OrderAction"
+			method="delOrder">
+			<result name="success">Unaudited_order.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+
+		<!-- 查看产品明细信息的action -->
+		<action name="showProduct" class="com.action.ProductAction"
+			method="showProduct">
+			<result name="success">productdesc.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		
+		<!--商家 查看产品明细信息的action -->
+		<action name="myshopshowProduct" class="com.action.ProductAction"
+			method="showProduct">
+			<result name="success">myshopproductdesc.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		
+		<!-- 增加商品信息 -->
+		<action name="beforeAddProduct" class="com.action.ProductAction" method="beforeAddProduct">
+			<result name="success">productadd.jsp</result>
+			<result name="fail">login.jsp</result>
+		</action>
+		
+           <action name="addProduct" class="com.action.ProductAction" method="addProduct">
+           	<result name="success">myshopproductlist.jsp</result>
+           	<result name="error">error.jsp</result>
+           </action>
+           
+           <!--删除商品  -->
+           <action name="delProduct" class="com.action.ProductAction" method="delProduct">
+            	<result name="success">myshopproductlist.jsp</result>
+           	<result name="error">error.jsp</result>
+           </action>
+		
+
+           <action name="findAllDelivery" class="com.action.ProductAction" method="findAllDelivery">
+            	<result name="success">myshopdelist.jsp</result>
+           	
+           </action>
+           
+           <action name="findAllRecivery" class="com.action.ProductAction" method="findAllRecivery">
+            	 <result name="success">myshoprelist.jsp</result>
+           </action>
+          
+
+		<!-- 分页查询所有商品 -->
+		<action name="fingProduct" class="com.action.ProductAction"
+			method="fingProduct">
+			<result name="success">productlist.jsp</result>
+		</action>
+
+		<!-- 分类别查询所有的商品 -->
+		<action name="findProductByType" class="com.action.ProductAction"
+			method="findProductByType">
+			<result name="success">productlistByType.jsp
+			</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<!-- 分品牌查询所有的商品 -->
+		<action name="findProductByBrand" class="com.action.ProductAction"
+			method="findProductByBrand">
+			<result name="success">productlistByBrand.jsp
+			</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<!-- 查询所有的品牌 -->
+		<action name="fingBrandByAll" class="com.action.ProductAction"
+			method="fingBrandByAll">
+			<result name="success">brandlist.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+				
+		<!-- 查询所有的产品分类  -->
+		<action name="findAllProductTypes" class="com.action.ProductAction"
+			method="findAllProductTypes">
+			<result name="success">allproducttypeslist.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<!-- 用户Action(卖家,买家) -->
+		<!-- 买家,卖家登录 -->
+		<action name="loginAction" class="com.action.UserAction"
+			method="login">
+			<result name="success">index.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+		<!-- 买家,卖家注册 -->
+		<action name="registerAction" class="com.action.UserAction"
+			method="register">
+			<result name="success">registersuccess.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 买家,卖家更新 -->
+		<action name="updatePurchaserAction" class="com.action.UserAction"
+			method="update">
+			<result name="success">myshopproductlist.jsp
+			</result>
+			<result name="error">error.jsp</result>
+		</action>
+		
+		<!-- 买家,卖家更新 -->
+		<action name="purchasertoVenderAction" class="com.action.UserAction"
+			method="purchasertoVender">
+			<result name="success">readonlyuserdata.jsp
+			</result>
+			<result name="error">error.jsp</result>
+		</action>
+		
+		<!-- 买家,卖家注销 -->
+		<action name="removeAttributeAction" class="com.action.UserAction"
+			method="remove">
+			<result name="success">loginout.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<!--按名称查找 买家,卖家 -->
+		<action name="findUserByNameAction" class="com.action.UserAction"
+			method="findByName">
+			<result name="success">readonlyuserdata.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!--查找 所有买家,卖家 -->
+		<action name="findAllPurchasersAction" class="com.action.UserAction"
+			method="getAllPurchaser">
+			<result name="success">userlist.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<!--模糊查询SearchAction -->
+		<action name="listSearchAction" class="com.action.SearchAction"
+			method="list">
+			<result name="pro">productlist.jsp</result>
+			<result name="pur">userlist.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+
+		<!--管理员AdminAction -->
+		<!-- 增加 用户-->
+		<action name="adminaddUser" class="com.action.AdminAction"
+			method="addUser">
+			<result name="success">userlist.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 删除用户 -->
+		<action name="admindeleteUser" class="com.action.AdminAction"
+			method="deleteUser">
+			<result name="success">userlist.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		
+		<!-- 按条件删除用户 -->
+		<action name="admindeleteUserBlur" class="com.action.AdminAction"
+			method="deleteUserByBlur">
+			<result name="success">userdelete.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 查询用户 -->
+		<action name="adminqueryUser" class="com.action.AdminAction"
+			method="queryUser">
+			<result name="success">userlist.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 按条件 查询用户 -->
+		<action name="adminQueryUserBlur" class="com.action.AdminAction"
+			method="QueryUserBlur">
+			<result name="success">userlist.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		
+		<!-- 修改更新用户 -->
+		<action name="adminmodifyUser" class="com.action.AdminAction"
+			method="modifyUser">
+			<result name="success">userlist.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 修改管理员密码 -->
+		<action name="adminmodifyAdminPassword" class="com.action.AdminAction"
+			method="modifyPassword">
+			<result name="success">userlist.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 修改经销商状态 -->
+		<action name="adminmodifyVenStatus" class="com.action.AdminAction"
+			method="modifyUserStatus">
+			<result name="success">userlist.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 查看自身信息 -->
+		<action name="adminLookSelf" class="com.action.AdminAction"
+			method="findAdminById">
+			<result name="success">admindata.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		
+		<!-- 修改自身信息 -->
+		<action name="modifyAdmin" class="com.action.AdminAction"
+			method="modifyAdmin">
+			<result name="success">admindata.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<!-- 按Name查看用户信息 -->
+		<action name="adminFindUserByName" class="com.action.AdminAction"
+			method="findUserByName">
+			<result name="success">userdata.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 按Name查看用户信息 -->
+		<action name="adminFindVenById" class="com.action.AdminAction"
+			method="findVenById">
+			<result name="success">userupdate.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<!-- 管理员登录  -->
+		<action name="adminLogin" class="com.action.AdminAction"
+			method="adminLogin">
+			<result name="success">index.html</result>
+			<result name="error">login.jsp</result>
+			<result name="fail">error.jsp</result>
+		</action>
+		
+		<!-- 图片上传 -->
+		<action name="doMultipleUploadUsingList"
+			class="com.action.MutiFileUploadAction">
+			<result>productadd.jsp</result>
+		</action>
+	</package>
+</struts>
+
+
+

@@ -1,0 +1,51 @@
+.footerBox IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.footerBox {
+	CLEAR: both; BORDER-TOP: #ff7300 3px solid; FONT-SIZE: 12px; PADDING-BOTTOM: 10px; MARGIN: 10px auto; WIDTH: 99%; PADDING-TOP: 7px; TEXT-ALIGN: center
+}
+.mt_0 {
+	MARGIN-TOP: 0px
+}
+.footerBox A:link {
+	COLOR: #003278; TEXT-DECORATION: none
+}
+.footerBox A:visited {
+	COLOR: #003278; TEXT-DECORATION: none
+}
+.footerBox A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}
+.footer {
+	MARGIN: 0px auto; WIDTH: 952px
+}
+.footer UL {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 3px auto; WIDTH: 100%; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; TEXT-ALIGN: center
+}
+.footer LI {
+	BORDER-RIGHT: #666 1px solid; PADDING-RIGHT: 4px; DISPLAY: inline; PADDING-LEFT: 9px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.footer LI.sli {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.footer LI.sli2 {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 1px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.footer .no_border {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+.footBox {
+	MARGIN: 0px auto; WIDTH: 952px; TEXT-ALIGN: center
+}
+.foot_corp {
+	CLEAR: both; FONT-SIZE: 12px; MARGIN: 10px auto; WIDTH: 515px
+}
+.foot_corp IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+.foot_corp SPAN {
+	FLOAT: left; MARGIN: 0px 5px
+}
+.foot_corp SPAN.img_pd {
+	PADDING-TOP: 15px
+}

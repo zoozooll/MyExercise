@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+    "http://getahead.org/dwr/dwr20.dtd">
+<dwr>
+	<allow>
+		<!-- dwr与spring的集成 -->
+        <create javascript="userDao" creator="spring" scope="session">
+        	<param name="beanName" value="userDao"></param>
+        	 <param name="location" value="applicationContext.xml"></param>
+        </create>
+      </allow>
+</dwr>

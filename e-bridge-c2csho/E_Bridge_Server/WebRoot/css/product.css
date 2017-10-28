@@ -1,0 +1,112 @@
+body{
+	background-color: #FFFFFF;
+	margin:1px 0px 0px 0px;
+	padding:0px;
+	text-align:center;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#container{
+border-color:#F18C1B;
+border-width:1px;
+	position:relative;
+	margin:0px auto 0px auto;
+	width:900px;
+	text-align:left;
+}
+
+#globallink{
+	margin:0px; padding:0px;
+}
+#globallink ul{
+    list-style:none;
+	padding:0px; margin:0px;
+}
+#globallink li{
+	float:left; 
+	text-align:center;
+	width:100px;	
+}
+#globallink a{
+	display:block;
+	padding:9px 6px 11px 6px;
+	margin:0px;
+	background-image: url(../image/button1.jpg);
+	background-repeat: no-repeat;
+}
+#globallink a:link, #globallink a:visited{
+	color:#000000;
+	text-decoration:none;
+}
+#globallink a:hover{
+	color:#FFFF80;
+	text-decoration:underline;
+	background-image: url(../image/button1_bg.jpg);
+	background-repeat: no-repeat;
+	/* Ìæ»»±³¾°Í¼Æ¬ */
+}
+
+#left{
+	width:180px;
+	float:left; /* ÏÂ¶ËÔ²½Ç */
+	margin:1px 0px 0px 0px;
+	background-color: #FFFFFF;
+	background-image: url(../image/leftbottom.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+#login{
+	no-repeat;
+	padding:55px 0px 10px 0px;
+	width:200px;
+	position:absolute;
+	margin-left:0px;
+	left: -2px;
+	top: 227px;
+}
+#login form{
+	padding:0px; margin:0px;
+}
+#login p{
+	margin:0px; text-align:left;
+	padding:5px 0px 0px 25px;
+}
+#login p input{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+#login form input.text{
+	border-bottom:1px solid #000000;
+	border-left:none; border-right:none;
+	border-top:none;
+	padding:0px; width:90px;
+}
+#login form input.btn{
+	border:1px solid #000000;
+	background-color:#F18C1B;
+	height:17px; padding:0px;
+}
+#login p a:link, #login p a:visited{
+	color:#333333;
+	text-decoration:none;
+}
+#login p a:hover{
+	color:#000088;
+	text-decoration:underline;
+}
+
+
+#latest{
+	background:url(null) no-repeat;
+	padding:35px 0px 0px 0px;
+	width:600px;
+	position:absolute;
+	margin-left:200px;
+	margin-top:15px;
+	left: 45px;
+	top: 270px;
+}
+#latest img{
+	border:none;
+	padding-left:1px;
+}

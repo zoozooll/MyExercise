@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<!-- struts管理spring -->
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLoaction</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	<filter>
+	    <filter-name>hibernateFilter</filter-name>
+	    <filter-class>
+	     org.springframework.orm.hibernate3.support.OpenSessionInViewFilter
+	    </filter-class>
+	</filter>
+	<filter-mapping>
+	    <filter-name>hibernateFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 购物车Listener -->
+	<listener>
+		<listener-class>com.listener.CartListener</listener-class>
+	</listener>
+
+	<!-- before 监听器 -->
+	<listener>
+		<listener-class>
+			com.listener.BeforeOrderListener
+		</listener-class>
+	</listener>
+	<!-- 类似于Struts1.2的ActionServlet，起总控制器的作用 -->
+
+
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>
+			org.directwebremoting.servlet.DwrServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	
+	
+
+	<filter>
+		<filter-name>struts2</filter-name>
+
+		<filter-class>
+			org.apache.struts2.dispatcher.FilterDispatcher
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!--  表单提交中文乱码过滤器 ,此内容通过拦截器进行-->
+	<filter>
+		<filter-name>charEncodingFilter</filter-name>
+		<filter-class>com.filter.CharacterFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>charEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>ProductList</servlet-name>
+		<servlet-class>com.servlet.ProductList</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SearchServlet</servlet-name>
+		<servlet-class>com.servlet.SearchServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AutoComplete</servlet-name>
+		<servlet-class>com.servlet.AutoComplete</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ProductList</servlet-name>
+		<url-pattern>/ProductList</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SearchServlet</servlet-name>
+		<url-pattern>/SearchServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AutoComplete</servlet-name>
+		<url-pattern>/AutoComplete</url-pattern>
+	</servlet-mapping>
+	<!-- 配置在JSP页面中调用SPRING的BEAN的方法 -->
+
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/500.htm</location>
+	</error-page>
+
+	<error-page>
+		<error-code>400</error-code>
+		<location>/400.htm</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error_404.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+
+</web-app>
