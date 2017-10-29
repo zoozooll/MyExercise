@@ -1,3 +1,0 @@
-<?php
-$shortcutforum=array(
-);?>

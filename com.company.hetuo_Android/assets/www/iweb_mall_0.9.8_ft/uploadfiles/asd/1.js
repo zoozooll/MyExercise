@@ -1,1 +1,0 @@
-document.write('<a href="http://www.jooyea.net"><img src="docs/images/asd/2009/12/28/2009122801533971.jpg" width="960" height="90" alt="iwebshop"></a>');

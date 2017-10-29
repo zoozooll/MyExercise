@@ -1,1 +1,0 @@
-2008-2010 162100.com All Rights Reserved - <A style="COLOR: #666666" href="http://www.miibeian.gov.cn/" target=_blank>沪icp备12345678号</A><?php require('inc/require/code_author.txt'); ?>

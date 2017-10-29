@@ -1,3 +1,0 @@
-<div id="footer"> <span><a href="http://<?php echo $_SERVER['HTTP_HOST']?>/index.php">主頁</a><b>|</b><a href="http://<?php echo $_SERVER['HTTP_HOST']?>/prolist.php">產品</a><b> |</b><a href="http://<?php echo $_SERVER['HTTP_HOST']?>/company.php">公司介绍</a><b>|</b><a href="http://<?php echo $_SERVER['HTTP_HOST']?>/news.php">新闻中心</a><b>|</b><a
-            href="termsconditions.php">联系方式</a><b>|</b><a href="http://<?php echo $_SERVER['HTTP_HOST']?>/company.php">關於我們</a></span><br/>
-    <span>Copyright @ 2010 Shen Neng Pty Ltd and Herbcare Pty Ltd.ALL rights reserved.</span> </div>

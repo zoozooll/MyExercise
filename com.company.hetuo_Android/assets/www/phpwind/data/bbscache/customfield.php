@@ -1,4 +1,0 @@
-<?php
-$customfield=array(
-);
-?>

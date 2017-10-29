@@ -1,1 +1,0 @@
-document.write("<a href='search.php?k=a'>a</a> <a href='search.php?k=b'>b</a> <a href='search.php?k=c'>c</a> <a href='search.php?k=d'>d</a> ");

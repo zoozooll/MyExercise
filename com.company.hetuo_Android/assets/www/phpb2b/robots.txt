@@ -1,9 +1,0 @@
-#
-# robots.txt for phpb2b
-#
-
-User-agent: *
-
-Disallow: /office-room/
-Disallow: /pb-admin/
-Disallow: /app/
