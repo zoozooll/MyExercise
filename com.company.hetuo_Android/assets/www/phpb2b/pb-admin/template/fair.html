@@ -1,0 +1,68 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_fair}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_fair}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1" href="fair.php"><span><{$_management}></span></a></li>
+        <li><a href="fair.php?do=edit"><{$_add_or_edit}></a></li>
+        <li><a href="fairtype.php"><{$_sorts}></a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" id="SearchFrm" method="get" action="fair.php">
+        <input type="hidden" name="do" value="search" />
+             <div>
+				<{$_title_keywords}> : <input class="queryInput" type="text" name="q" value="" /> 
+                <input type="submit" name="search" id="Search" class="formbtn" value="<{$_searching}>" /> 
+            </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll">展会名称</label></th>
+		  <th>展出时间</th>
+		  <th>展会类型</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><label for="item_<{$item.id}>"><{$item.name}></label><{if $item.picture!=''}><span class="icon-pic"></span><{/if}><{if $item.if_commend==1}><span class="icon-commend"></span><{/if}></td>
+		  <td><{$item.begin_date}>/<{$item.end_date}></td>
+		  <td><{$Expotypes[$item.expotype_id]}></td>
+		  <td class="handler">
+          <ul id="handler_icon">
+            <li><a class="btn_delete" href="fair.php?id=<{$item.id}>&do=del<{$addParams}>" title="<{$_delete}>"><{$_delete}></a></li>
+            <li><a class="btn_edit" href="fair.php?do=edit&id=<{$item.id}><{$addParams}>" title="<{$_edit}>"><{$_edit}></a></li>
+          </ul>  
+		  </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="5"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+      <input type="submit" name="up" value="设为<{$_commend}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

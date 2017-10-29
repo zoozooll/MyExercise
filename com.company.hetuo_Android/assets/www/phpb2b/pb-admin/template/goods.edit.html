@@ -1,0 +1,54 @@
+<{include file="header.html"}>
+<script language='JavaScript'> 
+function myKeyPress(e) { 
+   if (window.event) { e = event; e.which = e.keyCode; } else if (!e.which) e.which = e.keyCode; 
+   var code = e.which; 
+   if (code<=57) { // 判斷輸入鍵是否為數字 0~9。 
+       return true; 
+   } 
+   return false; 
+} 
+</script>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_ads}> &raquo; <{$_service_manage}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_service_manage}></h3> 
+    <ul class="subnav"> 
+		<li><a href="goods.php">列表</a></li>
+        <li><a class="btn1" href="goods.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+    </ul> 
+</div> 
+<div class="info">
+  <form method="post" action="goods.php" id="EditFrm" name="edit_frm">
+  <input type="hidden" name="id" value="<{$item.id}>" />
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 显示名称：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="goods[name]" value="<{$item.name}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 价格：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="goods[price]" value="<{$item.price}>" onkeypress="return myKeyPress(event)"
+onpaste="return !clipboardData.getData('text').match(/\D/)"
+ondragenter="return false"
+style="ime-mode:Disabled" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">描述：</th>
+        <td class="paddingT15 wordSpacing5"><textarea style="width:550px;height:100px;" name="goods[description]"><{$item.description}></textarea></td>
+      </tr>
+      
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<{editor type="tiny_mce"}>
+<{include file="footer.html"}>

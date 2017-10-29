@@ -1,0 +1,463 @@
+<!--<?php
+include_once PrintEot('m_header');
+print <<<EOT
+-->
+<div>
+	<div style="padding:15px 15px 0;">
+		<div class="app-title cc">
+		<span>好友</span>
+    	</div>
+        <div class="tabB cc">
+        	<ul>
+                <li id="type_my"><a href="{$thisbase}">好友列表</a></li>
+                <!--<li id="type_viewer"><a href="{$thisbase}type=viewer">我的访客</a></li>-->
+                <li id="type_find"><a href="{$thisbase}type=find">查找好友</a></li>
+<!--
+EOT;
+if ($o_invite == '1'){print <<<EOT
+-->
+				<li id="type_invite"><a href="{$thisbase}type=invite">邀请好友</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+        	</ul>
+    	</div>
+    </div>
+
+    <table width="100%">
+    <tr class="vt"><td height="400" style="padding-bottom:20px;">
+<script language="JavaScript">
+setCurrent('type_$type','type_my','current');
+</script>
+<!--
+EOT;
+if($type=='find'){
+print <<<EOT
+-->
+			<div class="cc">
+				<div class="fl" style="padding:0 30px 0 0" >
+                <div style="padding-left:25px;">
+					<div class="tab cc b" style="margin:20px 0 20px -10px;" id="search_type_list">
+						<a id="username" href="javascript:;" class="current" onclick="changeSearchType('search_type_list','username','a','current');"><span>用户名</span></a>
+						<a id="uid" href="javascript:;" onclick="changeSearchType('search_type_list','uid','a','current');"><span>用户ID</span></a>
+						<a id="email" href="javascript:;" onclick="changeSearchType('search_type_list','email','a','current');"><span>Email</span></a>
+					</div>
+					<div class="mb10">
+                    <form action="{$thisbase}type=find" method="post" id="inviteForm">
+						<input type="hidden" name="step" value="2">
+						<input type="hidden" name="according" id="according" value="$accord">
+						<input class="input" type="text" name="keyword" value="$keyword" maxlength="25" size="25" style="height:18px;font-size:14px;" />
+						<span class="button"><span><button type="submit">查找</button></span></span>
+					</form>
+                    </div>
+                    <div class="c"></div>
+<!--
+EOT;
+if ($mosort || $reply_to_me_users || $reply_to_other_users){
+if($mosort){print <<<EOT
+-->
+					<div class="dynamic-h cc"><div></div><span>可能认识</span></div>
+					<div class="o-list-img">
+						<ul class="cc tac" style="padding:20px 0 0 0;">
+<!--
+EOT;
+foreach ($mosort as $key => $member){
+if (empty($ifmosortcache) || $ifmosortcache == 1 && $member['uid'] != $winduid && !CkInArray($member['uid'],$friendkeys)){print <<<EOT
+-->
+							<li style="width:100px;margin:0 15px;height:100px;"><a href="u.php?uid=$member[uid]"><img src="{$member[face]}" class="img-50" /></a>
+							<br /><a href="javascript:;"  onclick="sendmsg('pw_ajax.php?action=addfriend&touid=$member[uid]')" title="加为好友"><img src="$pwModeImg/operation/add.png" /></a> <a href="u.php?uid=$member[uid]">$member[username]</a></li>
+<!--
+EOT;
+}
+}print <<<EOT
+-->
+						</ul>
+					</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+                    <div class="c"></div>
+<!--
+EOT;
+if($reply_to_me_users){print <<<EOT
+-->
+					<div class="dynamic-h cc"><div></div><span>经常回复我帖子的用户</span></div>
+					<div class="o-list-img">
+						<ul class="cc tac" style="padding:20px 0 0 0;">
+<!--
+EOT;
+foreach ($reply_to_me_users as $key => $member){print <<<EOT
+-->
+							<li style="width:100px;margin:0 15px;height:100px;"><a href="u.php?uid=$member[uid]"><img src="{$member[face]}" class="img-50" /></a>
+							<br /><a href="javascript:;"  onclick="sendmsg('pw_ajax.php?action=addfriend&touid=$member[uid]')" title="加为好友"><img src="$pwModeImg/operation/add.png" /></a> <a href="u.php?uid=$member[uid]">$member[username]</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+						</ul>
+					</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+                    <div class="c"></div>
+<!--
+EOT;
+if($reply_to_other_users){print <<<EOT
+-->
+					<div class="dynamic-h cc"><div></div><span>我经常回复的用户</span></div>
+					<div class="o-list-img">
+						<ul class="cc tac" style="padding:20px 0 0 0;">
+<!--
+EOT;
+foreach ($reply_to_other_users as $key => $member){print <<<EOT
+-->
+							<li style="width:100px;margin:0 15px;height:100px;"><a href="u.php?uid=$member[uid]"><img src="{$member[face]}" class="img-50" /></a>
+							<br /><a href="javascript:;"  onclick="sendmsg('pw_ajax.php?action=addfriend&touid=$member[uid]')" title="加为好友"><img src="$pwModeImg/operation/add.png" /></a> <a href="u.php?uid=$member[uid]">$member[username]</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+						</ul>
+					</div>
+<!--
+EOT;
+}
+}if($members){print<<<EOT
+-->
+					<div class="dynamic-h cc"><div></div><span>以下为搜索结果</span></div>
+				<div class="o-dl_A cc">
+<!--
+EOT;
+foreach ($members as $key => $member){print <<<EOT
+-->
+					<dl class="cc fl">
+							<dt><a href="u.php?uid=$member[uid]"><img src="{$member[face]}" class="img-50" /></a></dt>
+                            <dd><a href="{$basename}q=user&u=$member[uid]">$member[username]</a><p style="margin:0;"><a href="javascript:;"  onclick="sendmsg('pw_ajax.php?action=addfriend&touid=$member[uid]')" title="加为好友"><img src="$pwModeImg/operation/add.png" /></a><span id="sf_$member[uid]"> &nbsp; <a class="black" style="cursor: pointer;" onclick="sendmsg('pw_ajax.php?action=msg&touid=$member[uid]','','sf_$member[uid]')" title="发送短消息"><img src="$pwModeImg/operation/mail.png" /></a></p></dd>
+                    </dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+                </div><div class="c"></div>
+<!--
+EOT;
+}elseif($accord && $step == '2'){print <<<EOT
+-->
+				<div>很遗憾，没有您所要查找的好友^_^</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+				<div class="cc">$pages</div>
+                </div>
+				</div>
+			</div>
+<script language="javaScript">
+var select = '$accord';
+function changeSearchType(id,select,element,css){
+	var oSearchType = getObj(id);
+	var elements = oSearchType.getElementsByTagName(element);
+	for (var i=0;i<elements.length;i++) {
+		if (elements[i].id == select) {
+			elements[i].className = css;
+			getObj('according').value = select;
+		} else {
+			elements[i].className = '';
+		}
+	}
+}
+changeSearchType('search_type_list',select,'a','current');
+</script>
+<!--
+EOT;
+}elseif($type=='invite'){print <<<EOT
+-->
+	<div class="cc" style="padding:0 20px;">
+        <div class="w300 fl mr10">
+            <h2>方法一：给好友发送 Email 邀请</h2>
+            <form action="{$thisbase}type=invite" method="post" id="inviteForm">
+			<input type="hidden" name="step" value="2">
+            <ul>
+                <li><p>好友的 Email</p><textarea name="emails" id="emails" class="textarea" style="width:100%;height:50px;" onclick="grayChange(this)">多个 Email 用逗号 (,) 或者换行分隔</textarea>
+				<p class="maxlength-hint warning" id="emails_warning" style="display: none;"></li>
+                <li><p>邀请附言</p><textarea name="extranote" id="extranote" class="textarea" style="width:100%;height:50px;">感觉还不错。这些功能都很有趣，我想你也会喜欢。</textarea>
+				<p class="maxlength-hint warning" id="extra_warning" style="display: none;"></li>
+                <li><p>预览</p>
+                <div class="w300-box">
+                	<h4>我是{$windid}，我在{$db_bbsname}上建立了个人主页，请你也加入并成为我的好友。</h4>
+					<p>[ 邀请附言 ]</p>
+					<p>请点击以下链接，接受好友邀请:</p>
+					<p><span class="blue">{$invite_url}</span></p>
+					<p>{$db_bbsname} (<span class="blue">$db_bbsurl</span>)</p>
+                </div>
+                </li>
+            </ul>
+            <div style="margin:5px 0 0 0;">
+						<span class="button" style="margin-left:0;"><span><button type="submit" style="width:80px;">邀 请</button></span></span>
+            </div>
+            </form>
+        </div>
+
+        <div class="w300 fl mt10" style="border-left:3px solid #e0e0e0;padding:10px 0 20px 20px;margin-left:20px;">
+            <h2>方法二：发送网址邀请</h2>
+            <ul>
+                <li>把下面的网址通过MSN、QQ发给好友，邀请他们加入{$db_bbsname}的圈子。</li>
+                <li><p class="b">默认邀请:</p><a style="cursor: pointer;" onclick="copyUrl('$invite_url')">$invite_url</a></li>
+            </ul>
+        </div>
+	</div>
+	<script language="javascript">
+function hidden(obj){
+	if (typeof(obj) == 'string') {
+		obj = document.getElementById(obj);
+	}
+	if (obj.style.display == 'none') {
+		obj.style.display = '';
+	} else {
+		obj.style.display = 'none';
+	}
+}
+
+function copyUrl(url) {
+	if (is_ie) {
+		window.clipboardData.setData("Text",url);
+		showDialog('success','已成功复制',1);
+	} else {
+		prompt('Press Ctrl+C Copy to Clipboard', url);
+	}
+}
+function objChange(obj, func){
+	if (typeof(obj) == 'string') {
+		obj = document.getElementById(obj);
+	}
+	if (is_ie) {
+		obj.onpropertychange = func;
+		return;
+	}
+	if (document.addEventListener) {
+		obj.addEventListener("input", func, false);
+		return;
+	} else if (document.attachEvent) {
+		obj.attachEvent("onpropertychange",func);
+		return;
+	}
+}
+objChange('extranote',extraChange);
+objChange('emails',emailChange);
+
+function extraChange() {
+	var text = document.getElementById('extranote');
+	var strleng = text.value.length;
+	var warning = document.getElementById('extra_warning');
+	if (strleng>200) {
+		warning.innerHTML = '内容超出 '+(strleng-200)+' 字，请酌情删减后提交。';
+		warning.style.display = '';
+	} else {
+		warning.style.display = 'none';
+	}
+}
+function emailChange() {
+	var text = document.getElementById('emails');
+	var strleng = text.value.length;
+	var warning = document.getElementById('emails_warning');
+	if (strleng>200) {
+		warning.innerHTML = '内容超出 '+(strleng-200)+' 字，请酌情删减后提交。';
+		warning.style.display = '';
+	} else {
+		warning.style.display = 'none';
+	}
+}
+function grayChange(obj) {
+	if (typeof(obj) == 'string') {
+		obj = document.getElementById(obj);
+	}
+	if (obj.className == 'gray') {
+		obj.className = '';
+	}
+	if (obj.value =='多个 Email 用逗号 (,) 或者换行分隔') {
+		obj.value = '';
+	}
+}
+</script>
+<!--
+EOT;
+}elseif($type=='viewer'){
+print <<<EOT
+-->
+	<div class="cc mt10">
+        <div class="w500 fl" style="width:680px;">
+            <table width="100%">
+<!--
+EOT;
+if (!empty($whovisit)) {
+foreach ($whovisit as $key => $value) {
+$value[honor] = substrs($value[honor],50);
+print <<<EOT
+-->
+                <tr class="tr3">
+                <td width="50"><a href="u.php?uid=$value[uid]"><img src="$value[face]" class="img-50" /></a></td><td><a href="{$basename}q=user&u=$value[uid]" class="b">$value[username]</a>
+<!--
+EOT;
+if(checkOnline($value['thisvisit'])){
+print <<<EOT
+-->
+						<span><img src="$imgpath/online.png" title="在线" /></span>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+                <p class="height-18">$value[honor]</p><span class="gray">来访时间:$value[visittime]</span></td>
+                <td width="100"></td>
+                </tr>
+
+<!--
+EOT;
+}} else {print <<<EOT
+-->
+
+				<tr class="tr3">
+                <td colspan="2">暂没有用户访问过你的空间</td>
+                </tr>
+
+<!--
+EOT;
+}print <<<EOT
+-->
+            </table>
+        </div>
+     </div>
+<!--
+EOT;
+}else{
+print <<<EOT
+-->
+	<div class="cc p10">
+	<div class="fl" style="width:670px;">
+	<div class="o-info-a">共有{$count}位好友</div>
+            <table width="100%">
+<!--
+EOT;
+if (!empty($friends)) {
+foreach ($friends as $key => $value) {
+$value[honor] = substrs($value[honor],50);
+print <<<EOT
+-->
+                <tr class="tr3" id="friend_{$value[uid]}">
+                    <td width="50"><a href="u.php?uid=$value[uid]"><img src="$value[face]" class="img-50" /></a></td><td><a href="{$basename}q=user&u=$value[uid]" class="b">$value[username]</a>
+<!--
+EOT;
+if(checkOnline($value['thisvisit'])){
+print <<<EOT
+-->
+						<span><img src="$imgpath/online.png" align="absbottom" title="在线" /></span>
+<!--
+EOT;
+}if($u==$winduid){
+print <<<EOT
+-->
+						<a style="cursor: pointer;line-height:2;" onclick="sendmsg('pw_ajax.php?action=msg&touid=$value[uid]');" title="发送消息"><img src="$pwModeImg/operation/mail.png" /></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+                    <p class="height-18">$value[honor]</p><span class="gray">最近登录:$value[lastvisit]</span></td>
+                    <td width="100"><div class="cc"><span class="del fl"><a href="javascript:;" onclick="pwConfirm('是否确认解除',this,function(){delFriend('$value[uid]')});">解除好友</a></span> &nbsp;</div>
+<!--
+EOT;
+if($u==$winduid){
+if($value[ftid] && $friendtype[$value[ftid]]){
+$ftypename = $friendtype[$value[ftid]][name];
+}else{
+$ftypename = '未分组';
+}
+print <<<EOT
+-->
+                    <a href="{$thisbase}ftid={$value[ftid]}">$ftypename</a> - <a href="javascript:;" onclick="setTimeout(function(){showFriendTypeBox('{$value[uid]}','{$value[username]}','{$value[ftid]}');}, 200);" class="gray">修改</a></td>
+                </tr>
+
+<!--
+EOT;
+}}} else {print <<<EOT
+-->
+				<tr class="tr3">
+					<td colspan="2">暂没有好友</td>
+                </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </table>
+            <div class="mt10">$pages</div>
+        </div>
+<!--
+EOT;
+if($u==$winduid){
+print <<<EOT
+-->
+        <div id="sidebar" class="fr">
+     			<div class="p10 lh24">
+            <div><span class="fr gray" style="cursor: pointer;" onclick="addType('ft_ul','$u')">+添加分组</span>
+						<b>好友分组</b></div>
+<!--
+EOT;
+if($u==$winduid){
+print <<<EOT
+-->
+            <ul id="ft_ul">
+                <li><a href="{$thisbase}" id="ftype_all">全部好友</a> (<span id="fcount">{$count}</span>)</li>
+<!--
+EOT;
+foreach($friendtype as $value){
+print <<<EOT
+-->
+                <li id="ft_{$value[ftid]}" onmouseover="changSpanDisplay(this);" onmouseout="changSpanDisplay(this);"><span class="fr del" style="cursor: pointer;display:none" onclick="pwConfirm('是否确认解除',this,function(){delFriendType('$value[ftid]','$u')})">删除</span><span class="fr gray mr10" style="cursor: pointer;display:none;" onclick="showEidt('$value[ftid]','$u');">编辑</span> <a id="ftype_{$value[ftid]}" href="{$thisbase}ftid={$value[ftid]}">$value[name]</a> </li>
+<!--
+EOT;
+}print <<<EOT
+-->
+                <li id="ft_null"> <a href="{$thisbase}ftid=0" id="ftype_0">未分组</a> </li>
+            </ul>
+<!--
+EOT;
+}print<<<EOT
+-->
+        </div>
+				</div>
+    </div>
+<!--
+EOT;
+}print <<<EOT
+-->
+<script language="JavaScript" src="mode/o/js/friendtype.js"></script>
+<script language="javascript">
+function delFriend(u){
+	ajax.send('mode.php?m=o&q=ajax&a=delfriend&u='+u,'',function(){
+		var rText = ajax.request.responseText.split("|");
+		if (rText[0] == 'success') {
+			var element = document.getElementById('friend_'+u);
+			if (element) {
+				showDialog('success','操作成功!',1);
+				element.parentNode.removeChild(element);
+				getObj('fcount').innerHTML = parseInt(getObj('fcount').innerHTML)-1;
+			} else {
+			}
+		} else {
+			ajax.guide();
+		}
+	});
+}
+setCurrent('ftype_$ftid','ftype_all','current');
+</script>
+<!--
+EOT;
+}print <<<EOT
+-->
+	</td></tr></table>
+</div>
+<!--
+EOT;
+?>-->

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT toolbox (tool_item*)>
+<!ELEMENT tool_item (toolName+,author,date,explain+,contentIndex+,contentAct+,programList+)>
+<!ELEMENT toolName (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT explain (#PCDATA)>
+<!ELEMENT contentIndex (#PCDATA)>
+<!ELEMENT contentAct (#PCDATA)>
+<!ELEMENT programList (#PCDATA)>
+<!ATTLIST tool_item id ID #REQUIRED>

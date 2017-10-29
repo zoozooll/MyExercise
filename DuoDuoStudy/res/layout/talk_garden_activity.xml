@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:background="@color/white"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+  <!-- 顶层 -->
+  <LinearLayout
+    android:id="@+id/talk_tops_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true">
+    <include layout="@layout/talk_garden_top"/>
+  </LinearLayout>
+  
+<!--底层 -->
+    <LinearLayout
+    android:id="@+id/talk_bottoms_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+    <include layout="@layout/talk_garden_bottom"/>
+  </LinearLayout>
+  
+  <!-- 中间层 -->
+  <LinearLayout
+    android:id="@+id/talk_center_layout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/talk_tops_layout"
+    android:layout_above="@id/talk_bottoms_layout"
+    android:background="@drawable/talkgardencontentback">
+    <LinearLayout
+    android:id="@+id/talk_center_layout"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TextView
+	         android:id="@+id/talk_uname_text"
+		     android:layout_width="24dip"
+		  	 android:layout_height="66dip"
+		  	 android:layout_gravity="left"
+		  	 android:background="@drawable/talktopleft"/>
+	   <Gallery
+	       android:id="@+id/talk_main_gallery"
+	       android:layout_width="340dip"
+	  		android:layout_height="wrap_content"
+	   />
+	   <TextView
+	         android:id="@+id/talk_uname_text"
+		     android:layout_width="24dip"
+		  	 android:layout_height="66dip"
+		  	 android:background="@drawable/talktopright"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/talk_main_listview"
+        android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"/> 
+</LinearLayout>
+</RelativeLayout>

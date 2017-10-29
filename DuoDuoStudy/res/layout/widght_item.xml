@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="240dip"
+  android:id="@+id/download_tab_name_item"
+  android:layout_height="wrap_content"
+  android:orientation="horizontal"
+  android:background="@drawable/download_tab_selector"
+  android:focusable="true"
+  android:gravity="center"
+ >
+<!-- 
+ <ImageView
+ android:id="@+id/icon_view"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:src="@drawable/icon"
+ />
+ -->
+ <TextView
+ android:id="@+id/download_text_type"
+  android:layout_width="wrap_content"
+ android:layout_height="match_parent"
+ android:textColor="@color/black"
+ android:paddingTop="5dip"
+ android:text="下载"
+ />
+ 
+</LinearLayout>

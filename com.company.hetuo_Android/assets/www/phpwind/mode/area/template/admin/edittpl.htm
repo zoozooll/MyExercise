@@ -1,0 +1,89 @@
+<!--<?php
+include_once PrintEot('left');
+if (empty($action)) {print <<<EOT
+-->
+<div class="nav3 mb10">
+    <ul class="cc">
+        <li class="current"><a href="$basename">本站模板管理</a></li>
+        <li><a style="cursor:pointer;" href="$admin_file?adminjob=mode&admintype=area_selecttpl" onclick="parent.PW.Dialog({'id': 'area_selecttpl','name': '模板中心','url': '$admin_file?adminjob=mode&admintype=area_selecttpl','max': false});return false;">去模板中心</a></li>
+    </ul>
+</div>
+<form action="$basename" method="post">
+<input type="hidden" name="step" value="2" />
+<h2 class="h1">本站首页模板</h2>
+<dl class="mode_list cc">
+	<dt><img id="img_index" src="mode/area/themes/$area_indextpl/images/$indexcss/preview/index.jpg" width="150" height="120" /></dt>
+	<dd>
+    	<p>名称：首页模板</p>
+		<p>选择样式：<select id="select_index" name="csspath[index]" onchange="changeImg('index','$area_indextpl','index');">
+<!--
+EOT;
+foreach($indexpaths as $val){
+if ($indexcss==$val) {
+	$select = 'selected="selected"';
+}else{
+	$select = '';
+}
+print <<<EOT
+-->
+			<option value="$val" $select>$val</option>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</select></p>
+		<p><a href="$admin_file?adminjob=mode&admintype=area_selecttpl&cid=index">选择其他模板</a></p>
+	</dd>
+</dl>
+<div class="c"></div>
+<h2 class="h1">本站各频道模板</h2>
+<!--
+EOT;
+foreach($catedb as $key=>$value){
+$tmpTpl = $area_cateinfo[$key]['tpl'] ? $area_cateinfo[$key]['tpl'] : $area_catetpl;
+print <<<EOT
+-->
+<dl class="mode_list cc">
+	<dt><img id="img_$key" src="mode/area/themes/$tmpTpl/images/$value[css]/preview/cate.jpg" width="150" height="120" /></dt>
+    <dd>
+    	<p>频道：{$value['name']}模板</p>
+		<p>选择样式：<select id="select_$key" name="csspath[$key]" onchange="changeImg('$key','$tmpTpl','cate');">
+<!--
+EOT;
+foreach($value[paths] as $val){
+if ($value[css]==$val) {
+	$select = 'selected="selected"';
+}else{
+	$select = '';
+}
+print <<<EOT
+-->
+<option value="$val" $select>$val</option>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</select></p>
+		<p><a href="$admin_file?adminjob=mode&admintype=area_selecttpl&cid=$key">选择其他模板</a></p>
+	</dd>
+</dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+<div class="c"></div>
+<div class="tac mb10">
+	<span class="btn"><span><button type="submit">保存为站点模板</button></span></span>
+</div>
+</form>
+<script language="javascript">
+var changeImg = function (id,tpl,scr) {
+	img	= getObj('img_'+id);
+	select = getObj('select_'+id);
+	img.src = 'mode/area/themes/'+tpl+'/images/'+select.value+'/preview/'+scr+'.jpg';
+}
+</script>
+<!--
+EOT;
+}include_once PrintEot('adminbottom');
+?>-->

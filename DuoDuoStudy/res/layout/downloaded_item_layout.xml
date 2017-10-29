@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:background="@color/white"
+	android:gravity="center_vertical" android:layout_height="wrap_content">
+	<ImageView android:id="@+id/downloaded_imge_item"
+		android:layout_width="25dp" android:layout_height="25dp"
+		android:src="@drawable/download_sign" android:layout_marginRight="15dp" />
+	<TextView android:id="@+id/downloaded_txt_name"
+		android:layout_width="110dp" android:layout_height="30dp"
+		android:textColor="@color/black" android:text="小学生作文选集"
+		android:singleLine="true" android:ellipsize="marquee"
+		android:marqueeRepeatLimit="marquee_forever"
+		android:layout_marginRight="10dp" />
+
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:gravity="right"
+		android:paddingRight="10dip">
+		<ImageButton android:id="@+id/delete_file_item"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:background="@drawable/delete_download_file" />
+
+	</LinearLayout>
+
+</LinearLayout>

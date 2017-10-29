@@ -1,0 +1,45 @@
+<{include file="header.html"}>
+<script type="text/javascript">
+var menu = <{$ActionMenus}>;
+var currTab = 'dashboard';
+var firstOpen = [];
+</script>
+<script type="text/javascript" src="js/index.js" charset="<{$Charset}>"></script>
+<div class="back_nav">
+    <div class="back_nav_list">
+        <dl>
+            <dt>{$menu.text}</dt>
+            <dd><a href="javascript:;" onclick="openItem('{$sub_key}','{$key}');none_fn();">{$sub_menu.text}</a></dd>
+        </dl>
+    </div>
+    <div class="shadow"></div>
+    <div class="close_float"><img src="images/close2.gif" /></div>
+</div>
+<div id="head">
+    <div id="logo"><img src="images/phpb2b_logo.png" /></div>
+    <div id="menu"><span><{$_hello}><strong><{$current_adminer}></strong> [<a href="login.php?action=dereg" target="_self" title="<{$_use_other_account}>"><{$_off}></a>,<a href="adminer.php?do=profile" title="<{$_set_your_personal_info}>" target="workspace"><{$_account_set}></a>,<a href="../logging.php?action=logout&fr=cp"><{$_login_out}></a>]</span>
+    <a href="<{$SiteUrl}>index.php" target="_blank" class="menu_btn1" title="<{$_back_to_homepage}>"><{$_browse_homepage}></a>
+    <a href="javascript:;" class="menu_btn1" id="iframe_refresh" title="<{$_refresh_the_page}>"><{$_refresh}></a>
+    </div>
+    <ul id="nav"></ul>
+    <div id="headBg"></div>
+</div>
+<div id="content">
+    <div id="left">
+        <div id="leftMenus">
+            <dl id="submenu">
+                <dt><a class="ico1" id="submenuTitle" href="javascript:;"></a></dt>
+            </dl>
+         </div>
+		<div class="copyright">
+			<p>Powered by <{$_soft_name}> <{$smarty.const.PHPB2B_VERSION}></p>
+			<p>&copy; 2007-2009 <a href="http://www.phpb2b.com/" target="_blank">Ualink</a> Inc.</p>
+		</div>
+    </div>
+    <div id="right">
+        <iframe frameborder="0" style="display:none;" width="100%" id="workspace" name="workspace"></iframe>
+    </div>
+    <div class="clear"></div>
+</div>
+</body>
+</html>

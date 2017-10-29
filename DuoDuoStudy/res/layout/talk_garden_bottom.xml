@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:background="@drawable/talk_bg_botom"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+  <LinearLayout 
+  android:id="@+id/talk_bottom_linear1"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="horizontal">
+  <ImageView
+      android:id="@+id/talk_bottom_smail"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/smail"
+      android:layout_margin="2dip"
+  />
+  <EditText
+      android:id="@+id/talk_bottom_edit"
+      android:layout_width="300dip"
+      android:layout_height="40dip"
+      android:text="轻触选中后可输入内容"
+      android:textSize="15dip"
+      android:layout_margin="2dip"
+  />
+  <Button
+      android:id="@+id/talk_bottom_btn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/senndmessage"
+      android:layout_margin="2dip"
+  /></LinearLayout>
+  <LinearLayout
+    android:id="@+id/talk"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+  <include layout="@layout/download_bottom_item" />
+    </LinearLayout>
+   
+</LinearLayout>

@@ -1,0 +1,125 @@
+<!--<?php print <<<EOT
+--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=$db_charset" />
+<title>$webPageTitle - Powered by PHPWind</title>
+<meta name="generator" content="PHPWind $wind_version" />
+<meta name="description" content="$metaDescription" />
+<meta name="keywords" content="$metaKeywords" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<link rel='archives' title='$db_bbsname' href='$db_bbsurl/simple' />
+<!--#if($fid){#-->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="$db_bbsurl/rss.php?fid=$fid" />
+<!--#}#-->
+<base id="headbase" href="$db_bbsurl/" />
+<link rel="stylesheet" type="text/css" href="$imgpath/wind-reset.css" />
+<link rel="stylesheet" type="text/css" href="mode/area/themes/default/images/default/pwmanage.css" />
+<link rel="stylesheet" type="text/css" href="mode/area/themes/home2/images/default/head.css" />
+<link rel="stylesheet" type="text/css" href="$pwModeImg/style.css" />
+<!--#if($pwModeCss){#-->
+<link rel="stylesheet" type="text/css" href="$pwModeCss" />
+<!--#}#-->
+<script type="text/javascript" language="JavaScript" src="js/pw_ajax.js"></script>
+<SCRIPT type="text/javascript" LANGUAGE="JavaScript" src="js/core/core.js"></SCRIPT>
+<script language="JavaScript">
+	var agt = navigator.userAgent.toLowerCase();
+	var is_ie = ((agt.indexOf("msie") != -1) && (agt.indexOf("opera") == -1));
+	var is_gecko= (navigator.product == "Gecko");
+	var imgpath = '$imgpath';
+	var verifyhash = '$verifyhash';
+	var modeimg = '$pwModeImg';
+	var modeBase = '$baseUrl';
+	var winduid = '$winduid';
+	var windid	= '$windid';
+	var groupid	= '$groupid';
+	var gIsPost = true;
+	var cateid	= '$cateid';
+</script>
+</head>
+<body id="body">
+<!--#include printEOT('headbar');#-->
+<div id="header">
+	<table width="100%">
+		<tr>
+			<td width="300">
+				<a href="$db_bbsurl/?m=area"><img class="fl" src="mode/area/themes/default/images/default/logo.png" /></a>
+			</td>
+			<td>
+				<form name="sF" action="search.php?#submit" method="post">
+					<input type="hidden" name="step" value="2" />
+					<div class="search fr"><span><input id="keyword" name="keyword" type="text" class="s-input" /></span><input type="image" name="submit" src="mode/area/themes/home2/images/default/s-btn.png" class="s-btn" /></div>
+				</form>
+				<div class="c"></div>
+				<div id="nav-global" class="tar fr">
+					<ul>
+						<li class="gray">逛逛：</li>
+						{$_Navbar['main']['html']}
+					</ul>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="nav">
+		<div class="nav-bg">
+			<div class="nav-bg2">
+				<ul class="cc">
+<!--#$area_navshow = $area_navshow ? " style=\"width:{$area_navshow}em;\"" : '';#-->
+<!--#empty($area_navinfo) && $area_navinfo = array();#-->
+<!--#foreach($area_navinfo as $key => $value){#-->
+	   			<li{$area_navshow}>{$value['html']}</li>
+<!--#}#-->
+				</ul>
+			</div>
+		</div>
+	</div>
+<!--#list($htmlAdvert,$arrayAdvert) = pwAdvert('Site.NavBanner1',$fid);#-->
+<!--#if($htmlAdvert){#-->
+	<div class="tac" style="padding:5px 0 0;">$htmlAdvert</div>
+<!--#}#-->
+<!--#list($htmlAdvert,$arrayAdvert) = pwAdvert('Site.NavBanner2',$fid);#-->
+<!--#if($htmlAdvert){#-->
+	<div class="tac" style="padding:5px 0 5px;">$htmlAdvert</div>
+<!--#}#-->
+</div>
+<!--#if ($winduid){#-->
+<div id="menu_userinfomore" class="menu-post cc" style="display:none;">
+	<div class="menu-b" style="width:26.5em;">
+		<ul class="menu-half cc">
+		<li>等级: $gp_grouptitle
+<!--#if ($_G['allowhide']) {#-->
+		<li>状态:
+<span style="cursor:pointer;" onclick="ajax.send('pw_ajax.php?action=changestate','',changeState)" id="online_state">
+<!--#if (GetCookie('hideid') == 1) {#--><img src="images/stealth.png" align="absmiddle" />隐身
+<!--#} else {#--><img src="images/online.png" align="absmiddle" />在线
+<!--#}#--></span>
+<script language="JavaScript">
+HEADER_HIDE='隐身';
+HEADER_ONLINE='在线';
+IMG_PATH="images";
+function changeState() {
+	var msg = ajax.request.responseText;
+	if (msg == 1){
+		getObj('online_state').innerHTML = '<img src="$imgpath/stealth.png" align="absmiddle" />隐身';
+	}else{
+		getObj('online_state').innerHTML = '<img src="$imgpath/online.png" align="absmiddle" />在线';
+	}
+}
+</script>
+			</li>
+<!--#}#-->
+			<li>帖子: $winddb[postnum]</li>
+			<li>今日: $winddb[todaypost]</li>
+			<li>$db_rvrcname: <span class="s2">$userrvrc $db_rvrcunit</span></li>
+			<li>$db_moneyname: <span class="s3">$winddb[money] $db_moneyunit</span></li>
+			<li>$db_creditname: <span class="s3">$winddb[credit] $db_creditunit</span></li>
+			<li>最后登录: <span class="f10">{$_LoginInfo['lastlodate']}</span></li>
+			<li>登录IP: <span class="f10">$onlineip</span></li>
+		</ul>
+	</div>
+</div>
+<!--#}#-->
+<div id="main">
+<!--
+EOT;
+?>-->

@@ -1,0 +1,32 @@
+<{assign var="page_title" value="$_reg_success"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+  <div class="subnav"> 
+    <div class="member_register"><span class="step_11"><{$_fill_reg_info}></span><span class="step_12"><{$_reg_success}></span></div>
+  </div>
+  <div class="blank6"></div>
+  <div class="blank6"></div>
+  <div class="content clearfix">
+   <div class="blank6"></div>
+   <div class="reg_sucess"><img src="<{$theme_img_path}>images/reg_sucess.jpg" /></div>
+   <div class="reg_proinfo">
+	 <div class="reg_bj"></div>
+	 <div class="reg_proinfo_content">
+		<{if $result===true}>
+		 <p class="member_level"><{$_welcome_join}><{$site_name}>,<{$_now_you_are}><font color="#1c9df0"><{$groupname}></font><img src="<{$groupimg}>" alt="<{$groupname}>" /></p>
+		 <p class="member_room"><{$_you_continue_next}> <a href="office-room/" ><span><{$_into_office_room}></span></a><a href="<{$SiteUrl}>"><span><{$_back_index}></span></a></p>
+		 <p> <b><{$_complete_pro_date}></b></p>
+		 <p><{$_need_complete_pro_date}><a href="office-room/personal.php" style="text-decoration:underline" target="_blank"><{$_click_here_add}></a></p>
+		 <{if $is_company}>
+		 <p><b><{$_added_comany_info}></b></p>
+		 <p> <{$_open_company_website}><a href="office-room/company.php" style="text-decoration:underline" target="_blank"><{$_click_perfect}></a></p>
+		 <{/if}>
+		 <{else}>
+			<h2><{$RegTips}></h2>
+		 <{/if}>
+	 </div>
+   </div>
+  </div>
+  <div class="blank6"></div>   
+</div>
+<{include file="`$ThemeName`/footer.html"}>

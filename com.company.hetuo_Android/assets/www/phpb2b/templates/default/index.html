@@ -1,0 +1,375 @@
+<{assign var="page_title" value="`$_home_page`"}>
+<{assign var="nav_id" value="1"}>
+<{include file="`$ThemeName`/header.html"}>
+<style type="text/css">
+@import url(<{$theme_img_path}>effect.css);
+</style>
+<script src="scripts/jquery.tools.js"></script>
+<div class="adv">
+	<{ads typeid=1 row="8"}><span><a href="[link:url]" rel="promotion">[field:src]</a></span><{/ads}>
+</div>
+<div class="wrapper">
+	<div class="content clearfix">
+	   <div class="fl notebox mr7">
+        <div class="title_bar_s2">
+            <span class="title_top_s2"><span></span></span>
+            <h2><span class="title_more"><a href="announce.php" title="<{$_more}>" target="_blank"><span class="raquo">&raquo;</span><{$_more}></a></span><{$_board}></h2>
+            </div>
+			<div class="notecont clearfix">
+               <div class="note_bar">
+				<img src="<{$theme_img_path}>images/notice.gif" alt="<{$_board}>" />
+				<{announce titlelen=9 infolen=40 row=1}>
+				<dl>
+					<dt><strong><a href="[link:title]">[field:title]</a></strong></dt>
+					<dd><a href="[link:title]" title="[field:content]">[field:content]</a></dd>
+				</dl>
+				<{/announce}>
+               </div>
+				<ul class="note_title clearfix">
+					<{announce titlelen=15 row=4}>
+					<li><a href="[link:title]" title="[field:title]">[field:title]</a></li>
+					<{/announce}>
+				</ul>
+			</div>
+			<div class="corner_bottom_bar">
+                 <span class="corner_bottom_s1"><span></span></span>
+			</div>
+		</div>
+	   <div class="fl advertise">
+			<{ads typeid=5}>This text is replaced by the Flash movie.<{/ads}>
+		</div>
+       <div class="fr freereg">
+                <div class="reg_bar_s1">
+                   <span class="reg_top_s1"><span></span></span>
+                  <h2><{$_after_free_reg}></h2>
+                  <div class="freeregc clearfix cursor-hand">
+                    <p class="fl freetit"><a><{$_build_your_site}></a></p>
+                    <p class="fl freetit"><a><{$_post_offer_trade}></a></p>
+                    <p class="fl freetit"><a><{$_spread_your_products}></a></p>
+                    <p class="fl freetit"><a><{$_meet_more_friends}></a></p>
+                    <p class="fl mt10 big-color-weight"><a class="btn_free" href="member.php" title="<{$_register}>"><{$_free_reg_member}></a></p>
+                   </div>
+                </div>
+                <div class="reg_bottom_bar">
+                    <span class="reg_bottom_s1"><span></span></span>
+                </div>
+            </div>
+	</div>
+	<div class="blank6"></div>
+	<div class="content">
+		<{ads typeid=2}><span><a href="[link:url]" rel="promotion">[field:src]</a></span><{/ads}>
+	</div>
+	<div class="blank6"></div>
+	<div class="content clearfix">
+		<div class="fl notebox mr7">
+				<div class="title_bar_s1">
+                <span class="title_top_s1"><span></span></span>
+                <h2><span class="title_more"><a href="fair/list.php" title="<{$_more}>"><span class="raquo">&raquo;</span><{$_more}></a></span><{$_new_fair}></h2>
+                </div>
+			    <ul class="hot_list">
+					<{fair row=10 magic="y" infolen="18" titlelen=40}>
+					<li[field:style]>[field:url]</li>
+					<{/fair}>
+				</ul>
+		</div>
+		<div class="fl latest">
+         <!-- the tabs -->
+            <ul class="tabs2 title_mouse">
+                  <li><a href="offer/list.php?typeid=2"><span><{$_newest_sell}></span></a></li>
+                  <li><a href="offer/list.php?typeid=1"><span><{$_newest_buy}></span></a></li>
+            </ul>
+            <!-- tab "panes" -->
+            <div class="panes box_bord">
+                <div class="lasestcontbox underline" id="latest-offer-1">
+				<div class="lasestcontboxh">
+					<ul>
+						<{offer typeid="2" type="image" row=5 titlelen="10"}>
+						<li><a href="[link:title]"><img src="[img:thumb]" alt="[field:title]" /></a><p><a href="[link:title]" title="[field:title]">[field:title]</a></p></li>
+						<{/offer}>
+					</ul>
+				</div>
+				<div class="lasestcontboxb">
+					<ul>
+						<{offer row=14 typeid="2"}>
+						<li><a href="[link:title]" title="[field:title]">[field:title]</a></li>
+						<{/offer}>
+					</ul>
+				</div>
+			    </div>
+                <div class="lasestcontbox underline" id="latest-offer-2" style="display:none;">
+				<div class="lasestcontboxh">
+					<ul>
+						<{offer type="image" row=5 titlelen="10" typeid="1"}>
+						<li><a href="[link:title]"><img src="[img:thumb]" alt="[field:title]" /></a><p><a href="[link:title]" title="[field:title]">[field:title]</a></p></li>
+						<{/offer}>
+					</ul>
+				</div>
+				<div class="lasestcontboxb">
+					<ul>
+						<{offer typeid="1" row=14}>
+						<li><a href="[link:title]" title="[field:title]">[field:title]</a></li>
+						<{/offer}>
+					</ul>
+				</div>
+			</div>
+            </div>
+            <script>
+            $(function() {
+                $("ul.tabs2").tabs("div.panes > div", {event:'mouseover'});
+			
+            });
+            </script>
+		</div>
+		<div class="fr notebox">
+            <div class="title_bar_s1">
+            <span class="title_top_s1"><span></span></span>
+            <h2><span class="title_more"><a href="member/purchase.php"><{$_member_upgrade}></a></span><{$_newest_company}></h2>
+            </div>
+			<div class="vipcont clearfix">
+				<ul>
+					<{company row=13}>
+					<li><a href="[link:title]" title="[field:title]" target="_blank">[field:title]</a></li>
+					<{/company}>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div class="blank6"></div>
+<div class="content clearfix">
+
+		<div class="type">
+        
+			<div class="title_bar_s1">
+				<span class="title_top_s1"><span></span></span>
+				<h4><span class="titlebg_l"></span><span class="titlebg_m title_mouse"><{$_industry_sort}></span><span class="titlebg_r"></span><span class="title_more"><{$_select_industry_and_post}></span></h4>
+            </div>
+			<div class="hot_search underline"><h3><{$_hots}></h3>
+            <div><{tag row=15}><a href="[link:url]"  rel="nofollow" target="_blank" title='[field:title]'>[field:title]</a><{/tag}></div>
+            </div>
+			<div class="typecont">
+            <{foreach from=$IndustryList item=item0 key=key0 name=level_0}>
+			  <div class="typebox clearfix bg_hover">
+                <div class="category_title category_title_width"><a href="<{$item0.url}>"><{$item0.name}></a></div>
+                 <div class="category_content clearfix">
+                     <{if $item0.sub}>
+					<ul>
+                    	<{foreach from=$item0.sub name=level_1_industry item=level1 key=key_level1}>
+						<li>
+							<a href="<{$level1.url}>" title="<{$level1.name}>" class="typeboxlet01"><{$level1.name}></a><br />
+                        <{foreach from=$level1.sub name=level_2_industry item=level2 key=key_level2}>
+							<a href="<{$level2.url}>" title="<{$level2.name}>"><{$level2.name}></a>
+                            <{if !$smarty.foreach.level_2_industry.last}>
+                            <span>|</span>
+                            <{/if}>
+                        <{/foreach}>
+						</li>
+                        <{/foreach}>
+					</ul>
+                     <{/if}>
+                   </div>
+			  </div>
+                <{if !$smarty.foreach.level_0.last}>
+				<div class="line"></div>                
+                <{/if}>
+            <{/foreach}>
+			</div>
+		</div>
+		<div class="fr notebox">
+			<div class="fl notebox">
+				<div class="title_bar_s1">
+               <span class="title_top_s1"><span></span></span>
+               <h2><span class="title_more"><a href="office-room/brand.php" title="<{$_apply_industry_brand}>" target="_blank"><{$_apply_industry_brand}></a></span><{$_industry_brand}></h2>
+              </div>
+				<div class="brandcont clearfix">
+				<{brand type="image" row=10}>
+					<li><a href="[link:title]" target="_blank"><img src="[img:src]" alt="[field:title]" /></a><p>[field:title]</p></li>
+				<{/brand}>
+				</div>
+				<div class="corner_bottom_bar">
+                 <span class="corner_bottom_s1"><span></span></span>
+			    </div>
+			</div>
+			<div class="blank6"></div>
+			<a href="http://bbs.phpb2b.com/" title="<{$_visit_phpb2b_official_site}>" class="fl" target="_blank"><img src="<{$theme_img_path}>images/phpb2b_dev.jpg" width="230" height="70" style="border:1px solid #CFCFCF;" /></a>
+			<div class="blank6"></div>
+			<div class="fl notebox">
+				<div class="title_bar_s1">
+                <span class="title_top_s1"><span></span></span>
+                <h2><span class="title_more"><a href="offer/list.php?typeid=3" title="<{$_more}>"><span class="raquo">&raquo;</span><{$_more}></a></span><{$_agent}></h2>
+                </div>
+			   <ul class="hot_list">
+				<{offer row=9 typeid="1" magic="y" infolen="35"}>
+				 <li[field:style]>[field:url]</li>
+				<{/offer}>
+			   </ul>
+			</div>
+			<div class="blank6"></div>
+			<div class="fl notebox">
+				 <div class="title_bar_s1">
+                <span class="title_top_s1"><span></span></span>
+                <h2><span class="title_more"><a href="offer/list.php?typeid=5" title="<{$_more}>"><span class="raquo">&raquo;</span><{$_more}></a></span><{$_investment}></h2>
+                </div>
+			   <ul class="hot_list">
+				<{offer row=9 magic="y" typeid="2" infolen="35"}>
+				 <li[field:style]>[field:url]</li>
+				<{/offer}>
+			   </ul>
+			</div>
+			<div class="blank6"></div>
+			<div class="fl notebox">
+				<div class="title_bar_s1">
+                <span class="title_top_s1"><span></span></span>
+                <h2><span class="title_more"><a href="news/list.php?typeid=1" title="<{$_more}>"><span class="raquo">&raquo;</span><{$_more}></a></span><{$_site_news}></h2>
+                </div>
+			   <ul class="hot_list">
+				<{news typeid=4 row=9 magic="y" titlelen=30 infolen=25}>
+				 <li[field:style]>[field:url]</li>
+				<{/news}>
+			   </ul>
+			</div>
+			<div class="blank6"></div>
+			<div class="fl notebox">
+				<div class="title_bar_s1">
+                <span class="title_top_s1"><span></span></span>
+                <h2><{$_idea_or_advise}></h2>
+                </div>
+				<div class="hotcont_service">
+					<{$_welcome_your_idea_or_advise}>
+					<form action="service/post.php" name="service_frm" id="ServiceFrm" method="post">
+					<input type="hidden" name="formhash" value="<{$formhash}>">
+					<input type="hidden" name="save_service" value="save_service">
+					<textarea name="service[content]" cols="" rows=""></textarea>
+					<{$_your_email}><input type="text" name="service[email]" value="">
+					<div class="blank6"></div>
+					<input type="button" name="btn_submit" value="<{$_submit}>" class="btn_submit_w45" onclick="$('#ServiceFrm').submit();" />
+					<input type="reset" value="<{$_reset}>" name="" class="btn_submit_w45"/>
+					</form>
+				   
+				</div>
+			</div>
+		</div>
+	   
+	</div>
+	<div class="blank6"></div>
+	<div class="content">
+		<div class="news clearfix">
+			<h3 class="newstit title_color break"><strong><{$_new_products}></strong></h3>
+			<ul class="clearfix">
+			<{product row=9 type="image" titlelen="10"}>
+				<li><a href="[link:title]"><img src="[img:src]" alt="[field:title]" /></a>
+                <p><a href="[link:title]">[field:title]</a></p>
+                </li>
+			<{/product}>
+			</ul>
+		</div>
+	</div>
+	<div class="blank6"></div>
+	<div class="content">
+		<div class="corner_2px_t">
+           <div class="corner_2px_l"></div>
+           <div class="corner_2px_r"></div>
+		</div>
+		<div class="bottomc">
+			<div class="fl newscar mr7">
+            
+                 <!-- the tabs -->
+                <ul class="tabs2 fxg_width title_mouse">
+                      <li> <{newstype id=4}><a href="[link:title]"><span>[field:title]</span></a><{/newstype}></li>
+                      <li><{newstype id=1}><a href="[link:title]"><span>[field:title]</span></a><{/newstype}></li>
+                </ul>
+                <!-- tab "panes" -->
+                <div class="panes box_bord">
+                   	<div class="law" id="Newstype1List">
+					<ul class="law_list">
+					<{news magic="y" typeid=2 row=9 titlelen=34 infolen=35}>
+					<li[field:style]>[field:url]</li>
+					<{/news}>
+					</ul>
+				</div>
+				    <div class="law" id="Newstype2List" style="display:none;">
+					<ul class="law_list">
+					<{news magic="y" typeid=1 row=9 titlelen=34 infolen=35}>
+					<li[field:style]>[field:url]</li>
+					<{/news}>
+				 </ul>
+				</div>
+                </div>
+				
+			</div>
+			<div class="fl latest02">
+				<div class="title_bar_s1">
+                <span class="title_top_s1"><span></span></span>
+                <h2><span class="title_more"><a href="news/list.php?type=hot" title="<{$_more}>"><span class="raquo">&raquo;</span><{$_more}></a></span><{$_hot_news}></h2>
+                </div>
+				<div class="newscarcontbox">
+					<div class="lasestcontboxh02">
+						<ul>
+							<{news row=4 type="image" titlelen="10"}>
+							<li><a href="[link:title]"><img src="[img:src]" alt="[field:title]" /></a>
+                            <p><a href="[link:title]" title="[field:title]">[field:title]</a></p>
+                            </li>
+							<{/news}>
+						</ul>
+					</div>
+					<div class="newscarcontboxb">
+						<ul>
+							<{news row=14}>
+							<li><a href="[link:title]" title="[field:title]">[field:title]</a></li>
+							<{/news}>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="fr hotzt">
+				<div class="hotztbox">
+                   <div class="title">
+					<span class="more"><a href="news/list.php?type=topic"><span class="raquo">&raquo;</span><{$_more}></a></span><h2><{$_topic_news}></h2>
+                    </div>
+                     <ul>
+					<{topic type="news" row=3}>
+                         <li>
+                           <a href="[link:title]" title=""><img src="[img:src]"/></a>
+                           <div><a href="[link:title]" title="">[field:title]</a></div>
+                         </li>
+					<{/topic}>
+                     </ul>
+				</div>
+			</div>
+		</div>
+		<div class="corner_2px_b">
+		    <div class="corner_2px_bl"></div>
+            <div class="corner_2px_br"></div>
+		</div>
+	</div>
+	<div class="blank6"></div>
+	<div class="content">
+		<div class="pardent">
+			<p><a href="friendlink.php" title="<{$_apply_friendlink}>" class="fr"><span class="raquo">&raquo;</span><{$_apply_friendlink}></a></p>
+			<div class="pardentbox clearfix">
+			<table width="100%" border="0">
+			  <tr>
+				<th class="friend_link"><{$_friend_links}>:</th>
+				<td class="friend_link_content">
+				<{friendlink typeid="1"}>
+					<a href="[link:title]" title="[field:tip]" target="_blank">[field:title]</a><span>|</span>
+				<{/friendlink}>
+				</td>
+			  </tr>
+			  <tr>
+				<th class="friend_link"><{$_membership_links}>:</th>
+				<td class="friend_link_content">
+				<{friendlink typeid="2"}>
+					<a href="[link:title]" title="[field:tip]" target="_blank">[field:title]</a><span>|</span>
+				<{/friendlink}>
+				</td>
+			  </tr>
+			</table>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$("#topMenuOffer").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

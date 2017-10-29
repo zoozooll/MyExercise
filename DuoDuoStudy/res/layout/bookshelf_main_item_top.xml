@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:spinnerview="http://schemas.android.com/apk/res/com.iskyinfor.duoduo"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:gravity="center_vertical">
+<LinearLayout
+  android:id="@+id/test_seesee"
+  android:layout_width="fill_parent"
+  android:layout_height="50dip"
+  android:orientation="horizontal"
+  android:gravity="center_vertical"
+  android:background="@drawable/toptitle02">
+<TextView
+    android:id="@+id/book_name" 
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" 
+	android:layout_marginLeft="10dip"
+	style="@style/buttonTextStyle"
+	android:text="@string/bookshelf_toptitle"/>
+	
+<RelativeLayout android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:gravity="right"
+  android:paddingRight="5dip"
+  android:layout_marginTop="5dip">
+ <ImageView 
+      android:id="@+id/img_switch"
+	  android:layout_height="wrap_content" 
+	  android:layout_width="wrap_content"
+	  android:background="@drawable/bookshelf_list_switch_selector"/>
+ 
+ <!-- 
+  <TextView 
+	  android:id="@+id/bookshelf_all"
+	  android:layout_toRightOf="@id/img_switch"
+	  android:paddingRight="0dip"
+	  android:layout_height="wrap_content" 
+	  android:layout_width="wrap_content"
+	  android:layout_marginTop="3dip"
+	  android:textColor="#FFFFFF"
+      android:gravity="center"
+      android:textStyle="bold"
+      android:text="全部" 
+	  android:background="@drawable/bookshelf_topall_selector" />
+-->
+	
+	 <com.iskyinfor.duoduo.ui.SpinnerView
+ 	  android:id="@+id/bookshelf_all"
+	  android:layout_toRightOf="@id/img_switch"
+	  android:layout_height="wrap_content" 
+	  android:layout_width="80dip"
+	  android:layout_marginTop="3dip"
+	  android:textColor="#FFFFFF"
+      android:gravity="center"
+      android:textStyle="bold"
+      android:text="全部" 
+	  android:background="@drawable/bookshelf_topall_selector" 
+	  spinnerview:textInfo="@array/duoduo_shelftype_spinner"
+	  spinnerview:lesson_spinner_first="@drawable/lesson_spinner_first"
+	  spinnerview:lesson_spinner_center="@drawable/lesson_spinner_thrid"
+	  spinnerview:lesson_spinner_end="@drawable/lesson_spinner_fourth"/>
+	
+  <ImageView 
+      android:id="@+id/bookshelf_shop"
+      android:layout_toRightOf="@id/bookshelf_all"
+	  android:paddingRight="0dip"
+	  android:layout_marginTop="8dip"
+	  android:layout_height="wrap_content" 
+	  android:layout_width="wrap_content"  
+	  android:src="@drawable/strollbookstore"/>
+  </RelativeLayout>
+  
+</LinearLayout>
+  
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<{assign var="page_title" value="`$_self_advertising`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+      <div class="hint"><{$_ads_list}></div> 
+
+         <table class="news">
+                      <tr>
+                        <th><p align="left"><{$_ads_title}></p></th>
+                        <th><{$_details}></th>
+                        <th><{$_price_description}></th>
+                        <th><{$_operation}></th>
+                      </tr><tr>
+		      <td height="5" colspan="4" align="center" valign="middle"></td></tr>
+			  <{foreach from=$Adzones item=item}>
+			  <tr bgcolor="<{cycle values="#CCFFCC,#ffffff"}>">
+              <td height="25" align="left"><{$item.name}></td>
+		      <td align="left" valign="middle"><{$item.description}></td>
+		      <td align="center" valign="middle"><{$item.price}></td>
+		      <td align="center" valign="middle"><a href="../member/purchase.php?do=buy" target="_blank"><{$_apply}></a></td>
+			  </tr>
+              <{foreachelse}>
+              <tr><td colspan="4"><div align="center"><{$_no_datas_now}></div></td></tr>
+			  <{/foreach}>
+				</table>				
+       <table>      
+          <tr>
+            <td height="40" align="center">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+    </table>
+	
+</div>
+</div>
+<{include file="footer.html"}>

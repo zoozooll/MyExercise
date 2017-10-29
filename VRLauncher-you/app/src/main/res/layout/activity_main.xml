@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <com.vstar3d.View.HomeView
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:id="@+id/homeview"/>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id ="@+id/VRBox">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+	        >
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.vstar3d.View.SpotView
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    android:id="@+id/spotl"
+                 />
+    
+            </FrameLayout>
+    	 		<FrameLayout android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+    	 		    <com.vstar3d.View.SpotView
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:id="@+id/spotr"
+                    />
+                </FrameLayout>
+    	 		
+    </LinearLayout>
+    
+    </RelativeLayout>
+
+</RelativeLayout>

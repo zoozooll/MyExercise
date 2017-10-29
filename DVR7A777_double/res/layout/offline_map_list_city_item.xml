@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 底部显示布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/offline_map_list_content"
+    android:orientation="horizontal"
+    android:weightSum="2" >
+
+    <TextView
+        android:id="@+id/offline_city_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/unknown"
+        android:textColor="#fff" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+         >
+
+        <TextView
+            android:id="@+id/offline_city_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/offline_city_button"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:visibility="gone" 
+            android:layout_marginLeft="10dip"
+            />
+
+        <ImageButton
+            android:id="@id/offline_city_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:gravity="center"
+            android:paddingLeft="6dip"
+            android:visibility="gone"
+            android:src="@drawable/offline_map_download_button" />
+    </RelativeLayout>
+
+</LinearLayout>

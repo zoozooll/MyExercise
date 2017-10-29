@@ -1,0 +1,47 @@
+ ';/}' ';?>'
+
+{inc:require($inc_header);/}
+  <?php require($inc_header);?>
+   '{inc:' '<?php '
+
+{echo:$none_data;/}
+  <?php echo $none_data;?>
+   '{echo:' '<?php echo '
+
+
+{echo:lp{pu_no_user};/}
+  <?php echo $pu_langpackage->pu_no_user;?>
+
+{echo:str_replace("{b_com_num}",$rs['comments'],lp{b_com_num});/}
+  <?php echo str_replace("{b_com_num}",$rs['comments'],$b_langpackage->b_com_num);?>
+
+
+{sta:$none_data;/}
+
+
+
+{sta:foreach($blog_rs as $rs)[loop]}
+  <?php foreach($blog_rs as $rs){?>
+    '{sta:' '<?php '
+    '[loop]}' '{?>'
+
+
+{end:foreach/}
+  <?php }?>
+
+
+    '{end:' '<?php '
+    'foreach/}' '}?>'
+
+
+{sta:if(111=222)[exc]}
+   <?php if(111=222){?>
+    '[exc]}' '{?>'
+
+
+
+{end:if/}
+  <?php }?>
+  'if/}' '}?>'
+
+

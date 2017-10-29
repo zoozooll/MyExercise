@@ -1,0 +1,48 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="5"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+  <div class="content">
+    <div class="tips"><span><{$position}></span></div>
+    <div class="news_all clearfix">
+      <div class="news_all_left">
+       <div class="news_title">
+        <div class="title_bar_s4">
+          <span class="title_top_s4"><span></span></span>
+          <h2><span><{$item.title}></span>
+          <p><{$_source}><span class="gray"><{if $item.source}><{$item.source}><{else}><{$site_name}><{/if}></span><{$_publish_time}><span class="gray"><{$item.created|date_format:"%Y-%m-%d"}></span><{$_categories}><span class="gray">[<a href="product/price.php?do=search&typeid=<{$item.type_id}>"><{$PriceTypes[$item.type_id]}></a>]
+          </h2>
+       </div>
+       </div>
+        <div class="news_all_left_con">
+          <{$item.description|nl2br}>
+		  <div class="clear"></div>
+          <div id="news_info">
+		  <{if $item.product_id>0}>[<a href="product/content.php?id=<{$item.product_id}>"><{$_similar_product}></a>] <{/if}>
+		  [<a href="javascript:window.close()"><{$_close_widow}></a>] 
+		  [<a href="javascript: window.print();"><{$_print_page}></a>]
+		  </div>
+        </div>
+      </div>
+      <div class="all_right">
+       <div class="title_bar_s4">
+          <span class="title_top_s4"><span></span></span>
+          <h3><{$_related_info}></h3>
+       </div>
+        <div class="all_right_con">
+          <ul class="news_list">
+          <{news row=10 titlelen=32}>
+            <li> <a href="news/detail.php?id=[field:id]" title="[field:fulltitle]">[field:title]</a></li>
+          <{/news}>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<script>
+$("#SearchFrm").attr("action","product/list.php");
+$("#topMenuProduct").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

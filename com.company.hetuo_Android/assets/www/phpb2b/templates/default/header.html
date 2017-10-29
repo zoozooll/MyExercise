@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<{$Charset}>" />
+<title><{$page_title}> - <{$site_title}></title>
+<base href="<{$SiteUrl}>">
+<meta name ="keywords" content="<{$metakeywords}>">
+<meta name ="description" content="<{$metadescription}>"> 
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link rel="stylesheet" type="text/css" href="<{$theme_img_path}>base.css" />
+<link rel="stylesheet" type="text/css" href="<{$theme_img_path}>general.css" />
+<link rel="stylesheet" type="text/css" href="<{$theme_style_path}>style.css" />
+<link rel="stylesheet" type="text/css" href="<{$theme_img_path}>layout.css" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="shorcut icon" type="image/x-ico" href="favicon.ico" />
+<link rel="bookmark" type="image/x-ico" href="favicon.ico" />
+<script src="scripts/jquery.js"></script>
+<script src="scripts/general.js" charset="<{$Charset}>"></script>
+<script language="javascript">
+<!--
+$(document).ready(function() {
+	if($("#mn_<{$nav_id}>").length>0){
+		$("#mn_<{$nav_id}>").addClass("current_nav");
+	}
+	$("#SearchKeyword").focus(function(){
+		if($("#SearchKeyword").val()=='<{$_keywords_sample}>'){
+			$("#SearchKeyword").val("").css('color', '#000000')
+			};
+		}).blur(function(){
+		if($("#SearchKeyword").val()==''){
+			$("#SearchKeyword").val("<{$_keywords_sample}>").css('color', '#ccc')
+			};
+	});
+	$("#BtnSearch").click(function(){
+		if($('#SearchKeyword').val()=='<{$_keywords_sample}>') {alert('<{$_input_keywords}>');$('#SearchKeyword').focus();return false;}
+	})
+})
+//-->
+</script>
+<body id="bd_<{$smarty.const.CURSCRIPT}>">
+<div id="header">
+    <div class="headtop">
+    <{cacheless}>
+    <p class="headtopcon">
+        <a class="index" href="javascript:;" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('<{$SiteUrl}>');"><{$_set_home_page}></a>
+        <a href="javascript: myAddPanel(document.title,location.href,document.title);" rel="sidebar" title="<{$site_name}>"><{$_add_favorite}></a>
+        <{if $pb_username!=""}>
+        <em><{$_hello}><{$pb_username}></em>
+        <a href="redirect.php?url=office-room">[<{$_my_office_room}>]</a>
+        <{if $is_admin}><a  href="pb-admin/login.php" target="_blank">[<{$_control_pannel}>]</a><{/if}>
+        <a href="logging.php?action=logout">[<{$_login_out}>]</a>
+        <{else}>
+        <em><{$_hello_welcome_to}><{$site_name}></em>
+        <a href="logging.php">&nbsp;[<{$_pls_login}>]</a>
+        <a href="member.php" title="<{$_register}>" ><strong>[<{$_free}><{$_register}>]</strong></a>
+        <{/if}>
+        <a href="service.php"  style="float:right;"><{$_customer_service}></a>
+        <a href="offer/post.php" style="float:right;"><{$_free_post}></a>
+        <a href="standard.php" style="float:right;"><{$_standards}></a>
+        <{category type="language"}>
+    </p>
+    <{/cacheless}>
+    </div>
+    <div class="logo_search clearfix">
+        <h1 id="logo"><a href="<{$SiteUrl}>"><img src="<{$site_logo}>" alt="<{$site_banner_word}>" /></a></h1>
+        <div class="search_bar">
+            <div class="search_nav">
+                <ul>
+                    <li id="topMenuProduct"><a href="product/"><span><{$_search_product}></span></a></li>
+                    <li id="topMenuCompany"><a href="company/"><span><{$_search_company}></span></a></li>
+                    <li id="topMenuOffer"><a href="offer/"><span><{$_search_offer}></span></a></li>
+                    <li id="topMenuNews"><a href="news/"><span><{$_search_news}></span></a></li>
+                </ul>
+                <a href="advsearch.php" class="fl lhighs"><{$_adv_search}></a>
+            </div>
+            <form name="search_frm" id="SearchFrm" action="offer/list.php" method="get">
+            <input type="hidden" name="do" value="search" />
+             <div class="search_panel">
+                 <span class="search_input_box">
+                    <input type="text" name="q" id="SearchKeyword" value="<{$smarty.get.q|default:$_keywords_sample}>" />
+                  </span>
+                  <span class="search_btn_box">
+                  <button type="submit"id="BtnSearch" value="<{$_search}>"><{$_search}></button>
+                  </span>
+                  <span class="history break underline"><strong><{$_latest_search}></strong><{$SearchHistory}></span> 
+             </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<div class="header_nav">    
+    <div id="nav_inner">
+        <ul>
+            <{foreach from=$navs name=navs item=item key=key}>
+                <li><{$item.nav}></li>
+            <{/foreach}>
+        </ul>
+	</div>
+</div>

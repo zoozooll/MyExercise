@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{echo: $header['title'];/}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="{echo: $header['keywords'];/}" />
+<meta name="description" content="{echo: $header['description'];/}" />
+<base href="{echo: $baseUrl;/}" />
+<link href="skin/{echo: $SYSINFO['templates'];/}/css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="skin/{echo: $SYSINFO['templates'];/}/js/changeStyle.js"></script>
+</head>
+<body>
+<div id="wrapper">
+{inc: include("shop/index_header.php");/}
+<!--search end -->
+<div class="path">{echo:lp{i_location};/}：<a href="index.php">{echo:lp{i_index};/}</a> > <a href="brand.php">{echo:lp{i_store_list};/}</a></div>
+<div class="main2 left">
+	<div class="top">
+	  <h2><a href="#">{echo:lp{i_like_storelist};/}</a></h2>
+	</div>
+	<div id="listcontent" class="c_m">
+		<ul>
+			<li class="list_item_title">
+				<ul><li class="place">{echo:lp{i_in_area};/}</li>
+				<li class="level">{echo:lp{i_is_vis};/}</li>
+				<li class="seller">{echo:lp{i_shopour};/}</li>
+				<li class="price">{echo:lp{i_goods_num};/}</li>
+				<li class="summary2">{echo:lp{i_s_com};/}</li>
+				<li class="logo">{echo:lp{i_shop_logo};/}</li></ul>
+			</li>
+			{sta: if($result['result']) {
+				foreach($result['result'] as $v) [loop]}
+			<li class="list_item list_item2">
+				<div class="photo2"><a href="{echo: shop_url($v['shop_id']);/}"><img src="{echo: $v['shop_logo'] ? $v['shop_logo'] : 'skin/default/images/shop_nologo.gif';/}" width="99" height="49" alt="" /></a></div>
+                <div class="summary2"><h3><a href="{echo: shop_url($v['shop_id']);/}">{echo: $v['shop_name'];/}</a></h3><p>[{echo: lp{i_info};/}]{echo: sub_str(strip_tags($v['shop_intro']),28);/}</p></div>
+				<ul class="attribute">
+                    <li class="place2">{echo: $areainfo[$v['shop_province']];/}.{echo: $areainfo[$v['shop_city']];/}</li>
+                    <li class="level">{sta: if($v['rank_id']>2)[exc]}<a href="javascript:;" title="{echo:lp{i_approve_company};/}"  class="shop_cert left">{echo:lp{i_approve_company};/}</a>{sta: } else[exc]}<a href="javascript:;" title="{echo:lp{i_noapprove_company};/}"  class="shop_cert2 left">{echo:lp{i_noapprove_company};/}</a>
+                    {end:if/}
+                    </li>
+					<li class="seller"><a class="name" href="{echo: shop_url($v['shop_id']);/}">{echo: $v['user_name'];/}</a></li>
+					<li class="num">{echo: $v['goods_num'];/}</li>
+                </ul>
+			</li>
+			{sta:  }} else {
+				echo "<li>".lp{i_comapny_none}."</li>";
+			if/}
+		</ul>
+		<div class="page"><span>{echo: str_replace("{num}",$result['countnum'],lp{i_page_num});/}</span><a href="brand.php{echo: $result['firsturl'];/}" >{echo: lp{i_page_first};/}</a><span><a href="brand.php{echo: $result['preurl'];/}">{echo: lp{i_page_pre};/}</a></span><a href="brand.php{echo: $result['nexturl'];/}" >{echo: lp{i_page_next};/}</a><a href="brand.php{echo: $result['lasturl'];/}" >{echo: lp{i_page_last};/}</a><span>{echo: lp{i_page_now};/}{echo: $result['page'];/}/{echo: $result['countpage'];/}</span><span>{echo: str_replace("{num}",$result['countpage'],lp{i_page_count});/}</span></div>
+	</div>
+</div>
+
+<!-- main end -->
+<div class="main_right2 left10">
+    <div class="recommend2">
+        <div class="head_line"><div class="bg_left"></div><div class="bg_right"></div></div>
+        <div class="top"><h2 class="highlight">{echo:lp{i_boutique};/}</h2><span class="right"><a href="search.php?best=1">{echo:lp{i_more};/}>></a></span></div>
+        <div class="c_m">
+        	<ul>
+              {sta: foreach($goods_best as $value) [loop]}
+			    <li><a href="{echo: goods_url($value['goods_id']);/}"><img src="{echo: $value['is_set_image'] ? $value['goods_thumb'] : 'skin/default/images/nopic.gif';/}" alt="{echo: $value['goods_name'];/}" /> <span>{echo: sub_str($value['goods_name'],8,false);/}</span></a><label>￥{echo: $value['goods_price'];/}元</label></li>
+			  {end:foreach/}
+			</ul>
+        </div>
+	</div>
+    <div class="rank">
+        <div class="head_line"><div class="bg_left"></div><div class="bg_right"></div></div>
+        <div class="top"><h2 class="highlight">{echo:lp{i_hot};/}</h2><span class="right"><a href="search.php?hot=1">{echo:lp{i_more};/}>></a>&nbsp;</span></div>
+        <div class="c_m">
+		<ul id="promote_goods" class="cls clear">
+		{sta:$i=1;/}
+		{sta: foreach($goods_hot as $value)[loop]}
+			<li onmouseover="promote_change(this)"><span class="num">{echo:$i;/}</span><a href="{echo: goods_url($value['goods_id']);/}"><img height="60" width="60" src="{echo: $value['is_set_image'] ? $value['goods_thumb'] : 'skin/default/images/nopic.gif';/}" alt="{echo: $value['goods_name'];/}" /> <span title="{echo: $value['goods_name'];/}">{echo: sub_str($value['goods_name'],14,false);/}</span></a><div class="price"><span>￥{echo:$value['goods_price'];/}</span></div></li>
+			{sta:$i++;/}
+		{end:foreach/}
+		</ul>
+		</div>
+	</div>
+    <div class="recommend2">
+        <div class="head_line"><div class="bg_left"></div><div class="bg_right"></div></div>
+        <div class="top"><h2 class="highlight">{echo:lp{i_new};/}</h2></div>
+        <div class="c_m">
+        	<ul>
+			{sta: foreach($goodshistory as $value)[loop]}
+              <li><a href="{echo: goods_url($value['goods_id']);/}"><img src="{echo: $value['is_set_image'] ? $value['goods_thumb'] : 'skin/default/images/nopic.gif';/}" /></a><a class="pro_name" href="{echo: goods_url($value['goods_id']);/}">{echo: sub_str($value['goods_name'],20,false);/}</a><label>￥{echo:$value['goods_price'];/}</label></li>
+			{end:foreach/}
+        	</ul>
+        </div>
+	</div>
+</div>
+<!--main right end-->
+{inc: require("shop/index_footer.php");/}
+<!--footer end-->
+</div>
+</body>
+</html>

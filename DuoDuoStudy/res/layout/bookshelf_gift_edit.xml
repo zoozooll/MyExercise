@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FFFFFF">
+        
+         <LinearLayout 
+		      android:id="@+id/linear1" 
+		      android:orientation="horizontal"
+			  android:layout_width="fill_parent"
+			  android:layout_height="40dip"
+			  android:background="@drawable/bookshelf_indextopback">
+			  <TextView android:id="@+id/bookname" 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:textColor="#000"
+				android:textSize="13dip" 
+				android:layout_marginTop="10dip"
+				android:layout_marginLeft="10dip"
+				android:text="赠送"/>
+          </LinearLayout>
+          <LinearLayout 
+		      android:id="@+id/linear2" 
+		      android:orientation="vertical"
+			  android:layout_width="fill_parent"
+			  android:layout_height="wrap_content"
+			  android:layout_below="@+id/linear1">
+			  <LinearLayout 
+		      android:id="@+id/linear2" 
+		      android:orientation="horizontal"
+			  android:layout_width="fill_parent"
+			  android:layout_height="wrap_content">
+		         <TextView android:id="@+id/bookname" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000"
+						android:textSize="10dip" 
+						android:layout_marginLeft="10dip"
+						android:text="你有"/>
+						 <TextView android:id="@+id/bookshelfgift_booknum" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000"
+						android:textSize="10dip" 
+						android:text="0"/>
+						 <TextView android:id="@+id/bookname" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000"
+						android:textSize="10dip" 
+						android:text="本《"/>
+						<TextView android:id="@+id/bookshelfgift_bookname" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000"
+						android:textSize="10dip" 
+						android:text="废都"/>
+						<TextView android:id="@+id/bookname" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000"
+						android:textSize="10dip" 
+						android:text="》可赠送给好友"/>
+			</LinearLayout>
+			<TextView android:id="@+id/bookname" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000"
+					android:textSize="10dip" 
+					android:textStyle="bold"
+					android:layout_marginTop="10dip"
+					android:layout_marginLeft="10dip"
+					android:text="请选择赠送的人"/>
+			<EditText android:id="@+id/bookshelfgift_giftname" 
+					android:layout_width="fill_parent"
+					android:layout_height="30dip" 
+					android:textColor="#000"
+					android:textSize="10dip" 
+					android:layout_marginTop="5dip"
+					android:layout_marginLeft="10dip"
+					android:text=""
+					android:focusable="false"/>
+			<TextView android:id="@+id/bookshelfgift_editlist" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#0000FF"
+					android:textSize="10dip" 
+					android:textStyle="bold"
+					android:layout_marginLeft="10dip"
+					android:text="点击此处从好友列表添加获赠人"/>
+			<TextView android:id="@+id/bookname" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000"
+					android:textSize="10dip" 
+					android:textStyle="bold"
+					android:layout_marginTop="5dip"
+					android:layout_marginLeft="10dip"
+					android:text="我的赠言"/>	
+			<EditText android:id="@+id/bookshelfgift_context" 
+					android:layout_width="fill_parent"
+					android:layout_height="300dip" 
+					android:textColor="#000"
+					android:textSize="12dip" 
+					android:layout_marginTop="5dip"
+					android:layout_marginLeft="10dip"
+					android:gravity="top|left"
+					android:text=""/>	
+			<CheckBox 
+			        android:id="@+id/bookshelfgift_chk"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        style="@style/MyCheckBox"
+			        android:textSize="10dip"
+			        android:layout_marginLeft="10dip"
+			        android:text="私密赠送"/>
+				
+			<ImageView android:id="@+id/bookshelfgift_send" 
+					android:layout_width="80dip"
+					android:layout_height="35dip" 
+					android:layout_marginLeft="10dip"
+					android:background="@drawable/bookshelfgift_send"/>	
+		</LinearLayout>
+		<RelativeLayout
+			    android:id="@+id/linear4"
+			    android:layout_width="fill_parent"
+			    android:layout_height="35dip"
+			    android:layout_alignParentBottom="true"
+			    android:background="@drawable/bottom_layout_bg">
+			    <ImageView
+			        android:id="@+id/bookshelfgift_bottomcd"
+			        android:layout_width="30dip"
+			        android:layout_height="30dip"
+			        android:layout_marginRight="2dip"
+			        android:paddingLeft="10dip"
+			        android:layout_alignParentLeft="true"
+			    />
+			    <ImageView
+			        android:id="@+id/bookshelfgift_edit_bottomfh"
+			        android:layout_width="30dip"
+			        android:layout_height="26dip"
+			        android:background="@drawable/bottom_right"
+			        android:layout_marginTop="5dip"
+			        android:layout_alignParentRight="true"
+			    />
+			  </RelativeLayout>
+	 
+	 
+</RelativeLayout>

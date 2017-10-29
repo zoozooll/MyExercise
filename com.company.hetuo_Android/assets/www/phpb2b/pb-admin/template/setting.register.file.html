@@ -1,0 +1,43 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_setting_global}> &raquo; <{$_reg_and_visit}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_reg_and_visit}></h3> 
+    <ul class="subnav">
+		<li><a href="setting.php?do=register">注册</a></li>
+        <li><a href="setting.php?do=registerfile" class="btn1"><span>默认设置</span></a></li>
+    </ul>
+</div>
+<div class="info"> 
+    <form method="post" name="edit_frm" action="setting.php"> 
+    <input type="hidden" name="data[reg_filename]" value="<{$item.REG_FILENAME}>" />
+    <input type="hidden" name="data[post_filename]" value="<{$item.POST_FILENAME}>" />
+        <table class="infoTable"> 
+		    <tr>
+				<th class="paddingT15"> 直接访问转向地址：</th>
+				<td class="paddingT15 wordSpacing5"><input name="data[setting][redirect_url]" type="text" id="RedirectUrl" value="<{$item.REDIRECT_URL}>" class="infoTableInput" /><span class="gray"><p>网址直接访问指定转向地址，如果指定，则在用户通过输入你的域名访问网站时，会指向该页面；如果不指定，则默认为根目录下的index.php</p></span></td>
+			</tr>
+         	<tr> 
+                <th class="paddingT15">企业空间命名:</th> 
+              	<td class="paddingT15 wordSpacing5"><input type="text" name="data[setting][space_name]" value="<{$item.SPACE_NAME|default:$_space_name}>" class="infoTableInput" /></td> 
+          	</tr> 
+         	<tr> 
+                <th class="paddingT15">注册文件名:</th> 
+              	<td class="paddingT15 wordSpacing5"><input type="text" name="data[setting][reg_filename]" value="<{$item.REG_FILENAME|default:'register.php'}>" class="infoTableInput" /></td> 
+          	</tr> 
+         	<tr> 
+                <th class="paddingT15">免费发布供求文件名:</th> 
+              	<td class="paddingT15 wordSpacing5"><input type="text" name="data[setting][post_filename]" value="<{$item.POST_FILENAME|default:'post.php'}>" class="infoTableInput" /></td> 
+          	</tr> 
+            <tr> 
+            <th></th> 
+            <td class="ptb20"> 
+                <input class="formbtn" type="submit" name="saveregister" value="<{$_submit}>" /> 
+                <input class="formbtn" type="reset" name="reset" value="<{$_reset}>" /> 
+            </td> 
+        </tr> 
+        </table> 
+    </form> 
+</div> 
+<{include file="footer.html"}>

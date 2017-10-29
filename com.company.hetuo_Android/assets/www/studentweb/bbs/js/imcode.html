@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>验证码</title>
+<style type="text/css">
+<!--
+body {
+	margin: 0px;
+background-color:#F7FBFF;
+}
+-->
+</style>
+</head>
+
+<body>
+<script language="javascript" type="text/javascript">
+<!--
+
+//验证码
+var num0=new Array([0,1,1,0],[1,0,0,1],[1,0,0,1],[1,0,0,1],[1,0,0,1],[1,0,0,1],[0,1,1,0]);
+var num1=new Array([0,0,1,0],[0,1,1,0],[0,0,1,0],[0,0,1,0],[0,0,1,0],[0,0,1,0],[0,0,1,0]);
+var num2=new Array([0,1,1,0],[1,0,0,1],[0,0,0,1],[0,0,1,0],[0,1,0,0],[1,0,0,0],[1,1,1,1]);
+var num3=new Array([0,1,1,0],[1,0,0,1],[0,0,0,1],[0,0,1,0],[0,0,0,1],[1,0,0,1],[0,1,1,0]);
+var num4=new Array([0,0,1,0],[0,1,1,0],[1,0,1,0],[1,0,1,0],[1,1,1,1],[0,0,1,0],[0,0,1,0]);
+var num5=new Array([1,1,1,1],[1,0,0,0],[1,0,0,0],[1,1,1,0],[0,0,0,1],[0,0,0,1],[1,1,1,0]);
+var num6=new Array([0,1,1,1],[1,0,0,0],[1,0,0,0],[1,1,1,0],[1,0,0,1],[1,0,0,1],[0,1,1,0]);
+var num7=new Array([1,1,1,1],[1,0,0,1],[0,0,0,1],[0,0,1,0],[0,0,1,0],[0,0,1,0],[0,0,1,0]);
+var num8=new Array([0,1,1,0],[1,0,0,1],[1,0,0,1],[0,1,1,0],[1,0,0,1],[1,0,0,1],[0,1,1,0]);
+var num9=new Array([0,1,1,0],[1,0,0,1],[1,0,0,1],[0,1,1,1],[0,0,0,1],[0,0,0,1],[0,1,1,0]);
+
+var numC=String(Math.floor(Math.random()*999999));
+var numA=numC.split("");
+var code="";
+for(var i=0;i<numA.length;i++){
+  code+=get_chk_numbercode(eval("num"+numA[i]));
+}
+
+document.cookie="regimcode="+numC+"; path="+"/"+";";
+document.write('<style>');
+document.write(' #imtable { margin:2px;float:left;width:8px;font-size:2px;line-height:2px;table-layout:fixed; }');
+document.write(' #imtable td { }');
+document.write('</style>');
+
+document.write('<div style="float:left;background-color:;padding:3px;">'+code+'</div>');
+
+function get_chk_numbercode(num_arr){
+  var text='<table border="0" cellpadding="0" cellspacing="0" id="imtable">';
+  for(var i=0;i<7;i++){
+    text+='<tr>';
+    for(var j=0;j<4;j++){
+      text+='<td '+((num_arr[i][j]==1)?'bgcolor="#667788"':'bgcolor="#FFFFFF"')+'">&nbsp;</td>';
+    }
+    text+='</tr>';
+  }
+  text+='</table>';
+  return text;
+}
+
+
+
+-->
+</script>
+</body>
+</html>

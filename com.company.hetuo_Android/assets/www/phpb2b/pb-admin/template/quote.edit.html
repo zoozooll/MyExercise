@@ -1,0 +1,98 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_pro_market}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_pro_market}></h3>
+    <ul class="subnav">
+          <li><a href="market.php"><{$_management}></a></li>
+          <li><a href="quote.php">价格行情</a></li>
+          <li><a class="btn1" href="quote.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+		<li><a href="quotetype.php">行情分类</a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" id="EditFrm" action="quote.php" name="edit_frm"  >
+    <input type="hidden" name="id" value="<{$item.id}>" />
+   <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+  <input type="hidden" name="market_name" value="<{$item.marketname}>" />
+  <input type="hidden" name="product_name" value="<{$item.productname}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15">产品标题</th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[title]" value="<{$item.title}>" />
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15">市场名:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="quote[market_name]" id="dataMarketName" value="<{$item.marketname}>" /></td>
+      </tr>
+	   <tr>
+        <th class="paddingT15"> 最高报价:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[max_price]" value="<{$item.max_price}>" /></td>
+      </tr>
+	   <tr>
+        <th class="paddingT15"> 最低报价:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[min_price]" value="<{$item.min_price}>" /></td>
+      </tr>
+	  <tr>
+        <th class="paddingT15"> 计量单位:</th>
+        <td><select name="data[units]" id="ProductpriceUnits">
+        <{html_options options=$Measuries selected=$item.units}>
+		</select> </td>
+      </tr>
+	  <tr>
+        <th class="paddingT15"> 货币单位:</th>
+        	<td>	<select name="data[currency]" id="ProductpriceCurrency">
+       <{html_options options=$Monetaries selected=$item.currency}>
+		</select>  </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 分类：</th>
+        <td class="paddingT15 wordSpacing5">
+		<select name="data[type_id]" id="Quotetypes">
+		<option value="0">无</option>
+        <{$typeOptions}>
+		</select>        
+		</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_in_area}></th>
+        <td class="paddingT15 wordSpacing5">
+			<span id="dataArea">
+						<select name="data[area_id1]" id="dataProductAreaId1" class="level_1" style="width:120px;" ></select>
+						<select name="data[area_id2]" id="dataProductAreaId2" class="level_2" style="width:120px;"></select>
+						<select name="data[area_id3]" id="dataProductAreaId3" class="level_3" style="width:120px;"></select>
+			</span>        
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 详细说明:</th>
+        <td class="paddingT15 wordSpacing5"><textarea style="width:650px;height:300px;" name="data[content]" id="dataProductContent"><{$item.content}></textarea>
+		</td>
+
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />
+		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+var cache_path = "../";
+var app_language = '<{$AppLanguage}>';
+var area_id1 = <{$item.area_id1|default:0}> ;
+var area_id2 = <{$item.area_id2|default:0}> ;
+var area_id3 = <{$item.area_id3|default:0}> ;
+jQuery(document).ready(function($) {
+	$("#Quotetypes").val("<{$item.type_id|default:0}>")
+})
+</script>
+<script src="../scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="../scripts/script_area.js"></script>
+<{editor type="tiny_mce"}>
+<{include file="footer.html"}>

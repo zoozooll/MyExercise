@@ -1,0 +1,31 @@
+html { background-color:#E1F8D8; }
+body { background-color:#FCFFF7; }
+#banner { background-color:#BBE2B8; }
+#banner span { color:#696969; }
+
+.area a, .frienlink a, a.nobr, a.class { color:#205001; }
+.area h6 a, h6 a { color:#3DB836; }
+
+.side, .hot, .frienlink, .search { border:1px #BBE2B8 solid; }
+.search { background-color:#E1F8D8; }
+
+.list_title { background-color:#BBE2B8; }
+.list_title a { color:#205001; }
+.list_title .list_title_in { color:#205001; background-color:#FCFFF7; border:1px #BBE2B8 solid; }/**/
+
+.li { border-bottom:1px #CECECE dashed; }
+.step0 { background-color:#F7FBFF; }
+.step1 { }
+.todaydate { padding-right:0; }
+
+#output { background-color:#F7FBFF; border:1px #BBE2B8 solid; }
+#code_author a { color:#BBE2B8; }
+/*  ҳ */
+.author { color:#696969; background-color:#E1F8D8; }/**/
+
+
+.ad_index, .ad_index2 { border:1px #BBE2B8 solid; }
+
+
+
+

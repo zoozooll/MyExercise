@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+  <ListView
+      android:id="@+id/duoduo_lesson_selcet_listview"
+      android:layout_width="80dip"
+      android:layout_height="wrap_content"
+      android:background="#5b5b5b">
+  </ListView> 
+  <!-- 
+  <View
+        android:layout_marginLeft="215dip"
+      android:layout_marginTop="35dip"
+      android:id="@+id/view_left"
+      android:layout_width="1dip"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="35dip"
+      android:layout_alignLeft="@id/duoduo_lesson_selcet_listview"
+      android:background="@color/purple"/>
+  <View
+  	  android:id="@+id/view_right"
+      android:layout_width="1dip"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="35dip"
+      android:layout_alignRight="@id/duoduo_lesson_selcet_listview"
+      android:background="@color/black"/>
+       -->
+</RelativeLayout>

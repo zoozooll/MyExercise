@@ -1,0 +1,100 @@
+<!--<?php
+include_once PrintEot('left');
+print <<<EOT
+-->
+<div class="nav3 mb10 ta">
+    <ul class="cc">
+      <li><a href="$admin_file?adminjob=tpccheck">主题审核</a></li>
+      <li class="current"><a href="$admin_file?adminjob=tpccheck&action=postcheck">回复审核</a></li>
+    </ul>
+</div>
+<div class="admin_info mb10">
+    <h3 class="h1"><b>提示信息</b></h3>
+    <div class="legend">版块开启 "回复审核" 功能时，只有经过管理员审核的回复才会在主题中显示</div>
+</div>
+<form action="$basename&" method=post>
+  <input type=hidden name=job value='search'>
+  <h2 class="h1">回复验证</h2>
+  <div class="admin_table mb10">
+  <table width="100%" cellspacing="0" cellpadding="0">
+    <tr class="tr1 vt">
+      <td class="td2">所属分类 :
+        <select name="fid"class="select_wa mr20">
+          <option>选择分类</option>
+          $forumcache
+        </select>
+        作者 :
+        <input type="text" class="input input_wa mr20" name="username">
+<!--
+EOT;
+if($db_plist && count($db_plist)>1){ print <<<EOT
+-->
+        分表数据库 :
+        <select name="ptable" onchange="window.location=('$basename&ptable='+this.value);"class="select_wa mr20">
+          $p_table
+        </select>
+<!--
+EOT;
+} print <<<EOT
+-->
+        <span class="bt2"><span><button type="submit" value="提 交">提 交</button></span></span></td>
+    </tr>
+  </table>
+  </div>
+</form>
+<form action="$basename&" method=post>
+  <input type=hidden name=job value=search>
+  <input type=hidden name=step value=2>
+  <input type=hidden name=ptable value="$ptable">
+  <h2 class="h1">回复验证</h2>
+  <div class="admin_table mb10">
+  <table width="100%" cellspacing="0" cellpadding="0">
+    <tr class="tr2">
+      <td>ID</td>
+      <td>标题</td>
+      <td>所在主题</td>
+      <td>作者</td>
+      <td>所属分类</td>
+      <td>按发表时间排序</td>
+      <td>&nbsp;</td>
+    </tr>
+<!--
+EOT;
+$num=($page-1)*$db_perpage;
+foreach($postdb as $key=>$post){
+$num++;
+print <<<EOT
+-->
+    <tr class="tr1 vt">
+      <td class="td2">$num</td>
+      <td class="td2"><a href="$admin_file?adminjob=content&type=post&tid=$post[tid]&id=$post[pid]">$post[subject]</a></td>
+      <td class="td2"><a href="read.php?tid=$post[tid]" target='_blank'>所在主题</a></td>
+      <td class="td2"><a href="u.php?action=show&uid=$post[authorid]" target='_blank'></a>$post[author]</td>
+      <td class="td2">$post[name]</td>
+      <td class="td2">$post[postdate]</td>
+      <td class="td2"><input type=checkbox name="selid[]" value='$post[pid]'></td>
+    </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+    <tr class="tr1 vt">
+      <td class="td2 tac" colspan="7">
+      	
+      </td>
+    </tr>
+  </table>
+  </div>
+  <div class="cc mb10">$pages</div>
+  <div class="mb10 tac">
+  	<p><input type=radio name="type" value=del>删除&nbsp;<input type=radio name="type" value=pass checked>通过</p>
+  </div>
+   <div class="tac mb10">
+        <span class="bt"><span><button type="button" name="chkall" onclick="CheckAll(this.form)">全 选</button></span></span>
+        <span class="btn"><span><button type="submit">提 交</button></span></span>
+    </div>
+</form>
+<!--
+EOT;
+include_once PrintEot('adminbottom');
+?>-->

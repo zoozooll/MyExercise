@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="match_parent"
+	android:layout_height="wrap_content" android:background="@drawable/titlebar_bg">
+	<TextView
+		android:layout_width="60dp" android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical" 
+		android:textColor="@drawable/white" android:gravity="center"
+		android:text="@string/shoppingOrderListOrderId"></TextView>
+	<TextView
+		android:layout_width="60dp" android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:textColor="@drawable/white" android:gravity="center"
+		android:text="@string/shoppingOrderListOrderAccount"></TextView>
+	<TextView
+		android:layout_width="80dp" android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:textColor="@drawable/white" android:gravity="center"
+		android:text="@string/shoppingOrderListOrderDate"></TextView>
+	<TextView 
+		android:layout_width="60dp" android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:textColor="@drawable/white" android:gravity="center"
+		android:text="@string/shoppingOrderListOrderState"></TextView>
+	<TextView 
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_weight="1" android:layout_gravity="center_vertical"
+		android:textColor="@drawable/white" android:gravity="center"
+		android:text="@string/shoppingOrderListCtrl"></TextView>
+
+</LinearLayout>

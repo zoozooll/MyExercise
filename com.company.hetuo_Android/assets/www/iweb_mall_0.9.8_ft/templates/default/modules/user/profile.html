@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+<style type="text/css">
+td{text-align:left;}
+</style>
+</head>
+<body>
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+        <div class="bigpart">
+		<div class="title_uc"><h3>{echo: lp{m_edit_profile};/}</h3></div>
+			<form action="do.php?act=user_profile" method="post" name="form_profile">
+				<table width="98%" class="form_table">
+					<tr><td class="textright">Email：</td><td>{echo: get_sess_user_email();/}</td></tr>
+					<tr><td class="textright">{echo: lp{m_truename};/}：</td><td><input type="text" name="user_truename" value="{echo: $user_info['user_truename'];/}" maxlength="12" /></td></tr>
+					<tr>
+						<td class="textright">{echo: lp{m_birthday};/}：</td>
+						<td><select name="Y">
+								<option value="0">{echo: lp{m_year};/}</option>
+							{sta: for($i=1950; $i<=date("Y"); $i++)[loop]}
+								<option value="{echo: $i;/}" {sta: if($Y==$i){echo 'selected';if/}>{echo: $i;/}</option>
+							{end:foreach/}
+							</select>
+							<select name="M">
+								<option value="0">{echo: lp{m_month};/}</option>
+							{sta: for($i=1; $i<=12; $i++)[loop]}
+								<option value="{echo: $i;/}" {sta: if($M==$i){echo 'selected';if/}>{echo: $i;/}</option>
+							{end:foreach/}
+							</select>
+							<select name="D">
+								<option value="0">{echo: lp{m_day};/}</option>
+							{sta: for($i=1; $i<=31; $i++)[loop]}
+								<option value="{echo: $i;/}" {sta: if($D==$i){echo 'selected';if/}>{echo: $i;/}</option>
+							{end:foreach/}
+							</select>
+						</td>
+					</tr>
+					<tr><td class="textright">{echo: lp{m_gender};/}：</td><td><input type="radio" name="user_gender" value="0" {echo:$user_gender0;/} />{echo: lp{m_secret};/} <input type="radio" name="user_gender" value="1" {echo:$user_gender1;/} />{echo: lp{m_man};/} <input type="radio" name="user_gender" value="2" {echo:$user_gender2;/} />{echo: lp{m_woman};/}</td></tr>
+					<tr><td class="textright">{echo: lp{m_marry};/}：</td><td><input type="radio" name="user_marry" value="0" {echo:$user_marry0;/} />{echo: lp{m_secret};/} <input type="radio" name="user_marry" value="1" {echo:$user_marry1;/} />{echo: lp{m_unmarried};/} <input type="radio" name="user_marry" value="2" {echo:$user_marry2;/} />{echo: lp{m_married};/}</td></tr>
+					<tr><td class="textright">{echo: lp{m_mobile};/}：</td><td><input type="text" name="user_mobile" value="{echo: $user_info['user_mobile'];/}" maxlength="20" /></td></tr>
+					<tr><td class="textright">{echo: lp{m_telphone};/}：</td><td><input type="text" name="user_telphone" value="{echo: $user_info['user_telphone'];/}" maxlength="20" /></td></tr>
+					<tr><td class="textright">MSN：</td><td><input type="text" name="user_msn" value="{echo: $user_info['user_msn'];/}"  maxlength="50" /></td></tr>
+					<tr><td class="textright">QQ：</td><td><input type="text" name="user_qq" value="{echo: $user_info['user_qq'];/}" maxlength="15" /></td></tr>
+					<tr><td class="textright">Skype：</td><td><input type="text" name="user_skype" value="{echo: $user_info['user_skype'];/}" maxlength="50" /></td></tr>
+					<tr>
+						<td class="textright">{echo: lp{m_stayarea};/}：</td>
+						<td>
+							<span id="user_country"><select name="country" onchange="areachanged(this.value,0);">
+								<option value='0'>{echo: lp{m_select_country};/}</option>
+							 {sta:  foreach($areas_info[0] as $v)[loop]}
+								<option value="{echo: $v['area_id'];/}" {sta: if($v['area_id']==$user_info['user_country']){echo 'selected';if/}>{echo: $v['area_name'];/}</option>
+							{end:foreach/}
+							</select></span>
+							<span id="user_province">{sta: if($user_info['user_country'])[exc]}
+							<select name="province" onchange="areachanged(this.value,1);">
+								<option value='0'>{echo: lp{m_select_province};/}</option>
+							{sta:foreach($areas_info[1] as $v) { 
+									if($v['parent_id'] == $user_info['user_country'])[exc]}
+								<option value="{echo: $v['area_id'];/}" {sta:  if($v['area_id']==$user_info['user_province']){echo 'selected';if/}>{echo: $v['area_name'];/}</option>
+							{sta:	}
+							foreach/}
+							</select>
+							{end:if/}</span>
+							<span id="user_city">{sta:	 if($user_info['user_province'])[exc]}
+							<select name="city" onchange="areachanged(this.value,2);">
+								<option value='0'>{echo: lp{m_select_city};/}</option>
+							{sta:	 foreach($areas_info[2] as $v) {
+									if($v['parent_id'] == $user_info['user_province'])[exc]}
+								<option value="{echo: $v['area_id'];/}" {sta: if($v['area_id']==$user_info['user_city']){echo 'selected';if/}>{echo: $v['area_name'];/}</option>
+							{sta:	}
+							foreach/}</select>
+							{end:if/}</span>
+							<span id="user_district">{sta: if($user_info['user_city']) [exc]}
+							<select name="district">
+								<option value='0'>{echo: lp{m_select_district};/}</option>
+							{sta:foreach($areas_info[3] as $v) { 
+									if($v['parent_id'] == $user_info['user_city'])[exc]}
+								<option value="{echo: $v['area_id'];/}" {sta:  if($v['area_id']==$user_info['user_district']){echo 'selected';if/}>{echo: $v['area_name'];/}</option>
+							{sta:	}
+							foreach/}</select>
+							{end:if/}</span>
+						</td>
+					</tr>
+					<tr><td class="textright">{echo: lp{m_address};/}：</td><td><input type="text" name="user_address" value="{echo: $user_info['user_address'];/}" style="width:250px;" maxlength="200" /></td></tr>
+					<tr><td class="textright">{echo: lp{m_zipcode};/}：</td><td><input type="text" name="user_zipcode" value="{echo: $user_info['user_zipcode'];/}" maxlength="6" /></td></tr>
+					<tr><td colspan="2" class="center"><input type="hidden" name="user_id" value="{echo: $user_id;/}" /><input type="submit" name="submit" value="{echo: lp{m_edit_profile};/}" /></td></tr>
+				</table>
+			</form>
+        </div>
+    </div>
+    <div class="clear"></div>
+    {inc: require("modules/footer.php");/}
+<script language="JavaScript" src="servtools/ajax_client/ajax.js"></script>
+<script language="JavaScript">
+<!--
+function areachanged(value,type){
+	if(value > 0) {
+		ajax("do.php?act=ajax_areas","POST","value="+value+"&type="+type,function(return_text){
+			var return_text = return_text.replace(/[\n\r]/g,"");
+			if(return_text==""){
+				alert("{echo: lp{m_select_again};/}！");
+			} else {
+				if(type==0) {
+					document.getElementById("user_province").innerHTML = return_text;
+					show("user_province");
+					hide("user_city");
+					hide("user_district");
+				} else if(type==1) {
+					document.getElementById("user_city").innerHTML = return_text;
+					show("user_city");
+					hide("user_district");
+				} else if(type==2) {
+					document.getElementById("user_district").innerHTML = return_text;
+					show("user_district");
+				}
+			}		
+		});
+	} else {
+		if(type==2) {
+			hide("user_district");
+		} else if(type==1) {
+			hide("user_district");
+			hide("user_city");
+		} else if(type==0) {
+			hide("user_district");
+			hide("user_city");
+			hide("user_province");
+		}
+	}
+}
+
+function hide(id) {
+	document.getElementById(id).style.display = 'none';
+}
+
+function show(id) {
+	document.getElementById(id).style.display = '';
+}
+//-->
+</script>
+</body>
+</html>

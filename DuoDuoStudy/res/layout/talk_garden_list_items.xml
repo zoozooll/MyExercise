@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="40dip"
+  android:background="@drawable/talklist">
+  <TextView
+      android:id="@+id/talk_username_text"
+      android:layout_width="100dip"
+  	  android:layout_height="wrap_content"
+  	  android:text="刘维"
+  	  android:textSize="15dip"
+  	  android:textStyle="bold"
+  	  android:layout_marginTop="5dip"
+  	  android:textColor="#000"/>
+  <TextView
+  	  android:id="@+id/talk_content_text"
+      android:layout_width="wrap_content"
+  	  android:layout_height="wrap_content"
+  	  android:text="发个自定义表情看看"
+  	  android:textSize="13dip"
+  	  android:textColor="@color/black"
+  	  android:layout_marginTop="5dip"/>
+  <RelativeLayout
+ 	  android:layout_width="wrap_content"
+  	  android:layout_height="wrap_content">
+      <TextView
+  	  android:id="@+id/talk_time_text"
+      android:layout_width="wrap_content"
+  	  android:layout_height="wrap_content"
+  	  android:layout_alignParentRight="true"
+  	  android:text="13:15"
+  	  android:textSize="15dip"
+  	  android:textColor="@color/black"
+  	  android:layout_marginTop="5dip"/>
+  </RelativeLayout>
+  
+</LinearLayout>

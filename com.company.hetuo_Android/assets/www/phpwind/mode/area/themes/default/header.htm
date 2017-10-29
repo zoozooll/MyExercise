@@ -1,0 +1,100 @@
+<!--<?php print <<<EOT
+--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=$db_charset" />
+<title>$webPageTitle - Powered by PHPWind</title>
+<meta name="generator" content="PHPWind $wind_version" />
+<meta name="description" content="$metaDescription" />
+<meta name="keywords" content="$metaKeywords" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<link rel='archives' title='$db_bbsname' href='$db_bbsurl/simple' />
+<!--#if($fid){#-->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="$db_bbsurl/rss.php?fid=$fid" />
+<!--#}#--><base id="headbase" href="$db_bbsurl/" />
+<link rel="stylesheet" type="text/css" href="$imgpath/wind-reset.css" />
+<link rel="stylesheet" type="text/css" href="mode/area/themes/default/images/default/pwmanage.css" />
+<link rel="stylesheet" type="text/css" href="mode/area/themes/default/images/default/head.css" />
+<link rel="stylesheet" type="text/css" href="$pwModeImg/style.css" />
+<!--#if($pwModeCss){#--><link rel="stylesheet" type="text/css" href="$pwModeCss" />
+<!--#}#--><script type="text/javascript" language="JavaScript" src="js/pw_ajax.js"></script>
+<SCRIPT type="text/javascript" LANGUAGE="JavaScript" src="js/core/core.js"></SCRIPT>
+<script language="JavaScript">
+
+	var imgpath = '$imgpath';
+	var verifyhash = '$verifyhash';
+	var modeimg = '$pwModeImg';
+	var modeBase = '$baseUrl';
+	var winduid = '$winduid';
+	var windid	= '$windid';
+	var groupid	= '$groupid';
+	var cateid	= '$cateid';
+</script>
+</head>
+<body id="body">
+<!--#include printEOT('headbar');#-->
+<div id="header">
+	<table cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td><a href="$db_bbsurl/index.php?m=area"><img src="mode/area/themes/default/images/default/logo.png" /></a></td>
+			<td class="tar">
+<!--#list($htmlAdvert,$arrayAdvert) = pwAdvert('Site.Header',$fid);#-->
+<!--#if($htmlAdvert){#-->
+$htmlAdvert
+<!--#}#-->
+			</td>
+		</tr>
+	</table>
+    
+    
+    
+<div id="nav">
+		<span class="nav-left fl"></span>
+            <div id="nav-s">
+	<a href="javascript:;" class="fr" onclick="goAdvanceSearch();return false;">高级</a>
+	<form name="sF" action="search.php?#submit" method="post">
+				<input type="hidden" name="step" value="2" />
+				<input type="hidden" name="method" value="AND" />
+				<input type="hidden" name="sch_area" value="0" />
+				<input type="hidden" name="sch_area" value="0" />
+				<input type="hidden" name="f_fid" value="all" />
+				<input type="hidden" name="sch_time" value="all" />
+                <input id="keyword" name="keyword" type="text" class="s-input" />
+                <input type="submit" name="submit" value="　　" class="s-btn" />
+                </form>
+</div>
+<script language="JavaScript"> 
+function goAdvanceSearch(){
+	var keyword = getObj('keyword').value;
+	var url = 'search.php?advanced=1&keyword='+keyword;
+	window.location = url;
+}
+</script>
+            <div id="nav-global">
+	<ul class="cc">
+		{$_Navbar['main']['html']}
+	</ul>
+</div>
+        </div>
+	<div class="nav2">
+		<ul class="cc">
+<!--#$area_navshow = $area_navshow ? " style=\"width:{$area_navshow}em;overflow:hidden;\"" : '';#-->
+<!--#empty($area_navinfo) && $area_navinfo = array();#-->
+<!--#foreach($area_navinfo as $key => $value){#-->
+	   		<li{$area_navshow}>{$value['html']}</li>
+<!--#}#-->
+		</ul>
+	</div>
+<!--#list($htmlAdvert,$arrayAdvert) = pwAdvert('Site.NavBanner1',$fid);#-->
+<!--#if($htmlAdvert){#-->
+	<div class="tac" style="padding:.5em 0 0;">$htmlAdvert</div>
+<!--#}#-->
+<!--#list($htmlAdvert,$arrayAdvert) = pwAdvert('Site.NavBanner2',$fid);#-->
+<!--#if($htmlAdvert){#-->
+	<div class="tac" style="padding:.5em 0 0;">$htmlAdvert</div>
+<!--#}#-->
+</div>
+<div id="main">
+<!--
+EOT;
+?>-->

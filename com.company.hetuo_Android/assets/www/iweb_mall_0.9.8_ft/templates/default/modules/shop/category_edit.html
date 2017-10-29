@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+<style type="text/css">
+.red{color:red;}
+</style>
+</head>
+<body>
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+		<div class="bigpart">
+		<div class="title_uc"><h3><span style="float:right; margin-right:15px;"><a href="modules.php?app=shop_category" style="color:#F67A06;">
+			{echo: lp{m_ucategory};/}</a>&nbsp;&nbsp;</span>{echo: lp{m_edit_ucategory};/}</h3></div>
+		<form action="do.php?act=shop_category_edit" method="post" name="shop_category_edit" onsubmit="return checkForm();">
+		<table width="98%" class="form_table">
+			<tr><td class="textright">{echo: lp{m_category_name};/}:</td>
+				<td><input type="text" name="shop_cat_name" value="{echo: $shop_category_info['shop_cat_name'];/}" style="width:250px;" maxlength="50" /> <span class="red">*</span></td></tr>
+			<tr>
+				<td class="textright">{echo: lp{m_parent_cat};/}:</td>
+				<td>
+					<select name="parent_id">
+						<option value='0'>{echo: lp{m_top_cat};/}</option>
+					{sta: if(!empty($category_list_new) && $shop_category_info['parent_id']>0) {
+						$category_0 = get_sub_category($category_list_new,0);
+						foreach($category_0 as $v) [exc]}
+						<option value='{echo: $v['shop_cat_id'];/}' {sta:  if($v['shop_cat_id']==$shop_category_info['parent_id']) echo 'selected';/}>{echo: $v['shop_cat_name'];/}</option>
+					{end:foreach/}
+					{end:if/}
+					</select>
+				</td>
+			</tr>
+			<tr><td class="textright">{echo: lp{m_number_unit};/}:</td><td><input type="text" name="shop_cat_unit" value="{echo: $shop_category_info['shop_cat_unit'];/}" style="width:70px;" maxlength="8" /></td></tr>
+			<tr><td class="textright">{echo: lp{m_sort};/}:</td><td><input type="text" name="sort_order" value="{echo: $shop_category_info['sort_order'];/}" style="width:70px;" maxlength="2" /></td></tr>
+			<tr><td colspan="2" class="center"><input type="hidden" name="shop_cat_id" value="{echo: $v['shop_cat_id'];/}" /><input type="hidden" name="shop_id" value="{echo: $shop_id;/}" /><input type="submit" name="submit" value="{echo: lp{m_edit_ucategory};/}" /></td></tr>
+		</table>
+		</form>
+        </div>
+    </div>
+    <div class="clear"></div>
+    {inc: require("modules/footer.php");/}
+<script language="JavaScript">
+<!--
+function checkForm() {
+	var shop_cat_name = document.getElementsByName("shop_cat_name")[0];
+	if(shop_cat_name.value=='') {
+		alert("{echo: lp{m_ucategory_notnone};/}");
+		shop_cat_name.focus();
+		return false;
+	}
+	return true;
+}
+//-->
+</script>
+</body>
+</html>

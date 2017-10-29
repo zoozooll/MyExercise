@@ -1,0 +1,184 @@
+<{assign var="page_title" value="`$_offer`"}>
+<{include file="header.html"}>
+<script src="../scripts/tiny_mce/tiny_mce.js" type="text/javascript"></script>
+<script src="../scripts/jquery/facebox.js" type="text/javascript"></script>
+<link href="../images/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+<script>
+jQuery(document).ready(function($) {
+	$.facebox.settings.loadingImage = '<{$SiteUrl}>images/facebox/loading.gif'; 
+	$.facebox.settings.closeImage = '<{$SiteUrl}>images/facebox/closelabel.gif'; 
+	$('a[rel*=facebox]').facebox();
+})
+tinyMCE.init({
+mode : "textareas",
+theme : "simple",
+theme_advanced_toolbar_location : "top",
+theme_advanced_toolbar_align : "left"
+});
+</script>
+<script type="text/javascript">
+function CheckInput(){
+	if($('#trade_topic').val()==""){
+		alert("<{$_enter_title}>");
+		$('#trade_topic').focus();
+		return false;
+	}
+	return true;
+}
+</script>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+		<form name="TradeFrm" enctype="multipart/form-data" method="post" action="<{$smarty.server.PHP_SELF}>" onsubmit="$('#Save').attr('disabled',true);">
+		<input type="hidden" name="formhash" value="<{$formhash}>">
+		<input type="hidden" name="id" value="<{$item.id}>">
+		<input type="hidden" name="do" value="save" />
+        <div class="hint"><{$_must_input_with_star}></div>
+			 <table class="offer_info_content">
+				  <{if $item.id}>
+                      <tr>
+                        <th class="circle_left"><font class="red">*</font><{$_direction}></th>
+                        <td class="circle_right"><{if $item.if_urgent=="1"}><{$_urgent}><{/if}><{$TradeTypes[$item.type_id]}></td>
+                      </tr>
+                      <tr>
+                        <th><font class="red">*</font><{$_theme_n}></th>
+                        <td><{$item.title}></td>
+                      </tr>
+                      <tr>
+                        <th><font class="red">*</font> <{$_duration}></th>
+                        <td><{$item.expire_date}></td>
+                      </tr>
+				<{else}>
+                      <tr>
+                        <th class="circle_left"><font class="red">*</font><{$_direction}></th>
+                        <td class="circle_right">
+						<{html_radios name='data[trade][type_id]' options=$TradeTypes checked='2' separator='&nbsp;'}>
+                        <{$_emergency}><input type="checkbox" name="data[trade][if_urgent]" value="1" <{if $item.if_urgent=="1"}>checked<{/if}></td>
+                      </tr>
+                      <tr>
+                        <th><font class="red">*</font><{$_theme_n}></th>
+                        <td><input name="data[trade][title]" id="trade_topic" type="text" value="<{$item.title}>" /><font color="#666666">
+<{$_optimal_number}></font></td>
+                      </tr>
+                      <tr>
+                        <th><font class="red">*</font> <{$_duration}></th>
+                        <td><{html_radios name="expire_days" options=$OfferExpires checked=$item.expire_days|default:30 separator=" "}></td>
+                      </tr>
+				<{/if}>
+                      <tr>
+                        <th><{$_tags_n}></th>
+                        <td><input name="data[tag]" type="text" id="tag" value="<{$item.tag}>" /><font color="#666666"><{$_space_separate}></font></td>
+                      </tr>
+					  <{foreach from=$Forms name=form item=item1 key=key1}>
+                      <tr>
+                        <th> <{$item1.label}><{$_colon}></th>
+                        <td><font color="#666666">
+                          <input name="data[formitem][<{$key1}>]" type="text" id="<{$item1.id}>" value="<{$item1.value}>"></font></td>
+                      </tr>
+					  <{/foreach}>
+                      <tr>
+                        <th><{$_industry}></th>
+                        <td>
+						<div id="dataIndustry">
+							<select name="data[trade][industry_id1]" id="dataTradeIndustryId1" class="level_1" ></select>
+							<select name="data[trade][industry_id2]" id="dataTradeIndustryId2" class="level_2" ></select>
+							<select name="data[trade][industry_id3]" id="dataTradeIndustryId3" class="level_3" ></select>
+						</div>						
+						</td>
+                      </tr>
+                      <tr>
+                        <th><{$_area}></th>
+                        <td>
+						<div id="dataArea">
+							<select name="data[trade][area_id1]" id="dataTradeAreaId1" class="level_1" ></select>
+							<select name="data[trade][area_id2]" id="dataTradeAreaId2" class="level_2" ></select>
+							<select name="data[trade][area_id3]" id="dataTradeAreaId3" class="level_3" ></select>
+						</div>
+
+						</td>
+                      </tr>
+                      <tr>
+                        <th ><font class="red"> *</font><{$_details_n}></th>
+                        <td class="tdright"><textarea name="data[trade][content]" rows="8" wrap="VIRTUAL" style="width:370px;"><{$item.content|nl2br}></textarea><br /><font color="#FF3300"><{$_attention_explain}><br>
+                        </font></td>
+                      </tr>
+                      <tr>
+                        <th><{$_image}></th>
+                        <td><input name="pic" type="file" id="uploadfile" onchange="showPreview(uploadpic,this.form.pic);" />
+                            <span class="gray"><br>
+                    <{$_image_size_format_provision}></span></td>
+                      </tr>
+                      <tr>
+                        <th><{$_now_image}></th>
+                        <td class="tdright">
+						<div class="img-preview">
+						<a href="<{$item.image|default:"javascript:;"}>" id="uploadpic_hover" rel="facebox"><img id="uploadpic" src="<{$item.image}>.small.jpg" style='<{if !$item.image}>display:none;<{/if}>width: 80px;' alt="<{$item.title|default:"`$_preview_image`"}>"  /></a>
+						<div>
+						<div style="display:none"></div>
+						</td>
+                     </tr>
+                  <tr>
+                      <th></th>
+                       <td><{$_check_information}><br>
+                        <{$_need_click}><a href="personal.php" target="_self" class="font14b_org"><strong><{$_modify_information}></strong></a></td>
+                   </tr>
+
+                   <tr>
+                        <th ><{$_contact_people}></td>
+                        <td><{$COMPANYINFO.link_man|default:$MemberInfo.last_name}><font color="#999999"><{$_full_name}> </font> </td>
+                    </tr>
+					<{if $CompanyId!=""}>
+                  <tr>
+                    <th><{$_company_name_n}></th>
+                    <td><{$COMPANYINFO.name}><font color="#999999"><{$_company_full_name}></font></td>
+                  </tr>
+					<{/if}>
+                      <tr>
+                        <th><{$_first_contact_phone}></th>
+                        <td><select name="data[prim_tel]">
+        <{html_options options=$PhoneTypes}>
+      </select>&nbsp;<{$_number_n}><input type="text" name="data[prim_telnumber]" id="prim_telnumber" value="<{$item.prim_telnumber|default:$MemberInfo.tel}>" /></td>
+                      </tr>
+                      <tr>
+                        <th><{$_first_instant_message}></th>
+                        <td><select name="data[prim_im]">
+        <{html_options options=$ImTypes}>
+      </select>&nbsp;<{$_number_n}><input type="text" name="data[prim_imaccount]" id="prim_imaccount" value="<{$item.prim_imaccount|default:$MemberInfo.qq}>" /></td>
+                      </tr>
+                      
+                      <tr >
+                        <th><{$_email_addr}></th>
+                        <td><{$MemberInfo.email}></td>
+                      </tr>
+                      <tr>
+                      <th class="circle_bottomleft"></th>
+                        <td class="circle_bottomright"><input type="hidden" name="edit_trade" id="EditTrade" value="y" />
+                        <input type="submit" name="save" id="Save" value="<{$_finish_release}>" onclick="return CheckInput();"></td>
+                      </tr>
+               </table>
+		</form>
+
+     </div>
+</div>
+<script>
+var cache_path = "../";
+var app_language = '<{$AppLanguage}>';
+var area_id1 = <{$item.area_id1|default:0}> ;
+var area_id2 = <{$item.area_id2|default:0}> ;
+var area_id3 = <{$item.area_id3|default:0}> ;
+var industry_id1 = <{$item.industry_id1|default:0}> ;
+var industry_id2 = <{$item.industry_id2|default:0}> ;
+var industry_id3 = <{$item.industry_id3|default:0}> ;
+</script>
+<script src="../scripts/jquery/jquery.validate"></script>
+<script src="../scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="../scripts/script_area.js"></script>
+<script src="../scripts/script_industry.js"></script>
+<{include file="footer.html"}>

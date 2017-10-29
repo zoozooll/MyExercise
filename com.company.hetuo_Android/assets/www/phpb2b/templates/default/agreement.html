@@ -1,0 +1,18 @@
+<{assign var="page_title" value="`$site_name``$_service_license`"}>
+<{assign var="nav_id" value="`$nav_id`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+  <div class="content">
+    <div class="tips"><span><{$position}></span></div>
+    <div class="blank"></div>
+    <div class="body_content">
+      <div class="title_bar_s3">
+            <span class="title_top_s3"><span></span></span>
+            <h2><{$site_name}><{$_agreement}></h2>
+      </div>  
+      <div class="content_body"><{$content}></div>
+       <div class="blank"></div>
+    </div>
+    </div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

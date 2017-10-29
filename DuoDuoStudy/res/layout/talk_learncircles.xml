@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:pageview="http://schemas.android.com/apk/res/com.iskyinfor.duoduo"
+  android:background="@color/white"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+  <!-- 顶层 -->
+  <LinearLayout
+    android:id="@+id/talk_tops_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true">
+    <include layout="@layout/talk_learncircles_top"/>
+  </LinearLayout>
+  
+<!--底层 -->
+    <LinearLayout
+    android:id="@+id/talk_bottoms_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+    <include layout="@layout/talk_garden_bottom"/>
+  </LinearLayout>
+  
+  <!-- 中间层 -->
+  <LinearLayout
+    android:id="@+id/talk_center_layout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/talk_tops_layout"
+    android:layout_above="@id/talk_bottoms_layout">
+    
+    <com.iskyinfor.duoduo.ui.custom.page.PageListView
+        android:id="@+id/talk_learncircles_listview"
+        android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+   		android:cacheColorHint="#ffffff"
+        pageview:itemPageCount="9"
+    /> 
+  </LinearLayout>
+
+</RelativeLayout>

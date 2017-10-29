@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FFFFFF">
+         <LinearLayout 
+		      android:id="@+id/linear1" 
+		      android:orientation="horizontal"
+			  android:layout_width="fill_parent"
+			  android:layout_height="40dip"
+		      android:background="@drawable/bookshelf_indextopback">
+	        <TextView 
+				  android:id="@+id/bookshelfread_topml"
+				  android:layout_margin="10dip"
+				  android:layout_height="20dip" 
+				  android:layout_width="60dip" 
+				  android:text=" " android:background="@drawable/bookshelf_readml"/>
+			 <LinearLayout android:orientation="horizontal"
+			  android:layout_width="fill_parent"
+			  android:layout_height="60dip"
+			  android:layout_marginLeft="150dip">
+			  <TextView 
+				  android:id="@+id/bookshelfread_topss"
+				  android:layout_marginTop="10dip"
+				  android:layout_height="15dip" 
+				  android:layout_width="20dip" 
+				  android:text=" " android:background="@drawable/bookshelf_readss"/>
+			  <TextView 
+				  android:id="@+id/bookshelfread_topbj"
+				  android:layout_marginTop="10dip"
+				  android:layout_height="15dip" 
+				  android:layout_width="20dip" 
+				  android:text=" " android:background="@drawable/bookshelf_readbj"/>
+		      <TextView 
+				  android:id="@+id/bookshelfread_topsq"
+				  android:layout_marginTop="10dip"
+				  android:layout_height="15dip" 
+				  android:layout_width="20dip" 
+				  android:text=" " android:background="@drawable/bookshelf_readsq"/>
+		       </LinearLayout>
+         </LinearLayout>
+    
+          <ListView android:id="@+id/bookshelfread_dirlv" 
+			android:layout_width="fill_parent"
+			android:layout_height="320dip"
+			android:visibility="visible"
+			android:divider="#00FFCC00"
+			android:layout_below="@+id/linear1"/>
+
+			<RelativeLayout
+			    android:id="@+id/linear4"
+			    android:layout_width="fill_parent"
+			    android:layout_height="40dip"
+			    android:layout_margin="4dip"
+			    android:gravity="center_vertical"
+			    android:layout_alignParentBottom="true"
+			    android:background="@drawable/bottom_layout_bg">
+			    <ImageView
+			        android:id="@+id/bookshelfread_bottomcd"
+			        android:layout_width="30dip"
+			        android:layout_height="30dip"
+			        android:layout_marginRight="2dip"
+			        android:paddingLeft="10dip"
+			        android:layout_alignParentLeft="true"
+			    />
+			    <ImageView
+			        android:id="@+id/bookshelfreaddir_bottomfh"
+			        android:background="@drawable/bottom_right"
+			        android:layout_width="30dip"
+			        android:layout_height="30dip"
+			        android:layout_alignParentRight="true"
+			        android:paddingRight="5dip"
+			    />
+			  </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?php
+/**
+ * PHPB2B :  Opensource B2B Script (http://www.phpb2b.com/)
+ * Copyright (C) 2007-2010, Ualink. All Rights Reserved.
+ * 
+ * Licensed under The Languages Packages Licenses.
+ * Support : phpb2b@hotmail.com
+ * 
+ * @version $Revision: 1393 $
+ */
+function pb_sendmail($to_users = array(), $subject, $template = null, $body = null, $redirect_url = null)
+{
+    global $charset, $smarty, $theme_name, $_PB_CACHE;
+    require_once(LIB_PATH. "phpmailer/class.phpmailer.php");
+    $content = null;
+    $mail = new PHPMailer();
+    $result = false;
+    $logdata['created'] = time();
+    if (!empty($_PB_CACHE['setting']['mail'])) {
+    	extract(unserialize($_PB_CACHE['setting']['mail']));
+    }
+    if ($send_mail == 2) {
+    	$mail->IsSMTP();
+    	$mail->Host       = $smtp_server;
+    	$mail->Port       = $smtp_port;
+    	if($smtp_auth) {
+    		$mail->SMTPAuth = true;
+    	}
+    	if (!empty($auth_protocol)) {
+    		$mail->SMTPSecure = $auth_protocol;
+    	}
+    	$mail->Username = $auth_username;
+    	$mail->Password = $auth_password;
+    }else{
+        $mail->IsMail();
+    }
+    $mail->IsHTML(true);
+	$mail->CharSet = $charset;
+	$mail->Encoding = "base64";
+	$mail->From     = $mail_from;
+	$mail->FromName = (empty($mail_fromwho))? $_PB_CACHE['setting']['site_name'] : $mail_fromwho;
+	$mail->Subject = $subject;
+	$mail->AltBody = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
+	$tpl_file = $theme_name."/emails/".$template.$smarty->tpl_ext;
+	if (!empty($template) && $smarty->template_exists($tpl_file)) {
+		$content = $smarty->fetch($tpl_file);
+	}elseif (!empty($body)){
+		$content = $body;
+	}
+	$mail->MsgHTML($content);
+	if (!empty($to_users)) {
+		if (!is_array($to_users[0])) {
+			$mail->AddAddress($to_users[0], $to_users[1]);
+			$result = $mail->Send();
+		}elseif(is_array($to_users[0])) {
+			$mail->ClearAddresses();
+			foreach ($to_users as $key=>$val) {
+				$mail->AddAddress($val[0], $val[1]);
+				$result = $mail->Send();
+			}
+		}
+	}
+	if ($mail->error_count>0) {
+		if (class_exists("Logs")) {
+			$log = new Logs();
+		}else{
+		    uses("log");
+		    $log = new Logs();
+		}
+		$logdata['handle_type'] = "error";
+		$logdata['source_module'] = "sendmail";
+		$logdata['description'] = $mail->ErrorInfo;
+		$log->Add($logdata);
+		return false;
+	}
+	if(!empty($redirect_url)){
+	    pheader("Location:".$redirect_url);
+	}else{
+	    return $result;
+	}
+}
+
+?>

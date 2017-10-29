@@ -1,0 +1,78 @@
+<!--<?php
+print <<<EOT
+-->
+<div style="padding-top:15px;">
+<div id="menu-bar" class="fl tac" style="height:400px;">
+<a title="$friend[username]" href="u.php?uid=$friend[uid]" target="_blank"><img src="$friend[face]" class="img-120"/></a>
+<p class="f14 b">$friend[username]</p><br />
+<p class="tal" style="padding-left:30px;line-height:24px;">
+已有好友:$friend[f_num]<br />
+已有记录:$friend[owritenum]<br />
+<!--
+EOT;
+if ($db_dopen){print <<<EOT
+-->
+已有日志:$friend[diarynum]<br />
+<!--
+EOT;
+}if ($db_phopen){print <<<EOT
+-->
+已有照片:$friend[photonum]<br />
+<!--
+EOT;
+}if ($db_share_open) {print <<<EOT
+-->
+已有分享:$friend[sharenum]<br />
+<!--
+EOT;
+}if ($db_groups_open){print <<<EOT
+-->
+已加入的群组:$friend[groupnum]<br />
+<!--
+EOT;
+}print <<<EOT
+-->
+已有帖子:$friend[postnum]
+</p>
+</div>
+<div id="content" class="fr">
+	<div class="fl" id="content_main">
+		<div style="border:1px solid #bfd0da;background:#f4f8fb;padding:20px 30px;margin-right:20px;">
+			<p class="f14 b">Hi，我是 $friend[username]</p>
+			<p style="text-indent:2em;margin:10px 0 50px;line-height:2;">我是{$friend[username]}，我在{$db_bbsname}建立了个人主页，请你也加入并成为我的好友。感觉还不错。这些功能都很有趣，我想你也会喜欢。
+			</p>
+			<p>
+			&raquo;接受邀请，立刻注册一个帐号，与<span class="b">{$friend[username]}</span>进行交流，分享...
+			<p class="p10">
+			<span class="button"><span><button type="submit" onclick="location.href='$db_registerfile?jumpurl=$forward'" style="width:80px;">注册会员</button></span></span></p>
+			</p><br />
+			&raquo;如果您已经在本站注册，您只需登录，就自动与<span class="b">{$friend[username]}</span>加为好友
+			<p class="p10">
+			<span class="button"><span><button type="submit" onclick="location.href='login.php?jumpurl=$forward'" style="width:80px;">登录站点</button></span></span></p>
+		</div>
+	</div>
+
+	<div id="sidebar" class="fr">
+ 	<div class="o-list-img">      
+				<h2 class="mb10 b">已有的好友，你可能也认识</h2> 
+                <ul class="cc tac">
+<!--
+EOT;
+foreach ($friends as $key => $value){print <<<EOT
+-->
+					<li>
+                       <a title="$value[username]" href="u.php?uid=$value[uid]"><img src="$value[face]" class="img-50" /></a>
+                       <p><a style="cursor: pointer;" title="加为好友" onclick="sendmsg('pw_ajax.php?action=addfriend&touid=$value[uid]','',this.id)" ><img src="$pwModeImg/operation/add.png" align="absmiddle" /></a><a title="$value[username]" href="u.php?uid=$value[uid]">$value[username]</a></p>
+                   </li>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</ul>
+          </div>
+	</div>
+</div>
+</div>
+<!--
+EOT;
+?>-->

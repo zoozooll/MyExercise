@@ -1,0 +1,72 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_job}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_job}></h3> 
+    <ul class="subnav">
+		<li><a href="job.php"><{$_management}></a></li>
+        <li><a class="btn1"><span><{$_cp_view}></span></a></li>
+    </ul>
+</div>
+<div class="info">
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 会员名称：</th>
+        <td class="paddingT15 wordSpacing5"><{$item.cache_username}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 公司名称：</th>
+        <td class="paddingT15 wordSpacing5"><{$item.cache_companyname}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 职位名称：</th>
+        <td class="paddingT15 wordSpacing5"><{$item.name}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 工作地点：</th>
+      <td class="paddingT15 wordSpacing5"><{$item.work_station}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 职位说明：</th>
+        <td class="paddingT15 wordSpacing5"><{$item.content|strip_tags}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 性别要求:</th>
+        <td class="paddingT15 wordSpacing5"><{$Genders[$item.require_gender_id]}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">招聘人数：</th>
+        <td class="paddingT15 wordSpacing5"><{$item.peoples}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">学历要求：</th>
+        <td class="paddingT15 wordSpacing5"><{$Educations[$item.require_education_id]}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">年龄要求：</th>
+        <td class="paddingT15 wordSpacing5"><{$item.require_age}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">薪资水平：</th>
+        <td class="paddingT15 wordSpacing5"><{$SalaryLevels[$item.salary_id]}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">工作性质：</th>
+        <td class="paddingT15 wordSpacing5"><{$Worktypes[$item.worktype_id]}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">点击数：</th>
+        <td class="paddingT15 wordSpacing5"><{$item.clicked}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">发布时间：</th>
+        <td class="paddingT15 wordSpacing5"><{$item.created|date_format:"%Y-%m-%d"}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">过期时间：</th>
+        <td class="paddingT15 wordSpacing5"><{$item.expire_time|date_format:"%Y-%m-%d"}></td>
+      </tr>
+    </table>
+</div>
+<{include file="footer.html"}>

@@ -1,0 +1,46 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_system_tool}> &raquo; <{$_database}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_database}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1" href="db.php"><span><{$_db_backup}></span></a></li>
+        <li><a href="db.php?do=restore"><{$_db_restore}></a></li>
+        <li><a href="db.php?do=query"><{$_db_upgrade}></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" action="db.php" id="EditFrm" name="edit_frm">
+  <input type="hidden" name="do" value="backup" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 上次备份时间：</th>
+        <td class="paddingT15 wordSpacing5"><{$LastbackupTime}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 备份类型：</th>
+        <td class="paddingT15 wordSpacing5"><input type="radio" name="backup_type" value="1" checked="checked" />备份网站全部数据</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 备注：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="message" value="" /></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="button" name="backup_now" id="BackupNow" value="立即备份" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script language="JavaScript">
+$(document).ready(function() { 
+$('#BackupNow').click(function() {
+	$('#BackupNow').attr('disabled',"true");
+	$('#BackupNow').val("备份中...");
+	$('#EditFrm').submit();
+});
+})
+</script>
+<{include file="footer.html"}>

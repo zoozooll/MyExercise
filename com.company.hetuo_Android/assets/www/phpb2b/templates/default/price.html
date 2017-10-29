@@ -1,0 +1,225 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="5"}>
+<{include file="`$ThemeName`/header.html"}>
+<style type="text/css">
+@import url(<{$theme_img_path}>effect.css);
+</style>
+<script src="scripts/jquery.tools.js"></script>
+<script src="scripts/jquery.hover.js"></script>
+<div class="wrapper">
+	<div class="content">
+		<div class="main_left_w180">
+			<div class="cornerbox">
+				<div class="title_bar_s6">
+					<span class="title_top_s6"><span></span></span>
+					<h2><{$_product_prices}></h2>
+				</div>
+				<div class="price_menu">
+					<ul id="topnav">
+					<{foreach from=$Items item=item}>
+						<li>
+							<a href="product/price.php?do=search&catid=<{$item.id}>"><{$item.title}></a>
+							<{if $item.child}>
+							<div class="sub">
+							   <div class="row clearfix">
+								 <ul>
+								 <{foreach from=$item.child item=item_child}>
+									<li><a href="product/price.php?do=search&catid=<{$item_child.id}>"><{$item_child.title}></a></li>
+								  <{/foreach}>
+								 </ul> 
+								</div>
+							</div>
+							<{/if}>
+						</li>
+					  <{/foreach}>
+					</ul>
+					<div class="blank"></div>
+					<div class="btn_price_all"><a href="product/price.php?do=search"><{$_all_product_categories}></a></div>
+					<div class="blank6"></div>
+				</div>
+				<div class="corner_bottom">
+					<div class="corner_bottom_l"></div>
+					<div class="corner_tottom_r"></div>
+				</div>
+			</div>
+			<div class="blank6"></div>
+			<div class="cornerbox">
+				<div class="title_bar_s6">
+					<span class="title_top_s6"><span></span></span>
+					<h2><{$_latest_price}></h2>
+				</div>
+				<div class="corner_content_s6">
+				   <ul>
+					  <{price row=9 }>
+					  <li><a href="[link:title]">[field:title]</a></li>
+					 <{/price}>
+				   </ul>
+				</div>
+			   <div class="corner_bottom">
+					<div class="corner_bottom_l"></div>
+					<div class="corner_tottom_r"></div>
+				</div>
+			</div><!--end-->
+		</div>
+		<div class="main_right_w770">
+			 <div class="area_price clearfix">
+				 <strong><{$_area_prices}></strong>
+				 <div><{category type="area"}></div>
+			 </div>
+			 <div class="blank6"></div>
+			 <!-- the tabs -->
+			<ul class="tabs2 title_mouse">
+				  <li><a href="javascript:;"><span><{$_latest_new}><{$_product}></span></a></li>
+				  <li><a href="javascript:;"><span><{$_latest_hot}><{$_product}></span></a></li>
+			</ul>
+			<!-- tab "panes" --> 
+			<div class="panes box_bord">
+				<div class="product_hot clearfix">
+					<ul>
+						<{product col=6 row=1 type="image"}>
+						<li><a href="[link:title]"><img src="[img:src]" alt="[field:title]" /></a>
+						<p><a href="[link:title]">[field:title]</a></p>
+						</li>
+					   <{/product}>                                                    
+					</ul>
+				 </div>
+				<div class="product_hot clearfix" style="display:none;">
+					<ul>
+						<{product col=6 row=1  type="image" type="hot"}>
+						<li><a href="[link:title]"><img src="[img:src]" alt="[field:title]" /></a>
+						<p><a href="[link:title]">[field:title]</a></p>
+						</li>
+					   <{/product}>                                                      
+					</ul>
+				 </div>
+			</div>
+			<div class="blank6"></div>
+			<div class="brand_hot">
+				<div class="title">
+					<h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_product_category}></span><span class="corner_t_r"></span></h2>
+				</div>
+				<div class="letterindex clearfix">
+					<h3><{$_sort_by_alpha}></h3>
+					 <ul id="letternav">
+						<{foreach from=$AlphabetSorts name=Alphabet item=item_alphabet key=key_alphabet}>
+						<li class="frist">
+						 <a href="javascript:;"><{$key_alphabet}></a>
+							<div class="sub">
+							   <div class="row clearfix">
+								 <ul>
+									<{foreach from=$item_alphabet item=subitem_alphabet key=subkey_alphabet}>
+									<li><a href="product/price.php?do=search&catid=<{$subkey_alphabet}>"><{$subitem_alphabet}></a></li>
+									<{/foreach}>
+								 </ul> 
+								</div>
+							</div>
+						</li>
+						<{/foreach}>
+					</ul>
+				</div>
+				<div class="letter_product_content clearfix">
+					<table>
+					<{foreach from=$Cats name=Cats item=item1 key=key1}>
+					  <tr class="bg_hover">
+						<th><a href="product/price.php?do=search&catid=<{$item1.id}>"><{$item1.title}></a></th>
+						<td>
+						   <ul class="aa clearfix">
+							   <{foreach from=$item1.child name=Cats2 item=item2 key=key2}>
+							   <li>
+								  <h3><a href="product/price.php?do=search&catid=<{$item2.id}>"><{$item2.title}></a></h3>
+								  <ul>
+									 <li>
+									 <{foreach from=$item2.child name=Cats3 item=item3 key=key3}>
+									 <a href="product/price.php?do=search&catid=<{$item3.id}>"><{$item3.title}></a>
+									 <{/foreach}>
+									 </li>
+								  </ul>
+							   </li>
+							   <{/foreach}>
+						   </ul>
+						</td>
+					  </tr>
+					  <tr><td colspan="2" class="padding0"><hr class="hr_dashed"/></td></tr>
+					  <{/foreach}>
+					</table>    
+				</div>                     
+			</div><!--end-->
+		
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+// perform JavaScript after the document is scriptable.
+$(function() {
+	// setup ul.tabs to work as tabs for each div directly under div.panes
+	$("ul.tabs2").tabs("div.panes > div");
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	function megaHoverOver(){
+		$(this).find(".sub").stop().fadeTo('fast', 10000).show();
+			
+		//Calculate width of all ul's
+		(function($) { 
+			jQuery.fn.calcSubWidth = function() {
+				rowWidth = 0;
+				//Calculate row
+				$(this).find("ul").each(function() {					
+					rowWidth += $(this).width(); 
+				});	
+			};
+		})(jQuery); 
+		
+		if ( $(this).find(".row").length > 0 ) { //If row exists...
+			var biggestRow = 0;	
+			//Calculate each row
+			$(this).find(".row").each(function() {							   
+				$(this).calcSubWidth();
+				//Find biggest row
+				if(rowWidth > biggestRow) {
+					biggestRow = rowWidth;
+				}
+			});
+			//Set width
+			$(this).find(".sub").css({'width' :biggestRow});
+			$(this).find(".row:last").css({'margin':'0'});
+			
+		} else { //If row does not exist...
+			
+			$(this).calcSubWidth();
+			//Set Width
+			$(this).find(".sub").css({'width' : rowWidth});
+			
+		}
+	}
+	
+	function megaHoverOut(){ 
+	  $(this).find(".sub").stop().fadeTo('fast', 1, function() {
+		  $(this).hide(); 
+	  });
+	}
+
+
+	var config = {    
+		 sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)    
+		 interval: 100, // number = milliseconds for onMouseOver polling interval    
+		 over: megaHoverOver, // function = onMouseOver callback (REQUIRED)    
+		 timeout: 0, // number = milliseconds delay before onMouseOut    
+		 out: megaHoverOut // function = onMouseOut callback (REQUIRED)    
+	};
+
+	$("ul#letternav li .sub").css({'opacity':'0'});
+	$("ul#letternav li").hoverIntent(config);
+	$("ul#topnav li .sub").css({'opacity':'0'});
+	$("ul#topnav li").hoverIntent(config);
+
+
+});
+</script>
+<script>
+$("#SearchFrm").attr("action","product/list.php");
+$("#topMenuProduct").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

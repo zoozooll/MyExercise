@@ -1,0 +1,65 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_setting_global}> &raquo; <{$_passport}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_passport}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1" href="passport.php"><span><{$_management}></span></a></li>
+		<li><a href="passport.php?do=set"><{$_basic_setting}></a></li>
+		<{foreach from=$Items item=item}>
+		<{if $item.available}>
+        <li><a class="btn_edit" href="passport.php?do=edit&entry=<{$item.name}>&id=<{$item.id}><{$addParams}>" title="<{$_edit}>"><{$item.title}></a></li>
+		<{/if}>
+		<{/foreach}>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontl">提示：请按照名和称显示标题选择安装或者<{$_uninstall}><{$_action}>。</div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll"><{$_naming}></label></th>
+		  <th>显示标题</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" <{if !$item.id}>disabled="disabled"<{/if}> value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><label for="item_<{$item.id}>"><{$item.name}></label></td>
+		  <td><{$item.title}></td>
+		  <td class="handler">
+          <ul id="handler_icon">
+            <{if $item.available}>
+            <li><a class="btn_edit" href="passport.php?do=edit&entry=<{$item.name}>&id=<{$item.id}><{$addParams}>" title="<{$_edit}>"><{$_edit}></a></li>
+             <li><a class="btn_uninstall" href="passport.php?do=uninstall&id=<{$item.id}><{$addParams}>"  title="<{$_uninstall}>"><{$_uninstall}></a></li>
+             <{else}>
+            <li><a class="btn_install" href="passport.php?entry=<{$item.name}>&do=install<{$addParams}>" title="<{$_install}>"><{$_install}></a></li>
+            <{/if}>
+          </ul>  
+		</td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="4"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_uninstall}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

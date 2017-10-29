@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="pageListView">
+		<attr name="itemPageCount" format="integer" />
+	</declare-styleable>
+
+	<declare-styleable name="SpinnerView">
+		<attr name="textWidth" format="integer" />
+		<attr name="textInfo" format="integer" />
+		<attr name="lesson_spinner_first" format="integer" />
+		<attr name="lesson_spinner_center" format="integer" />
+		<attr name="lesson_spinner_end" format="integer" />
+	</declare-styleable>
+</resources>

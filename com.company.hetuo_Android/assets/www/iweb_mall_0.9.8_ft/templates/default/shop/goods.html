@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{echo: $header['title'];/}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="{echo: $header['keywords'];/}" />
+<meta name="description" content="{echo: $header['description'];/}" />
+<base href="{echo: $baseUrl;/}" />
+<link href="skin/{echo: $SYSINFO['templates'];/}/css/index.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="servtools/ajax_client/ajax.js"></script>
+<script type="text/javascript" src="skin/{echo: $SYSINFO['templates'];/}/js/changeStyle.js"></script>
+<script type="text/javascript" src="skin/{echo: $SYSINFO['templates'];/}/js/magnifier.js"></script>
+<style>
+.detail .pro_detail .pro_text ul li.operate a.inquiry{width:89px;background:url(skin/<?php echo  $SYSINFO['templates'];?>/images/inquiry.gif) 0 0 no-repeat;;margin-left:10px;}
+</style>
+</head>
+<body onload="gettransport_price(0,'全国');" >
+<div id="wrapper">
+{inc: include("shop/index_header.php");/}
+<div class="clear"></div>
+<div class="path2">{echo:lp{i_location};/}：<a href="index.php">{echo:lp{i_index};/}</a> > <a href="{echo: shop_url($shop_id,'index');/}">{echo: $SHOP['shop_name'];/}</a> > {echo: $goodsinfo['goods_name'];/}</div>
+<div class="detail">
+	<div class="pro_detail">
+		<h1>{echo: $goodsinfo['goods_name'];/}</h1>
+		<div class="box">
+            <div class="pro_pic" onmouseover="document.getElementById('show_bigpic').style.display='none';" onmouseout="document.getElementById('show_bigpic').style.display='block';"><a class="MagicZoom" id="zoom1" href="{echo: $gallery[0]['img_original'] ? $gallery[0]['img_original'] : "skin/default/images/nopic_big.gif";/}"><img src="{echo: $gallery[0]['img_url'] ? $gallery[0]['img_url'] : "skin/default/images/nopic_big.gif";/}"/></a><IMG class="MagicZoomLoading" alt="loading..." src="skin/{echo: $SYSINFO['templates'];/}/images/ajax-loader.gif"><a id="show_bigpic">{echo: lp{s_click_viewbigimg};/}</a></div>
+            <div class="pic_box clear">
+                <a class="left_button" href="javascript:void(0);" onclick="img_pre('list1_1');"></a> 
+                    <div id="thumbbox">
+                        <div class="long_box" id="list1_1">
+                        {sta:foreach($gallery as $val)[loop]}
+							<a href="{echo:$val['img_original'];/}" rev="{echo:$val['img_url'];/}" rel="zoom1"><span><img src="{echo:$val['thumb_url'];/}"></span></a>
+                		{end:foreach/}
+                        </div>
+                    </div>
+                <a class="right_button" href="javascript:void(0);" onclick="img_next('list1_1');"></a>
+            </div>
+        </div>
+		<div class="pro_text">
+			<ul>
+				<li><span>{echo:lp{s_goods_price};/}：</span>
+				{sta: if($goodsinfo['goods_price']=='0.00') [exc]}
+				<label class="fc f18 bold">{echo: lp{s_no_price};/}</label>
+				{sta: } else[exc]}
+				￥<label class="fc f18 bold">{echo: $goodsinfo['goods_price'];/}</label> {echo: lp{s_yuan};/}
+				{end:if/}
+				</li>
+				<li><span>{echo:lp{s_goods_transport};/}：<span  onmouseover="showarealist(1)"  ><span id="area_name"></span>
+					 <div style="position:absolute;style:top:0px;left:0px; border:3px #eee solid; padding:10px; padding-left:25px; background:#f8f8f8; display:none; width:300px;" id="areabox">
+					 {sta:foreach($area_list as $value)[loop]}
+					 <div style="float:left; width:60px;" ><a href="javascript:;" onclick="gettransport_price({echo:$value['area_id'];/},'{echo:$value['area_name'];/}')">{echo:$value['area_name'];/}</a></div>
+					 {end:foreach/}
+					  <input class="new_button" type="button" name="btu" value="关闭" onclick="showarealist(0)" />
+					 </div>
+				</span></span><label id="transport_price"></label> </li>
+				<li><span>{echo:lp{s_goods_wtbuy};/}：</span><input size="4" value="1" maxvalue="1" minvalue="1" id='num' /><label></label>{echo: lp{s_buy_n};/}</li>
+				{sta: if($goodsinfo['goods_price']=='0.00') [exc]}
+				<li class="operate"><a class="inquiry" href="inquiry.php?gid={echo: $goodsinfo['goods_id'];/}" 
+					title="{echo: lp{s_g_askprice};/}"></a>
+				{sta: } else [exc]}
+				<li class="operate"><a href="javascript:gotoOrder({echo: $goodsinfo['goods_id'];/});" 
+					title="{echo: lp{s_g_buy};/}"></a>
+				<a class="cart" href="javascript:addCart({echo: $goodsinfo['goods_id'];/});" 
+					title="{echo: lp{s_g_tocart};/}"></a>
+				{end:if/}
+				<a class="fav" href="javascript:addFavorite({echo: $goodsinfo['goods_id'];/});" 
+					title="{echo: lp{s_g_tofavorite};/}"></a></li>
+				<li><span>{echo: lp{s_company_Support};/}：</span>{sta: if($payment_info) [exc]}{sta:foreach($payment_info as $val)[loop]}<img src="plugins/{echo:$val;/}/min_logo.gif" height="25" /> {end:foreach/}{sta: } else[exc]}<label class='fc'>{echo: lp{s_no_payment};/}</label>{end:if/}</li>
+				<li><span>{echo:lp{s_goods_number};/}：</span>{echo:str_replace("{num}","<label class='fc'>".$goodsinfo['goods_number']."</label>",lp{s_goods_mum});/}</li>
+				<li><span>{echo:lp{s_goods_pv};/}：</span>{echo:str_replace("{pv}","<label class='fc'>".$goodsinfo['pv']."</label>",lp{s_goods_pvnum});/}</li>
+				<li><span>{echo:lp{s_collect_num};/}：</span><label class='fc'>{echo: $goodsinfo['favpv'];/}</label>{echo: lp{s_collect};/}</li>
+				<li><span>{echo:lp{s_send_address};/}：</span>{echo: $areainfo[$SHOP['shop_province']];/}.{echo: $areainfo[$SHOP['shop_city']];/}</li>
+			</ul>
+		</div>
+	</div>
+	<div class="shop_detail">
+		<div class="shop_logo"><a href="{echo: shop_url($shop_id,'index');/}" title=""><img src="{echo: $SHOP['shop_logo'] ? $SHOP['shop_logo'] : 'skin/default/images/shop_nologo.gif';/}" width="198" height="98" alt="" /></a></div>
+		<div class="shop_name"><a href="{echo: shop_url($shop_id,'index');/}">{echo: $SHOP['shop_name'];/}</a></div>
+		<ul>
+			<li>{echo:lp{s_nickname};/}： {echo: $ranks['user_name'];/}</li>
+			{sta:if($im_enable==true)[exc]}<li>{echo: lp{s_contact_seller};/}：<script src="imshow.php?u={echo: $SHOP['user_id'];/}"></script></li>{end:if/}
+			<li>{echo:lp{s_goods_num};/}：{echo: $SHOP['goods_num'];/}</li>
+			<li><span style="float:left;">{echo: lp{s_seller_c};/}：<a href="{echo: shop_url($shop_id,'credit');/}" hideFocus=true>{echo:$credit['SUM(seller_credit)'];/} </a>&nbsp;&nbsp;</span><span class="icon{echo:$integral['int_grade'];/}" style="float:left;"></span><div style="clear:both;"></div></li>
+			<li>{echo:lp{s_new_login};/}：{echo: $ranks['last_login_time'];/}</li>
+			<li>{echo:lp{s_creat_time};/}：{echo: $SHOP['shop_creat_time'];/}</li>
+			<li><span class="left">{echo:lp{s_certification};/}：</span>
+			{sta: if($SHOP['rank_id']>2)[exc]}
+			<a href="javascript:;" title="{echo:lp{i_approve_company};/}"  class="shop_cert left">{echo:lp{i_approve_company};/}</a>
+			{sta: } else[exc]}
+			<a href="javascript:;" title="{echo:lp{i_noapprove_company};/}"  class="shop_cert2 left">{echo:lp{i_noapprove_company};/}</a>
+			{end:if/}</li>
+		</ul>
+		<a class="go2shop" href="{echo: shop_url($shop_id,'index');/}" title=""><img src="skin/{echo: $SYSINFO['templates'];/}/images/go2shop.gif" width="183" height="36" alt="{echo:lp{s_seller_shop};/}" /></a>
+	</div>
+</div>
+<div class="detail_other">
+	<div class="clear"></div>
+    <div class="top"><div class="line"></div> <span class="right top10 right10"><a class="highlight" href="brand.php">{echo: $i_langpackage->i_moreshop;/}>></a></span><ul id="tab1"><li id="tab1_title0" class="selected" onclick="nTabs('tab1',this);"><a href="javascript:void(0);" hideFocus=true>{echo:lp{s_details};/}</a></li><li id="tab1_title1" onclick="nTabs('tab1',this);"><a href="javascript:void(0);" hideFocus=true>{echo:lp{s_wholesale};/}</a></li></ul></div>
+
+	<div id="tab1_content0" class="detail_content">
+		<table cellspacing="0">
+			  <tr>
+			{sta:
+			if($attr_status) {
+				$i = 0;
+				foreach($attr as $key=>$value)[loop]}
+				<td class="text_right">{echo: $attribute[$key];/}:</td>
+				<td class="text_left">{echo: $value;/}</td>
+			{sta:
+				if($i%2) {
+					echo "</tr><tr>";
+				}
+				$i++;
+				
+			 } if/}
+			  </tr>
+		</table>
+		<p>{echo: $goodsinfo['goods_intro'];/}</p>
+	</div>
+	<div id="tab1_content1" class="detail_content" style="display:none">
+		{echo: $goodsinfo['goods_wholesale'];/}
+	</div>
+</div>
+<div class="recommend3">
+    	<div class="top">
+        	<div class="line"></div><span class="right top10 right10"><a class="highlight" href="search.php?best=1">{echo:lp{i_more};/}>></a></span><ul><li class="active"><a href="search.php?best=1">{echo:lp{i_boutique};/}</a></li></ul>
+        </div>
+        <div class="c_m" style="overflow:inherit">
+        	<ul>
+        	{sta:
+			if($best_goods) {
+			foreach($best_goods as $value)[loop]}
+              <li><a href="{echo: goods_url($value['goods_id']);/}"><img src="{echo: $value['is_set_image'] ? $value['goods_thumb'] : 'skin/default/images/nopic.gif';/}"/></a><a class="pro_name" href="{echo: goods_url($value['goods_id']);/}" title="{echo:$value['goods_name'];/}">{echo: sub_str($value['goods_name'],20);/}</a><label>￥{echo: $value['goods_price'];/}{echo:lp{i_yan};/}</label></li>
+        	{end:foreach/}
+			{end:if/}
+            	<div class="clear"></div>
+        	</ul>
+		</div>
+	 </div>
+
+	<script language="JavaScript" src="servtools/ajax_client/ajax.js"></script>
+	<script language="JavaScript">
+	<!--
+		function addFavorite(id) {
+			ajax("do.php?act=goods_add_favorite","POST","id="+id,function(data){
+				if(data == 1) {
+					alert("{echo: lp{s_g_addedfavorite};/}");
+				} else if(data == -1) {
+					alert("{echo: lp{s_g_stayfavorite};/}");
+				} else {
+					alert("{echo: lp{s_g_addfailed};/}");
+				}
+			});
+		}
+
+		function addCart(id) {
+			var num = document.getElementById('num');
+			ajax("do.php?act=goods_add_cart","POST","id="+id+"&num="+num.value,function(data){
+				if(data == 1) {
+					alert("{echo: lp{s_g_addedcart};/}");
+				} else if(data == -1) {
+					alert("{echo: lp{s_staycart};/}");
+				} else if(data == -2) {
+					alert("{echo: lp{s_nomachgoods};/}");
+				} else {
+					alert("{echo: lp{s_g_addfailed};/}");
+				}
+			});
+		}
+		function gotoOrder(id) {
+			value = document.getElementById('num').value;
+			location.href = "{echo: $baseUrl;/}modules.php?app=user_order&gid="+id+"&v="+value;
+		}
+	//-->
+	</script>
+	{inc:  require("shop/footer.php");/}
+</div>
+</body>
+</html>
+<script language="JavaScript" type="text/javascript">
+	function showarealist(n){
+		var obj = document.getElementById("areabox");
+		var width = document.body.clientWidth;
+		var left = "100";
+		if(width) {
+			left = (width-200)/2;
+		}
+		obj.style.left = left+"px";
+		if(n){
+			obj.style.display="";
+		}else{
+			obj.style.display="none";
+		}
+	}
+	function gettransport_price(n,areaname){
+		var goods_id = {echo:$goodsinfo['goods_id'];/};
+		ajax("do.php?act=get_transport_price","POST","goods_id="+goods_id+"&area_id="+n,function(data){
+			document.getElementById("transport_price").innerHTML=data;
+			document.getElementById("area_name").innerHTML=areaname;
+			showarealist(0);
+		});
+	}
+</script>

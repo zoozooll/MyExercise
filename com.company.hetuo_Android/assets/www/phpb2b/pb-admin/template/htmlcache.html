@@ -1,0 +1,49 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_system_tool}> &raquo; 缓存</p>
+</div>
+<div id="rightTop"> 
+    <h3>缓存</h3> 
+    <ul class="subnav">
+		<{if $smarty.get.do=="clear"}>
+	  	<li><a href="htmlcache.php"><{$_updating}></a></li>		
+      	<li><a class="btn1" href="htmlcache.php?do=clear"><span><{$_clearing}></span></a></li>
+        <{else}>
+	  	<li><a class="btn1" href="htmlcache.php"><span><{$_updating}></span></a></li>		
+      	<li><a href="htmlcache.php?do=clear"><{$_clearing}></a></li>
+        <{/if}>
+    </ul>
+</div>
+<div class="mrightTop"> 
+	<{if $smarty.get.do=="clear"}>
+    <div class="fontl"> 
+        <form name="edit_frm" id="EditFrm" method="post">
+        <input type="hidden" name="do" value="clear" />
+             <div class="left"> 
+               <label for="memberCache"><input type="checkbox" name="data[type][]" id="memberCache" value="membercache" />缓存空间数据</label>
+               <label for="dbCache"><input type="checkbox" name="data[type][]" id="dbCache" value="dbcache" />缓存标签数据</label>
+               <label for="dataCache"><input type="checkbox" name="data[type][]" id="dataCache" value="smartycache" checked="checked" />模板缓存文件</label>
+               <label for="dataCompile"><input type="checkbox" name="data[type][]" id="dataCompile" value="smartycompile" />模板编译文件</label>
+               <input type="submit" name="save" id="Save" class="formbtn" value="立即清理" /> 
+            </div> 
+        </form> 
+    </div> 
+    <{else}>
+    <div class="fontl"> 
+        <form name="edit_frm" id="EditFrm" method="post">
+        <input type="hidden" name="do" value="update" />
+             <div class="left"> 
+               <label for="dataTypeSetting"><input type="checkbox" name="data[type][]" id="dataTypeSetting" value="setting" checked="checked" />基本数据</label>
+               <label for="dataTypeBasic"><input type="checkbox" name="data[type][]" id="dataTypeSetting1" value="setting1" checked="checked" />扩展数据</label>
+               <label for="dataTypeArea"><input type="checkbox" name="data[type][]" id="dataTypeArea" value="area" checked="checked" />地区数据</label>
+               <label for="dataTypeIndustry"><input type="checkbox" name="data[type][]" id="dataTypeIndustry" value="industry" checked="checked" />行业数据</label>
+               <label for="dataTypeOptions"><input type="checkbox" name="data[type][]" id="dataTypeOptions" value="options" /><{$_options}></label>
+                <input type="submit" name="save" id="Save" class="formbtn" value="立即更新" /> 
+            </div> 
+        </form> 
+    </div> 
+    <{/if}>
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare"></div>
+<{include file="footer.html"}>

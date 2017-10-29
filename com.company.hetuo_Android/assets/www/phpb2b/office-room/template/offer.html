@@ -1,0 +1,85 @@
+<{assign var="page_title" value="`$_offer`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+      <table class="offer_count">
+        <tr>
+          <td class="orange"><span class="gray"><{$_tips_no_repeat}></td>
+          <td></td>
+        </tr>
+         <tr>
+          <td><strong><{$_success_release}><span class="font14b_org"> <{$Amount}></span> <{$_number}><{$ActionName}><{$_information_g}></strong></td>
+          <td class="height35"><a title="<{$_release}><{$ActionName}>" href="offer.php?do=edit" class="btn_publish"><{$_release_supply}></a></td>
+        </tr>
+      </table>      
+      <form name="listfrm" action="<{$smarty.server.PHP_SELF}>" method="post" onSubmit="return test();">
+	  <input type="hidden" name="formhash" value="<{$formhash}>">
+      <table class="offer_publish_list">
+        <tr>
+          <td>
+          <table class="bglist">
+            <tr>
+              <th><{$_type}></th>
+              <th><{$_theme}></th>
+              <th><{$_due_date}></th>
+              <th><{$_state}></th>
+              <th><{$_operation}></th>
+              <th><{$_choose}></th>
+            </tr>
+			<{foreach from=$Items item=item}>
+            <tr>
+              <td>[<a href="offer.php?typeid=<{$item.type_id}>"><{$TradeTypes[$item.type_id]}></a>]</td>
+              <td><div style="text-align:left; font-weight:bold;"><a href="<{$SiteUrl}>offer/detail.php?id=<{$item.id}>" title="<{$_preview}><{$item.title}>" target="_blank"><{$item.title}></a><{if $item.picture!=""}>&nbsp;<{$_picture}><{/if}></div></td>
+              <td><{if $item.expire_time<$TimeStamp}><{$_has_expired}><{else}><{$item.expire_date}><{/if}></td>
+              <td><{$CheckStatus[$item.status]}></td>
+              <td><a href="offer.php?do=edit&id=<{$item.id}>"><{$_modify}></a>&nbsp;&nbsp;<{if $item.status==1}><a href="offer.php?do=refresh&id=<{$item.id}>" title="<{$_extension_time}>"><{$_repeating}></a>&nbsp;&nbsp;<a href="offer.php?do=update&id=<{$item.id}>" title="<{$_update_site}>"><{$_update}></a><{/if}>&nbsp;&nbsp;<a href="offer.php?do=moderate&id=<{$item.id}>"  onclick="return window.confirm('<{$_you_should_pay_for_this}>');"><{$_bump_to_top}></a></td>
+              <td><input name="tradeid[]" type="checkbox" id="id_<{$item.id}>" value="<{$item.id}>"></td>
+            </tr>
+			<{foreachelse}>
+			<{/foreach}>
+          </table></td>
+        </tr>
+        <tr>
+          <td>
+          <table class="offer_publish_submit">
+            <tr>
+              <td>
+				<div align="right">
+                <input type="submit" name="del" value="<{$_delete_message}>" onclick="return window.confirm('<{$_ok_delete}>');">&nbsp;
+				<input type="submit" name="refresh" value="<{$_repeating_information}>" onclick="return window.confirm<{$_ok_repeating_information}>">
+				</div>
+			  </td>
+              </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+          <table class="room_pages">
+              <tr>
+                <td><{$ByPages}></td>
+              </tr>
+          </table>
+          </td>
+        </tr>
+      </table>
+      </form>
+      <table class="attentions" >     
+          <tr>
+            <td class="bottom"><{$_offer_post_attention}></td>
+          </tr>
+    </table>
+    </div>
+</div>
+<{include file="footer.html"}>

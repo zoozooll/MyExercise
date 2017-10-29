@@ -1,0 +1,3 @@
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/playback_info_bg_src"
+    android:tileMode="repeat" />

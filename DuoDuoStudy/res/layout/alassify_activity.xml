@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:background="#FFFFFF"
+  >
+  
+  <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+  	<TextView android:id="@+id/title" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  	<ImageButton android:id="@+id/back" android:layout_width="70dip" android:layout_height="30dip"/>
+  </LinearLayout>
+  
+  <LinearLayout android:id="@+id/subject"  android:layout_width="wrap_content" android:layout_height="wrap_content">
+  	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全部：" android:textColor="#000"/>
+ 	<CheckBox android:id="@+id/subAll"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="语文" android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subChinese" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="数学"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subMath" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="英语" android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subEnglish" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="物理"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subPhysics" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="化学"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subChemistry" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="计算机"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subComputer" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  </LinearLayout>
+  <LinearLayout android:id="@+id/grade"  android:layout_width="fill_parent" android:layout_height="wrap_content">
+  	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全部：" android:textColor="#000"/>
+ 	<CheckBox android:id="@+id/gradeAll" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="语文" android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subChinese" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="数学"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subMath" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="英语" android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subEnglish" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="物理"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subPhysics" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="化学"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subChemistry" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="计算机"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subComputer" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  </LinearLayout>
+  <LinearLayout android:id="@+id/subject"  android:layout_width="fill_parent" android:layout_height="wrap_content">
+  	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全部：" android:textColor="#000"/>
+ 	<CheckBox android:id="@+id/subAll" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="语文" android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subChinese" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="数学"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subMath" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="英语" android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subEnglish" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="物理"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subPhysics" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="化学"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subChemistry" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:text="计算机"  android:layout_height="wrap_content" android:textColor="#000"/>
+  	<CheckBox android:id="@+id/subComputer" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+  	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  </LinearLayout>
+</LinearLayout>

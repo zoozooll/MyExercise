@@ -1,0 +1,131 @@
+<{include file="header.html"}>
+<{fetch file="../scripts/date.js"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_offer}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_offer}></h3> 
+    <ul class="subnav">
+		<li><a href="offer.php"><{$_management}></a></li>
+        <li><a class="btn1" href="offer.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+        <li><a href="offer.php?do=setting"><{$_setting}></a></li>
+        <li><a href="offertype.php"><{$_sorts}></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" enctype="multipart/form-data" id="EditFrm" action="offer.php" name="edit_frm">
+  	<input type="hidden" name="page" value="<{$smarty.get.page}>" />
+  	<{if $smarty.get.id}>
+  	<input type="hidden" name="id" value="<{$smarty.get.id}>" />
+  	<input type="hidden" name="company_name" value="<{$item.companyname}>" />
+  	<input type="hidden" name="username" value="<{$item.username}>" />
+  	<input type="hidden" name="oldtag" value="<{$item.tag}>" />
+    <input type="hidden" name="oldimg" value="<{$item.picture}>" />
+  	<{/if}>
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 会员名:</th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[username]" value="<{$item.username}>" /><label class="field_notice">会员名</label>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 公司名:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[company_name]" id="dataCompanyName" value="<{$item.companyname}>"/></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 信息标题:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[trade][title]" value="<{$item.title}>" /><label class="field_notice">供求内容标题</label></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 标签:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[tag]" type="text" id="tag" value="<{$item.tag}>" /><label class="field_notice"><{$_multi_seperate_by_quot_or_space}></label>        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 发布时间:</th>
+        <td class="paddingT15 wordSpacing5"><{$item.pubdate}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 结束时间:</th>
+        <td class="paddingT15 wordSpacing5">
+        	<input type="text" name="expiretime" id="date1" value="<{$item.expdate}>" /><span class="btn_calendar" id="calendar-date1"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 供求类型:</th>
+        <td class="paddingT15 wordSpacing5"><p><{html_radios name="data[trade][type_id]" options=$TradeTypes checked=$item.type_id|default:"1" separator=" "}></p></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 查看所需积分：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[trade][require_point]" type="text" id="require_point" value="<{$item.require_point}>" /><label class="field_notice">(默认为0，不需要任何积分)</label>        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_in_industry}></th>
+        <td class="paddingT15 wordSpacing5">
+        <span id="dataIndustry">
+					<select name="data[trade][industry_id1]" id="dataTradeIndustryId1" class="level_1" style="width:120px;" ></select>
+					<select name="data[trade][industry_id2]" id="dataTradeIndustryId2" class="level_2" style="width:120px;"></select>
+					<select name="data[trade][industry_id3]" id="dataTradeIndustryId3" class="level_3" style="width:120px;"></select>
+		</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_in_area}></th>
+        <td class="paddingT15 wordSpacing5">
+			<span id="dataArea">
+						<select name="data[trade][area_id1]" id="dataTradeAreaId1" class="level_1" style="width:120px;" ></select>
+						<select name="data[trade][area_id2]" id="dataTradeAreaId2" class="level_2" style="width:120px;"></select>
+						<select name="data[trade][area_id3]" id="dataTradeAreaId3" class="level_3" style="width:120px;"></select>
+			</span>        
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 详细说明:</th>
+        <td class="paddingT15 wordSpacing5"><textarea style="width:650px;height:300px;" name="data[trade][content]" id="dataTradeContent"><{$item.content}></textarea>
+		</td>
+
+      </tr>
+      <tr>
+        <th class="paddingT15">图片：</th>
+        <td class="paddingT15 wordSpacing5">
+        <input class="infoTableFile2" type="file" name="pic" id="pic" />
+          <label class="field_notice">（支持格式GIF,JPG,JPEG,PNG）</label>
+          <{if $item.picture}>
+          <br /><span><img src="<{$item.image}>" alt="<{$item.name}>"/></span>
+          <{/if}>
+        </td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />
+			<input class="formbtn" type="submit" name="pass" value="审核通过" />
+			<input class="formbtn" type="submit" name="forbid" value="审核无效" />
+			<input class="formbtn" type="submit" name="del" value="<{$_delete}>" />
+		</td>
+
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+var cache_path = "../";
+var app_language = '<{$AppLanguage}>';
+var area_id1 = <{$item.area_id1|default:0}> ;
+var area_id2 = <{$item.area_id2|default:0}> ;
+var area_id3 = <{$item.area_id3|default:0}> ;
+var industry_id1 = <{$item.industry_id1|default:0}> ;
+var industry_id2 = <{$item.industry_id2|default:0}> ;
+var industry_id3 = <{$item.industry_id3|default:0}> ;
+Calendar.setup({
+	trigger    : "calendar-date1",
+	animation  : false,
+	inputField : "date1",
+	onSelect   : function() { this.hide() }
+});
+</script>
+<script src="../scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="../scripts/script_area.js"></script>
+<script src="../scripts/script_industry.js"></script>
+<{editor type="tiny_mce"}>
+<{include file="footer.html"}>

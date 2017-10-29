@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+<style type="text/css">
+.red{color:red;}
+.templageimg span{float:left; display:block; text-align:left; margin-left:1px;}
+.templageimg img{border:2px solid #eee; cursor:pointer;}
+</style>
+</head>
+<script type="text/javascript" src="servtools/nicedit/nicEdit.js"></script>
+<script type="text/javascript">
+bkLib.onDomLoaded(function() {
+	new nicEditor({iconsPath : 'servtools/nicedit/nicEditorIcons.gif'}).panelInstance('shop_intro');
+});
+</script>
+<body {sta:if($SYSINFO['map']=='true') [exc]} onload="initialize()" {end:if/}>
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+        <div class="bigpart">
+		<div class="title_uc"><h3>{echo: lp{m_shop_info};/}</h3></div>
+		<form action="do.php?act=shop_info" method="post" name="form_shop_info" onsubmit="return checkForm();" enctype="multipart/form-data">
+		<table width="98%" class="form_table">
+			<tr>
+				{sta: if($SYSINFO['sys_domain']) [exc]}
+					{sta: if($flag) [exc]}
+						<td class="textright">{echo: lp{m_domain};/}：</td>
+						<td><input type="text" name="shop_domain" value="shop{echo: $shop_info['shop_id'];/}" disabled style="width:250px;" maxlength="50" /></td>
+					{end:if/}
+				{end:if/}
+			</tr>
+			<tr><td class="textright">{echo: lp{m_shop_name};/}：</td>
+				<td><input type="text" name="shop_name" value="{echo: $shop_info['shop_name'];/}" style="width:250px;" maxlength="50" />
+					<span class="red">*</span></td>
+			</tr>
+			<tr>
+				<td class="textright">{echo: lp{m_stayarea};/}：</td>
+				<td>
+					<span id="shop_country"><select name="country" onchange="areachanged(this.value,0);">
+						<option value='0'>{echo: lp{m_select_country};/}</option>
+					{sta: foreach($areas_info[0] as $v) [loop]}
+						<option value="{echo: $v['area_id'];/}"
+							{sta: if($v['area_id']==$shop_info['shop_country']){echo 'selected';if/}>{echo: $v['area_name'];/}</option>
+					{end:foreach/}
+					</select></span>
+					<span id="shop_province">
+					{sta: if($shop_info['shop_country']) [exc]}
+					<select name="province" onchange="areachanged(this.value,1);">
+						<option value='0'>{echo: lp{m_select_province};/}</option>
+					{sta: foreach($areas_info[1] as $v) {
+							if($v['parent_id'] == $shop_info['shop_country']) [exc]}
+						<option value="{echo: $v['area_id'];/}" {sta: if($v['area_id']==$shop_info['shop_province']){echo 'selected';if/}>{echo: $v['area_name'];/}</option>
+					{end:if/}
+					{end:foreach/}
+					{end:if/}
+					</select>
+					<span id="shop_city">{sta: if($shop_info['shop_province']) [exc]}
+					<select name="city" onchange="areachanged(this.value,2);">
+						<option value='0'>{echo: lp{m_select_city};/}</option>
+					{sta: foreach($areas_info[2] as $v) {
+							if($v['parent_id'] == $shop_info['shop_province']) [exc]}
+						<option value="{echo: $v['area_id'];/}" {sta:  if($v['area_id']==$shop_info['shop_city']){echo 'selected';if/}>
+						{echo: $v['area_name'];/}</option>
+					{end:if/}
+					{end:foreach/}</select>
+					{end:if/}</span>
+					<span id="shop_district">{sta: if($shop_info['shop_city']) [exc]}
+					<select name="district">
+						<option value='0'>{echo: lp{m_select_district};/}</option>
+					{sta: foreach($areas_info[3] as $v) {
+							if($v['parent_id'] == $shop_info['shop_city']) [exc]}
+						<option value="{echo: $v['area_id'];/}" {sta:if($v['area_id']==$shop_info['shop_district']){echo 'selected';if/}>
+						{echo: $v['area_name'];/}</option>
+					{end:if/}
+					{end:foreach/}</select>
+					{end:if/}</span>
+				<span class="red">*</span></td>
+			</tr>
+			<tr><td class="textright">{echo: lp{m_address};/}:</td>
+				<td><input type="text" name="shop_address" value="{echo: $shop_info['shop_address'];/}" style="width:250px;" maxlength="200" /> <span class="red">*</span>
+				{sta:if($SYSINFO['map']=='true') [exc]}
+				&nbsp;【<a onclick="discontrol('map_canvas',this)" href="#">{echo: lp{m_open_map};/}</a>】
+				<div id="map_canvas" style="width:600px; height:400px;"></div>
+				{end:if/}
+				</td>
+			</tr>
+			<tr><td class="textright">{echo: lp{m_shop_management};/}:</td>
+				<td><input type="text" name="shop_management" value="{echo: $shop_info['shop_management'];/}" style="width:250px;" maxlength="200" /> <span class="red">*</span></td></tr>
+			<tr><td class="textright">{echo: lp{m_shop_intro};/}:</td>
+				<td>
+			<textarea name="shop_intro" id="shop_intro" cols="75" rows="5">{echo: $shop_info['shop_intro'];/}</textarea>
+			</td></tr>
+			<tr><td class="textright">{echo: lp{m_select_template};/}:</td><td class="templageimg">
+			{sta: foreach($shoptemplate_arr as $v) [loop]}
+				<span><img src="{echo: $v['imgurl'];/}" width="95" alt="{echo: $v['tplname'];/}" onclick="wshowimg('{echo: $v['bigimgurl'];/}')" onmouseover="imgmover(this)" onmouseout="imgmout(this)" /><br /><input type="radio" name="shop_template" value="{echo: $v['tpltag'];/}" {sta: if($shop_info['shop_template']==$v['tpltag']) [exc]} checked{end:if/} /> {echo: $v['tplname'];/}</span>
+			{end:foreach/}
+			</td></tr>
+
+			<tr style="display:none;"><td class="textright">{echo: lp{m_shop_introimg};/}:</td>
+			<td><input type="file" name="attach_images[]" /> {sta: if($shop_info['shop_images'])
+			{ echo "<img src='".$shop_info['shop_images']."' height='80' />";/}{end:if/} {echo: lp{m_shop_introimg_msg};/}</td></tr>
+
+			<tr><td class="textright">{echo: lp{m_shop_logoimg};/}:</td>
+			<td><input type="file" name="attach_logo[]" /> {sta: if($shop_info['shop_logo'])
+			{ echo "<img src='".$shop_info['shop_logo']."' height='80' />";/}{end:if/} {echo: lp{m_shop_logoimg_msg};/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_shop_bannerimg};/}:</td>
+			<td><input type="file" name="attach_template[]" /> {sta: if($shop_info['shop_template_img'])
+			{echo "<img src='".$shop_info['shop_template_img']."' height='80' />";/}{end:if/} {echo: lp{m_shop_bannerimg_msg};/}</td></tr>
+			<tr><td colspan="2" align="center"><input type="hidden" name="shop_id" value="{echo: $shop_id;/}" />
+			<input type="submit" name="submit" value="{echo: lp{m_edit_shop};/}" /></td></tr>
+
+			<input type="hidden" name="now_x" id="now_x" value="{echo:$shop_info['map_x'];/}" />
+			<input type="hidden" name="now_y" id="now_y" value="{echo:$shop_info['map_y'];/}" />
+			<input type="hidden" name="now_zoom" id="now_zoom" value="{echo:$shop_info['map_zoom'];/}" />
+		</table>
+		</form>
+        </div>
+    </div>
+    <div class="clear"></div>
+    {inc: require("modules/footer.php");/}
+</div>
+<div id="showimg" style="display:none; width:408px; text-align:center; border:5px solid #F6A248; position:absolute; padding:4px; background:#fff; top:200px;"><img id="imgsrc" src="skin/default/images/shop_template_default_big.gif" width="400" /></div>
+<div style="width:0px; height:0px; overflow:hidden;"><input type="input" id="hiddeninput" onblur="whideimg()" /></div>
+{sta:if($SYSINFO['map']=='true') [exc]}
+<script src="http://maps.google.com/maps?file=api&v=2.x&key={echo:$SYSINFO['map_key'];/}" type="text/javascript"></script>
+{end:if/}
+<script language="JavaScript" src="servtools/ajax_client/ajax.js"></script>
+<script language="JavaScript">
+<!--
+function imgmover(obj) {
+	obj.style.border = '2px solid #E38016';
+}
+
+function imgmout(obj) {
+	obj.style.border = '2px solid #eee';
+}
+
+function wshowimg(v) {
+	var width = document.body.clientWidth;
+	var showimg = document.getElementById("showimg");
+	var imgsrc = document.getElementById("imgsrc");
+
+	var left = "100";
+	if(width) {
+		left = (width-400)/2;
+	}
+	showimg.style.left = left+"px";
+	showimg.style.display = '';
+	imgsrc.src = v;
+	document.getElementById("hiddeninput").focus();
+}
+
+function whideimg() {
+	var showimg = document.getElementById("showimg");
+	showimg.style.display = 'none';
+}
+
+function areachanged(value,type){
+	if(value > 0) {
+		ajax("do.php?act=ajax_areas","POST","value="+value+"&type="+type,function(return_text){
+			return_text = return_text.replace(/[\n\r]/g,"");
+			if(return_text==""){
+				alert("{echo: lp{m_select_again};/}");
+			} else {
+				if(type==0) {
+					document.getElementById("shop_province").innerHTML = return_text;
+					show("shop_province");
+					hide("shop_city");
+					hide("shop_district");
+				} else if(type==1) {
+					document.getElementById("shop_city").innerHTML = return_text;
+					show("shop_city");
+					hide("shop_district");
+				} else if(type==2) {
+					document.getElementById("shop_district").innerHTML = return_text;
+					show("shop_district");
+				}
+			}
+		});
+	} else {
+		if(type==2) {
+			hide("shop_district");
+		} else if(type==1) {
+			hide("shop_district");
+			hide("shop_city");
+		} else if(type==0) {
+			hide("shop_district");
+			hide("shop_city");
+			hide("shop_province");
+		}
+	}
+}
+
+function hide(id) {
+	document.getElementById(id).style.display = 'none';
+}
+function show(id) {
+	document.getElementById(id).style.display = '';
+}
+
+function checkForm() {
+	var shop_name = document.getElementsByName("shop_name")[0];
+	var shop_address = document.getElementsByName("shop_address")[0];
+	var shop_management = document.getElementsByName("shop_management")[0];
+
+	if(shop_name.value=='') {
+		alert("{echo: lp{m_shopname_notnone};/}");
+		shop_name.focus();
+		return false;
+	} else if(document.getElementsByName("country")[0].value==0) {
+		alert("{echo: lp{m_select_countrypl};/}");
+		return false;
+	} else if(document.getElementsByName("province")[0].value==0) {
+		alert("{echo: lp{m_select_provincepl};/}");
+		return false;
+	} else if(document.getElementsByName("city")[0].value==0) {
+		alert("{echo: lp{m_select_citypl};/}");
+		return false;
+	} else if(document.getElementsByName("district")[0].value==0) {
+		alert("{echo: lp{m_select_districtpl};/}");
+		return false;
+	} else if(shop_address.value=='') {
+		alert("{echo: lp{m_address_notnone};/}");
+		shop_name.focus();
+		return false;
+	} else if(shop_management.value=='') {
+		alert("{echo: lp{m_shopmanagement_notnone};/}");
+		shop_management.focus();
+		return false;
+	}
+	return true;
+}
+
+{sta:if($SYSINFO['map']=='true') [exc]}
+// 地图处理开始
+var now_x = {echo:$shop_info['map_x'];/};
+var now_y = {echo:$shop_info['map_y'];/};
+var now_zoom = {echo:$shop_info['map_zoom'];/};
+
+if(now_x=='0' && now_y=='0'){
+	var now_x = '116.39328002929687';
+	var now_y = '39.89709437260048';
+	var now_zoom = '5';
+}
+
+function initialize() {
+	if (GBrowserIsCompatible()) {
+		var map = new GMap2(document.getElementById("map_canvas"));
+		var center = new GLatLng(now_y, now_x);
+		map.setCenter(center, now_zoom);
+
+		var point = new GLatLng(now_y,now_x);
+		var marker = new GMarker(point);
+		map.addOverlay(marker);
+
+		GEvent.addListener(map,"click", function(overlay,latlng) {
+			if(latlng) {
+				var point = new GLatLng(latlng.y,latlng.x); // 根据经纬度创建点
+				var marker = new GMarker(point);			// 创建标注
+				map.clearOverlays();						// 清除现有地图上的所有标注
+				map.addOverlay(marker);						// 添加新标注
+
+				now_x = latlng.x;
+				now_y = latlng.y;
+				now_zoom = map.getZoom();
+
+				document.getElementById('now_x').value=now_x;
+				document.getElementById('now_y').value=now_y;
+				document.getElementById('now_zoom').value=now_zoom;
+			}
+		});
+
+		map.addControl(new GSmallMapControl());
+		map.addControl(new GMapTypeControl());
+	}
+	document.getElementById("map_canvas").style.display = "none";
+}
+
+function discontrol(itemid,obj)
+{
+	if(document.getElementById(itemid).style.display=='') {
+		obj.innerHTML = '点击打开地图，设置我的位置';
+		document.getElementById(itemid).style.display="none";
+	} else {
+		obj.innerHTML = '点击关闭地图，设置完毕';
+ 		document.getElementById(itemid).style.display="";
+	}
+}
+// 地图处理结束
+{end:if/}
+
+//-->
+</script>
+
+</body>
+</html>

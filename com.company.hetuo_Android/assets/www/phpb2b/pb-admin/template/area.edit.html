@@ -1,0 +1,85 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_setting_global}> &raquo; <{$_area}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_area}></h3> 
+    <ul class="subnav">
+		<li><a href="area.php"><{$_management}></a></li>
+        <li><a class="btn1" href="area.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+        <li><a href="areatype.php"><{$_sorts}></a></li>
+        <li><a href="area.php?do=clear"><{$_clearing}></a></li>
+        <li><a href="area.php?do=refresh"><{$_update_cache}></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" action="area.php" id="EditFrm" name="edit_frm">
+    <table class="infoTable">
+    <{if $smarty.get.id}>
+      <input type="hidden" name="id" value="<{$smarty.get.id}>" />
+      <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+      <tr>
+        <th class="paddingT15"> 编号：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[area][id]" value="<{$item.id}>" type="text" />        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 地区名称：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[area][name]" value="<{$item.name}>" type="text" />        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_digest_n}></th>
+        <td class="paddingT15 wordSpacing5"><textarea name="data[area][description]"><{$item.description}></textarea></td>
+      </tr>
+    <{else}>
+      <tr>
+        <th class="paddingT15"> 地区名称：</th>
+        <td class="paddingT15 wordSpacing5"><textarea name="data[names]" id="dataNames"></textarea><label class="field_notice">可以添加多个，一行代表一个地区</label></td>
+      </tr>
+    <{/if}>
+      <tr>
+        <th class="paddingT15"> 上级地区：</th>
+        <td class="paddingT15 wordSpacing5">
+        <select name="data[area][parent_id]" id="dataParentId">
+        <option value="0">无</option>
+        <{$CacheItems}>
+        </select>
+       </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 所属系列：</th>
+        <td class="paddingT15 wordSpacing5">
+         <select name="data[area][areatype_id]" id="dataTypeId">
+			<option value="0">无</option>
+            <{foreach from=$Types key=key3 item=item3}>
+            <option value="<{$key3}>" <{if $key3==$item.areatype_id}>selected="selected"<{/if}>><{$item3}></option>
+            <{/foreach}>
+        </select>   
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 链接地址：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[area][url]" value="<{$item.url}>" type="text" /><label class="field_notice">为空，则系统默认地址</label>        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 是否显示：</th>
+        <td class="paddingT15 wordSpacing5"><{html_radios name="data[area][available]" options=$AskAction checked=$item.available|default:1 separator=""}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_display_order}></th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[area][display_order]" type="text" value="<{$item.display_order|default:0}>"></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+jQuery(document).ready(function($) {
+	$('#dataParentId').val("<{$item.parent_id|default:0}>");
+	$('#dataTypeId').val("<{$item.areatype_id|default:0}>");
+})
+</script>
+<{include file="footer.html"}>

@@ -1,0 +1,59 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_member_center}> &raquo; <{$_membergroup}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_member}></h3> 
+    <ul class="subnav">
+		<li><a href="member.php"><{$_management}></a></li>
+		<li><a class="btn1" href="membertype.php"><span><{$_sorts}></span></a></li>
+        <li><a href="membertype.php?do=edit"><{$_add_or_edit}></a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontl">默认会员组会在用户注册的时候自动选择。</div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="membertype.php" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll"><{$_naming}></label></th>
+		  <th>简介</th>
+		  <th>默认<{$_membergroup}></th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><label for="item_<{$item.id}>"><{$item.name}></label></td>
+		  <td><{$item.description}></td>
+		  <td><a href="membergroup.php?do=permission" title="查看权限"><{$item.default_group}></a></td>
+		  <td class="handler">
+          <ul id="handler_icon">
+            <li><a class="btn_delete" href="membertype.php?id=<{$item.id}>&do=del" title="<{$_delete}>"><{$_delete}></a></li>
+            <li><a class="btn_edit" href="membertype.php?do=edit&id=<{$item.id}>" title="<{$_edit}>"><{$_edit}></a></li>
+          </ul>  
+		</td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="5"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+<style type="text/css">
+td span{color:red;}
+#reg_step {
+	width: 770px;
+	height: 29px;
+	margin: 5px auto;
+	line-height: 29px;
+}
+#reg_step ol li {
+	width: 138px;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	background: #dedede url(skin/{echo: $SYSINFO['templates'];/}/images/steps_bg.gif) right 0 no-repeat;
+	padding: 0 16px 0 0;
+	overflow: hidden;
+	text-align:center;
+}
+#reg_step ol li span,#reg_step ol li strong {
+	display: block;.
+	text-align:center;
+}
+#reg_step ol li .first {
+	background: #dedede url(skin/{echo: $SYSINFO['templates'];/}/images/steps_bg.gif) -10px -58px no-repeat;
+}
+#reg_step ol li.last {
+	background-position: right -116px;
+}
+#reg_step ol li.current {
+	color: #ffffff;
+	background-color: #F6A248;
+}
+#reg_step ol li.current .first {
+	background-color: #F6A248;
+	background-position: -10px -87px;
+}
+#reg_step ol li.current_prev {
+	background-position: right -29px;
+}
+#reg_step ol li.last_current {
+	background-color: #F6A248;
+	color: #fff;
+	background-position: right -145px;
+}
+td{text-align:left;}
+</style>
+</head>
+<body>
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+		<div class="bigpart">
+		<div class="title_uc"><h3><span style="float:right; margin-right:15px;"><a href="modules.php?app=shop_my_order" style="color:#F67A06;">{echo: lp{m_recver_order};/}</a>&nbsp;&nbsp;</span>{echo: lp{m_order_info};/}</h3></div>
+		<div id="reg_step">
+			<ol>
+			{sta: if($info['order_status']==0) [exc]}
+				<li class=""><strong class="first">1、{echo:lp{m_buy_mk_order};/}</strong></li><li class=""><span>2、{echo:lp{m_buyer_pay};/}</span></li><li class=""><span>3、{echo:lp{m_check_put_goods};/}</span></li><li class="current_prev"><span>4、{echo:lp{m_buyer_checkget_goods};/}</span></li><li class="last_current"><span>5、{echo:lp{m_thisorder_cancel};/}</span></li>
+			{sta: } elseif($info['order_status']==3) [exc]}
+				<li class=""><strong class="first">1、{echo:lp{m_buy_mk_order};/}</strong></li><li class=""><span>2、{echo:lp{m_buyer_pay};/}</span></li><li class=""><span>3、{echo:lp{m_check_put_goods};/}</span></li><li class="current_prev"><span>4、{echo:lp{m_buyer_checkget_goods};/}</span></li><li class="last_current"><span>5、{echo:lp{m_com_deal};/}</span></li>
+			{sta: } elseif($info['transport_status']==1) [exc]}
+				<li class=""><strong class="first">1、{echo:lp{m_buy_mk_order};/}</strong></li><li class="current_prev"><span>2、{echo:lp{m_buyer_pay};/}</span></li><li class="current"><span>3、{echo:lp{m_check_put_goods};/}</span></li><li class=""><span>4、{echo:lp{m_buyer_checkget_goods};/}</span></li><li class="last"><span>5、{echo:lp{m_com_deal};/}</span></li>
+			{sta: } elseif($info['pay_status']==1) [exc]}
+				<li class="current_prev"><strong class="first">1、{echo:lp{m_buy_mk_order};/}</strong></li><li class="current"><span>2、{echo:lp{m_buyer_pay};/}</span></li><li class=""><span>3、{echo:lp{m_check_put_goods};/}</span></li><li class=""><span>4、{echo:lp{m_buyer_checkget_goods};/}</span></li><li class="last"><span>5、{echo:lp{m_com_deal};/}</span></li>
+			{sta: } else  [exc]}
+				<li class="current"><strong class="first">1、{echo:lp{m_buy_mk_order};/}</strong></li><li class=""><span>2、{echo:lp{m_buyer_pay};/}</span></li><li class=""><span>3、{echo:lp{m_check_put_goods};/}</span></li><li class=""><span>4、{echo:lp{m_buyer_checkget_goods};/}</span></li><li class="last"><span>5、{echo:lp{m_com_deal};/}</span></li>
+			{end:if/}
+			</ol>
+		</div>
+		<table width="98%" class="form_table">
+			<tr>
+				<th style="background:#FFF2E6; color:#F67A06;" colspan="4">&nbsp;&nbsp;{echo: lp{m_goods_info};/}</th>
+			</tr>
+			<tr><th>{echo: lp{m_goods_name};/}</th><th>{echo: lp{m_goods_price};/}</th><th>{echo: lp{m_buy_num};/}</th><th>{echo: lp{m_transport_price};/}</th></tr>
+			<tr><td>{echo: $info['goods_name'];/}</td><td>{echo: $info['goods_price'];/}{echo: lp{m_yuan};/}</td><td>{echo: $info['order_num'];/}</td><td>{echo: $info['transport_price'];/}{echo: lp{m_yuan};/}</td></tr>
+			<tr><td colspan="4">{echo: lp{m_order_thisbuyprice};/}:<span>{echo: $info['order_amount'];/}</span>{echo: lp{m_yuan};/}
+			{sta:if($info['order_status']==1 && $info['pay_status']==0) [exc]} <form action="do.php?act=shop_order_priceedit" method="post">
+			&nbsp;&nbsp;{echo: lp{m_order_editprice};/}<input name="price" value="{echo: $info['order_amount'];/}" style="width:70px;" />
+			<input type="hidden" name="order_id" value="{echo: $order_id;/}" />
+			<input type="submit" name="btn" value="{echo: lp{m_order_editprice};/}" />
+			{end:if/}
+			</td></tr>
+		</table>
+
+		<table width="98%" class="form_table">
+			<tr>
+				<th style="background:#FFF2E6; color:#F67A06;" colspan="2">&nbsp;&nbsp;{echo: lp{m_order_getsting};/}</th>
+			</tr>
+			<tr><td class="textright">{echo: lp{m_contact};/}:</td><td>{echo: $info['consignee'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_mobile};/}:</td><td>{echo: $info['mobile'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_telphone};/}:</td><td>{echo: $info['telphone'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_email};/}:</td><td>{echo: $info['email'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_stayarea};/}:</td><td>{echo: $areas[$info['province']];/} {echo: $areas[$info['city']];/} {echo: $areas[$info['district']];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_address};/}:</td><td>{echo: $info['address'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_zipcode};/}:</td><td>{echo: $info['zipcode'];/}</td></tr>
+		</table>
+		<table width="98%" class="form_table">
+			<tr>
+				<th style="background:#FFF2E6; color:#F67A06;" colspan="2">&nbsp;&nbsp;{echo: lp{m_order_poststing};/}</th>
+			</tr>
+			<tr><td class="textright">{echo: lp{m_shipping_name};/}:</td><td>{echo: $info['shipping_name'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_shipping_no};/}:</td><td>{echo: $info['shipping_no'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_shipping_type};/}:</td><td>{echo: $info['shipping_type'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_shipping_time};/}:</td><td>{echo: $info['shipping_time'];/}</td></tr>
+		</table>
+		<table width="98%" class="form_table">
+			<tr>
+				<th style="background:#FFF2E6; color:#F67A06;" colspan="2">&nbsp;&nbsp;{echo: lp{m_order_info};/}</th>
+			</tr>
+			<tr><td class="textright">{echo: lp{m_order_message};/}:</td><td>{echo: $info['message'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_payment_message};/}:</td><td>{echo: $info['pay_message'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_alipay_tradeno};/}:</td><td>{echo: $info['trade_no'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_order_time};/}:</td><td>{echo: $info['order_time'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_pay_time};/}:</td><td>{echo: $info['pay_time'];/}</td></tr>
+			<tr><td class="textright">{echo: lp{m_receive_time};/}:</td><td>{echo: $info['receive_time'];/}</td></tr>
+			<tr><td class="center" colspan="2">
+				{sta: if($info['order_status']==1)[exc]}
+				<a href="do.php?act=shop_order_check&id={echo: $info['order_id'];/}" onclick="return confirm('{echo: lp{m_sure_thisorder};/}');">[{echo: lp{m_sure_ordernow};/}]</a>
+				{end:if/}
+
+				{sta:  if($info['transport_status']==0)[exc]}
+						{sta: if($info['pay_id']==1)[exc]}
+						<a href="do.php?act=shop_order_checkput&id={echo: $info['order_id'];/}">[{echo: lp{m_sure_shippingnow};/}]</a>
+						{sta: } elseif($info['pay_id']==2) [exc]}
+						<a href="plugins/alipay/comput.php?id={echo: $info['order_id'];/}" target="_blank">[{echo: lp{m_sure_shippingnow};/}]</a>
+						{end:if/}
+				{end:if/}
+			</td></tr>
+		</table>
+        </div>
+    </div>
+    <div class="clear"></div>
+    {inc: require("modules/footer.php");/}
+</body>
+</html>

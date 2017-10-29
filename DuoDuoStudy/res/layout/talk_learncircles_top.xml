@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/talk_main_layout_page"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="horizontal"
+  android:background="@drawable/talkgardenback">
+  <LinearLayout
+  	android:id="@+id/talk_message_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+	  	android:id="@+id/talk_message_text"
+	  	android:layout_width="70dip"
+	  	android:layout_height="25dip"
+	  	android:background="@drawable/talktopbtn"
+	  	android:layout_margin="5dip"
+	  	android:text=" "/>
+  </LinearLayout>
+  <LinearLayout
+    android:id="@+id/talk_icon_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="40dip"
+    android:orientation="horizontal"
+    android:layout_alignParentRight="true">
+    <TextView
+        android:id="@+id/talk_learncircles_txt"
+    	android:layout_width="30dip"
+    	android:layout_height="30dip"
+    	android:background="@drawable/talk_learncircles_top"
+        android:layout_margin="5dip"
+    />
+  </LinearLayout>
+</RelativeLayout>

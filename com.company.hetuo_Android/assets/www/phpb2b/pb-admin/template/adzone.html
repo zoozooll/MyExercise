@@ -1,0 +1,66 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_ads}> &raquo; <{$_adzone}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_adzone}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1"><span><{$_management}></span></a></li>
+        <li><a href="adzone.php?do=edit"><{$_add_or_edit}></a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontl">广告位是指一组广告的集合，你可以利用广告位代码调用指定的广告。</div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th>编号</th>
+		  <th><label for="idAll">位置名称</label></th>
+		  <th>广告数量</th>
+		  <th>最大宽</th>
+		  <th>最大高</th>
+		  <th>调用代码</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item name=adzone}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><{$item.id}></td>
+		  <td><label for="item_<{$item.id}>"><{$item.name}></label></td>
+		  <td><a href="ad.php?do=search&adzone_id=<{$item.id}>"><{$item.numbers|default:0}>个</a></td>
+		  <td><{$item.width}></td>
+		  <td><{$item.height}></td>
+		  <td><a href="<{$smarty.server.PHP_SELF}>?do=makejs&id=<{$item.id}>" title="生成调用代码"><img src="images/export.gif" border="0" /></a></td>
+		  <td class="handler">
+           <ul id="handler_icon">
+            <li><a class="btn_delete" href="adzone.php?id=<{$item.id}>&do=del<{$addParams}>"  title="<{$_delete}>"><{$_delete}></a></li>
+            <li><a class="btn_edit" href="adzone.php?do=edit&id=<{$item.id}><{$addParams}>" title="<{$_edit}>"><{$_edit}></a></li>
+            <li><a class="btn_add" href="ad.php?do=edit&adzone_id=<{$item.id}><{$addParams}>" title="添加广告"><{$_add}></a></li>
+          </ul> 
+       </td>
+		  
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="8"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

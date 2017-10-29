@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="@drawable/talk_qqback">
+  <LinearLayout
+  android:id="@+id/talk_left_layout"
+  android:layout_marginTop="30dip"
+  android:orientation="vertical"
+  android:layout_width="200dip"
+  android:layout_height="wrap_content">
+  <RelativeLayout
+   	  android:id="@+id/talk_current_userinfo"
+	  android:layout_width="180dip"
+	  android:layout_height="wrap_content">
+     <ImageView
+      android:id="@+id/talk_current_userinfo_image"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_alignParentLeft="true"
+	  android:src="@drawable/person_haomeili"/>
+	 <LinearLayout
+	  android:id="@+id/talk_current_userinfo_name"
+	  android:layout_toRightOf="@id/talk_current_userinfo_image"
+	  android:orientation="vertical"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content">
+	     <TextView
+	         android:id="@+id/talk_uname_text"
+		     android:layout_width="wrap_content"
+		  	 android:layout_height="wrap_content"
+		  	 android:text="刘微"
+		  	 android:textColor="@color/black"/>
+	     <TextView
+	     	 android:id="@+id/talk_signature_text"
+		     android:layout_width="wrap_content"
+		  	 android:layout_height="wrap_content"
+		  	 android:text="我在学习中。。。。"
+		  	 android:textColor="@color/black"/>
+	 </LinearLayout>
+  </RelativeLayout>
+  <EditText
+  	  android:id="@+id/talk_search_user"
+	  android:layout_width="180dip"
+	  android:layout_height="30dip"/>
+  <ExpandableListView
+	  android:id="@+id/talk_expandableListView"
+	  android:layout_width="200dip"
+	  android:layout_height="wrap_content"
+	  android:scrollbars="vertical"/>
+</LinearLayout>
+</RelativeLayout>

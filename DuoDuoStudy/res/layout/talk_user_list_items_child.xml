@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FFFFFF">
+    <RelativeLayout
+   	  android:id="@+id/talk_current_userinfo"
+	  android:layout_width="170dip"
+	  android:layout_height="wrap_content">
+     <ImageView
+      android:id="@+id/talk_current_userinfo_image"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_alignParentLeft="true"
+	  android:src="@drawable/person_haomeili"/>
+	 <LinearLayout
+	  android:id="@+id/talk_current_userinfo_name"
+	  android:layout_toRightOf="@id/talk_current_userinfo_image"
+	  android:orientation="vertical"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content">
+	     <TextView
+	         android:id="@+id/talk_uname_text"
+		     android:layout_width="wrap_content"
+		  	 android:layout_height="wrap_content"
+		  	 android:text="傻逼"
+		  	 android:textColor="@color/black"/>
+	     <TextView
+	     	 android:id="@+id/talk_signature_text"
+		     android:layout_width="wrap_content"
+		  	 android:layout_height="wrap_content"
+		  	 android:text="我在学习中。。。。"
+		  	 android:textColor="@color/black"/>
+	 </LinearLayout>
+  </RelativeLayout>
+</LinearLayout>

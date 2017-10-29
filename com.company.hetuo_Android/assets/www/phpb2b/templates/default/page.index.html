@@ -1,0 +1,37 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="`$nav_id`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+  <div class="content">
+      <p class="blank6"></p>
+      <div class="container">
+        <div class="fl help_l">
+          <div class="help_ltop">
+              <span class="help_top_left"></span><span class="help_top_right"></span>
+           </div>
+          <div class="help_lcont">
+            <div class="help_telborder">
+              <h2 class="tar"><{$_about_us}></h2>
+            </div>
+            <ul>
+            	<{userpage row=15}>
+                  	<li class="help_lcontnav"><a href="[link:title]" title="[field:title]">[field:title]</a></li>
+                <{/userpage}>
+              <li class="self_def_bg"></li>
+              <li class="self_def_nav"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="fr help_r clearfix">
+           <div class="help_rtop"></div>
+              <div class="help_rcontbg">
+            <div class="foot_contact"><{$item.title}></div>
+            <div class="help_rbg"><{$item.content}></div>
+          </div>
+        </div>
+
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

@@ -1,0 +1,135 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="`$nav_id`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+	<div class="tips"><span><{$position}></span></div>
+    <div class="blank6"></div>
+	<div class="kinds">
+		<p>
+		<span><{$_sort_screening}></span>
+		<{foreach from=$TradeTypes item="type_item" key="type_key"}>
+		<a href="offer/list.php?<{$addParams}>typeid=<{$type_key}>" title="<{$type_item}>"><{$type_item}></a>
+		<{/foreach}>
+		</p>
+		<p>
+		<span><{$_industry_screening}></span>
+		<{foreach from=$OtherIndustry name=subindustry item=item1 key=key1}>
+		<a href="offer/list.php?<{$addParams}>industryid=<{$key1}>" title="<{$item1}>"><{$item1}></a>
+		<{foreachelse}>
+		<a><{$_no_subclass}></a>
+		<{/foreach}>
+		</p>
+		<form name="search_frm" id="OfferSearchFrm" action="" method="get">
+		<p class="group2">
+		<span><{$_fast_screening}></span>
+		<label>
+		<select name="industryid" onchange="$('#OfferSearchFrm').submit();">
+			<option value="0"><{$_all_sort}></option>
+			<{html_options options=$OtherIndustry selected=$smarty.get.industryid}>
+		</select>
+		</label>
+		<label>
+			<select name="areaid" onchange="$('#OfferSearchFrm').submit();">
+				<option value="0"><{$_all_area}></option>
+				<{html_options options=$OtherArea selected=$smarty.get.areaid}>
+			</select>
+		</label>
+		<label><input type="submit"  value="<{$_screening}>" class="submit"/>
+		</label>
+		<div class="clear"></div>
+		</p>
+		</form>
+	</div>
+
+<div class="qiugoucontent clearfix">
+	<div class="qiugoucontentleft">
+    <div class="base_title">
+        <span class="more"><a href="help/"><{$_how_bump_to_top}></a></span>
+        <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_search_result}></span><span class="corner_t_r"></span></h2>
+	</div>
+		<div class="qiugouleftcon box_bord">
+			<form name="offer_list_frm">
+            <table>
+				<tr>
+					<th><{$_picture}></th>
+					<th><{$_offer}>/<{$_publisher}></th>
+					<th></th>
+					<th><{$_area_n}></th>
+					<th><{$_member_group}></th>
+					<th><{$_contact_us}></th>
+				</tr>
+				<{if $StickyItems}>
+					<{foreach from=$StickyItems name=sticky_offer item="sticky"}>
+					<tr style="background:#FFF8DD;">
+					<td class="offer_img"><img src="<{$sticky.image}>" border=0 alt="<{$sticky.title}>"></td>
+					<td class="title_link">
+					<p><span><a href="<{$sticky.url}>" title="<{$sticky.title}>"><{$sticky.title}></a></span>[<{$sticky.pubdate}>]</p>
+					<p><{$_abstract}><{$sticky.content|truncate:100}></p>
+					<p><{$_publisher}><{if $sticky.companyname}><a href="space.php?userid=<{$sticky.username}>"><{$sticky.companyname}></a><{else}><{$sticky.username}><{/if}></p>     
+					</td>
+					<td><{if $sticky.if_commend>0}><span class="icon-commend"></span><{/if}><{if $sticky.if_urgent>0}><span class="icon-hurry"></span><{/if}><img src="images/top.gif" alt="<{$_bump_to_top}>" /></td>
+					<td><p><{if $sticky.area_id1}><{$Areas[1][$sticky.area_id1]}><br /><{$Areas[2][$sticky.area_id2]}><{/if}></p></td>
+					<td><{if $sticky.gradename}><img src="<{$sticky.gradeimg}>" alt="<{$sticky.gradename}>" ><{/if}></td>
+					<td>					
+						<{$sticky.im}>
+						<{if $sticky.companyname!=""}>
+						<a href="space.php?do=feedback&userid=<{$sticky.userid}>"><span class="im_pms"><{$_station_message}></span></a>
+						<{elseif $sticky.username}>
+						<a href="office-room/pms.php?do=send&to=<{$sticky.username}>"><span class="im_pms"><{$_send_message}></span></a>
+						<{/if}>
+					</td>
+					</tr>
+					<{/foreach}>
+				<{/if}>
+				<{foreach from=$Items name=offer item="item"}>
+				<tr>
+				<td class="offer_img"><a href="<{$item.url}>"><img src="<{$item.image}>" border=0 alt="<{$item.title}>"></a></td>
+				<td class="title_link list_offer_content_width">
+				<p><span><a href="<{$item.url}>" title="<{$item.title}>"><{$item.title}></a></span><span class="gray">[<{$item.pubdate}>]</span></p>
+				<p><{$_abstract}><{$item.content|truncate:100}></p>
+				<p><{$_publisher}><{if $item.companyname}><a href="space.php?userid=<{$item.username}>"><{$item.companyname}></a><{else}><{$item.username}><{/if}></p>     
+				</td>
+				<td><{if $item.if_commend>0}><span class="icon-commend"></span><{/if}><{if $item.if_urgent>0}><span class="icon-hurry"></span><{/if}></td>
+				<td><p><{if $item.area_id1}><{$Areas[1][$item.area_id1]}><br /><{$Areas[2][$item.area_id2]}><{/if}></p></td>
+				<td><{if $item.gradename}><img src="<{$item.gradeimg}>" alt="<{$item.gradename}>" ><{/if}></td>
+				<td>
+					<{$item.im}>
+					<{if $item.companyname!=""}>
+					<a href="space.php?do=feedback&userid=<{$item.userid}>"><span class="im_pms"><{$_station_message}></span></a>
+					<{elseif $item.username}>
+					<a href="office-room/pms.php?do=send&to=<{$item.username}>"><span class="im_pms"><{$_send_message}></span></a>
+					<{/if}>
+				 </td>
+				</tr>
+				<{/foreach}>
+            </table>
+			<div>
+				<span><{$ByPages}></span>
+			</div>
+			</form>
+		</div>
+	</div>
+	<div class="qiugoucontentright">
+		<div class="recommendcompany">
+			<div class="recommendcompanytop"><img src="<{$theme_img_path}>images/lhighs.gif" />&nbsp;<{$_commend}><{$_offer}></div>
+			<{offer row=10 type="commend" typeid=`$typeid`}>
+			<p><a href="[link:title]">[field:title]</a></p>
+			<{/offer}>
+			<div class="clear"></div>
+		</div>
+		<div class="recommendcompany">
+			<div class="recommendcompanytop"><img src="<{$theme_img_path}>images/lhighs.gif" />&nbsp;<{$_recommended_company}></div>
+			<{company row=15}>
+			<p><a href="[link:title]" title="[field:fulltitle]">[field:title]</a></p>
+			<{/company}>
+			<div class="clear"></div>
+		</div>
+</div>
+</div>
+<script language="javascript" src="scripts/highlight.js"></script>
+<script>
+$("#SearchFrm").attr("action","offer/list.php");
+$("#topMenuOffer").addClass("lcur");
+$(".qiugouleftcon").highlight(["<{$highlight_str}>"]);
+</script>
+<{include file="`$ThemeName`/footer.html"}>

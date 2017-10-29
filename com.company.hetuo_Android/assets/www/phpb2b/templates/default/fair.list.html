@@ -1,0 +1,51 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="8"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+    <div class="tips"><span><{$position}></span></div>
+    <div class="blank6"></div>
+    <div class="companylistconleft">
+        <div class="base_title">
+          <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_search_result}></span><span class="corner_t_r"></span></h2> 
+	    </div>
+        <div class="base_list_box box_bord">
+           <div class="base_list_head"></div>
+           <div class="base_list_content clearfix">	
+           <{foreach from=$Items name=fair item=item}>
+                <div class="base_list clearfix">
+                    <{if $item.picture}><div class="base_list_img"><img src="<{$item.image}>" /></div><{/if}>
+                    <div class="base_list_info">
+                      <span class="title title_link"><a href="fair/detail.php?id=<{$item.id}>"><{$item.title}></a></span>
+                      <p> <{$item.description}></p>
+                      <div class="update_time"><em><{$_fair_time}>(<{$item.begin_time|date_format:"%Y.%m.%d"}>-<{$item.end_time|date_format:"%Y.%m.%d"}>)</em><{$_categories}>[<a href="fair/list.php?typeid=<{$item.expotype_id}>"><{$item.typename}></a>]</div>
+                      <div class="txt_source"><span class="fr link-underline"><a href="fair/detail.php?id=<{$item.id}>"><{$_visit_full_content}>...</a></span></div>
+                  </div>
+                 </div>
+                 <hr class="hr_dashed" />
+               <{/foreach}>
+                <div><{$ByPages}></div>
+           </div>
+        </div>
+    </div>
+	<div class="companylistconright">
+			<div class="lookcompany ex_choose">
+				<div class="buymessagetop"><img src="<{$theme_img_path}>images/lhighs.gif" /><{$_area_choose}></div>
+				<p>
+                <{foreach from=$Areas[1] item=area_item key=area_key}>
+					<a href="fair/list.php?areaid=<{$area_key}>"><{$area_item}></a><br />
+                <{/foreach}>
+				</p>
+				<div class="clear"></div>
+			</div>
+			<div class="companylistsee ex_choose">
+				<div class="buymessagetop"><img src="<{$theme_img_path}>images/lhighs.gif" /><{$_sort_choose}></div>
+				<p>
+				<{foreach from=$Type item=item key=key}>
+					<a href="fair/list.php?typeid=<{$key}>"><{$item}></a><br />
+				<{/foreach}>
+				</p>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="blank6"></div>
+<{include file="`$ThemeName`/footer.html"}>

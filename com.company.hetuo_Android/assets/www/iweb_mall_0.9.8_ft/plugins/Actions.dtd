@@ -1,0 +1,7 @@
+<!ELEMENT actions (package+)>
+<!ELEMENT package (action+)>
+<!ELEMENT action (return+)>
+<!ELEMENT return (#PCDATA)>
+<!ATTLIST package name CDATA #REQUIRED>
+<!ATTLIST action name CDATA #REQUIRED  file CDATA #REQUIRED class CDATA #IMPLIED method CDATA #REQUIRED >
+<!ATTLIST return name CDATA #REQUIRED  > 

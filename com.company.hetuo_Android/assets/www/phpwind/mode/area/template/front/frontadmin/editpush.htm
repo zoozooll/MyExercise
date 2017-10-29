@@ -1,0 +1,196 @@
+<!--<?php
+print <<<EOT
+-->
+<div class="admin_table" style="width:600px;">
+	<h2 class="pwC_h" style="cursor:move" onmousedown="read.move(event);">
+    	<span class="fr" onclick="closep();"><img src="$imgpath/close.gif" /></span>{$invokepiece[invokename]}->$invokepiece[title]
+        <a style="cursor:pointer" class="linka" onclick="sendmsg('{$thisBaseName}&action=editcontent&invokepieceid=$invokepiece[id]&loopid=$push[loopid]');">返回上一级</a></h2>
+    </h2>
+    <form action="{$thisBaseName}&action=editpush" method="post" name="form1" onsubmit="return false;" enctype="multipart/form-data">
+    <div style="height:350px;overflow:hidden;overflow-y:auto;">
+    <table width="100%" cellspacing="0" cellpadding="0">
+<!--
+EOT;
+foreach ($push[data] as $k=>$val) {
+if ($k=='tagrelate') {
+	continue;
+}
+$name = getParamName($k,$invokepiece['action']);
+if (is_numeric($invokepiece[param][$k])) {
+if($k=='descrip'){
+$add = 'onKeyUp="countlen(this,\''.$invokepiece[param][$k].'\');"';
+}else{
+$add = 'maxlength="'.$invokepiece[param][$k].'"';
+}
+} else {
+$add = '';
+}
+print <<<EOT
+-->
+		<tr class="tr1 vt">
+			<td class="td1">{$name} :</td>
+			<td class="td2">
+<!--
+EOT;
+if($k=='descrip'){print <<<EOT
+-->
+				<textarea name="param[$k]" style="width:320px;height:70px" $add >$val</textarea>
+<!--
+EOT;
+} elseif ($k=='title') {
+print <<<EOT
+-->
+				<div class="mb10"><input type="text" class="input" size="40" name="param[$k]" value="$val" $add></div>
+				<div class="pwnew fl">
+                    <span title="粗体字"><a onclick="styleOnclick(this,'title2')" class="$stylename[1]">加粗</a></span>
+                    <span title="斜体字"><a onclick="styleOnclick(this,'title3')" class="$stylename[2]">斜体</a></span>
+                    <span title="下划线"><a onclick="styleOnclick(this,'title4')" class="$stylename[3]">下划线</a></span>
+                    <span id="color_show" title="点击取消颜色" onclick="colorCancel()"></span>
+                    <span title="颜色选择"><a class="two tal" onclick="showColorPicker(this,document.form1.title1,function(){pickReback(color_picker)})"><img src="$imgpath/pickcolor.gif" /></a></span>
+                    <span>时间:&nbsp;<input name="titletime" id="titletime" size="15" class="input" type="input" value="$titletime" onclick="ShowCalendar(this.id,1);" /></span>
+				<input id="title1" name="title1" type="hidden" value="$titlecolor" />
+				<input id="title2" name="title2" type="hidden" value="{$titledetail[1]}" />
+				<input id="title3" name="title3" type="hidden" value="{$titledetail[2]}" />
+				<input id="title4" name="title4" type="hidden" value="{$titledetail[3]}" />
+                </div>&nbsp;
+<!--
+EOT;
+} elseif ($k=='image') {
+print <<<EOT
+-->
+				<input type="text" class="input" size="40" name="param[$k]" value="$val" $add>
+			</td>
+		</tr>
+		<tr class="tr1 vt">
+			<td class="td1">上传图片</td>
+			<td class="td2">
+				<input id="uploadpic" type="file" name="uploadpic" onchange="checkFileType()">（允许类型：jpg，jpeg，gif，png）
+				<span id="fileTypeError" style="display:none;"><font color="red">请选择正确的文件类型</font></span>
+<!--
+EOT;
+}else{
+print <<<EOT
+-->
+				<input type="text" class="input" size="40" name="param[$k]" value="$val" $add>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+			</td>
+		</tr>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<!--
+EOT;
+if ($invokepiece[num]>1) {
+print<<<EOT
+-->
+		<tr class="tr1 vt">
+			<td class="td1">列表位置</td>
+			<td class="td2"><select name="offset">
+<!--
+EOT;
+for ($i=0;$i<$invokepiece[num];$i++) {
+$value=$i+1;
+$select = $push[offset]==$i?'selected':'';
+print<<<EOT
+-->
+				<option value="$i" $select>$value</option>
+<!--
+EOT;
+}print<<<EOT
+-->
+			</select></td>
+		</tr>
+<!--
+EOT;
+}else{print<<<EOT
+-->
+		<tr><td colspan="2"><input type="hidden" name="offset" value="0" /></td></tr>
+<!--
+EOT;
+}print<<<EOT
+-->
+		<tr class="tr1 vt">
+			<td class="td1">开始日期</td>
+			<td class="td2"><input type="text" class="input" size="15" name="starttime" id="starttime" onclick="ShowCalendar(this.id,1);" value="$push[starttime]">&nbsp;&nbsp;
+            留空则立即显示</td>
+		</tr>
+		<tr class="tr1 vt">
+			<td class="td1">失效日期</td>
+			<td class="td2"><input type="text" class="input" size="15" name="endtime" id="edit_endtime" onclick="ShowCalendar(this.id,1);" value="$push[endtime]">&nbsp;&nbsp;
+            留空则为长期显示</td>
+		</tr>
+<!--
+EOT;
+if ($iftagrelate) {
+print<<<EOT
+-->
+		<tr>
+			<td colspan="2">
+				<table width="100%">
+					<tbody id="tagrelate">
+						<tr class="tr2 td_bgA">
+							<td colspan="4">关联文章</td>
+						</tr>
+						<tr class="tr2">
+							<td width="24">顺序</td>
+							<td>标题</td>
+							<td>链接地址</td>
+							<td width="45"><a href="javascript:;" onclick="New(addTagRelate,['tagrelate','tagrelatedata']);return false;">[添加]</a></td>
+						</tr>
+<!--
+EOT;
+foreach ($push[data][tagrelate] as $relate) {
+print<<<EOT
+-->
+						<tr class="tr1 vt">
+							<td class="td2"><input type="text" size="2" name="tagrelate[index][]" value="$relate[index]"  class="input"></td>
+							<td class="td2"><input type="text" size="16" name="tagrelate[title][]" value="$relate[title]" class="input"></td>
+							<td class="td2"><input type="text" size="22" name="tagrelate[url][]" value="$relate[url]" class="input"></td>
+							<td class="td2"><a href="javascript:;" onclick="delTr(this);return false;">[删除]</a></td>
+						</tr>
+<!--
+EOT;
+}print<<<EOT
+-->
+						<tr class="tr1 vt">
+							<td class="td2"><input type="text" size="2" name="tagrelate[index][]" class="input"></td>
+							<td class="td2"><input type="text" size="16" name="tagrelate[title][]" value="" class="input"></td>
+							<td class="td2"><input type="text" size="22" name="tagrelate[url][]" value="http://" class="input"></td>
+							<td class="td2"><a href="javascript:;" onclick="delTr(this);return false;">[删除]</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+<!--
+EOT;
+}print<<<EOT
+-->
+		</table>
+    </div>
+    <div class="tac" style="padding:10px;">
+    <input type="hidden" name="id" value="$id">
+    <input type="hidden" name="step" value="2">
+    <input type="button" class="btn" name="ajaxsubmit" onclick="ajax.submit(this.form,function(){sendmsg('{$thisBaseName}&action=editcontent&invokepieceid=$invokepiece[id]&loopid=$push[loopid]');});" value="提交" />
+    </div>
+    </form>
+</div>
+<table style="display:none">
+	<tbody id="tagrelatedata">
+		<tr class="tr1 vt">
+			<td class="td2"><input type="text" size="2" name="tagrelate[index][]" class="input"></td>
+			<td class="td2"><input type="text" size="16" name="tagrelate[title][]" value="" class="input"></td>
+			<td class="td2"><input type="text" size="22" name="tagrelate[url][]" value="http://" class="input"></td>
+			<td class="td2"><a href="javascript:;" onclick="delTr(this);return false;">[删除]</a></td>
+		</tr>
+	</tbody>
+</table>
+<!--
+EOT;
+?>-->

@@ -1,0 +1,55 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_system_tool}> &raquo; <{$_database}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_database}></h3> 
+    <ul class="subnav">
+		<li><a href="db.php"><{$_db_backup}></a></li>
+        <li><a class="btn1" href="db.php?do=restore"><span><{$_db_restore}></span></a></li>
+        <li><a href="db.php?do=query"><{$_db_upgrade}></a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontl">请将文件上传到目录<strong>../data/backup_<{$backup_dir}></strong>进行还原。</div> 
+    <div class="fontr"></div> 
+</div> 
+<div id="dataListDiv" class="tdare">
+  <form name="list_frm" id="ListFrm" action="" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll">文件名</label></th>
+		  <th><span>备份时间</span></th>
+		  <th>文件大小</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2" title="<{$item.directory}>">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.name}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.name}>" title="<{$item.name}>"></td>
+		  <td><label for="item_<{$item.name}>"><{$item.name}></label></td>
+		  <td><{$item.filemtime}></td>
+		  <td><{$item.filesize|get_custom_size}></td>
+		  <td class="handler">
+          <ul id="handler_icon">
+              <li><a class="btn_delete" href="db.php?id=<{$item.name}>&do=del<{$addParams}>" title="<{$_delete}>"><{$_delete}></a></li>
+              <li><a class="btn_resend" href="db.php?do=refresh&id=<{$item.name}><{$addParams}>" onclick="confirm('还原文件<{$item.name}>\n本<{$_action}>不可恢复，确认继续吗');" title="还原"><{$_db_restore}></a></li>
+           </ul> 
+		  </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="5"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

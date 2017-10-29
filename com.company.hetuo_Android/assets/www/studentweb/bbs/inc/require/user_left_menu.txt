@@ -1,0 +1,15 @@
+  <strong>发布管理</strong>
+  <ul>
+    <li><a href="user_write.php" target="_blank">我要发布信息</a></li>
+	<li><a href="user_list.php">管理已发信息</a></li>
+  </ul>
+  <strong>其他管理</strong>
+  <ul>
+	<li><a href="user_file.php">修改/完善我的名片</a></li>
+	<li><a href="user_power.php">了解我的权限</a></li>
+  </ul>
+  <strong>增值服务</strong>
+  <ul>
+  	<li><a href="user_top.php">我要置顶信息</a></li>
+	<li><a href="user_ad.php">我要求广告位</a></li>
+  </ul>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 底部显示布局  -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	android:background="@drawable/bottombar_bg">
+	<TextView 
+		android:id="@+id/info_longitude"
+		style="@style/BottomBarText"
+		android:layout_width="@dimen/bottombar_text_width"
+		android:text="@string/ellipsis_text" />
+	<TextView 
+		android:id="@+id/info_latitude"
+		style="@style/BottomBarText" 
+		android:layout_width="@dimen/bottombar_text_width"
+		android:text="@string/ellipsis_text" />
+	<com.dvr.android.dvr.view.DateView 
+		style="@style/BottomBarText" />
+	<com.dvr.android.dvr.view.TimeView
+		style="@style/BottomBarText" />
+	<TextView 
+		android:id="@+id/info_speed"
+		style="@style/BottomBarText" 
+		android:layout_width="@dimen/bottombar_speed_width"
+		android:text="@string/ellipsis_text"/>
+	<com.dvr.android.dvr.view.StatusView 
+		android:id="@+id/info_status"
+		style="@style/BottomBarText" 
+		android:layout_marginLeft="@dimen/bottombar_info_status_marginLeft"/>
+</LinearLayout>

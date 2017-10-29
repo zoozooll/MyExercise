@@ -1,0 +1,37 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_member_center}> &raquo; <{$_pms}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_pms}></h3> 
+    <ul class="subnav">
+		<li><a href="message.php"><{$_management}></a></li>
+        <li><a class="btn1" href="message.php?do=send"><span>发送</span></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form action="message.php" method="post" id="EditFrm" name="edit_frm">
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 发给<{$_cp_username_n}></th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="to_username" id="ToUsername" value="" /><label class="field_notice">请填写对方的帐号</label>        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_title_n}></th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[message][title]" value="" /></td>
+      </tr> 
+      <tr>
+        <th class="paddingT15"> 内容：</th>
+        <td class="paddingT15 wordSpacing5">
+        <textarea style="width:550px;height:50px;" name="data[message][content]"></textarea></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<{include file="footer.html"}>

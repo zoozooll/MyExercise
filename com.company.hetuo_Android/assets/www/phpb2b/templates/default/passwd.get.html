@@ -1,0 +1,40 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="`$nav_id`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+		<div class="content">
+			<div class="tips"><span><{$site_name}></span><{$_get_password}></div>
+			<div class="quhuimima">
+        <div class="base_title">
+             <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_fill_reg_info}></span><span class="corner_t_r"></span></h2> 
+        </div>
+       <div class="messagecon">
+            <div class="messageconleft">
+                <form id="form1" name="form1" method="post" action=""><strong><{$_input_name_password}></strong><br /><br />
+                 <table class="messagecon_list">
+                  <tr>
+                    <th><{$_login_name}></th>
+                    <td><input type="text" name="textfield" />&nbsp;<{$_forgot_login_name}></td>
+                  </tr>
+                  <tr>
+                    <th><{$_your_email}></th>
+                    <td><input type="text" name="textfield" /></td>
+                  </tr>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <td>&nbsp; <input type="submit" name="Submit" value="<{$_next_get_password}>" class="submit_w118" /></td>
+                  </tr>
+                </table>
+                </form>
+            </div>
+            <img src="<{$theme_img_path}>images/quhuuimima04.jpg" />
+            <div class="messageconright">
+                <p><{$_emai_incorrectly_not_send}></p>
+                <p><{$_email_format_error_not_send}></p>
+                <p><{$_Login_name_exist_send_failed}></p>
+            </div>
+        </div>
+	</div>
+		</div>
+	</div>
+<{include file="`$ThemeName`/footer.html"}>

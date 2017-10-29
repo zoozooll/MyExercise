@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="150dp"
+  android:layout_height="wrap_content">
+  <ImageView
+	  android:id="@+id/myres_imge_item"
+	  android:layout_width="30dp"
+ 	  android:layout_height="25dp"
+ 	  android:src="@drawable/download_sign"
+ 	  android:layout_marginRight="15dp"/>
+  <TextView
+	  android:id="@+id/myres_txt_item"
+	  android:layout_width="120dp"
+ 	  android:layout_height="30dp"
+ 	  android:text="小学生作文选集"
+ 	  android:layout_marginRight="10dp"/>
+</LinearLayout>

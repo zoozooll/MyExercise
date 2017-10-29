@@ -1,0 +1,67 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+	<div class="content">
+        <div class="title_bar_s4">
+            <span class="title_top_s4"><span></span></span>
+             <h3><div class="price_step1"><span><{$_fill_inquiry_information}></span><span><{$_inquiry_successful}></span></div><{$_inquiry_steps}></h3>
+        </div>
+		<div class="pricecontent">
+			<form name="xunjiafrm" action="<{$smarty.env.PHP_SELF}>" method="post">
+			<input type="hidden" name="id" value="<{$smarty.get.id}>">
+			<input type="hidden" name="to_member_id" value="<{$item.member_id}>">
+			<input type="hidden" name="formhash" value="<{$formhash}>">
+			<input type="hidden" name="do" value="inquery">
+			<p><{$_receiver}></p>
+			<div class="content1">
+				<img src="<{$item.image}>" alt="" />
+				<p><{$_product_name}><a href="product/content.php?id=<{$item.id}>" target="_blank"><{$item.name}></a><br />
+					<{$_contact}><{$CompanyUser}>
+				</p>
+				<div class="clear"></div>
+			</div>
+			<p><{$_inquiry_content}></p>
+			<div class="content2">
+				
+				  <label class="title"><{$_message_the_title}></label>
+				  <label class="text">
+				  <input name="title" type="text" value="<{$item.names}>" size="45" />
+				  </label><br />
+				  <div class="clear"></div>
+				  <label class="title"><{$_additional_information}></label>
+				  <label>
+				  <textarea name="inquery[content]" class="textaera2"></textarea>
+				  </label>
+				 <div class="clear"></div>				
+			</div>
+			<p><{$_my_contacts}></p>
+			<div class="content3">
+				<label class="name"><{$_name}></label>
+				<label>
+				<input type="text" name="inquery[link_man]" />
+				</label><br />
+				<div class="clear"></div>
+				<label class="name"><{$_email}></label>
+				<label>
+				<input name="inquery[link_email]" id="LinkEmail" type="text">
+				</label><br />
+				<div class="clear"></div>
+				<label class="name"><{$_telephone}></label>
+				<label>
+				<input type="text" name="inquery[link_tel]" id="telnumber" value="">
+				</label><br />
+				<div class="clear"></div>
+				<label class="enquiry">
+				<input type="submit" value="<{$_inquiry}>" name="submit" id="Submit" <{if !$pb_username}> disabled="disbled" <{/if}>/>&nbsp;<input type="reset" value="<{$_cancel}>" />
+				</label>
+				<div class="clear"></div>	
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script>
+$("#SearchFrm").attr("action","product/list.php");
+$("#topMenuProduct").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

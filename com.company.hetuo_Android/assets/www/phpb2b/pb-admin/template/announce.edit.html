@@ -1,0 +1,61 @@
+<{include file="header.html"}>
+<{editor type="ckeditor" element="dataAnnouncementMessage"}>
+<{fetch file="../scripts/date.js"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_setting_global}> &raquo; <{$_announcement}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_announcement}></h3> 
+    <ul class="subnav">
+		<li><a href="announce.php"><{$_management}></a></li>
+        <li><a class="btn1" href="announce.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+        <li><a href="announcementtype.php"><{$_sorts}></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form action="announce.php" method="post" id="EditFrm" name="edit_frm">
+  <input type="hidden" name="id" value="<{$smarty.get.id}>">
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> <{$_title_n}></th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[announcement][subject]" value="<{$item.subject}>" /><label class="field_notice">显示的公告标题</label>        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 分类：</th>
+        <td class="paddingT15 wordSpacing5">
+			<select name="data[announcement][announcetype_id]">
+			<{foreach from=$Types item=typename key=key}>
+			<option value="<{$key}>" <{if $item.announcetype_id==$key}>selected<{/if}>><{$typename}></option>
+			<{/foreach}>
+			</select></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">截止日期：</th>
+        <td class="paddingT15 wordSpacing5"> 
+		<input name="data[display_expiration]" value="<{$item.display_expiration}>" type="text" id="date1" /><span class="btn_calendar" id="calendar-date1"></span><label class="field_notice">为空表示永不过期</label></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 内容：</th>
+        <td class="paddingT15 wordSpacing5">
+        <textarea style="width:550px;height:50px;" name="data[announcement][message]" id="dataAnnouncementMessage"><{$item.message}></textarea>        </td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+    Calendar.setup({
+        trigger    : "calendar-date1",
+		animation  : false,
+        inputField : "date1",
+		onSelect   : function() { this.hide() }
+    });
+</script>
+<{editor type="ckeditor" element="dataAnnouncementMessage" toolbar="Full"}>
+<{include file="footer.html"}>

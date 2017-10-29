@@ -1,0 +1,3 @@
+<?php
+$rs = array('id' => '1','type' => 'Baseset','fun' => 'baseset','cid' => '','value1' => '康康商城','value2' => '12345678','value3' => 'localhost/phpshop','value4' => '','value5' => 'fdsgsdfgsf','value6' => '','value7' => '1','value8' => '','value9' => '','value10' => '','value11' => 'beauty','value12' => '','value13' => '','value14' => '','value15' => '','value16' => '-12','value17' => '','value18' => '','value19' => '','value20' => '','value21' => '','value22' => '','value23' => '','value24' => '','value25' => '','value26' => '','value27' => '','value28' => '','value29' => '','value30' => '');
+?>

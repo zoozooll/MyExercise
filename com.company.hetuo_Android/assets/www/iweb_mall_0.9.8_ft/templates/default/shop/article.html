@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{echo: $header['title'];/}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{echo: $header['keywords'];/}" />
+<meta name="description" content="{echo: $header['description'];/}" />
+<base href="{echo: $baseUrl;/}" />
+<link href="skin/{echo: $SYSINFO['templates'];/}/css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="skin/{echo: $SYSINFO['templates'];/}/js/changeStyle.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	{inc: require("shop/index_header.php");/}
+<!--search end -->
+<div class="asd top5 clear"><script language="JavaScript" src="uploadfiles/asd/1.js"></script></div>
+<div class="main_right2 left top5">
+        <div class="head_line"><div class="bg_left"></div><div class="bg_right"></div></div>
+        <div class="top"><h2 class="highlight">{echo:lp{i_article_list};/}</h2></div>
+
+        <div class="c_m article_list">
+            <ul>
+            {sta:foreach($article_cat as $val)[loop]}
+                <li><a href="{echo:article_list_url($val['cat_id']);/}">{echo:$val['cat_name'];/}</a></li>
+            {end:foreach/}
+            </ul>
+        </div>
+</div>
+<!--main right end-->
+<div class="main2 right top5">
+	<div class="path" style="padding:2px 0 6px; line-height:14px;">{echo:lp{i_location};/}：<a href="index.php">{echo:lp{i_index};/}</a> > <a href="{echo:article_list_url($article_info['cat_id']);/}">{echo:$cat_name;/}</a> > {echo: $article_info['title'];/}</div>
+    <div class="article pro_class">
+    	<span>{echo: lp{s_time};/}: {echo: substr($article_info['add_time'],0,10);/}</span>
+    <h1>{echo: $article_info['title'];/}</h1>
+		<p>{echo: $article_info['content'];/}</p>
+        <div class="next_page">{echo:lp{i_up_article};/}：{sta:if(empty($up_article))[exc]} {echo:lp{i_none_article};/} {end:if/}<a href="{echo:article_url($up_article['article_id']);/}">{echo:$up_article['title'];/}</a><br/>{echo:lp{i_down_article};/}：{sta:if(empty($down_article))[exc]} {echo:lp{i_none_article};/} {end:if/}<a href="{echo:article_url($down_article['article_id']);/}">{echo:$down_article['title'];/}</a></div>
+	</div>
+    
+</div><div class="clear"></div>
+<!-- main end -->
+{inc: require("shop/index_footer.php");/}
+<!--footer end-->
+</div>
+</body>
+</html>

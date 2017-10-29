@@ -1,0 +1,48 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="`$nav_id`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+	<div class="contentbox">
+		<div class="tips"><span><{$position}></span></div>
+		<div class="blank6"></div>
+		<div class="container">
+			<div class="fl help_l">
+				 <div class="help_ltop">
+                     <span class="help_top_left"></span><span class="help_top_right"></span>
+                </div>
+				<div class="help_lcont">
+					<div class="help_telborder">
+						<div class="help_tel">
+							<div class="help_telcont"><{$_help_center}><br /><p class="tar"><{$service_tel}></p></div>
+						</div>
+					</div>
+					<{foreach from=$Helptypes name=Helptypes item=helptype}>
+					<h2 class="tar helpbor_01"><a href="help/index.php?typeid=<{$helptype.id}>"><{$helptype.name}></a></h2>
+					<ul>
+						<{if $helptype.sub}>
+						<{foreach from=$helptype.sub name=sub_helptype item=sub_helptype}>
+						<li class="help_lcontnav"><a href="help/index.php?typeid=<{$sub_helptype.id}>"><{$sub_helptype.name}></a></li>
+						<{/foreach}>
+						<{/if}>
+					</ul>
+					<{/foreach}>
+				</div>
+                 <div class="help_lcontnavs"></div>
+			</div>
+			<div class="fr help_r clearfix">
+				<div class="help_rcontbg">					
+                       <form method="get" action="help/index.php" >
+                        <input type="hidden" name="search" value="search"/>
+                         <p class="help_rsearch">
+                            <{$_search}><{$_help}><{$_colon}><input name="q" value="" type="text" /><input name="submit" value="<{$_search}>" type="submit" class="btn_submit_w45 search_en" />
+                          </p>
+                        </form>
+					<div class="help_rbg"><{$item.content}></div>
+				</div>
+			</div>
+		</div>
+        <div class="clear"></div>
+
+	</div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

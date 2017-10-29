@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--	camera_layout.xml dimens  -->
+    <dimen name="controlbar_width">190dp</dimen>
+    <dimen name="bottombar_height">38dp</dimen>
+    <!-- 	control_bar.xml   dimens  -->
+    <dimen name="controlbar_top_part_height">190dp</dimen>
+    <dimen name="controlbar_bottom_part_height">190dp</dimen>
+    <dimen name="controlbar_layout_marginleft">3dp</dimen>
+    <!-- 	bottom_bar.xml   dimens  -->
+    <dimen name="bottombar_text_width">48dp</dimen>
+    <dimen name="bottombar_speed_width">70dp</dimen>
+    <!-- 	styles.xml   dimens  -->
+    <dimen name="controlbar_btn_textSize">18sp</dimen>
+    <dimen name="controlbar_btn_paddingLeft">18dp</dimen>
+    <dimen name="playback_btn_paddingLeft">1dp</dimen>
+	<dimen name="bottombar_info_textSize">12sp</dimen>
+    <dimen name="bottombar_info_marginLeft">20dp</dimen>
+    <dimen name="bottombar_info_status_marginLeft">100dp</dimen>
+    <dimen name="bottombar_info_marginRight">4dp</dimen>
+    <!-- demins.xml -->
+    <dimen name="textsize_starting_preview">25sp</dimen>
+     <!-- textSize -->
+    <dimen name="textsize_setting">18sp</dimen>
+    <dimen name="textsize_playback">15sp</dimen>
+    <dimen name="textsize_help">12sp</dimen>
+    <!-- list_by_date_item.xml -->
+    <dimen name="textsize_list_date">18sp</dimen>
+	<dimen name="textsize_list_paddingTop">2dip</dimen>
+	<dimen name="textsize_list_paddingLeft">55dip</dimen>
+    <dimen name="textsize_list_paddingRight">55dip</dimen>
+    <dimen name="textsize_listdate_paddingLeft">10dip</dimen>
+    <dimen name="textsize_listdate_paddingRight">15dip</dimen>
+    <dimen name="textsize_listdate_paddingTop">10dip</dimen>
+    <!-- playback -->
+    <dimen name="textsize_map_playback">10sp</dimen>
+    <!-- setting_powersaving -->
+    <dimen name="textsize_set_powersaving">16sp</dimen>
+    <!-- bandbook -->
+    <dimen name="textsize_bandbook">12sp</dimen>
+    <!-- savepath -->
+    <dimen name="textsize_save_path">10sp</dimen>
+ 	<dimen name="textsize_set_savepath">16sp</dimen>
+ 	<dimen name="recordTime_size">28sp</dimen>
+ 	<dimen name="recordText_size">26sp</dimen>
+ 		
+ 	<!-- setting -->
+    <dimen name="set_record_regual_offset_x">72dip</dimen>
+    <dimen name="set_record_regual_offset_y">30dip</dimen>
+    <dimen name="set_record_cycle_offset_x">72dip</dimen>
+    <dimen name="set_record_cycle_offset_y">30dip</dimen>
+    
+    <dimen name="set_record_quality_high_x">106dip</dimen>
+    <dimen name="set_record_quality_high_y">30dip</dimen>
+    <dimen name="set_record_quality_mid_x">106dip</dimen>
+    <dimen name="set_record_quality_mid_y">30dip</dimen>
+    <dimen name="set_record_quality_lower_x">106dip</dimen>
+    <dimen name="set_record_quality_lower_y">30dip</dimen>
+    
+    <dimen name="set_record_default_x">110dip</dimen>
+    <dimen name="set_record_default_y">30dip</dimen>
+    
+    <dimen name="power_save_text_x">310dp</dimen>
+    <dimen name="video_quality_text_x">305dp</dimen>
+    <dimen name="hit_auto_saving_text_x">280dp</dimen>
+    <dimen name="click_screen_text_x">310dp</dimen>
+    <dimen name="record_back_text_x">300dp</dimen>
+    <dimen name="power_on_auto_run_text_x">300dp</dimen>
+    
+    
+    <!-- playlist -->
+    <dimen name="playlist_video_x">130dip</dimen>
+    <dimen name="playlist_video_y">60dip</dimen>
+    
+    <dimen name="playlist_pic_x">130dip</dimen>
+    <dimen name="playlist_pic_y">60dip</dimen>
+    
+    <dimen name="playlist_btn_text_size">20dip</dimen>
+</resources>

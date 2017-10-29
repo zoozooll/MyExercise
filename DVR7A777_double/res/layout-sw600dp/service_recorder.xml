@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/service_relative"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#01000000" >
+
+	<RelativeLayout
+        android:id="@+id/camera_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/titleview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="14.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/rec_background"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/btn_takepicture"
+        style="@style/ControlButton_Pic"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/preview_layout_id"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp" />
+
+    <!--
+         <ImageView
+        android:id="@+id/previewsurface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+    -->
+
+    <com.dvr.android.dvr.usbcamera.CameraPreview
+        android:id="@+id/usbcpreview"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginRight="10dp" />
+
+    <ImageView
+        android:id="@+id/startrecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_takepicture"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/btn_start_record" />
+
+    <TextView
+        android:id="@+id/stoprecord"
+        style="@style/ControlButton_Stop"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_takepicture"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="70dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/btn_lock_video"
+        style="@style/ControlButton_Lock"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/startrecord"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="70dp" />
+
+    <TextView
+        android:id="@+id/btn_playback"
+        style="@style/ControlButton_PlayList"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:id="@+id/set"
+        style="@style/ControlButton_Set"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_playback"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp" />
+
+    <com.dvr.android.dvr.msetting.MyImageButton
+        android:id="@+id/btn_mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+        android:background="#00000000"
+        android:src="@drawable/btn_main_mic_normal" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10.0dip"
+        android:background="#01000000" >
+
+        <TextView
+            android:id="@+id/recordTime"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="14dp"
+            android:text="@string/total_record_time"
+            android:textColor="#FF0000"
+            android:textSize="@dimen/recordText_size" />
+
+        <Chronometer
+            android:id="@+id/recordTime_run"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:format="@string/chronometer_initial_format"
+            android:textColor="#FF0000"
+            android:textSize="@dimen/recordTime_size" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/m_setting"
+        android:layout_width="613dp"
+        android:layout_height="376dp"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="80dp"
+        layout="@layout/msetting"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/info_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bottombar_height"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottom_bar" />
+
+</RelativeLayout>

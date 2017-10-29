@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+</head>
+<body>
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+        <div class="bigpart">
+		<div class="title_uc"><h3>{echo: lp{m_find_password};/}</h3></div>
+			<form action="do.php?act=forgot" method="post" name="form_passwd" onsubmit="return checkForm();">
+				<table width="98%" class="form_table">
+					<tr><td class="textright">{echo: lp{m_new_password};/}：</td>
+						<td class="textleft"><input type="password" name="user_new_passwd" value="" maxlength="20" /></td></tr>
+					<tr><td class="textright">{echo: lp{m_re_password};/}：</td>
+						<td class="textleft"><input type="password" name="user_verify_passwd" value="" maxlength="20" /></td></tr>
+					<tr><td colspan="2" align="center"><input type="hidden" name="user_id" value="{echo: $user_id;/}" />
+					<input type="hidden" name="code" value="{echo: $code;/}" /><input type="submit" name="submit" value="{echo: lp{m_edit};/}" /></td></tr>
+				</table>
+			</form>
+        </div>
+    </div>
+    <div class="clear"></div>
+    {inc: require("modules/footer.php");/}
+<script language="JavaScript">
+<!--
+function checkForm() {
+	var user_new_passwd = document.getElementsByName("user_new_passwd")[0];
+	var user_verify_passwd = document.getElementsByName("user_verify_passwd")[0];
+	if(user_new_passwd.value=='') {
+		alert("{echo: lp{m_password_notnone};/}");
+		user_new_passwd.focus();
+		return false;
+	} else if(user_verify_passwd.value!=user_new_passwd.value) {
+		alert("{echo: lp{m_password_notsame};/}");
+		user_verify_passwd.value = '';
+		user_verify_passwd.focus();
+		return false;
+	}
+	return true;
+}
+//-->
+</script>
+</body>
+</html>

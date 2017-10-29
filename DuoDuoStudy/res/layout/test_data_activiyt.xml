@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:orientation="vertical"
+  android:layout_height="fill_parent">
+ <Button android:id="@+id/button1"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+ 	android:text="allproduct"/>
+  <Button android:id="@+id/button2"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+ 	android:text="getPagProduct"/>
+ 	 <Button android:id="@+id/button3"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+ 	android:text="getAllBook"/>
+ 	 	 <Button android:id="@+id/button4"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+ 	android:text="getAllCourseware"/>
+ 	
+ 		 	 <Button android:id="@+id/button5"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+ 	android:text="getAllExercise"/>
+ 	
+ 	 	 <Button android:id="@+id/button6"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+ 	android:text=" getAllExam"/>
+ 	
+ 	 <Button android:id="@+id/button7"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+ 	android:text=" querryShopingCat"/>
+ 	
+ 	 <Button android:id="@+id/button8"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+ 	android:text=" querryStoreInfo"/>
+ 	
+ 	<Button android:id="@+id/button9"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+ 	android:text="querryOrderInfor"/>
+ 	
+ 		<Button android:id="@+id/button10"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+ 	android:text="querryOrderProduct"/>
+ 	
+</LinearLayout>

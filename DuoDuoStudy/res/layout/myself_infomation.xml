@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/bg">
+
+<LinearLayout
+	android:id="@+id/myself_tops_layout"
+	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:layout_alignParentTop="true">
+	<include layout="@layout/myself_infos_top"></include>
+</LinearLayout>
+
+<!-- 用户信息 -->
+<RelativeLayout
+  android:id="@+id/myself_third_layout_left"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  android:layout_marginTop="2dip"
+  android:layout_below="@id/myself_tops_layout">
+  <LinearLayout
+      android:id="@+id/myself_id_layout"
+  	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content">
+    <TextView
+	  android:id="@+id/user_id"
+  	  android:layout_width="80dip"
+	  android:layout_height="wrap_content"
+	  android:text="@string/uc_id"
+	  android:textColor="@color/black"
+      android:textSize="15dip"
+      android:layout_gravity="left|center_vertical"/>
+  <TextView
+	  android:id="@+id/user_id_text"
+  	  android:layout_width="80dip"
+	  android:layout_height="wrap_content"
+	  android:text=""
+	  android:textColor="@color/black"
+	  android:layout_alignRight="@id/user_id"
+      android:textSize="15dip"/>
+  </LinearLayout>
+  
+<!-- 姓名 -->
+ <LinearLayout
+      android:id="@+id/myself_user_layout"
+  	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_below="@+id/myself_id_layout">
+    <TextView
+	  android:id="@+id/user_name"
+  	  android:layout_width="80dip"
+	  android:layout_height="wrap_content"
+	  android:text="@string/uc_name"
+	  android:textColor="@color/black"
+      android:textSize="15dip"
+      android:layout_gravity="left|center_vertical"/>
+   <TextView
+	  android:id="@+id/user_user_text"
+  	  android:layout_width="80dip"
+	  android:layout_height="wrap_content"
+	  android:text=""
+	  android:textColor="@color/black"
+	  android:layout_alignRight="@id/user_id"
+      android:textSize="15dip"/>
+  </LinearLayout>
+  
+<!-- 性别 -->
+   <LinearLayout
+      android:id="@+id/myself_sex_layout"
+  	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_marginTop="2dip"
+	  android:layout_below="@id/myself_user_layout">
+    <TextView
+	  android:id="@+id/sex_name"
+	  android:layout_width="80dip"
+	  android:layout_height="30dip"
+	  android:text="@string/uc_sex"
+	  android:textSize="15dip"
+	  android:textColor="@color/black"
+	  android:layout_gravity="left|center_vertical"/>
+	<ImageView
+	    android:id="@+id/radioMale_image" 
+	    android:layout_width="20dip" 
+	    android:layout_height="20dip"
+	    android:src="@drawable/sex_false"/>
+	<TextView
+	    android:id="@+id/radioMale_text" 
+	    android:layout_width="20dip" 
+	    android:layout_height="20dip"
+	    android:text="@string/uc_mail"
+	    android:textSize="15dip"
+	    android:textColor="@color/black"
+	    android:layout_marginLeft="5dip"/>  
+	<ImageView
+	    android:id="@+id/radioFemale_image" 
+	    android:layout_width="20dip" 
+	    android:layout_height="20dip"
+	    android:src="@drawable/sex_false"/>
+	<TextView
+	    android:id="@+id/radioFemale_text" 
+	    android:layout_width="20dip" 
+	    android:layout_height="20dip"
+	    android:text="@string/uc_femaile"
+	    android:textSize="15dip"
+	    android:textColor="@color/black"
+	    android:layout_marginLeft="5dip"/>    
+  </LinearLayout>
+
+<!-- 生日 -->  
+  <LinearLayout
+      android:id="@+id/myself_brithday_layout"
+      android:orientation="horizontal"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:layout_below="@id/myself_sex_layout"
+	  android:layout_marginTop="1dip">
+    <TextView
+	  android:id="@+id/brithday_name"
+	  android:layout_width="80dip"
+	  android:layout_height="30dip"
+	  android:text="@string/uc_birthday"
+	  android:textColor="@color/black"
+	  android:textSize="15dip"
+	  android:layout_gravity="left|center_vertical"/>
+	  
+	<com.iskyinfor.duoduo.ui.lesson.ShareSpinnerWidget
+	  android:id="@+id/brithday_year_spinner"
+	  android:background="@color/white"
+	  android:layout_width="80dip"
+	  android:layout_height="wrap_content"/> 
+	<TextView
+	  android:id="@+id/brithday_year_text"
+	  android:layout_width="10dip"
+	  android:layout_height="30dip"
+	  android:text="@string/uc_year"
+	  android:textColor="@color/black"
+      android:textSize="10dip"/>
+      
+	<com.iskyinfor.duoduo.ui.lesson.ShareSpinnerWidget
+	  android:id="@+id/brithday_month_spinner"
+	  android:background="@color/white"
+	  android:layout_width="80dip"
+	  android:layout_height="wrap_content"/> 
+	<TextView
+	  android:id="@+id/brithday_month_text"
+	  android:layout_width="10dip"
+	  android:layout_height="30dip"
+	  android:text="@string/uc_month"
+	  android:textColor="@color/black"
+      android:textSize="10dip"/>
+      
+	<com.iskyinfor.duoduo.ui.lesson.ShareSpinnerWidget
+	  android:id="@+id/brithday_day_spinner"
+	  android:background="@color/white"
+	  android:layout_width="80dip"
+	  android:layout_height="wrap_content"/> 
+	<TextView
+	  android:id="@+id/brithday_day_text"
+	  android:layout_width="10dip"
+	  android:layout_height="30dip"
+	  android:text="@string/uc_day"
+	  android:textColor="@color/black"
+      android:textSize="10dip"/>
+ </LinearLayout>
+</RelativeLayout>
+
+<!-- 个人形象图片 -->
+<ImageView
+	 android:id="@+id/myself_pictures"
+	 android:layout_width="wrap_content"
+	 android:layout_height="wrap_content"
+	 android:src="@drawable/person"
+	 android:layout_below="@id/myself_tops_layout"
+	 android:layout_alignParentRight="true"/>
+	 
+<!-- 学校 -->
+<LinearLayout
+	 android:id="@+id/myself_school"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:layout_below="@id/myself_third_layout_left">
+	 <TextView
+	     android:id="@+id/school_name_text"
+	 	 android:layout_width="80dip"
+	     android:layout_height="30dip"
+	     android:text="@string/uc_school"
+	     android:textSize="15dip"
+	     android:textColor="@color/black"
+	     android:layout_gravity="left|center_vertical"/>
+	 <EditText
+	     android:id="@+id/school_name_edit"
+	     android:background="@drawable/login_edit_selector"
+	 	 android:layout_width="240dip"
+	 	 android:layout_height="wrap_content"
+	 	 android:text=""
+	 	 android:textColor="@color/black"
+	 	 android:singleLine="true"
+	 	 android:paddingLeft="3dip"/>
+	 <Button 
+		 android:background="@drawable/look_school" 
+		 android:id="@+id/look_school_btn" 
+		 android:layout_width="60dip"
+		 android:layout_height="27dip"
+		 android:layout_gravity="right|center_vertical"
+		 android:text=" "
+		 android:textSize="15dip"/>
+</LinearLayout>
+
+<!-- 班级 -->
+<LinearLayout
+	 android:id="@+id/myself_class"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:layout_below="@id/myself_school">
+	 <TextView
+	     android:id="@+id/class_name_text"
+	 	 android:layout_width="80dip"
+	     android:layout_height="30dip"
+	     android:layout_gravity="left|center_vertical"
+	     android:text="@string/uc_class"
+	     android:textColor="@color/black"
+	     android:textSize="15dip"/>
+	 <EditText
+	     android:id="@+id/class_name_edit"
+	     android:background="@drawable/login_edit_selector"
+	 	 android:layout_width="240dip"
+	 	 android:layout_height="wrap_content"
+	 	 android:text=""
+	 	 android:textColor="@color/black"
+	 	 android:singleLine="true"
+	 	 android:paddingLeft="3dip"/>
+	 <Button 
+		 android:id="@+id/look_class_btn" 
+		 android:background="@drawable/look_class" 
+		 android:layout_width="60dip" 
+		 android:layout_height="27dip"
+		 android:layout_gravity="right|center_vertical"
+		 android:text=" " 
+		 android:textSize="15dip"/>
+</LinearLayout>
+
+<!-- 联系电话 -->
+<LinearLayout
+	 android:id="@+id/myself_telphone"
+	 android:orientation="horizontal"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:layout_below="@id/myself_class">
+	 <TextView
+	     android:id="@+id/phone_name_text"
+	 	 android:layout_width="80dip"
+	     android:layout_height="wrap_content"
+	     android:layout_gravity="left|center_vertical"
+	     android:text="@string/uc_phone"
+         android:textColor="@color/black"
+		 android:textSize="15dip"/>
+	 <EditText
+	     android:id="@+id/phone_name_edit"
+	 	 android:layout_width="220dip"
+	 	 android:layout_height="wrap_content"
+	 	 android:singleLine="true"
+	 	 android:paddingLeft="3dip"
+	 	 android:text=""
+	 	 android:textColor="@color/black"
+	 	 android:background="@drawable/login_edit_selector"/>
+</LinearLayout>
+
+<!-- 电子邮箱 -->
+<LinearLayout
+	 android:id="@+id/myself_email"
+	 android:orientation="horizontal"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:layout_below="@id/myself_telphone">
+	 <TextView
+	     android:id="@+id/email_name_text"
+ 	     android:layout_width="80dip"
+	     android:layout_height="wrap_content"
+	     android:layout_gravity="left|center_vertical"
+	     android:text="@string/uc_email"
+	     android:textColor="@color/black"
+		 android:textSize="15dip"/>
+	 <EditText
+	     android:id="@+id/email_name_edit"
+	 	 android:layout_width="220dip"
+	 	 android:layout_height="wrap_content"
+	 	 android:singleLine="true"
+	 	 android:paddingLeft="3dip"
+	 	 android:text=""
+	 	 android:textColor="@color/black"
+	 	 android:background="@drawable/login_edit_selector"/>
+</LinearLayout>
+
+<!-- QQ -->
+<LinearLayout
+	 android:id="@+id/myself_qq"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:layout_below="@id/myself_email">
+	 <TextView
+	     android:id="@+id/qq_name_text"
+	 	 android:layout_width="80dip"
+	     android:layout_height="wrap_content"
+	     android:layout_gravity="left|center_vertical"
+	     android:text="@string/uc_qq"
+	     android:textSize="15dip"
+         android:textColor="@color/black"/>
+	 <EditText
+	     android:id="@+id/qq_name_edit"
+	 	 android:layout_width="220dip"
+	 	 android:layout_height="wrap_content"
+	 	 android:singleLine="true"
+	 	 android:paddingLeft="3dip"
+	 	 android:text=""
+	 	 android:textColor="@color/black"
+	 	 android:background="@drawable/login_edit_selector"/>
+</LinearLayout>
+
+<!-- 所在地区 -->
+<LinearLayout
+	 android:id="@+id/myself_place"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:layout_below="@id/myself_qq">
+	 <TextView
+	  android:id="@+id/place_name"
+	  android:layout_width="80dip"
+	  android:layout_height="30dip"
+	  android:layout_gravity="left|center_vertical"
+	  android:text="@string/uc_place"
+	  android:textSize="15dip"
+	  android:textColor="@color/black"/>
+	
+	<com.iskyinfor.duoduo.ui.lesson.ShareSpinnerWidget
+	  android:id="@+id/place_province_spinner"
+	  android:background="@color/white"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"/> 
+	<TextView
+	  android:id="@+id/place_province_text"
+	  android:layout_width="wrap_content"
+	  android:layout_height="30dip"
+	  android:text="@string/uc_pro"
+	  android:textColor="@color/black"
+	  android:textSize="15dip"/>
+	  
+	<com.iskyinfor.duoduo.ui.lesson.ShareSpinnerWidget
+	  android:id="@+id/place_city_spinner"
+	  android:background="@color/white"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"/> 
+	<TextView
+	  android:id="@+id/place_city_text"
+	  android:layout_width="wrap_content"
+	  android:layout_height="30dip"
+	  android:text="@string/uc_city"
+	  android:textColor="@color/black"
+	  android:textSize="15dip"/>
+	  
+	<com.iskyinfor.duoduo.ui.lesson.ShareSpinnerWidget
+	  android:id="@+id/place_country_spinner"
+	  android:background="@color/white"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"/> 
+	<TextView
+	  android:id="@+id/place_country_text"
+	  android:layout_width="wrap_content"
+	  android:layout_height="30dip"
+	  android:text="@string/uc_country"
+	  android:textColor="@color/black"
+	  android:textSize="15dip"/>
+</LinearLayout>
+
+<!-- 座右铭 -->
+<LinearLayout
+	 android:id="@+id/myself_language"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:layout_below="@id/myself_place">
+	<TextView
+	 android:id="@+id/myself_language_text"
+	 android:layout_width="80dip"
+	 android:layout_height="35dip"
+	 android:layout_gravity="left|center_vertical"
+	 android:text="@string/uc_language"
+	 android:textSize="15dip"
+	 android:textColor="@color/black"/>
+	<EditText
+	 android:id="@+id/myself_language_edit"
+	 android:background="@drawable/login_edit_selector"
+	 android:layout_width="fill_parent"
+	 android:layout_height="60dip"
+	 android:text=""
+	 android:textColor="@color/black"
+	 android:autoText="true"
+	 android:paddingLeft="3dip"/>
+</LinearLayout>
+
+<!-- 隐私设置 -->
+<LinearLayout
+	 android:id="@+id/myself_set"
+	 android:layout_width="fill_parent"
+	 android:layout_height="35dip"
+	 android:layout_below="@id/myself_language">
+	<TextView
+	 android:id="@+id/myself_set_text"
+	 android:layout_width="80dip"
+	 android:layout_height="35dip"
+	 android:layout_gravity="left|center_vertical"
+	 android:text="@string/uc_sets"
+	 android:textSize="15dip"
+	 android:textColor="@color/black"/>
+	<Spinner
+	 android:id="@+id/myself_set_spinner"
+	 android:layout_width="120dip"
+	 android:layout_height="wrap_content"/>
+</LinearLayout>
+
+<!-- 保存 -->
+<Button
+	 android:id="@+id/myself_keep"
+	 android:background="@drawable/btn_back"
+	 android:layout_width="wrap_content"
+	 android:layout_height="wrap_content"
+	 android:text="@string/uc_keep"
+	 android:textColor="@color/black"
+	 android:layout_below="@id/myself_set"
+	 android:layout_alignParentRight="true"/>
+	 
+<!-- 返回 -->
+  <LinearLayout
+    android:id="@+id/myself_bottom_back"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+ 	<include layout="@layout/myself_infos_bottom"></include>
+  </LinearLayout>
+  
+</RelativeLayout>

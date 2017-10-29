@@ -1,0 +1,79 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="10"}>
+<{include file="`$ThemeName`/header.html"}>
+	<div class="wrapper">
+	<div class="tips"><span><{$position}></span></div>        
+        <div class="category_select clearfix">
+            <div class="category_select_title"><span><{$_sort_choose}></span></div>
+            <div class="category_select_txt">
+			<{foreach from=$Types item=item1}>
+                <a href="brand/list.php?catid=<{$item1.id}>"><span>&bull; <{$item1.name}></span></a> 
+            <{/foreach}> 
+            </div>
+        </div>
+        <div class="blank6"></div>
+        <div class="content">
+            <div class="main_left_w720">
+                <div class="brand_page"><{$ByPages}></div>
+                <div class="brand_list padding21 clearfix">
+                     <ul>
+						<{foreach from=$Items item=item}>
+                         <li>
+							<div><span><a href="brand/detail.php?id=<{$item.id}>"><img src="<{$item.image}>" /></a></span></div>
+							<p><a href="brand/detail.php?id=<{$item.id}>"><{$item.name}></a></p>
+						 </li>
+						<{foreachelse}>
+						<span><{$_no_brand_and_add}></span>
+						<{/foreach}>
+                                 
+                      </ul>
+                </div>
+                <div class="brand_page"><{$ByPages}></div>
+            </div>
+            <div class="main_right_w230">
+                
+                <div class="cornerbox">
+                    <div class="title_bar_s6">
+                        <span class="title_top_s6"><span></span></span>
+                        <h2><{$_latest_news}></h2>
+                    </div>
+                    <div class="corner_content_s6">
+                       <ul>
+						<{news typeid=1 row=10}>
+                         <li><a href="news/detail.php?id=[field:id]">&bull; [field:title]</a></li>
+						<{/news}>
+                       </ul>
+                    </div>
+                    <div class="corner_bottom">
+                        <div class="corner_bottom_l"></div>
+                        <div class="corner_tottom_r"></div>
+                    </div>
+                </div>
+                <div class="blank6"></div>
+                <div class="cornerbox">
+                    <div class="title_bar_s6">
+                        <span class="title_top_s6"><span></span></span>
+                        <h2><{$_brands}><{$_commend}></h2>
+                    </div>
+                    <div class="corner_content_s7 clearfix">
+                       <ul>
+						<{brand type="commend" row=12}>
+                         <li><a href="brand/detail.php?id=[field:id]">[field:title]</a></li>
+						<{/brand}>
+                      </ul>
+                    </div>
+                    <div class="corner_bottom">
+                        <div class="corner_bottom_l"></div>
+                        <div class="corner_tottom_r"></div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="clear"></div>
+        </div>
+	</div>
+<script>
+$("#SearchFrm").attr("action","product/list.php");
+$("#topMenuProduct").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

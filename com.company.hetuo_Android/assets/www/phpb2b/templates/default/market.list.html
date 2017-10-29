@@ -1,0 +1,64 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="7"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+<div class="tips"><span><{$position}></span></div>
+  <div class="blank6"></div>
+<div class="content clearfix">
+		<div class="market_list fl">
+           <div class="title_bar_s4">
+            <span class="title_top_s4"><span></span></span>
+            <h3><{$SearchAmount}><{if $Amount}>:<{$Amount}><{/if}></h3>
+           </div>
+			<div class="market_list_c">
+				<ul>
+                	<{foreach from=$Items name=market item=item}>
+					<li>
+						<{if $item.picture}><a href="market/detail.php?id=<{$item.id}>"><img src="<{$item.image}>" alt="<{$item.name}>" class="fl" /></a><{/if}>
+                        <div class="fl">
+						<h2><a href="market/detail.php?id=<{$item.id}>" title=""><{$item.name}></a><{if $item.area_id1}><em>(<{$AreaItems[1][$item.area_id1]}><{$AreaItems[2][$item.area_id2]}>)</em><{/if}></h2>
+						<p><{$_introduction}><{$item.digest}></p>
+                        </div>
+                        <hr class="hr_dashed" />
+					</li>
+                    <{/foreach}>
+				</ul>
+				<div><{$ByPages}></div>
+			</div>
+		</div>
+        
+         <div class="market_list_right">
+		<div class="job_good mart_good">
+            <div class="title_bar_s4">
+            <span class="title_top_s4"><span></span></span>
+            <h3><{$_industry_recommended}></h3>
+            </div>
+			<div class="job_good_c cb">
+				<ul>
+                	<{company row=12 industryid="`$IndustryIds`"}>
+					<li><a href="[link:title]" title="[field:fulltitle]" target="_blank">[field:title]</a></li>
+                    <{/company}>
+				</ul>
+			</div>
+		</div>
+        <div class="blank6"></div>
+		<div class="job_good mart_good">
+            <div class="title_bar_s4">
+            <span class="title_top_s4"><span></span></span>
+             <h3><{$_area_recommended}></h3>
+            </div>
+			<div class="job_good_c cb">
+				<ul>
+                	<{company row=12 areaid="`$AreaIds`"}>
+					<li><a href="[link:title]" title="[field:fulltitle]" target="_blank">[field:title]</a></li>
+                    <{/company}>
+				</ul>
+			</div>
+		</div>
+		<div class="market_add"><{$_not_exist_market}><br /><{$_click_us}>
+			<p><a href="market/add.php"><{$_added_market}></a></p>
+		</div>
+
+        </div>
+        </div>
+<{include file="`$ThemeName`/footer.html"}>

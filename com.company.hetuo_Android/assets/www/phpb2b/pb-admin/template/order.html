@@ -1,0 +1,63 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_ads}> &raquo; <{$_order_center}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_order_center}></h3> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="order.php" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onClick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll">订单编号</label></th>
+		  <th>会员名（姓名）</th>
+		  <th>总价</th>
+		  <th>下单日期</th>
+		  <th>订单状态</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tfoot>
+		<tr>
+		  <th colspan="7"><div class="pageLinks"><{$ByPages}></div></th>
+		</tr>
+    <tfoot>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onClick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><a href="order.php?id=<{$item.id}>&do=view"><{$item.id}></a><{if $item.created>$today_timestamp}><span class="icon-new"></span><{/if}></td>
+		  <td><{$item.username}><{if $item.true_name}>(<{$item.true_name}>)<{/if}></td>
+		  <td><{$item.total_price}></td>
+		  <td><{$item.created|date_format:"%Y-%m-%d"}></td>
+		  <td><{$Status[$item.status]}></td>
+		  <td class="handler">
+          <ul id="handler_icon">
+            <li><a class="btn_delete"  href="order.php?id=<{$item.id}>&do=del" title="<{$_delete}>"><{$_delete}></a></li>
+            <li><a class="btn_browse" href="order.php?id=<{$item.id}>&do=view" title="查看">查看</a></li>
+          </ul>  
+		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="7"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+      <select name="status" id="Status" onchange="$('#ListFrm').submit();">
+      	<option>设置状态</option>
+        <option value="0">无效</option>
+        <option value="1">有效</option>
+      </select>
+    </div>
+    <div class="clear"/>
+    </div>
+  </form>
+</div>
+<{include file="footer.html"}>

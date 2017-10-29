@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:orientation="vertical" android:background="@color/darkcyan">
+	<include layout="@layout/include_shop_top" android:layout_marginTop="10dp"/>
+	
+		<!-- header bar -->
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:background="@drawable/bookshelf_maincontent_top"
+			android:orientation="horizontal" android:paddingLeft="50dp"
+			android:paddingRight="50dp" android:layout_marginLeft="10dp"
+			android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/balanceKey"
+				android:text="当前账户余额为：" android:textColor="@drawable/black" />
+			<TextView 
+				android:layout_width="wrap_content"
+				android:textColor="@color/black" 
+				android:layout_height="wrap_content"
+				android:id="@+id/balanceValue" />
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_weight="1"
+			android:background="@color/white" android:orientation="vertical"
+			android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+		<!-- main bar -->
+		<TextView android:layout_width="fill_parent"
+			android:textColor="@drawable/white" android:text="我要充值"
+			android:layout_height="wrap_content" android:background="@drawable/titlebar_bg_repeatx"
+			android:gravity="center_vertical" android:paddingLeft="20dp"/>
+<!-- 为别人充值 -->
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="50dip" android:background="@drawable/white">
+			<CheckBox android:id="@+id/othersRushValue"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+			<TextView android:layout_width="wrap_content" android:text="为别人充值"
+				android:textColor="@drawable/black" android:layout_height="wrap_content"
+				android:id="@+id/othersRushKey" />
+		</LinearLayout>
+
+<!-- 充值账户 -->
+		<TextView android:id="@+id/textAccout" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="充值账户："
+			android:textColor="@drawable/black" />
+		<EditText android:layout_height="wrap_content"
+			android:layout_width="fill_parent" 
+			android:id="@+id/editAccount"
+			android:focusable="false" 
+			android:enabled="false"/>
+<!-- 充值卡密码  -->
+		<TextView android:id="@+id/textPassword"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:text="充值卡密码：" 
+			android:textColor="@drawable/black" 
+			android:enabled="false"/>
+		<EditText android:layout_height="wrap_content"
+			android:layout_width="fill_parent" 
+			android:id="@+id/editPassword"
+			android:inputType="textPassword" />
+
+		<TextView android:id="@+id/tvwWrongToast" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:visibility="gone"
+			android:text="无效密码，请重新输入!" 
+			android:textColor="@drawable/red" />
+
+		<Button android:id="@+id/btnRushMoney" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:background="@drawable/button_selector"
+			android:text="充值" 
+			android:textColor="@drawable/lightgray" />
+
+	</LinearLayout>
+	<ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:background="@drawable/bookshelf_maincontent_buttom"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+	<include layout="@layout/bookshelf_main_item_buttom" 
+		android:layout_alignParentBottom="true"/>
+</LinearLayout>

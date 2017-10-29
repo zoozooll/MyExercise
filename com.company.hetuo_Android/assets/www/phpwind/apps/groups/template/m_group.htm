@@ -1,0 +1,1218 @@
+<!--<?php
+print <<<EOT
+-->
+<!--
+EOT;
+if($cssForum){print <<<EOT
+-->
+<div class="c"></div>
+<link rel="stylesheet" type="text/css" href="$pwModeImg/app.css" />
+<!--
+EOT;
+}print <<<EOT
+-->
+<div id="content" class="fr">
+    <table width="100%">
+    <tr class="vt"><td height="400" style="padding-bottom:20px;">
+<!--
+EOT;
+if ($colony['banner']) {print <<<EOT
+-->
+	<div class="p10" style="overflow:hidden;width:778px;"><img src="{$colony[banner]}" /></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+	<div id="content_main" class="fl">
+	<div class="cc p10">
+	<div class="fl pr10"><table height="100"><tr><td style="border:1px solid #e4e4e4;padding:4px;"><img src="{$cnimg}" onload="imgResize(this,110)" /></td></tr></table></div>
+	<div>
+		<a href="{$basename}cyid=$cyid" class="f20 b" style="line-height:1.1;">$colony[cname]</a>
+		<div class="pt5">
+			所属版块：<a href="{$baseUrl}q=groups&a=all&cid=$colony[classid]">{$o_classdb[$colony[classid]]}</a><br />
+			<span style="margin-right:30px;">成员： <span class="f10">$colony[members] 人</span></span>
+			<span style="margin-right:30px;">创立时间： <span class="f10">$colony[createtime]</span></span>
+		</div>
+		<div class="pt5">简介：$colony[descrip]</div>
+	</div>
+</div>
+	</div>
+	<div id="sidebar" class="fr">
+	<div class="p10">
+<!--
+EOT;
+if($db_share_open && !$shareGM){print<<<EOT
+-->
+		<div class="f_one tar" style="padding:2px 3px;border-bottom:1px solid #e7e7e7;"><a class="a-reply" href="javascript:;" onclick="sendmsg('operate.php?action=share&ajax=1&type=group&id=$cyid','',this.id);">分享<span>+</span></a></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+		<div class="list-bor-a">
+			<ul>
+				<li>
+<!--
+EOT;
+if ($colony[ifcyer]) {print <<<EOT
+-->
+					你已加入该群组，<a class="gray" style="display:inline;" href="{$basename}a=out&cyid=$cyid" onclick="return ajaxurl(this);">退出</a>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+					<a href="{$basename}a=join&cyid=$cyid" onclick="return ajaxurl(this);"><img src="$pwModeImg/group-join.gif" class="fr" />加入群组</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</li>
+				<li>
+<!--
+EOT;
+if($_G['allowreport']){print <<<EOT
+-->
+					<a onclick="sendmsg('pw_ajax.php?action=report&type=group&tid=$cyid','',this.id);" id="report_group" style="cursor: pointer;" class="gray"><img src="$pwModeImg/group-report.gif" class="fr" />举报</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</li>
+				<li><a href="{$basename}a=member&cyid=$cyid" class="gray"><img src="$pwModeImg/group-s.gif" class="fr" />查看群组成员</a></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+<div class="c"></div>
+<div style="margin:0 10px;">
+<div class="tabB cc">
+	<ul>
+		<li id="g_index"><a href="{$basename}cyid=$cyid">首页</a></li>
+<!--
+EOT;
+if ($colony[ifopen] || $ifadmin || empty($colony['ifopen']) && $colony['ifcyer']) {print <<<EOT
+-->
+		<li id="g_thread"><a href="{$basename}a=thread&cyid=$cyid">讨论区</a></li>
+<!--
+EOT;
+} if ($colony[albumopen] || $ifadmin || empty($colony['ifopen']) && $colony['ifcyer']) {print <<<EOT
+-->
+		<li id="g_galbum"><a href="{$baseUrl}q=galbum&cyid=$cyid">群组相册</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+		<li id="g_member"><a href="{$basename}a=member&cyid=$cyid">成员列表</a></li>
+<!--
+EOT;
+if ($colony[ifcyer]) {print <<<EOT
+-->
+		<li id="g_uintro"><a href="{$basename}a=uintro&cyid=$cyid&job=set">我的通讯录</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+	</ul>
+<!--
+EOT;
+if ($ifadmin) {print <<<EOT
+-->
+		<div class="pt5 fl pl10"><img src="$imgpath/apps/applied/edit-app.png" align="absmiddle" /><a href="{$basename}a=set&cyid=$cyid" class="black">群组设置</a></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+</div>
+</div>
+<SCRIPT type="text/javascript" LANGUAGE="JavaScript" src="js/core/core.js"></SCRIPT>
+<script language="JavaScript">
+
+setCurrent('g_{$a_key}','g_index','current');
+
+function showAnnouce(){
+	var annouce = getObj('annouce_div');
+	if (annouce.style.display == 'none') {
+		annouce.style.display = '';
+	} else {
+		annouce.style.display = 'none';
+	}
+}
+function showConInfo(uid,cyid){
+	sendmsg('mode.php?m=o&q=group&a=uintro&cyid='+cyid+'&uid='+uid,'','guser_'+uid);
+}
+</script>
+<div class="c"></div>
+<!--
+EOT;
+if (empty($a)) {print <<<EOT
+-->
+	<div class="cc">
+		<div id="content_main" class="fl">
+			<div class="p10">
+			<div class="lh24 mb10 mt10">
+<!--
+EOT;
+if ($colony[annouce]) {print <<<EOT
+-->
+				{$colony[annouce]}
+<!--
+EOT;
+}else{print <<<EOT
+-->
+				暂无群组公告
+<!--
+EOT;
+}print <<<EOT
+-->
+			</div>
+<!--
+EOT;
+if ($colony['ifopen'] || (!$colony['ifopen'] && $colony['ifcyer'] && $colony['ifadmin'] != -1)) {print <<<EOT
+-->
+			<div style="padding:10px 0 5px;">
+<!--
+EOT;
+if ($colony[ifcyer]) {print <<<EOT
+-->
+			<span class="fr"><a href="{$basename}a=post&cyid=$cyid" class="g-post">发表话题</a></span>
+<!--
+EOT;
+}print<<<EOT
+-->
+			<span class="b f14">最新话题</span></div>
+				<table width="100%">
+<!--
+EOT;
+if($argdb){print <<<EOT
+-->
+				<tr class="tr2 f_one">
+					<td>标题</td>
+					<td width="100">作者</td>
+					<td width="105">最后发表时间</td>
+				</tr>
+<!--
+EOT;
+foreach ($argdb as $value) {print <<<EOT
+-->
+				<tr class="tr3">
+					<td><a href="{$basename}a=read&cyid=$cyid&tid=$value[tid]" class="pdr">$value[subject]</a></td>
+					<td><a href="u.php?uid=user&u=$value[authorid]">$value[author]</a></td>
+					<td class="f10">$value[lastpost]</td>
+				</tr>
+<!--
+EOT;
+}}else{print <<<EOT
+-->
+				<tr class="tr3"><td style="padding:12px 20px;">群组近期暂无关注内容</td></tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</table>
+			<div class="p10 tar">
+			<a href="{$basename}a=thread&cyid=$cyid">进入讨论区</a>
+			</div>
+<!--
+EOT;
+}if ($colony['albumopen'] || (!$colony['albumopen'] && $colony['ifcyer'] && $colony['ifadmin'] != -1)) {print <<<EOT
+-->
+			<div style="padding:10px 0 0;"><a href="{$baseUrl}q=galbum&a=upload&cyid={$cyid}" class="fr g-post">上传照片</a><span class="b f14">群组相册</span></div>
+			<ul class="list-img-c img-100-over">
+<!--
+EOT;
+if($newphoto){
+foreach ($newphoto as $value) {print <<<EOT
+-->
+				<li><table><tr><td class="tac"><div><a href="{$baseUrl}q=galbum&a=view&cyid=$cyid&pid=$value[pid]"><img onload="imgResize(this,100)" alt="" src="$value[path]" /></a></div></td></tr></table></li>
+<!--
+EOT;
+}} else {print <<<EOT
+-->
+				<li>暂无群组相册信息</li>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</ul>
+			<div class="c"></div>
+			<div class="p10 tar">
+			<a href="{$baseUrl}q=galbum&cyid=$cyid">进入相册</a>
+			</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</div>
+		</div>
+		<div id="sidebar" class="fr">
+			<div class="p10">
+				<div class="f14 b">管理员</div>
+				<ul class="o-list-img h-90 cc tac mt10">
+<!--
+EOT;
+foreach ($magdb as $value) {print <<<EOT
+-->
+					<li>
+						<a href="u.php?uid=$value[uid]"><img src="{$udb[$value[uid]][faceurl]}" height="48" width="48" /><p>$value[username]</p></a>
+<!--
+EOT;
+if ($value['username'] == $colony['admin']) {print <<<EOT
+-->
+						<span style="color:red">(群主)</span>
+<!--
+EOT;
+}print <<<EOT
+-->
+					</li>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</ul>
+				<div class="f14 b"><a class="fr fn f12" href="{$basename}a=member&cyid={$cyid}">更多</a>成员<span class="fn f12">(共{$totalMembers}人)</span></div>
+				<ul class="o-list-img h-90 cc tac mt10">
+<!--
+EOT;
+foreach ($memdb as $value) {print <<<EOT
+-->
+					<li><a href="u.php?uid=$value[uid]"><img src="{$udb[$value[uid]][faceurl]}" height="48" width="48" /><p>$value[username]</p></a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</ul>
+				<div class="f14 b"><a class="fr fn f12" href="{$basename}a=member&cyid={$cyid}&group=4">更多</a>最近访问</div>
+				<ul class="o-list-img h-90 cc tac mt10">
+<!--
+EOT;
+foreach ($newvisit as $key => $value) {
+$visittime = get_date($value, 'm月d日');
+print <<<EOT
+-->
+					<li><a href="u.php?uid=$key"><img src="{$udb[$key][faceurl]}" height="48" width="48" /><p>{$udb[$key][username]}</p></a><div class="gray">$visittime</div></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</ul>
+			</div>
+		</div>
+	</div>
+<!--
+EOT;
+} elseif ($a == 'thread') {print <<<EOT
+-->
+		<div class="cc p10">
+<!--
+EOT;
+if ($colony[ifcyer]) {print <<<EOT
+-->
+			<div><a href="{$basename}a=post&cyid=$cyid" class="g-post">发表话题</a></div>
+<!--
+EOT;
+}print<<<EOT
+-->
+			<table width="100%" class="mt10">
+<!--
+EOT;
+if($argdb){print <<<EOT
+-->
+						<tr class="tr3">
+								<td class="title" style="padding:4px 10px;border-bottom:1px solid #e4e4e4;width:60%;">标题</td>
+								<td class="title" style="padding:4px 10px;border-bottom:1px solid #e4e4e4;width:8em;">作者</td>
+								<td class="title" style="padding:4px 10px;border-bottom:1px solid #e4e4e4;">最后发表时间</td>
+						</tr>
+<!--
+EOT;
+foreach ($argdb as $value) {print <<<EOT
+-->
+						<tr class="tr3">
+								<td><a href="{$basename}a=read&cyid=$cyid&tid=$value[tid]" class="pdr">$value[subject]</a></td>
+								<td><a href="u.php?uid=$value[authorid]">$value[author]</a></td>
+								<td><span class="pdr">$value[lastpost]</span></td>
+						</tr>
+<!--
+EOT;
+}}else{print <<<EOT
+-->
+	<tr class="tr3"><td>群组近期暂无关注内容</td></tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</table>
+		<div class="mt10 cc">$pages</div>
+            <div class="cc">
+					<div class="title">发表讨论</div>
+                    <form action="{$basename}a=post&cyid=$cyid" method="post" name="FORM">
+					<input type="hidden" name="step" value="3" />
+					<input type="hidden" name="verify" value="$verifyhash" />
+					<table cellpadding="0" cellspacing="0" width="100%">
+						<tr class="tr6">
+							<td>标题</td><td><input type="text" class="input" name="atc_title" size="35" /></td>
+						</tr>
+						<tr class="tr6">
+							<td class="vt">内容</td>
+							<td>
+								<!-- <textarea name="content" style="width:400px;height:120px"></textarea> -->
+								<div class="o-editor mb10" style="width:510px;overflow:hidden;">
+									<div class="o-operation cc">
+										<span class="createlink" title="插入url链接" onClick="createLinkBox();" id="createlinkid">插入url链接</span><span class="o-face" id="td_face" style="cursor:pointer;" onClick="showDefault();" align="absmiddle" unselectable="on">添加表情</span>
+									</div>
+									<p class="fl"><textarea maxlength="200" id="board" name="atc_content"/></textarea>
+									<input type="hidden" id="board_uid" value="$u"></p>
+								</div>
+								<div id="linkbox" style="display:none;"></div>
+							</td>
+						</tr>
+<!--
+EOT;
+if ($o_groups_p_gdcheck) {print <<<EOT
+-->
+						<tr class="tr6">
+                            <td>认证码:</td>
+                            <td>
+                                <div><img id="ckcode2" style="cursor:pointer;display:none;margin-bottom:5px;" onclick="this.src='ck.php?nowtime='+new Date().getTime();" alt="看不清楚，换一张" /></div>
+                                <input class="input" onfocus="showCK();" type="text" name="gdcode" id="gdcode" size="5" style="width:50px;" tabindex="3"  />
+                            </td>
+                        </tr>
+<script language="JavaScript">
+function showCK() {
+	getObj('ckcode2').style.display = "";
+	if (getObj('ckcode2').src.indexOf('ck.php') == -1) {
+		getObj('ckcode2').src = 'ck.php?nowtime=' + new Date().getTime();
+	}
+}
+</script>
+<!--
+EOT;
+}if($o_groups_p_qcheck){print <<<EOT
+-->
+							<tr class="tr6">
+									<td>验证问答:</td>
+									<td>
+									{$db_question[$qkey]} （正确答案:{$db_answer[$qkey]}）
+									<input class="input" name="qanswer" id="qanswer" size="25" tabindex="7" />
+									<input type="hidden" name="qkey" id="qkey" value="$qkey" />
+									</td>
+							</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+						<tr class="tr6">
+                            <td>&nbsp;</td>
+                            <td>
+							<span class="button"><span><button type="submit">提 交</button></span></span>
+							</td>
+                        </tr>
+					</table>
+                    </form>
+				</div>
+        </div>
+<div id="menu_show" style="display:none;"></div>
+<script language="javascript">
+var charset = '$db_charset';
+var imgpath   = '$imgpath';
+var stylepath = '$stylepath';
+function addsmile(NewCode){
+	getObj('board').value += ' [s:'+NewCode+'] ';
+}
+</script>
+<!--
+EOT;
+if(R_P==D_P){print <<<EOT
+-->
+<script language="JavaScript" src="data/bbscache/face.js"></script>
+<!--
+EOT;
+}else{
+$facedb=readover(D_P."data/bbscache/face.js");
+print <<<EOT
+-->
+<script language="JavaScript">
+$facedb
+</script>
+<!--
+EOT;
+}print <<<EOT
+-->
+<script language="JavaScript" src="js/post.js"></script>
+<div id="menu_face" class="menu" style="display:none;"></div>
+<!--
+EOT;
+} elseif ($a == 'read') {print <<<EOT
+-->
+		<div class="cc">
+			<div class="pl10 mt10"><a href="{$basename}a=thread&cyid=$cyid">返回话题区</a></div>
+				<div class="p10">
+<!--
+EOT;
+foreach ($readdb as $key => $read) {print <<<EOT
+-->
+					<div id="article_{$read[pid]}">
+					<div class="title"><span class="fr red b">$read[lou]楼</span>
+					<a href="u.php?uid=$read[authorid]">$read[author]</a> 发表于：<span class="f10">{$read[postdate]}</span>
+<!--
+EOT;
+if($_G['allowreport']){print <<<EOT
+-->
+&nbsp;&nbsp;&nbsp;&nbsp;<a style="cursor: pointer;" onclick="sendmsg('pw_ajax.php?action=report&type=grouptopic&tid=$tid&pid={$read[pid]}','',this.id);" id="report_grouptopic_{$read[pid]}">举报</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+<!--
+EOT;
+if ($ifadmin || $read['authorid'] == $winduid) {print <<<EOT
+-->
+&nbsp;&nbsp;<a href="javascript:;" id="edit_{$read[pid]}" onclick="sendmsg('{$basename}a=edit&tid=$read[tid]&pid={$read[pid]}&cyid=$cyid','',this.id);">编辑</a>
+<!--
+EOT;
+}if ($ifadmin) {print <<<EOT
+-->
+&nbsp;&nbsp;<a href="javascript:;" id="del_{$read[pid]}" onclick="sendmsg('{$basename}a=del&cyid=$cyid&tid=$read[tid]&pid={$read[pid]}','',this.id);">删除</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+					</div>
+					<table width="100%" class="mb10" style="table-layout:fixed">
+						<tr class="vt">
+							<th width="70" class="tac"><div class="p10"><img src="$read[icon]" class="img-50" /></div></th>
+							<td>
+<!--
+EOT;
+if($read['pic']){
+foreach($read['pic'] as $pic){
+if($pic){print <<<EOT
+-->
+						<div style="margin:5px 0;" id="att_$pic[aid]">
+<!--
+EOT;
+if($pic['desc']){print <<<EOT
+-->
+							描述:$pic[desc]<br />
+<!--
+EOT;
+}print <<<EOT
+-->
+							图片: $pic[img]
+<!--
+EOT;
+if($pic['dfadmin']){print <<<EOT
+-->
+							[<a style="cursor:pointer" onclick="delatt('$read[pid]','$pic[aid]');">删除</a>]
+<!--
+EOT;
+}print <<<EOT
+-->
+						</div>
+<!--
+EOT;
+}}}print <<<EOT
+-->
+						<h1 class="f16 b blue mt10"  id="subject_{$read[pid]}">$read[subject]</h1>
+						<div class="f14 content" style="padding:5px 10px 30px 0;line-height:2;" id="read_{$read[pid]}">$read[content]</div>
+<!--
+EOT;
+if($read['aid'] && $read['ifhide']>0){print <<<EOT
+-->
+					<blockquote class="blockquote fl">附件设置隐藏，需要回复后才能看到</blockquote>
+					<div class="c"></div>
+<!--
+EOT;
+}if($read['picurl']){
+foreach($read['picurl'] as $k => $picture){
+if($picture){print <<<EOT
+-->
+					<div style="margin:0 15px 10px;" id="att_$k">远程图片:<a href="job.php?action=showimg&tid={$tid}&pid={$read[pid]}&fid={$fid}&aid={$k}&verify={$picture[verify]}" target="_blank">$picture[name]</a>
+<!--
+EOT;
+if($picture['dfadmin']){print <<<EOT
+-->
+						[<a style="cursor:pointer" onclick="delatt('$read[pid]','$k');">删除</a>]
+<!--
+EOT;
+}print <<<EOT
+-->
+					</div>
+<!--
+EOT;
+}}}if($read['downattach']){
+foreach($read['downattach'] as $attach){
+if($attach){print <<<EOT
+-->
+					<div style="margin:0 15px 10px;" id="att_$attach[aid]">
+<!--
+EOT;
+if($attach['desc']){print <<<EOT
+-->
+						描述:$attach[desc]<br />
+<!--
+EOT;
+}$att_id = $db_attfg ? "id=\"fg_$attach[aid]\"" : '';print <<<EOT
+-->
+						附件: <img src="$imgpath/$stylepath/file/$attach[type].gif" align="absmiddle" /> <a $att_id href="job.php?action=download&aid=$attach[aid]" target="_blank"> <font color="red">$attach[name]</font></a> ($attach[size] K) 下载次数:$attach[hits]
+<!--
+EOT;
+if ($attach['needrvrc']) {
+$at_lang = $attach['special'] == 2 ? '售价' : '需要';
+print <<<EOT
+-->
+						{$at_lang}:{$attach[needrvrc]}{$attach[cname]}
+<!--
+EOT;
+}elseif(in_array($attach['ext'],array('mp3','wma','wmv','rm','swf'))){print <<<EOT
+-->
+						[<a style="cursor:pointer" onclick="playatt('$attach[aid]');">试播</a>]
+<!--
+EOT;
+}if($attach['dfadmin']){print <<<EOT
+-->
+						[<a style="cursor:pointer" onclick="delatt('$read[pid]','$attach[aid]');">删除</a>]
+<!--
+EOT;
+}print <<<EOT
+-->
+					</div>
+<!--
+EOT;
+}}}print <<<EOT
+-->
+							</td>
+						</tr>
+					</table>
+				</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</div>
+		</div>
+		<div class="mt10 cc">$pages</div>
+			<div class="cc p10">
+			<div class="title b">快速发表</div>
+			<form action="{$basename}a=reply&cyid=$cyid" method="post" name="FORM">
+			<input type="hidden" name="tid" value="$tid" />
+			<input type="hidden" name="verify" value="$verifyhash" />
+					<table cellpadding="0" cellspacing="0">
+						<tr class="tr6">
+							<td class="vt">回复内容</td>
+							<td><!-- <textarea name="content" style="width:400px;height:120px"></textarea> -->
+								<div class="o-editor mb10" style="width:510px;overflow:hidden;">
+									<div class="o-operation cc">
+										<span class="createlink" title="插入url链接" onClick="createLinkBox();" id="createlinkid">插入url链接</span><span class="o-face" id="td_face" style="cursor:pointer;" onClick="showDefault();" align="absmiddle" unselectable="on">添加表情</span>
+									</div>
+									<p class="fl"><textarea maxlength="200" id="board" name="atc_content"/></textarea>
+									<input type="hidden" id="board_uid" value="$u"></p>
+								</div>
+								<div id="linkbox" style="display:none;"></div>
+							</td>
+						</tr>
+<!--
+EOT;
+if ($o_groups_p_gdcheck) {print <<<EOT
+-->
+				<tr class="tr6">
+					<td>认证码:</td>
+					<td>
+						<div><img id="ckcode2" style="cursor:pointer;display:none;margin-bottom:5px;" onclick="this.src='ck.php?nowtime='+new Date().getTime();" alt="看不清楚，换一张" /></div>
+						<input class="input" onfocus="showCK();" type="text" name="gdcode" id="gdcode" style="width:50px;" tabindex="3"  />
+					</td>
+				</tr>
+<script language="JavaScript">
+function showCK(){
+	getObj('ckcode2').style.display="";
+	if (getObj('ckcode2').src.indexOf('ck.php') == -1) {
+		getObj('ckcode2').src = 'ck.php?nowtime=' + new Date().getTime();
+	}
+}
+</script>
+<!--
+EOT;
+}if($o_groups_p_qcheck){print <<<EOT
+-->
+					<tr class="tr6">
+						<td>验证问答:</td>
+						<td>
+						 {$db_question[$qkey]} （正确答案:{$db_answer[$qkey]}）
+						<input class="input" name="qanswer" id="qanswer" size="25" tabindex="7" />
+						<input type="hidden" name="qkey" id="qkey" value="$qkey" />
+						</td>
+					</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+						<tr>
+							<th>&nbsp;</th>
+							<td>
+								<span class="button"><span><button type="submit">提 交</button></span></span>
+							</td>
+						</tr>
+					</table>
+			</form>
+			</div>
+<div id="menu_show" style="display:none;"></div>
+<script language="javascript">
+var charset = '$db_charset';
+var imgpath   = '$imgpath';
+var stylepath = '$stylepath';
+var totalpage = 0;
+var tid = '$tid';
+var fid = '$colony[classid]';
+function addsmile(NewCode){
+	getObj('board').value += ' [s:'+NewCode+'] ';
+}
+</script>
+<!--
+EOT;
+if(R_P==D_P){print <<<EOT
+-->
+<script language="JavaScript" src="data/bbscache/face.js"></script>
+<!--
+EOT;
+}else{
+$facedb=readover(D_P."data/bbscache/face.js");
+print <<<EOT
+-->
+<script language="JavaScript">
+$facedb
+</script>
+<!--
+EOT;
+}print <<<EOT
+-->
+<script language="JavaScript" src="js/post.js"></script>
+<script type="text/javascript" language="JavaScript" src="js/pw_lwd.js"></script>
+<div id="menu_face" class="menu" style="display:none;"></div>
+<!--
+EOT;
+} elseif ($a == 'post') {print <<<EOT
+-->
+	<div style="padding:10px 20px;">
+			<form action="{$basename}a=$a&cyid=$cyid" method="post" enctype="multipart/form-data" onsubmit="return checkpost(document.FORM);" name="FORM" id="FORM">
+			<input type="hidden" name="step" value="3" />
+			<input type="hidden" name="verify" value="$verifyhash" />
+			<table cellpadding="0" cellspacing="0" width="98%">
+				<tr class="tr6">
+					<td colspan="2"><input type="text" class="input" name="atc_title" size="60" /></td>
+				</tr>
+			</table>
+			<table cellpadding="0" cellspacing="0" width="98%">
+				<tr class="tr6 vt">
+					<td colspan="2">
+						<div id="menu_face" class="menu" style="display:none;"></div>
+<!--
+EOT;
+require_once PrintEot('wysiwyg_editor');
+print <<<EOT
+-->
+						<input type="hidden" name="atc_convert" id="atc_convert" value="1" checked />
+					</td>
+				</tr>
+			</table>
+			<table cellpadding="0" cellspacing="0" width="98%">
+<!--
+EOT;
+if ($db_allowupload && $_G['allowupload']) {print <<<EOT
+-->
+				<tr class="tr6 vt">
+					<td colspan="2" style="padding:0;">
+						<table cellPadding="0" cellSpacing="0" style="display:none;" width="100%">
+							<tbody id="att_mode">
+							<tr>
+								<td><input class="input" type="file" name="attachment_" size="20" /></td>
+								<td><input class="input" type="text" name="atc_desc" size="20" /></td>
+								<td><select style="display:none"></select></td>
+								<td><select style="display:none"></select></td>
+								<td><input class="input" type="hidden" name="atc_needrvrc" value="0" size="1" /></td>
+								<td></td>
+							</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+<script language="JavaScript">
+var allow_ext = '$uploadfiletype';
+var attachnum = parseInt('$db_attachnum');
+var charset = '$db_charset';
+</script>
+<script type="text/javascript" language="JavaScript" src="js/upload.js"></script>
+				<tr class="tr6 vt">
+					<td style="padding:0;" colspan="2">
+<!--
+EOT;
+if ($mutiupload > 0) {print <<<EOT
+-->
+						<span id="mutiinfo" style="margin-left:10px">您现在有 <b>{$mutiupload}</b> 个已经上传的附件 <a href="javascript:void(0);" class="bta" onclick="flashAtt.use();">使用</a> <a href="javascript:void(0);" class="bta" onclick="flashAtt.clear();" title="删除所有已经上传的附件">清空</a></span>
+<!--
+EOT;
+}print <<<EOT
+-->
+						<table cellPadding="0" cellSpacing="0" width="100%">
+							<tr>
+								<td width="35%">附件</td>
+								<td>描述</td>
+							</tr>
+							<tbody id="attach"></tbody>
+						</table>
+						<div id="viewimg" class="menu" style="display:none;"></div>
+						<div id="attsize" style="padding:5px 0 10px 10px">有效文件类型:$uploadfilesize</div>
+					</td>
+				</tr>
+<script language="JavaScript">
+var mutiupload = '$mutiupload';
+newAtt.create();
+</script>
+<!--
+EOT;
+}print <<<EOT
+-->
+<!--
+EOT;
+if ($o_groups_p_gdcheck) {print <<<EOT
+-->
+				<tr class="tr6">
+					<td style="width:50px;">认证码:</td>
+					<td>
+						<div>
+						<img id="ckcode2" style="cursor:pointer;display:none;margin-bottom:5px;" onclick="this.src='ck.php?nowtime='+new Date().getTime();" alt="看不清楚，换一张" /></div>
+						<input class="input" onfocus="showCK();" type="text" name="gdcode" id="gdcode" style="width:50px;" tabindex="3"  />
+					</td>
+				</tr>
+<script language="JavaScript">
+function showCK(){
+	getObj('ckcode2').style.display="";
+	if (getObj('ckcode2').src.indexOf('ck.php') == -1) {
+		getObj('ckcode2').src = 'ck.php?nowtime=' + new Date().getTime();
+	}
+}
+</script>
+<!--
+EOT;
+}if($o_groups_p_qcheck){print <<<EOT
+-->
+					<tr class="tr6">
+						<td>验证问答: </td>
+						<td>
+						<div>{$db_question[$qkey]} （正确答案:{$db_answer[$qkey]}）
+						<input class="input" name="qanswer" id="qanswer" size="25" tabindex="7" />
+						<input type="hidden" name="qkey" id="qkey" value="$qkey" /></div>
+						</td>
+					</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+				<tr class="tr6">
+					<td colspan="2" class="tac">
+					<span class="button"><span><button name="Submit" type="submit">提 交</button><!-- <button type="submit">提 交</button> --></span></span>
+					</td>
+				</tr>
+			</table>
+			</form>
+		</div>
+<script language="JavaScript">var stylepath = 'wind';</script>
+<!--
+EOT;
+if(R_P!=D_P){
+$facedb = readover(D_P.'data/bbscache/face.js');
+print <<<EOT
+-->
+<script language="javascript">
+{$facedb}
+</script>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+<script language="JavaScript" src="data/bbscache/face.js"></script>
+<!--
+EOT;
+}print <<<EOT
+-->
+<script language="JavaScript">
+editor.init();
+var cnt  = 0;
+document.FORM.Submit.disabled = false;
+function checkpost(obj) {
+	if (obj.atc_title.value == "") {
+		showDialog("error","标题不能为空",2);
+		obj.atc_title.focus();
+		return false;
+	} else if (strlen(obj.atc_title.value) > $db_titlemax) {
+		showDialog("error","标题超过最大长度 $db_titlemax 个字节",2);
+		obj.atc_title.focus();
+		return false;
+	}
+	if (strlen(obj.atc_content.value) < $db_postmin) {
+		showDialog("error","文章内容少于 $db_postmin 个字节",2);
+		editor.focusEditor();
+		return false;
+	} else if (strlen(obj.atc_content.value) > $db_postmax) {
+		showDialog("error","文章内容大于 $db_postmax 个字节",2);
+		editor.focusEditor();
+		return false;
+	}
+	document.FORM.Submit.disabled = true;
+	cnt++;
+	if (cnt != 1) {
+		showDialog("warning","Submission Processing. Please Wait");
+		return false;
+	}
+	return true;
+}
+</script>
+<script language="JavaScript" src="js/post.js"></script>
+<!--
+EOT;
+} elseif ($a == 'member') {
+if ($ifadmin && $group != 4) {print <<<EOT
+-->
+	<div class="fr" style="margin:5px 10px 0 0;"><a style="cursor:pointer" class="app-post2" id="senndmsg" onclick="fanoutMsg();">群发消息</a></div>
+<script language="JavaScript">
+(function () {
+	fanoutMsg = function() {
+		var d = '';
+		var f = document.uForm;
+		var j = 0;
+		for (var i = 0; i < f.elements.length - 2; i++) {
+			var e = f.elements[i];
+			if (e.type == 'checkbox' && e.name.match(/^selid/ig) && e.checked == true) {
+				d += '&selid[' + j++ + ']=' + e.value;
+			}
+		}
+		sendmsg('{$basename}a=fanoutmsg&cyid=$cyid&group=$group', d, 'senndmsg');
+	}
+})()
+</script>
+<!--
+EOT;
+}print <<<EOT
+-->
+	<div class="tab cc b mt10">
+		<a href="{$basename}a=$a&cyid=$cyid" id="group_all"><span>全部成员</span></a>
+		<a href="{$basename}a=$a&cyid=$cyid&group=1" id="group_1"><span>管理员</span></a>
+		<a href="{$basename}a=$a&cyid=$cyid&group=2" id="group_2"><span>普通成员</span></a>
+		<a href="{$basename}a=$a&cyid=$cyid&group=3" id="group_3"><span>未验证会员</span></a>
+		<a href="{$basename}a=$a&cyid=$cyid&group=4" id="group_4"><span>最近访客</span></a>
+	</div>
+<script language="JavaScript">
+setCurrent('group_{$group}','group_all','current');
+</script>
+	<div class="p10">
+<!--
+EOT;
+if ($group != 4 || empty($group)){print<<<EOT
+-->
+		<form action="{$basename}a=$a&cyid=$cyid" method="post" name="uForm">
+			<table width="100%">
+				<tr class="tr3"><td colspan="5" style="padding:0;"></td></tr>
+<!--
+EOT;
+foreach ($memdb as $key => $value) {print <<<EOT
+-->
+				<tr class="tr3">
+					<td width="50"><img src="$value[icon]" class="img-50" align="absmiddle" onload="imgResize(this,50)"/></td>
+					<td><a href="u.php?action=show&uid=$value[uid]">$value[username]
+<!--
+EOT;
+if ($value[realname]){print <<<EOT
+-->
+						($value[realname])
+<!--
+EOT;
+}print <<<EOT
+-->
+						</a><br />
+<!--
+EOT;
+if ($value['gender'] == '1') {print <<<EOT
+-->
+	男
+<!--
+EOT;
+} elseif ($value['gender'] == '2') {print <<<EOT
+-->
+	女
+<!--
+EOT;
+} else {print <<<EOT
+-->
+	保密
+<!--
+EOT;
+}print <<<EOT
+-->
+						<br />
+						<span class="red">
+<!--
+EOT;
+if ($colony['admin'] == $value['username']) {print <<<EOT
+-->
+	群主
+<!--
+EOT;
+} elseif ($value['ifadmin'] == '1') {print <<<EOT
+-->
+	管理员
+<!--
+EOT;
+} elseif ($value['ifadmin'] == '-1') {print <<<EOT
+-->
+	未验证
+<!--
+EOT;
+} else {print <<<EOT
+-->
+	群员
+<!--
+EOT;
+}print <<<EOT
+-->
+						</span>
+					</td>
+					<td><a style="cursor: pointer;" onclick="showConInfo('$value[uid]','$cyid')" id="guser_{$value[uid]}">通讯录</a></td>
+					<td>
+						<a href="pw_ajax.php?action=msg&touid=$value[uid]" onclick="return ajaxurl(this);">发送短信</a><br />
+						<a href="{$db_bbsurl}/pw_ajax.php?action=addfriend&touid=$value[uid]" onclick="return ajaxurl(this);">加为好友</a>
+					</td>
+<!--
+EOT;
+if ($ifadmin){print <<<EOT
+-->
+					<td><input type="checkbox" name="selid[]" value="$value[uid]" /></td>
+
+<!--
+EOT;
+}print <<<EOT
+-->
+				</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</table>
+			<div class="mt10 cc">$pages</div>
+<!--
+EOT;
+if ($ifadmin) {print <<<EOT
+-->
+			<table width="100%">
+				<tr>
+					<th colspan="6" class="tac" style="padding:0 5px 5px;">
+<!--
+EOT;
+if ($colony['admin'] == $windid) {print <<<EOT
+-->
+						<span class="mr10"><input type="radio" name="step" value="addadmin" />设为管理</span>
+						<span class="mr10"><input type="radio" name="step" value="deladmin" />取消管理</span>
+<!--
+EOT;
+}print <<<EOT
+-->
+						<span class="mr10"><input type="radio" name="step" value="check" checked />审核会员</span>
+						<span class="mr10"><input type="radio" name="step" value="del" />踢出本群</span>
+					</th>
+				</tr>
+				<tr>
+					<th colspan="5" class="tac">
+						<span class="button2"><span><button type="button" name="chkall" onclick="CheckAll(this.form)">全 选</button></span></span>
+						<span class="button"><span><button type="submit">提 交</button></span></span>
+					</th>
+				</tr>
+			</table>
+		</form>
+<script language="JavaScript">
+var ifcheck = true;
+function CheckAll(form) {
+	for (var i = 0; i < form.elements.length - 2; i++) {
+		var e = form.elements[i];
+		if (e.type == 'checkbox') e.checked = ifcheck;
+	}
+	ifcheck = ifcheck == true ? false : true;
+}
+</script>
+<!--
+EOT;
+}
+}else{print<<<EOT
+-->
+			<div class="o-list-img p10">
+				<ul class="cc">
+<!--
+EOT;
+foreach ($memdb as $key => $value) {print <<<EOT
+-->
+
+					<li><a href="u.php?action=show&uid=$value[uid]"><img src="$value[icon]" class="img-50 fl mr10" align="absmiddle" onload="imgResize(this,50)" /></a>
+					<p><a href="u.php?action=show&uid=$value[uid]">$value[username]</a></p>
+					<p><a href="{$db_bbsurl}/pw_ajax.php?action=addfriend&touid=$value[uid]" onclick="return ajaxurl(this);"><img src="images/apps/operation/add.png" title="加为好友" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="pw_ajax.php?action=msg&touid=$value[uid]" onclick="return ajaxurl(this);"><img src="images/apps/operation/mail.png" title="发送消息" /></a></p>
+					</li>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</ul>
+			</div>
+			<div class="mt10 cc">$pages</div>
+
+<!--
+EOT;
+}print <<<EOT
+-->
+	</div>
+<!--
+EOT;
+} elseif ($a == 'uintro') {print <<<EOT
+-->
+		<div class="p10">
+			<form action="{$basename}a=$a" method="post">
+			<input type="hidden" name="step" value="3" />
+			<input type="hidden" name="cyid" value="$cyid" />
+			<table cellpadding="0" cellspacing="0">
+					<tr class="tr6">
+							<td width="100">用户</td>
+							<td>$uinfo[username]</td>
+					</tr>
+					<tr class="tr6">
+							<td>真实姓名</td>
+							<td><input type="text" class="input" name="realname" value="$uinfo[realname]" /></td>
+					</tr>
+					<tr class="tr6">
+							<td>性别</td>
+							<td>
+									<select name="gender">
+											<option value="0" $select_0>保密</option>
+											<option value="1" $select_1>男</option>
+											<option value="2" $select_2>女</option>
+									</select>
+							</td>
+					</tr>
+					<tr class="tr6">
+							<td>电话</td>
+							<td><input type="text" class="input" name="tel" value="$uinfo[tel]" /></td>
+					</tr>
+					<tr class="tr6">
+							<td>邮箱</td>
+							<td><input type="text" class="input" name="email" value="$uinfo[email]" /></td>
+					</tr>
+					<tr class="tr6">
+							<td>联系地址</td>
+							<td><input type="text" class="input" name="address" size="40" value="$uinfo[address]" /></td>
+					</tr>
+					<tr class="tr6">
+							<td>介绍说明</td>
+							<td><textarea name="introduce" style="width:300px;height:80px">$uinfo[introduce]</textarea></td>
+					</tr>
+					<tr class="tr6">
+							<td></td>
+							<td><span class="button"><span><button type="submit">提 交</button></span></span></td>
+					</tr>
+			</table>
+			</form>
+		</div>
+<!--
+EOT;
+} elseif ($a == 'set') {print <<<EOT
+-->
+		<div class="p10">
+			<form action="{$basename}a=$a" enctype="multipart/form-data" method="post">
+			<input type="hidden" name="step" value="3" />
+			<input type="hidden" name="cyid" value="$cyid" />
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr class="tr6">
+					<td width="100">群组名称</td>
+					<td><input type="text" class="input" name="cname" id="cname" value="$colony[cname]" />&nbsp;<span id="cname_warn" class="gray">限 20 字节</span></td>
+				</tr>
+				<tr class="tr6">
+					<td>群组分类</td>
+					<td>{$o_classdb[$colony[classid]]}</td>
+				</tr>
+				<tr class="tr6">
+					<td>群组LOGO</td>
+					<td><input type="file" class="input" name="cnimg_1" /><br /><span class="gray">
+					(有效文件类型:
+<!--
+EOT;
+foreach($cnimg_1 as $key => $value){print<<<EOT
+-->
+					{$key}:{$value}KB;
+<!--
+EOT;
+}print<<<EOT
+-->
+					)</span></td>
+				</tr>
+				<tr class="tr6">
+					<td>群banner</td>
+					<td><input type="file" class="input" name="cnimg_2" /><br /><span class="gray">(有效文件类型:
+<!--
+EOT;
+foreach($cnimg_2 as $key => $value){print<<<EOT
+-->
+					{$key}:{$value}KB;
+<!--
+EOT;
+}print<<<EOT
+-->
+					)</span></td>
+				</tr>
+				<tr class="tr6">
+					<td>加入权限</td>
+					<td>
+						<select name="ifcheck">
+							<option value="2" $ifcheck_2>完全开放</option>
+							<option value="1" $ifcheck_1>需审核</option>
+							<option value="0" $ifcheck_0>不允许加入</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="tr6">
+					<td>公开群组内容</td>
+					<td><input type="radio" name="ifopen" value="1" $ifopen_Y />开启 <input type="radio" name="ifopen" value="0" $ifopen_N />关闭</td>
+				</tr>
+				<tr class="tr6">
+					<td>公开群组相册</td>
+					<td><input type="radio" name="albumopen" value="1" $albumopen_Y />开启 <input type="radio" name="albumopen" value="0" $albumopen_N />关闭</td>
+				</tr>
+				<tr class="tr6">
+					<td>群组公告</td>
+					<td>
+						<textarea name="annouce" id="annouce" style="width:350px;height:70px">{$colony[annouce]}</textarea><br />
+						<span id="annouce_warn">限 500 字节</span>
+					</td>
+				</tr>
+				<tr class="tr6">
+					<td>群组描述</td>
+					<td>
+						<textarea name="descrip" id="descrip" style="width:350px;height:70px">{$colony[descrip]}</textarea><br />
+						<span id="descrip_warn">限 255 字节</span>
+					</td>
+				</tr>
+				<tr class="tr6">
+					<td>&nbsp;</td>
+					<td>
+					<span class="button"><span><button type="submit">保存设置</button></span></span>
+					</td>
+				</tr>
+			</table>
+			</form>
+		</div>
+<script language="JavaScript">
+var charset = '$db_charset';
+initCheckTextNum('cname','cname_warn',20);
+initCheckTextNum('annouce','annouce_warn',500);
+initCheckTextNum('descrip','descrip_warn',255);
+</script>
+<!--
+EOT;
+}print <<<EOT
+-->
+	</td></tr></table>
+</div>
+<!--
+EOT;
+?>-->

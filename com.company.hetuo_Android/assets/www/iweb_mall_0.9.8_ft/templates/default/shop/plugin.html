@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{echo: $header['title'];/}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="{echo: $header['keywords'];/}" />
+<meta name="description" content="{echo: $header['description'];/}" />
+<base href="{echo: $baseUrl;/}" />
+<link href="skin/{echo: $SYSINFO['templates'];/}/css/shop_{echo: $SHOP['shop_template'];/}.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="skin/{echo: $SYSINFO['templates'];/}/js/changeStyle.js"></script>
+<style>
+.shop_header {background:#4A9DA5;}
+{sta:if($SHOP['shop_template_img'])[exc]}
+.shop_header {background:transparent url({echo: $SHOP['shop_template_img'];/}) no-repeat scroll 0 0;}
+{end:if/}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	{inc: require("shop/header.php");/}
+<div class="clear"></div>
+<div class="shop_header">
+	<h1>{echo: $SHOP['shop_name'];/}</h1>
+	{inc: require("shop/menu.php");/}
+</div>
+	{inc: require("shop/left.php");/}
+<div class="bigpart">
+	<!-- plugins !-->
+	<div id="shop_right">
+		{echo:isset($plugins['shop_right'])?show_plugins($plugins['shop_right']):'';/}
+	</div>
+	<!-- plugins !-->
+</div>
+	{inc: require("shop/footer.php");/}
+</div>
+</body>
+</html>

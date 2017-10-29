@@ -1,0 +1,61 @@
+<{include file="header.html"}>
+<style type="text/css">
+<!--
+body {background: #fcfdff}
+-->
+</style>
+<div id="currentPosition">
+	<p><{$_your_current_position}> 插件 &raquo; 管理</p>
+</div>
+<div id="rightTop"> 
+    <h3>插件</h3> 
+    <ul class="subnav">
+		<li><a href="plugin.php">管理</a></li>
+        <li><a class="btn1"><span><{$title}></span></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form action="plugin.php" method="post" id="EditFrm" name="edit_frm">
+  <input type="hidden" name="id" value="<{$smarty.get.id}>" />
+  <input type="hidden" name="entry" value="<{$name}>" />
+  <input type="hidden" name="formhash" value="<{$formhash}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 地图密钥：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<textarea style="width:500px;height:50px;" name="pluginvar[key]"><{$key|default:'ABQIAAAAnfs7bKE82qgb3Zc2YyS-oBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxSySz_REpPq-4WZA27OwgbtyR3VcA'}></textarea><span class="gray">（默认为本地服务器，可以从<a href="http://code.google.com/intl/zh-CN/apis/maps/signup.html" target="_blank">注册使用 Google 地图 API</a>获得）</span>
+		</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 地图放大级别：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<select name="pluginvar[zoomlevel]">
+		<{html_options options=$zoomlevels selected=$zoomlevel|default:15}>
+		</select>
+		</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 默认宽度：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="pluginvar[width]" value="<{$width|default:500}>" />px</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 默认高度：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="pluginvar[height]" value="<{$height|default:500}>" />px</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 默认纬度：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="pluginvar[lat]" value="<{$lat|default:'29.264911735066963'}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 默认经度：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="pluginvar[lng]" value="<{$lng|default:'120.24544715881347'}>" /></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" id="Save" value="保存配置" />&nbsp;&nbsp;[<a href="<{$SiteUrl}>plugin.php?name=<{$name}>" target="_blank">预览插件</a>]</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<{include file="footer.html"}>

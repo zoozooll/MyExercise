@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{echo: $header['title'];/}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{echo: $header['keywords'];/}" />
+<meta name="description" content="{echo: $header['description'];/}" />
+<base href="{echo: $baseUrl;/}" />
+<link href="skin/{echo: $SYSINFO['templates'];/}/css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="skin/{echo: $SYSINFO['templates'];/}/js/changeStyle.js"></script>
+</head>
+<body>
+<div id="wrapper">
+{inc: include("shop/index_header.php");/}
+<!--search end -->
+<div class="path">{echo:lp{i_location};/}：<a href="index.php">{echo:lp{i_index};/}</a> > {echo:lp{i_serach_ad};/}</div>
+<div class="pro_class">
+<FORM action="search.php" method=get>
+<TABLE cellSpacing=8 cellPadding=0 width="100%" align=center border=0>
+  <TR>
+    <TD align=right width="22%">{echo:lp{i_keywords};/}：</TD>
+    <TD width="78%"><INPUT class=InputBorder id=keywords maxLength=120 size=40 
+      name="k"></TD></TR>
+  <TR>
+    <TD align=right>{echo:lp{i_category};/}：</TD>
+    <TD><SELECT name="cid">
+     <OPTION value="" ></OPTION>
+    {sta:foreach($CATEGORY[0] as $cat)[loop]}
+     <OPTION value="{echo:$cat['cat_id'];/}"   >{echo: $cat['cat_name'];/}</OPTION>
+    {end:foreach/}
+    </SELECT> </TD></TR>
+  <TR>
+    <TD align=right>{echo:lp{i_brand};/}：</TD>
+    <TD><SELECT name="brand" >
+     <OPTION value="" ></OPTION>
+    {sta: foreach($brand_rs as $value)[loop]}
+     <OPTION value={echo:$value['brand_id'];/} >{echo:$value['brand_name'];/}</OPTION>
+    {end:foreach/}
+	</SELECT> </TD></TR>
+  <TR>
+    <TD align=right>{echo:lp{i_price};/}：</TD>
+    <TD><INPUT maxLength=8 size=10 name=min_price> - <INPUT maxLength=8 size=10 name=max_price> </TD></TR>
+  <TR>
+    <TD align=right>{echo:lp{i_in_area};/}：</TD>
+    <TD><span id="user_country"><select name="country" onchange="areachanged(this.value,0);">
+						<option value='0'>{echo: lp{m_select_country};/}</option>
+					 {sta:  foreach($areas_info[0] as $v)[loop]}
+						<option value="{echo: $v['area_id'];/}" {sta: if($v['area_id']==1){echo 'selected';if/}>{echo: $v['area_name'];/}</option>
+					{end:foreach/}
+					</select></span>
+					<span id="user_province">
+					<select name="province" onchange="areachanged(this.value,1);">
+						<option value='0'>{echo: lp{m_select_province};/}</option>
+					{sta:foreach($areas_info[1] as $v)[exc]}
+						<option value="{echo: $v['area_id'];/}" >{echo: $v['area_name'];/}</option>
+					{sta:
+					foreach/}
+					</select>
+					</span>
+					<span id="user_city">
+					
+					</span>
+					<span id="user_district">
+					
+					</span></TD></TR>
+  <TR>
+    <TD align=right> </TD>
+    <TD height="40"><input class="button" type="submit" name="button" id="button" value="{echo:lp{i_post};/}" />
+    </TD></TR>
+  </TABLE>
+</FORM>
+</div>
+<div class="top5 clear"></div>
+<!-- main end -->
+<!--main right end-->
+{inc: require("shop/index_footer.php");/}
+<!--footer end-->
+</div>
+
+<script language="JavaScript" src="servtools/ajax_client/ajax.js"></script>
+<script language="JavaScript">
+<!--
+function areachanged(value,type){
+	if(value > 0) {
+		ajax("do.php?act=ajax_areas","POST","value="+value+"&type="+type,function(return_text){
+			var return_text = return_text.replace(/[\n\r]/g,"");
+			if(return_text==""){
+				alert("<?php echo  lp{m_select_again};?>！");
+			} else {
+				if(type==0) {
+					document.getElementById("user_province").innerHTML = return_text;
+					show("user_province");
+					hide("user_city");
+					hide("user_district");
+				} else if(type==1) {
+					document.getElementById("user_city").innerHTML = return_text;
+					show("user_city");
+					hide("user_district");
+				} else if(type==2) {
+					document.getElementById("user_district").innerHTML = return_text;
+					show("user_district");
+				}
+			}		
+		});
+	} else {
+		if(type==2) {
+			hide("user_district");
+		} else if(type==1) {
+			hide("user_district");
+			hide("user_city");
+		} else if(type==0) {
+			hide("user_district");
+			hide("user_city");
+			hide("user_province");
+		}
+	}
+}
+
+function hide(id) {
+	document.getElementById(id).style.display = 'none';
+}
+function show(id) {
+	document.getElementById(id).style.display = '';
+}
+</script>
+</body>
+</html>
+			

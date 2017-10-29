@@ -1,0 +1,43 @@
+<{assign var="page_title" value="$_member_reg"}>
+<{include file="`$ThemeName`/header.html"}>
+<style type="text/css">  
+label.error {
+  font-weight: bold;
+  color: #b80000;
+}
+</style>
+<div class="wrapper">
+  <div class="subnav">
+    <div class="member_register"><span class="step_01"><{$_fill_reg_info}></span><span class="step_02"><{$_reg_success}></span></div>
+  </div>
+  <div class="blank6"></div>
+  <div class="content">
+	 <div class="base_title">
+	  <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_choose_reg_type}></span><span class="corner_t_r"></span><span class="title_telephone"><{$_issue_contact}><{$service_tel}></span></h2>
+	</div>
+	  <div class="base_content box_bord">
+	     <h3><{$_choose_reg_type_conditions}></h3>
+         <div class="blank"></div>
+	     <div class="member_black clearfix">
+             <div class="black_w680">
+                <table class="reg_member_list no_outline">
+                  <tr>
+                    <th><{$_personal_member}></th>
+                    <th><{$_enterprise_member}></th>
+                  </tr>
+                  <tr>
+                    <td><p><{$_personal_member_intro}></p></td>
+                    <td><p><{$_enterprise_member_intro}></p></td>
+                  </tr>
+                  <tr>
+                    <td><a href="register.php?type=personal" class="btn_reg"><{$_register_now}><{$_personal_member}></a></td>
+                    <td><a href="register.php?type=company" class="btn_reg"><{$_register_now}><{$_enterprise_member}></a></td>
+                  </tr>
+                </table>
+             </div>
+             <div class="block_w240"><{$SiteDescription}></div>
+         </div>
+	 </div>
+  </div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

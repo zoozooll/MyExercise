@@ -1,0 +1,570 @@
+<!--<?php
+include_once PrintEot('m_header');
+include_once PrintEot('user_space');
+$descrip = '这个好友值得您关注！';
+print <<<EOT
+-->
+<div id="content" class="fr">
+<div id="sidebar" class="sidebar fr">
+        <div class="p10">
+<!--
+EOT;
+if($SpaceShow){print<<<EOT
+-->
+        <h2 class="b">最近来访</h2>
+        <div class="o_hr"></div>
+        <div class="o-list-img">
+<!--
+EOT;
+if($whovisit){print <<<EOT
+-->
+        <ul class="cc">
+<!--
+EOT;
+$c = 0;
+foreach ($whovisit as $value) {
+$c++;if($c>6)break;
+print <<<EOT
+-->							
+            <li>
+                <a href="u.php?uid=$value[uid]"><img src="$value[icon]" class="img-50 userCard" id="card_s1_{$value[uid]}_{$value[uid]}" /></a>
+                <p>
+<!--
+EOT;
+if ($value['thisvisit']) {
+print <<<EOT
+-->                           
+                        <img src="$imgpath/online.png" align="absmiddle" title="在线" style="margin-top:2px;margin-left:-3px;" />
+<!--
+EOT;
+}print <<<EOT
+-->									<a href="u.php?uid=$value[uid]" title="$value[username]">$value[username]</a></p>
+                        <p>{$value[visittime]}</p>
+             </li>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </ul>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+        <div class="gray">暂时还没有访客</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+
+        </div>
+        <h2 class="b">访问过</h2>
+        <div class="o_hr"></div>
+    <div class="o-list-img">
+<!--
+EOT;
+if($tovisit){print <<<EOT
+-->
+        <ul class="cc">               
+<!--
+EOT;
+$c = 0;
+foreach ($tovisit as $value) {
+$c++;if($c>6)break;print <<<EOT
+-->
+            <li>
+                <a href="u.php?uid=$value[uid]"><img src="$value[icon]" class="img-50 userCard" id="card_s2_{$value[uid]}_{$value[uid]}" /></a>
+                <p>
+<!--
+EOT;
+if ($value['thisvisit']) {
+print <<<EOT
+-->                           
+                <img src="$imgpath/online.png" align="absmiddle" title="在线" style="margin-top:2px;margin-left:-3px;" />
+<!--
+EOT;
+}print <<<EOT
+-->
+                <a href="u.php?uid=$value[uid]" title="$value[username]">$value[username]</a></p>
+                <p>$value[visittime]</p>
+             </li>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </ul>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+             <div class="gray">暂时还没有访问记录</div>
+<!--
+EOT;
+}print <<<EOT
+-->               
+    </div>
+<!--
+EOT;
+}print <<<EOT
+-->
+        <h2>
+<!--
+EOT;
+if($userdb['f_num'] > 18){
+if ($winduid != $u) {print <<<EOT
+-->
+        <a href="{$spaceurl}q=friend&u=$u" class="gray fr">更多</a>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+        <a href="mode.php?m=o&q=friend" class="gray fr">更多</a>
+<!--
+EOT;
+}
+}print <<<EOT
+-->
+        <span class="b">{$userdb[username]}的好友</span><span class="gray2">(共{$userdb['f_num']}人)</span></h2>
+        <div class="o_hr"></div>
+    <div class="o-list-img">
+<!--
+EOT;
+if($friends) {print <<<EOT
+-->
+        <ul class="cc">
+<!--
+EOT;
+foreach ($friends as $key => $value) {
+$value[showname] = substrs($value[username],8);
+if($SpaceShow){
+print <<<EOT
+-->              
+            <li><a href="u.php?uid={$value[uid]}"><img title="{$value[username]}" src="$value[face]" id="card_s3_{$value[uid]}_{$value[uid]}" class="img-50 userCard" /></a>
+            <p><a href="{$basename}q=user&u={$value[uid]}">$value[showname]</a></p></li>
+            
+<!--
+EOT;
+}else{print<<<EOT
+-->
+            <li><a href="javascript:;"><img title="{$value[username]}" src="$value[face]" class="img-50 userCard" /></a><p><a href="javascript:;">$value[showname]</a></p></li>
+<!--
+EOT;
+}}print <<<EOT
+-->     
+        </ul>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+        <div class="gray">暂没有好友</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+    </div>
+  		</div>
+	</div>
+    <div id="content_main" class="fl" style="overflow:hidden;">
+    	<table width="100%">
+        <tr class="vt"><td height="800">
+        <div class="p15">
+            <div class="cc p-info mb10">
+                <span class="fr gray">
+                    <span title="$latest_action_date">最近活跃：$latest_action_time</span>
+                </span>
+                <h1><span class="blue"><strong class="f24">$userdb[username]</strong></span></h1>
+            </div>
+            <div class="bubbles_user">
+                <div>
+                <span>$userdb[honor]</span>
+<!--
+EOT;
+if($SpaceShow){print<<<EOT
+-->
+                    <a href="{$basename}space=1&u=$userdb[uid]&q=write">查看历史记录...</a> 
+<!--
+EOT;
+}print<<<EOT
+-->
+                </div>
+            </div>
+<!--
+EOT;
+if($SpaceShow){print<<<EOT
+-->
+        <div class="mb10">
+            <ul class="list-50 cc" >
+<!--
+EOT;
+$i = 0;
+foreach ($user_profile as $key => $value){$i++;
+if ($i == 7) {print <<<EOT
+-->
+                <span style="display:none;" id="profile_more">	
+                <li>会员头衔:$memtitle</li>                       
+<!--
+EOT;
+if($systitle){print <<<EOT
+-->
+                <li>系统头衔 :$systitle $userdb[privilege]</li>
+<!--
+EOT;
+}print <<<EOT
+-->                    
+       
+<!--
+EOT;
+}
+if($key == 'todaypost') {print <<<EOT
+-->
+                <li>平均日发帖： {$averagepost} ($value[0] : $value[1])</li>
+<!--
+EOT;
+} else {print <<<EOT
+-->
+                <li>$value[0] : $value[1]</li>
+<!--
+EOT;
+}
+}if($i>6){
+if ($userdb['site']){print <<<EOT
+-->
+                <li style="width:100%">个人主页 :$userdb[site]</li>
+<!--
+EOT;
+}if ($userdb['introduce']){print <<<EOT
+-->
+                <li style="width:100%">自我简介 :$userdb[introduce]</li>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </span>
+<!--
+EOT;
+}if($i<=6 && ($userdb['introduce'] || $userdb['site'])){print <<<EOT
+-->
+            <span style="display:none;" id="profile_more">
+<!--
+EOT;
+if ($userdb['site']) {print <<<EOT
+-->
+        <li style="width:100%">个人主页 :$userdb[site]</li>
+<!--
+EOT;
+}if ($userdb['introduce']) {print <<<EOT
+-->
+        <li style="width:100%;height:36px;overflow:hidden;line-height:18px;">自我简介 : $userdb[introduce]</li>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </span>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </ul>
+            <p class="tar">
+<!--
+EOT;
+if ($u == $winduid) {print <<<EOT
+-->
+                <a href="profile.php?action=modify" target="_blank" class="gray">编辑</a>
+<!--
+EOT;
+}if($i>6 || $userdb['introduce'] || $userdb['site']){print <<<EOT
+-->
+                <a style="cursor:pointer;" onclick="openMoreProfile();" id="moreprofile">详细</a>
+<script language="JavaScript">
+function openMoreProfile(){
+if(getObj('profile_more').style.display == 'none'){
+getObj('profile_more').style.display = '';
+getObj('moreprofile').innerHTML = '隐藏';
+} else {
+getObj('profile_more').style.display = 'none';
+getObj('moreprofile').innerHTML = '详细';
+}
+}
+</script>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </p>
+        </div>                              
+			<div class="title_one mt10 cc" style="padding:4px 0 4px 10px;">
+            	<span class="fl tab_friends">我的动态</span>
+                <ul class="fl o_tab_a">
+                	<li id="home_default"><a href="u.php?uid=$u" hidefocus="true"><i>全部</i></a></li>
+                    <li id="home_write"><a href="{$basename}q=user&f_type=write&u=$u" hidefocus="true"><i>记录</i></a></li>
+<!--
+EOT;
+if($db_dopen){print <<<EOT
+-->
+                    <li id="home_diary"><a href="{$basename}q=user&f_type=diary&u=$u" hidefocus="true"><i>日志</i></a></li>
+<!--
+EOT;
+}if($db_phopen){print <<<EOT
+-->
+                    <li id="home_photo"><a href="{$basename}q=user&f_type=photo&u=$u" hidefocus="true"><i>相册</i></a></li>
+<!--
+EOT;
+}if($db_share_open){print <<<EOT
+-->
+                    <li id="home_share"><a href="{$basename}q=user&f_type=share&u=$u" hidefocus="true"><i>分享</i></a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+					<li id="home_post"><a href="{$basename}q=user&f_type=post&u=$u" hidefocus="true"><i>帖子</i></a></li>
+<!--
+EOT;
+if($u != $winduid) {print <<<EOT
+-->
+					<li id="home_friend"><a href="{$basename}q=user&f_type=friend&u=$u" hidefocus="true"><i>好友</i></a></li>
+<!--
+EOT;
+}if($db_groups_open){print <<<EOT
+-->
+                    <li id="home_colony"><a href="{$basename}q=user&f_type=colony&u=$u" hidefocus="true"><i>群组</i></a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+                </ul>
+            </div>                          
+        	<div class="p10">
+<!--
+EOT;
+if ($privacy['index']) {
+if (!empty($feeds)) {
+foreach ($feeds as $day => $feed) {
+print <<<EOT
+-->
+                    <div class="dynamic-h cc"><div></div><span>$day</span></div>
+                    <div class="dynamic dynamic-home2">
+<!--
+EOT;
+foreach ($feed as $key => $value) {
+
+print <<<EOT
+-->
+                        <dl class="cc">
+                            <dt>
+                            <img src="$pwModeImg/icon/$value[appicon]" class="img-20" />					
+                            </dt>
+                            <dd class="dd30"><a href="u.php?uid=$value[uid]">$value[username]</a>$value[descrip]
+<!--
+EOT;
+if (checkCommType($value[type]) && $value[typeid]>0) {
+print <<<EOT
+-->
+                                <div id="com_{$value[type]}_{$value[typeid]}">
+                                    <p><a style="cursor: pointer;" onclick="showCommList('$value[type]','$value[typeid]','com_{$value[type]}_{$value[typeid]}',this);">回复</a></p>
+                                </div>
+<!--
+EOT;
+}print <<<EOT
+-->
+                            </dd>
+                        </dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+                    </div>
+<!--
+EOT;
+}} else { print <<<EOT
+-->
+                    <div class="dynamic">暂时没有动态</div>
+<!--
+EOT;
+}}else{print <<<EOT
+-->
+                    <div class="dynamic">暂时无权限查看好友空间</div>											
+<!--
+EOT;
+}print <<<EOT
+-->
+</div>
+<!--
+EOT;
+if($privacy['msgboard']){print <<<EOT
+-->
+						<div class="title_one mt10">
+<!--
+EOT;
+if (!empty($boards)){print <<<EOT
+-->
+							<a href="{$basename}q=board&u=$u" class="fr">更多留言</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+                        	<b>留言板</b>
+                        </div>
+						<div id="board_container" class="mt10">
+<!--
+EOT;
+if ($ismyfriend) { print <<<EOT
+-->                            
+							<form method="POST" name="FORM" action="mode.php?m=o&q=ajax&a=commreply" onsubmit="return false;">
+                            <div style="padding:0 0 10px 0;">
+                            <div class="o-editor mb10" style="width:530px;">
+                                <div class="o-operation cc" style="width:527px;">
+                                    <span class="createlink" title="插入url链接" onClick="createLinkBox();" id="createlinkid">插入url链接</span><span class="o-face" id="td_face" style="cursor:pointer;" onClick="showDefault();" align="absmiddle" unselectable="on">添加表情</span>
+                                </div>
+                                <p class="fl"><textarea maxlength="200" style="width:533px;" id="board" name="atc_content"/></textarea>
+                                <input type="hidden" id="board_uid" value="$u"></p>
+                            </div>
+                            <span class="button" style="margin-left:0;"><span><button type="submit" onclick="postBoard();">留言</button></span></span>
+                            </div>
+                            <div id="linkbox" style="display:none;"></div>
+                            </form>
+<!--
+EOT;
+}print <<<EOT
+-->
+                            <div class="o-commnet">
+                            <div id="createboardbox"></div>
+                            
+<!--
+EOT;
+foreach ($boards as $value) { print <<<EOT
+-->
+                            <dl class="cc" id="board_{$value[id]}">
+                                 <dt>
+                                	<a href="u.php?uid=$value[uid]"><img src="$value[face]" class="img-50" /></a>
+                                 </dt>
+                                 <dd>
+<!--
+EOT;
+if ($value[uid]==$winduid || $winduid==$u || $groupid==3) { print <<<EOT
+-->
+								 <a style="cursor:pointer;" class="fr" onclick="createCommnetInput('board','$value[id]',0)">回复</a><a style="cursor: pointer;" onclick="pwConfirm('是否确定删除本条留言',this,function(){delBoard('$value[id]')})" title="删除" class="del fr mr10">删除</a>
+<!--
+EOT;
+} print <<<EOT
+-->                   
+                                 	<a href="u.php?uid=$value[uid]">$value[username]</a> $value[postdate] 留言道:
+                                    <p class="f14"> $value[title] </p>
+                                    
+                                    <div id="commentbox_$value[id]_0">
+<!--
+EOT;
+foreach ($commentdb[$value['id']] as $key => $comment) {print <<<EOT
+-->
+										<dl class="cc" id="com_board_{$comment[id]}">
+											 <dt>
+			                                	<a href="u.php?uid=$comment[uid]"><img src="$comment[face]" class="img-50" /></a>
+			                                 </dt>
+			                                 <dd class="dd60">
+			                                 	<a href="u.php?uid=$comment[uid]">$comment[username]</a>
+			                                 	<span class="gray">$comment[postdate] 留言道:</span>
+			                                 			
+<!--
+EOT;
+if ($comment['uid'] == $winduid || $groupid == 3) {print <<<EOT
+-->
+<a href="javascript:;" class="del" onclick="delComment($comment[id])" >删除</a>
+<!--
+EOT;
+}print <<<EOT
+-->									
+												<p class="f14">$comment[title]</p>
+											 </dd>
+										 </dl>                  
+<!--
+EOT;
+}print <<<EOT
+-->                 
+									</div>
+									</dd>
+								</dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+							</div>
+                         </div>
+<!--
+EOT;
+if ($ismyfriend) { print <<<EOT
+-->                
+<div id="menu_show" style="display:none;"></div>
+<script language="javascript">
+	var charset = '$db_charset';
+	var imgpath   = '$imgpath';
+	var stylepath = '$stylepath';
+	function addsmile(NewCode){
+	    getObj('board').value += ' [s:'+NewCode+'] ';
+	}
+</script>
+<!--
+EOT;
+if(R_P==D_P){print <<<EOT
+-->
+					<script language="JavaScript" src="data/bbscache/face.js"></script>
+<!--
+EOT;
+}else{
+$facedb=readover(D_P."data/bbscache/face.js");
+print <<<EOT
+-->
+					<script language="JavaScript">
+					$facedb
+					</script>
+<!--
+EOT;
+}print <<<EOT
+-->
+<script language="JavaScript" src="js/post.js"></script>
+<div id="menu_face" class="menu" style="display:none;"></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+<script language="JavaScript" src="js/app_comment.js"></script>
+<script language="JavaScript" src="mode/o/js/board.js"></script>
+<!--
+EOT;
+}print <<<EOT
+-->		
+
+<!--
+EOT;
+}else{
+if($userdb['index_privacy'] == 2){print <<<EOT
+-->
+				<div class="p10 o-tips" style="margin:110px 0;">
+           <img src="$imgpath/important.gif" align="absmiddle" /> 由于对方的隐私设置，您没有权限查看。
+				</div>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+				<div class="p10 tips" style="margin:110px 0;">
+           <img src="$imgpath/important.gif" align="absmiddle" /> 由于对方的隐私设置，只允许好友查看，立即 <a id="add_friend" onclick="sendmsg('pw_ajax.php?action=addfriend&touid=$u','',this.id)" style="cursor: pointer;" title="加为好友">加为好友</a>
+				</div>
+<!--
+EOT;
+}}print <<<EOT
+-->	
+    </div>
+    </td></tr>
+    </table>
+	</div>
+</div>
+
+<script language="JavaScript">window.onReady(userCard.init);</script>
+<!--
+EOT;
+if (GetCookie('o_invite') && $db_modes['o']['ifopen']==1) {print <<<EOT
+-->
+<script language="JavaScript">
+setTimeout(function(){showDialog('success','成功加该用户为好友');},1000);
+</script>
+<!--
+EOT;
+}?>-->

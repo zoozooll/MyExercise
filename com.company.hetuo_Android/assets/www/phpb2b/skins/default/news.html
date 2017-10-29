@@ -1,0 +1,23 @@
+<{assign var="PageTitle" value="`$_space_news`"}>
+<{assign var="cur" value="space_news"}>
+<{include file="header.html"}>
+<div class="wrapper">
+	<{include file="banner.html"}>
+	<div class="content">
+		<{include file="leftbar.html"}>
+			<div class="rightbarcontact">
+					<div class="playercontact">
+					<div class="playerheadcontact"><span class="playlistcontact"><{$_space_news}></span><span class="player_head_concontact"></span><img src="images/contactus_13.jpg" /></div>
+					<div class="clear"></div>
+					<div class="player_concontact">
+					<{foreach from=$Items item=item}>
+						<p class="companytitle"><a href="<{$item.url}>"><{$item.title}></a></p>
+						<p><{$item.content|truncate:100}></p>
+					<{/foreach}>					
+						<p class="page"><{$ByPages}></p>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+<{include file="footer.html"}>

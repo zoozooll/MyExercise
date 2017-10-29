@@ -1,0 +1,78 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+ <p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_job}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_job}></h3>
+    <ul class="subnav">
+		<li><a href="job.php"><{$_management}></a></li>
+        <li><a href="jobtype.php">职位分类</a></li>
+        <li><a class="btn1" href="jobtype.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" action="jobtype.php" id="EditFrm" name="edit_frm">
+  <input type="hidden" name="id" value="<{$item.id}>" />
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 添加方式：</th>
+        <td class="paddingT15 wordSpacing5">
+		<select name="data[method]" id="DataMethod">
+			<option value="1">逐个添加</option>
+			<option value="2">从行业分类复制</option>
+        </select></td>
+      </tr>
+	  <tbody id="DataMethod1">
+	    <{if $smarty.get.id}>
+      <input type="hidden" name="id" value="<{$smarty.get.id}>" />
+      <input type="hidden" name="page" value="<{$smarty.request.page}>" />
+      <tr>
+        <th class="paddingT15"> 分类名称：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[jobtype][name]" value="<{$item.name}>" type="text" /><label class="field_notice">一级分类名称不要有符号出现</label>        </td>
+      </tr>
+    <{else}>
+	      <tr>
+        <th class="paddingT15"> 分类名称：</th>
+        <td class="paddingT15 wordSpacing5"><textarea name="data[jobtype][name]" id="dataNames"></textarea><label class="field_notice">可以添加多个，一行代表一个分类,一级分类名称不要有符号</label></td>
+      </tr>
+    <{/if}> 
+      
+      <tr>
+        <th class="paddingT15"> 上级分类：</th>
+        <td class="paddingT15 wordSpacing5">
+        <select name="data[jobtype][parent_id]" id="JobtypeParentId">
+        <option value="0">顶级分类</option>
+        <{$JobtypeOptions}>
+        </select>
+        </td>
+      </tr>
+	  	</tbody>
+	  <tbody id="DataMethod2" style="display:none;">
+	  		        <tr>
+        <th class="paddingT15"> 是否覆盖：</th>
+        <td class="paddingT15 wordSpacing5"><{html_radios name="data[coverage]" options=$AskAction checked=1 separator=""}><label class="field_notice">如果选择不覆盖，那么可能会引起分类紊乱</label></td>
+      </tr> 
+      <tr>
+        <th class="paddingT15"> 是否清空：</th>
+        <td class="paddingT15 wordSpacing5"><{html_radios name="data[truncate]" options=$AskAction checked=0 separator=""}></td>
+      </tr>      
+	  </tbody>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save_and_pub}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+jQuery(document).ready(function($) {
+	$("#JobtypeParentId").val("<{$item.parent_id|default:0}>");
+		$("#DataMethod").change( function() { 
+		$("#DataMethod1, #DataMethod2").toggle();
+	} 
+	);
+})
+</script>
+<{include file="footer.html"}>

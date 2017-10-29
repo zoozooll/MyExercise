@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+<style type="text/css">
+.red {color:red;}
+</style>
+</head>
+<body>
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+		<div class="bigpart">
+			<div class="title_uc"><h3>{echo: lp{m_iwant_pay};/}</h3></div>
+			<form action="do.php?act=user_order" method="post" name="form_profile">
+				<table width="98%" class="form_table">
+					<tr><td class="textright">{echo: lp{m_your_payid};/}：</td><td class="textleft">{echo: $order_info['payid'];/}</td></tr>
+					<tr><td class="textright">{echo: lp{m_order_amount};/}：</td><td class="textleft">￥{echo: $order_info['order_amount'];/}{echo: lp{m_yuan};/}</td></tr>
+					<tr><td class="textright">{echo: lp{m_payment_cho};/}：</td><td class="textleft">
+					{sta:foreach($payment_shop_info as $value)[loop]}
+						{sta:if(isset($payment_info[$value['pay_id']]))[loop]}
+					<a href="plugins/{echo:$payment_info[$value['pay_id']]['pay_code'];/}/index.php?id={echo: $order_info['order_id'];/}&pay_id={echo:$value['pay_id'];/}">{echo:$payment_info[$value['pay_id']]['pay_name'];/}
+					<img src="plugins/{echo:$payment_info[$value['pay_id']]['pay_code'];/}/logo.gif" height="30" /></a> <br /><br />
+						{end:if/}
+					{end:foreach/}
+					</td></tr>
+				</table>
+			</form>
+        </div>
+    </div>
+    <div class="clear"></div>
+    {inc: require("modules/footer.php");/}
+</body>
+</html>

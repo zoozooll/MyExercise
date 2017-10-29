@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="#FFFFFF">
+  <LinearLayout
+  android:id="@+id/talk_left_layout"
+  android:layout_marginTop="30dip"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+  <RadioButton 
+  android:id="@+id/bookshelf_class"
+  android:layout_height="wrap_content"
+  android:layout_width="wrap_content"
+  android:textColor="#000"
+  android:text="同学"
+  />
+  <RadioButton 
+  android:id="@+id/bookshelf_home"
+  android:layout_height="wrap_content"
+  android:layout_width="wrap_content"
+  android:textColor="#000"
+  android:text="家庭"
+  />
+  <RadioButton 
+  android:id="@+id/bookshelf_taecher"
+  android:layout_height="wrap_content"
+  android:layout_width="wrap_content"
+  android:textColor="#000"
+  android:text="老师"
+  />
+  <RadioButton 
+  android:id="@+id/bookshelf_friend"
+  android:layout_height="wrap_content"
+  android:layout_width="wrap_content"
+  android:textColor="#000"
+  android:text="好友"
+  />
+</LinearLayout>
+<GridView 
+android:id="@+id/bookshelfgiftedit_grid"
+  android:numColumns="3"
+  android:layout_height="wrap_content"
+  android:layout_width="fill_parent"
+/>
+<RelativeLayout
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_alignParentBottom="true"
+  android:layout_alignParentRight="true">
+<TextView 
+  android:id="@+id/bookshelf_ok"
+  android:layout_height="wrap_content"
+  android:layout_width="40dip"
+  android:layout_margin="5dip"
+  android:textColor="#000"
+  android:text="确定"
+/>
+</RelativeLayout>
+</RelativeLayout>

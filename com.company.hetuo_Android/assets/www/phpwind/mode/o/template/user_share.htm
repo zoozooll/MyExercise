@@ -1,0 +1,280 @@
+<!--<?php
+include_once PrintEot('m_header');
+include_once PrintEot('user_space');
+print <<<EOT
+-->
+<div id="content" class="fr">
+	<div style="padding-top:10px;">
+		<div class="cc p-info">
+            <h1><strong class="f24 blue"><a href="u.php?uid=$u">$username</a></strong> <span class="f24 gray">/</span> <span class="red b f16">分享</span> <span class="gray">( {$count}条 )</span></h1>
+        </div>
+        <div class="breadCrumb">
+        <a href="u.php?uid=$u" class="gray">&laquo;返回首页继续浏览</a>
+        </div>
+	</div>
+    <div id="content_main" class="fl">
+    <table width="100%">
+    	<tr><td height="600" style="padding-bottom:20px;vertical-align:top;">
+    	<div style="padding:0 10px;">
+        <div class="tabB cc mt10">
+            <ul>
+                <li id="a_self"><a href="{$basename}a=self">分享</a></li>
+<!--
+EOT;
+if($u == $winduid){
+print <<<EOT
+-->
+                <li id="a_my"><a href="{$basename}a=my">收藏</a></li>
+<!--
+EOT;
+}
+$b = $a;
+$u && $u != $winduid && $b = 'friend';
+print <<<EOT
+-->
+<script language="JavaScript">
+setCurrent('a_$b','a_self','current');
+</script>
+            </ul>
+        </div>
+        <div class="cc">
+                <div class="tab cc b" style="margin:10px 0 10px -10px;">
+                    <a id="type_all" href="{$basename}a=$a"><span>全部</span></a>
+<!--
+EOT;
+if($a == 'my'){
+$see == 'postfavor' && $type="postfavor";
+print <<<EOT
+-->
+            <a id="type_postfavor" href="{$basename}a=$a&see=postfavor"><span>帖子</span></a>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+            <a id="type_topic" href="{$basename}a=$a&type=topic"><span>帖子</span></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+                    <a id="type_user" href="{$basename}q=share&a=$a&type=user"><span>用户</span></a>
+<!--
+EOT;
+if($db_dopen){print <<<EOT
+-->
+                    <a id="type_diary" href="{$basename}a=$a&type=diary"><span>日志</span></a>
+<!--
+EOT;
+}if($db_phopen){print <<<EOT
+-->
+                    <a id="type_photo" href="{$basename}a=$a&type=photo"><span>照片</span></a>
+<!--
+EOT;
+}if($db_phopen){print <<<EOT
+-->
+                    <a id="type_album" href="{$basename}a=$a&type=album"><span>相册</span></a>
+<!--
+EOT;
+}if($db_groups_open){print <<<EOT
+-->
+                    <a id="type_group" href="{$basename}a=$a&type=group"><span>群组</span></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+                    <a id="type_video" href="{$basename}a=$a&type=video"><span>视频</span></a>
+                    <a id="type_music" href="{$basename}a=$a&type=music"><span>音乐</span></a>
+                    <a id="type_flash" href="{$basename}a=$a&type=flash"><span>flash</span></a>
+                    <a id="type_web" href="{$basename}a=$a&type=web"><span>网页</span></a>
+                </div>
+<script language="JavaScript">
+setCurrent('type_$type','type_all','current');
+</script>
+            <div class="dynamic dynamic-share">
+<!--
+EOT;
+if($shares){
+foreach($shares as $value){
+$author = "<a href=\"u.php?username=$value[username]\" class=\"blue\">$value[username]</a> ";
+print <<<EOT
+-->
+			<div class="title">
+<!--
+EOT;
+if($db_share_open && !$shareGM){
+print<<<EOT
+-->
+			<span class="fr"><a class="a-reply" href="{$basename}a=recommend&id=$value[id]" onclick="return ajaxurl(this,'read_$read[lou]');">推荐<span>+</span></a></span>
+<!--
+EOT;
+}
+if($winduid==$value[uid] || $groupid==3){
+print <<<EOT
+-->
+			<span class="fr"><a onclick="pwConfirm('是否确认删除',this,function(){delShare('$value[id]')})" style="cursor: pointer;" class="del">删除</a>&nbsp;&nbsp;&nbsp;</span>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+$author{$value[type_name]} <span class="gray small">$value[postdate]</span>
+</div>
+                <dl id="share_{$value[id]}" class="cc mb10">
+<!--
+EOT;
+if($value[icon]){
+print <<<EOT
+-->
+                    <dt><img src="$value[icon]" class="img-50" /></dt>
+<!--
+EOT;
+}print <<<EOT
+-->
+                    <dd class="lh24">
+                    <div>
+<!--
+EOT;
+if ($value[groupid] == 6 && $db_shield && $groupid != 3) {print <<<EOT
+-->
+                <span style="color:black;background-color:#ffff66">用户被禁言,该分享自动屏蔽!</span>
+<!--
+EOT;
+} else {print <<<EOT
+-->
+            <p class="f16">
+<!--
+EOT;
+if($value[type]=='video'){print <<<EOT
+-->
+                <img title="播放" style="cursor: pointer;" src="$pwModeImg/share_v.png" class="vthumb" onclick="javascript:showShare('$value[host]','$value[hash]',this,'$value[id]')"/>
+<!--
+EOT;
+}elseif($value[type]=='music'){print <<<EOT
+-->
+                <img title="播放" style="cursor: pointer;" src="$pwModeImg/music.png" onclick="javascript:showShare('$value[type]','$value[link]',this,'$value[id]')"/>
+<!--
+EOT;
+}elseif($value[type]=='flash'){print <<<EOT
+-->
+                <img title="播放" style="cursor: pointer;" src="$pwModeImg/musicplay.gif" onclick="javascript:showShare('$value[type]','$value[link]',this,'$value[id]')"/>
+<!--
+EOT;
+}elseif(in_array($value[type],array('user','group'))){print <<<EOT
+-->
+                <a href="$value[link]"><img src="$value[image]" width="100"/></a>
+<!--
+EOT;
+}elseif(in_array($value[type],array('photo','album'))){print <<<EOT
+-->
+                <a href="$value[link]"><img src="$value[image]" width="100"/></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+                $value[title]
+            </p>
+<!--
+EOT;
+if($value[descrip]){print <<<EOT
+-->
+            <span class="qutemini">$value[descrip]<img src="$imgpath/apps/quote-end.gif" align="absbottom" /></span>
+<!--
+EOT;
+}}print <<<EOT
+-->
+            </div>
+            <div id="com_share_$value[id]">
+                <a style="cursor: pointer;" onclick="javascript:showCommList('share','$value[id]','com_share_$value[id]',this)">回复({$value[c_num]})</a>
+            </div>
+            </dd>
+        </dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+        <div class="m10">$pages</div>
+<!--
+EOT;
+}elseif($article && $isU){print <<<EOT
+-->
+        <ul class="app-list-A">
+<!--
+EOT;
+foreach ($article as $key => $value) {print <<<EOT
+-->
+            <li>
+                <a href="read.php?tid=$value[tid]" target="_blank" class="b red f14">$value[subject]</a>
+                <p><a href="u.php?uid=$value[authorid]">$value[author]</a> <span>发表于：$value[postdate]</span><span>回复：$value[replies]</span><span>浏览：$value[hits]</span><span><a href="thread.php?fid=$value[fid]" target="_blank" class="gray">$value[forum]</a></span></p>
+                <p class="text">
+                </p>
+            </li>
+<!--
+EOT;
+}print <<<EOT
+-->
+        <div class="mt10">$pages</div>
+        </ul>
+<!--
+EOT;
+}else{
+if($a=='my'){print <<<EOT
+-->
+        暂无收藏信息
+<!--
+EOT;
+}else{print <<<EOT
+-->
+        暂无分享信息
+<!--
+EOT;
+}}print <<<EOT
+-->
+        </div>
+    </div>
+    	</div>
+        </td></tr>
+    </table>
+	</div>
+<!--
+EOT;
+if($see=='postfavor' && $isU){print <<<EOT
+-->
+        <div class="fr" id="sidebar">
+        	<div class="p10">
+                <h2>收藏分类</h2>
+                <ul>
+                    <li id="uf_all"><a href="{$basename}a=my&see=$see&ftype=0" id="ftype_all">所有分类</a></li>
+<!--
+EOT;
+foreach ($ftypeid as $key => $value) {
+$k = $key + 1;
+print <<<EOT
+-->
+                    <li id="uf_$k"><a href="{$basename}a=my&see=$see&ftype=$k" id="ftype_$k">$value</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+                    <li id="uf_def"><a href="{$basename}a=my&see=$see&ftype=-1" id="ftype_def">默认分类</a></li>	
+                </ul>
+        	</div>
+        </div>
+<script language="javascript">
+setCurrent('uf_$ftype','uf_all','current');
+</script>
+<!--
+EOT;
+}print <<<EOT
+-->
+</div>
+<script language="JavaScript">
+function ajaxurl(o) {
+	read.obj = o;
+	ajax.send(o.href,'',ajax.get);
+	return false;
+}
+</script>
+<script language="javascript" src="apps/$appdir/js/share.js"></script>
+<script language="JavaScript" src="js/app_comment.js"></script>
+<!--
+EOT;
+?>-->

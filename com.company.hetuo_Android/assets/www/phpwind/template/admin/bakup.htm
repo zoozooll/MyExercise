@@ -1,0 +1,206 @@
+<!--<?php
+include_once PrintEot('left');
+print <<<EOT
+-->
+<div class="admin_info mb10">
+    <h3 class="h1"><b>提示信息</b></h3>
+        <div class="legend">
+<!--
+EOT;
+if($admintype=='bakout'){
+ print <<<EOT
+-->
+           您可以根据自己的需要选择需要备份的数据库表,导出的数据文件可用"数据恢复"功能<br />为了数据安全,备份文件采用时间戳命名保存,如果备份数据超过设定的大小程序会自动采用分卷备份功能，请耐心等待直到程序提示全部备份完成<br />附件的备份只需手工转移附件目录和文件即可,风格备份也同! PHPWind不提供单独备份
+<!--
+EOT;
+}elseif($admintype=='bakin'){
+ print <<<EOT
+-->
+           本功能在恢复备份数据的同时,将覆盖原有数据,请确定是否需要恢复,以免造成数据损失<br />数据恢复功能只能恢复由当前版本导出的数据文件,其他软件导出格式可能无法识别<br />如果一个备份文件有多个分卷，您只需任选一个备份文件导入，程序会自动导入其他分卷
+<!--
+EOT;
+}print <<<EOT
+-->
+    </div>
+</div>
+<!--
+EOT;
+if($admintype=='bakout'){
+ print <<<EOT
+-->
+<form action="$basename&" method=post>
+<input type="hidden" name="action" value="bakout">
+<h2 class="h1"><b>数据库表</b></h2>
+<div class="admin_table mb10">
+    <table width="100%" align=center cellspacing="0" cellpadding="0">
+        <tr class="tr2 vt td_bgB">
+            <td width="30">ID</td>
+            <td>数据库表</td>
+            <td width="30">选择</td>
+        </tr>
+<!--
+EOT;
+$id=0;
+foreach($pwdb as $key=>$value){
+	$id++;
+print <<<EOT
+-->
+        <tr class="tr1 vt">
+            <td class="td2">$id</td>
+            <td class="td2">$value</td>
+            <td class="td2">
+<!--
+EOT;
+	if (isset($existTables[$value])) {
+print <<<EOT
+-->
+        	<input type="checkbox" name="tabledb[]" value="$tabledb[$key]" onclick="pwJsCheck(this)" />
+<!--
+EOT;
+	} else {
+print <<<EOT
+-->
+          	<font>已删</font>
+<!--
+EOT;
+	}
+print <<<EOT
+-->
+            </td>
+        </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+	</table>
+</div>
+<h2 class="h1"><b>分卷备份</b></h2>
+<div class="admin_table mb10">
+	<table width="100%" align=center cellspacing="0" cellpadding="0">
+        <tr class="tr1 vt">
+            <td class="td2"><input type="text" class="input input_wa" name="sizelimit" value="2048">&nbsp;每个分卷文件长度</td>
+        </tr>
+    </table>
+</div>
+<div class="mb10 tac">
+    <span class="bt"><span><button type="button" value="全 选" onclick="CheckAll(this.form)">全 选</button></span></span>
+    <span class="btn"><span><button type="submit">提 交</button></span></span>
+</div>
+</form>
+<form action="$basename&" method=post>
+<input type=hidden name="action" value="bakout">
+<h2 class="h1">非PHPWind数据库表 (站点插件或其他系统的数据库表)</h2>
+<div class="admin_table mb10">
+    <table width="100%" align=center cellspacing="0" cellpadding="0">
+        <tr class="tr2 vt td_bgB">
+            <td width="30">ID</td>
+            <td>数据库表</td>
+            <td width="30">选择</td>
+        </tr>
+<!--
+EOT;
+$id=0;
+foreach($otherdb as $value){
+$id++;print <<<EOT
+-->
+        <tr class="tr1 vt">
+            <td class="td2">$id</td>
+            <td class="td2">$value</td>
+            <td class="td2"><input type="checkbox" name="tabledb[]" value="$value" onclick="pwJsCheck(this)" /></td>
+        </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+	</table>
+</div>
+<h2 class="h1"><b>分卷备份</b></h2>
+<div class="admin_table mb10">
+    <table width="100%" align=center cellspacing="0" cellpadding="0">
+        <tr class="tr1 vt">
+            <td class="td2"><input type="text" class="input input_wa" name="sizelimit" value="2048"> 每个分卷文件长度</td>
+        </tr>
+    </table>
+</div>
+<div class="mb10 tac">
+    <span class="bt"><span><button type="button" value="全 选" onclick="CheckAll(this.form)">全 选</button></span></span>
+    <span class="btn"><span><button type="submit">提 交</button></span></span>
+</div>
+</form>
+<!--
+EOT;
+}elseif($admintype=='bakin'){
+if(!$action){print <<<EOT
+-->
+<form method="post" action="$basename">
+<input type="hidden" name="action" value="del">
+<h2 class="h1"><b>站点备份文件</b></h2>
+<div class="admin_table mb10">
+    <table width="100%" align=center cellspacing="0" cellpadding="0">
+    <tr class="tr2 vt td_bgB">
+        <td width="30">ID</td>
+        <td>文件名</td>
+        <td>版本</td>
+        <td>备份时间</td>
+        <td>卷号</td>
+        <td>导入</td>
+        <td width="30">删</td>
+    </tr>
+<!--
+EOT;
+foreach($filedb as $id=>$bakfile){
+$id++;
+print <<<EOT
+-->
+    <tr class="tr1 vt">
+        <td class="td2">$id</td>
+        <td class="td2"><a href="data/$bakfile[name]">$bakfile[name]</a></td>
+        <td class="td2">$bakfile[version]</td>
+        <td class="td2">$bakfile[time]</td>
+        <td class="td2">$bakfile[num]</td>
+        <td class="td2"><a href="$basename&action=bakincheck&pre=$bakfile[pre]">导入</a></td>
+        <td class="td2"><input name="delfile[]" type="checkbox" value="$bakfile[name]" onclick="pwJsCheck(this)" /></td>
+    </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+    </table>
+</div>
+<!--<input name="action" type="hidden" value="del">-->
+<div class="mb10 tac">
+    <span class="bt"><span><button type="button" name="chkall" onclick="CheckAll(this.form)">全 选</button></span></span>
+    <span class="btn"><span><button type="submit" name="delete" onclick="return checkset('此功能不可恢复,您确认要删除选中的备份文件！');">删除备份</button></span></span>
+</div>
+</form>
+<script language=JavaScript>
+function checkset(confirm_info)
+{
+	if(confirm(confirm_info)){
+		return true;
+	} else {
+		return false;
+	}
+}
+</script>
+<!--
+EOT;
+}elseif($action=='bakincheck'){
+print <<<EOT
+-->
+<form action="$basename&action=bakin&pre=$pre" method="post">
+<h2 class="h1"><b>提示信息</b></h2>
+<div class="admin_table mb10">
+    <table width="100%" cellspacing="0" cellpadding="0">
+        <tr class="tr1 vt">
+            <td class="td2"><font color="blue">备份恢复功能将覆盖原来的数据,您确认要导入备份数据！</font></td>
+            <td class="td2"><span class="bt2"><span><button type="submit">确认导入备份</button></span></span></td>
+        </tr>
+    </table>
+</div>
+<div class="mb10 tac"><span class="btn"><span><button type="pw_msg_back" onclick='javascript:history.go(-1);'>返回继续操作</button></span></span></div>
+</form>
+<!--
+EOT;
+}}include_once PrintEot('adminbottom');
+?>-->

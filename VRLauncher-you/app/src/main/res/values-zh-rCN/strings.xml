@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">VRLauncher</string>
+    <string name="launcher_icon_movie">视频</string>
+    <string name="launcher_icon_photo">图片</string>
+    <string name="launcher_icon_strore">商店</string>
+    <string name="launcher_icon_onlinevideo">在线视频</string>
+    <string name="launcher_icon_allapps">应用</string>
+    <string name="launcher_icon_settings">设置</string>
+
+    <string name="app_notfound">打开应用失败,请检查是否正确安装</string>
+    <string name="appmarket_notfound">打开应用商店失败,请检查是否正确安装</string>
+    <string name="tip_requesting">正在请求...</string>
+    <string name="update_app">发现新版本</string>
+    <string name="update_app_downloading">新版本下载中...</string>
+    <string name="tip_downloadsuccess">下载成功</string>
+    <string name="tip_cancelupdate">取消更新</string>
+    <string name="tip_update_error">下载出错</string>
+    <string name="tip_no_enough_space">空间不足,更新失败</string>
+    <string name="app_update_ok">马上更新</string>
+    <string name="app_update_cancel">暂不更新</string>
+</resources>

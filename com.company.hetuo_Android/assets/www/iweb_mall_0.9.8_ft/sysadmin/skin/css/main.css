@@ -1,0 +1,15 @@
+table a:link { color: #333; text-decoration:underline; }
+table a:visited { color: #333; text-decoration:underline; }
+table a:hover { color: #ff0000; text-decoration:underline; }
+table a:active { color: #37a1fa; text-decoration:underline; }
+
+body {background-color:#FBFBFB}
+
+.title {border:1px solid #E5E5E5; width:98%; margin: 10px auto 0px; background:#FBFBFB; height:35px; font-size:14px; font-weight:bold; line-height: 35px;}
+.title span.more{float:right; font-size:12px;}
+.title span.more a{border:1px solid #ccc; height:18px; padding:4px 6px; font-weight:200; background:#E5E5E5;}
+.title span{color:#9CACAF;}
+
+.oprate {border:1px solid #E5E5E5; width:98%; margin: 10px auto 0px; background:#FBFBFB;}
+.content {border:1px solid #E5E5E5; width:98%; margin: 10px auto 0px; background:#FBFBFB;}
+.copyright {border:1px solid #E5E5E5; width:98%; margin: 10px auto 0px; background:#FBFBFB; text-align:center; color:#9CACAF; line-height:35px; height:35px; }

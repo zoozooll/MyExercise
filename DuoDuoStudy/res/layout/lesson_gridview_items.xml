@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+<!-- top -->
+	<LinearLayout android:id="@+id/lesson_gridview_imglay"
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<ImageView android:id="@+id/lesson_gridview_imgres"
+			android:layout_width="wrap_content" 
+			android:layout_height="100dip"
+			android:src="@drawable/lesson" />
+	</LinearLayout>
+	
+<!-- center -->
+	<RelativeLayout android:id="@+id/lesson_gridview_txtlay"
+		android:layout_width="160dp" 
+		android:layout_height="wrap_content">
+		<LinearLayout 
+			android:id="@+id/lesson_study_content_layout"
+			android:orientation="vertical"
+			android:layout_width="160dp"
+		    android:layout_height="wrap_content">
+			<TextView android:id="@+id/lesson_study_content_title"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="2011寒假初一数学(上)："
+			    android:textColor="@color/black" 
+			    android:textSize="12sp"
+			    android:singleLine="true"
+			    android:ellipsize="end"/>
+			<TextView android:id="@+id/lesson_study_content"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="" 
+				android:textColor="@color/black" 
+				android:textSize="12sp"
+				android:singleLine="true"
+			    android:ellipsize="end"/>
+		</LinearLayout>
+	    <!-- center bottom -->
+		<LinearLayout android:id="@+id/lesson_study_teacher_layout"
+			android:layout_width="160dp" android:layout_height="wrap_content"
+			android:layout_below="@id/lesson_study_content_layout">
+			<TextView 
+				android:id="@+id/lesson_study_teacher_title"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="讲师：" 
+				android:textColor="@color/black"
+				android:textSize="12sp" 
+				android:singleLine="true"
+			    android:ellipsize="end"/>
+			<TextView 
+				android:id="@+id/lesson_study_teacher_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="" 
+				android:textColor="@color/black"
+				android:textSize="12sp" 
+				android:singleLine="true"
+			    android:ellipsize="end"/>
+		</LinearLayout>
+	</RelativeLayout>
+
+	<!-- <LinearLayout android:id="@+id/lesson_gridshare_layout"
+		android:layout_width="160dp" android:layout_height="wrap_content"
+		android:layout_below="@id/lesson_gridview_txtlay">
+		<ImageView android:id="@+id/lesson_gridshare_scan_img"
+			android:src="@drawable/scan"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<TextView android:id="@+id/lesson_gridshare_scan_text"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginRight="5dp"
+			android:text="5" android:textColor="@color/black"
+			android:textSize="12sp"/>
+		<ImageView android:id="@+id/lesson_gridshare_comment_img"
+			android:src="@drawable/comment" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:textSize="12sp"/>
+		<TextView android:id="@+id/lesson_gridshare_comment_text"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="1" android:textColor="@color/black" android:textSize="12sp"/>
+	</LinearLayout> -->
+
+</LinearLayout>

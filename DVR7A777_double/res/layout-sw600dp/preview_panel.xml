@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 左上侧预览布局 -->
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" >
+	<SurfaceView
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent" 
+	    android:id="@+id/surface_view" />
+	<TextView
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent" 
+	    android:id="@+id/view_starting_preview"
+	    android:text="@string/text_starting_preview"
+	    android:textColor="#ffffff"
+	    android:textSize="@dimen/textsize_starting_preview" 
+	    android:gravity="center"
+	    android:visibility="gone"/>
+	<LinearLayout
+		  android:layout_marginTop="0dp"
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content"
+		  android:orientation="horizontal"
+	      android:layout_marginLeft="@dimen/controlbar_layout_marginleft">
+      <TextView   
+	      android:layout_marginLeft="14dp"  
+	      android:textColor="#FF0000"
+	      android:layout_width="wrap_content"
+	      android:layout_height="fill_parent"
+	      android:text="@string/total_record_time"
+	      android:textSize="@dimen/recordText_size"
+	      android:layout_marginBottom="68dp"
+	      android:gravity="center"
+	      android:visibility="invisible"/> 
+	  <Chronometer 
+	      android:id="@+id/recordTime_run"
+          android:format="@string/chronometer_initial_format"
+	   	  android:layout_width="wrap_content"
+	      android:layout_height="fill_parent"
+	      android:textSize="@dimen/recordTime_size"
+	      android:textColor="#FF0000"
+	      android:layout_marginBottom="68dp"
+	      android:gravity="center" />
+	</LinearLayout>
+</FrameLayout>

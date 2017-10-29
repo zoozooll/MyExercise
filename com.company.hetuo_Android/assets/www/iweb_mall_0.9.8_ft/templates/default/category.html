@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{echo: $header['title'];/}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="{echo: $header['keywords'];/}" />
+<meta name="description" content="{echo: $header['description'];/}" />
+<base href="{echo: $baseUrl;/}" />
+<link href="skin/{echo: $SYSINFO['templates'];/}/css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="skin/{echo: $SYSINFO['templates'];/}/js/changeStyle.js"></script>
+</head>
+<body>
+<div id="wrapper">
+{inc: include("shop/index_header.php");/}
+<form name="category_form" id="category_form" method="POST" action="{echo: category_url($cat_id);/}">
+<input type="hidden" name="name" value="">
+<input type="hidden" name="order" value="">
+<!--header end -->
+<div class="path">{echo:lp{i_location};/}：<a href="index.php">{echo:lp{i_index};/}</a>{sta:if(isset($this_parent_info['cat_name']) && $this_parent_info['cat_name'])[exc]} > <a href="{echo: category_url($this_parent_info['cat_id']);/}">{echo: $this_parent_info['cat_name'];/}</a>{end:if/} > {echo: $this_catinfo['cat_name'];/}</div>
+{sta: if(isset($CATEGORY[$cat_id]) && $CATEGORY[$cat_id]) [exc]}
+<div class="pro_class" id="cate_id">
+	<div onclick="hidden('cate_id','cate')" style="cursor:pointer;"><h3>{echo:lp{i_choice_sort};/}</h3></div>
+	<dl>
+	{sta: foreach($CATEGORY[$cat_id] as $value)[loop]}
+		<dd><a title="{echo: $value['cat_name'];/}" href="{echo: category_url($value['cat_id']);/}">{echo: $value['cat_name'];/}({echo: $value['goods_num'];/})</a></dd>
+	{end:foreach/}    
+	</dl><div class="clear"></div>
+</div>
+{end:if/}
+{sta: if(isset($CATEGORY[$cat_id]) && $CATEGORY[$cat_id]) [exc]}
+<div class="pro_class" onclick="show('cate_id','cate')" id="cate" style="display:none;cursor:pointer;">
+	<h4>{echo:lp{i_choice_sort};/}</h4>
+</div>
+{end:if/}
+<br>
+{sta: if($attr_info) [exc]}
+{sta: foreach($attr_info as $key => $value)[loop]}
+<div class="pro_class" id="{echo: $value['attr_id'];/}">
+	<div style="cursor:pointer;" onclick="hidden('{echo: $value['attr_id'];/}','{echo: $value['attr_name'];/}')"><h3>{echo:lp{i_select};/}{echo: $value['attr_name'];/}{echo:lp{i_select_goods};/}</h3></div>
+	<dl>{sta: foreach($value['attr_values'] as $k => $v)[loop]}
+		<dd><a title="{echo: $v;/}" href="search.php?attr[{echo:$value['attr_id'];/}]={echo: $v;/}&cid={echo: $cat_id;/}">{echo: $v;/}({echo: $value['values_count'][$k];/})</a></dd>
+		{end:foreach/}
+	</dl><div class="clear"></div>
+</div>
+<div class="pro_class" onclick="show('{echo: $value['attr_id'];/}','{echo: $value['attr_name'];/}')" id="{echo: $value['attr_name'];/}" style="display:none;cursor:pointer;">
+	<h4>{echo:lp{i_select};/}{echo: $value['attr_name'];/}{echo:lp{i_select_goods};/}</h4>
+</div>
+<br>
+{end:foreach/}
+{end:if/}
+
+{sta: if(count($brand_list)>0) [exc]}
+<div class="pro_class" id="brand_box">
+	<div style="cursor:pointer;" onclick="hidden('brand_box','{echo:lp{i_select_products_by_brand};/}')"><h3>{echo:lp{i_select_products_by_brand};/}</h3></div>
+	<dl>{sta: foreach($brand_list as $key => $value)[loop]}
+		<dd><a title="{echo: $value['brand_name'];/}" href="search.php?brand_id={echo: $value['brand_id'];/}&cid={echo: $cat_id;/}">{echo: $value['brand_name'];/}</a></dd>
+		{end:foreach/}
+	</dl><div class="clear"></div>
+</div>
+<div class="pro_class" id="{echo:lp{i_select_products_by_brand};/}" onclick="show('brand_box','{echo:lp{i_select_products_by_brand};/}')" style="display:none;cursor:pointer;">
+	<h4>{echo:lp{i_select};/}{echo:lp{i_brand};/}{echo:lp{i_select_goods};/}</h4>
+</div>
+<br>
+{end:if/}
+
+<div class="top5 clear"></div>
+<div class="main2 left top5">
+	<div class="top">
+	  <span class="right"><a id="list" onclick="changeStyle2('list',this)" class="selected" href="javascript:void(0);" hidefocus="true">{echo:lp{i_list};/}</a><a id="window" onclick="changeStyle2('window',this)" href="javascript:void(0);" hidefocus="true">{echo:lp{i_show_window};/}</a></span>
+	  <h2><a href="#">{echo:lp{i_choice_good};/}</a></h2>
+	</div>
+	<div id="listcontent" class="c_m">
+		<ul>
+			<li class="list_item_title">
+				<ul>
+				<li class="operate">{echo:lp{i_handle};/}</li>
+				<li class="place">{echo:lp{i_in_area};/}</li>
+				<li class="price">{echo:lp{i_price};/}
+				<a href="javascript:void(0);" onclick="order_byorder_name('goods_price','asc')"> ↑ </a>
+				<a  href="javascript:void(0);" onclick="order_byorder_name('goods_price','desc')"> ↓ </a></li>
+				<li class="summary">{echo:lp{i_g_shop_info};/}</li>
+				</ul>
+			</li>
+			{sta: if($result['result']) {
+				foreach($result['result'] as $v) [loop]}
+			<li class="list_item" id="showli_{echo:$v['goods_id'];/}">
+              <div class="photo"><a href="{echo: goods_url($v['goods_id']);/}"><img onmouseover="showbox({echo:$v['goods_id'];/})" onmouseout="hidebox({echo:$v['goods_id'];/})" src="{echo: $v['is_set_image'] ? $v['goods_thumb'] : 'skin/default/images/nopic.gif';/}" alt="{echo: $v['goods_name'];/}"  width="{echo:$SYSINFO['width1'];/}" height="{echo:$SYSINFO['height1'];/}" /></a></div>
+              <div class="summary">
+                <h3><a href="{echo: goods_url($v['goods_id']);/}">{echo: sub_str($v['goods_name'],40);/}</a></h3>
+                <p>[{echo: $i_langpackage->i_info;/}]{echo: sub_str(strip_tags($v['goods_intro']),80);/}</p>
+                <p><span class="left">{echo: $i_langpackage->i_shop;/}：<a href="{echo: shop_url($v['shop_id']);/}">{echo: $v['shop_name'];/}</a></span>
+				{sta: if($v['rank_id']>2)[exc]}
+				<a href="javascript:;" title="{echo:lp{i_approve_company};/}"  class="shop_cert left">{echo:lp{i_approve_company};/}</a>
+				{sta: } else[exc]}
+				<a href="javascript:;" title="{echo:lp{i_noapprove_company};/}"  class="shop_cert2 left">{echo:lp{i_noapprove_company};/}</a>
+				{end:if/}</p>
+              </div>
+			  <ul class="attribute">
+			    <li class="operate"><a class="more" href="{echo: goods_url($v['goods_id']);/}">{echo:lp{i_particular};/}</a><a class="buy" href="modules.php?app=user_order&gid={echo:$v['goods_id'];/}&v=1">{echo:lp{i_buy};/}</a><a class="more" href="javascript:;" onclick="initFloatTips('{echo:$v['goods_id'];/}','{echo:sub_str($v['goods_name'],10);/}',1)">对比</a></li>
+			    <li class="place">{echo: $areainfo[$v['shop_province']];/}.{echo: $areainfo[$v['shop_city']];/}<br /><script src="imshow.php?u={echo: $v['user_id'];/}"></script></li>
+			    <li class="price">￥{echo: $v['goods_price']=='0.00' ? $i_langpackage->i_price_discuss : $v['goods_price'];/}</li>
+		      </ul>
+              <div class="showbox" id="showbox_{echo:$v['goods_id'];/}" style="display:none">
+				<div class="subbox"><img id="showimg_{echo:$v['goods_id'];/}" src="{echo: $v['is_set_image'] ? $v['goods_thumb'] : 'skin/default/images/nopic.gif';/}" width="234" height="234" alt="{echo:lp{i_loading_img};/}" /> </div>
+			  </div>
+		  </li>
+			{end:foreach/}
+		{sta: }else [exc]}
+			<li>{echo:lp{i_no_goods};/}！</li>
+		{end:if/}
+		</ul>
+	<div class="page"><span>{echo: str_replace("{num}",$result['countnum'],$i_langpackage->i_page_num);/}</span><a href="{echo: category_url($cat_id,$result['firstpage']);/}" >{echo: $i_langpackage->i_page_first;/}</a><span><a href="{echo: category_url($cat_id,$result['prepage']);/}">{echo: $i_langpackage->i_page_pre;/}</a></span><a href="{echo: category_url($cat_id,$result['nextpage']);/}" >{echo: $i_langpackage->i_page_next;/}</a><a href="{echo: category_url($cat_id,$result['lastpage']);/}" >{echo: $i_langpackage->i_page_last;/}</a><span>{echo: $i_langpackage->i_page_now;/}{echo: $result['page'];/}/{echo: $result['countpage'];/}</span><span>{echo: str_replace("{num}",$result['countpage'],$i_langpackage->i_page_count);/}</span></div>
+	</div>
+</div>
+
+<!-- main end -->
+<div class="main_right2 left10 top5">
+    <div class="recommend2">
+        <div class="head_line"><div class="bg_left"></div><div class="bg_right"></div></div>
+        <div class="top"><h2 class="highlight">{echo:lp{i_boutique};/}</h2><span class="right"><a href="search.php?best=1">{echo:lp{i_more};/}>></a></span></div>
+        <div class="c_m">
+        	<ul>
+              {sta: foreach($goods_best as $value) [loop]}
+			    <li><a href="{echo: goods_url($value['goods_id']);/}"><img src="{echo: $value['is_set_image'] ? $value['goods_thumb'] : 'skin/default/images/nopic.gif';/}" alt="{echo: $value['goods_name'];/}" /> <span>{echo: sub_str($value['goods_name'],20,false);/}</span></a><label>￥{echo: $value['goods_price'];/}{echo:lp{i_yan};/}</label></li>
+			  {end:foreach/}
+			</ul>
+        </div>
+	</div>
+    <div class="rank">
+        <div class="head_line"><div class="bg_left"></div><div class="bg_right"></div></div>
+        <div class="top"><h2 class="highlight">{echo:lp{i_hot};/}</h2><span class="right"><a href="search.php?hot=1">{echo:lp{i_more};/}>></a>&nbsp;</span></div>
+        <div class="c_m">
+		<ul id="promote_goods" class="cls clear">
+		{sta:$i=1;/}
+		{sta: foreach($goods_hot as $value)[loop]}
+			<li onmouseover="promote_change(this)"><span class="num">{echo:$i;/}</span><a href="{echo: goods_url($value['goods_id']);/}"><img height="60" width="60" src="{echo: $value['is_set_image'] ? $value['goods_thumb'] : 'skin/default/images/nopic.gif';/}" alt="{echo: $value['goods_name'];/}" /> <span title="{echo: $value['goods_name'];/}">{echo: sub_str($value['goods_name'],14,false);/}</span></a><div class="price"><span>￥{echo:$value['goods_price'];/}</span></div></li>
+			{sta:$i++;/}
+		{end:foreach/}
+		</ul>
+		</div>
+	</div>
+    <div class="recommend2">
+        <div class="head_line"><div class="bg_left"></div><div class="bg_right"></div></div>
+        <div class="top"><h2 class="highlight">{echo:lp{i_new};/}</h2></div>
+        <div class="c_m">
+        	<ul>
+			{sta: foreach($goodshistory as $value)[loop]}
+              <li><a href="{echo: goods_url($value['goods_id']);/}"><img src="{echo: $value['is_set_image'] ? $value['goods_thumb'] : 'skin/default/images/nopic.gif';/}" /></a><a class="pro_name" href="{echo: goods_url($value['goods_id']);/}">{echo: sub_str($value['goods_name'],20,false);/}</a><label>￥{echo:$value['goods_price'];/}</label></li>
+			{end:foreach/}
+        	</ul>
+        </div>
+	</div>
+</div>
+<!--main right end-->
+{inc: require("shop/index_footer.php");/}
+<!--footer end-->
+</div>
+</form>
+<div id="contrastbox" style="z-index:999;position:absolute;right:0; border:1px solid #f1f1f1; background:#fff; width:188px;margin-right:10px;padding:10px 0 12px 13px; ">
+	<form action="modules.php?app=contrast" method="POST" target="_blank" id="contrastform">
+		<input type="hidden" name="contrast_goods_num" id="contrast_goods_num" value="0" />
+		<input type="hidden" name="contrast_goods_id" id="contrast_goods_id" value="" />
+		<input type="hidden" name="contrast_goods_name" id="contrast_goods_name" value="" />
+		<div id="contrast_goods_name_show"></div>
+		<!--<input type="submit" name="sub" value="对比" /> -->
+        <div class="control"><a onclick="document.getElementById('contrastform').submit();return false;" href="javascript:;" class="button_4">开始比较</a>
+        </div>
+	</form>
+</div>
+<script language="JavaScript" src="servtools/ajax_client/ajax.js"></script>
+<script language="JavaScript">
+<!--
+function showbox(id) {
+	document.getElementById("showli_"+id).className = "list_item now";
+	document.getElementById("showbox_"+id).style.display = '';
+	var showimg = document.getElementById("showimg_"+id);
+	if(showimg.alt=='{echo:lp{i_loading_img};/}') {
+		ajax("do.php?act=goods_get_imgurl","POST","id="+id,function(data){
+			if(data) {
+				showimg.src = data;
+				showimg.alt = '';
+			}
+		});
+	}
+}
+function hidebox(id) {
+	document.getElementById("showli_"+id).className = "list_item";
+	document.getElementById("showbox_"+id).style.display = 'none';
+}
+function order_byorder_name(name,order) {
+//	alert('123');
+	document.getElementsByName("name")[0].value = name;
+	document.getElementsByName("order")[0].value = order;
+	var category_form = document.forms['category_form'];
+	setTimeout(doSubmit,0)
+}
+function doSubmit(){
+	var category_form = document.getElementById('category_form');
+	category_form.submit();
+}
+function hidden(DIV,div){
+	document.getElementById(DIV).style.display = 'none';
+	document.getElementById(div).style.display = 'block';
+}
+function show(DIV,div){
+	document.getElementById(DIV).style.display = 'block';
+	document.getElementById(div).style.display = 'none';
+}
+</script>
+<script language="JavaScript" type="text/javascript">
+var tips; var theTop = 145/*这是默认高度,越大越往下*/;
+var old = theTop;
+function initFloatTips(goodsid,goodsname,action) {
+	tips = document.getElementById('contrastbox');
+	document.getElementById('contrastbox').style.display="";
+	var goods_num = parseInt(document.getElementById('contrast_goods_num').value);
+	var goods_id = document.getElementById('contrast_goods_id').value;
+	var goods_name= document.getElementById('contrast_goods_name').value;
+	var goods_name_show= document.getElementById('contrast_goods_name_show');
+	var goods_id_arr = goods_id.split(",");
+	var goods_name_arr = goods_name.split(",");
+	if(action==1){
+		if(goods_num<5){
+			var same_num=0;
+			for(i=0;i<goods_id_arr.length;i++){
+				if(goods_id_arr[i]==goodsid){
+					same_num++;
+				}
+			}
+			if(same_num>0){
+				alert("已经选择了此商品");
+			}else{
+				document.getElementById('contrast_goods_id').value+=goodsid+",";
+				document.getElementById('contrast_goods_name').value+=goodsname+",";
+				document.getElementById('contrast_goods_num').value=parseInt(goods_num+1);
+			}
+		}else{
+			alert("只能同时对比5个商品");
+		}
+	}
+	if(action==0){
+		var str="";
+		var namestr="";
+		for(i=0;i<goods_id_arr.length;i++){
+			if(goods_id_arr[i]!=goodsid&&goods_id_arr[i]!=''){
+				str+=goods_id_arr[i]+",";
+				namestr+=goods_name_arr[i]+",";
+			}
+		}
+		document.getElementById('contrast_goods_id').value=str;
+		document.getElementById('contrast_goods_name').value=namestr;
+	}
+
+	var goods_id_arr = document.getElementById('contrast_goods_id').value.split(",");
+	var goods_name_arr = document.getElementById('contrast_goods_name').value.split(",");
+	goods_name_show.innerHTML="";
+	for(i=0;i<goods_id_arr.length-1;i++){
+		goods_name_show.innerHTML+="<li>" + "<span><a href='javascript:;' onclick=\"initFloatTips('"+goods_id_arr[i]+"','"+goods_name_arr[i]+"',0)\"></a></span>" + goods_name_arr[i]+"</li>";
+	}
+	document.getElementById('contrast_goods_num').value=goods_id_arr.length-1;
+	if(document.getElementById('contrast_goods_num').value==0){
+		document.getElementById('contrastbox').style.display="none";
+	}
+	moveTips();
+}
+function moveTips() {
+	var tt=55;
+	if (window.innerHeight) {
+		pos = window.pageYOffset
+	}else if (document.documentElement && document.documentElement.scrollTop) {
+		pos = document.documentElement.scrollTop
+	}else if (document.body) {
+		pos = document.body.scrollTop;
+	}
+	pos=pos-tips.offsetTop+theTop;
+	pos=tips.offsetTop+pos/10;
+	if (pos < theTop) {
+		pos = theTop
+	}
+	if (pos != old) {
+		tips.style.top = pos+"px";
+		tt=10;
+	}
+	old = pos;
+	setTimeout(moveTips,tt);
+}
+</script>
+</body>
+</html>

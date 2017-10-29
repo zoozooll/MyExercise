@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="match_parent"
+	android:layout_height="fill_parent" android:orientation="vertical"
+	android:id="@+id/con" android:background="@color/darkcyan">
+	<include layout="@layout/include_shop_top" />
+	<!-- 表格头部 -->
+	<ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:background="@drawable/bookshelf_maincontent_top" android:layout_marginTop="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+	<include android:id="@+id/lvwOrderListHead" layout="@layout/shop_orderlist_listtop"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+	<com.iskyinfor.duoduo.ui.custom.page.PageListView
+		android:id="@+id/orderList" android:headerDividersEnabled="false" 
+		android:layout_height="fill_parent" android:layout_width="fill_parent" 
+		android:layout_weight="1" android:cacheColorHint="@drawable/transparent"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+		android:background="@drawable/white"/>
+	<TextView android:visibility="gone" android:text="没有找到相关数据"
+		android:id="@+id/android:empty" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_weight="1" 
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+		android:background="@drawable/white"/>
+	<ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:background="@drawable/bookshelf_maincontent_buttom" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+		/>
+	<include layout="@layout/download_bottom_item"/>
+</LinearLayout>

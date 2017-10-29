@@ -1,0 +1,498 @@
+/* */
+#page {margin-left:auto;margin-right:auto;width:950px;}
+li{list-style:none;}
+.item-list  {color:#808080;margin:15px auto 10px;position:;}
+.item-list th.price {text-align:right;}
+.item-list-hd {height:25px;}
+.item-list-tabs {left:20px;position:relative;}
+.item-list-tabs li {background:url("../../images/beauty/tabview_bg.gif") no-repeat scroll 0 6px transparent;
+cursor:pointer;
+float:left;
+height:27px;
+line-height:21px;
+margin-right:3px;
+padding-top:4px;
+position:relative;
+text-align:center;
+width:130px;
+}
+.item-list-tabs .current {
+background-position:0 -40px;
+}
+.item-list-tabs .current a {
+color:#333333;
+font-weight:bold;
+}
+.item-list-tabs .current a:hover {
+cursor:default;
+text-decoration:none;
+}
+.item-list-tabs a {
+color:#111111 !important;
+display:block;
+width:130px;
+}
+.item-list-tabs-flexible {
+float:left;
+margin-top:-2px;
+}
+.item-list-tabs-flexible li, .item-list-tabs-flexible li a {
+background:url("../../images/beauty/tabview_bg_flexible.png") no-repeat scroll 0 0 transparent;
+}
+.item-list-tabs-flexible li {
+background-position:0 4px;
+height:29px;
+width:auto;
+}
+.item-list-tabs-flexible li a {
+background-position:right -24px;
+float:left;
+height:24px;
+padding:0 12px;
+width:auto;
+}
+.item-list-tabs-flexible .current {
+background-position:0 -47px;
+}
+.item-list-tabs-flexible .current a {
+background-color:transparent;
+background-position:right -75px;
+height:24px;
+margin-top:-3px;
+padding-top:3px;
+}
+.item-list-bd {border-top:1px solid #AED2FF;left:0;}
+.item-list-bd table {
+border-collapse:collapse;
+table-layout:fixed;
+}
+.item-list-bd th {
+background:url("../../images/beauty/itemlist_bg.gif") repeat-x scroll 0 0 transparent;
+border-bottom:1px solid #AEC7E5;
+color:#000000;
+height:29px;
+text-align:center;
+}
+.item-list-bd th.order-price em {
+background:url("../../images/beauty/price-editor-tip.png") no-repeat scroll 0 0 transparent;
+height:27px;
+margin-left:-179px;
+margin-top:22px;
+padding:8px 0 0 3px;
+position:absolute;
+text-align:left;
+width:220px;
+z-index:1;
+}
+.item-list-bd th.order-price em a {
+height:8px;
+overflow:hidden;
+position:absolute;
+right:6px;
+text-indent:-999em;
+top:14px;
+width:8px;
+}
+.item-list-col0 {
+width:20px;
+}
+.item-list-col1 {
+width:88px;
+}
+.item-list-col2 {
+width:120px;
+}
+.item-list-col3 {
+width:130px;
+}
+.item-list-col4 {
+width:65px;
+}
+.item-list-col5 {
+width:30px;
+}
+.item-list-col6 {
+width:110px;
+}
+.item-list-col7 {
+width:100px;
+}
+.item-list-col8 {
+width:90px;
+}
+.item-list-col9 {
+width:55px;
+}
+.item-list .item-list-bd table {
+width:100%;
+}
+.item-list td {
+line-height:130%;
+overflow:hidden;
+padding:8px 5px;
+text-align:center;
+}
+.item-list .desc img {
+vertical-align:middle;
+}
+.item-list .price {
+padding-right:5px;
+text-align:right;
+}
+.item-list .act td {
+padding:2px 0 0;
+}
+.item-list .operations {
+background:none repeat scroll 0 0 #F3F3F3;
+border-color:#DEDEE0;
+border-style:solid;
+border-width:1px 0;
+height:28px;
+line-height:28px;
+position:relative;
+text-align:left;
+}
+.item-list .operations .show-hidden-orders {
+position:absolute;
+right:0;
+top:0;
+}
+.item-list .operations .show-hidden-orders label {
+margin-left:4px;
+}
+.memo-flag  {
+left:0;
+top:-1px;
+}
+.item-list .all-selector, .item-list .selector {
+margin:0 8px 0 6px;
+}
+.item-list .operations label {
+color:#404040;
+margin-right:18px;
+}
+.item-list .operations a {
+padding:0 10px;
+}
+.item-list .operations .page-nav {
+position:absolute;
+right:4px;
+top:3px;
+}
+.item-list .operations .page-nav a {
+padding:0 6px;
+}
+tr.order-hd td {
+padding:5px 0;
+}
+td.contact a.nickname {
+word-wrap:break-word;
+}
+td.contact .name {
+display:block;
+margin:2px auto;
+}
+td.trade-status {
+padding:8px 0;
+}
+td.trade-status a, td.remark a {
+display:block;
+margin:2px auto;
+}
+td.trade-status .status {
+font-weight:normal;
+}
+.order-item td.order-price strong {
+color:#404040;
+font-size:12px;
+font-weight:bold;
+}
+td.order-price a.modify-price {
+display:block;
+margin:2px auto;
+}
+/* */
+#topnav .quick-links .add a, #topnav, #topnav .guid, #topnav .guid li.selected, #topnav .guid li.selected a, #topnav .switch-oldver {
+background:url("../../images/beauty/v4_bg.png") no-repeat scroll 2000px 2000px transparent;
+}
+#topnav {
+background-color:#4588CE;
+background-position:right -222px;
+background-repeat:repeat-x;
+border-bottom:3px solid #4388CE;
+margin:10px 0 1px;
+position:relative;
+}
+#topnav:after {
+clear:both;
+content:" ";
+display:block;
+height:0;
+}
+#topnav .guid {
+background-color:#FFFFFF;
+background-position:0 -251px;
+height:28px;
+width:600px;
+}
+#topnav .guid li {
+float:left;
+height:27px;
+line-height:27px;
+padding-bottom:1px;
+position:relative;
+}
+#topnav .guid li a {
+color:#404040;
+display:block;
+font-weight:bold;
+padding:0 15px;
+}
+#topnav .guid li a:hover {
+text-decoration:none;
+}
+#topnav .guid li em {
+color:#FF6600;
+font-weight:normal;
+}
+#topnav .guid li.selected {
+background-position:0 0;
+background-repeat:repeat-x;
+border:medium none;
+color:#FFFFFF;
+}
+#topnav .guid li.selected a {
+background-position:right -50px;
+background-repeat:no-repeat;
+border:medium none;
+}
+#topnav .guid li.selected a, #topnav .guid li.selected span {
+color:#FFFFFF;
+}
+#topnav .quick-links {
+overflow:hidden;
+position:absolute;
+right:100px;
+top:7px;
+}
+#topnav .quick-links li {
+float:left;
+margin:0 0 0 15px;
+}
+#topnav .quick-links a {
+color:#333333;
+}
+#topnav .quick-links .add a {
+background-position:-940px -547px;
+padding:0 0 0 16px;
+}
+#topnav .switch-oldver {
+color:#404040;
+height:28px;
+line-height:28px;
+position:absolute;
+right:0;
+top:0;
+width:73px;
+}
+#topnav .phpshop-status {
+left:405px;
+top:4px;
+z-index:2;
+}
+/* */
+#phpshop-panel .main-wrap #main-content  {background:none repeat scroll 0 0 #FFFFFF;padding:0px;}
+/* */
+.col-main {
+float:left;
+min-height:1px;
+width:762px;
+}
+
+#phpshop-panel .col-sub { float:left;width:188px;}
+
+#phpshop-panel .main-wrap #main-content, .box-diamond .phpshop-bd, .box-diamond-white .phpshop-bd {
+background-color:#FFFFFF;
+border:1px solid #C4D5E0;
+}
+
+/* */
+#phpshop-menu .menu-box {
+background:none repeat scroll 0 0 #FDFEFF;
+margin-top:-1px;
+overflow:hidden;
+padding:0;
+}
+
+#phpshop-menu {
+position:relative;
+}
+#phpshop-menu .phpshop-rc-tp, #phpshop-menu .phpshop-rc-bt {
+display:none;
+}
+#phpshop-menu .phpshop-bd {
+-moz-box-shadow:2px 2px 3px #E9E9E9;
+padding:0;
+}
+#phpshop-menu .phpshop-bd:after {
+clear:both;
+content:" ";
+display:block;
+height:0;
+}
+
+#phpshop-menu .phpshop-bar {
+background-color:#FFFFFF;
+border-color:#C4D5DF;
+border-style:solid;
+border-width:1px 0;
+cursor:pointer;
+height:28px;
+line-height:28px;
+margin:0;
+padding:0;
+position:relative;
+width:100%;
+}
+
+#phpshop-menu .menu-box:after {
+clear:both;
+content:" ";
+display:block;
+height:0;
+}
+#phpshop-menu .menu-box a {
+color:#414141;
+}
+#phpshop-menu .phpshop-bar {
+background-color:#FFFFFF;
+border-color:#C4D5DF;
+border-style:solid;
+border-width:1px 0;
+cursor:pointer;
+height:28px;
+line-height:28px;
+margin:0;
+padding:0;
+position:relative;
+width:100%;
+}
+.phpshop-bar span, .phpshop-bar-grey span {
+background:url("../../images/beauty/v4_bg.png") repeat-x scroll 0 -100px #F0F5F9;
+display:block;
+font-size:12px;
+font-weight:bold;
+line-height:26px;
+margin:1px;
+padding-left:22px;
+}
+#phpshop-menu .phpshop-bar button.menu-open, #phpshop-menu .phpshop-bar button.menu-close {
+background:url("../../images/beauty/v4_bg.png") no-repeat scroll 2000px 2000px transparent;
+border:0 none;
+cursor:pointer;
+height:10px;
+left:6px;
+overflow:hidden;
+position:absolute;
+text-indent:-999em;
+top:9px;
+width:10px;
+}
+#phpshop-menu .phpshop-bar button.menu-open {
+background-position:-20px -200px;
+}
+#phpshop-menu .phpshop-bar button.menu-close {
+background-position:0 -200px;
+}
+#phpshop-menu .group {
+clear:both;
+margin:6px 5px 10px;
+}
+#phpshop-menu .group:after {
+clear:both;
+content:" ";
+display:block;
+height:0;
+}
+#phpshop-menu .group li {
+clear:both;
+float:left;
+padding:3px 0;
+width:100%;
+}
+#phpshop-menu .group li.hidden {
+}
+#phpshop-menu #account .group li a, #phpshop-menu .group li span a, #phpshop-menu .group li ul li a {
+background:url("../../images/beauty/v4_bg.png") no-repeat scroll 2000px 2000px transparent;
+display:block;
+font-size:12px;
+height:20px;
+line-height:20px;
+}
+#phpshop-menu #account .group li a, #phpshop-menu .group li span a {
+padding-left:18px;
+}
+#phpshop-menu .group li ul {
+margin-left:0;
+overflow:hidden;
+}
+#phpshop-menu .group li ul li {
+padding:6px 0 0;
+}
+#phpshop-menu .group li ul li a {
+display:block;
+padding-left:30px;
+}
+#phpshop-menu .group li.selected span, #phpshop-menu .group li.selected span a {
+background-color:#498CD0;
+background-position:0 -150px;
+color:#FFFFFF;
+}
+#phpshop-menu #account .group li.selected a, #phpshop-menu .group li ul li.selected a {
+background-color:#498CD0;
+background-position:0 -150px;
+color:#FFFFFF;
+}
+#phpshop-menu #account .group li a:hover, #phpshop-menu .group li span a:hover, #phpshop-menu .group li ul li a:hover {
+background-color:#DEE7ED;
+background-position:-163px -150px;
+}
+#phpshop-menu #account .group li.selected a:hover, #phpshop-menu .group li.selected span a:hover, #phpshop-menu .group li ul li.selected a:hover {
+background-color:#498CD0;
+background-position:0 -150px;
+}
+
+#phpshop-menu .group li#show-seller-more a, #phpshop-menu .group li#show-seller-more span {
+background:url("../../images/beauty/v4_bg.png") no-repeat scroll 2000px 2000px transparent;
+display:block;
+}
+#phpshop-menu .group li#show-seller-more a {
+border:1px solid #C4D5DD;
+cursor:pointer;
+display:inline-block;
+height:15px;
+margin:2px 0 0 17px;
+outline:medium none;
+overflow:hidden;
+width:43px;
+}
+#phpshop-menu .group li#show-seller-more a:hover {
+text-decoration:none;
+}
+#phpshop-menu .group li#show-seller-more span {
+line-height:15px;
+padding-left:4px;
+}
+#phpshop-menu .group li#show-seller-more span.show-less {
+background-position:-55px -200px;
+}
+#phpshop-menu .group li#show-seller-more span.show-more {
+background-position:-55px -220px;
+}
+a {
+color:#3366CC;
+text-decoration:none;
+}
+#phpshop-panel .main-wrap #main-content{background-color:#FFFFFF;border:1px solid #C4D5E0; min-height:676px;}
+.box-diamond .phpshop-bd, .box-diamond-white .phpshop-bd {background-color:#FFFFFF;border:1px solid #C4D5E0; min-height:676px;}
+#phpshop-menu #account .group li a, #phpshop-menu .group li span a {padding-left:18px;}

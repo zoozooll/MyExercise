@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:pageview="http://schemas.android.com/apk/res/com.iskyinfor.duoduo"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  
+<LinearLayout android:id="@+id/teacher_show_data_layout"
+android:orientation="vertical" android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+  <com.iskyinfor.duoduo.ui.custom.page.PageListView
+		android:id="@+id/duoduo_teacher_listview_fourth" 
+		android:background="@color/white"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip"
+		android:cacheColorHint="#ffffff"
+		pageview:itemPageCount="9" />
+	<ImageView
+	    android:id="@+id/imgs_page"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="20dip"
+		android:background="@drawable/bookshelf_maincontent_top"/>
+</LinearLayout>
+<com.iskyinfor.duoduo.ui.custom.page.PageListView
+	android:id="@+id/duoduo_teacher_gridview_fourth"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:cacheColorHint="#ffffff"
+	pageview:itemPageCount="3"
+	android:visibility="gone"/>
+</FrameLayout>

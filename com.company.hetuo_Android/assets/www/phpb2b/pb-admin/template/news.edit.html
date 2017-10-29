@@ -1,0 +1,133 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_industry_news}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_industry_news}></h3> 
+    <ul class="subnav">
+		<li><a href="news.php"><{$_management}></a></li>
+        <li><a class="btn1" href="news.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+        <li><a href="newstopic.php"><{$_topic_news}></a></li>
+        <li><a href="newstype.php"><{$_sorts}></a></li>
+		<li><a href="newsgather.php">采集</a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" action="news.php" id="EditFrm" name="edit_frm" enctype="multipart/form-data">
+  <input type="hidden" name="id" value="<{$item.id}>" />
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> <{$_title_n}></th>
+        <td class="paddingT15 wordSpacing5">          
+		<input name="data[news][title]" value="<{$item.title}>" /></td>
+      </tr>      
+      <tr>
+        <th class="paddingT15"> 资讯类别：</th>
+        <td class="paddingT15 wordSpacing5">
+        <select name="data[news][type_id]" id="NewsTypeId">
+        <option value="0"><{$_pls_select}></option>
+        <{$NewstypeOptions}>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15">flag值：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[news][flag]" value="<{$item.flag}>" type="text" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 地区分类：</th>
+        <td class="paddingT15 wordSpacing5">
+        <select name="data[news][area_id]" id="NewsAreaId">
+        <option value="0">无</option>
+        <optgroup label="一级地区">
+        <{foreach from=$CacheAreas[1] key=key1 item=item1}>
+        <option value="<{$key1}>" <{if $key1==$item.area_id}>selected="selected"<{/if}>><{$item1}></option>
+        <{/foreach}>
+        </optgroup>
+        <optgroup label="二级地区">
+        <{foreach from=$CacheAreas[2] key=key2 item=item2}>
+        <option value="<{$key2}>" <{if $key2==$item.area_id}>selected="selected"<{/if}>><{$item2}></option>
+        <{/foreach}>
+        </optgroup>
+        </select>
+       </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 行业分类：</th>
+        <td class="paddingT15 wordSpacing5">
+        <select name="data[news][industry_id]" id="NewsIndustryId">
+        <option value="0">无</option>
+        <optgroup label="一级分类">
+        <{foreach from=$CacheIndustries[1] key=key3 item=item3}>
+        <option value="<{$key3}>" <{if $key3==$item.industry_id}>selected="selected"<{/if}>><{$item3}></option>
+        <{/foreach}>
+        </optgroup>
+        <optgroup label="二级分类">
+        <{foreach from=$CacheIndustries[2] key=key4 item=item4}>
+        <option value="<{$key4}>" <{if $key4==$item.industry_id}>selected="selected"<{/if}>><{$item4}></option>
+        <{/foreach}>
+        </optgroup>
+        </select>
+       </td>
+      </tr>
+	  <{if $item.type==1 or $smarty.get.action=="convert"}>
+	  <input type="hidden" name="data[news][type]" value="1" />      
+	  <tr>
+        <th class="paddingT15"> 内容或链接地址：</th>
+        <td class="paddingT15 wordSpacing5"><input type="text" name="data[news][content]" value="<{$item.content}>" /></td>
+      </tr>
+	  <{else}>
+      <tr>
+        <th class="paddingT15">文章来源：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[news][source]" value="<{$item.source}>" type="text" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 查看权限：</th>
+        <td class="paddingT15 wordSpacing5">
+        <select multiple name="require_membertype[]" id="NewsRequireMembertype">
+			<option value="0"><{$_no_limit}></option>
+			<{foreach from=$Membertypes name=membertype key=key1 item=item1}>
+			<option value="<{$key1}>"><{$item1}></option>
+			<{/foreach}>
+		</select><{$_click_ctrl_n_select}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 标签:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[tag]" type="text" id="tag" value="<{$item.tag}>" /><label class="field_notice"><{$_multi_seperate_by_quot_or_space}></label>        </td>
+      </tr>      
+	  <tr>
+        <th class="paddingT15"> 内容：</th>
+        <td class="paddingT15 wordSpacing5"><textarea style="width:550px;height:100px;" name="data[news][content]" id="NewsContent"><{$item.content}></textarea></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">图片：</th>
+        <td class="paddingT15 wordSpacing5">
+        <input class="infoTableFile2" type="file" name="pic" id="pic" />
+          <label class="field_notice">（支持格式GIF,JPG,JPEG,PNG）</label>
+          <{if $item.picture}>
+          <br /><span><img src="<{$item.image}>" alt="<{$item.name}>"/></span>
+          <{/if}>
+        </td>
+      </tr>
+	  <{/if}>
+      <tr>
+        <th class="paddingT15">是否<{$_commend}>：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<{html_radios name="data[news][if_commend]" options=$AskAction checked=$item.if_commend|default:"0" separator=" "}></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save_and_pub}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+jQuery(document).ready(function($) {
+	$("#NewsTypeId").val("<{$item.type_id|default:0}>")
+})
+</script>
+<{editor type="ckeditor" element="NewsContent" toolbar="Full"}>
+<{include file="footer.html"}>

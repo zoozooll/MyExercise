@@ -1,0 +1,114 @@
+<{include file="header.html"}>
+<script src="../scripts/jquery/facebox.js" type="text/javascript"></script>
+<link href="../images/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+<script>
+jQuery(document).ready(function($) {
+	$.facebox.settings.loadingImage = '<{$SiteUrl}>images/facebox/loading.gif'; 
+	$.facebox.settings.closeImage = '<{$SiteUrl}>images/facebox/closelabel.gif'; 
+	$('a[rel*=facebox]').facebox() 
+})
+</script>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_product_center}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_product_center}></h3>
+    <ul class="subnav">
+		<li><a href="product.php"><{$_management}></a></li>
+        <li><a class="btn1"><span><{$_add_or_edit}></span></a></li>
+		<li><a href="productsort.php">类型</a></li>
+		<li><a href="productcategory.php">产品种类</a></a></li>
+		<li><a href="brand.php">品牌</a></a></li>
+		<li><a href="brandtype.php">品牌分类</a></a></li>
+		<li><a href="price.php">报价</a></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" id="EditFrm" name="edit_frm" enctype="multipart/form-data" >
+  <input type="hidden" name="id" value="<{$smarty.get.id}>" />
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+  <input type="hidden" name="company_name" value="<{$item.companyname}>" />
+  <input type="hidden" name="username" value="<{$item.username}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> <{$_member_name_n}></th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[username]" value="<{$item.username}>" /><label class="field_notice"><{$_member_name}></label>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 公司名:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[company_name]" id="dataCompanyName" value="<{$item.companyname}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 产品名称:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[product][name]" value="<{$item.name}>" /><label class="field_notice">供求内容标题</label></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 标签:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[tag]" type="text" id="Tag" value="<{$item.tag}>" /><label class="field_notice"><{$_multi_seperate_by_quot}></label>        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_in_industry}></th>
+        <td class="paddingT15 wordSpacing5">
+        <span id="dataIndustry">
+					<select name="data[product][industry_id1]" id="dataProductIndustryId1" class="level_1" style="width:120px;" ></select>
+					<select name="data[product][industry_id2]" id="dataProductIndustryId2" class="level_2" style="width:120px;"></select>
+					<select name="data[product][industry_id3]" id="dataProductIndustryId3" class="level_3" style="width:120px;"></select>
+		</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_in_area}></th>
+        <td class="paddingT15 wordSpacing5">
+			<span id="dataArea">
+						<select name="data[product][area_id1]" id="dataProductAreaId1" class="level_1" style="width:120px;" ></select>
+						<select name="data[product][area_id2]" id="dataProductAreaId2" class="level_2" style="width:120px;"></select>
+						<select name="data[product][area_id3]" id="dataProductAreaId3" class="level_3" style="width:120px;"></select>
+			</span>        
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 详细说明:</th>
+        <td class="paddingT15 wordSpacing5"><textarea style="width:650px;height:300px;" name="data[product][content]" id="dataProductContent"><{$item.content}></textarea>
+		</td>
+
+      </tr>
+      <tr>
+        <th class="paddingT15"><{$_picture}></th>
+        <td class="paddingT15 wordSpacing5">
+        <input class="infoTableFile2" type="file" name="pic" id="pic" />
+          <label class="field_notice">（支持格式GIF,JPG,JPEG,PNG）</label>
+          <{if $item.picture}>
+          <br /><span><img src="<{$item.image}>" alt="<{$item.name}>"/></span>
+          <{/if}>
+        </td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save_and_pub}>" />
+			<input class="formbtn" type="submit" name="pass" value="<{$_check_passed}>" />
+			<input class="formbtn" type="submit" name="forbid" value="<{$_check_invalid}>" />
+			<input class="formbtn" type="submit" name="del" value="<{$_delete}>" />
+		</td>
+
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+var cache_path = "../";
+var app_language = '<{$AppLanguage}>';
+var area_id1 = <{$item.area_id1|default:0}> ;
+var area_id2 = <{$item.area_id2|default:0}> ;
+var area_id3 = <{$item.area_id3|default:0}> ;
+var industry_id1 = <{$item.industry_id1|default:0}> ;
+var industry_id2 = <{$item.industry_id2|default:0}> ;
+var industry_id3 = <{$item.industry_id3|default:0}> ;
+</script>
+<script src="../scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="../scripts/script_area.js"></script>
+<script src="../scripts/script_industry.js"></script>
+<{editor type="tiny_mce"}>
+<{include file="footer.html"}>

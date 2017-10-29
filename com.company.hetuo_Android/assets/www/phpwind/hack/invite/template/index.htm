@@ -1,0 +1,322 @@
+<!--<?php
+print <<<EOT
+-->
+<div id="breadCrumb">
+		<img src="$imgpath/$stylepath/thread/home-old.gif" align="absmiddle" />&nbsp;<a href="$db_bfn" title="$db_bbsname">$db_bbsname</a> &raquo; <a href="$basename">邀请注册</a>
+</div>
+<div class="t3" style="margin-top:8px">
+<table width="100%" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width="23%" valign="top">
+			<div class="t">
+			<table width="100%" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="h">管理选项</td>
+				</tr>
+				<tr class="tr3">
+					<td><a href="$basename">邀请码管理</a></td>
+				</tr>
+				<tr class="tr3">
+					<td><a href="$basename&action=send">发送邀请码</a></td>
+				</tr>
+				<tr class="tr3">
+					<td><a href="$basename&action=buy">购买邀请码</a></td>
+				</tr>
+			</table></div>
+			<div class="t">
+			<table width="100%" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="h" colspan="2">基本设置</td>
+				</tr>
+				<tr class="tr3">
+					<th width="60%">邀请码有效期限</th>
+					<th>$inv_days 天</th>
+				</tr>
+				<tr class="tr3">
+					<th>购买时间间隔限制</th>
+					<th>$inv_limitdays 天</th>
+				</tr>
+				<tr class="tr3">
+					<th>所消耗的积分</th>
+					<th>$inv_costs $usrecredit
+					</th>
+				</tr>
+				<tr class="tr3">
+					<th>是否有权限购买</th>
+					<th>
+<!--
+EOT;
+if($allowinvite){print <<<EOT
+-->
+有
+<!--
+EOT;
+}else{print <<<EOT
+-->
+无
+<!--
+EOT;
+}print <<<EOT
+-->
+					</th>
+				</tr>
+<!--
+EOT;
+if($inv_onlinesell){print <<<EOT
+-->
+				<tr class="tr3">
+					<td>在线购买邀请码</td>
+					<td>已开启</td>
+				</tr>
+				<tr class="tr3">
+					<td>在线支付费用</td>
+					<td>$inv_price</td>
+				</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</table></div>
+			<div class="t">
+			<table width="100%" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<th class="h" colspan="2">基本资料</th>
+				</tr>
+				<tr class="tr3">
+					<th width="60%">$db_rvrcname</th>
+					<th>$userrvrc $db_rvrcunit</th>
+				</tr>
+				<tr class="tr3">
+					<th width="30%">$db_moneyname</th>
+					<th>$winddb[money] $db_moneyunit</th>
+				</tr>
+				<tr class="tr3">
+					<th width="30%">$db_creditname</th>
+					<th>$winddb[credit] $db_creditunit</th>
+				</tr>
+				<tr class="tr3">
+					<th width="30%">$db_currencyname</th>
+					<th>$winddb[currency]</th>
+				</tr>
+			</table></div>
+		</td>
+		<td width="*" valign="top">
+			<div class="t" style="width:98%;margin-right:0">
+			<table width="100%" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="h" colspan="2">邀请注册流程简介</td></tr>
+				<tr class="tr1">
+					<th>1、<b>获得注册码</b><br />
+					&nbsp;&nbsp;&nbsp;&nbsp;会员通过支付一定的论坛积分，购买注册码<br>
+<!--
+EOT;
+if($inv_onlinesell){print <<<EOT
+-->
+					&nbsp;&nbsp;&nbsp;&nbsp;游客可以通过在线支付工具支付一定费用，购买注册码<br />
+<!--
+EOT;
+}print <<<EOT
+-->
+					2、<b>向邀请对象发送邮件</b><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;将所得的注册码发送给邀请对象<br>
+					3、<b>完成注册</b><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;邀请对象点击邮件里的注册地址，完成邀请注册，或者当支付成功后系统跳转至注册页面后直接注册<br>
+					<b>注：</b>开启邀请注册功能之后，暂停普通注册功能
+					</th>
+				</tr>
+			</table></div>
+<!--
+EOT;
+if(!$action){print <<<EOT
+-->
+			<form action="$basename" method="post">
+			<input type="hidden" name="action" value="delete" />
+			<div class="t" style="width:98%;margin-right:0">
+			<table width="100%" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="h" colspan="6">邀请码管理</td>
+				</tr>
+				<tr class="tr2">
+					<td width="*">邀请码</td>
+					<td width="22%">购买时间</td>
+					<td width="15%">注册用户</td>
+					<td width="22%">注册日期</td>
+					<td width="7%">状态</td>
+					<td width="6%"></td>
+				</tr>
+<!--
+EOT;
+foreach($invdb as $key=>$value){print <<<EOT
+-->
+				<tr class="tr3">
+					<td>$value[invcode]</td>
+					<td>$value[createtime]</td>
+					<td>$value[receiver]<br /></td>
+					<td>$value[usetime]<br /></td>
+<!--
+EOT;
+if($value['uselate']==1){print <<<EOT
+-->
+<td>已过期</td>
+<td><input type="checkbox" name="selid[]" value="$value[id]" /></td>
+<!--
+EOT;
+}elseif($value['ifused']==2){print <<<EOT
+-->
+<td>已邀请</td>
+<td><input type="checkbox" name="selid[]" value="$value[id]" /></td>
+<!--
+EOT;
+}elseif($value['ifused']==1 && $value['uselate']==0){print <<<EOT
+-->
+<td>已使用</td>
+<td>--</td>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+<td>未使用</td>
+<td><a href="$basename&action=send&id=$value[id]"><font color="blue">邀请</font></td>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</table></div>
+			<div class="cc">$pages</div>
+			<div style="text-align:center;margin-bottom:25px">
+			<input class="bt" type="button" name="chkall" value="全 选" onclick="CheckAll(this.form)" />
+			<input class="btn" type="submit" value="删除所选项" onclick="return check(this.form);" /></div></form>
+<script language="JavaScript">
+function CheckAll(form){
+	for (var i=0;i<form.elements.length-2;i++){
+		var e = form.elements[i];
+		e.checked == true ? e.checked = false : e.checked = true;
+	}
+}
+function check(form){
+	if(confirm('确定要删除所选项吗？')){
+		return true;
+	}else{
+		return false;
+	}
+}
+</script>
+<!--
+EOT;
+}elseif($action=='send'){print <<<EOT
+-->
+			<form action="$basename" method="post">
+			<input type="hidden" name="action" value="send" />
+			<input type="hidden" name="step" value="3" />
+			<input type="hidden" name="id" value="$invcode[id]" />
+			<div class="t" style="width:98%;margin-right:0">
+			<table width="100%" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="h" colspan="2">邮件发送</td>
+				</tr>
+				<tr class="tr3 tr">
+					<th>发送者</th>
+					<th>$windid</th>
+				</tr>
+				<tr class="tr3 tr">
+					<th>接收者email</th>
+					<th><input class="input" type="text" name="sendtoemail" size="40" /></th>
+				</tr>
+				<tr class="tr3 tr">
+					<th>标题</th>
+					<th><input class="input" type="text" name="subject" size="65" value="$subject" /></th></tr>
+				<tr class="tr3 tr">
+					<th>内容</th>
+					<th><textarea rows="6" cols="65" name="atc_content">$atc_content</textarea></th>
+				</tr>
+			</table></div>
+			<div style="text-align:center;margin-bottom:25px">
+			<input class="btn" type="submit" value="发送邀请码" /></div></form>
+<!--
+EOT;
+}elseif($action=='buy'){print <<<EOT
+-->
+			<form action="$basename" method="post">
+			<input type="hidden" name="action" value="buy" />
+			<input type="hidden" name="step" value="3" />
+			<div class="t" style="width:98%;margin-right:0">
+			<table width="100%" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="h" colspan="2">购买邀请码</td>
+				</tr>
+				<tr class="tr3 tr">
+					<th width="45%">请输入要购买的个数</th>
+					<th><input class="input" type="text" name="invnum" value="1" size="8" /></th>
+				</tr>
+			</table></div>
+			<div style="text-align:center;margin-bottom:25px">
+			<input class="btn" type="submit" value="购买邀请码" /></div></form>
+<!--
+EOT;
+}elseif($action=='pay'){print <<<EOT
+-->
+			<form action="$basename" method="post">
+			<input type="hidden" name="action" value="pay" />
+			<input type="hidden" name="step" value="3" />
+			<div class="t" style="width:98%;margin-right:0">
+			<table width="100%" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="h" colspan="2">购买邀请码</td>
+				</tr>
+<!--
+EOT;
+if(!empty($_POST['step'])){print <<<EOT
+-->
+				<tr class="tr3">
+					<td colspan="2">提示：您输入的邮箱中 ($email) 已经有一个生成订单，您确定现在支付？</td>
+					<input type="hidden" name="submit" value="1" />
+				</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+				<tr class="tr3">
+					<th width="45%">请输入要购买的个数</th>
+					<th><input class="input" type="text" name="invnum" value="$num" size="8" /></th>
+				</tr>
+				<tr class="tr3">
+					<td>请输入您的邮箱(我们将发送邀请码到您的邮箱)</td>
+					<td><input class="input" type="text" name="email" value="$email" size="30" /></td>
+				</tr>
+				<tr class="tr3">
+					<td>请选择支付方式</td>
+					<td>
+<!--
+EOT;
+if($ol_payto){print <<<EOT
+-->
+					<input type="radio" name="method" value="2" checked /> 支付宝
+<!--
+EOT;
+}if($ol_tenpay && $ol_tenpaycode){print <<<EOT
+-->
+					<input type="radio" name="method" value="4" /> 财付通
+<!--
+EOT;
+}print <<<EOT
+-->
+					</td>
+				</tr>
+			</table></div>
+			<div style="text-align:center;margin-bottom:25px">
+			<input class="btn" type="submit" value="购买邀请码" /></div></form>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</td>
+	</tr>
+</table></div>
+<!--
+EOT;
+?>-->

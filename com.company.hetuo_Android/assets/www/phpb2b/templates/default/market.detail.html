@@ -1,0 +1,41 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="7"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+	<div class="content">
+	<div class="tips"><span><{$position}></span></div>
+	<div class="maincon clearfix">
+        <div class="all_left">
+            <div class="title_bar_s4">
+                <span class="title_top_s4"><span></span></span>
+                <h3><{$item.name}></h3>
+            </div>
+        <div class="all_left_con"><{$item.content}></div>
+        </div>
+        <div class="all_right">
+           <div class="title_bar_s4">
+                <span class="title_top_s4"><span></span></span>
+                <h3><{$_news_market}></h3>
+            </div>
+           <div class="all_right_con">
+        <{market row=10}>
+        <p><a href="market/detail.php?id=[field:id]">[field:title]</a></p>
+        <{/market}>
+        </div>
+		<div class="blank6"></div>
+        <div class="all_right">
+           <div class="title_bar_s4">
+                <span class="title_top_s4"><span></span></span>
+                <h3><{$_new_offer}></h3>
+            </div>
+           <div class="all_right_con">
+			<{offer row=10 orderby="rand()" titlelen="15"}>
+			<p><a href="offer/detail.php?id=[field:id]">[field:title]</a></p>
+			<{/offer}>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<{include file="`$ThemeName`/footer.html"}>

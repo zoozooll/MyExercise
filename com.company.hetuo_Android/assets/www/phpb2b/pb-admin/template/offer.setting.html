@@ -1,0 +1,58 @@
+<{include file="header.html"}>
+<script src="../scripts/jquery/facebox.js" type="text/javascript"></script>
+<link href="../images/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+<script>
+jQuery(document).ready(function($) {
+	$.facebox.settings.loadingImage = '<{$SiteUrl}>images/facebox/loading.gif'; 
+	$.facebox.settings.closeImage = '<{$SiteUrl}>images/facebox/closelabel.gif'; 
+	$('a[rel*=facebox]').facebox() 
+})
+</script>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_offer}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_offer}></h3> 
+    <ul class="subnav">
+		<li><a href="offer.php"><{$_management}></a></li>
+        <li><a class="btn1" href="offer.php?do=setting"><span><{$_setting}></span></a></li>
+		<li><a href="offertype.php"><{$_sorts}></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" id="EditFrm" action="offer.php" name="edit_frm">
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 过期后处理方式：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<{html_radios name='data[setting][offer_expire_method]' options=$SettingStatus
+     selected=$item.OFFER_EXPIRE_METHOD|default:1 separator='<br />'}>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 置顶一次花费积分：</th>
+        <td class="paddingT15 wordSpacing5"><input type="text" name='data[setting][offer_moderate_point]' value="<{$item.OFFER_MODERATE_POINT|default:0}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 允许重发的最小天数：</th>
+        <td class="paddingT15 wordSpacing5"><input type="text" name='data[setting][offer_refresh_lower_day]' value="<{$item.OFFER_REFRESH_LOWER_DAY|default:3}>" />天</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 允许更新的时间间隔：</th>
+        <td class="paddingT15 wordSpacing5"><input type="text" name='data[setting][offer_update_lower_hour]' value="<{$item.OFFER_UPDATE_LOWER_HOUR|default:24}>" />小时</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 分类首页数据过滤：</th>
+        <td class="paddingT15 wordSpacing5"><{html_radios name='data[setting][offer_filter]' options=$AskAction
+     selected=$item.OFFER_FILTER|default:0 separator=' '}><label class="field_notice">如果开启，则在模块首页会过滤同一用户发布的信息，以便显示更多同类的其他用户发布的信息</label></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="setting" value="<{$_save_setting}>" />
+		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<{include file="footer.html"}>

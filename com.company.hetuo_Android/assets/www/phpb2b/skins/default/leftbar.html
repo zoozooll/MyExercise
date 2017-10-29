@@ -1,0 +1,31 @@
+		<div class="leftbar">
+			<div class="latest_news">
+				<div><img src="images/left-1.gif"/><p>产品分类</p><div class="clear"></div></div>
+				<ul>
+				<{foreach from=$ProductTypes name=ProductTypes item=item}>
+					<li><a title="<{$item.typename}>" href="<{$item.url}>"><{$item.typename}></a></li>
+				<{/foreach}>
+				</ul>
+			</div>
+			<!-- plugin -->
+			<div class="latest_news">
+				<div><img src="images/left-2.gif"/><p>友情链接</p><div class="clear"></div></div>
+				<{if $Links}>
+				<ul>
+					<{foreach from=$Links name=spacelink item=spacelink}>
+					<li><a href="<{$spacelink.url}>" target="_blank"><{$spacelink.title}></a></li>
+					<{/foreach}>
+				</ul>
+				<{/if}>
+			</div>
+			<div class="latest_news">
+				<div><img src="images/left-3.gif"/><p>联系方式</p><div class="clear"></div></div>
+				<ul>
+					<li>联系人：<{$COMPANY.link_man}></li>
+					<li>电话：<{$COMPANY.tel}></li>
+					<li>传真：<{$COMPANY.fax}></li>
+					<li>地址：<{$COMPANY.address}></li>
+					<li>邮编：<{$COMPANY.zipcode}></li>
+				</ul>
+			</div>
+		</div>

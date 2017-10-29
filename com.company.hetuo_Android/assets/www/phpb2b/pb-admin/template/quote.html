@@ -1,0 +1,70 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_pro_market}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_pro_market}></h3> 
+    <ul class="subnav">
+		<li><a href="market.php"><{$_management}></a></li>
+		<li><a class="btn1" href="quote.php"><span>价格行情</span></a></li>
+        <li><a href="quote.php?do=edit"><{$_add_or_edit}></a></li>
+		<li><a href="quotetype.php">行情分类</a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" id="SearchFrm" method="get"> 
+        <input type="hidden" name="do" value="search" />
+             <div> 
+			    标题关键字 : <input class="queryInput" type="text" name="q" value="" /> 
+                <input type="submit" name="search" id="Search" class="formbtn" value="<{$_searching}>" /> 
+            </div>  
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="quote.php" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll">标题</label></th>
+		  <th>市场名称</th>
+		  <th>最高价</th>
+		   <th>最低价</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><label for="item_<{$item.id}>"><{$item.title}></label></td>
+		  <td><{$item.marketname}></td>
+		   <td><{$item.maxprice}></td>
+		   <td><{$item.minprice}></td>
+		  <td class="handler">
+           <ul id="handler_icon">
+            <li><a class="btn_delete" href="quote.php?id=<{$item.id}>&do=del<{$addParams}>" title="<{$_delete}>"><{$_delete}></a></li>
+            <li><a class="btn_edit" href="quote.php?do=edit&id=<{$item.id}><{$addParams}>" title="<{$_edit}>"><{$_edit}></a></li>
+          </ul>  
+		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="5"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

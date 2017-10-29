@@ -1,0 +1,97 @@
+<{include file="header.html"}>
+<link href="../images/jquery/colorpicker.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../scripts/jquery/colorpicker.js"></script>
+<script>
+jQuery(document).ready(function($) {
+	$.fn.colorPicker.defaultColors = ['00FFFF', '000000', '999999', 'FF0000', 'FFFF00', '0000FF', 'FFFFFF', '00FF7F', '00FF00'];
+	$('#color1').colorPicker();
+})
+</script>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_setting_global}> &raquo; <{$_industry}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_industry}></h3> 
+    <ul class="subnav">
+		<li><a href="industry.php"><{$_management}></a></li>
+        <li><a class="btn1" href="industry.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+        <li><a href="industrytype.php"><{$_sorts}></a></li>
+        <li><a href="industry.php?do=clear"><{$_clearing}></a></li>
+        <li><a href="industry.php?do=refresh"><{$_update_cache}></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" action="industry.php" id="EditFrm" name="edit_frm">
+    <table class="infoTable">
+    <{if $smarty.get.id}>
+      <input type="hidden" name="id" value="<{$smarty.get.id}>" />
+      <input type="hidden" name="page" value="<{$smarty.request.page}>" />
+      <tr>
+        <th class="paddingT15"> 编号：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[industry][id]" value="<{$item.id}>" type="text" /><label class="field_notice">一般不需要改动</label>        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 分类名称：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[industry][name]" value="<{$item.name}>" type="text" /><label class="field_notice">一级分类名称不要有符号出现</label>        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_digest_n}></th>
+        <td class="paddingT15 wordSpacing5"><textarea name="data[industry][description]"><{$item.description}></textarea></td>
+      </tr>
+    <{else}>
+      <tr>
+        <th class="paddingT15"> 分类名称：</th>
+        <td class="paddingT15 wordSpacing5"><textarea name="data[names]" id="dataNames"></textarea><label class="field_notice">可以添加多个，一行代表一个分类,一级分类名称不要有符号</label></td>
+      </tr>
+    <{/if}>
+      <tr>
+        <th class="paddingT15"> 上级分类：</th>
+        <td class="paddingT15 wordSpacing5">
+        <select name="data[industry][parent_id]" id="dataParentId">
+        <option value="0">无</option>
+        <{$CacheItems}>
+        </select>
+       </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 所属系列：</th>
+        <td class="paddingT15 wordSpacing5">
+         <select name="data[industry][industrytype_id]" id="dataTypeId">
+			<option value="0">无</option>
+            <{foreach from=$Types key=key3 item=item3}>
+            <option value="<{$key3}>"><{$item3}></option>
+            <{/foreach}>
+        </select>   
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 链接地址：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[industry][url]" value="<{$item.url}>" type="text" /><label class="field_notice">为空，则系统默认地址</label>        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 是否显示：</th>
+        <td class="paddingT15 wordSpacing5"><{html_radios name="data[industry][available]" options=$AskAction checked=$item.available|default:1 separator=""}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 样式：</th>
+        <td class="paddingT15 wordSpacing5"><input name="data[style_color]" id="color1" value="<{$item.style_color|default:"#000"}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_display_order}></th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[industry][display_order]" type="text" value="<{$item.display_order|default:0}>"></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+jQuery(document).ready(function($) {
+	$('#dataParentId').val("<{$item.parent_id|default:0}>");
+	$('#dataTypeId').val("<{$item.industrytype_id|default:0}>");
+})
+</script>
+<{include file="footer.html"}>

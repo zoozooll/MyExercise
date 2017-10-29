@@ -1,0 +1,45 @@
+<{assign var="page_title" value="`$_friendlink`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+      <table class="bggray">
+        <tr>
+          <td><strong><{$_our_partners}></strong><{$_colon}></td>
+          <td align="right" ><a href="link.php?do=edit"  class="btn_publish"><{$_add_partners}></a></td>
+        </tr>
+      </table>      
+	  <form name="companylinkfrm" action="link.php" method="post">
+	  <input type="hidden" name="formhash" value="<{$formhash}>">
+      <table class="news">
+            <tr align="center">
+              <th><input type="checkbox" name="idAll" onClick="uaCheckAll(this, 'id[]')" title="<{$_all_select}>"></th>
+              <th><strong><{$_company_name}></strong></th>
+            </tr>
+	  <{foreach from=$Items item=item}>
+            <tr align="center" class="bggray">
+              <td><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="uaCheckItem(this, 'idAll')"></td>
+              <td align="center"><a target="_blank" title="<{$_access}><{$item.title}>" href="<{$item.url}>"><{$item.title}></a></td>
+              </tr>
+  		<{foreachelse}>
+		<{/foreach}>
+        </table>
+       <table class="trade_line">
+              <tr>
+                <td height="1" background="images/index_trade_line.gif"></td>
+              </tr>
+        <tr align="center" valign="bottom">
+          <td height="40"><input  name="delete" type="submit" id="delete" value= "<{$_delete_select}>" onClick="return test();"></td>
+        </tr>
+      </table>
+	  </form>
+</div>
+</div>
+<{include file="footer.html"}>

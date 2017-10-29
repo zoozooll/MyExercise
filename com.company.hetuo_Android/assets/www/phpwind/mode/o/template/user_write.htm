@@ -1,0 +1,102 @@
+<!--<?php
+include_once PrintEot('m_header');
+include_once PrintEot('user_space');
+print <<<EOT
+-->
+<div id="content" class="fr">
+	<div style="padding-top:10px;">
+        <div class="cc p-info">
+            <h1><strong class="f24 blue"><a href="u.php?uid=$u">$username</a></strong> <span class="f24 gray">/</span> <span class="red b f16">记录</span> <span class="gray">( {$count}条 )</span></h1>
+        </div>
+        <div class="breadCrumb">
+        <a href="u.php?uid=$u" class="gray">&laquo;返回首页继续浏览</a>
+        </div>
+    </div>
+    <div id="content_main">
+    <table width="100%">
+    	<tr><td height="600" style="padding-bottom:20px;vertical-align:top;">
+    	<div style="padding:5px 15px;">
+        <table cellpadding="0" cellspacing="0" width="100%">
+<!--
+EOT;
+if (!empty($writedata)) {
+$db_blogsource = array('web'=>'网页','signature'=>'个性签名','other'=>'其他');
+foreach ($writedata as $key => $value) {print <<<EOT
+-->
+<tr id="write_$value[id]" class="tr4 vt">
+<!--
+EOT;
+if($do == 'view' && $faceimg){print <<<EOT
+-->
+<td width="50"><img class="img-50" src="$faceimg"/></td>
+<!--
+EOT;
+}elseif($value[icon]){print <<<EOT
+-->
+<td><img class="img-50" src="$value[icon]"/></td>
+<!--
+EOT;
+}print <<<EOT
+-->
+<td>	
+<!--
+EOT;
+if($do == 'view'){print <<<EOT
+-->
+<a href="u.php?uid=$uinfo[uid]" class="f14">$uinfo[username]</a> 
+<!--
+EOT;
+}else{print <<<EOT
+-->
+<a href="u.php?uid=$value[uid]" class="f14">$value[username]</a> 
+<!--
+EOT;
+}if (isset($touids[$value['touid']])) {print <<<EOT
+-->
+@<a class="b f14" href="mode.php?m=o&&u=$value[touid]">{$touids[$value['touid']]}</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+<span class="gray w"><span class="f10">{$value[postdate]}</span> 通过{$db_blogsource[$value[source]]}</span> 
+<!--
+EOT;
+if($groupid == 3){print <<<EOT
+-->
+<a href="{$basename}do=del&id=$value[id]" onclick="ajaxurl(this);getObj('write_$value[id]').parentNode.removeChild(getObj('write_$value[id]'));return false;" class="del w" title="删除">删除</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+<p class="f14">$value[content]</p>
+<div id="com_write_$value[id]">
+<a style="cursor: pointer;" onclick="javascript:showCommList('write','$value[id]','com_write_$value[id]',this)">回复({$value[c_num]})</a>
+</div>
+</td></tr>
+<!--
+EOT;
+}} else {print <<<EOT
+-->
+<tr><td>暂时没有记录</td></tr>
+<!--
+EOT;
+}print <<<EOT
+-->	
+</table>
+		<div class="mt10">$pages</div>
+<script language="JavaScript">
+function ajaxurl(o) {
+read.obj = o;
+ajax.send(o.href,'',ajax.get);
+return false;
+}
+</script>
+<script language="JavaScript" src="js/app_comment.js"></script>
+        </div>
+        </td></tr>
+    </table>
+    </div>
+</div>
+<!--
+EOT;
+?>-->

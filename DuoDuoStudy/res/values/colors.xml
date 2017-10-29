@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFF0</color>
+    <color name="purple">#DA70D6</color>
+    <color name="black">#2B2B2B</color>
+    <color name="red">#FFFF00FF</color>
+    <color name="gary">#4D4D4D</color>
+    
+    <drawable name="darkgray">#ff444444</drawable>
+	<drawable name="black">#ff000000</drawable>
+	<drawable name="red">#ffff0000</drawable>
+	<drawable name="green">#ff00ff00</drawable>
+	<drawable name="lightgray">#ffcccccc</drawable>
+	<drawable name="white">#ffffffff</drawable>
+	<drawable name="yellow">#ffffff00</drawable>
+	<drawable name="blue">#ff0000ff</drawable>
+	<drawable name="gray">#ff888888</drawable>
+	<drawable name="magenta">#ffff00ff</drawable>
+	<drawable name="cyan">#ff00ffff</drawable>
+	<drawable name="orange">#fff79e02</drawable>
+	<drawable name="grayblue">#ff52aaef</drawable>
+	<drawable name="transparent">#00000000</drawable>
+	<drawable name="trans">#00ffffff</drawable>
+	<drawable name="transpress">#21000000</drawable>
+	<drawable name="translucence">#e0000000</drawable>
+	<color name="darkcyan">#386949</color>
+	
+</resources>

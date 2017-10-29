@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@color/white">
+ <!-- 最顶层 -->  
+<LinearLayout
+	android:id="@+id/duoduo_account_top"
+    android:layout_alignParentTop="true"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	<include
+	 layout="@layout/myself_infos_top"
+	 android:layout_alignParentTop="true"/>
+</LinearLayout>
+ 
+<!-- 最底层 --> 
+<LinearLayout
+	android:id="@+id/duoduo_updatapswd_bottom"
+    android:layout_alignParentBottom="true"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	<include 
+	layout="@layout/download_bottom_item"
+	android:layout_alignParentBottom="true"/>
+</LinearLayout>
+
+<TableLayout
+	android:id="@+id/duoduo_updatapswd_body"
+    android:layout_alignParentBottom="true"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_below="@id/duoduo_account_top">
+	<TableRow>
+	  <TextView
+	    android:id="@+id/current_pswd_text"
+	    android:layout_width="65dip"
+	    android:layout_height="45dip"
+	    android:text="@string/currentPassword"
+	    android:textSize="12sp"
+	    android:textColor="@color/black"/>
+	  <EditText
+	    android:id="@+id/current_pswd_edit"
+	    android:layout_width="200dip"
+	    android:layout_height="wrap_content"
+	    android:password="true"/>
+	   <ImageView
+	    android:id="@+id/confirm_pswd_imgview"
+	    android:layout_width="45dip"
+	    android:layout_height="45dip"
+	    android:background="@drawable/error"
+	    android:visibility="gone"/> 
+	   <TextView
+	    android:id="@+id/current_text"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="密码错误"
+ 		android:textColor="@color/black"
+	    android:visibility="gone"/>
+	</TableRow>
+	
+	<TableRow>
+	  <TextView
+	    android:id="@+id/new_pswd_text"
+	    android:layout_width="65dip"
+	    android:layout_height="45dip"
+	    android:text="@string/newPassword"
+	    android:textSize="12sp"
+	    android:textColor="@color/black"/>
+	  <EditText
+	    android:id="@+id/new_pswd_edit"
+	    android:layout_width="200dip"
+	    android:layout_height="wrap_content"
+	    android:password="true"/>
+	  <ImageView
+	    android:id="@+id/confirm_pswd_imgview"
+	    android:layout_width="45dip"
+	    android:layout_height="45dip"
+	    android:background="@drawable/right"
+	    android:visibility="gone"/>
+	  <TextView
+	    android:id="@+id/confirm_text"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone"
+	    android:text=""
+ 		android:textColor="@color/black"/>
+	</TableRow>
+	
+	<TableRow>
+		<TextView
+	    android:id="@+id/confirm_pswd_text"
+	    android:layout_width="65dip"
+	    android:layout_height="45dip"
+	    android:text="@string/confirmPassword"
+	    android:textSize="12sp"
+	    android:textColor="@color/black"/>
+	   <EditText
+	    android:id="@+id/confirm_pswd_edit"
+	    android:layout_width="200dip"
+	    android:layout_height="wrap_content"
+	    android:password="true"/>
+	   <ImageView
+	    android:id="@+id/confirm_pswd_imgview"
+	    android:layout_width="45dip"
+	    android:layout_height="45dip"
+	    android:background="@drawable/error"
+	    android:visibility="gone"/>
+	   <TextView
+	    android:id="@+id/finish_text"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone"
+	    android:text="两次输入的密码不一致"
+	    android:textColor="@color/black"/>
+	</TableRow>
+	<TableRow>
+		<Button
+		android:id="@+id/confirm_btn"
+	    android:layout_width="80dip"
+	    android:layout_height="wrap_content"
+	    android:text="@string/confirm"/>
+	</TableRow>
+</TableLayout>
+</RelativeLayout>

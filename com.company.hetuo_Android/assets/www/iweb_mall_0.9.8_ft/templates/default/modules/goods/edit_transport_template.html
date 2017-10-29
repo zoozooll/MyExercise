@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+</head>
+<body onload="bodyonload()">
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+        <div class="bigpart">
+		<div class="title_uc"><h3><span style="float:right; margin-right:15px;"><a href="modules.php?app=transport_template_list" style="color:#F67A06;">{echo:lp{m_list_transport_template};/}</a>&nbsp;&nbsp;</span>{echo: lp{m_edit_transport_template};/}</h3></div>
+		<form action="do.php?act=edit_transport_template" method="post" name="form_transport_template" onsubmit="return checkForm(this);">
+			<input type="hidden" name="id" value="{echo:$id;/}" />
+			<table id="boxtable" class="form_table">
+				<tr>
+					<td>{echo: lp{m_transport_name};/}:</td><td><input type="text" name="transport_name" value="{echo:$transport_template_info['transport_name'];/}" /></td><td>{echo:lp{m_transport_name_message};/}</td>
+				</tr>
+				<tr>
+					<td>{echo: lp{m_transport_description};/}:</td><td><input type="text" name="description" value="{echo:$transport_template_info['description'];/}" /></td><td>{echo:lp{m_transport_description_message};/}</td>
+				</tr>
+				<tr>
+					<td colspan="2"><b>{echo: lp{m_choose_transport_type};/}</b></td>
+					<td>{echo: lp{m_choose_transport_type_message};/}</td>
+				</tr>
+				<tr>
+					<td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="transport_type[]" value="ems" id="ems" onclick="showtype('ems')" />EMS:</td>
+				</tr>
+				<tr id="ems_box" style="display:none;">
+					<td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;
+						{echo:lp{m_transport_template_frist};/}<input type="text" name="emsfrist" value="0.00" />
+						{echo:lp{m_transport_template_second};/}<input type="text" name="emssecond" value="0.00" /><br />
+						<ul id="wordbox_ems">
+						{echo:$emsstr;/}
+						</ul>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="javascript:;" onclick="showareslist('ems')" ><b>{echo:lp{m_transport_cont};/}</b></a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="transport_type[]" value="pst" id="pst" onclick="showtype('pst')" />{echo: lp{m_surface};/}:</td>
+				</tr>
+				<tr id="pst_box" style="display:none;">
+					<td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;
+						{echo:lp{m_transport_template_frist};/}<input type="text" name="pstfrist" value="0.00" />
+						{echo:lp{m_transport_template_second};/}<input type="text" name="pstsecond" value="0.00" /><br />
+						<ul id="wordbox_pst">
+							{echo:$pststr;/}
+						</ul>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="javascript:;" onclick="showareslist('pst')" ><b>{echo:lp{m_transport_cont};/}</b></a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="transport_type[]" value="ex" id="ex" onclick="showtype('ex')" />{echo: lp{m_express_delivery};/}:</td>
+				</tr>
+				<tr id="ex_box" style="display:none;">
+					<td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;
+						{echo:lp{m_transport_template_frist};/}<input type="text" name="exfrist" value="0.00" />
+						{echo:lp{m_transport_template_second};/}<input type="text" name="exsecond" value="0.00" /><br />
+						<ul id="wordbox_ex">
+							{echo:$exstr;/}
+						</ul>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="javascript:;" onclick="showareslist('ex')" ><b>{echo:lp{m_transport_cont};/}</b></a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><input type="submit" name="sub" value="{echo:lp{m_shure};/}"  /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div class="clear"></div>
+</div>
+<div id="bgdiv" style="display:none;"></div>
+<div id="category_select" style="display:none;">
+	<div class="category_title_1"><span onclick="hidebgdiv();">{echo:lp{m_close};/}</span>{echo:lp{m_plss_select_cateogry};/}</div>
+	<ul id="select_first" class="ulselect">
+		{sta:foreach($category_info as $k=>$v)[loop]}
+			{sta:if($v['parent_id']==0)[exc]}
+			<li title="{echo: $v['cat_id'];/}">{echo: $v['cat_name'];/}</li>
+			{end:if/}
+		{end:foreach/}
+	</ul>
+	<ul id="select_second" class="ulselect"></ul>
+	<ul id="select_third" class="ulselect"></ul>
+	<ul id="select_fourth" class="ulselect"></ul>
+	<div class="category_com"><input type="button" value="{echo:lp{m_post};/}" onclick="postcatid();" /></div>
+</div>
+<div style="position:absolute;style:top:0px;left:0px; padding:5px; background:#f1f1f1; display:none; width:420px;" id="mydiv">
+	{sta:if(is_array($area_list))[exc]}
+		{sta:foreach($area_list as $k=>$value)[loop]}
+			<div style="float:left; width:75px;"><input type="checkbox" name="area[]" value="{echo:$value['area_id'];/}"  />{echo:$value['area_name'];/}</div>
+		{end:foreach/}
+	{end:if/}
+	<input type="hidden" name="hdnum" value="0" id="hdnum" />
+	<input type="hidden" name="hdtxt" value="" id="hdtxt" />
+	<input type="hidden" name="iseidt" id="iseidt" value="" />
+	<input type="button" name="doselect" value="{echo:lp{m_shure};/}"  onclick="doselect()" />
+</div>
+<div class="footer">{inc:require("modules/footer.php");/}</div>
+</body>
+</html>
+<script language="JavaScript" type="text/javascript">
+	function showtype(txt){
+		var chosid = txt+"_box";
+		var actobj = document.getElementById(txt);
+		var obj = document.getElementById(chosid);
+		if(actobj.checked){
+			obj.style.display="";
+		}else{
+			obj.style.display="none";
+		}
+	}
+	function showareslist(txt){
+		var obj = document.getElementById('mydiv');
+		var areaobj = document.getElementsByName("area[]");
+		var inputname = "ord_item_dest"+txt+"[]";
+		var conobj = document.getElementsByName(inputname);
+		var arrstr = "";
+		for(i=0;i<conobj.length;i++){
+			arrstr+=conobj[i].value;
+		}
+		var arrstr = arrstr.substring(0,arrstr.length-1);
+		var strarr = arrstr.split(",");
+		if(arrstr.length>0){
+			for (a=0;a<areaobj.length;a++){
+				for(b=0;b<strarr.length;b++){
+					if(areaobj[a].value==strarr[b]){
+						areaobj[a].disabled=true;
+					}
+				}
+			}
+		}
+		document.getElementById('hdtxt').value=txt;
+
+		obj.style.left = document.body.clientWidth/2-(parseInt(500)/2)+"px";
+		obj.style.top = document.body.clientHeight/2-(parseInt(300)/2)-30+document.documentElement.scrollTop/2+"px";
+		obj.style.display="";
+	}
+	function doselect(){
+		var obj = document.getElementsByName("area[]");
+		var str="";
+		var num=document.getElementById('hdnum').value;
+		var hdtxt=document.getElementById('hdtxt').value;
+		var idlist ="";
+		for(i=0;i<obj.length;i++){
+			if(obj[i].checked){
+				str+=obj[i].nextSibling.nodeValue+",";
+				idlist+=obj[i].value+",";
+			}
+			obj[i].disabled=false;
+		}
+		var boxid = "wordbox_"+hdtxt;
+		var boxobj = document.getElementById(boxid);
+		if(document.getElementById('iseidt').value==''){
+			if(str.length>0){
+				boxobj.innerHTML+="&nbsp;&nbsp;&nbsp;&nbsp;<li >至<input type='text' name='ord_item_word"+(hdtxt)+"[]' value='"+str+"' "+"onclick=\"eidtarea('"+hdtxt+"','"+idlist+"','"+(num+1)+"')\""+" id='item"+(num+1)+"'  /><input type='hidden' id='itemvalue"+(num+1)+"' name='ord_item_dest"+(hdtxt)+"[]' value='"+idlist+"' />的{echo:lp{m_transport_template_frist};/}<input type='text' name='ord_area_frist"+(hdtxt)+"[]' value='' />{echo:lp{m_transport_template_second};/}<input type='text' name='ord_area_second"+(hdtxt)+"[]' value='' /></li>";
+
+				document.getElementById('hdnum').value=parseInt(num)+1;
+				for(i=0;i<obj.length;i++){
+					obj[i].checked=false;
+				}
+			}
+		}else{
+			var chosid = "itemvalue"+document.getElementById('iseidt').value;
+			var chostext = "item"+document.getElementById('iseidt').value;
+			var idobj = document.getElementById(chosid);
+			var txtobj = document.getElementById(chostext);
+			idobj.value=idlist;
+			txtobj.value=str;
+		}
+		document.getElementById('iseidt').value='';
+		document.getElementById('mydiv').style.display="none";
+	}
+	function remove(obj,dx){
+		if(isNaN(dx)||dx>obj.length){
+			return false;
+		}
+		for(i=0,n=0;i<obj.length;i++){
+			if(obj[i]!=obj[dx]){
+				obj[n++]=obj[i];
+			}
+		}
+		obj.length-=1;
+	}
+	function eidtarea(txt,ids,num){
+		var obj = document.getElementById('mydiv');
+		var areaobj = document.getElementsByName("area[]");
+		var strarr = ids.split(",");
+		document.getElementById('iseidt').value=num;
+		showareslist(txt);
+		for(i=0;i<areaobj.length;i++){
+			areaobj[i].disabled=false;
+			for(j=0;j<strarr.length;j++){
+				if(areaobj[i].value==strarr[j]){
+					areaobj[i].checked=true;
+				}
+			}
+		}
+	}
+	function bodyonload(){
+		var ems_obj = {echo:$emsobj;/};
+		var ex_obj = {echo:$exobj;/};
+		var pst_obj = {echo:$pstobj;/};
+		if(ems_obj.frist>0){
+			document.form_transport_template.emsfrist.value=ems_obj.frist;
+			document.form_transport_template.emssecond.value=ems_obj.second;
+			document.getElementById("ems").checked=true;
+			document.getElementById("ems_box").style.display='';
+		}
+		if(ex_obj.frist>0){
+			document.form_transport_template.exfrist.value=ex_obj.frist;
+			document.form_transport_template.exsecond.value=ex_obj.second;
+			document.getElementById("ex").checked=true;
+			document.getElementById("ex_box").style.display='';
+		}
+		if(pst_obj.frist>0){
+			document.form_transport_template.pstfrist.value=pst_obj.frist;
+			document.form_transport_template.pstsecond.value=pst_obj.second;
+			document.getElementById("pst").checked=true;
+			document.getElementById("pst_box").style.display='';
+		}
+	}
+	function checkForm(obj){
+		var transport_type =document.getElementsByName('transport_type[]');
+		var a=3;
+		for(i=0;i<transport_type.length;i++){
+			if(!transport_type[i].checked){
+				a--;
+			}
+		}
+		if(obj.transport_name.value==''){
+			alert('{echo:lp{m_in_template_name};/}');
+			return false;
+		}
+		if(obj.description.value==''){
+			alert('{echo:lp{m_in_template_description};/}');
+			return false;
+		}
+		if(a<=0){
+			alert('{echo:lp{m_choose_shipping_method};/}');
+			return false;
+		}
+		if(transport_type[0].checked&&(parseInt(obj.emsfrist.value)==0||parseInt(obj.emssecond.value)==0)){
+			alert('{echo:lp{m_set_shipping_cost};/}');
+			return false;
+		}
+		if(transport_type[1].checked&&(parseInt(obj.pstfrist.value)==0||parseInt(obj.pstsecond.value)==0)){
+			alert('{echo:lp{m_set_shipping_cost};/}');
+			return false;
+		}
+		if(transport_type[2].checked&&(parseInt(obj.exfrist.value)==0||parseInt(obj.exsecond.value)==0)){
+			alert('{echo:lp{m_set_shipping_cost};/}');
+			return false;
+		}
+	}
+</script>

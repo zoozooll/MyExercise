@@ -1,0 +1,71 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="8"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+  <div class="content  clearfix">
+	 <div class="tips"><span><{$position}></span></div>
+	 <div class="blank6"></div>
+	 <div class="ex_con">
+		 <div class="ex_con_left">
+		   <div class="ex_con_left_title"><p><{$item.name}></p></div>
+		   <div class="blank6"></div>
+		   <div class="ex_con_left_con">
+           <div class="base_title">
+            <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_fair_introduction}></span><span class="corner_t_r"></span></h2> 
+	       </div>
+		  <div class="ex_con_left_con_body">
+			<p><{$item.description}></p>
+		  </div>
+		   </div>
+		   <div class="blank6"></div>
+		  <div class="ex_con_left_con">
+		       <div class="base_title">
+                    <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_fair_content}></span><span class="corner_t_r"></span></h2> 
+	           </div>
+		  <div class="ex_con_left_con_body">
+			<{$_fair_time}><{$item.begin_date}><{$_arrive_to}><{$item.end_date}><br />
+			<{$_address}><{$item.address}><br />
+			<{$_fair_size}><{$item.scope}><br />
+			<{$_organizer}><{$item.hosts}><br />
+			<{$_sponsor}><{$item.organisers}><br />
+			<{$_support}><{$item.sponsors}><br />
+			<{$_co_organizer}><{$item.co_organisers}><br />
+			<{$_contact}><{$item.contacts}><br />
+			<{$_notes}><{$item.important_notice}><br />
+            </div>
+		  </div>
+		 </div>
+	 
+	 <div class="ex_con_right">
+	<div class="ex_con_right_con">
+      <div class="title_bar_s4">
+          <span class="title_top_s4"><span></span></span>
+          <h3><{$_fair_enter_name}></h3>
+       </div>
+	  <div class="ex_con_right_con_body"><span>
+      <form name="join_fair" id="JoinFair" action="office-room/fair.php" method="post" target="_blank">
+      <input type="hidden" name="do" value="join" />
+      <input type="hidden" name="id" value="<{$item.id}>">
+      <input type="button" name="button" class="submit_w91" value="<{$_enter_name_fair}>" onclick="$('#JoinFair').submit();" />
+      </form>
+      </span></div>
+	</div>
+	<div class="blank6"></div>
+	<div class="ex_con_right_con">
+       <div class="title_bar_s4">
+          <span class="title_top_s4"><span></span></span>
+          <h3><{$_fair_business}></h3>
+       </div>
+	  <div class="ex_con_right_con_body">
+		<ul class="ex_con_rightlist" >
+        <{foreach from=$Items name=expomember item=expomember}>
+		 <li><a href="space.php?userid=<{$expomember.userid}>" target="_blank"><{$expomember.name}></a></li>
+        <{/foreach}>
+		</ul>
+		</div>
+	</div>
+  </div>
+</div>
+</div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

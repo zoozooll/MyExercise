@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:background="@drawable/top_bg">
+	<Button android:id="@+id/btn_shopping_cart"
+		android:layout_width="55dip" android:layout_height="30dip"
+		android:background="@drawable/button_selector"
+		android:layout_marginLeft="6dip" android:text="购物车" 
+		android:layout_centerVertical="true" android:textColor="@drawable/white"/>
+	<Button android:id="@+id/btn_favorite" android:layout_width="55dip"
+		android:layout_height="30dip" android:background="@drawable/button_selector"
+		android:layout_marginLeft="6dip" android:layout_toRightOf="@id/btn_shopping_cart"
+		android:text="收藏夹" android:layout_centerVertical="true"
+		android:textColor="@drawable/white"/>
+	<Button android:id="@+id/btn_order" android:layout_width="55dip"
+		android:layout_height="30dip" android:background="@drawable/button_selector"
+		android:layout_toRightOf="@id/btn_favorite"
+		android:layout_marginLeft="6dip" android:text="订单"
+		android:layout_centerVertical="true" android:textColor="@drawable/white" />
+	<Button android:id="@+id/btn_account" android:layout_width="60dip"
+		android:layout_height="30dip" android:background="@drawable/button_selector"
+		android:layout_toRightOf="@id/btn_order" android:layout_marginLeft="6dip"
+		android:text="我的账户" android:layout_centerVertical="true"
+		android:textColor="@drawable/white" />
+	<Button android:id="@+id/btn_shop_index" android:layout_width="60dip"
+		android:layout_height="30dip" android:background="@drawable/button_selector"
+		android:layout_gravity="right" android:layout_marginRight="10dip"
+		android:layout_marginLeft="6dip" android:layout_alignParentRight="true"
+		android:text="书店首页" android:layout_centerVertical="true"
+		android:textColor="@drawable/white"/>
+
+</RelativeLayout>

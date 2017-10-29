@@ -1,0 +1,57 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_industry_news}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_industry_news}></h3> 
+    <ul class="subnav">
+		<li><a href="news.php"><{$_management}></a></li>
+        <li><a href="newstopic.php"><{$_topic_news}></a></li>
+        <li><a href="newstype.php"><{$_sorts}></a></li>
+        <li><a class="btn1" href="newstype.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+		<li><a href="newsgather.php">采集</a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" action="newstype.php" id="EditFrm" name="edit_frm">
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+    <table class="infoTable">
+	  <{if $smarty.get.id}>
+	  <input type="hidden" name="id" value="<{$item.id}>" />
+      <tr>
+        <th class="paddingT15"> 编号：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[newstype][id]" value="<{$item.id}>" type="text" /><label class="field_notice">如非特殊需要，请勿改动</label>        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 分类名称：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[newstype][name]" value="<{$item.name}>" type="text" /><label class="field_notice">一级分类名称不要有符号出现</label>        </td>
+      </tr>
+		<{else}>
+			  <tr>
+			<th class="paddingT15"> 分类名称：</th>
+			<td class="paddingT15 wordSpacing5"><textarea name="data[newstype][name]" id="dataNames"></textarea><label class="field_notice">可以添加多个，一行代表一个分类,一级分类名称不要有符号</label></td>
+		  </tr>
+		<{/if}>
+      <tr>
+        <th class="paddingT15"> 上级分类：</th>
+        <td class="paddingT15 wordSpacing5">
+        <select name="data[newstype][parent_id]" id="NewstypeParentId">
+        <option value="0">顶级分类</option>
+        <{$NewstypeOptions}>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save_and_pub}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+jQuery(document).ready(function($) {
+	$("#NewstypeParentId").val("<{$item.parent_id|default:0}>")
+})
+</script>
+<{include file="footer.html"}>

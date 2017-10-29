@@ -1,0 +1,74 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_setting_global}> &raquo; <{$_service_center}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_service_center}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1" href="service.php"><span>客户提交</span></a></li>
+		<li><a href="service.php?do=client">服务条款</a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" action="service.php" id="SearchFrm" method="get">
+        <input type="hidden" name="do" value="search" />
+             <div>
+             反馈类别:<select name="type_id">
+              <option value="0"><{$_pls_select}></option>
+              <option value="1">咨询</option>
+              <option value="2">建议</option>
+              <option value="3">投诉</option>
+            </select>
+				<{$_title_keywords}> : <input class="queryInput" type="text" name="q" value="" /> 
+                <input type="submit" id="Search" class="formbtn" value="<{$_searching}>" /> 
+            </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="service.php" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onClick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll"><{$_the_title}></label></th>
+		  <th>内容</th>
+		  <th>反馈类别</th>
+		  <th>是否显示</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item name=adzone}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onClick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><label for="item_<{$item.id}>"><{$item.title}></label></td>
+		  <td><{$item.content|truncate:100}></td>
+		  <td><{$ServiceTypes[$item.type_id]}></td>
+		  <td><{$Status[$item.status]}></td>
+		  <td class="handler">
+           <ul id="handler_icon">
+            <li><a class="btn_delete" href="service.php?id=<{$item.id}>&do=del" title="<{$_delete}>"><{$_delete}></a></li>
+            <li><a class="btn_edit"  href="service.php?do=edit&id=<{$item.id}>" title="<{$_edit}>"><{$_edit}></a></li>
+          </ul> 
+		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="6"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

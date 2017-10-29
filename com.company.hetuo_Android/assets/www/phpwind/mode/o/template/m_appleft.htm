@@ -1,0 +1,87 @@
+<!--<?php print <<<EOT
+-->
+<div id="menu-bar" class="menu-bar fl">
+		<div class="applied-list">
+			<ul>
+				<li id="app_write"><img src="$pwModeImg/applied/record.png" align="absmiddle" /><a href="mode.php?m=o&q=write">记录</a></li>
+<!--
+EOT;
+if($db_dopen){print <<<EOT
+-->
+				<li id="app_diary"><a href="mode.php?m=o&q=diary&a=write" class="fr">写日志</a><img src="$pwModeImg/applied/log.png" align="absmiddle" /><a href="mode.php?m=o&q=diary">日志</a></li>
+<!--
+EOT;
+}if($db_phopen){print <<<EOT
+-->
+				<li id="app_photos"><a href="mode.php?m=o&q=photos&a=upload" class="fr">传照片</a><img src="$pwModeImg/applied/albums.png" align="absmiddle" /><a href="mode.php?m=o&q=photos">相册</a></li>
+<!--
+EOT;
+}if($db_share_open){print <<<EOT
+-->
+				<li id="app_share"><img src="$pwModeImg/applied/share.png" align="absmiddle" /><a href="mode.php?m=o&q=share">分享</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+				<li id="app_article"><img src="$pwModeImg/applied/posts.png" align="absmiddle" /><a href="mode.php?m=o&q=article">帖子</a></li>
+<!--
+EOT;
+if($db_groups_open){print <<<EOT
+-->
+				<li id="app_groups"><img src="$pwModeImg/applied/groups.png" align="absmiddle" /><a href="mode.php?m=o&q=groups">群组</a></li>
+<!--
+EOT;
+}
+if(!trim($o_hot_groups,',') || strpos($o_hot_groups,','.$winddb[groupid].',') !== false || ($winddb[groupid] == -1 && strpos($o_hot_groups,','.$winddb[memberid].',') !== false)){
+	$popedom = true;
+}else{
+	$popedom = false;
+}
+if($o_hot_open && $popedom){print <<<EOT
+-->
+				<li id="app_hot"><img src="$pwModeImg/applied/hot.png" align="absmiddle" /><a href="mode.php?m=o&q=hot">热榜</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</ul>
+<!--
+EOT;
+if($app_array && $db_appo && $db_appifopen){print <<<EOT
+-->
+            <div class="o_hr_b"></div>
+            <ul style="_padding-top:5px;">
+<!--
+EOT;
+foreach ($app_array as $key => $value) {print <<<EOT
+-->
+				<li><img src="$db_server_url/images/icon/s{$value[appid]}.png" align="absmiddle" /><a href="mode.php?m=o&q=app&id=$value[appid]" >{$value[appname]}</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</ul>
+<!--
+EOT;
+}print <<<EOT
+-->
+			<p>
+<!--
+EOT;
+if ($db_appo && $db_appifopen) {print <<<EOT
+-->
+				<img src="$pwModeImg/applied/add-app.png" align="absmiddle" /><a href="mode.php?m=o&q=myapp">添加应用</a><br />
+<!--
+EOT;
+}print <<<EOT
+-->
+				<img src="$pwModeImg/applied/edit-app.png" align="absmiddle" /><a href="mode.php?m=o&q=myapp&action=my">管理应用</a>
+			</p>
+		</div>
+</div>
+<script language="JavaScript">
+setCurrent('app_$q','','current');
+</script>
+<!--
+EOT;
+?>

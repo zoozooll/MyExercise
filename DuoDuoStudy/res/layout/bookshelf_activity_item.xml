@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test"
+	android:orientation="horizontal" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:focusable="true"
+	android:background="@color/white">
+
+	<ImageView android:id="@+id/book_logo" 
+		android:layout_width="70dip"
+		android:layout_height="90dip" 
+		android:layout_margin="5dip"
+        android:layout_marginTop="15dip"/>
+
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content">
+		
+        <LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content">
+		<TextView android:id="@+id/bookname" 
+			android:layout_width = "150dip"
+			android:layout_height="wrap_content" 
+			style="@style/contentTitleTextStyle"
+			android:ellipsize = "marquee"
+			android:focusable = "true"
+			android:marqueeRepeatLimit = "marquee_forever"
+			android:focusableInTouchMode = "true"
+			android:scrollHorizontally = "true"
+			android:layout_marginTop="5px"/>
+			<LinearLayout
+			    android:id="@+id/book_count3"
+				android:layout_width="120dip"
+				android:layout_height="wrap_content" 
+				android:layout_marginTop="2dip"
+				android:layout_marginLeft="50dip">
+				<TextView 
+			    android:id="@+id/book_count1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				style="@style/contentTextStyle"
+				android:text="当前已有"/>
+				<TextView 
+			    android:id="@+id/book_count"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:textColor="#386949"
+				android:textSize="15dip" 
+				android:text="0"/>
+				<TextView 
+			    android:id="@+id/book_count2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				style="@style/contentTextStyle"
+				android:text="本"/>
+			</LinearLayout>
+	   </LinearLayout>
+	   <LinearLayout android:orientation="horizontal"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dip">
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			style="@style/contentTextStyle"
+			android:text="@string/bookshelf_author"/>
+			<TextView android:id="@+id/author" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			style="@style/contentTextStyle" />
+		</LinearLayout>
+			
+		<LinearLayout android:orientation="horizontal"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dip">
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			style="@style/contentTextStyle"
+			android:text="@string/bookshelf_score"/>
+		<RatingBar android:id="@+id/score" 
+			style="?android:attr/ratingBarStyleSmall"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:numStars="5"
+            android:rating="3"
+			android:layout_marginTop="5dip"/>
+		<TextView android:id="@+id/comment_count" 
+			android:layout_width="200dip"
+			android:layout_height="wrap_content" 
+			style="@style/contentTextStyle"
+			android:text="@string/bookshelf_comment"/>
+		</LinearLayout>
+			
+		<LinearLayout android:orientation="horizontal"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dip">
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			style="@style/contentTextStyle"
+			android:text="@string/bookshelf_lastraed"/>
+			<TextView android:id="@+id/lasttime" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			style="@style/contentTextStyle"
+			android:text="@string/bookshelf_lasttime"/>
+		</LinearLayout>
+		
+       <LinearLayout android:orientation="horizontal"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content">
+		<TextView android:id="@+id/gift" 
+		    android:autoLink="web"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:background="@drawable/bookshelf_listgift_selector"/>
+		<TextView android:id="@+id/recommend" 
+		    android:autoLink="web"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_marginLeft="3dip"
+			android:background="@drawable/bookshelf_listrecommend_selector"/>
+		<TextView android:id="@+id/note" 
+		    android:autoLink="web"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_marginLeft="3dip"
+			android:visibility="gone"
+			android:background="@drawable/bookshelf_listnote_selector"/>
+		<TextView android:id="@+id/label" 
+		    android:autoLink="web"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_marginLeft="3dip"
+			android:visibility="gone"
+			android:background="@drawable/bookshelf_listlabel_selector"/>
+        </LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>

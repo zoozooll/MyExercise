@@ -1,0 +1,422 @@
+<!--<?php
+print <<<EOT
+-->
+<!-- 
+EOT;
+if($cssForum){
+print <<<EOT
+-->
+<div class="c"></div>
+<link rel="stylesheet" type="text/css" href="$pwModeImg/app.css" />
+<!-- 
+EOT;
+}
+print <<<EOT
+-->
+<SCRIPT type="text/javascript" LANGUAGE="JavaScript" src="js/core/core.js"></SCRIPT>	
+<div id="content" class="fr">
+	<div style="padding:15px 15px 0;">
+		<div class="app-title cc">
+<!--
+EOT;
+if($m == 'o'){print<<<EOT
+-->
+			<a href="{$basename}space=1&q=share" class="gray fr">进入个人空间浏览&raquo;</a>
+<!--
+EOT;
+}print<<<EOT
+-->
+			<span>分享</span>
+		</div>
+		<div class="tabB cc">
+			<ul>
+				<li id="a_friend"><a href="{$temp_basename}a=friend">好友分享</a></li>
+				<li id="a_self"><a href="{$temp_basename}a=self">我的分享</a></li>
+				<li id="a_my"><a href="{$temp_basename}a=my">我的收藏</a></li>
+<!--
+EOT;
+$b = $a;
+$u && $u != $winduid && $b = 'friend';
+print <<<EOT
+-->
+<script language="JavaScript">
+setCurrent('a_$b','a_self','current');
+</script>
+			</ul>
+		</div>
+	</div>
+	<div id="content_main" class="fl">
+        <div style="padding:0 0 0 20px;">
+		<div class="o-info-a mt10">共{$sum}条
+<!--
+EOT;
+if ($a == 'my') {print <<<EOT
+-->
+		<!-- <span class="gray">（包括帖子数）</span>  -->
+<!--
+EOT;
+}print <<<EOT
+-->
+		</div>
+		<div class="tab cc b" style="margin:10px 0;">
+			<a id="type_all" href="{$basename}a=$a"><span>全部</span></a>
+<!--
+EOT;
+if($a == 'my'){
+$see == 'postfavor' && $type="postfavor";
+print <<<EOT
+-->
+			<a id="type_postfavor" href="{$basename}a=$a&see=postfavor"><span>帖子</span></a>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+			<a id="type_topic" href="{$basename}a=$a&type=topic"><span>帖子</span></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+			<a id="type_user" href="{$basename}a=$a&type=user"><span>用户</span></a>
+<!--
+EOT;
+if($db_dopen){print <<<EOT
+-->
+			<a id="type_diary" href="{$basename}a=$a&type=diary"><span>日志</span></a>
+<!--
+EOT;
+}if($db_phopen){print <<<EOT
+-->
+			<a id="type_photo" href="{$basename}a=$a&type=photo"><span>照片</span></a>
+<!--
+EOT;
+}if($db_phopen){print <<<EOT
+-->
+			<a id="type_album" href="{$basename}a=$a&type=album"><span>相册</span></a>
+<!--
+EOT;
+}if($db_groups_open){print <<<EOT
+-->
+			<a id="type_group" href="{$basename}a=$a&type=group"><span>群组</span></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+			<a id="type_video" href="{$basename}a=$a&type=video"><span>视频</span></a>
+			<a id="type_music" href="{$basename}a=$a&type=music"><span>音乐</span></a>
+			<a id="type_flash" href="{$basename}a=$a&type=flash"><span>flash</span></a>
+			<a id="type_web" href="{$basename}a=$a&type=web"><span>网页</span></a>
+		</div>
+<script language="JavaScript">
+setCurrent('type_$type','type_all','current');
+</script>
+    	<table width="100%">
+        <tr class="vt"><td height="400" style="padding-bottom:20px;">
+				<div class="dynamic dynamic-share">
+<!--
+EOT;
+if($shares){
+foreach($shares as $value){
+if($value[uid]==$winduid){
+	$author = '你';
+}else{
+	$author = "<a href=\"u.php?uid=$value[uid]\">$value[username]</a> ";
+}print <<<EOT
+-->
+<div class="title" id="title_{$value[id]}">
+<!--
+EOT;
+if($db_share_open && !$shareGM){
+print<<<EOT
+-->
+	<span class="fr"><a class="a-reply" href="{$basename}ajax=1&a=recommend&id=$value[id]" onclick="return ajaxurl(this,'read_$read[lou]');">推荐<span>+</span></a></span>
+<!--
+EOT;
+}
+if($winduid==$value[uid] || $groupid==3){
+print <<<EOT
+-->
+	<span class="fr"><a onclick="pwConfirm('是否确认删除',this,function(){delShare('$value[id]')})" style="cursor: pointer;" class="del">删除</a>&nbsp;&nbsp;&nbsp;</span>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+	$author{$value[type_name]} <span class="gray small" title="$value[posttime]">$value[postdate]</span> 
+</div>
+				<dl id="share_{$value[id]}" class="cc">
+<!--
+EOT;
+if($value[icon]){
+print <<<EOT
+-->
+					<dt><img src="$value[icon]" class="img-50" /></dt>
+<!--
+EOT;
+}print <<<EOT
+-->
+					<dd class="lh24">
+				<div>
+<!--
+EOT;
+if ($value[groupid] == 6 && $db_shield && $groupid != 3) {print <<<EOT
+-->
+						<span style="color:black;background-color:#ffff66">用户被禁言,该分享自动屏蔽!</span>
+<!--
+EOT;
+} else {print <<<EOT
+-->
+
+<!--
+EOT;
+if($value[type]=='video'){print <<<EOT
+-->
+						<img title="播放" style="cursor: pointer;" src="$pwModeImg/share_v.png" class="vthumb" onclick="javascript:showShare('$value[host]','$value[hash]',this,'$value[id]')"/>
+<!--
+EOT;
+}elseif($value[type]=='music'){print <<<EOT
+-->
+						<img title="播放" style="cursor: pointer;" src="$pwModeImg/music.png" onclick="javascript:showShare('$value[type]','$value[link]',this,'$value[id]')"/>
+<!--
+EOT;
+}elseif($value[type]=='flash'){print <<<EOT
+-->
+						<img title="播放" style="cursor: pointer;" src="$pwModeImg/musicplay.gif" onclick="javascript:showShare('$value[type]','$value[link]',this,'$value[id]')"/>
+<!--
+EOT;
+}elseif(in_array($value[type],array('user','group'))){print <<<EOT
+-->
+						<a href="$value[link]"><img src="$value[image]" width="100" style="margin:5px 0;" /></a>
+<!--
+EOT;
+}elseif(in_array($value[type],array('photo','album'))){print <<<EOT
+-->
+						<a href="$value[link]"><img src="$value[image]" width="100" style="margin:5px 0;" /></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+					<p class="f14">$value[title]</p>
+<!--
+EOT;
+if($value[type]=='topic'){print <<<EOT
+-->
+						$value[abstract]<br />
+<!--
+EOT;
+if($value[imgs]){
+foreach($value[imgs] as $k => $v){
+print<<<EOT
+-->
+					<span class="fl" style="white-space:nowrap;margin-right:5px;"><img src="$v" style="width:60px;height:60px;margin-bottom:3px;" align="absmiddle"></span>
+<!--
+EOT;
+}print<<<EOT
+-->
+					<div class="c"></div>
+<!--
+EOT;
+}}if($value[descrip]){print <<<EOT
+-->
+					<span class="qutemini gray">$value[descrip]<img src="$imgpath/apps/quote-end.gif" align="absbottom" /></span>
+<!--
+EOT;
+}}print <<<EOT
+-->
+					</div>
+					<div id="com_share_$value[id]">
+						<a style="cursor: pointer; font-weight:500; font-size:12px;color:#3366cc;" onclick="javascript:showCommList('share','$value[id]','com_share_$value[id]',this)">回复({$value[c_num]})</a>
+					</div>
+					</dd>
+				</dl>		
+<!--
+EOT;
+}print <<<EOT
+-->
+				<div class="c"></div>
+				<div class="mt10 cc">$pages</div>
+<!--
+EOT;
+}elseif($article && $isU){print <<<EOT
+-->
+					<form method="post" action="{$basename}a=my&see=postfavor&">
+					<input type="hidden" name="verify" value="$verifyhash" />
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tr class="tr3">
+						<td>标题</td>
+						<td colspan="2" class="tar">作者/(回复/浏览)</td>
+					</tr>
+<!--
+EOT;
+foreach ($article as $key => $value) {print <<<EOT
+-->
+					<tr class="tr3">
+						<td><a href="read.php?tid=$value[tid]" target="_blank">$value[subject]</a><br /><a href="thread.php?fid=$value[fid]" target="_blank" class="gray">$value[forum]</a><span class="f10 gray"  title="$value[posttime]">$value[postdate]</span></td>
+						<td class="tar"><a href="u.php?uid=$value[authorid]">$value[author]</a><br /><span class="f10 gray">$value[replies] / $value[hits]</span></td>
+						<td><input type="checkbox" name="selid[]" value="$value[tid]" /></td>
+					</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</table>
+				<div class="mt10 cc">$pages</div>
+					<div class="mt10 tac">
+						<input type="radio" name="job" style=" vertical-align:middle" value="change" checked />&nbsp;转移到分类
+						<select name="ftype" style=" vertical-align:middle"><option value="0"></option>
+<!--
+EOT;
+foreach ($ftypeid as $key => $value) {
+$k = $key + 1;
+print <<<EOT
+-->
+							<option value="$k">$value</option>
+<!--
+EOT;
+}print <<<EOT
+-->
+						</select>&nbsp;<input type="radio" name="job" value="clear" style=" vertical-align:middle" />&nbsp;删除
+						<span class="button2"><span><button type="button" name="chkall" onclick="CheckAll(this.form)">全 选</button></span></span>
+						<span class="button"><span><button type="submit">提 交</button></span></span>
+					</div>
+				</form>
+<SCRIPT type="text/javascript" LANGUAGE="JavaScript" src="js/core/friendlist.js"></SCRIPT>	
+
+<!--
+EOT;
+}else{
+if($a=='my'){print <<<EOT
+-->
+				<div class="p10">暂无收藏信息</div>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+				<div class="p10">暂无分享信息</div>
+<!--
+EOT;
+}}print <<<EOT
+-->
+		</div></td></tr></table></div></div>
+<!--
+EOT;
+if($see!='postfavor'){print <<<EOT
+-->
+			<div id="sidebar" class="fr mt10">
+				<div class="p10">
+				<div class="b">分享网页、视频、音乐、Flash</div>
+				<form action="{$baseUrl}q=sharelink" method="post" name="shareform" onsubmit="return false;">
+				<input type="hidden" name="verify" value="$verifyhash" />
+				<input type="hidden" name="ifhidden" value='1' align="middle" />
+					<p class="mt10">链接:<br /><input type="text" class="input" name="link" value="http://" style="width:170px;" /></p>
+					<p class="mt10 mb10">描述:<br /><textarea rows="3" id="descrip" name="descrip" class="textarea" style="width:170px;height:70px;"  /></textarea><br /><span id="descrip_warn" class="gray">限 300 字节</span></p>
+					
+<!--
+EOT;
+if ($o_share_gdcheck) {print <<<EOT
+-->
+						<img id="ckcode" style="cursor:pointer;display:none;margin-bottom:1px;" onclick="this.src='ck.php?nowtime='+new Date().getTime();" alt="看不清楚，换一张" />
+						<p><span class="b">认证码:&nbsp;</span><input class="input" onfocus="showCK();" type="text" name="gdcode" id="gdcode" size="5" tabindex="3"  /></p>
+<!--
+EOT;
+}if($o_share_qcheck){print <<<EOT
+-->
+						<div class="mt10 lh24"><span class="b">验证问答:  </span><br />{$db_question[$qkey]}<br />正确答案:{$db_answer[$qkey]}</div>
+						<input class="input" name="qanswer" id="qanswer" size="25" tabindex="7" />
+						<input type="hidden" name="qkey" id="qkey" value="$qkey" />
+<!--
+EOT;
+}print <<<EOT
+-->
+				<div style="margin:5px 0 0 0;">
+				<span class="button" style="margin-left:0;"><span><button type="submit" onclick="postShare(0);">分 享</button></span></span> <span class="button2"><span><button type="submit" onclick="postShare(1);">收藏为私有</button></span></span></div>
+				</form>
+                
+                <div class="lh24 mt10">
+               	<p class="b">如何分享视频?</p>
+                <p class="gray">填写视频所在网页的网址。(不需要填写视频的真实地址)</p>
+               	<p class="b mt10">如何分享音乐？</p>
+                <p class="gray">填写音乐文件的网址。(后缀需要是mp3或者wma)</p>
+               	<p class="b mt10">如何分享Flash？</p>
+                <p class="gray">填写 Flash 文件的网址。(后缀需要是swf)</p>
+                </div>
+				</div>   
+			</div>
+<script language="JavaScript">
+function postShare(type){
+	var form = document.shareform;
+	var link = form.link.value;
+	var preg = /^http\:\/\/.{4,255}$/;
+	if (!preg.test(link)) {
+		showDialog('error','链接地址出错，链接地址必须已:http://开头');
+		return false;
+	}
+	form.ifhidden.value = type;
+	form.submit();
+}
+var charset = '$db_charset';
+initCheckTextNum('descrip','descrip_warn',300);
+</script>
+<!--
+EOT;
+}elseif($see=='postfavor'){print <<<EOT
+-->
+			<div id="sidebar" class="fr">
+            	<div class="p10" style="line-height:2.5;">
+				<h2 class="b">收藏分类</h2>
+				<ul>
+					<li><a href="{$basename}a=my&see=$see&u=$u&ftype=0" id="ftype_all">所有分类</a></li>
+<!--
+EOT;
+foreach ($ftypeid as $key => $value) {
+$k = $key + 1;
+print <<<EOT
+-->
+					<li id="uf_$k" onmouseover="getObj('del_$k').style.display='';" onmouseout="getObj('del_$k').style.display='none';"><span class="fr"><a href="{$basename}a=my&see=$see&job=deltype&ftype=$k&verify=$verifyhash" style="display:none;" id="del_$k" onclick="return Checkinfo();" title="删除目录" class="del">删除</a></span><a href="{$basename}a=my&see=$see&u=$u&ftype=$k" id="ftype_$k">$value</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+					<li id="uf_def"><a href="{$basename}a=my&see=$see&u=$u&ftype=-1" id="ftype_def">默认分类</a></li>
+<!--
+EOT;
+if ($isU) {print <<<EOT
+-->
+					<form method="post" name="form" action="{$basename}&a=my&see=$see&">
+					<input type="hidden" name="verify" value="$verifyhash" />
+					<input type="hidden" name="job" value="addtype" />
+					<li>名称 <input name="ftype" size="12" type="text" class="input" /><span class="button"><span><button type="submit">提 交</button></span></span></li>
+					</form>
+<!--
+EOT;
+}print <<<EOT
+-->		
+				</ul>
+                </div>
+			</div>
+<script language="javascript">
+setCurrent('ftype_$ftype','ftype_all','current');
+function Checkinfo() {
+	if (confirm('确定要删除该分类吗?')) {
+		return true;
+	} else {
+		return false;
+	}
+}
+</script>
+<!--
+EOT;
+}print <<<EOT
+-->
+</div>
+<script language="JavaScript">
+function ajaxurl(o) {
+	read.obj = o;
+	ajax.send(o.href,'',ajax.get);
+	return false;
+}
+</script>
+<script language="javascript" src="apps/$appdir/js/share.js"></script>
+<script language="JavaScript" src="js/app_comment.js"></script>
+<!--
+EOT;
+?>-->

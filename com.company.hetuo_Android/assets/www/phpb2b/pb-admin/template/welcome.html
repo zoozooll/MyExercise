@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<{$Charset}>" />
+<title><{$_welcome_to_cp}></title>
+<base target="_blank" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../scripts/jquery.js"></script>
+<script src="../scripts/jquery/facebox.js" type="text/javascript"></script>
+<link href="../images/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+<script>
+function setUpdateAlert(d)
+{
+$.ajax({
+    url: 'home.php?do=set_update_alert&type='+d,
+    type: 'GET',
+    dataType: 'html',
+    timeout: 1000,
+    error: function(){
+        alert('Error loading XML document');
+    },
+    success: function(data){
+        $.facebox.close();
+    }
+});
+}
+</script>
+<{if $hasNewVersion}>
+<script>
+jQuery(document).ready(function($) {
+	$.facebox.settings.loadingImage = '<{$SiteUrl}>images/facebox/loading.gif'; 
+	$.facebox('<{$VersionInfo}>'+"<div align='center'><input type='button' id='NoUpdateAlert' value='<{$_alert_no}>' onclick='setUpdateAlert(1);'>&nbsp;<input type='button' id='AlertAfterWeek' value='<{$_alert_after_week}>' onclick='setUpdateAlert(7);'>&nbsp;<input type='button' id='AlertAfterWeek' value='<{$_close}>' onclick='$.facebox.close();'></div>");
+})
+</script>
+<{/if}>
+</head>
+<body>
+<div id="rightWelcome">
+	<p>
+		<strong>您好，<{$current_adminer}>，欢迎进入<{$site_name}><{$_control_pannel}></strong>今天是：<{$smarty.now|date_format:"%Y-%m-%d"}>，上次登录时间：<{$item.last_login}>，上次登录ip：<{$item.last_ip}>
+	</p>
+</div>
+<dl id="rightCon">
+<dt>安全提示</dt>
+<dd>
+    <ul>
+       <li>请妥善保管<span class="red">网站密钥</span>，如需重新设置请到 "<a href="setting.php?do=auth" target="_self"><span class="bold"><{$_setting_global}> - 安全验证</span></a>" 中重新覆盖。</li>
+       <li>如果要继续启用<span class="red">更新提醒</span>功能，请重新 "<a href="javascript:void(0);" onclick="setUpdateAlert(0);" target="_self"><span class="bold">设置提醒</span></a>" 并刷新页面。</li>
+       <li>
+			<span><a href="member.php?do=search&member[status]=0" target="_self">待审核会员</a><em>(<{$TotalAmounts.member}>)</em></span>
+			<span><a href="company.php?do=search&status=0" target="_self">待审核公司库</a><em>(<{$TotalAmounts.company}>)</em></span>
+			<span><a href="offer.php?do=search&status=0" target="_self">待审核供求信息</a><em>(<{$TotalAmounts.trade}>)</em></span>
+			<span><a href="product.php?do=search&product[status]=0" target="_self">待审核产品</a><em>(<{$TotalAmounts.product}>)</em></span>
+	   </li>
+    </ul>
+</dd>
+<dt><{$_administrator}>留言</dt>
+<dd>
+    <ul>
+      <form method="post" action="adminnote.php" id="EditFrm" name="edit_frm" target="_self">
+        <li>内容：<input type="text" name="data[adminnote][title]" value="" />&nbsp;<input class="formbtn" type="submit" name="save" value="<{$_save}>" /></li>
+      </form>
+   </ul>
+</dd>
+<dt>系统信息</dt>
+<dd>
+    <table>
+        <tr>
+            <th>服务器操作系统:</th>
+            <td><{$item.operatingsystem}></td>
+            <th>WEB 服务器:</th>
+            <td><{$item.software}></td>
+        </tr>
+        <tr>
+            <th>PHP 版本:</th>
+            <td><{$item.PhpVersion}></td>
+            <th>MYSQL 版本:</th>
+            <td><{$item.MysqlVersion}></td>
+        </tr>
+        <tr>
+            <th>程序版本及编码:</th>
+            <td><a href="<{$SupportUrl}>" title="检查更新" target="_blank"><span class="red"><{$item.PBVersion}></span></a></td>
+            <th>安装日期:</th>
+            <td><{$item.InstallDate}></td>
+        </tr>
+        <tr>
+            <th>已用<{$_database}>:</th>
+            <td><{$item.DatabaseSize}></td>
+            <th>GD库支持:</th>
+            <td><{$item.GDSupports}></td>
+        </tr>
+    </table>
+</dd>
+<dt>关于<{$_soft_name}></dt>
+<dd>
+    <table>
+        <tr>
+            <th>帮助论坛：</th>
+            <td><a href="http://www.phpb2b.net/">http://bbs.phpb2b.com/</a></td>
+        </tr>
+    </table>
+</dd>
+</dl>
+</body>
+</html>

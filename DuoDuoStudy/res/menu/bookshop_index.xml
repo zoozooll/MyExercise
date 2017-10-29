@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/storeShowBookshop" android:icon="@drawable/bookstore_shoppingcart"
+		android:title="@string/storeMemuTitleCar">
+	</item>
+	<item android:id="@+id/storeShowBookFavorite" android:icon="@drawable/bookstore_favcion"
+		android:title="@string/storeMemuTitleFavorite">
+	</item>
+	<item android:id="@+id/storeShowBookRefresh" android:icon="@drawable/bookstore_refresh"
+		android:title="@string/storeMemuTitleRefresh">
+	</item>
+	<item android:id="@+id/storeShowBookSearch" android:icon="@drawable/bookstore_search"
+		android:title="@string/storeMemuTitleSearch">
+	</item>
+</menu>

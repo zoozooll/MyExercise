@@ -1,0 +1,161 @@
+<{assign var="page_title" value="`$_free_release_offer`"}>
+<{include file="`$ThemeName`/header.html"}>
+<script>
+function htmlspecialchars(str) {
+	return preg_replace(['&', '<', '>', '"'], ['&amp;', '&lt;', '&gt;', '&quot;'], str);
+}
+</script>
+<div class="wrapper">
+      <div class="subnav"><{$position}></div>
+      <div class="blank6"></div>
+      <div class="content clearfix">
+      <div class="main_left_w180">
+         <div class="offer_login_title">
+            <div class="title_bar_s3">
+              <span class="title_top_s3"><span></span></span>
+              <h3><{$_pls_login}></h3>
+           </div>  
+         </div>
+         <div class="offer_login_content">
+           <p><{$_free_post_tip}></p>
+        <form name="loggingfrm" id="LoggingFrm" method="post" action="logging.php">
+        	<input type="hidden" name="action" value="logging">
+			<input type="hidden" name="formhash" value="<{$formhash}>">
+			<input type="hidden" name="forward" value="offer/post.php" />
+           <table class="user_login">
+          <tr>
+            <th><{$_user_name}></th>
+            <td><input type="text" name="data[login_name]" id="LoginName" value="" tabindex="1"></td>
+          </tr>
+          <tr>
+            <th><{$_password}></th>
+            <td><input name="data[login_pass]" type="password" id="LoginPass" value="" tabindex="2"></td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td><input type="button" onclick="$('#LoggingFrm').submit();" name="log_in" id="LogIn" value="<{$_login}>" class="submit_w91"/></td>
+          </tr>
+        </table>
+       </form>
+        <div class="user_reg">
+         <h3><{$_i_not_member}></h3>
+		 <p><a href="member.php" class="reg_orange"><{$_join_now}></a></p>    
+         </div>
+         </div>
+      </div>
+      <div class="main_right_w770">
+		<{if $Errors}><{$Errors}><{/if}>
+         <div class="base_title">
+           <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_base_info}></span><span class="corner_t_r"></span><div class="title_step"><{$_post_offer_steps}><span class="step1"><{$_write_base_info}></span><span class="step2"><{$_write_contact}></span><span class="step3"><{$_release_complete}></span></div></h2> 
+        </div>
+        <div class="base_info_content clearfix">
+		<form name="post_frm" id="PostFrm" enctype="multipart/form-data" method="post" action="<{$smarty.server.PHP_SELF}>">
+		<input type="hidden" name="visit_post" value="visit_post" id="VisitPost" />
+		<input type="hidden" name="formhash" value="<{$formhash}>" id="FormHash" />
+            <table class="base_info">
+              <tr>
+                <th><{$_offer_direction}><span class="star">*</span></th>
+                <td><{html_radios name="data[trade][type_id]" options=$TradeTypes checked="1" separator=" "}></td>
+              </tr>
+              <tr>
+                <th><{$_info_title}><span class="star">*</span></th>
+                <td><input name="data[trade][title]" id="trade_title" type="text" size="32" value="<{$item.title}>"><span class="gray"><{$_within_sixteen_words}></span></td>
+              </tr>
+              <tr>
+                <th><{$_details}><span class="star">*</span></th>
+                <td><textarea name="data[trade][content]" id="trade_content" cols="60" rows="8" wrap="virtual"><{$item.content}></textarea>
+                    <p class="gray"><{$_product_description}></p>
+                    <p class="gray"><{$_product_description_using_image}></p>
+					</td>
+              </tr>
+              <tr>
+                <th><{$_expire_date}><span class="star">*</span></th>
+                <td><span class="expires"><{html_radios name="expire_days" options=$OfferExpires checked="30" separator=" "}></span></td>
+              </tr>
+              <tr>
+                <th><{$_area}><span class="star">*</span></th>
+                <td>
+                <p id="dataArea">
+					<select name="data[trade][area_id1]" id="dataTradeAreaId1" class="level_1" style="width:120px;" ></select>
+					<select name="data[trade][area_id2]" id="dataTradeAreaId2" class="level_2" style="width:120px;"></select>
+					<select name="data[trade][area_id3]" id="dataTradeAreaId3" class="level_3" style="width:120px;"></select>
+				</p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" class="bg"><span class="bold"><{$_not_must_content}></span></td>
+              </tr>
+              <tr>
+                <th><{$_belong_industry}></th>
+                <td>
+                <p id="dataIndustry">
+					<select name="data[trade][industry_id1]" id="dataTradeIndustryId1" class="level_1" style="width:120px;" ></select>
+					<select name="data[trade][industry_id2]" id="dataTradeIndustryId2" class="level_2" style="width:120px;"></select>
+					<select name="data[trade][industry_id3]" id="dataTradeIndustryId3" class="level_3" style="width:120px;"></select>
+				</p>
+                </td>
+              </tr>
+              <tr>
+                <th><{$_tags}></th>
+                <td><input name="data[tag]" id="dataTag" type="text" value=""><em><{$_tags_more}></em></td>
+              </tr>
+    
+              <tr>
+                <td colspan="2" class="bg"><span class="bold"><{$_contact}></span><{$_content_required}></td>
+              </tr>
+              <tr>
+                <th><{$_contact}><span class="star">*</span></th>
+                <td><input type="text" name="data[tradefield][link_man]" id="link_man" value="<{$item.link_man}>"></td>
+              </tr>
+              <tr>
+                <th><{$_contact_address}><span class="star">*</span></th>
+                <td><input name="data[tradefield][address]" id="OfferAddress" type="text" value="<{$item.address}>" /></td>
+              </tr>
+              <tr>
+                <th><{$_email_addr}><span class="star">*</span></th>
+                <td><p class="gray"><input name="data[tradefield][email]" id="OfferEmail" type="text" value="<{$item.email}>" />&nbsp;<{$_contact_required}></p></td> 
+              </tr>
+                <tr>
+                <th><{$_company_name}></th>
+                <td><input name="data[tradefield][company_name]" id="OfferAddress" type="text" value="<{$item.company_name}>" />
+                <p class="gray"><{$_inner_business_name}><{$company_name}></p>
+                <p class="gray"><{$_no_company_should_name}></p>
+                </td>
+              </tr>
+               <tr>
+                <th><{$_preferred_tel}></th>
+                <td><select name="data[tradefield][prim_tel]" id="OfferPrimTel">
+                <{html_options options=$PhoneTypes selected="1"}>
+              </select><{$_number}><input type="text" name="data[tradefield][prim_telnumber]" id="prim_telnumber" value="<{$item.prim_telnumber}>"></td>
+              </tr>
+               <tr>
+                <th><{$_preferred_im}></th>
+                <td><select name="data[tradefield][prim_im]">
+                <{html_options options=$ImTypes selected="1"}>
+              </select><{$_number}><input type="text" name="data[tradefield][prim_imaccount]" id="prim_imaccount" value="<{$item.prim_imaccount}>"></td>
+              </tr>
+              <{if $ifcapt}>
+              <tr>
+                <th><{$_code}></th>
+                <td><a href="javascript:;" onclick="$('#imgcaptcha').attr('src','captcha.php?sid=' + Math.random());return false;"><img id="imgcaptcha" src="captcha.php?sid=<{$sid}>"></a><p class="gray"><input type="text" name="data[capt_post_free]" id="VisitAuthNumber" value="">&nbsp;<{$_enter_the_words_in_pic}></p></td>
+              </tr>
+              <{/if}>
+              <tr>
+                <th>&nbsp;</th>
+                <td><input name="post" id="Post" type="submit" value="<{$_immediate_release}>" class="btn_submit" /><input name="reset" type="reset" value="<{$_reset}>"  class="btn_submit"/></td>
+              </tr>
+            </table>
+          </form>  
+        </div>
+        </div>
+    </div>    
+</div>
+<script>
+var app_language = '<{$AppLanguage}>';
+</script>
+<script src="scripts/jquery/validate.js"></script>
+<script src="scripts/validate.js" charset="<{$Charset}>"></script>
+<script src="scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="scripts/script_area.js"></script>
+<script src="scripts/script_industry.js"></script>
+<{include file="`$ThemeName`/footer.html"}>

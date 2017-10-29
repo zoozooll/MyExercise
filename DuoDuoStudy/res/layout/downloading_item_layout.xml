@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:background="@color/white"
+	android:gravity="center_vertical" android:layout_height="wrap_content">
+	
+		<ImageView android:id="@+id/download_imge_item"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_weight="0.1"
+			android:src="@drawable/download_sign" />
+	<TextView android:id="@+id/download_txt_name"
+		android:layout_width="wrap_content" android:layout_height="60dip"
+		android:textColor="@color/black" android:text="小学生作文选集"
+		android:gravity="center_vertical" android:singleLine="true" android:ellipsize="marquee"
+		android:layout_weight="0.3"
+		android:marqueeRepeatLimit="marquee_forever" />
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+			android:layout_weight="0.5"
+			android:gravity="right"
+		>
+		<ProgressBar  android:id="@+id/download_bar_item"
+			android:layout_width="110dip" android:layout_height="20dip"
+			style="?android:attr/progressBarStyleHorizontal" android:max="1000"
+			android:progress="0" />
+			<TextView
+			android:id="@+id/state_text"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:visibility="gone"
+			android:gravity="right"
+			/>
+	</LinearLayout>
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:layout_weight="0.1"
+		>
+		<ImageButton android:id="@+id/download_iBtn_item"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:background="@drawable/pause_download" />
+	</LinearLayout>
+</LinearLayout>

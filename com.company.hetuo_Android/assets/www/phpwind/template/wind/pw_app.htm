@@ -1,0 +1,51 @@
+<!--<?php
+if($action=='toapp'){print <<<EOT
+-->
+<form action="pw_app.php?ajax=1&action=updata" method="post" onsubmit="return false;">
+<input type="hidden" name="tid" value="$tid" />
+<table width="100%" cellspacing="1" cellpadding="5">
+	<tr><th colspan="6" class="h" style="cursor:move" onmousedown="read.move(event);"><span class="fr" style="margin-top:2px;cursor:pointer" onclick="closep();"><img src="$imgpath/close.gif" /></span>帖子交换</th></tr>
+	<tr>
+<!--
+EOT;
+$num=0;
+foreach($info_class as $key=>$value){
+if($value[cup]){
+if($value[ifshow]){
+$num++;
+$htm_tr = $num % 6 == 0 ? '</tr><tr>' : '';
+print<<<EOT
+-->
+	<td><input name="cid" type="radio" value="$key" />$value[name]</td>$htm_tr
+<!--
+EOT;
+}}}print <<<EOT
+-->
+	</tr>
+	<tr><td colspan="6" style="padding-left:5px;color:red;"><a style="cursor:pointer;" class="fr" onclick="openinfo(this)" id="help" title="打开">更多分类</a></td></tr>
+	<tbody id="helpinfo" style="display:none;">
+		<tr>
+<!--
+EOT;
+$num=0;
+foreach($info_class as $key=>$value){
+if($value[cup]){
+if(!$value[ifshow]){
+$num++;
+$htm_tr = $num % 6 == 0 ? '</tr><tr>' : '';
+print<<<EOT
+-->
+			<td><input name="cid" type="radio" value="$key" />$value[name]</td>$htm_tr
+<!--
+EOT;
+}}}print <<<EOT
+-->
+		</tr>
+	</tbody>
+</table>
+<input type="hidden" name="step" value="2" />
+<ul><li style="text-align:center;padding:4px 0;"><input type="button" class="btn" onclick="ajax.submit(this.form);" value="提 交" /></li></ul></form>
+<!--
+EOT;
+}?>
+-->

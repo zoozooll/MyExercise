@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FFFFFF"
+  android:orientation="vertical"
+  android:paddingTop="2dip"
+  >
+  <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" >
+  	<Button android:layout_width="50dip" android:layout_height="30dip" android:id="@+id/imageBtnBookrack" android:fadeScrollbars="false" android:background="@drawable/btn_background"/>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" >
+	    <Button android:layout_width="30dip" android:layout_marginLeft="10dip" android:layout_height="30dip" android:id="@+id/imageBtnRefresh" android:fadeScrollbars="false" android:background="@drawable/btn_background"/>
+	    <Button android:layout_width="30dip" android:layout_marginLeft="10dip" android:layout_height="30dip" android:id="@+id/imageBtnFavorite" android:fadeScrollbars="false" android:background="@drawable/btn_background"/>
+	    <Button android:layout_width="30dip" android:layout_marginLeft="10dip" android:layout_height="30dip" android:id="@+id/imageBtnShopingCart" android:fadeScrollbars="false" android:background="@drawable/btn_background"/>
+    </LinearLayout>
+  </RelativeLayout>
+  <ImageView  android:src="@drawable/line"  android:layout_width="fill_parent" android:layout_height="wrap_content" />
+  <LinearLayout android:id="@+id/classifyToast" android:layout_width="fill_parent" android:layout_height="wrap_content">
+  	<TextView />
+  </LinearLayout>
+  <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" >
+  	 <EditText android:id="@+id/searchEdit" android:layout_width="220dip" android:layout_height="wrap_content"/>
+  	 <ImageView android:id="@+id/search" android:layout_gravity="center_vertical" android:layout_marginRight="8dip" android:src="@drawable/search" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  	 <TextView android:id="@+id/advancedSearch" android:layout_gravity="center_vertical"  android:text="高级搜索" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  </LinearLayout>
+  <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" >
+  	<Button android:id="@+id/all" android:layout_width="52dip" android:background="@drawable/btn_background" android:layout_height="28dip" android:textColor="#000" android:textSize="18sp" />
+  	<Button android:id="@+id/books" android:layout_width="52dip" android:background="@drawable/btn_background" android:layout_height="28dip" android:textColor="#000" android:textSize="18sp" />
+  	<Button android:id="@+id/courseware" android:layout_width="52dip" android:background="@drawable/btn_background" android:layout_height="28dip" android:textColor="#000" android:textSize="18sp" />
+  	<Button android:id="@+id/example" android:layout_width="52dip" android:background="@drawable/btn_background" android:layout_height="28dip" android:textColor="#000" android:textSize="18sp" />
+  	<Button android:id="@+id/exampaper" android:layout_width="52dip" android:background="@drawable/btn_background" android:layout_height="28dip" android:textColor="#000" android:textSize="18sp" />
+  	<Button android:id="@+id/groupshop" android:layout_width="52dip" android:background="@drawable/btn_background" android:layout_height="28dip" android:textColor="#000" android:textSize="18sp" />
+  </LinearLayout>
+  
+  <ImageView android:src="@drawable/line" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+  <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" >
+  	<Button android:id="@+id/imageBtnPrice" android:layout_width="52dip" android:layout_height="25dip" android:background="@drawable/btn_background"/>
+  	<Button android:id="@+id/imageBtnOkey" android:layout_width="52dip" android:layout_height="25dip" android:background="@drawable/btn_background"/>
+  	<Button android:id="@+id/imageBtnMenu" android:layout_width="52dip" android:layout_alignParentRight="true" android:layout_height="25dip" android:background="@drawable/btn_background"/>
+  </RelativeLayout>
+  <ListView android:id="@+id/bookListView" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:visibility="visible"
+	/>
+</LinearLayout>

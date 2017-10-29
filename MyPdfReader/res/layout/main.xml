@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<ViewFlipper android:id="@+id/vfpMainContent"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"></ViewFlipper>
+		
+	<include layout="@layout/document_content_head"
+		android:layout_gravity="top" />
+	<include layout="@layout/document_content_foot"
+		android:layout_gravity="bottom" />
+</FrameLayout>

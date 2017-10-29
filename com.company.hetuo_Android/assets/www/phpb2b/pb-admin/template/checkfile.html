@@ -1,0 +1,62 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_system_tool}> &raquo; 文件校验</p>
+</div>
+<div id="rightTop"> 
+    <h3>文件校验</h3> 
+</div>
+<{if $flag=="0"}>
+<div class="mrightTop"> 
+    <div class="fontl"> 
+	文件校验是针对<{$_soft_name}>官方发布的文件为基础进行核对，点击下面按钮开始进行校验。
+    </div> 
+    <div class="fontl"></div> 
+</div> 
+<div class="info">
+  <form method="post" action="checkfile.php" id="EditFrm" name="edit_frm">
+  <input type="hidden" name="check" value="check" />
+    <table class="infoTable">
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="button" name="check"  id="Submit"  value="开始校验" />		</td>
+      </tr>
+    </table>
+  </form>
+  </div>
+  <{else}>
+   <div class="tdare">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <tbody>
+		<tr>
+		  <td>文件名称</td>
+		  <td>文件大小</td>
+		  <td>最后修改时间</td>
+		  <td>状态</td>
+		</tr>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td><{$item.name}></td>
+		  <td><{$item.size}></td>
+		  <td><{$item.time}></td>
+		  <td><{$item.status}></td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="5"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+</div>
+ <{/if}>
+ <script language="JavaScript">
+$(document).ready(function() { 
+$('#Submit').click(function() {
+	$('#Submit').attr('disabled',"true");
+	$('#Submit').val("校验中...");
+	$('#EditFrm').submit();
+});
+})
+</script>
+<{include file="footer.html"}>

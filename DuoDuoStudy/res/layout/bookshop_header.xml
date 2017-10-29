@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:spinnerview="http://schemas.android.com/apk/res/com.iskyinfor.duoduo"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:background="@drawable/top_bg">
+	<Button android:id="@+id/btnPrice" android:layout_height="wrap_content"
+		android:text="@string/storeSortPrice" android:layout_width="wrap_content"
+		android:layout_centerVertical="true" android:layout_alignParentLeft="true"
+		android:background="@drawable/button_selector" android:textColor="@drawable/white"
+		android:layout_marginLeft="10dp" android:drawableRight="@drawable/sort_arrow_up"
+		android:paddingRight="8dp"></Button>
+	<Button android:id="@+id/btnOkey" android:layout_height="wrap_content"
+		android:text="@string/storeSortTrunover" android:layout_width="wrap_content"
+		android:layout_centerVertical="true" android:layout_toRightOf="@id/btnPrice"
+		android:background="@drawable/button_selector" android:textColor="@drawable/white"
+		android:layout_marginLeft="5dp" android:drawableRight="@drawable/sort_arrow_down"
+		android:paddingRight="8dp"></Button>
+
+	<!-- <ImageButton android:layout_width="wrap_content"
+		android:id="@+id/shoppingCart" android:layout_height="wrap_content"
+		android:layout_centerVertical="true" android:layout_alignParentRight="true"
+		android:background="@drawable/bookstore_shoppingcart"></ImageButton>
+	<ImageButton android:layout_width="wrap_content"
+		android:id="@+id/favorite" android:layout_height="wrap_content"
+		android:layout_centerVertical="true" android:layout_toLeftOf="@id/shoppingCart"
+		android:background="@drawable/bookstore_favcion" android:layout_marginRight="10dp"></ImageButton>
+	<ImageButton android:layout_width="wrap_content"
+		android:id="@+id/refresh" android:layout_height="wrap_content"
+		android:layout_centerVertical="true" android:layout_toLeftOf="@id/favorite"
+		android:background="@drawable/bookstore_refresh" android:layout_marginRight="10dp"></ImageButton>
+	<ImageButton android:layout_width="wrap_content"
+		android:id="@+id/advancedSearch" android:layout_height="wrap_content"
+		android:layout_centerVertical="true" android:layout_toLeftOf="@id/refresh"
+		android:background="@drawable/bookstore_search" android:layout_marginRight="10dp"></ImageButton> -->
+
+<!-- 	<Button android:id="@+id/all" android:layout_height="wrap_content"
+		android:text="全部" 
+		android:layout_width="wrap_content"
+		android:layout_centerVertical="true" 
+		android:layout_toLeftOf="@id/advancedSearch"
+		android:background="@drawable/button_selector"
+		android:textColor="@drawable/white"
+		></Button>
+		 -->
+ <com.iskyinfor.duoduo.ui.SpinnerView 
+	android:id="@+id/all" 
+	android:text="全部" 
+	android:layout_width="80dp"
+	android:layout_height="wrap_content"
+	android:layout_centerVertical="true" 
+	android:layout_alignParentRight="true"
+	android:background="@drawable/complete_btn_selector"
+	spinnerview:textInfo="@array/duoduo_type_spinner"
+	spinnerview:lesson_spinner_first="@drawable/lesson_spinner_first"
+	spinnerview:lesson_spinner_center="@drawable/lesson_spinner_thrid"
+	spinnerview:lesson_spinner_end="@drawable/lesson_spinner_fourth"
+	 android:textColor="#FFFFF0"
+	 layout_marginRight= "10dp"
+	/>
+
+	<ImageButton android:id="@+id/imageBtnMenu"
+		android:layout_height="wrap_content" android:text="@string/storeAll"
+		android:layout_width="wrap_content" android:layout_centerVertical="true"
+		android:layout_toLeftOf="@id/all" android:background="@drawable/bookshelf_list_switch_selector"
+		android:layout_marginTop="10dp"></ImageButton>
+</RelativeLayout>

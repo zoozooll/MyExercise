@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	    android:id="@+id/duoduo_index_layout_bottom"
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:background="@color/white"
+	    android:layout_width="fill_parent"
+	    android:layout_height="35dp">
+    <ImageView
+        android:id="@+id/duoduo_index_list_img"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/lesson_list"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        
+    ></ImageView>
+    <ImageView
+        android:id="@+id/duoduo_index_back_img"
+        android:src="@drawable/lesson_back"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dip"
+    ></ImageView>
+  </RelativeLayout>

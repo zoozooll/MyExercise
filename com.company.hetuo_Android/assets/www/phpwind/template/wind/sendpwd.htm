@@ -1,0 +1,67 @@
+<!--<?php print <<<EOT
+-->
+<div id="breadCrumb">
+		<img src="$imgpath/$stylepath/thread/home-old.gif" align="absmiddle" />&nbsp;<a href="$db_bfn" title="$db_bbsname">$db_bbsname</a> &raquo; 找回密码
+</div>
+<style type="text/css">
+.t{margin-top:8px;border:4px solid $forumcolortwo;}
+.t table tr td{padding:.8em 0 .8em 3em;}
+.t table tr th{text-align:right;font-weight:normal;}
+.t table{border:2px solid $tablecolor;}
+.t .h{padding-left:1em;}
+</style>
+<form action="sendpwd.php?" method="POST">
+<input type="hidden" value="2" name="step" />
+<div class="t f_one">
+<table width="100%" align="center" cellspacing="0" cellpadding="0">
+<tr>
+<th class="h"><b>密码发送程序</b></th><th class="h">&nbsp;</th></tr>
+<tr>
+<th width="25%">用户名</th>
+<td><input type="text" name="pwuser" class="input" size="40" /></td>
+</tr>
+<tr>
+<th>Email</th>
+<td><input type="text" name="email" class="input" size="40" /></td>
+</tr>
+<!--
+EOT;
+if($db_ifsafecv){print <<<EOT
+-->
+<tr>
+	<th>安全问题</th>
+	<td>
+		<select name="question" onchange="showcustomquest_0(this.value)">
+<option value="0">无安全问题</option><option value="1">我爸爸的出生地</option><option value="2">我妈妈的出生地</option><option value="3">我的小学校名</option><option value="4">我的中学校名</option><option value="5">我最喜欢的运动</option><option value="6">我最喜欢的歌曲</option><option value="7">我最喜欢的电影</option><option value="8" >我最喜欢的颜色</option><option value="-1">自定义问题</option>
+		</select>
+		<span id="customquest_o" style="display:none"><input type="text" name="customquest" class="input" size="17"></span>
+	</td>
+</tr>
+<tr>
+	<th>您的答案</th>
+	<td><input type="text" name="answer" class="input" size="40"> 如果您设置了安全问题，需要填写正确的答案才能找回密码</td>
+</tr>
+<!--
+EOT;
+}if($db_gdcheck & 16){print <<<EOT
+-->
+<tr><th>
+认证码 : </th>
+<td><input class="input" type="text" name="gdcode" size="6" onfocus="try{opencode('menu_gd',this)}catch(e){}" /><span style="cursor:pointer; margin-left:3px" onclick="this.previousSibling.focus();">点此显示验证码</span>
+<div class="menu" id="menu_gd" style="visibility:hidden;"><img src="ck.php?" align="absmiddle" style="cursor:pointer;" id="ckcode" alt="看不清楚，换一张" /></div></td>
+</th></tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+<tr><th></th><td><input class="btn" type="submit" value="提 交" /></td></tr>
+</table></div>
+</form>
+<script language="JavaScript1.2">
+function showcustomquest_0(qid){
+	getObj("customquest_o").style.display = qid==-1 ? '' : 'none';
+}
+</script>
+<!--
+EOT;
+?>-->

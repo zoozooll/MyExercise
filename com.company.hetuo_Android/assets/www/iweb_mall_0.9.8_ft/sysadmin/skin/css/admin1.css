@@ -1,0 +1,47 @@
+/* body */
+body { text-align: left; font-family:"宋体", Arial; margin:0; padding:0; background: #ffffff; font-size:12px; color:#333;}
+div, form, img, ul, ol, li, dl, dt, dd, p { margin:0; padding:0; border:0; }
+li { list-style:none; }
+h1, h2, h3, h4, h5, h6, input { margin:0; padding:0; }
+table, td, tr, th { font-size:12px; }
+form{margin:0px;display: inline}
+a:link { color: #333; text-decoration:none; }
+a:visited { color: #333; text-decoration:none; }
+a:hover { color: #ff0000; text-decoration:underline; }
+a:active { color: #37a1fa; text-decoration:none; }
+
+/* global */
+.spaceline { clear:both; line-height:5px; height:5px; }
+.clear { clear:both; height:1px; overflow:hidden;}
+.fl{ float:left;}
+.fr{ float:right;}
+.left {text-align:left;}
+.center {text-align:center;}
+.right {text-align:right;}
+
+/* font-size */
+.f12px { font-size:12px; }
+.f14px { font-size:14px; }
+.f20px { font-size:20px; }
+
+/* table */
+table { border-collapse:collapse; border:solid #E5E5E5; border-width:1px 0 0 1px; margin:5px auto;}
+table th, table td { border:solid #E5E5E5; border-width:0 1px 1px 0; padding:2px; line-height:24px;}
+table th {background:#E5E5E5;}
+
+.icon1,.icon2,.icon3,.icon4,.icon5,.icon6,.icon7,.icon8,.icon9,.icon10,.icon11,.icon12,.icon13,.icon14,.icon15{display:block; width:80px; height:16px; margin:0px auto;}
+.icon1{background:url(../images/icon.gif) 0px -0px no-repeat}
+.icon2{background:url(../images/icon.gif) 0px -16px no-repeat}
+.icon3{background:url(../images/icon.gif) 0px -32px no-repeat}
+.icon4{background:url(../images/icon.gif) 0px -48px no-repeat}
+.icon5{background:url(../images/icon.gif) 0px -64px no-repeat}
+.icon6{background:url(../images/icon.gif) 0px -80px no-repeat}
+.icon7{background:url(../images/icon.gif) 0px -96px no-repeat}
+.icon8{background:url(../images/icon.gif) 0px -112px no-repeat}
+.icon9{background:url(../images/icon.gif) 0px -128px no-repeat}
+.icon10{background:url(../images/icon.gif) 0px -144px no-repeat}
+.icon11{background:url(../images/icon.gif) 0px -160px no-repeat}
+.icon12{background:url(../images/icon.gif) 0px -176px no-repeat}
+.icon13{background:url(../images/icon.gif) 0px -192px no-repeat}
+.icon14{background:url(../images/icon.gif) 0px -208px no-repeat}
+.icon15{background:url(../images/icon.gif) 0px -224px no-repeat}

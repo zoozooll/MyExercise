@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_gravity="top"
+	android:layout_height="wrap_content" android:background="@android:drawable/title_bar">
+	<TextView android:id="@+id/tvwBookname" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+		android:text="书名" android:textColor="#ffffffff"></TextView>
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/tvwPage"
+		android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+		android:text="page/total" android:layout_centerVertical="true"
+		android:textColor="#ffffffff"></TextView>
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/tvwScalingPercent"
+		android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+		android:layout_centerVertical="true" android:text="100%"
+		android:textColor="#ffffffff"></TextView>
+
+
+</RelativeLayout>

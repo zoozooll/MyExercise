@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+	<EditText android:id="@+id/etxPage" android:layout_marginLeft="10dp"
+		android:layout_height="wrap_content" android:layout_width="80dp" />
+	<TextView android:id="@+id/txvPageTotal" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="/total"></TextView>
+</LinearLayout>

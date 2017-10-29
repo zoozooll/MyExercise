@@ -1,0 +1,64 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="5"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+	<div class="tips"><span><{$position}></span></div>
+	<div class="qiugoucontent clearfix">
+	<div class="qiugoucontentleft">
+    <div class="base_title">
+       <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_search_result}></span><span class="corner_t_r"></span></h2>
+	</div>
+		<div class="qiugouleftcon box_bord">
+			<form>
+            <table width="100%" border="0">
+              <tr>
+                <th class="offer_info"><{$_title}></th>
+                <th class="offer_area"><{$_user_name_n}></th>
+                <th class="offer_level"><{$_category}></th>
+				 <th class="offer_level"><{$_sorts}></th>
+				 <th class="offer_level"><{$_the_area}></th>
+                <th class="offer_contact"><{$_the_price}></th>
+              </tr>
+              <{foreach from=$Prices item="item"}>
+              <tr>
+                <td class="offer_info title_link"><span><a href="product/price.php?id=<{$item.id}>" title="<{$item.title}>"><{$item.title}></a></span>[<{$item.created|date_format:"%Y-%m-%d"}>]<br />
+						<{$_abstract}><{$item.description|truncate:50}><br /></td>
+                <td class="offer_area"><{if $item.companyname}><a href="space.php?userid=<{$item.username}>"><{$item.companyname}></a><{else}><{$item.username}><{/if}></td>
+                <td class="offer_level"><{$PriceTypes[$item.type_id]}></td>
+				<td class="offer_level"><a href="product/price.php?do=search&catid=<{$item.category_id}>"><{$item.categoryname}></a></td>
+				<td class="offer_level"><{$Areas[$item.area_id]}></td>
+                <td  class="offer_contact">
+                <{$item.price}><{$Monetaries[$item.currency]}>/<{$Measuries[$item.units]}>
+               </td>
+              </tr>
+              	<{/foreach}>
+            </table>
+
+			<div>
+				<span><{$ByPages}></span>
+			</div>
+			</form>
+		</div>
+	</div>
+	<div class="qiugoucontentright">
+		<div class="recommendcompany">
+			<div class="recommendcompanytop"><img src="<{$theme_img_path}>images/lhighs.gif" />&nbsp;<{$_commend}><{$_product}></div>
+			<{product row=10 type="commend"}>
+			<p><a href="[link:title]">[field:title]</a></p>
+			<{/product}>
+			<div class="clear"></div>
+		</div>
+		<div class="recommendcompany">
+			<div class="recommendcompanytop"><img src="<{$theme_img_path}>images/lhighs.gif" />&nbsp;<{$_recommended_company}></div>
+			<{company row=15}>
+			<p><a href="[link:title]" target="_blank">[field:title]</a></p>
+			<{/company}>
+			<div class="clear"></div>
+		</div>
+</div>
+</div>
+<script>
+$("#SearchFrm").attr("action","offer/list.php");
+$("#topMenuProduct").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

@@ -1,0 +1,183 @@
+<{assign var="page_title" value="`$_brands`"}>
+<{assign var="nav_id" value="10"}>
+<{include file="`$ThemeName`/header.html"}>
+<style type="text/css">
+@import url(<{$theme_img_path}>effect.css);
+</style>
+<script src="scripts/jquery.hover.js"></script>
+<script src="scripts/jquery.scrollTo.js"></script>
+<div class="wrapper">
+	<div class="banner"><{ads typeid=2}><span><a href="[link:url]">[field:src]</a></span><{/ads}></div>
+	<div class="content">
+		<div class="main_left_w180">
+			<div class="cornerbox">
+				<div class="title_bar_s6">
+					<span class="title_top_s6"><span></span></span>
+					<h2><{$_brands}><{$_categories}></h2>
+				</div>
+				<div class="brand_category_list">
+					<ul>
+					<{foreach from=$Items name=brandtype item=brandtype}>
+						<li>
+						   <h3><a href="brand/list.php?catid=<{$brandtype.id}>"><{$brandtype.title}></a></h3>
+						   <ul>
+							<{foreach from=$brandtype.child item=item_child}>
+							   <li><a href="brand/list.php?catid=<{$item_child.id}>"><{$item_child.title}></a></li>
+							<{/foreach}>
+						   </ul>
+						</li>
+					  <{/foreach}>
+					</ul>
+				</div>
+			   <div class="corner_bottom">
+					<div class="corner_bottom_l"></div>
+					<div class="corner_tottom_r"></div>
+				</div>
+			</div><!--end-->
+			<div class="blank6"></div>
+			<div class="cornerbox">
+				<div class="title_bar_s6">
+					<span class="title_top_s6"><span></span></span>
+					<h2><{$_brands}><{$_information}></h2>
+				</div>
+				<div class="corner_content_s6">
+				   <ul>
+					 <{news row=10}>
+					 <li><a href="[link:title]">[field:title]</a></li>
+					 <{/news}>
+				   </ul>
+				</div>
+			   <div class="corner_bottom">
+					<div class="corner_bottom_l"></div>
+					<div class="corner_tottom_r"></div>
+				</div>
+			</div><!--end-->
+		</div>
+		<div class="main_right_w770">
+		   
+			<div class="brand_recommend">
+				<h2><{$_commend}><{$_brands}></h2>
+				<div class="brand_list clearfix">
+				<{brand row=6 col=2 type="image,commend"}>
+					<ul>
+					 <li><div><span><a href="[link:title]"><img src="[img:src]" alt="[field:title]" /></a></span></div>
+					<p><a href="[link:title]">[field:title]</a></p>
+					 </li>
+				  </ul>
+				  <{/brand}>
+				</div>
+			</div><!--end-->
+			<div class="blank6"></div>
+			<div class="brand_hot">
+				<div class="title">
+					<h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_new_added}><{$_brands}></span><span class="corner_t_r"></span></h2>
+				</div>
+				<div class="letterindex clearfix">
+					<h3><{$_sort_by_alpha}></h3>
+					 <ul id="letternav">
+						<{foreach from=$AlphabetSorts name=Alphabet item=item_alphabet key=key_alphabet}>
+						<li class="frist">
+						 <a href="javascript:;" onclick="$.scrollTo('#BrandId<{$key_alphabet}>',800);" ><{$key_alphabet}></a>
+							<div class="sub">
+							   <div class="row clearfix">
+								 <ul>
+									<{foreach from=$item_alphabet item=subitem_alphabet key=subkey_alphabet}>
+									<li><a href="brand/detail.php?id=<{$subkey_alphabet}>"><{$subitem_alphabet}></a></li>
+									<{/foreach}>
+								 </ul> 
+								</div>
+							</div>
+						
+						</li>
+						<{/foreach}>
+					</ul>
+				</div>
+				<div class="letter_content clearfix">
+						<{foreach from=$LatestBrands item=item_brand key=key_brand}>
+					  <div class="brand_letter <{cycle values="bg_base,bg_yellow"}>">
+						   <div class="letter_title" id="BrandId<{$key_brand}>"><{$key_brand}><span><a href="brand/list.php?letter=<{$key_brand}>&do=search"><{$_more}>...</a></span></div>
+						   <div class="brand_list clearfix">
+								<ul>
+									<{foreach from=$item_brand item=item_brand_child key=key_brand_child}>
+									 <li>
+									<div><span><a href="brand/detail.php?id=<{$item_brand_child.id}>"><img src="<{$item_brand_child.img}>" /></a></span></div>
+									<p><a href="brand/detail.php?id=<{$item_brand_child.id}>"><{$item_brand_child.title}></a></p>
+									</li>  
+									<{/foreach}>
+							  </ul>
+							</div>
+					  </div>
+					  <{/foreach}>
+				</div>                     
+			</div><!--end-->
+		 
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	function megaHoverOver(){
+		$(this).find(".sub").stop().fadeTo('fast', 10000).show();
+			
+		//Calculate width of all ul's
+		(function($) { 
+			jQuery.fn.calcSubWidth = function() {
+				rowWidth = 0;
+				//Calculate row
+				$(this).find("ul").each(function() {					
+					rowWidth += $(this).width(); 
+				});	
+			};
+		})(jQuery); 
+		
+		if ( $(this).find(".row").length > 0 ) { //If row exists...
+			var biggestRow = 0;	
+			//Calculate each row
+			$(this).find(".row").each(function() {							   
+				$(this).calcSubWidth();
+				//Find biggest row
+				if(rowWidth > biggestRow) {
+					biggestRow = rowWidth;
+				}
+			});
+			//Set width
+			$(this).find(".sub").css({'width' :biggestRow});
+			$(this).find(".row:last").css({'margin':'0'});
+			
+		} else { //If row does not exist...
+			
+			$(this).calcSubWidth();
+			//Set Width
+			$(this).find(".sub").css({'width' : rowWidth});
+			
+		}
+	}
+	
+	function megaHoverOut(){ 
+	  $(this).find(".sub").stop().fadeTo('fast', 1, function() {
+		  $(this).hide(); 
+	  });
+	}
+
+
+	var config = {    
+		 sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)    
+		 interval: 100, // number = milliseconds for onMouseOver polling interval    
+		 over: megaHoverOver, // function = onMouseOver callback (REQUIRED)    
+		 timeout: 0, // number = milliseconds delay before onMouseOut    
+		 out: megaHoverOut // function = onMouseOut callback (REQUIRED)    
+	};
+
+	$("ul#letternav li .sub").css({'opacity':'0'});
+	$("ul#letternav li").hoverIntent(config);
+
+
+});
+</script>
+<script>
+$("#SearchFrm").attr("action","product/list.php");
+$("#topMenuProduct").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

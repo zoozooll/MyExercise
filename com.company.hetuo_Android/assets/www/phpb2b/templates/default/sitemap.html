@@ -1,0 +1,42 @@
+<{assign var="page_title" value="`$_site_map`"}>
+<{assign var="nav_id" value="`$nav_id`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+  <div class="content">
+    <div class="tips"><span><{$position}></span></div>
+    <div class="webmap">
+      <div class="webmap_left">
+      <div class="base_title">
+       <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_basic_info}></span><span class="corner_t_r"></span></h2>
+	</div>
+        <div class="base_content">
+          <div class="webmap_left_con1">
+            <h2><{$_offer_info}></h2>
+            <p><a href="buy/"><{$_Buy}></a> <a href="sell/"><{$_supply}></a> <a href="offer/list.php?typeid=8"><{$_inventory}></a> <a href="offer/list.php?typeid=5"><{$_merchants}></a> 
+			<a href="offer/list.php?typeid=6"><{$_join}></a> <a href="offer/list.php?typeid=4"><{$_cooperation}></a> <a href="offer/list.php?typeid=3"><{$_agent}></a>
+			<a href="offer/list.php?typeid=7"><{$_wholesale}></a></p>
+          </div>
+          <div class="webmap_left_con2">
+            <h2><{$_important_channel}></h2>
+            <p><a href="company/"><{$_yellow_page}></a>&nbsp;<a href="company/list.php?type=commend"><{$_recommend_company_database}></a>&nbsp;<a href="product/"><{$_nventory}></a>&nbsp;<a href="news/"><{$_information}></a>&nbsp;<a href="market/"><{$_professional_market}></a>&nbsp;<a href="fair"><{$_fair}></a>&nbsp;<a href="hr/"><{$_hr}></a></p>
+          </div>
+        </div>
+      </div>
+      <div class="webmap_right">
+       <div class="title_bar_s4">
+              <span class="title_top_s4"><span></span></span>
+              <h3><{$_quick_navigation}></h3>
+           </div>
+      
+        <div class="webmap_right_con">
+          <ul>
+            <li><a href="offer/post.php"><{$_release_supply_offer}></a></li>
+            <li><a href="service.php"><{$_client_terms_Service}></a></li>
+            <li><a href="agreement.php" target="_blank"><{$_web_login_pact}></a></li>
+          </ul>
+        </div>
+      </div>
+    </div><br clear="all"/>
+  </div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

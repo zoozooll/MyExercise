@@ -1,0 +1,30 @@
+html { background-color:#FFFFFF; }
+body { background-color:#FFFFFF; }
+a { color:#0033BB; }
+a:hover { color:#FF5500; }
+a:hover { text-decoration:none; }
+
+#banner { background-color:#FFD891; }
+.area h6 a { color:#0033BB; }
+
+.side, .hot, .frienlink, .search { background-color:#F7FBFF; border:1px #ACA899 solid; }
+.search { background-color:#FFFFE1; }
+
+.list_title { background-color:#CCCCCC; }
+.list_title a { color:#666666; }
+.list_title .list_title_in { color:#0033BB; border:1px #666666 solid; }
+.li { border-bottom:1px #CECECE dashed; }
+.step0 { background-color:#FFFFFF; }
+.step1 { }
+.todaydate { padding-right:0; }
+
+#output { background-color:#FFFFE1; border:1px #ACA899 solid; }
+#code_author a { color:#FFCC00; }
+/*  ҳ */
+.author { background-color:#E2EBED; }/**/
+
+.ad_index, .ad_index2 { border:1px #ACA899 solid; }
+
+
+
+

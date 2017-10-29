@@ -1,0 +1,96 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_yellow_page}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_yellow_page}></h3> 
+    <ul class="subnav">
+		<li><a href="company.php"><{$_management}></a></li>
+        <li><a class="btn1" href="company.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+        <li><a href="companytype.php"><{$_types}></a></li>
+        <li><a href="albumtype.php">相册分类</a></li>
+    </ul>
+</div>
+<div class="info">
+  <form action="company.php" method="post" id="EditFrm" name="edit_frm" enctype="multipart/form-data">
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 公司名称：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[company][name]" value="<{$item.name}>" /><label class="field_notice">公司的名称</label>        </td>
+      </tr>
+      <{if $smarty.get.id}>
+      <input type="hidden" name="id" value="<{$smarty.get.id}>">
+      <tr>
+        <th class="paddingT15"> <{$_cp_username_n}></th>
+        <td class="paddingT15 wordSpacing5"><{$item.username}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 空间名称：</th>
+        <td class="paddingT15 wordSpacing5"><a href="<{$SiteUrl}>space.php?userid=<{$item.cache_spacename}>" target="_blank" title="访问<{$item.name}>"><{$item.cache_spacename}></a>[<a href="member.php?do=edit&id=<{$item.member_id}>">修改</a>]<label class="field_notice">只能为英文</label></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 顶级域名支持：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[company][topleveldomain]" value="<{$item.topleveldomain}>" /><label class="field_notice">如：www.phpb2b.com，必须先做好相关<a href="setting.php?do=functions"><{$_setting}></a>及解析</label></td>
+      </tr>
+      <{else}>
+      <tr>
+        <th class="paddingT15"> <{$_cp_username_n}></th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[username]" value="" /><label class="field_notice"><{$_cp_username}></label></td>
+      </tr>
+      <{/if}>
+      <tr>
+        <th class="paddingT15"> <{$_in_industry}></th>
+        <td class="paddingT15 wordSpacing5">
+        <span id="dataIndustry">
+					<select name="data[company][industry_id1]" id="dataMarketIndustryId1" class="level_1" style="width:120px;" ></select>
+					<select name="data[company][industry_id2]" id="dataMarketIndustryId2" class="level_2" style="width:120px;"></select>
+					<select name="data[company][industry_id3]" id="dataMarketIndustryId3" class="level_3" style="width:120px;"></select>
+		</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_in_area}></th>
+        <td class="paddingT15 wordSpacing5">
+			<span id="dataArea">
+						<select name="data[company][area_id1]" id="dataMarketAreaId1" class="level_1" style="width:120px;" ></select>
+						<select name="data[company][area_id2]" id="dataMarketAreaId2" class="level_2" style="width:120px;"></select>
+						<select name="data[company][area_id3]" id="dataMarketAreaId3" class="level_3" style="width:120px;"></select>
+			</span>        
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 描述：</th>
+        <td class="paddingT15 wordSpacing5">
+        <textarea style="width:550px;height:50px;" name="data[company][description]"><{$item.description}></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 浏览量:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[company][clicked]" value="<{$item.clicked}>" type="text" /></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />
+		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+var cache_path = "../";
+var app_language = '<{$AppLanguage}>';
+var area_id1 = <{$item.area_id1|default:0}> ;
+var area_id2 = <{$item.area_id2|default:0}> ;
+var area_id3 = <{$item.area_id3|default:0}> ;
+var industry_id1 = <{$item.industry_id1|default:0}> ;
+var industry_id2 = <{$item.industry_id2|default:0}> ;
+var industry_id3 = <{$item.industry_id3|default:0}> ;
+</script>
+<script src="../scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="../scripts/script_area.js"></script>
+<script src="../scripts/script_industry.js"></script>
+<{editor type="tiny_mce"}>
+<{include file="footer.html"}>

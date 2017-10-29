@@ -1,0 +1,45 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="11"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+	<div class="tips"><span><{$position}></span></div>
+	<div class="blank6"></div>  
+	<div class="content clearfix">
+	  <div class="main_left_w720">
+	      <div class="base_title">
+		     <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_search_result}></span><span class="corner_t_r"></span></h2>
+		 </div>
+	     <div class="lemma_list">
+		<table>
+		  <tr>
+			<th><{$_word_name}></th>
+			<th><{$_digest}></th>
+		  </tr>
+		 
+         <{foreach from=$Items name=Items item=item key=key}>
+		  <tr>
+			<td class="title"><a href="dict/detail.php?id=<{$item.id}>"><{$item.word}></a></td>
+			<td><a href="dict/detail.php?id=<{$item.id}>"><{$item.digest|strip_tags|truncate:100}></a></td>
+		  </tr>
+		 <tr><td colspan="2" class="height_1"> <hr class="hr_dashed" /></td></tr>
+          <{/foreach}>
+        
+		</table>
+	   </div>
+	  </div>
+	  <div class="main_right_w230">
+		<div class="title_bar_s4">
+	   <span class="title_top_s4"><span></span></span>
+	   <h3><{$_hot_words}></h3>
+	   </div>
+	   <div class="dictionary">
+		<ul>
+		 <{dict row=10 orderby="hits DESC" typeid=""}>
+		  <li>[link:title]</li>
+		 <{/dict}>
+		</ul>
+	   </div>
+	  </div>
+	</div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

@@ -1,0 +1,43 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_templet}> &raquo; <{$_templet_language}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_templet_language}></h3> 
+</div>
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><{$_naming}></th>
+		  <th>图例</th>
+		  <th>是否启用</th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<input type="hidden" name="data[language][<{$item.name}>][title]" value="<{$item.title}>" />
+		<input type="hidden" name="data[language][<{$item.name}>][img]" value="<{$item.img}>" />
+		<tr class="tatr2">
+		  <td class="firstCell"><{$item.title}></td>
+		  <td><img src="../<{$item.img}>" border="0" alt="<{$item.title}>"></td>
+		  <td><input type="checkbox" name="data[item][]" value="<{$item.name}>" <{if $item.available}>checked="checked"<{/if}>></td>  
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="3"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="save" value="提交" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

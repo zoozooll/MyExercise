@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{echo: $header['title'];/}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="{echo: $header['keywords'];/}" />
+<meta name="description" content="{echo: $header['description'];/}" />
+<base href="{echo: $baseUrl;/}" />
+<link href="skin/{echo: $SYSINFO['templates'];/}/css/shop_{echo: $SHOP['shop_template'];/}.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="skin/{echo: $SYSINFO['templates'];/}/js/changeStyle.js"></script>
+<style>
+.shop_header {background:#4A9DA5;}
+{sta:if($SHOP['shop_template_img'])[exc]}
+.shop_header {background:transparent url({echo: $SHOP['shop_template_img'];/}) no-repeat scroll 0 0;}
+{end:if/}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	{inc: require("shop/header.php");/}
+<div class="clear"></div>
+<div class="shop_header">
+	<h1>{echo: $SHOP['shop_name'];/}</h1>
+	{inc: require("shop/menu.php");/}
+</div>
+	{inc: require("shop/left.php");/}
+<div class="bigpart">
+	<div class="pro_list top10">
+        <div class="head_line"><div class="bg_left"></div><div class="bg_right"></div></div>
+        <div class="top"><h2><a class="highlight" href="{echo: shop_url($shop_id,'groupbuy');/}">{echo:lp{s_shop_groupbuy};/}</a></h2></div>
+		<div class="pro_show">
+        <table class="tab_group" width="100%">
+			<tbody>
+                <tr>
+                    <th class="proName">{echo:lp{s_groupbuy_goods};/}</th>
+                    <th class="groupPic">{echo:lp{s_groupbuy_price};/}</th>
+                    <th class="groupQut">{echo:lp{s_groupbuy_num};/}</th>
+                    <th class="groupName">{echo:lp{s_goods_name};/}</th>
+                    <th class="timeLeft">{echo:lp{s_groupbuy_time};/}</th>
+                </tr>
+			{sta:if($result['result']) {
+			foreach($result['result'] as $v)[loop]}
+				<tr>
+                    <td valign="middle" class="proName">
+		            <div class="photo"><a href="goods.php?id={echo: $v['group_id'];/}&app=groupbuyinfo"><img src="{echo: $v['is_set_image'] ? $v['goods_thumb'] : 'skin/default/images/nopic.gif';/}" width="95" height="95" alt="{echo: $v['goods_name'];/}" /></a>
+		            </div><div class="proInfo">
+		            	<h3 align="left">&nbsp;<a href="goods.php?id={echo: $v['group_id'];/}&app=groupbuyinfo">{echo: sub_str($v['group_name'],22,false);/}</a></h3>
+		            	<p>[{echo:lp{s_groupbuy_shows};/}]&nbsp;&nbsp;&nbsp;{echo: sub_str($v['group_desc'],70,false);/}</p>
+		            </div></td>
+                    <td class="groupPic"><em class="pic">￥{echo: $v['spec_price'];/}{echo: lp{s_yan};/}</em></td>
+                    <td class="groupQut">{echo: $v['min_quantity'];/}</td>
+                    <td class="groupName"><a href="goods.php?id={echo: $v['goods_id'];/}">{echo: sub_str($v['goods_name'],22,false);/}</a></td>
+                    <td class="timeleft">{echo: time_left(strtotime($v['end_time']));/}</td>
+                </tr>
+			{end:foreach/}
+			{sta: }else [loop]}
+			 <tr><td colspan="5">{echo: lp{s_no_goods};/}</td></tr>
+			{end:if/}
+			</tbody>
+		</table>
+		<div style=" clear:both; padding:8px 0; text-align:center;">
+			<span>{echo: str_replace("{num}",$result['countnum'],lp{s_page_num});/}</span>
+			<a href="{echo: shop_url($shop_id,'groupbuy',$result['firstpage']);/}" >{echo: lp{s_page_first};/}</a>
+			<a href="{echo: shop_url($shop_id,'groupbuy',$result['prepage']);/}">{echo: lp{s_page_pre};/}</a>
+			<a href="{echo: shop_url($shop_id,'groupbuy',$result['nextpage']);/}" >{echo: lp{s_page_next};/}</a>
+			<a href="{echo: shop_url($shop_id,'groupbuy',$result['lastpage']);/}" >{echo: lp{s_page_last};/}</a>
+			<span>{echo: lp{s_page_now};/}{echo: $result['page'];/}/{echo: $result['countpage'];/}</span>
+			<span>{echo: str_replace("{num}",$result['countpage'],lp{s_page_count});/}</span>
+		</div>
+		</div>
+		</div>
+	</div>
+</div>
+	{inc: require("shop/footer.php");/}
+</div>
+</body>
+</html>

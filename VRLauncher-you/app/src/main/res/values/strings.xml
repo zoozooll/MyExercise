@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">VRLauncher</string>
+    <string name="launcher_icon_movie">Video</string>
+    <string name="launcher_icon_photo">Photo</string>
+    <string name="launcher_icon_strore">App store</string>
+    <string name="launcher_icon_onlinevideo">3DPView</string>
+    <string name="launcher_icon_allapps">Apps</string>
+    <string name="launcher_icon_settings">Settings</string>
+
+    <string name="app_notfound">Open the app fails, check to see if installed correctly</string>
+    <string name="appmarket_notfound">Open the app store fails, check whether the correct installation</string>
+    <string name="tip_requesting">Requesting...</string>
+    <string name="update_app">Found the new version</string>
+    <string name="update_app_downloading">The new version downloading...</string>
+    <string name="tip_downloadsuccess">download successful</string>
+    <string name="tip_cancelupdate">Cancel</string>
+    <string name="tip_update_error">Download Error</string>
+    <string name="tip_no_enough_space">Lack of storage space, the update fails</string>
+    <string name="app_update_ok">Update now</string>
+    <string name="app_update_cancel">Remind me later</string>
+</resources>

@@ -1,0 +1,203 @@
+<!--<?php
+include_once PrintEot('left');print <<<EOT
+-->
+<h1 class="h1 mb10"><span class="linka"><a href="$admin_file?adminjob=hackcenter">插件中心</a> &raquo; <a href="javascript:;">{$db_hackdb[invite][0]}</a></span></h1>
+<!--
+EOT;
+if(empty($action)){
+print <<<EOT
+-->
+<div class="nav3 mb10">
+    <ul class="cc">
+        <li class="current"><a href="javascript:;">基本设置</a></li>
+        <li><a href="$basename&action=manager">邀请码管理</a></li>
+    </ul>
+</div>
+<form action="$basename" method="post">
+<input type="hidden" name="action" value="unsubmit">
+<h2 class="h1">基本设置</h2>
+<div class="admin_table mb10">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr class="tr1 vt">
+		<td class="td1">邀请注册</td>
+		<td class="td2">
+        	<ul class="list_A list_80">
+            	<li><input type="radio" value="1" $open_Y name="config[open]" />开启</li>
+                <li><input type="radio" value="0" $open_N name="config[open]" />关闭</li>
+            </ul>
+        </td>
+        <td class="td2"><div class="help_a"></div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">邀请码有效期限[天]</td>
+		<td class="td2"><input type="text" class="input input_wa" name="config[days]" value="$inv_days"></td>
+        <td class="td2"><div class="help_a"></div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">邀请码购买时间间隔[天]</td>
+		<td class="td2"><input type="text" class="input input_wa" name="config[limitdays]" value="$inv_limitdays"></td>
+        <td class="td2"><div class="help_a">设置0表示不限制</div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">购买邀请码所消耗的积分</td>
+		<td class="td2"><input type="text" class="input input_wa" name="config[costs]" value="$inv_costs"></td>
+        <td class="td2"><div class="help_a"></div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">购买邀请码所消耗的积分类型</td>
+		<td class="td2">
+        	<select name="config[credit]" class="select_wa">
+                <option value="rvrc" $rvrc_st>$db_rvrcname</option>
+                <option value="money" $money_st>$db_moneyname</option>
+                <option value="credit" $credit_st>$db_creditname</option>
+                <option value="currency" $currency_st>$db_currencyname</option>
+			</select>
+		</td>
+        <td class="td2"><div class="help_a"></div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">允许发送邀请的用户组</td>
+		<td class="td2"><ul class="list_A list_120">$usergroup</ul></td>
+        <td class="td2"><div class="help_a"></div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">邀请码在线支付功能</td>
+		<td class="td2">
+        	<ul class="list_A list_80">
+            	<li><input type="radio" value="1" $onlinesell_Y name="config[onlinesell]" />开启</li>
+                <li><input type="radio" value="0" $onlinesell_N name="config[onlinesell]" />关闭</li>
+            </ul>
+        </td>
+        <td class="td2"><div class="help_a">此功能允许注册者通过网上支付一定费用获得邀请码<br />开启此功能需:<br />1. 系统已开启网上支付功能<br />2. 系统已开启邮件发送功能</div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">支付金额[RMB]</td>
+		<td class="td2"><input type="text" class="input input_wa" name="config[price]" value="$inv_price" /></td>
+        <td class="td2"><div class="help_a"></div></td>
+	</tr>
+</table>
+</div>
+<div class="tac mb10"><span class="btn"><span><button type="submit">提 交</button></span></span></div></form>
+<!--
+EOT;
+}elseif($action=='manager'){print <<<EOT
+-->
+<form action="$basename" method="post">
+<input type="hidden" name="action" value="delete">
+<div class="nav3 mb10">
+    <ul class="cc">
+        <li><a href="$basename">基本设置</a></li>
+        <li class="current"><a href="javascript:;">邀请码管理</a></li>
+    </ul>
+</div>
+<h2 class="h1">
+	<span class="mr10">邀请码管理</span>
+    <span class="linka">
+        <select name="type" onchange="window.location=('$basename&action=manager&type='+this.value)" class="select_wa">
+            <option value="1" $sel_1>未使用</option>
+            <option value="2" $sel_2>已使用</option>
+            <option value="3" $sel_3>已过期</option>
+            <option value="4" $sel_4>已邀请</option>
+        </select>
+    </span>
+</h2>
+<div class="admin_table mb10">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr class="tr2">
+		<td width="8%">序号</td>
+		<td width="*">邀请码</td>
+		<td width="12%">购买用户</td>
+		<td width="20%">购买时间</td>
+		<td width="8%">状态</td>
+		<td width="12%">注册用户</td>
+<!--
+EOT;
+if($type!='1'){
+print <<<EOT
+-->
+		<td width="5%">&nbsp;</td>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+	</tr>
+<!--
+EOT;
+foreach($invdb as $key=>$value){
+print <<<EOT
+-->
+	<tr class="tr1">
+		<td class="td2">$value[num]</td>
+		<td class="td2">$value[invcode]</td>
+		<td class="td2">$value[username]</td>
+		<td class="td2">$value[createtime]</td>
+<!--
+EOT;
+if($type=='1'){
+print <<<EOT
+-->
+
+		<td class="td2 s3">未使用</td>
+<!--
+EOT;
+}elseif($type=='2'){
+print <<<EOT
+-->
+		<td class="td2 gray">已使用</td>
+<!--
+EOT;
+}elseif($type==3){
+print <<<EOT
+-->
+		<td class="td2 gray">已过期</td>
+<!--
+EOT;
+}else{
+print <<<EOT
+-->
+		<td class="td2 s2">已邀请</td>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+		<td class="td2">$value[receiver]</td>
+<!--
+EOT;
+if($type!='1'){
+print <<<EOT
+-->
+		<td class="td2"><input type="checkbox" name="selid[]" value="$value[id]" /></td>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+	</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+</table>
+</div>
+<div class="cc mb10">$pages</div>
+<!--
+EOT;
+if($type!='1'){
+print <<<EOT
+-->
+<div class="tac mb10">
+	<span class="btn"><span><button type="button" name="chkall" onclick="CheckAll(this.form)">全 选</button></span></span>
+	<span class="btn"><span><button type="submit">删除所选项</button></span></span>
+</div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+</form>
+<!--
+EOT;
+}include_once PrintEot('adminbottom');
+?>-->

@@ -1,0 +1,25 @@
+<!--<?php
+include_once PrintEot('m_appleft');
+print <<<EOT
+-->
+<script type="text/javascript" src="{$db_server_url}/js/global.js"></script>
+<script language="JavaScript">
+var server = new PwJs.Server("pwapp");
+server.registHandler('setTitle');
+server.start();
+
+function setTitle(title) {
+	document.title = title + ' $webPageTitle - Powered by PHPWind.net';
+}
+</script>
+<div id="content" class="fr">
+    <table width="100%">
+    <tr class="vt"><td>
+		<div class="cc">
+			<iframe id="pwapp" name="pwapp" frameborder="0" width="100%" height="800" scrolling="no" src="{$url}"></iframe>
+		</div>
+	</td></tr></table>
+</div>
+<!--
+EOT;
+?>-->

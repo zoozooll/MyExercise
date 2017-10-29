@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:background="#FFFFFF">
+  <TextView android:text="赠送" android:id="@+id/gived" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  <ImageView android:id="@+id/line" android:src="@drawable/line" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+  <TextView android:id="@+id/tt" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  <TextView android:id="@+id/choose" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  <EditText android:id="@+id/editChoose" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+  <TextView android:text="点击此处从好友列表添加获赠人" android:textStyle="normal" android:textColor="#000000" android:id="@+id/linkman" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  <TextView android:id="@+id/myTalkKey" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  
+  <EditText android:inputType="textMultiLine" android:id="@+id/myTalkValue" android:layout_width="fill_parent" android:layout_height="150dip"/>
+  <RelativeLayout  android:layout_width="wrap_content" android:layout_height="wrap_content">
+  	<CheckBox android:id="@+id/checkBox" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  	<TextView android:layout_toRightOf="@id/checkBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="私密赠送" android:textColor="#000000"/>
+  </RelativeLayout>
+  <Button android:id="@+id/btn_gived" android:background="@drawable/btn_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="赠送" android:textColor="#000000"/>
+</LinearLayout>

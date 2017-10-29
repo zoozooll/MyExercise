@@ -1,0 +1,85 @@
+<{assign var="page_title" value="`$_industry_info`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+  <div class="content clearfix">
+  <div class="second_nav clearfix">
+        <div id="second_all_nav"><{$_category_nav}></div>
+        <div class="news_nav_txt">
+        <{newstype row=25 level=1}>
+        [link:title]
+        <{/newstype}>
+        </div>
+    </div>
+  <div class="blank6"></div>
+  <div class="news_mainbody">
+  <div class="news_mainleft">
+      <div class="news_mainbody_left">
+      	<div class="news_mainbody_left_top">
+			<{ads type="focus"}>This text is replaced by the Flash movie.<{/ads}>
+		</div>
+        <div class="blank6"></div>
+        <div class="news_mainbody_left_con">
+            <div class="title_bar_s1">
+                <span class="title_top_s1"><span></span></span>
+                <h2><{$_hot_news}></h2>
+             </div>
+            <div class="news_mainbody_left_con_body">
+             <ul>
+             <{news row=10 titlelen="35"}>
+				<li><a href="[link:title]">[field:title]</a></li>
+             <{/news}>  
+          </ul> 
+    </div>
+        </div>
+      </div>
+      <div class="news_mainbody_mid">
+         <div class="title_bar_s2">
+             <span class="title_top_s2"><span></span></span>
+             <h2><{$_latest_news}></h2>
+         </div>
+            <ul class="news_mainbody_mid_con clearfix">
+            <{news row=44 titlelen="25"}>
+            <li><span class="hot_word"><a href="news/list.php?typeid=[field:type_id]">[[field:typename]]</a></span><a href="[link:title]">[field:title]</a></li>  
+            <{/news}>
+            </ul> 
+        	
+      </div>
+  </div>
+   <div class="news_mainbody_right">
+        <div class="title_bar_s1">
+             <span class="title_top_s1"><span></span></span>
+             <h2><span class="title_more"><a href="news/list.php?typeid=1"><span class="raquo">&raquo;</span><{$_more}></a></span><{$_industry_focus}></h2>
+         </div>
+        <div class="news_mainbody_right_con">
+         <ul>
+         <{news typeid=1 row=10 titlelen=24}>
+         <li><a href="news/detail.php?id=[field:id]">[field:title]</a></li>
+         <{/news}>
+         </ul>
+      </div>
+      <div class="blank6"></div>
+       <div class="title_bar_s1">
+           <span class="title_top_s1"><span></span></span>
+           <h2><span class="title_more"><a href="news/list.php?typeid=4"><span class="raquo">&raquo;</span><{$_more}></a></span><{$_synthesis_info}></h2>
+       </div>
+      
+      <div class="news_mainbody_right_con">
+         <ul>
+             <{news typeid=4 row=10 titlelen=24}>
+             <li><a href="news/detail.php?id=[field:id]">[field:title]</a></li>
+             <{/news}>
+         </ul>
+       </div>
+   
+   </div>
+  
+  </div>   
+    
+  </div>
+  <div class="clear"></div>
+</div>
+<script>
+$("#SearchFrm").attr("action","news/list.php");
+$("#topMenuNews").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+<style type="text/css">
+.edit span{background:#efefef;}
+.search {margin:5px;}
+.search input {color:#444;}
+td.img img{cursor:pointer}
+</style>
+<script>
+var inputs = document.getElementsByTagName("input");
+function submitform() {
+	var status = document.getElementsByName("favorite");
+	var checknum = 0;
+	for(var i=0; i<inputs.length; i++) {
+		if(inputs[i].type=='checkbox') {
+			if(inputs[i].checked) {
+				checknum++;
+			}
+		}
+	}
+	if(checknum==0) {
+		alert("{echo:lp{m_selceted_one};/}");
+		return false;
+	}
+	return true;
+}
+function checkall(obj) {
+	if(obj.checked) {
+		for(var i=0; i<inputs.length; i++) {
+			if(inputs[i].type=='checkbox') {
+				inputs[i].checked = true;
+			}
+		}
+	} else {
+		for(var i=0; i<inputs.length; i++) {
+			if(inputs[i].type=='checkbox') {
+				inputs[i].checked = false;
+			}
+		}
+	}
+}
+</script>
+</head>
+<body>
+<form action="do.php?act=user_favorite_del" name="form" method="post" onsubmit="return submitform();">
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+        <div class="bigpart">
+		<div class="title_uc"><h3>{echo:lp{m_favorite};/}</h3></div>
+		<table width="98%" class="form_table">
+			<tr class="center">
+				<th width="20"><input type="checkbox" onclick="checkall(this);" /></th>
+				<th width="90">{echo: lp{m_goods_image};/}</th>
+				<th>{echo: lp{m_goods_info};/}</th>
+				<th width="30">{echo: lp{m_manage};/}</th></tr>
+			{sta: 
+			if(!empty($result['result'])) {
+				foreach($result['result'] as $v) [loop]}
+			<tr>
+				<td><input type="checkbox" name="favorite[]" value="{echo: $v['favorite_id'];/}" /></td>
+				<td class="center"><a href="{echo: goods_url($v['goods_id']);/}" target="_blank"><img src="{echo: $v['goods_thumb'];/}" width="80" height="80"></a></td>
+				<td class="textleft"><a href="{echo: goods_url($v['goods_id']);/}" target="_blank" style="font-size:14px; font-weight:bold; color:#0044DD">{echo: $v['goods_name'];/}</a>
+				<br /> {echo: lp{m_order_shops};/}：<a href="{echo:shop_url($v['shop_id']);/}" target="_blank" style="color:#0044DD;">{echo: $v['shop_name'];/}</a> &nbsp;&nbsp; {echo: lp{m_price};/}：￥<span style="color:#FF6600; font-weight:bold;">{echo: $v['goods_price'];/}</span>{echo: lp{m_yuan};/}
+				<br /> {echo: lp{m_collect_num};/}：<span style="color:#FF6600; font-weight:bold;">{echo: $v['favpv'];/}</span> &nbsp;&nbsp; {echo: lp{m_add_time};/}：{echo: substr($v['add_time'],0,16);/} &nbsp;&nbsp; <script src="imshow.php?u={echo: $v['user_id'];/}"></script>
+				</td>
+				<td class="center"><a href="do.php?act=user_favorite_del&id={echo: $v['favorite_id'];/}" onclick="return confirm('{echo: lp{m_suredel_favorite};/}');">{echo: lp{m_del};/}</a><br />
+					<a href="modules.php?app=user_order&gid={echo: $v['goods_id'];/}&v=1" style="color:#FF6600;">{echo: lp{m_ccbuy};/}</a>
+				</td>
+			</tr>
+			{end:foreach/}
+			<tr><td colspan="4" class="textleft"><INPUT onclick="return confirm('{echo:lp{m_manage_sure_del};/}');" type=submit value={echo:lp{m_pl_del};/} name=deletesubmit> </td></tr>
+			<tr><td colspan="4" class="center">{inc: require("modules/page.php");/}</td></tr>
+			{sta: } else [exc]}
+			<tr><td colspan="4" class="center">{echo: lp{m_nolist_record};/}</td></tr>
+			{end:if/}
+		</table>
+        </div>
+    </div>
+    <div class="clear"></div>
+    {inc: require("modules/footer.php");/}
+</form>
+</body>
+</html>

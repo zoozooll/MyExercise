@@ -1,0 +1,157 @@
+<!--<?php print <<<EOT
+-->
+<div class="cc bor-b-a">
+	<div class="w-420 fl mr10">
+		<div class="box-a h-490">
+			<div class="box-a-bg p10">
+				<pw id="home2_首页焦点摘要" tplid="2" />
+				<div class="list-a bor-t-a mt10 link-red">
+					<pw id="home2_首页焦点附说明" tplid="17" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="w-280 fl">
+<style>
+.pwSlide{position:relative;height:480px;overflow:hidden;border:1px solid #e0e0e0;}
+.pwSlide img{height:480px;width:100%;}
+.pwSlide-bg{width:100%;z-index:1;position:absolute;bottom:0px;background:#000;left:0px;right:0px;height:30px;overflow:hidden;filter:alpha(opacity=39);-moz-opacity:0.39;opacity:0.39;}
+.pwSlide h1{color:#fff;line-height:30px;padding:0 8px;position:absolute;bottom:1px;z-index:2;width:100%;cursor:pointer;left:0;}
+.pwSlide a:hover{text-decoration:none;}
+.pwSlide ul {position:absolute;right:8px;bottom:8px;z-index:3;}
+.pwSlide ul li {list-style:none;float:left;width:18px;height:13px;line-height:13px;text-align:center;margin-left:2px;background:#ffffff;}
+.pwSlide ul li a {display:block;width:18px;height:13px;font-size:10px;font-family:Tahoma;color:#333333;}
+.pwSlide ul li a:hover,.pwSlide ul li a.sel {color:#fff;background:#ffa900;}
+</style>
+		<pw id="home2_首页播放器" tplid="11" />
+	</div>
+	<div class="w-240 fr">
+		<div class="box-a h-490" style="overflow:hidden;">
+			<h3 class="tab-a cc">
+				<ul>
+					<li><a class="active"><span>热门话题</span></a></li>
+				</ul>
+			</h3>
+			<div class="list-img-a">
+				<pw id="home2_热门话题" tplid="4" />
+			</div>
+			<h3 class="tab-a cc bor-t-b"><span class="red b">社区公告</span></h3>
+			<div class="list-b">
+				<ul>
+<!--#
+foreach($first_notice as $notice){
+$notice[subject] = strip_tags($notice[subject]);
+$temp_notice = substrs($notice[subject],30);
+#-->
+					<li><a href="$notice[url]" title="$notice[subject]">$temp_notice</a></li>
+<!--#}#-->
+				</ul>
+			</div>
+<!--#$sideLou = 0;#-->
+<!--#list($htmlAdvert,$arrayAdvert) = pwAdvert('Mode.Layer.area.IndexSide',-1,++$sideLou);#-->
+<!--#if($htmlAdvert){#-->
+<div>$htmlAdvert</div>
+<!--#}#-->
+		</div>
+	</div>
+</div>
+<div class="cc mt10">
+	<div class="box-a">
+		<div class="box-a-bg">
+			<h5><span class="f14 b">图片</span></h5>
+			<div class="images-list-a cc">
+			<pw id="home2_中部图片" tplid="7" />
+			</div>
+		</div>
+	</div>
+</div>
+<!--#list($htmlAdvert,$arrayAdvert) = pwAdvert('Mode.area.IndexMain');#-->
+<!--#if($htmlAdvert){#-->
+<div class="mb10 mt10">$htmlAdvert</div>
+<!--#}#-->
+<div class="cc mt10">
+	<div class="box-a">
+		<div class="box-a-bg cc">
+			<h5>
+				<span class="f14 b"></span>
+			</h5>
+			<div class="w-240 fl img-210">
+				<div class="cc " style="border:1px solid #cccccc;margin:10px;padding:4px;">
+					<pw id="home2_中部大图" tplid="16" />
+				</div>
+			</div>
+			<div class="w-470 fl" style="overflow:hidden;">
+				<div class="p5 tac">
+					<pw id="home2_中部焦点摘要" tplid="2" />
+				</div>
+				<div class="box-b">
+					<div class="list-b list-d-220 cc w-480-m10">
+						<pw id="home2_中部帖子列表" tplid="4" />
+					</div>
+				</div>
+			</div>
+			<div class="w-240 fr">
+				<div class="list-img-a">
+					<pw id="home2_首页中部热门" tplid="4" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="cc">
+<!--#$i=0;#-->
+<!--#$mainLou = 0;#-->
+<loop id="home2_首页循环版块">
+	<!--#if($i%2==0) {#-->
+	<!--#list($htmlAdvert,$arrayAdvert) = pwAdvert('Mode.Layer.area.IndexLoop',-1,++$mainLou);#-->
+	<!--#if($htmlAdvert){#-->
+	<div class="c"></div>
+	<div style="padding:10px;">$htmlAdvert</div>
+	<div class="c"></div>
+	<!--#}}#-->
+	<!--#$fclass= $i%2==0 ? 'fl':'fr';#-->
+	<div class="w-475 mt10 $fclass">
+		<div class="box-a">
+			<div class="box-a-bg cc">
+				<h5><a href="thread.php?fid=$loopid" class="fr gray" target="_blank">more &raquo;</a><span class="f14 b">{$forum[$loopid][name]}</span></h5>
+				<div class="list-b">
+					<pw id="home2_首页循环版块" tplid="4" />
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#
+$i++;
+#-->
+</loop>
+</div>
+
+<!--#if($db_indexlink==1){#-->
+<div class="cc mt10">
+	<div class="box-a">
+		<div class="box-a-bg cc">
+			<h5>
+<!--#if($db_ifselfshare && $groupid!='guest'){#-->
+				<a id="selfshare" class="fr gray" style="cursor:pointer;" onclick="sendmsg('pw_ajax.php','action=sharelink',this.id)">自助友情链接</a>
+<!--#}#-->
+				<span class="f14 b">友情链接</span>
+			</h5>
+	<div class="links cc">
+<!--#if (!empty($sharelink[0])) {
+foreach($sharelink[0] as $share){
+#-->
+		$share
+		<div class="c"></div>
+		<div style="margin:5px 0;border-top:1px dashed #CCCCCC;"></div>
+<!--#}}#-->
+	</div>
+	<div class="links cc">
+		$sharelink[1]
+	</div>
+	</div>
+</div>
+</div>
+<!--#}#-->
+<!--
+EOT;
+?>-->

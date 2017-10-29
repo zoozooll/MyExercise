@@ -1,0 +1,91 @@
+@charset "gb18030";
+/* CSS Document style by lwid 2009/07/10 */
+/*a link 基本连接颜色*/
+a{text-decoration:none;color:#000000;}
+a:hover{text-decoration:underline;color:#ba1d06;}
+.unline a{text-decoration:underline;}
+
+.red a,.red{color:#e30f96;}
+
+.w-170{width:170px;overflow:hidden;}
+.w-780{width:780px;overflow:hidden;}
+
+/*左边*/
+.fun_logo{background:url(fun-logo.png);height:50px;border:1px solid #008f74;color:#007f69;line-height:35px;padding-left:10px;}
+.fun_logo_list{border:1px solid #cccccc;background:#f0f7ec;padding:2px 10px 10px;line-height:30px;}
+.fun_logo_list li{border-bottom:1px solid #dfdfdf;}
+.fun_logo_list li a{ font-weight:700; font-size:14px;color:#007f69;margin-right:10px;}
+
+.fun_box_left{border:1px solid #cccccc;}
+.fun_box_left h2{background:#f0f7ec;color:#007e68; font-size:14px; font-weight:700;padding-left:10px;line-height:30px;border-bottom:1px solid #cccccc;}
+
+.fun_hot{background:url(fun_hot.png);height:343px;overflow:hidden;}
+.fun_hot th,.fun_box th{width:300px;font-weight:500;}
+.fun_hot td{padding:10px;}
+.fun_hot td .box_two h4{line-height:30px; text-align:center;}
+.fun_hot td .box_two h4 a{color:#333333;}
+.fun_hot td .box_two p{padding:5px 20px 0 0;color:#888888;}
+
+.list_50 li{width:48.5%;float:left;padding-right:1%;}
+.list_50 li img{width:80px;height:70px;margin-right:5px;}
+.list_50 li h4{height:18px;overflow:hidden;}
+.list_50 li h4 a{ font-weight:700;color:#e30f96;}
+.list_50 li p{height:55px;overflow:hidden;color:#bbbbbb;}
+
+.linkA a{color:#007e68;}
+.fun_hot h2{padding-top:5px;margin-top:10px; font-size:14px; font-weight:700;color:#007e68;}
+.fun_hot h2 span{float:left;margin-top:-8px;background:#ffffff;padding-right:1em;white-space:nowrap;}
+.fun_hot h2 div{height:1px;overflow:hidden;background:#ffffff;border-top:1px dashed #cccccc;}
+
+/*圆角A*/
+.cirA1,.cirA2,.cirA3,.cirA4,.cirA5,.cirA6{background-image:url(cirA.gif);width:5px;height:5px;position:absolute;overflow:hidden}
+	.cirA1{left:-1px;top:-1px;}
+	.cirA2{right:-1px;top:-1px;background-position:-5px 0;}
+	.cirA3{right:-1px;bottom:-1px;background-position:-5px -5px }
+	.cirA4{left:-1px;bottom:-1px;background-position:0 -5px;}
+/*圆角盒子*/
+.boxB{border:1px solid #d0d0cc;}
+	.boxB h2{border-bottom:1px solid #d6d6d6;line-height:28px;padding:0 10px;background:#efefef url(boxb-h2.png) 0 top;height:28px;}
+	.boxB h2{font-size:14px;color:#007e68;font-weight:700;}
+	.boxB h2 a{font-size:12px;color:#888888;font-weight:500;padding:0 0 0 15px;}
+
+.list_overflow li{height:24px;overflow:hidden;line-height:24px;}
+
+.fun_box table{margin:10px 0;}
+.fun_box th{border-right:1px dashed #e0e0e0}
+.fun_box th ul{padding:0 10px;margin-top:-4px;}
+.fun_box td{padding:0 10px;}
+.fun_box td .box_two p{background:#f0f7ec;padding:3px 5px;}
+.fun_box ul{margin-top:5px;}
+.fun_box .list_50{padding-bottom:5px;}
+.fun_box ul span{color:#007e68;}
+.fun_box ul .fr{color:#888888;}
+
+.fun_box th h4,.fun_box th p{padding-right:10px;}
+.fun_box th h4{padding-right:10px; font-size:14px;}
+.fun_box th p{color:#888888;}
+.fun_box th img{width:120px;height:110px;margin:0 10px 10px 10px;}
+.fun_box td{padding:0 10px;}
+.fun_box td ul{line-height:24px;margin-top:-4px;}
+
+/*通用*/
+.box_one{padding:0 10px 10px;}
+.box_one a{display:block;margin-top:10px;display:inline-block;}
+.box_one a:after {content: ".";display: block;height:0;clear: both;visibility: hidden;}
+.box_one a{display: inline-block;}/* Hides from IE-mac \*/
+* html .box_one a{height: 1%;}
+.box_one a{display: block;}/* End hide from IE-mac *//*清除浮动 代码*/
+.box_one img{width:80px;height:60px;float:left;margin:1px 5px 0 0;}
+.box_one p{font-size:14px;height:62px;overflow:hidden;}
+
+.box_two h4{font-weight:700;font-size:14px;}
+
+.box_img a{float:left;}
+.box_img a img{margin:0 10px;width:130px;height:90px;}
+.box_img a p{padding:5px 0 10px; text-align:center;}
+
+.box a img{margin:0 10px 10px 0;width:130px;height:100px;}
+.box h4{ font-size:14px;padding:0 0 4px;}
+.box p{color:#888;}
+.box a p{margin-top:-5px;overflow:hidden; text-align:center; cursor:pointer;height:18px;color:#006699;}
+.box a:hover p{color:#990000;}

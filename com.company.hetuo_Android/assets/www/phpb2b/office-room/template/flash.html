@@ -1,0 +1,26 @@
+<{assign var="page_title" value="`$title`"}>
+<{include file="header.html"}>
+<{$redirect}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+
+     <div class="offer_info_title"><h2><{$_action_tip}></h2></div>
+        <table class="offer_info_tips">
+        <tr>
+        <th rowspan="2"><img src="images/<{$action_img}>"></th>
+        <td><{$message}></td>
+      </tr>
+      <tr>
+        <td><span><a href="<{$url}>" class="btn_publish"><{$_go_back}></a></span><span><a href="index.php" class="btn_publish"><{$_go_office_room}></a></span></td>
+      </tr>
+      </table>
+      
+     </div>
+   </div>
+<{include file="footer.html"}>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <!-- 上层 -->
+  <LinearLayout
+   android:id="@+id/user_listview_toplayout"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_alignParentTop="true">
+      <include layout="@layout/talk_garden_top"></include>
+  </LinearLayout>
+  
+   <!-- 下层 -->
+   <RelativeLayout
+    android:id="@+id/user_listview_centerlayout"
+  	android:layout_width="wrap_content" 
+  	android:layout_height="wrap_content" >
+  	
+  	<ListView
+  	    android:id="@+id/user_listview_message"
+  	    android:layout_width="300dip" 
+  	    android:layout_height="wrap_content"
+  	    android:background="#ccff88"
+  	    android:layout_alignParentLeft="true"/>
+  	    
+  	<LinearLayout
+	  	android:id="@+id/friends_name_llayout"
+	  	android:layout_width="wrap_content" 
+	  	android:layout_height="wrap_content" 
+	  	android:layout_alignRight="@id/user_listview_message"
+	  	android:layout_alignParentRight="true">
+  	    <FrameLayout
+	  	    android:id="@+id/user_friends_name_flayout"
+	  	    android:layout_width="wrap_content" 
+	  	    android:layout_height="wrap_content">
+  	    </FrameLayout>
+  	</LinearLayout>
+   </RelativeLayout>
+</LinearLayout>

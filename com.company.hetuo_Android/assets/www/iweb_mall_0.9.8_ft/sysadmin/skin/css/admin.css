@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* reset */
+*{outline:none;}
+html { overflow-x: hidden; overflow-y: auto; }
+body{background:#e7e7e7;text-align:center; color:#333; font:12px "宋体", Arial, Verdana, sans-serif; }
+h1, h2, h3, h4, h5, h6, h7, p, ul, ol, dl, dt, dd, li, body, form, input, button, img, cite, strong, em, table, td, th, hr { padding:0; margin:0;}
+ul{ list-style:none; }
+h1, h2, h3, h4, h5, h6{ font-size:12px; }
+a{ color:#333; text-decoration:none; }
+	a img{ border:none; }
+img, table, td, th { border:0;}	
+em, cite, th{ font-style:normal; font-weight:normal; }
+table{ border-collapse:collapse; }
+label{ cursor:pointer; }
+hr{height:1px;border:none;border-top:1px solid #ccc;margin:10px 0 0;*margin:10px 0 -14px;float:none;*float:left;display:block;}
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+.left{float:left}
+.right{float:right}
+.lightcolor{color:#999;}
+.red{color:red;}
+/* layout */
+#jywrap{height:auto;min-height:100%;width:100%;}
+#jyhead{position:relative;height:80px;background:#fff url(../images/adminbg.gif) repeat-x; overflow:hidden}
+	.logo{background:#fff url(../images/snslogo.gif) no-repeat;float:left;height:49px;text-indent:-9999px;width:165px;margin:15px 0 0 20px; display:inline;}
+	.nav{height:34px; position:absolute; left:215px; top:48px;}
+		.nav li{background-color:#fbbb6d; float:left;margin-right:8px; width:68px;height:28px;}
+		.nav li a{width:66px;margin:1px auto 0; display:block; height:27px;line-height:27px; font-weight:bold; color:#fff;}
+		.nav li.active{background-color:#fff;}
+		.nav li.active a{ color:#f67a06;background:url(../images/navon.gif) repeat-x;}
+	.uinfo{ position:absolute; height:20px; line-height:20px;right:20px; top:4px; text-align:right; color:#fff;}
+		.uinfo a{color:#f67a06; color:#fff;}
+		.uinfo em{font-weight:bold; margin-right:6px;}
+#jybody{height:100%;margin:20px 20px 0 200px;}
+#leftmenu{ float:left; width:139px; margin-left:-180px; background-color:#fff; height:100%; position:relative;}
+	.submenu { min-height:450px;height:auto;_height:450px;}
+	.submenu li{width:110px; height:35px; line-height:35px; background:url(../images/submenubg.gif) no-repeat; text-align:left; padding-left:29px}
+	.submenu li.active{ background-position:0 -35px;}
+	.submenu li a{display:block;width:110px; height:35px;}
+	.submenu li.separator{ height:25px; line-height:15px; overflow:hidden;background: #e7e7e7 url(../images/arrow.gif) no-repeat;}	
+	.submenu li.separator {cursor: w-resize;}
+#maincontent{background-color:#fff; width:100%;}
+	.wrap{padding:20px;min-height:410px;height:auto;_height:410px;}
+		.crumbs{ text-align:left;}
+        .infobox{margin:20px 0 0; width:100%;border:1px #ddd solid;position:relative; }
+		.seachbox{margin:10px 0 -10px 0; width:100%; border:1px #ddd solid;position:relative; }
+		.infobox h3{height:21px; text-align:left; padding:8px 0 0 15px;background:url(../images/infoboxbg.gif) repeat-x;/*cursor:move;*/}
+		.infobox .handle{width:26px; height:29px; float:right;background:url(../images/handle.gif) no-repeat;}
+		.infobox .content2{margin:10px 15px; text-align:left;font-family:"Lucida Grande",Verdana,Arial,sans-serif;}
+		.infobox a:link,.infobox a:visited{color:#f67a06;}
+		.infobox a:hover,.infobox a:active, .infobox a:focus {color:#d54e21;}
+		.infobox p{line-height:230%;text-align:left; width:100%;}
+	/* folden */
+	.folden #jybody{margin-left:60px;}
+	.folden #leftmenu{margin-left:-44px; clear:both; width:20px;background:url(../images/line.gif) 12px 0 repeat-y;}
+		.folden .submenu li{ display:none; width:20px;}
+		.folden .submenu li a{width:20px;}
+		.folden .submenu li.separator{display:block;background-position:right -28px;}
+#jyfoot{height:50px;margin:20px 20px 0px 20px; background-color:#fff;}
+/* table */
+table,.form-table{line-height:230%;text-align:left;width:100%; vertical-align:top;}
+table thead th{background-color:#e7e7e7; font-weight:bold; padding: 0 10px;}
+.form-table th{padding:8px 10px;text-align:right;width:180px;vertical-align:top;text-shadow:0 1px 0 rgba(255, 255, 255, 0.8);}
+.list_table{margin:10px 0;}
+.form-table td{padding:8px 10px;}
+.list_table td{padding:6px;}
+.list_table th{padding:5px 6px 2px}
+.list_table tbody td{border-bottom:1px #e7e7e7 dashed;}
+/* form */
+.oprate {
+background:none repeat scroll 0 0 #FBFBFB;
+border:1px solid #E5E5E5;
+width:98%;
+}
+.oprate input{line-height:22px;}
+
+textarea{padding:0 5px;font-size:12px;color:#333;border:1px #d2d2d2 solid;background:url(../images/textareabg.gif) repeat-x; line-height:24px;}
+select{padding:2px;color:#333;border:1px #d2d2d2 solid;}
+.regular-text{border:1px #d2d2d2 solid;padding:0 5px;line-height:24px; height:24px;background:url(../images/inputbg.gif);width:300px;}
+.small-text{border:1px #d2d2d2 solid; line-height:24px;padding:0 5px; height:24px;background:url(../images/inputbg.gif);width:100px;}
+.regular-textarea{width:300px;height:120px;}
+.regular-button{background:url(../images/buttonbg.gif) repeat-x;border:0; margin-top:10px;color:#fff;cursor:pointer;padding:6px 6px 12px ;font-weight:bold;}
+
+.icon1,.icon2,.icon3,.icon4,.icon5,.icon6,.icon7,.icon8,.icon9,.icon10,.icon11,.icon12,.icon13,.icon14,.icon15{display:block; width:80px; height:16px; margin:0px auto;}
+.icon1{background:url(../images/icon.gif) 0px -0px no-repeat}
+.icon2{background:url(../images/icon.gif) 0px -16px no-repeat}
+.icon3{background:url(../images/icon.gif) 0px -32px no-repeat}
+.icon4{background:url(../images/icon.gif) 0px -48px no-repeat}
+.icon5{background:url(../images/icon.gif) 0px -64px no-repeat}
+.icon6{background:url(../images/icon.gif) 0px -80px no-repeat}
+.icon7{background:url(../images/icon.gif) 0px -96px no-repeat}
+.icon8{background:url(../images/icon.gif) 0px -112px no-repeat}
+.icon9{background:url(../images/icon.gif) 0px -128px no-repeat}
+.icon10{background:url(../images/icon.gif) 0px -144px no-repeat}
+.icon11{background:url(../images/icon.gif) 0px -160px no-repeat}
+.icon12{background:url(../images/icon.gif) 0px -176px no-repeat}
+.icon13{background:url(../images/icon.gif) 0px -192px no-repeat}
+.icon14{background:url(../images/icon.gif) 0px -208px no-repeat}
+.icon15{background:url(../images/icon.gif) 0px -224px no-repeat}

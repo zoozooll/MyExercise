@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+  <!-- 首层 -->
+  <RelativeLayout
+  android:id="@+id/myself_title_layout"
+  android:layout_width="fill_parent"
+  android:layout_height="35dip"
+  android:background="@drawable/toptitle">
+    <TextView
+     android:id="@+id/myself_title_text"
+     android:layout_width="80dip"
+     android:layout_height="30dip"
+     android:layout_alignParentLeft="true"
+     android:text="@string/myselfInfo"
+     android:textColor="@color/black"
+     android:layout_marginLeft="2dip"
+     android:layout_marginTop="2dip"/>
+    <Button
+     android:id="@+id/myself_title_btn"
+     android:layout_width="80dip"
+     android:layout_height="30dip"
+     android:layout_alignRight="@id/myself_title_text"
+     android:layout_alignParentRight="true"
+     android:text="@string/backShelf"
+     android:textSize="10sp"/>
+</RelativeLayout>
+<!-- 基础资料 -->
+<LinearLayout
+  android:id="@+id/myself_second_layout"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_below="@id/myself_title_layout">
+  <Button
+    android:id="@+id/myself_base_resource"
+    android:layout_width="80dip"
+    android:layout_height="30dip"
+    android:text="@string/myResource"
+    android:textSize="10sp"/>
+  <Button
+    android:id="@+id/myself_updata_resource"
+    android:layout_width="80dip"
+    android:layout_height="30dip"
+    android:text="@string/updataPassword"
+    android:textSize="10sp"/>
+  <Button
+    android:id="@+id/myself_account_resource"
+    android:layout_width="80dip"
+    android:layout_height="30dip"
+    android:text="@string/accountMessage"
+    android:textSize="10sp"/>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,69 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_member_center}> &raquo; <{$_pms}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_pms}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1" href="message.php"><span><{$_management}></span></a></li>
+        <li><a href="message.php?do=send">发送</a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" action="message.php" id="SearchFrm" method="get"> 
+        <input type="hidden" name="do" value="search" />
+             <div> 
+				<{$_title_keywords}> : <input class="queryInput" type="text" name="q" value="" /> 
+                <input type="submit" name="search" id="Search" class="formbtn" value="<{$_searching}>" /> 
+            </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="message.php" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll">编号</label></th>
+		  <th>发送者</th>
+		  <th>接受者</th>
+		  <th><{$_the_title}>/内容</th>
+		  <th>发送时间</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2" title="<{$item.content|truncate:100}>">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><label for="item_<{$item.id}>"><{$item.id}></label></td>
+		  <td><{$item.cache_from_username}></td>
+		  <td><{$item.cache_to_username}></td>
+		  <td><{$item.title}><br /><{$item.content|truncate:100}></td>
+		  <td class="pb_datetime"><{$item.pubdate}></td>
+		  <td class="handler">
+          <ul id="handler_icon">
+            <li><a class="btn_delete" href="message.php?id=<{$item.id}>&do=del<{$addParams}>" title="<{$_delete}>"><{$_delete}></a></li>
+          </ul>  
+		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="7"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

@@ -1,0 +1,42 @@
+<{assign var="page_title" value="`$_friendlink`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+      <div class="tip_title"><{$_changes_our}><{$_friendlink}><{$_colon}></div>
+        
+	  <form name="linkeditfrm" method="post" action="<{$smarty.env.PHP_SELF}>">
+	  <input type="hidden" name="formhash" value="<{$formhash}>">
+	  <input type="hidden" name="id" value="<{$item.id}>"/>
+	     <table class="offer_info_content">
+              <tr>
+                <th class="circle_left"><{$_show_name}></th>
+                 <td class="circle_right">
+                <input name="spacelink[title]" type="text" id="companyname" value="<{$item.title}>"></td>
+              </tr>
+              <tr>
+                <th><{$_link_address}></th>
+                <td><input name="spacelink[url]" type="text" id="url" value="<{$item.url}>"><{$_site_links}></td>
+              </tr>
+              <tr>
+                <th><{$_notes}></th>
+                <td>
+                <textarea name="spacelink[description]" rows="" cols="50"><{$item.description}></textarea>
+                </td>
+              </tr>
+              <tr>
+                <th class="circle_bottomleft"></th>
+                <td class="circle_bottomright"><input type="submit" value= "<{$_fill_submit}>" name="save"></td>
+              </tr>
+          </table>
+	  </form>
+   </div>
+   </div> 
+<{include file="footer.html"}>

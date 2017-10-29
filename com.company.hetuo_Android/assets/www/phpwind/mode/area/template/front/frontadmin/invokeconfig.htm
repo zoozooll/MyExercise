@@ -1,0 +1,68 @@
+<!--<?php
+print <<<EOT
+-->
+<div class="admin_table" style="width:600px;">
+	<form action="{$basename}q=frontadmin&action=invokeconfig" method="post" >
+	<h2 class="pwC_h" style="cursor:move" onmousedown="read.move(event);">
+    	<span class="fr" onclick="closep();"><img src="$imgpath/close.gif" /></span>{$invoke[name]}{$invokename}
+        <a style="cursor:pointer" class="linka" onclick="sendmsg('{$basename}q=frontadmin&action=default&invokename=$invokename&cateid=$cateid');">返回上一级</a></h2>
+    </h2>
+    <div style="height:350px;overflow:hidden;overflow-y:auto;">
+    <table width="100%" cellspacing="0" cellpadding="0">
+<!--
+EOT;
+foreach($invokepieces as $piece){print <<<EOT
+-->
+		<tr class="tr2">
+        	<td colspan="2" class="b">$piece[title]</td>
+        </tr>
+        <tr>
+        	<td class="td1">调用类型</td>
+            <td class="td2">$piece[func]&nbsp;&nbsp;$piece[rang]</td>
+        </tr>
+		<tr>
+        	<td class="td1">调用个数</td>
+            <td class="td2"><input type="text" value="$piece[num]" name="num[$piece[id]]" class="input"></td>
+        </tr>
+        <tr>
+        	<td class="td1">缓存更新时间[秒]</td>
+            <td class="td2"><input type="text" value="$piece[cachetime]" name="cachetime[$piece[id]]" class="input">&nbsp;&nbsp;&nbsp;0:关闭更新</td>
+        </tr>
+<!--
+EOT;
+foreach($piece[param] as $value){print <<<EOT
+-->
+		$value
+<!--
+EOT;
+}print <<<EOT
+-->
+<!--
+EOT;
+}if($invokedata[ifloop]){print <<<EOT
+-->
+		<tr class="tr2">
+        	<td colspan="2" class="b">设置循环的版块</td>
+        </tr>
+    	<tr class="vt tr1">
+        	<td class="td1">按住ctrl键可多选</td>
+            <td class="td2">{$loopmode}</td>
+        </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+    </table>
+    </div>
+	<input type="hidden" name="invokename" value="$invokename">
+	<input type="hidden" name="scr" value="$scr">
+	<input type="hidden" name="cateid" value="$cateid">
+	<input type="hidden" name="step" value="2">
+	<div class="tac" style="padding:10px;">
+		<input type="button" value="提 交" class="btn" onclick="ajax.submit(this.form,function(){sendmsg('{$basename}q=frontadmin&action=default&invokename=$invokename&cateid=$cateid');});">
+	</div>
+	</form>
+</div>
+<!--
+EOT;
+?>-->

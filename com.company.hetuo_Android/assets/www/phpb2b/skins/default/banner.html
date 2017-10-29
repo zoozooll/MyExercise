@@ -1,0 +1,29 @@
+	<div class="head">
+		<ul class="list1">
+			<li class="company"><a href="javascript:;" onclick="javascript:$('#AddFriendFrm').submit();">加为好友</a></li>
+			<li class="message"><a href="<{$Menus.feedback}>"><{$_feed_back_to_company}></a></li>
+		</ul>
+		<div class="global_link">
+			<span title="诚信指数">(<{$MEMBER.credits|default:0}>)</span>
+			<ul class="list2">
+				<li id="space_index"><a href="<{$Menus.index}>">首页</a></li>
+				<li id="space_intro"><a href="<{$Menus.intro}>"><{$_space_intro}></a></li>
+				<li id="space_product"><a href="<{$Menus.product}>">产品展示</a></li>
+				<li id="space_offer"><a href="<{$Menus.offer}>">供求信息</a></li>
+				<li id="space_news"><a href="<{$Menus.news}>"><{$_space_news}></a></li>
+				<li id="space_album"><a href="<{$Menus.album}>"><{$_space_album}></a></li>
+				<li id="space_hr"><a href="<{$Menus.hr}>"><{$_space_hr}></a></li>
+				<li id="space_contact"><a href="<{$Menus.contact}>"><{$_contact_us}></a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="imgabsolute"><h1><{$COMPANY.name}><{if $COMPANY.english_name}>(<{$COMPANY.english_name}>)<{/if}></h1></div>
+		<div class="imgabsolute2"><img src="<{$GROUP.image}>" alt="<{$GROUP.name}>" /></div>
+		<div id="tips">当前位置：<a href="<{$SiteUrl}>"><{$site_name}></a>&raquo;<a href="<{$SiteUrl}>company/">公司库</a>&raquo;<a href="<{$Menus.index}>"><{$COMPANY.name}></a>&raquo;<span><{$PageTitle}></span></div>
+	</div>
+	<form name="add_friend_frm" id="AddFriendFrm" action="<{$SiteUrl}>office-room/link.php" method="post" target="_blank">
+	<input type="hidden" name="formhash" value="<{$formhash}>">
+	<input type="hidden" name="save" value="save">
+	<input name="spacelink[title]" type="hidden" value="<{$COMPANY.name}>">
+	<input name="spacelink[url]" type="hidden" value="space.php?userid=<{$MEMBER.space_name}>">
+	</form>

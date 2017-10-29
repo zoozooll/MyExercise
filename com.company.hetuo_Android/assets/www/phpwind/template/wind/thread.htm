@@ -1,0 +1,692 @@
+<!--<?php print <<<EOT
+-->
+<style type="text/css">
+.tr3 td,.tr3 th{padding:4px 8px;line-height:1.3;}
+.t_search{border:1px solid $tablecolor;background:$forumcolorone;margin-left:5px;height:18px;overflow:hidden;}
+.t_s_ip{border:1px solid #fff;padding:1px 2px 0;float:left;height:15px; font:12px/14px Arial;background:#fff; width:85px;}
+.t_s_btn{float:left;background:$forumcolortwo url($imgpath/t_search.png) center -1px no-repeat;border:1px solid #fff;border-left:1px solid $tdcolor;cursor:pointer;width:25px;height:18px;overflow:hidden;}
+.t_search input::-moz-focus-inner{border-color:transparent!important;}
+</style>
+<!--
+EOT;
+if((!$db_toolbar || $_COOKIE['toolbarhide'] || $groupid == 'guest') && $pwForumList){print <<<EOT
+-->
+<div id="menu_forumlist" style="display:none;">
+	<div class="sbar-box-a" style="width:700px;">
+		<div class="sbar-title" style="cursor:pointer" onclick="try{pw_bottom.hiddenTab();read.close();}catch(e){read.close();}">
+				<span class="menu-hidden aimg">隐藏</span>
+				<span id="title_forumlist" class="b">快速浏览</span>
+		</div>
+		<div class="sbar-box-b">
+			<div class="forum-list-popout">
+<!--
+EOT;
+foreach($pwForumList as $key=>$value){
+	if (isset($value['child']) && is_array($value['child']) && count($value['child'])) {
+print <<<EOT
+-->
+			<dl class="cc">
+				<dt>
+<!--
+EOT;
+if($GLOBALS['m']){print<<<EOT
+-->
+				<a href="index.php?cateid=$key" target="_blank">$value[name]</a>
+<!--
+EOT;
+}else{print<<<EOT
+-->
+				<a href="index.php?cateid=$key">$value[name]</a>
+<!--
+EOT;
+}print<<<EOT
+-->
+				</dt>
+				<dd class="cc">
+<!--
+EOT;
+foreach($value['child'] as $k=>$v){
+if($GLOBALS['m']){print <<<EOT
+-->
+					<a href="thread.php?fid=$k" target="_blank" onclick="return pwForumList(true,gIsPost,$k,'',true);"><span>$v</span></a>
+<!--
+EOT;
+}else{print<<<EOT
+-->
+					<a href="thread.php?fid=$k" onclick="return pwForumList(true,gIsPost,$k);"><span>$v</span></a>
+<!--
+EOT;
+}
+}print <<<EOT
+-->
+				</dd>
+			</dl>
+<!--
+EOT;
+	}
+}
+print <<<EOT
+-->
+			</div>
+		</div>
+	</div>
+</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+<div id="breadCrumb" class="cc">
+		<span class="fr">
+<!--
+EOT;
+if($admin_T[admin]){
+if($db_adminshow){print <<<EOT
+-->
+			版主: <select name="admin" onchange="Ajump(this.options[this.selectedIndex].value);"><option value="">版主列表</option>$admin_T[admin]</select>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+					版主: $admin_T[admin]
+<!--
+EOT;
+}}if($admincheck || $groupid==3 || $groupid==4){print <<<EOT
+-->
+					<a href="forumcp.php?action=edit&fid=$fid" class="s3">[版块管理]</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</span>
+$msg_guide
+<a href="rss.php?fid=$fid" target="_blank" title="RSS订阅本版面最新帖子">
+<img src="$imgpath/$stylepath/rss.png" align="absbottom" style="margin-bottom:2px;" /></a>
+<span id="shortcut">
+<!--
+EOT;
+if(strpos($winddb[shortcut],','.$fid.',') !==false){
+print <<<EOT
+-->
+<a style="cursor:pointer;" onclick="javascript:shortCut();" title="将本版块移除出我的书签"><img src="$imgpath/$stylepath/thread/collect.gif" align="absbottom" style="margin-bottom:2px;" /></a>
+<!--
+EOT;
+}else{
+print <<<EOT
+-->
+<a style="cursor:pointer;" onclick="javascript:shortCut();" title="将本版块添加到我的书签"><img src="$imgpath/$stylepath/thread/cancel.gif" align="absbottom" style="margin-bottom:2px;" /></a>
+<!--
+EOT;
+}
+if($forumappinfo[thread]){
+print <<<EOT
+-->
+$forumappinfo[thread]
+<!--
+EOT;
+}print <<<EOT
+-->
+			</span>
+</div>
+<!--ads begin-->
+<!--
+EOT;
+list($htmlAdvert,$arrayAdvert) = pwAdvert('Mode.Forum.TextThread',$fid);
+if($htmlAdvert){print <<<EOT
+-->
+<div class="ad-text" style="margin-bottom:8px;">
+<table width="100%" cellspacing="0" cellpadding="0">
+<!--
+EOT;
+$tmpCount=0;
+$idp = 100/$db_txtadnum;
+foreach($arrayAdvert as $value){
+if($tmpCount==0){print <<<EOT
+-->
+	<tr class="tr3">
+<!--
+EOT;
+}$tmpCount++;print <<<EOT
+-->
+	  <td class="f_one black tac" width="$idp%">$value</td>
+<!--
+EOT;
+if($tmpCount==$db_txtadnum){
+$tmpCount=0;print <<<EOT
+-->
+	</tr>
+<!--
+EOT;
+}}if($tmpCount && $tmpCount<$db_txtadnum){
+for($i=$tmpCount;$i<$db_txtadnum;$i++){print <<<EOT
+-->
+	  <td class="f_one" width="$idp%">&nbsp;</td>
+<!--
+EOT;
+}print <<<EOT
+-->
+	</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+</table></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+<!--ads end-->
+<div class="c"></div>
+<!--
+EOT;
+if($foruminfo['aid'] || is_array($foruminfo['commend'])){print <<<EOT
+-->
+<div class="t">
+	<table width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+            <div class="pw_list_a">
+            	<a class="fr closeicon" href="javascript:;" onClick="return IndexDeploy('thread',0);"><img id="img_thread" src="$imgpath/$stylepath/index/cate_$thread_img.gif" /></a>
+            	<ul>
+<!--
+EOT;
+if($foruminfo[aid]){
+$tmpStyle = is_array($foruminfo['commend']) ? 'class="normal"' : 'class="current"';
+print <<<EOT
+-->
+					<li onmouseover="return swap_tab(1)" id="tab_t1" $tmpStyle><a href="javascript:;">版块公告</a></li>
+<!--
+EOT;
+}if(is_array($foruminfo['commend'])){print <<<EOT
+-->
+					<li onmouseover="return swap_tab(2)" id="tab_t2" class="current"><a href="javascript:;">版主推荐</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</ul>
+			</div>
+			</td>
+		</tr>
+<!--
+EOT;
+if($foruminfo['descrip']){print <<<EOT
+-->
+		<tr class="tr2">
+			<td>
+版块简介: {$foruminfo[descrip]}
+			</td>
+		</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+		<tbody id="cate_thread" style="$cate_thread">
+		<tr style="line-height:1.2;">
+			<td>
+<!--
+EOT;
+if($foruminfo[aid]){
+$tmpStyle = is_array($foruminfo['commend']) ? 'style="display:none"' : '';
+print <<<EOT
+-->
+<div id="tab_1" class="p10" $tmpStyle>
+	$foruminfo[content]
+	<div class="c"></div>
+	<div class="fr"><a class="gray" href="notice.php?fid=$foruminfo[fid]#$foruminfo[aid]">更多</a></div>
+	<div class="c"></div>
+
+</div>
+<!--
+EOT;
+}if(is_array($foruminfo['commend'])){
+print <<<EOT
+-->
+<div class="p10" id="tab_2">
+<style type="text/css">
+/*版主推荐*/
+#commend li{width:45%;float:left;padding-left:1.2em;background:url($imgpath/pwicon/related_li.gif) no-repeat 0 .5em;height:20px;line-height:20px;overflow:hidden;}
+#commend a{margin-right:20px;}
+</style>
+<ul id="commend" class="cc">
+<!--
+EOT;
+foreach($foruminfo['commend'] as $key=>$value){print <<<EOT
+-->
+<li><a href="read.php?tid=$value[tid]">$value[subject]</a><a href="u.php?action=show&uid=$value[authorid]" class="s4">$value[author]</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+</ul></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+<script language="JavaScript">
+function swap_tab(n){
+try{
+	for(var i=1;i<=2;i++){
+		var curC=document.getElementById("tab_"+i);
+		var curB=document.getElementById("tab_t"+i);
+		if(n==i){
+			curC.style.display="block";
+			curB.className="current"
+		}else{
+			curC.style.display="none";
+			curB.className="normal"
+		}
+	}}catch(e){}
+}
+</script>
+<!--
+EOT;
+}$thread_children && require_once PrintEot($thread_children);
+if($db_union[5]){
+$db_union[5]=str_replace(array('{f_fid}','{sch_time}'),array($fid,$_G[schtime]),$db_union[5]);
+}print <<<EOT
+-->
+<div class="c" id="c"></div>
+<!--
+EOT;
+if ($modelid > 0 || $pcid > 0){print<<<EOT
+-->
+<style type="text/css">
+.t-cate-s .p10 span{float:left;margin:0 20px 10px 0; height:25px; white-space:nowrap;}
+.t-cate-s .p10 input{ vertical-align:middle;}
+.t-cate-s .p10 .btn{margin:0 5px;}
+</style>
+<div class="t-cate-s">
+	<div class="t_one t5" style="width:100%;">
+		<div class="p10 cc">
+			$initSearchHtml
+		</div>
+	</div>
+</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+<div class="t3 cc">
+<!--
+EOT;
+if($N_allowtypeopen || $N_allowtopicopen || $N_allowpostcateopen){print <<<EOT
+-->
+<span class="fr"><a href="post.php?fid=$fid" title="发表新帖"><img src="$imgpath/$stylepath/post.png" id="td_post" /></a></span>
+<!--
+EOT;
+}print <<<EOT
+-->
+<div style="padding-top:8px;" class="cc">
+    <span class="fl">$pages$db_union[5]</span>
+        <div class="t_search fl"><form name="sF" action="search.php#submit" method="post">
+        <input type="hidden" value="2" name="step"/>
+        <input type="hidden" value="AND" name="method"/>
+        <input type="hidden" value="1" name="sch_area"/>
+        <input type="hidden" value="{$fid}" name="f_fid"/>
+        <input type="hidden" value="all" name="sch_time"/>
+        <input type="text" class="t_s_ip gray" name="keyword" onfocus="if(this.value=='版内搜索') this.value='';" onblur="if(this.value=='') this.value='版内搜索';" value="版内搜索" /><input name="submit" type="submit" class="t_s_btn" value=" " /></form></div>
+    </div>
+</div>
+<!--
+EOT;
+if($N_allowtypeopen || $N_allowtopicopen || $N_allowpostcateopen){print <<<EOT
+-->
+<div id="menu_post" class="menu menu-post cc f14 tac" style="display:none;">
+	<div class="menu-b" style="width:100px;">
+<!--
+EOT;
+if($foruminfo['allowtype'] & 1){print <<<EOT
+-->
+	<a href="post.php?fid=$fid" title="新 帖" hidefocus="true">新 帖</a>
+<!--
+EOT;
+}if($foruminfo['allowtype'] & 2 && $_G[allownewvote]){print <<<EOT
+-->
+	<a href="post.php?fid=$fid&special=1" title="投 票" hidefocus="true">投 票</a>
+<!--
+EOT;
+}if($foruminfo['allowtype'] & 4 && $_G[allowactive]){print <<<EOT
+-->
+	<a href="post.php?fid=$fid&special=2" title="活 动" hidefocus="true">活 动</a>
+<!--
+EOT;
+}if($foruminfo['allowtype'] & 8 && $_G['allowreward']){print<<<EOT
+-->
+	<a href="post.php?fid=$fid&special=3" title="悬 赏" hidefocus="true">悬 赏</a>
+<!--
+EOT;
+}if($foruminfo['allowtype'] & 16 && $_G['allowgoods']){print <<<EOT
+-->
+	<a href="post.php?fid=$fid&special=4" title="商 品" hidefocus="true">商 品</a>
+<!--
+EOT;
+}if($foruminfo['allowtype'] & 32 && $_G['allowdebate']){print <<<EOT
+-->
+	<a href="post.php?fid=$fid&special=5" title="辩 论" hidefocus="true">辩 论</a>
+<!--
+EOT;
+}
+if($_G['allowmodelid']){
+foreach($modelids as $value){
+if(isset($postTopic->topicmodeldb[$value]) && $postTopic->topicmodeldb[$value][ifable] && $postTopic->topiccatedb[$postTopic->topicmodeldb[$value][cateid]][ifable]){
+print <<<EOT
+-->
+	<a href="post.php?fid=$fid&modelid=$value" hidefocus="true">{$postTopic->topicmodeldb[$value][name]}</a>
+<!--
+EOT;
+}}}
+foreach($pcids as $value){
+if(isset($postCate->postcatedb[$value]) && $postCate->postcatedb[$value][ifable]){
+if(strpos(','.$_G['allowpcid'].',',','.$value.',') !== false){
+print <<<EOT
+-->
+	<a href="post.php?fid=$fid&pcid=$value" hidefocus="true">{$postCate->postcatedb[$value][name]}</a>
+<!--
+EOT;
+}}}print <<<EOT
+-->
+	</div>
+</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+<div class="t z" style="margin:auto">
+<table cellspacing="0" cellpadding="0" width="100%" id="ajaxtable">
+<!--
+EOT;
+$lang_special=array(
+	'all'=> '按类型查看',
+	'1'	=> '投 票',
+	'2'	=> '活 动',
+	'3'	=> '悬 赏',
+	'4'	=> '商 品',
+	'5'	=> '辩 论',
+);
+print <<<EOT
+-->
+	<tr><th colspan="$colspannum">
+	<div class="pw_list_a pr pw_maxlist">
+	<div id="menu_special" class="menu-post tac" style="display:none;">
+		<div class="menu-b f14">
+			 <ul style="width:77px;*padding-left:5px;line-height:2">
+				  <li><a href="thread.php?fid=$fid">全 部</a></li>
+				  <li><a href="thread.php?fid=$fid&special=1">投 票</a></li>
+				  <li><a href="thread.php?fid=$fid&special=2">活 动</a></li>
+				  <li><a href="thread.php?fid=$fid&special=3">悬 赏</a></li>
+				  <li><a href="thread.php?fid=$fid&special=4">商 品</a></li>
+				  <li><a href="thread.php?fid=$fid&special=5">辩 论</a></li>
+			 </ul>
+		</div>
+	</div>
+<!--
+EOT;
+foreach($t_childtypedb as $key => $child){
+print<<<EOT
+-->
+	<div id="thread_typechild_$key" class="menu-post" style="display:none;">
+		<div class="menu-b">
+			 <ul style="padding:0 10px;line-height:2">
+<!--
+EOT;
+foreach($child as $k => $value){
+$childtypename = html_entity_decode($value);
+print<<<EOT
+-->
+				  <li><a href="thread.php?fid=$fid{$viewbbs}&type=$k#c">$childtypename</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+			 </ul>
+		</div>
+	</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+	<ul>
+		<li id="thread_type_all"><a href="thread.php?fid=$fid{$viewbbs}#c">全部</a></li>
+		<span id="t_typedb">
+<!--
+EOT;
+foreach($modelids as $value){
+if(isset($postTopic->topicmodeldb[$value]) && $postTopic->topicmodeldb[$value][ifable] && $postTopic->topiccatedb[$postTopic->topicmodeldb[$value][cateid]][ifable]){
+print<<<EOT
+-->
+		<li id="thread_type_model_$value"><a href="thread.php?fid=$fid&modelid=$value">{$postTopic->topicmodeldb[$value][name]}</a></li>
+<!--
+EOT;
+}}
+foreach($pcids as $value){
+if(isset($postCate->postcatedb[$value]) && $postCate->postcatedb[$value][ifable]){
+print<<<EOT
+-->
+		<li id="thread_type_pcid_$value"><a href="thread.php?fid=$fid&pcid=$value">{$postCate->postcatedb[$value][name]}</a></li>
+<!--
+EOT;
+}}
+if (!$modelid && !$pcid){
+print<<<EOT
+-->
+		<li id="thread_type_digest"><a href="thread.php?fid=$fid{$viewbbs}&search=digest#c">精华</a></li>
+<!--
+EOT;
+}
+$i = 1;
+if($groupid!='guest' && $foruminfo['f_check']){$i++;print <<<EOT
+-->
+		<li id="thread_type_check"><a href="thread.php?fid=$fid{$viewbbs}&search=check#c">未验证主题</a></li>
+<!--
+EOT;
+}
+if(!$modelid && !$pcid){
+foreach($t_typedb as $key=>$value){
+$i++;
+$ctypename = html_entity_decode($value[name]);
+print <<<EOT
+-->
+		<li id="thread_type_$key"><a href="thread.php?fid=$fid{$viewbbs}&type=$key#c">{$ctypename}<!--
+EOT;
+if($t_childtypedb[$value[id]]){print<<<EOT
+--><span class="f10">▼</span>
+<!--
+EOT;
+}print<<<EOT
+--></a></li>
+<!--
+EOT;
+}}print <<<EOT
+-->
+		</span>
+		<li class="none"><a href="javascript:void(0);" id="td_special">$lang_special[$pwSelectSpecial]<span style="font-size:9px">▼</span></a></li>
+	</ul>
+<!--
+EOT;
+if($i > $db_maxtypenum){print<<<EOT
+-->
+<style type="text/css">
+.pw_maxlist{padding-left:50px;}
+.maxtleft,.maxtright{position:absolute;width:9px;height:18px;text-indent:-2000em;overflow: hidden;top:7px;cursor:pointer;}
+.maxtleft{background:url($imgpath/$stylepath/btLeft.gif);left:10px;}
+.maxtright{background:url($imgpath/$stylepath/btRight.gif);left:30px;}
+</style>
+<span class="maxtleft" onclick="showTypeTab(-$db_maxtypenum,$db_maxtypenum,'li');" title="上一页分类">上一页分类</span>
+<span class="maxtright" onclick="showTypeTab($db_maxtypenum,$db_maxtypenum,'li');" title="下一页分类">下一页分类</span>
+<!--
+EOT;
+}print<<<EOT
+-->
+	</div>
+<script language="javascript">
+<!--
+EOT;
+if($i > $db_maxtypenum){print<<<EOT
+-->
+function setCurrentType(id,n,tag){
+	var o = getObj('t_typedb');
+	var f = o.getElementsByTagName(tag);
+	var s = 0;
+	var page = 0;
+	for(i=0; i<f.length; i++){
+		if(f[i].id == id){
+			s = i;break;
+		}
+	}
+	page = Math.floor(s/n);
+	for(i=0; i<f.length; i++){
+		if(i>=page*n && i<(page+1)*n){
+			f[i].style.display = 'inline';
+		}else{
+			f[i].style.display = 'none';
+		}
+	}
+}
+function showTypeTab(p,n,tag){
+	var o = getObj('t_typedb');
+	var f = o.getElementsByTagName(tag);
+	var s = 0;
+	for(i=0;i<f.length;i++)
+		if(f[i].style.display != "none"){s = i;break;}
+	s += p;
+	if(s<0 || s>f.length)return;
+	for(i=0;i<f.length;i++){
+		if(i>=s && i<s+n){
+			f[i].style.display = "inline";
+		} else{
+			f[i].style.display = "none";
+		}
+	}
+	return;
+}
+setCurrentType('thread_type_$pwSelectType',$db_maxtypenum,'li');
+<!--
+EOT;
+}print<<<EOT
+-->
+setCurrent('thread_type_$pwSelectType','thread_type_all','current');
+</script>
+	</th>
+</tr>
+$trd_adminhide
+<!--
+EOT;
+if($modelid > 0 || $pcid > 0) {
+	require_once PrintEot('thread_maincate');
+} else {
+	require_once PrintEot('thread_maincommon');
+}print<<<EOT
+-->
+<div class="c"></div>
+<!--
+EOT;
+$db_threadonline==1 && require_once PrintEot('thread_online');
+$fastpost && require_once PrintEot($fastpost);
+print <<<EOT
+-->
+<div style="width:550px;margin:0 auto 8px;" class="pd8">
+    <center>
+         <img src="$imgpath/$stylepath/thread/topicnew.gif" align="absmiddle"/> 开放主题&nbsp;&nbsp;&nbsp;<img src="$imgpath/$stylepath/thread/topichot.gif" align="absmiddle"/> 热门主题&nbsp;&nbsp;&nbsp;<img src="$imgpath/$stylepath/thread/topiclock.gif" align="absmiddle"/> 锁定主题&nbsp;&nbsp;&nbsp;<img src="$imgpath/$stylepath/thread/topicclose.gif" align="absmiddle"/> 关闭主题&nbsp;&nbsp;&nbsp;<img src="$imgpath/$stylepath/thread/vote.gif" align="absmiddle"/> 投票主题&nbsp;&nbsp;&nbsp;<img src="$imgpath/$stylepath/thread/votelock.gif" align="absmiddle"/> 锁定投票
+    </center>
+</div>
+<!--
+EOT;
+$jsforumtitle = addslashes($foruminfo['name']);
+print <<<EOT
+-->
+<script language="JavaScript">
+var fid = '$fid';
+var forumtitle = "$jsforumtitle";
+var imgok = "collect.gif";
+var imgno = "cancel.gif";
+var myshortcut = $myshortcut;
+
+function Fjump(value){
+	if(value!=''){
+		window.location=('$B_url/thread.php?fid='+value);
+	}
+}
+function Ajump(value){
+	if(value!= ''){
+		window.location=('$B_url/u.php?action=show&username='+value);
+	}
+}
+var totalpage = parseInt('$totalpage');
+var page = parseInt('$page');
+if(totalpage > 1){
+	document.onkeydown=function(e){
+		var e = is_ie ? window.event : e;
+		var tagname = is_ie ? e.srcElement.tagName : e.target.tagName;
+		if(tagname == 'INPUT' || tagname == 'TEXTAREA'){
+			return;
+		}
+		actualCode = e.keyCode ? e.keyCode : e.charCode;
+		if(actualCode == 39 && page<totalpage) {
+			window.location = 'thread.php?fid=$fid&search={$search}&{$w_add}{$typeadd}page=' + (page+1);
+		}
+		if(actualCode == 37 && page>1){
+			window.location = 'thread.php?fid=$fid&search={$search}&{$w_add}{$typeadd}page=' + (page-1);
+		}
+	}
+}
+
+function shortCut() {
+	ajax.send('pw_ajax.php?action=shortcut&fid='+fid,'',function(){
+		ajax.guide();
+		var rText = ajax.request.responseText.split('\t');
+		if (typeof(rText[1]) != 'undefined' && rText[1] == 'successok') {
+			getObj('shortcut').innerHTML = "<a style=\"cursor:pointer;\" onclick=\"javascript:shortCut();\" title=\"将本版块移除出我的书签\"><img src=\"$imgpath/$stylepath/thread/"+imgok+"\" align=\"absbottom\" style=\"margin-bottom:2px;\" /></a>";
+			var shortcutforum = getObj('shortcutforum');
+			if (myshortcut == false) {
+				var shortcutname = getObj('shortcutname');
+				shortcutname.innerHTML = "收藏的版块:&nbsp;";
+				shortcutforum.innerHTML = "<li id=\"scf_"+fid+"\"><a href=\"thread.php?fid="+fid+"\">"+forumtitle+"</a>&nbsp;</li>";
+			} else {
+				if (IsElement('shortcutforum')) {
+					var li = document.createElement('li');
+					li.id = 'scf_'+fid;
+					li.innerHTML = "<a href=\"thread.php?fid='+fid+'\">"+forumtitle+"</a>&nbsp;";
+					shortcutforum.appendChild(li);
+				}
+			}
+
+		} else if (typeof(rText[1]) != 'undefined' && rText[1] == 'successno') {
+			getObj('shortcut').innerHTML = "<a style=\"cursor:pointer;\" onclick=\"javascript:shortCut();\" title=\"将本版块添加到我的书签\"><img src=\"$imgpath/$stylepath/thread/"+imgno+"\" align=\"absbottom\" style=\"margin-bottom:2px;\" /></a>";
+			if (IsElement('scf_'+fid)) {
+				var thisnode = getObj('scf_'+fid);
+				var shortcutforum = thisnode.parentNode;
+				shortcutforum.removeChild(thisnode);
+				var li = shortcutforum.childNodes;
+				for (var i=0; i<li.length; i++) {
+					if (li[i].nodeType == 1) {
+						return false;
+					}
+				}
+				myshortcut = false;
+				var shortcutname = getObj('shortcutname');
+				shortcutname.innerHTML = "热门版块:&nbsp;";
+				shortcutforum.innerHTML = getObj('db_shortcutforum').innerHTML;
+			}
+		}
+
+	});
+}
+</script>
+<!--
+EOT;
+if($ajaxcheck){print <<<EOT
+-->
+<script type="text/javascript" language="JavaScript" src="js/ajax_subject.js"></script>
+<!--
+EOT;
+}if($foruminfo[aid] || is_array($foruminfo['commend']) || $thread_children){print <<<EOT
+-->
+<script language="JavaScript" src="js/Deploy.js"></script>
+<!--
+EOT;
+}?>-->

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test"
+	android:orientation="horizontal" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:focusable="true"
+	android:background="#FFFFFF">
+
+	<ImageView android:id="@+id/img" 
+		android:layout_width="70px"
+		android:layout_height="90px" 
+		android:layout_gravity="center_horizontal"
+		android:layout_margin="5px" />
+
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content">
+
+		<TextView android:id="@+id/bookname" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="#000"
+			android:textSize="12px" 
+			android:textStyle="bold"
+			android:layout_marginTop="5px"/>
+			
+	   <LinearLayout android:orientation="horizontal"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5px">
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="#000"
+			android:textSize="10px" 
+			android:text="作者："/>
+			<TextView android:id="@+id/author" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="#000"
+			android:textSize="10px" />
+		</LinearLayout>
+			
+		<LinearLayout android:orientation="horizontal"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5px">
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="#000"
+			android:textSize="10px" 
+			android:text="评分："/>
+		<RatingBar android:id="@+id/score" 
+			style="?android:attr/ratingBarStyleSmall"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:numStars="5"
+            android:rating="3"
+			/>
+		<TextView android:id="@+id/scoreers" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="#0000FF"
+			android:textSize="10px" 
+			android:text="(46人评价)"/>
+		</LinearLayout>
+			
+		<LinearLayout android:orientation="horizontal"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5px">
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="#000"
+			android:textSize="10px" 
+			android:text="上次阅读："/>
+			<TextView android:id="@+id/lasttime" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="#000"
+			android:textSize="10px" 
+			android:text="2011-5-26 12:00:00"/>
+		</LinearLayout>
+		
+
+	</LinearLayout>
+    
+    <LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:paddingRight="10dip"
+		android:gravity="right"
+		>
+		<TextView 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:textColor="@color/black"
+			android:textSize="15dip" 
+			android:layout_marginTop="5dip"
+			android:text="当前已有 2本"/>
+		<LinearLayout android:orientation="horizontal"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="40dip">
+		<TextView android:id="@+id/send1" 
+		    android:autoLink="web"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="@color/black"
+			android:textSize="15dip" 
+			android:text="赠送"/>
+		<TextView android:id="@+id/send2" 
+		    android:autoLink="web"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="@color/black"
+			android:textSize="15dip" 
+			android:layout_marginLeft="3dip"
+			android:text="推荐"/>
+		<TextView android:id="@+id/send3" 
+		    android:autoLink="web"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="@color/black"
+			android:textSize="15dip" 
+			android:layout_marginLeft="3dip"
+			android:text="笔记"/>
+		<TextView android:id="@+id/send4" 
+		    android:autoLink="web"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="@color/black"
+			android:textSize="15dip" 
+			android:layout_marginLeft="3dip"
+			android:text="书签"/>
+        </LinearLayout>
+</LinearLayout>
+
+</LinearLayout>

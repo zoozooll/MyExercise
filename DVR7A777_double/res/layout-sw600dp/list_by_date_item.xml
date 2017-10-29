@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout  
+  xmlns:android="http://schemas.android.com/apk/res/android" 
+  android:layout_width="fill_parent"  
+  android:layout_height="fill_parent"
+  android:background="@drawable/item_bg" 
+  android:id="@+id/list_by_date_item_id"
+  android:paddingLeft="9dip"
+  android:paddingRight="@dimen/textsize_listdate_paddingRight">  
+<!-- 图片 -->      
+  <ImageView  
+    android:id="@+id/list_by_date_flag_image_id" 
+    android:src="@drawable/list_by_date_flag_image" 
+    android:layout_width="wrap_content"  
+    android:layout_height="wrap_content" 
+    android:padding="7dp" 
+    android:layout_alignParentTop="true"
+	android:layout_marginTop="5dp"
+  />  
+    
+  <!-- 日期时间 -->
+    <TextView  
+        android:id="@+id/list_by_date_date_tv_id"  
+        android:layout_width="wrap_content"   
+        android:layout_height="wrap_content"    
+        android:layout_toRightOf="@+id/list_by_date_flag_image_id" 
+        android:layout_alignParentTop="true"
+		android:layout_marginTop="18dp"
+        android:textColor="#000000"   
+        android:textSize="@dimen/playlist_itme_text_size"  
+          
+    />  
+    <!-- 星期几 -->
+    <TextView
+        android:id="@+id/list_by_date_weekday_tv_id"  
+        android:layout_width="wrap_content"   
+        android:layout_height="wrap_content"   
+        android:layout_toRightOf="@+id/list_by_date_flag_image_id"  
+		android:layout_below="@+id/list_by_date_date_tv_id"
+		android:layout_marginTop="4dp"
+        android:textColor="#000000"   
+        android:textSize="@dimen/playlist_itme_text_size"  
+        android:visibility="gone"   
+    />   
+    
+    <!-- 间隔时间 -->
+   <TextView  
+        android:id="@+id/list_detail_duration_tv_id"  
+        android:layout_width="wrap_content"   
+        android:layout_height="wrap_content"    
+        android:textColor="#000000"   
+        android:textSize="@dimen/playlist_itme_text_size"
+        android:paddingTop="5dp"
+        android:visibility="gone" 
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentRight="true"
+		android:layout_marginTop="15dp"           
+    /> 
+   <!-- 发送 button --> 
+   <ImageButton 
+    android:paddingLeft="@dimen/textsize_listdate_paddingLeft"  
+    android:id="@+id/list_detail_send_button_id"  
+    android:layout_width="wrap_content"   
+    android:layout_height="wrap_content"  
+    android:src="@drawable/send_bg" 
+    android:background="#00000000"
+    android:visibility="gone"   
+  />  
+    
+  <!-- 删除的  -->
+  <ImageButton 
+      android:paddingLeft="@dimen/textsize_listdate_paddingLeft" 
+    android:id="@+id/list_by_date_delete_button_id"  
+    android:layout_width="wrap_content"   
+    android:layout_height="wrap_content"  
+    android:src="@drawable/delete_bg" 
+    android:background="#00000000"    
+    android:visibility="gone"    
+  />  
+  
+   <ImageButton
+        android:paddingLeft="@dimen/textsize_listdate_paddingLeft"  
+    	android:id="@+id/list_by_date_dvrlist_button_id" 
+    	android:layout_width="wrap_content"   
+   		android:layout_height="wrap_content"  
+    	android:src="@drawable/detail_bg" 
+    	android:background="#00000000"
+    	android:visibility="gone" 
+   /> 
+  
+   <ImageButton
+    android:paddingLeft="@dimen/textsize_listdate_paddingLeft"  
+    android:id="@+id/list_detail_play_button_id"  
+    android:layout_width="wrap_content"   
+    android:layout_height="wrap_content"  
+    android:src="@drawable/play_bg" 
+    android:background="#00000000" 
+    android:visibility="gone"     
+  />  
+     
+   
+    
+</RelativeLayout>  

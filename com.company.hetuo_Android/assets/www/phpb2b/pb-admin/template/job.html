@@ -1,0 +1,78 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_job}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_job}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1"><span><{$_management}></span></a></li>
+		<li><a href="jobtype.php">职位分类</a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" id="SearchFrm" method="get">
+        <input type="hidden" name="do" value="search" />
+             <div>
+				职位关键字 : <input class="queryInput" type="text" name="q" value="" /> 
+                <input type="submit" name="search" id="Search" class="formbtn" value="<{$_searching}>" /> 
+            </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll">职位名称</label></th>
+		  <th>公司名称</th>
+		  <th><{$_if_valid_n}></th>
+		  <th>发布时间</td>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><label for="item_<{$item.id}>"><{$item.jobname}></label><{if $item.pubdate>=$today_timestamp}>&nbsp;<img src="images/new.gif" /><{/if}></td>
+		  <td><{$item.companyname}></td>
+		  <td><{$CheckStatus[$item.jobstatus]}></td>
+		  <td class="pb_datetime"><{$item.pubdate}></td>
+		  <td class="handler">
+           <ul id="handler_icon">
+            <li><a class="btn_delete" href="job.php?id=<{$item.id}>&do=del" title="<{$_delete}>"><{$_delete}></a></li>
+            <li><a class="btn_browse" href="job.php?do=view&id=<{$item.id}>" title="查看"><{$_cp_view}></a></li>
+          </ul> 
+		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="6"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+      <select name="pb_action" id="PbAction" onchange="javascript:document.list_frm.submit()">
+        <option value="-1">选择<{$_action}></option>
+        <optgroup label="<{$_action}>列表">
+        <option value="0">审核</option>
+        <option value="1">审核通过</option>
+        <option value="2">审核不通过</option>
+        <option value="none">等待审核</option>
+        <option value="3">无效</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

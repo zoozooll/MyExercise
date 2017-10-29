@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/playlist_bg"
+    android:orientation="horizontal" >
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical" >
+
+    <com.dvr.android.dvr.msetting.MyImageButton
+        android:id="@+id/video_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:src="@drawable/btn_showplayback_video_normal"
+        android:text="@string/playback_video_unlock" />
+        
+    <com.dvr.android.dvr.msetting.MyImageButton
+        android:id="@+id/video_lock_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:src="@drawable/btn_showplayback_video_normal"
+        android:text="@string/playback_video_lock" />     
+           
+    <com.dvr.android.dvr.msetting.MyImageButton
+        android:id="@+id/picture_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:src="@drawable/btn_showplayback_pic_normal"
+        android:text="@string/playback_pic" />     
+       
+    </LinearLayout>
+
+     <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    
+	    <ListView
+	        android:id="@+id/list_by_date"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="30dp"
+	        android:layout_marginLeft="30dp"
+	        android:layout_marginTop="30dp"
+	        android:layout_marginBottom="30dp"
+	        android:cacheColorHint="#00000000">	        	
+	    </ListView>
+	    
+	    
+        <TextView 
+          android:layout_width="fill_parent" 
+		  android:layout_height="fill_parent"
+		  android:id="@+id/filesempty"
+		  android:text="@string/empty_text"
+		  android:visibility="gone"
+		  android:textColor="#ffffff"
+		  android:textSize="20sp"
+		  android:gravity="center"/>
+	</LinearLayout>   
+</LinearLayout>

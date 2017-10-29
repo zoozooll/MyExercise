@@ -1,0 +1,69 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_member_center}> &raquo; <{$_administrator}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_administrator}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1" href="adminer.php"><span><{$_management}></span></a></li>
+		<li><a href="adminer.php?do=edit"><{$_add_or_edit}></a></li>
+        <li><a href="adminer.php?do=password"><{$_change_pass}></a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" id="SearchFrm" method="get">
+        <input type="hidden" name="do" value="search" />
+             <div>
+				<{$_cp_username_n}><input class="queryInput" type="text" name="q" value="" /> 
+                <input type="submit" id="Search" class="formbtn" value="<{$_searching}>" /> 
+            </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll">登陆<{$_cp_username}></label></th>
+		  <th>姓名</th>
+		  <th>最后登陆时间</th>
+		  <th>最后登陆IP地址</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item name=adzone}>
+		<tr class="tatr2">
+		  <td class="firstCell"><{if $AdministratorId!=$item.member_id}><input type="checkbox" name="id[]" value="<{$item.member_id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.member_id}>" title="<{$item.member_id}>"><{/if}></td>
+		  <td><label for="item_<{$item.id}>"><{$item.username}></label></td>
+		  <td><{$item.first_name}><{$item.last_name}></td>
+		  <td><{$item.last_login|date_format:"%Y-%m-%d"}></td>
+		  <td><{$item.last_ip}></td>
+		  <td class="handler">
+           <ul id="handler_icon">
+            <{if $AdministratorId!=$item.member_id}><li><a class="btn_delete" href="adminer.php?id=<{$item.member_id}>&do=del<{$addParams}>" title="<{$_delete}>"><{$_delete}></a></li><{/if}>
+            <li><a class="btn_edit" href="adminer.php?do=edit&id=<{$item.member_id}><{$addParams}>" title="<{$_edit}>"><{$_edit}></a></li>
+          </ul>  
+		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="6"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

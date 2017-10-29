@@ -1,0 +1,89 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_ads}> &raquo; <{$_friendlink}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_friendlink}></h3> 
+    <ul class="subnav">
+		<li><a href="friendlink.php"><{$_management}></a></li>
+        <li><a class="btn1" href="friendlink.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+        <li><a href="friendlinktype.php"><{$_sorts}></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form action="friendlink.php" method="post" id="EditFrm" name="edit_frm">
+  <input type="hidden" name="id" value="<{$smarty.get.id}>">
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 链接标题：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[friendlink][title]" value="<{$item.title}>" /><label class="field_notice">显示的标题</label></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 链接分类：</th>
+        <td class="paddingT15 wordSpacing5">
+		<select name="data[friendlink][friendlinktype_id]">
+		<{html_options options=$FriendlinkTypes selected=$item.friendlinktype_id}>
+		</select>
+		</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_in_industry}></th>
+        <td class="paddingT15 wordSpacing5">
+        <span id="dataIndustry">
+					<select name="data[industry_id1]" id="dataIndustryId1" class="level_1" style="width:120px;" ></select>
+					<select name="data[industry_id2]" id="dataIndustryId2" class="level_2" style="width:120px;"></select>
+					<select name="data[industry_id3]" id="dataIndustryId3" class="level_3" style="width:120px;"></select>
+		</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_in_area}></th>
+        <td class="paddingT15 wordSpacing5">
+			<span id="dataArea">
+						<select name="data[area_id1]" id="dataAreaId1" class="level_1" style="width:120px;" ></select>
+						<select name="data[area_id2]" id="dataAreaId2" class="level_2" style="width:120px;"></select>
+						<select name="data[area_id3]" id="dataAreaId3" class="level_3" style="width:120px;"></select>
+			</span>        
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 链接地址：</th>
+        <td class="paddingT15 wordSpacing5"><input name="data[friendlink][url]" value="<{$item.url}>" /></td>
+      </tr>      
+      <tr>
+        <th class="paddingT15">Logo图片地址：</th>
+        <td class="paddingT15 wordSpacing5"><input name="data[friendlink][logo]" value="<{$item.logo}>" /><{if $item.logo}></td><td><img src="<{$item.logo}>" width="80" /><{/if}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 是否显示：</th>
+        <td class="paddingT15 wordSpacing5"><{html_radios name="data[friendlink][status]" options=$AskAction checked=$item.status|default:1 separator=""}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 排序：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[friendlink][priority]" value="<{$item.priority}>" /></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<script>
+var cache_path = "../";
+var app_language = '<{$AppLanguage}>';
+var area_id1 = <{$item.area_id1|default:0}> ;
+var area_id2 = <{$item.area_id2|default:0}> ;
+var area_id3 = <{$item.area_id3|default:0}> ;
+var industry_id1 = <{$item.industry_id1|default:0}> ;
+var industry_id2 = <{$item.industry_id2|default:0}> ;
+var industry_id3 = <{$item.industry_id3|default:0}> ;
+</script>
+<script src="../scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="../scripts/script_area.js"></script>
+<script src="../scripts/script_industry.js"></script>
+<{include file="footer.html"}>

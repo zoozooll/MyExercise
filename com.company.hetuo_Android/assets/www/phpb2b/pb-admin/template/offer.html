@@ -1,0 +1,105 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_offer}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_offer}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1" href="offer.php"><span><{$_management}></span></a></li>
+        <li><a href="offer.php?do=edit"><{$_add_or_edit}></a></li>
+        <li><a href="offer.php?do=setting"><{$_setting}></a></li>
+        <li><a href="offertype.php"><{$_sorts}></a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" id="SearchFrm" method="get" action="offer.php"> 
+        <input type="hidden" name="do" value="search" />
+             <div> 
+                <select class="querySelect" name="type_id">
+				<option value="0">供求类型</option>
+                <{foreach from=$TradeTypes item=item key=key}>
+                <option value="<{$key}>"><{$item}></option>
+                <{/foreach}>
+				</select>
+				<{$_title_keywords}> : <input class="queryInput" type="text" name="q" value="" /> 
+				<{$_cp_username}> : <input class="queryInput" type="text" name="username" value="" />
+                <select class="querySelect" name="display_pg">
+				<option value="0"><{$_eve_page_display}>数量</option>
+				<option value="10" <{if $smarty.get.display_pg==10}>selected="selected"<{/if}>><{$_eve_page_display}>10</option>
+				<option value="20" <{if $smarty.get.display_pg==20}>selected="selected"<{/if}>><{$_eve_page_display}>20</option>
+				<option value="30" <{if $smarty.get.display_pg==30}>selected="selected"<{/if}>><{$_eve_page_display}>30</option>
+				</select>
+                <input type="submit" class="formbtn" value="<{$_searching}>" /> 
+            </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="" method="post">
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th></th>
+		  <th><label for="idAll">主题</label></th>
+		  <th><label for="idAll"><{$_types}></label></th>
+		  <th><{$_cp_username}></th>
+		  <th><{$_checked_status}></th>
+		  <th><{$_pub_date}></th>
+		  <th><{$_expire_date}></th>
+		  <th><{$_action}></th>
+		</tr>
+    <thead>
+    <tfoot>
+		<tr>
+		  <th colspan="9"><div class="pageLinks"><{$ByPages}></div></th>
+		</tr>
+    <tfoot>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><{if $item.created>=$today_timestamp}><span class="icon-new"></span><{/if}><{if $item.if_commend==1}><span class="icon-commend"></span><{/if}><{if $item.TradePicture!=''}><span class="icon-pic"></span><{/if}><{if $item.if_urgent}><span class="icon-hurry"></span><{/if}></td>
+		  <td><label for="item_<{$item.id}>"><{$item.title}></label></td>
+		  <td><a href="offer.php?do=search&type_id=<{$item.type_id}>" style="text-decoration: none;"><{$TradeTypes[$item.type_id]}></a></td>
+		  <td><a href="member.php?do=edit&id=<{$item.member_id}>"><{$item.username}></a></td>
+		  <td><{$CheckStatus[$item.status]}></td>
+		  <td class="pb_datetime"><{$item.pubdate}></td>
+		  <td class="pb_datetime"><{if $item.if_expire}><span style="color:red;" title="<{$item.expdate}>"><{$item.if_expire}></span><{else}><{$item.expdate}><{/if}></td>
+		  <td class="handler">
+           <ul id="handler_icon">
+            <li><a class="btn_resend" href="offer.php?id=<{$item.id}>&do=refresh<{$addParams}>" title="<{$_trade_refresh}>"><{$_trade_refresh}></a></li>
+             <li><a class="btn_browse"  href="<{$SiteUrl}>offer/detail.php?id=<{$item.id}><{$addParams}>" target="_blank" title="<{$_preview}>"><{$_preview}></a></li>
+            <li><a class="btn_edit" href="offer.php?do=edit&id=<{$item.id}><{$addParams}>" title="<{$_edit}>"><{$_edit}></a></li>
+          </ul>  
+		  
+		  </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="8"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+      <input type="submit" name="commend" value="<{$_commend}>" class="formbtn batchButton"/>
+      <input type="submit" name="urgent_batch" value="<{$_set_urgent}>" class="formbtn batchButton"/>
+      <input type="submit" name="cancel_urgent_batch" value="取消紧急" class="formbtn batchButton"/>
+      <input type="submit" name="refresh" value="<{$_trade_refresh}>" class="formbtn batchButton"/>
+	  <select name="status_batch" id="StatusBatch" onchange="$('#ListFrm').submit();">
+      	<option value="-1"><{$_set_status}></option>
+        <option value="0"><{$_check_invalid}></option>
+        <option value="1"><{$_check_passed}></option>
+      </select>
+		</div>
+		<div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

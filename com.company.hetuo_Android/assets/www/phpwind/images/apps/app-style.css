@@ -1,0 +1,117 @@
+/*user_info*/
+.p-update dt{float:left;margin-right:10px;width:126px;overflow:hidden; text-align:center;height:160px;}
+.p-update dt img{border:3px solid #cacaca;}
+.p-update dt p{padding-top:5px;}
+.p-update dt p a{font:12px/12px Arial;margin:0 5px;}
+.p-update dd{float:right;width:390px;}
+.p-update dd h2{display:inline;color:#424242;font-weight:700;font-size:16px;padding-right:10px;}
+.p-update dd a{margin:0 10px;}
+.o_bubble_a{padding-top:5px;}
+.o_bubble_a_top{display:block;width:0px;height:0px;overflow:hidden;float:left;clear:both;}
+.o_bubble_a_top{border-top:10px transparent dotted;border-left:0px transparent dotted;border-bottom:10px transparent dotted;border-right:10px #eceff5 solid;margin-left:30px;position:absolute;margin-left:-10px;margin-top:10px;}
+.o_bubble_a_bg{background:#eceff5;padding:10px 10px 15px;}
+.o_bubble_a_bg textarea{border:1px solid #85add6;width:358px;overflow:auto;margin:0 5px 10px 0;height:45px;background:#fff;padding:5px; font-size:14px;}
+.record_btn{float:right;background:#338bca;color:#ffffff;border:1px solid #338bca;padding:3px 5px; cursor:pointer;margin-left:10px;}
+/*fir_new*/
+.forum-new h2{height:28px;padding:0 10px;line-height:28px;background:url(forum-new-h.png) no-repeat;}
+.forum-new div{border:1px solid #c8c8c8;border-top:0;background:#ffffff;padding:5px 0;}
+.forum-new td{padding:5px 0 5px 10px;border-bottom:1px dashed #e6e6e6;line-height:22px;}
+/*content_title*/
+.app-title{padding:0 10px 10px;}
+.app-title span{ font-size:20px;font-weight:700;color:#336699;line-height:32px;}
+/*but_img*/
+.app-post,.app-post2{background:url(../../images/app-post.png);display:block;float:left;color:#ffffff;width:78px;height:26px;line-height:25px;padding-left:17px; }
+.app-post:hover{ text-decoration:none; background-position:0 -50px;}
+.app-post2{ background-position:0 -100px;}
+.app-post2:hover{text-decoration:none;}
+.tabB .app-post,.tabB .app-post2{margin:2px 0 0 10px;}
+/*po_up*/
+.photo-one{margin-top:10px;}
+.photo-one dl{margin:10px 0 20px;}
+.photo-one dt{float:left;width:90px;height:90px;margin-right:10px;overflow:hidden;border:1px solid #e0e0e0;padding:3px;text-align:center;}
+.photo-one dt img{width:90px;}
+.photo-one dd{float:left;width:250px;}
+.photo-one dd .input{width:200px;}
+.photo-one dd textarea{margin:10px 0 0;padding:5px;width:260px;height:50px;}
+/*po_up_duo*/
+.photo-two{background:#f9f9f9;padding:20px;}
+.photo-two dt{float:left;width:90px;overflow:hidden;}
+.photo-two dd div{border:1px solid #d3d3d3;background:#ffffff;overflow:hidden;}
+.photo-two dd div div{border:0;padding:10px;}
+.photo-two dd div table td{padding:3px 0 3px 10px;border-bottom:1px solid #ececec;}
+.photo-two dd div table tr:hover{background:#f8f8f8;}
+/*list*/
+.list-img{background:url(list-ul.png) left 5px no-repeat;padding-left:20px;}
+.list-img li{height:24px;overflow:hidden;line-height:24px;}
+.list-img .fr{color:#888888;margin-left:10px;}
+/*img80*/
+.img-80{width:80px;}
+.img-80 img{width:100%;padding:4px;border:1px solid #e4e4e4;height:71px;width:70px;}
+/*hotlayout*/
+.w640{ width:640px;}
+.w280{ width:280px;}
+.w350{ width:350px;}
+/*bubbles*/
+.bubbles{background:url(bubbles.png) left top no-repeat;height:51px;overflow:hidden;}
+.bubbles div{background:url(bubbles.png) right -51px no-repeat;margin-left:20px;padding:6px 8px 6px 4px;line-height:20px;height:40px;overflow:hidden;}
+.bubbles div input,.bubbles div textarea{background:none;border:0;width:97%;height:38px;overflow:hidden;}
+
+ol{list-style-type:decimal;padding-left:2.5em;}
+ol li{}
+
+.w300{width:300px;padding:20px 10px;}
+.w300 h2{ font-size:14px;color:#ff5500; font-weight:700;}
+.w300 li{padding:10px 0;}
+.w300 li p{ padding:0 0 5px 0;}
+.w300-box{border:1px solid #e0e0e0;padding:10px;}
+
+.today-user{padding:10px;}
+.today-user a{float:left;width:77px;text-align:center;color:#333333;}
+.today-user p{width:72px;height:24px;line-height:24px;overflow:hidden; cursor:pointer;}
+
+/*hotstyle*/
+.f_one{background:#f7f7f7;}
+.tr3 td{border-bottom:1px dashed #e0e0e0;}
+.tr1 td{padding:0;}
+.w-390{width:390px;overflow:hidden;}
+.hot-title{padding-bottom:5px;}
+.hot-title span{float:left;}
+.hot-title ul {float:left;margin-left:10px;}
+.hot-title li{float:left;line-height:24px;margin:0 5px;}
+.img-list-a{border-top:1px solid #e0e0e0;color:#888;}
+.img-list-a .none{display:none;}
+.img-list-a .current img{width:57px;height:57px;float:left;}
+.img-list-a .current .none{padding-top:5px;display:block;width:135px;}
+.img-list-a .current dd{ font-size:14px;color:#d73681; font-weight:700;margin-top:18px;}
+.img-list-a dl{padding:8px;border-bottom:1px solid #e0e0e0;cursor:text;}
+.img-list-a dt{width:219px;}
+.img-list-a dd{width:130px; text-align:right;}
+.img-list-a dt .link-w{width:150px;float:left;}
+.img-list-a a{display:block;float:left;}
+.img-list-b{padding:10px 0 5px;}
+.img-list-b li{float:left;width:120px;}
+.img-list-b li p{padding-top:5px;width:110px;text-align:center;}
+.img-list-c li{float:left;width:190px;height:190px;margin-top:10px;}
+.img-list-c li img{width:100px;height:100px;}
+.img-list-c li p{padding-top:5px;}
+.replay-bg{background:#f6f9b5;display:block;height:46px;width:50px;padding-top:4px;text-align:center;overflow:hidden; font-family:tahoma;}
+/*portrait-list*/
+
+.list-box-c li{width:114px;height:111px;overflow:hidden;float:left;margin:10px 25px 20px 45px;display:inline;}
+.list-box-c li img{width:100px;}
+.list-box-c .current{ position:relative; cursor:pointer;}
+.list-box-c .current div{ position:absolute;width:114px;height:111px;background:url(group-current.gif) no-repeat;}
+
+.list-bor-a li{line-height:24px;height:24px;padding:0 2px;border-bottom:1px solid #e7e7e7;}
+.list-bor-a li a{display:block;}
+.list-bor-a li a img.fr{margin-top:3px;}
+.tr2 td{border-bottom:1px solid #e0e0e0;padding:4px 0 4px 10px;border-top:1px solid #e0e0e0;}
+.g-post{background:url(g-post.gif) no-repeat;display:block;width:56px;height:22px;line-height:24px;color:#444;padding-left:24px;}
+.g-post:hover{ text-decoration:none;color:#000;}
+
+.o-dl_A{padding-top:10px; margin:10px 0 20px}
+.o-dl_A dl{padding:10px 10px 10px 0;height:55px;}
+.o-dl_A dt{float:left;width:60px;}
+.o-dl_A dd{float:left;width:100px;}
+.o-dl_B {padding:0;}
+.o-dl_B dd{width:150px;}

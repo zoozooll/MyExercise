@@ -1,0 +1,94 @@
+<{include file="header.html"}>
+<{fetch file="../scripts/date.js"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_member_center}> &raquo; <{$_administrator}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_administrator}></h3> 
+    <ul class="subnav">
+		<li><a href="adminer.php"><{$_management}></a></li>
+		<li><a class="btn1"><span><{$_add_or_edit}></span></a></li>
+        <li><a href="adminer.php?do=password">密码修改</a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" action="adminer.php" id="EditFrm" name="edit_frm">
+    <table class="infoTable">
+	<{if $item.member_id}>
+	  <input type="hidden" name="member_id" value="<{$item.member_id}>" />
+	  <input type="hidden" name="data[member][id]" value="<{$item.member_id}>" />
+      <tr>
+        <th class="paddingT15"> 登陆<{$_cp_username_n}></th>
+        <td class="paddingT15 wordSpacing5"><{$item.username}></td>
+      </tr>
+	<{else}>
+      <tr>
+        <th class="paddingT15"> <{$_cp_username_n}></th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[username]" value="" /><label class="field_notice">该用户必须已经存在</label></td>
+      </tr>
+	<{/if}>
+      <tr>
+        <th class="paddingT15"> 姓名：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[adminfield][last_name]" value="<{$item.last_name}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> Email：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[member][email]" value="<{$item.email}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 过期时间：</th>
+        <td class="paddingT15 wordSpacing5"><input id="date1" type="text" name="data[expired]" value="<{$item.expire_date}>" type="text"/><span class="btn_calendar" id="calendar-date1"></span><label class="field_notice">过期后，即不能登录后台</label></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 菜单显示：</th>
+        <td class="paddingT15 wordSpacing5">
+		<label for="all_privilege"><input type="radio" name="auth" id="all_privilege" onclick="$('#privileges').hide();" value="0">全部</label>
+		<label for="limit_privilege"><input type="radio" name="auth" id="limit_privilege" value="1" onclick="$('#privileges').show();">指定权限</label><label class="field_notice">无论如何指定，超级管理员均有所有权限</label>
+		</td>
+      </tr>
+		  <tbody id="privileges" style="display:none;">
+		<{foreach from=$Privileges item=item2 key=key2}>
+      <tr>
+        <th class="paddingT15"><label for="prt-<{$key2}>"><input type="checkbox" onclick="jqCheckAll3(this.id,'chd-<{$key2}>');" name="priv[]" id="prt-<{$key2}>" value="<{$key2}>" <{if $item2.check==1 || $item.permissions==''}>checked="checked"<{/if}>><{$item2.text}></label></th>
+        <td class="paddingT15 wordSpacing5">
+		<div id="chd-<{$key2}>">
+				<{foreach from=$item2.children item=item1 key=key1 name="chd"}>
+					<label for="chd-<{$key2}>-<{$key1}>"><input type="checkbox" name="priv[]" id="chd-<{$key2}>-<{$key1}>" value="<{$key1}>" <{if $item2.default==$key1 || $item1.check==1}>checked="checked"<{/if}>><{$item1.text}></label>
+					<{if $smarty.foreach.chd.iteration is div by 9}>
+					<br />
+					<{/if}>
+				<{/foreach}>
+		</div>
+		</td>
+      </tr>
+		<{/foreach}>
+		</tbody>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+function jqCheckAll3( id, pID )
+{
+   $( "#" + pID + " :checkbox").attr('checked', $('#' + id).is(':checked'));
+}
+jQuery(document).ready(function($) {
+	<{if $item.permissions}>
+	$('#limit_privilege').attr("checked", "checked");
+	$('#privileges').show();
+	<{else}>
+	$('#all_privilege').attr("checked", "checked");
+	<{/if}>
+})
+Calendar.setup({
+	trigger    : "calendar-date1",
+	animation  : false,
+	inputField : "date1",
+	onSelect   : function() { this.hide() }
+});
+</script>
+<{include file="footer.html"}>

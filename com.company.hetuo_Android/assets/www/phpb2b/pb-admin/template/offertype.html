@@ -1,0 +1,76 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_offer}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_offer}></h3> 
+    <ul class="subnav">
+		<li><a href="offer.php"><{$_management}></a></li>
+		<li><a href="offer.php?do=setting"><{$_setting}></a></li>
+		<li><a class="btn1" href="offertype.php"><span><{$_sorts}></span></a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontl">如果你修改了某个类型的编号，可能会引起已有供求数据的错误。</div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="offertype.php" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th>编号</th>
+		  <th>显示顺序</th>
+		  <th><label for="idAll"><{$_naming}></label></th>
+		  <th>模板文件</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell">
+          <input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>">
+		  </td>
+		  <td>
+          <input type="text" name="tid[]" value="<{$item.id}>" />
+          </td>
+		  <td><input type="text" name="display_order[]" value="<{$item.display_order}>" /></td>
+		  <td><input type="text" name="name[]" value="<{$item.name}>" /></td>
+		  <td><{html_options name="tpl[]" options=$OfferListTemplates values=$OfferListTemplates}></td>
+		  <td class="handler">
+           <ul id="handler_icon">
+            <li><a class="btn_delete" href="offertype.php?id=<{$item.id}>&do=del" title="<{$_delete}>"><{$_delete}></a></li>
+          </ul>   
+		  </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="5"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	<tbody>
+	  <tr class="tatr2" id="tRow0" style="display : none ;">
+        <td></td>
+        <td></td>
+        <td colspan="2"><input type="text" name="name[]" value="" /></td>
+	  </tr>
+	</tbody>    
+	<tr class="tatr2">
+		<td></td>
+		<td colspan="3"><img src="images/add.gif" /><a href="javascript:;" onclick="$('#tRow0').clone().show().appendTo( $('#tRow0').parent() );" style="color: blue;">&nbsp;添加新类型</a></td>
+	</tr>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+      <input type="submit" name="update" value="<{$_submit}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

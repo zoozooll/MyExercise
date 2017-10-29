@@ -1,0 +1,132 @@
+<{assign var="page_title" value="`$_customer_service_center`"}>
+<{include file="`$ThemeName`/header.html"}>
+<style type="text/css">
+@import url(<{$theme_img_path}>effect.css);
+</style>
+<script src="scripts/jquery.tools.js"></script>
+<div class="wrapper">
+	<div class="tips"><span><{$position}></span><{$_customer_service_center}></div>
+	<div class="blank6"></div>  
+	<div class="content clearfix">
+	  <div class="main_left_w720">
+		 <div class="service_center_txt">
+             <div class="intro">
+             <span><{$_focus_user_service}></span><em><{$_service_for_your_internet}></em>
+             </div>
+             <div class="title"><{$_customer_service}></div>
+         </div>
+		 <ul class="tabs2 title_mouse">
+		  <li><a href="javascript:;"><span><{$_latest_new}><{$_answers}></span></a></li>
+		  <li><a href="javascript:;"><span><{$_latest_new}><{$_problems}></span></a></li>
+	</ul>
+		<div class="panes box_bord">
+			<div class="customer_service">
+			   <table>
+				  <tr>
+					<th><{$_problems}></th>
+					<th><{$_status}></th>
+					<th><{$_submit_time}></th>
+					<th><{$_reply_time}></th>
+				  </tr>
+                  <{foreach from=$AnsweredService name=AnsweredService item=item2}>
+				  <tr>
+					<td><div class="title"><span>[<a href="service/list.php?typeid=<{$item2.type_id}>"><{$item2.typename}></a>]</span><a href="service/detail.php?id=<{$item2.id}>"><{$item2.title}></a></div></td>
+					<td><{if $item2.revert_content}><span class="answer"><{$_answered}></span><{else}><{$_no_answer}><{/if}></td>
+					<td><span<{if $item2.revert_content}> class="answer"<{/if}>><{$item2.submitdate}></span></td>
+					<td><span<{if $item2.revert_content}> class="answer"<{/if}>><{$item2.revertdate}></span></td>
+				  </tr>
+                  <{/foreach}>
+			  </table>
+			</div>
+			<div class="customer_service" style="display: none;">
+			   <table>
+				  <tr>
+					<th><{$_problems}></th>
+					<th><{$_status}></th>
+					<th><{$_submit_time}></th>
+					<th><{$_reply_time}></th>
+				  </tr>
+                  <{foreach from=$LatestService name=LatestService item=item1}>
+				  <tr>
+					<td><div class="title"><span>[<a href="service/list.php?typeid=<{$item1.type_id}>"><{$item1.typename}></a>]</span><a href="service/detail.php?id=<{$item1.id}>"><{$item1.title}></a></div></td>
+					<td><{if $item1.revert_content}><span class="answer"><{$_answered}></span><{else}><{$_no_answer}><{/if}></td>
+					<td><span<{if $item1.revert_content}> class="answer"<{/if}>><{$item1.submitdate}></span></td>
+					<td><span<{if $item1.revert_content}> class="answer"<{/if}>><{$item1.revertdate}></span></td>
+				  </tr>
+                  <{/foreach}>
+			  </table>
+			</div>
+	   </div>
+		<script>
+        $(function() {
+            $("ul.tabs2").tabs("div.panes > div");
+        });
+        </script>    
+		<div class="blank6"></div>
+		<div class="guest_book">
+		  <div class="blank6"></div> 
+		  <div class="corner_box">        
+			  <{if $Errors}><{$Errors}><{/if}>
+          		<form action="service/post.php" name="service_frm" id="ServiceFrm" method="post">
+					<input type="hidden" name="formhash" value="<{$formhash}>">
+					<input type="hidden" name="save_service" value="save_service">
+			  <div class="title_bar_s4">
+			  <span class="title_top_s4"><span></span></span>  
+			  <div class="feedback"><{$_service_type}><{html_radios options=$ServiceTypes checked=1 name="service[type_id]"}></div>  
+			  </div>
+			  <div class="guest_book_content">
+			   <ul>
+				 <li><span><{$_the_title}></span><input name="service[title]" type="text" value="<{$item.title}>" /></li>
+				 <li><span><{$_your_name}></span><input name="service[nick_name]" type="text" /></li>
+				 <li><span><{$_your_email}></span><input name="service[email]" type="text" value="<{$item.email}>" /></li>
+				 <li><span><{$_added_content}></span><textarea name="service[content]" cols="60" rows="5"><{$item.content}></textarea></li>
+				 <li><span>&nbsp;</span><input name="" type="submit" value="<{$_submit}>" class="btn_submit_w45"/></li>
+			   </ul>
+			  
+			  </div>
+			  <div class="corner_bottomtxt_bar">
+				 <span class="corner_bottomtxt_s1"><span></span></span>
+			  </div>   
+		   </div>  
+	  </div>
+	  </div>
+	  <div class="main_right_w230">
+		  <div class="corner_box">
+			<div class="title_bar_s4">
+		   <span class="title_top_s4"><span></span></span>
+		   <h3><{$_latest_tips}></h3>
+		   </div>
+			<div class="new_tips">
+			<ul>
+				<{feed row="10"}>
+				  <li>[link:title]</li>
+				<{/feed}>
+			</ul>
+		   </div>
+	    </div>
+		<div class="blank6"></div>
+		<div class="corner_box">
+		  <div class="title_bar_s4">
+		  <span class="title_top_s4"><span></span></span>
+		  <h3><{$_warm_reminder}></h3>
+		</div>
+		  <div class="new_tips">
+		   <p><{$_reply_submit_issue}></p>    
+			<p><h2><{$_contact_us}></h2><br />
+			<{$_service_hotline}><{$service_tel}><br /></p>
+			<p class="break"><{$_email}><a href="mailto:<{$service_email}>"><{$service_email}></a></p>
+		</div>
+		<div class="blank6"></div>
+		<div class="corner_box">
+		  <div class="title_bar_s4">
+		  <span class="title_top_s4"><span></span></span>
+		  <h3><{$_service_client}></h3>
+		</div>
+		  <div class="new_tips">
+		   <p><a href="service/client.php"><{$_click_and_preview}><{$_service_client}></a></p>
+		</div>
+	   </div>
+	  </div>
+	</div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

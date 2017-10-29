@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content" 
+
+
+android:orientation="vertical"
+android:id="@+id/dialog">
+<ScrollView
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    
+    
+<TextView android:layout_height="wrap_content"
+   android:layout_width="wrap_content"
+   android:id ="@+id/a_name"
+ />
+<TextView android:layout_height="wrap_content"
+   android:layout_width="wrap_content"
+   android:id ="@+id/a_size"
+    />
+<TextView android:layout_height="wrap_content"
+   android:layout_width="wrap_content"
+   android:id ="@+id/a_time"
+    />
+<TextView android:layout_height="wrap_content"
+   android:layout_width="wrap_content"
+   android:id ="@+id/a_gesi"
+   />
+
+<TextView android:layout_height="wrap_content"
+   android:layout_width="wrap_content"
+   android:id ="@+id/a_path"
+   />
+
+
+
+    </LinearLayout>
+</ScrollView>
+ 
+</LinearLayout>
+
+

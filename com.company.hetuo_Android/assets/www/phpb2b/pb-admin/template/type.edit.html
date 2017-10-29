@@ -1,0 +1,44 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_extension}> &raquo; <{$_options}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_options}></h3> 
+    <ul class="subnav">
+		<li><a href="type.php"><{$_management}></a></li>
+        <li><a class="btn1" href="type.php?do=edit"><span><{$_edit}></span></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" action="type.php" id="EditFrm" name="edit_frm">
+  	<input type="hidden" name="page" value="<{$smarty.get.page}>" />
+	<input type="hidden" name="id" value="<{$item.id}>" />
+	<input type="hidden" name="do" value="typeoption" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> <{$_title_n}></th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[typeoption][option_label]" value="<{$item.option_label}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 参数值：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[typeoption][option_value]" value="<{$item.option_value}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">所属类型：</th>
+        <td class="paddingT15 wordSpacing5">
+		<select name="data[typeoption][typemodel_id]">
+		<{html_options options=$TypeModels selected=$item.typemodel_id}>
+		</select>
+		</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save_and_pub}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<{include file="footer.html"}>

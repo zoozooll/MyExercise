@@ -1,0 +1,43 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_extension}> &raquo; <{$_trusts}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_extension}></h3> 
+    <ul class="subnav">
+		<li><a href="trust.php">认证类型</a></li>
+		<li><a class="btn1" href="trust.php?do=rule"><span>诚信指数</span></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form action="trust.php" method="post" id="EditFrm" name="edit_frm">
+  <input type="hidden" name="do" value="setting">
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 信用指数标准：</th>
+        <td class="paddingT15 wordSpacing5">
+		<label for="CreditType0"><input type="radio" name="data[setting1][credit_type]" id="CreditType0" value="0" onclick="$('#tbCreditCode').hide();" <{if $item.CREDIT_TYPE==0}>checked="checked"<{/if}>>系统内置</label>
+		<br />
+		<label for="CreditType1"><input type="radio" name="data[setting1][credit_type]" id="CreditType1" value="1" onclick="$('#tbCreditCode').show();" <{if $item.CREDIT_TYPE==1}>checked="checked"<{/if}>>第三方机构及代码</label>
+		</td>
+      </tr>
+	  <tbody id="tbCreditCode" style="display:none;">
+      <tr>
+        <th class="paddingT15"></th>
+        <td class="paddingT15 wordSpacing5"><textarea name="data[setting1][credit_code]" style="width:650px;height:100px;"><{$item.CREDIT_CODE}></textarea><span class="gray"><br>可用参数：%companyname%表示公司名称；%username%表示<{$_cp_username}>；%userid%表示用户编号</span></td>
+      </tr>
+	  </tbody>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save_trust_rule" value="<{$_save}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<{if $item.CREDIT_TYPE==1}>
+<script>
+$("#tbCreditCode").show();
+</script>
+<{/if}>
+<{include file="footer.html"}>

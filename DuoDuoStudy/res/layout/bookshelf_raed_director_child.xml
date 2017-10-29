@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FFFFFF">
+    
+   	<LinearLayout android:orientation="horizontal"
+	android:layout_width="fill_parent" 
+	android:layout_height="50dip">
+	
+	
+       <TextView android:id="@+id/bookshelf_read_dir1" 
+			android:layout_width="50dip"
+			android:layout_height="30dip" 
+			android:textColor="#000"
+			android:textSize="10dip" 
+			android:layout_marginTop="5dip"
+			android:layout_marginLeft="30dip"
+			
+			/> 
+		<TextView android:id="@+id/bookshelf_read_dir2" 
+			android:layout_width="50dip"
+			android:layout_height="30dip" 
+			android:textColor="#0000FF"
+			android:textSize="10dip" 
+			android:layout_marginTop="5dip"
+			
+			/> 
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="fill_parent" 
+			android:layout_height="30dip"
+			android:gravity="right"
+			>
+			<TextView android:id="@+id/bookshelf_read_dir3" 
+					android:layout_width="fill_parent"
+					android:layout_height="30dip" 
+					android:textColor="#6b8e23"
+					android:textSize="10dip" 
+					android:gravity="right"
+					android:layout_marginRight="40dip"
+					android:layout_marginTop="5dip"
+					/> 
+		</LinearLayout>
+   </LinearLayout>
+</LinearLayout>

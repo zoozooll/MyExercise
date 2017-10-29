@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:pageview="http://schemas.android.com/apk/res/com.iskyinfor.duoduo"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@color/white">
+ 
+ <LinearLayout
+  android:id="@+id/bookshelf_main_top"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_alignParentTop="true">
+  <include  layout="@layout/bookshelf_main_item_top"/>
+  </LinearLayout>
+  
+  		<!-- 中部控制区 -->	  
+ <LinearLayout
+  android:id="@+id/bookshelf_main_center"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:background="@color/darkcyan"
+  android:layout_above="@+id/bookshelf_main_pag"
+  android:layout_below="@+id/bookshelf_main_top"
+  >
+  <!-- 中部内部控制区 -->
+	  <LinearLayout 
+	  android:orientation="vertical"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content">
+		  
+	      <LinearLayout 
+		  android:id="@+id/linear2"
+		  android:orientation="horizontal"
+		  android:layout_width="fill_parent"
+		  android:visibility="gone"
+		  android:layout_height="40dip">
+	        <EditText 
+		        android:id="@+id/edits_serach"
+		        android:layout_height="30dip" 
+				android:layout_width="fill_parent"
+				android:layout_marginLeft="5dip"
+				android:layout_weight="1"
+				android:textSize="13dip"
+	            android:layout_marginTop="7dip"
+	            android:visibility="gone"
+				android:background="@drawable/searchinput"/>
+			<ImageView 
+			      android:id="@+id/bookshelf_searchbtn"
+				  android:layout_height="30dip" 
+				  android:layout_width="wrap_content"  
+	              android:layout_marginTop="7dip"
+	              android:layout_marginRight="10dip"
+	              android:visibility="gone"
+				  android:background="@drawable/bookshelf_searchbtn_selector"/>
+			<ImageView 
+		        android:id="@+id/seach_text" 
+			    android:layout_height="wrap_content" 
+			    android:layout_width="wrap_content" 
+			    android:layout_margin="5dip"
+	            android:layout_marginTop="10dip"
+	            android:visibility="gone"
+			    android:background="@drawable/bookshelf_advancedbtnhover_selector"/>
+
+	       </LinearLayout>  
+	
+	  <!-- 中部正文控制区 -->	
+	  <ImageView 
+	  android:id="@+id/bookshelf_maincontent_listtop"
+	  android:layout_height="wrap_content"
+	  android:layout_width="fill_parent"
+	   android:layout_marginLeft="5dip"
+	  android:layout_marginRight="5dip"
+	  android:background="@drawable/bookshelf_maincontent_top"/>
+	  
+	  <com.iskyinfor.duoduo.ui.custom.page.PageListView
+	  android:id="@+id/listview_bookshelf"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:cacheColorHint="#ffffff"
+	  pageview:itemPageCount="9"
+	  android:visibility="gone"
+	  android:layout_marginLeft="5dip"
+	  android:layout_marginRight="5dip"
+	  />
+	  <com.iskyinfor.duoduo.ui.custom.page.PageListView
+	  android:id="@+id/listview_shelf"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:cacheColorHint="#ffffff"
+	  pageview:itemPageCount="3"  
+	  />
+	 
+	</LinearLayout>
+</LinearLayout>    
+<!-- 中低部控制区 -->	
+
+	<RelativeLayout
+	  android:id="@+id/bookshelf_main_pag"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:background="#386949"
+	  android:layout_above="@+id/bookshelf_main_buttom"
+	  android:gravity="center_horizontal">
+	  <ImageView 
+      android:id="@+id/bookshelf_maincontent_listbuttom"
+	  android:layout_height="wrap_content"
+	  android:layout_width="fill_parent"
+	  android:layout_marginLeft="5dip"
+	  android:layout_marginRight="5dip"
+	  android:background="@drawable/bookshelf_maincontent_buttom" />
+	  <!--<LinearLayout
+	  android:id="@+id/bookshelf_main_pag1"
+	  android:layout_width="fill_parent"
+	  android:layout_height="40dip"
+	  android:layout_below="@+id/bookshelf_maincontent_listbuttom">
+	  <include  layout="@layout/bookshelfmain_buttom_pag"/>
+	  </LinearLayout>-->	
+	  <LinearLayout
+	  android:id="@+id/bookshelf_main_pag1"
+	  android:layout_width="fill_parent"
+	  android:layout_height="40dip"
+	  android:orientation="horizontal"
+	  android:background="@drawable/flip"
+	  android:gravity="center_horizontal"
+	  android:visibility="gone"
+	  android:layout_below="@+id/bookshelf_maincontent_listbuttom">
+	        <ImageView
+	        android:id="@+id/bookshelf_arrowleft"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="5dip"
+	        android:layout_marginTop="10dip"
+	        android:src="@drawable/arrowleft"/>
+	         <TextView 
+			  android:id="@+id/bookshelf_currpag"
+			  android:layout_width="wrap_content" 
+			  android:layout_height="wrap_content" 
+			  android:textColor="#FFFFFF"
+			  android:textSize="12dip"
+			  android:layout_marginTop="8dip"
+			  android:text="0"/>
+			  <TextView 
+			  android:id="@+id/bookshelfcommentlist_name1"
+			  android:layout_width="wrap_content" 
+			  android:layout_height="wrap_content" 
+			  android:textColor="#FFFFFF"
+			  android:textSize="12dip"
+			  android:layout_marginTop="8dip"
+			  android:text="/"/>
+			  <TextView 
+			  android:id="@+id/bookshelf_countpag"
+			  android:layout_width="wrap_content" 
+			  android:layout_height="wrap_content" 
+			  android:textColor="#FFFFFF"
+			  android:textSize="12dip"
+			  android:layout_marginTop="8dip"
+			  android:text="0"/>
+	        <ImageView
+	        android:id="@+id/bookshelf_arrowright"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="5dip"
+	        android:layout_marginTop="10dip"
+	        android:src="@drawable/arrowright"/>
+	         </LinearLayout>
+	       </RelativeLayout>
+	  
+
+ <LinearLayout
+    android:id="@+id/bookshelf_main_buttom"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+  <include layout="@layout/download_bottom_item"/>
+  </LinearLayout>
+
+</RelativeLayout>

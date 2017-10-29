@@ -1,0 +1,30 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_setting_global}> &raquo; <{$_time_set}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_time_set}></h3> 
+</div>
+<div class="info"> 
+  <form action="setting.php" method="post" id="EditFrm" name="edit_frm">
+  <input type="hidden" name="do" value="functions">
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> 默认日期格式：</th>
+        <td class="paddingT15 wordSpacing5"><input name="data[date_format]" type="text" id="DateFormat" value="<{$item.DATE_FORMAT|default:"%Y-%m-%d"}>"/>
+          <span class="gray">支持<a href="http://www.php.net/strftime" target="_blank">strftime</a>的任何一种格式，如“%Y-%m-%d” 表示 <{$smarty.now|date_format:"%Y-%m-%d"}></span></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 默认时差：</th>
+        <td class="paddingT15 wordSpacing5"><input name="data[time_offset]" type="text" id="TimeOffset" value="<{$item.TIME_OFFSET|default:0}>"/>
+          <span class="gray">当地时间与 GMT 的时差，GMT 时间是：<{$smarty.now|date_format:"%Y-%m-%d %H:%M:%S"}></span></span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save_datetime" value="<{$_save_setting}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div> 
+<{include file="footer.html"}>

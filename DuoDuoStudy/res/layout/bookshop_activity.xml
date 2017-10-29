@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:pageview="http://schemas.android.com/apk/res/com.iskyinfor.duoduo"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:background="@color/darkcyan" android:orientation="vertical">
+	<!-- head bar -->
+	<include layout="@layout/bookshop_header"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" />
+	<!-- head bar end -->
+	<!-- 书架 -->
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:layout_weight="1" 
+		android:id="@+id/layoutShowShelf"
+		android:orientation="vertical" android:background="@drawable/white">
+		<com.iskyinfor.duoduo.ui.custom.page.PageListView
+			android:id="@+id/bookShelfView" android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:cacheColorHint="@drawable/transparent" 
+			pageview:itemPageCount="12"/>
+		<TextView android:visibility="gone" android:text="没有找到相关数据"
+			android:id="@+id/tvwEmptyShell" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_gravity="center" />
+	</LinearLayout>
+	
+	<!-- 列表 -->
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:layout_weight="1" android:layout_margin="10dp"
+		android:id="@+id/layoutShowList" android:visibility="gone"
+		 android:orientation="vertical">
+		<!-- search bar begin -->
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_margin="10dp" android:visibility="gone">
+			<EditText android:id="@+id/searchEdit"
+				android:layout_height="30dip" 
+				android:layout_width="fill_parent"
+				android:layout_marginLeft="5dip"
+				android:layout_weight="1"
+				android:textSize="13dip"
+	        
+				android:background="@drawable/searchinput"/>
+			<ImageView android:id="@+id/search" android:layout_gravity="center_vertical"
+				android:layout_marginRight="8dip" android:src="@drawable/search_btn_selector"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+			<TextView android:id="@+id/advancedSearch"
+				android:layout_gravity="center_vertical" android:text="@string/storeSearchMore"
+				android:textColor="#000" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_marginRight="10dp"
+				android:visibility="invisible" />	
+		</LinearLayout>
+		<!-- search bar end -->
+		<ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" 
+			android:background="@drawable/bookshelf_maincontent_top"></ImageView>
+		<com.iskyinfor.duoduo.ui.custom.page.PageListView
+			android:id="@+id/bookListView" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_weight="1" 
+			android:cacheColorHint="@drawable/transparent" 
+			pageview:itemPageCount="12"
+			android:background="@drawable/white"
+			/>
+		<TextView android:visibility="gone" android:text="没有找到相关数据"
+			android:id="@+id/tvwEmptyList" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_weight="2" />
+		<ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" 
+			android:background="@drawable/bookshelf_maincontent_buttom"></ImageView>
+	</LinearLayout>
+		
+	<include layout="@layout/download_bottom_item"/>
+
+</LinearLayout>

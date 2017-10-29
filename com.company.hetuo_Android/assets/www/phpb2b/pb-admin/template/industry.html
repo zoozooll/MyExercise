@@ -1,0 +1,80 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_setting_global}> &raquo; <{$_industry}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_industry}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1" href="industry.php"><span><{$_management}></span></a></li>
+        <li><a href="industry.php?do=edit"><{$_add_or_edit}></a></li>
+        <li><a href="industrytype.php"><{$_sorts}></a></li>
+        <li><a href="industry.php?do=clear"><{$_clearing}></a></li>
+        <li><a href="industry.php?do=refresh"><{$_update_cache}></a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+	<div class="fontl">
+		<{foreach from=$LevelStats item=stat_item}>
+		<span><a href="<{$smarty.server.PHP_SELF}>?do=search&level=<{$stat_item.level}>"><{$stat_item.level}>级分类</a><em>(<{$stat_item.amount}>)</em></span>
+		<{/foreach}>
+	</div>
+    <div class="fontr"> 
+        <form name="search_frm" id="SearchFrm" method="get"> 
+        <input type="hidden" name="do" value="search" />
+             <div> 
+				分类名称关键字 : <input class="queryInput" type="text" name="name" value="" /> 
+                <input type="submit" name="search" id="Search" class="formbtn" value="<{$_searching}>" /> 
+            </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="industry.php" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll"><{$_naming}></label></th>
+		  <th>排序</th>
+		  <th>分级示例</th>
+		  <th><{$_sorts}></th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>">
+		  <input type="hidden" name="iid[]" value="<{$item.id}>" />
+		  </td>
+		  <td><input type="text" name="data[iname][]" value="<{$item.name}>"></td>
+		  <td><input type="text" name="data[display_order][]" value="<{$item.display_order}>"></td>
+		  <td><{$item.title}></td>
+		  <td><a title="<{$Types[$item.industrytype_id]}>" href="industry.php?do=search&typeid=<{$item.industrytype_id}>"><{$Types[$item.industrytype_id]}></a></td>
+		  <td class="handler">
+           <ul id="handler_icon">
+            <li><a class="btn_up" href="industry.php?do=level&action=up&id=<{$item.id}><{$addParams}>" title="<{$_throw_up}>"><{$_throw_up}></a></li>
+            <li><a class="btn_down" href="industry.php?do=level&action=down&id=<{$item.id}><{$addParams}>" title="<{$_throw_down}>"><{$_throw_down}></a></li>
+            <li><a class="btn_edit" href="industry.php?do=edit&id=<{$item.id}><{$addParams}>" title="<{$_edit}>"><{$_edit}></a></li>
+          </ul> 
+		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="5"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+      <input type="submit" name="update_batch" value="<{$_updating}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

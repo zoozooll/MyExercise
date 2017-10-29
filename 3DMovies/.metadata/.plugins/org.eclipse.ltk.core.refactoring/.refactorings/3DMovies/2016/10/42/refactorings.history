@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;glview&apos; in &apos;com.mouselee.movies.MainActivity&apos; to &apos;glView&apos;&#x0D;&#x0A;- Original project: &apos;3DMovies&apos;&#x0D;&#x0A;- Original element: &apos;com.mouselee.movies.MainActivity.glview&apos;&#x0D;&#x0A;- Renamed element: &apos;com.mouselee.movies.MainActivity.glView&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;glview&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;com.mouselee.movies{MainActivity.java[MainActivity^glview" name="glView" references="true" setter="false" stamp="1476027277553" textual="false" version="1.0"/>
+</session>

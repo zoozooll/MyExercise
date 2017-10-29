@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="150dip"
+  android:background="@drawable/database_dialog"
+  android:gravity="center"
+  android:orientation="vertical"
+  android:layout_height="250dip">
+	
+	<LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:focusable="true"
+	android:gravity="center_vertical"
+	android:background="@drawable/dialog_item_selector"
+	>
+	<ImageView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:src="@drawable/download_sign"
+	android:layout_alignParentLeft="true"
+	
+	android:padding="10dip"
+	
+	/>
+	<TextView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="练习题"
+		android:textSize="15dip"
+		android:paddingTop="5dip"
+	android:textColor="@color/black"
+	/>
+	</LinearLayout>
+	
+	<LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:focusable="true"
+		android:gravity="center_vertical"
+		android:background="@drawable/dialog_item_selector"
+	>
+	<ImageView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:src="@drawable/download_sign"
+	android:layout_alignParentLeft="true"
+	android:padding="10dip"
+	
+	/>
+	<TextView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="书籍"
+		android:textSize="15dip"
+		android:paddingTop="5dip"
+	android:textColor="@color/black"
+	/>
+	</LinearLayout>
+	<LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:focusable="true"
+		android:gravity="center_vertical"
+		android:background="@drawable/dialog_item_selector"
+	>
+	<ImageView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:src="@drawable/download_sign"
+	android:layout_alignParentLeft="true"
+	android:padding="10dip"
+	
+	/>
+	<TextView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="课件"
+		android:textSize="15dip"
+		android:paddingTop="5dip"
+	android:textColor="@color/black"
+	
+	/>
+	</LinearLayout>
+	<LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:focusable="true"
+		android:gravity="center_vertical"
+		android:background="@drawable/dialog_item_selector"
+	>
+	<ImageView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:src="@drawable/download_sign"
+	android:layout_alignParentLeft="true"
+	android:padding="10dip"
+	
+	/>
+	<TextView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="考卷"
+	android:textSize="15dip"
+	android:paddingTop="5dip"
+	android:textColor="@color/black"
+	/>
+	</LinearLayout>
+	
+	
+	
+</LinearLayout>

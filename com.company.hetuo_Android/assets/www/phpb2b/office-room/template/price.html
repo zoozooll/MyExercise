@@ -1,0 +1,61 @@
+<{assign var="page_title" value="`$_product_prices`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+      <table class="offer_count">
+         <tr>
+          <td><strong><{$_success_release}><span class="font14b_org"> <{$Amount}></span> <{$_number}><{$ActionName}><{$_product_prices}></strong></td>
+          <td class="height35"><a title="<{$_release}><{$ActionName}>" href="price.php?do=edit" class="btn_publish"><{$_add}><{$_product_prices}></a></td>
+        </tr>
+      </table>      
+      <form name="listfrm" action="<{$smarty.server.PHP_SELF}>" method="post" onSubmit="return test();">
+	  <input type="hidden" name="formhash" value="<{$formhash}>">
+      <table class="offer_publish_list">
+        <tr>
+          <td>
+          <table class="bglist">
+            <tr>
+              <th><{$_type}></th>
+              <th><{$_title}></th>
+              <th><{$_product_name_n}></th>
+              <th><{$_prices}></th>
+              <th><{$_operation}></th>
+            </tr>
+			<{foreach from=$Items item=item}>
+            <tr align="center" class="bgwhite">
+              <td class="orange">[<a href="price.php?typeid=<{$item.type_id}>"><{$PriceTypes[$item.type_id]}></a>]</td>
+              <td><{$item.title}></td>
+              <td ><{$item.productname}></td>
+              <td><{$item.price}><{$Monetaries[$item.currency]}>/<{$Measuries[$item.units]}></td>
+              <td><a href="price.php?do=edit&id=<{$item.id}>"><{$_modify}></a>&nbsp;&nbsp;<a href="price.php?do=del&id=<{$item.id}>"><{$_delete}></a>&nbsp;&nbsp;</td>
+            </tr>
+			<{foreachelse}>
+			<tr><td colspan="5"><a href="price.php?do=edit"><{$_no_prices_and_add_it}></a></td></tr>
+			<{/foreach}>
+          </table></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+          <table class="room_pages">
+              <tr>
+                <td><{$ByPages}></td>
+              </tr>
+          </table>
+          </td>
+        </tr>
+      </table>
+      </form>
+    </div>
+</div>
+<{include file="footer.html"}>

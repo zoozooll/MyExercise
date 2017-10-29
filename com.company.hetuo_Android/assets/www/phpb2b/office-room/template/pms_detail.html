@@ -1,0 +1,41 @@
+<{assign var="page_title" value="`$_view_message`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+     <div class="blank"></div>
+	  <form name="message_frm" id="MessageFrm" action="pms.php?do=send&to=<{$item.cache_from_username}>" method="post">
+         <table class="offer_info_content">
+          <tr>
+            <th class="circle_left"><{$_sender}></th>
+          <td class="circle_right"><{$item.cache_from_username}></td>
+          </tr>
+           <tr>
+              <th><{$_time_n}></th>
+              <td><{$item.pubdate}></td>
+            </tr>
+           <tr>
+              <th><{$_theme_n}></th>
+              <td><{$item.title}></td>
+             </tr>
+          <tr>
+			  <th><{$_content}></th>
+			  <td><{$item.content}></td>
+          </tr>
+          <tr>
+			  <th class="circle_bottomleft"></th>
+			  <td class="circle_bottomright"><input type="submit" value=" <{$_reply}> " name="submit">¡¡
+				<input type="button" value=" <{$_back}> " name="back" onclick="history.go(-1);"></td>
+          </tr>
+      </table>
+	  </form>
+   </div>
+   </div>
+<{include file="footer.html"}>

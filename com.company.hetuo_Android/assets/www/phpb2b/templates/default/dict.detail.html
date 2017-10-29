@@ -1,0 +1,52 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="11"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+	<div class="tips"><span><{$position}></span></div>
+	<div class="blank6"></div>  
+	<div class="content clearfix">
+	  <div class="main_left_w720">
+         <div class="base_title">
+		     <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$item.word}></span><span class="corner_t_r"></span></h2>
+		 </div>
+	   <div class="lemma_list">
+		 <ul>
+		 <li>
+		 <p><{$_alias_name}><{if $item.word_name}>(<{$item.word_name}>)<{/if}></p>
+		 <p><{$_categories}><a href="dict/list.php?typeid=<{$item.dicttype_id}>"><{$item.typename}></a></p>
+		 <p><{$_views}><span><{$item.hits}></span><{$_times}></p>
+		 </li>
+         <hr class="hr_dashed" />
+		  <li>
+		 <{$_digest}>
+			<p><{$item.digest|nl2br}></p>
+		 </li>
+         <hr class="hr_dashed" />
+		  <li>
+		 <{$_refer_content}>
+			<p><{$item.content|nl2br}></p>
+		 </li>
+         <hr class="hr_dashed" />
+		  <li>
+		 <{$_refer_info}>
+		<p><{$item.refer|nl2br}></p>
+		 </li>
+		 </ul>
+	   </div>
+	  </div>
+	  <div class="main_right_w230">
+		<div class="title_bar_s4">
+	   <span class="title_top_s4"><span></span></span>
+	   <h3><{$_similar_words}></h3>
+	   </div>
+	   <div class="dictionary">
+		<ul>
+			<{dict row=10}>
+				<li>[link:title]</li>
+			<{/dict}>
+		</ul>
+	   </div>
+	  </div>
+	</div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

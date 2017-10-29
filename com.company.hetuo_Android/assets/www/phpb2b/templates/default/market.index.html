@@ -1,0 +1,112 @@
+<{assign var="page_title" value="`$_market`"}>
+<{assign var="nav_id" value="7"}>
+<{include file="`$ThemeName`/header.html"}>
+<script src="scripts/swfobject1.5.js" type="text/javascript"></script>
+<div class="adv mauto">
+	<{ads typeid=1 row="8"}><a href="[link:url]" rel="promotion">[field:src]</a><{/ads}>
+</div>
+<div class="wrapper clearfix">
+   <div class="main_left ">
+	  <div class="price_info">
+          <div class="title_bar_s2">
+            <span class="title_top_s2"><span></span></span>
+            <h3><span class="title_more"><a href="news/list.php?typeid=1"><span class="raquo">&raquo;</span><{$_more}></a></span><{$_price_quotes}></h3>
+          </div>
+			<ul class="hot_list rate_list">
+			<{news magic="y" typeid=1 row=7 titlelen=34 infolen=22}>
+			<li[field:style]>[field:url]</li>
+			<{/news}>
+			</ul>
+			<div class="corner_bottom_bar">
+                 <span class="corner_bottom_s1"><span></span></span>
+			</div>
+	   </div>
+	  <div class="main_left_img" id="marketFocus"></div>
+   </div>
+   <div class="main_right">
+	<div class="freereg">
+            <div class="reg_bar_s1">
+               <span class="reg_top_s1"><span></span></span>
+              <h2><{$_after_free_reg}></h2>
+              <div class="freeregc clearfix">
+				<p class="fl freetit"><a><{$_build_your_site}></a></p>
+				<p class="fl freetit"><a><{$_post_offer_trade}></a></p>
+				<p class="fl freetit"><a><{$_spread_your_products}></a></p>
+				<p class="fl freetit"><a><{$_meet_more_friends}></a></p>
+				<p class="fl mt10 big-color-weight"><a class="btn_free" href="member.php" title="<{$_register}>"><{$_free_reg_member}></a></p>
+			   </div>
+            </div>
+			<div class="reg_bottom_bar">
+				<span class="reg_bottom_s1"><span></span></span>
+			</div>
+		</div>
+		
+   </div>
+   <div class="blank6"></div>
+   <div class="main_left">
+	<div class="nominate_market">
+       <div class="title_bar_s1">
+            <span class="title_top_s1"><span></span></span>
+            <h3><{$_nominate_market}></h3>
+       </div>
+	  <ul class="nominate_list clearfix">
+		<{market row=12 type="image"}>
+		 <li><a href="[link:title]"><img src="[img:src]" width="100" height="80" alt="[field:title]" /></a>
+		  <p><a href="[link:title]">[field:title]</a></p>
+		</li>
+		<{/market}>
+	  </ul>
+	  </div>
+	  <div class="blank6"></div>
+	  <div class="special_market">
+      <div class="special_market_title">
+	   <h2><span class="more"><a href="market/list.php" title="<{$_more}>"><span class="raquo">&raquo;</span><{$_search_more_market}></a></span><{$_regional_sub_station}></h2>
+       </div>
+	   	<table class="special_market_list">
+        <{foreach from=$AreaItems name=AreaItems item=area_item key=area_key}>
+          <tr>
+            <th><a href="market/list.php?areaid=<{$area_item.id}>"><{$area_item.name}></a></th>
+            <td>
+            <{foreach from=$area_item.sub name=AreaItems2 key=area_key2 item=area_item2}>
+            <a href="market/list.php?areaid=<{$area_item2.id}>"><span><{$area_item2.name}></span></a> <{/foreach}></td>
+          </tr>
+        <{/foreach}>
+        </table>
+	  </div>
+   </div>
+   <div class="main_right">
+	 <div class="add_market">
+         <div class="title_bar_s1">
+             <span class="title_top_s1"><span></span></span>
+             <h2><span class="intro"><a href="market/add.php"><{$_i_would_join}>&raquo;</a></span><{$_new_add_market}></h2>
+         </div>
+			<ul class="add_market_list">
+				<{market row=12}>
+				<li><a href="[link:title]" title="[field:title]">[field:title]</a></li>
+				<{/market}>
+			</ul>
+	 </div>
+   </div> 
+   <div class="blank6"></div>
+   <div class="new_supply">
+   <div class="new_supply_title">
+	 <h2><{$_new_offer}></h2>
+     </div>
+	 <ul class="new_supply_list clearfix">
+		<{offer row=10}>
+		<li><a href="offer/list.php?typeid=[field:typeid]">[[field:typename]]</a>&nbsp;<a href="[link:title]">[field:title]</a></li>
+		<{/offer}>
+	 </ul>
+   </div>
+</div>
+<script>
+var myflash = new SWFObject("images/slide.swf", "27", 477, 245, "7", "#F3F3F3");
+myflash.addParam("quality", "high");
+myflash.addParam("wmode", "opaque");
+myflash.addVariable("image","<{$flashvar.image}>");
+myflash.addVariable("url","<{$flashvar.url}>");
+myflash.addVariable("info", "<{$flashvar.info}>");
+myflash.addVariable("stopTime","5000");
+myflash.write("marketFocus");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

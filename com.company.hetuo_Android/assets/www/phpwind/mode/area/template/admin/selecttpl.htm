@@ -1,0 +1,173 @@
+<!--<?php
+include_once PrintEot('left');
+if (empty($action)) {print <<<EOT
+-->
+<div class="nav3 mb10">
+	<ul class="cc">
+<!--
+EOT;
+if(!$cid){print <<<EOT
+-->
+        <li><a href="$admin_file?adminjob=mode&admintype=area_edittpl">本站模板管理</a></li>
+        <li class="current"><a href="$basename">模板中心</a></li>
+        <li><a href="$basename&action=config">导入导出</a></li>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+        <li><a href="$admin_file?adminjob=mode&admintype=area_edittpl">本站模板管理</a></li>
+        <li class="current"><a style="cursor:pointer;" onclick="parent.PW.Dialog({'id': 'area_selecttpl','name': '模板中心','url': '$admin_file?adminjob=mode&admintype=area_selecttpl'}).loadIframe('$admin_file?adminjob=mode&admintype=area_selecttpl');">去模板中心</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+	</ul>
+</div>
+<form action="$basename" method="post">
+<input type="hidden" name="step" value="2" />
+<input type="hidden" name="cid" value="$cid" />
+<!--
+EOT;
+if(!$cid || $cid=='index'){print <<<EOT
+-->
+<h2 class="h1">首页模板选择</h2>
+<div class="cc">
+<dl class="mode_list">
+	<dt><img src="mode/area/themes/$area_indextpl/images/default/preview/index.jpg" width="150" height="120" /></dt>
+	<dd class="tac"><p>$area_indextpl
+<!--
+EOT;
+if(!$cid){print <<<EOT
+-->
+<span class="s3">(默认)</span>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</p>
+        <p>当前模板</p>
+	</dd>
+</dl>
+<!--
+EOT;
+foreach($tplLib['index'] as $value){print <<<EOT
+-->
+<dl class="mode_list">
+	<dt><img src="mode/area/themes/$value/images/default/preview/index.jpg" width="150" height="120" /></dt>
+	<dd class="tac">
+    	<p>$value</p>
+		<p><input name="index" type="radio" value="$value" style="vertical-align:middle" />设置为当前模板</p>
+	</dd>
+</dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+</div>
+<!--
+EOT;
+}if(!$cid || is_numeric($cid)){print <<<EOT
+-->
+<h2 class="h1">频道模板选择</h2>
+<div class="cc">
+<dl class="mode_list">
+	<dt><img src="mode/area/themes/$area_catetpl/images/default/preview/cate.jpg" width="150" height="120" /></dt>
+	<dd class="tac">
+    	<p>$area_catetpl <span class="s3">(默认)</span></p>
+		<p>当前模板</p>
+	</dd>
+</dl>
+<!--
+EOT;
+foreach($tplLib['cate'] as $value){print <<<EOT
+-->
+<dl class="mode_list">
+	<dt><img src="mode/area/themes/$value/images/default/preview/cate.jpg" width="150" height="120" /></dt>
+	<dd class="tac">
+    	<p>$value</p>
+		<p><input name="cate" type="radio" value="$value" />设置为当前模板</p>
+	</dd>
+</dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+<div class="c"></div>
+<div class="tac mb10">
+	<span class="btn"><span><button type="submit">保存为站点模板</button></span></span>
+</div>
+</form>
+<!--
+EOT;
+}elseif($action=='config'){print <<<EOT
+-->
+<div class="nav3 mb10">
+    <ul class="cc">
+        <li><a href="$admin_file?adminjob=mode&admintype=area_edittpl">本站模板管理</a></li>
+        <li><a href="$basename">模板中心</a></li>
+        <li class="current"><a href="$basename&action=config">导入导出</a></li>
+    </ul>
+</div>
+<div class="admin_info mb10">
+	<h3 class="h1">提示信息</h3>
+    <div class="legend">
+    导出配置只需将导出的config.php文件放到该模板所在的文件夹即可
+    </div>
+</div>
+<h3 class="h1"></h3>
+<div class="admin_table mb10">
+<table cellspacing="0" cellpadding="0" width="100%" id="ftable">
+	<tr class="tr2">
+		<td width="200">风格目录</td>
+		<td>操作</td>
+	</tr>
+<!--
+EOT;
+foreach($themes as $theme){print <<<EOT
+-->
+	<tr class="tr1">
+		<td class="td1">$theme[dir]</td>
+		<td class="td2">
+			<a href="$basename&action=export&theme={$theme[dir]}" class="mr20">[导出]</a>
+<!--
+EOT;
+if($theme['ifconfig']){print <<<EOT
+-->
+			<a href="javascript:;" class="s3" onclick="importConfig('$theme[dir]');return false;">[导入]</a>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+			<span class="s1" onclick="alert('默认配置文件不存在');return false;">&nbsp;</span>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</td>
+	</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+</table>
+</div>
+<script src="js/pw_ajax.js" language="JavaScript"></script>
+<script src="js/global.js" language="JavaScript"></script>
+<script language="javascript">
+function importConfig(theme){
+	if (!confirm("导入之后之，相对应本主题的配置将重置，是否继续？")){
+		return false;
+	}
+	var url = "$ajax_basename";
+	ajax.send(url,'action=import&theme='+theme,ajax.get);
+}
+</script>
+<!--
+EOT;
+}include_once PrintEot('adminbottom');
+?>-->

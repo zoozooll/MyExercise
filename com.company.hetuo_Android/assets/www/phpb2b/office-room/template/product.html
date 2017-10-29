@@ -1,0 +1,79 @@
+<{assign var="page_title" value="`$_product_management`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$_product_management}></h2></div>
+	 <div class="hint"><{$_tips_buy_no_repeat}>"<a href="offer.php" class="orange"><{$_modify}><{$_our_offer}></a>"<{$_repeat_function}></div>
+	 <div class="h30"><span class="btn_hint"><a href="price.php?do=edit" class="btn_publish"><{$_price_allow}></a></span><span class="btn_hint"><a href="product.php?do=edit" class="btn_publish"><{$_release_products}></a></span></div>
+		  <form name="typefrm" id="TypeFrm" method="get" action="">
+		   <table class="product_sort">
+            <tr>
+              <td><{$_according}>
+                  <select name="typeid" onchange="$('#TypeFrm').submit();">
+                    <option value="0"><{$_all_categories}></option>
+				  <{foreach from=$ProductTypes item=pt name=producttypes}>
+				  <{if $pt.id == $smarty.get.typeid}>selected<{/if}>><{$pt.name}><{if $pt.id == $smarty.get.typeid}>selected<{/if}>><{$pt.name}><{if $pt.id == $smarty.get.typeid}>selected<{/if}>><{$pt.name}><{if $pt.id == $smarty.get.typeid}>selected<{/if}>><{$pt.name}><{if $pt.id == $smarty.get.typeid}>selected<{/if}>><{$pt.name}><option value="<{$pt.id}>" <{if $pt.id == $smarty.get.typeid}>selected<{/if}>><{$pt.name}></option>
+					<{/foreach}>
+                  </select>
+&nbsp;&nbsp;</td>
+             <td class="prev_page"><a href="<{$plink}>" title="<{$_prev_page}>"><img src="images/page_prev.gif"></a>&nbsp;<a href="<{$nlink}>" title="<{$_next_page}>"><img src="images/page_next.gif"></a></td>
+            </tr>
+          </table>
+		  </form>
+	     <table class="pagedown">
+	  <tr>
+		<td>
+		  <div id="msg" align="center"><{$Msg}></div></td>
+	  </tr>
+	  </table>
+         <table class="bglist">
+              <!-- product -->
+                    <col width="75">
+                    <col width="260">
+                    <col width="80">
+                    <col width="120">
+                    <col width="120">
+                <tr>
+                   <th><{$_sample_image}></th>
+                   <th><{$_content_n}></th>
+                   <th><{$_product}></th>
+                   <th><{$_release}></th>
+                   <th><{$_operation}></th>
+                </tr> 
+              <{foreach item=item from=$Items}>
+                <tr>
+                <td><img src="<{$item.image}>" width=75 height=75></td>
+                <td style='word-break: break-all'>
+                    <div style="text-align:left;"><strong><a href="product.php?do=edit&id=<{$item.id}>"><{$item.name|truncate:25}></a></strong><br />[<{$CheckStatus[$item.status]}>][<{$ProductSorts[$item.sort_id]|default:"`$_ordinary_goods`"}>]<br /><{$_description}><{$item.content|strip_tags|truncate:100}></div>
+                </td>
+                <td><{if $item.state eq 1}><a href="<{$smarty.server.PHP_SELF}>?do=state&type=down&id=<{$item.id}>" title="<{$_web_down_shelves}>"><img src="images/state1.gif"></a><{else}><a href="<{$smarty.server.PHP_SELF}>?do=state&type=up&id=<{$item.id}>" title="<{$_goods_on_shelves}>"><img src="images/state0.gif"></a><{/if}></td>
+                <td><a href="offer.php?do=pro2offer&productid=<{$item.id}>"><{$_as_release_supply}></a>&nbsp;<a href="price.php?do=edit&productid=<{$item.id}>"><{$_prices}></a></td>
+                <td><a href="product.php?do=edit&id=<{$item.id}>"><{$_modify}></a>&nbsp;&nbsp;[<a href="<{$SiteUrl}>product/content.php?id=<{$item.id}>" target="_blank" title="<{$_click_preview}>"><{$_click_preview}></a>]&nbsp;&nbsp;<a href="<{$smarty.server.PHP_SELF}>?act=del&id=<{$item.id}>"><{$_delete}></a></td>
+                </tr> 
+              <{/foreach}>
+        </table> 
+         <!-- :~product  -->
+        <table class="room_pages">
+        <tr>
+          <td><{$pagenav}>&nbsp;</td>
+        </tr>
+       </table>
+       <table class="trade_line">
+            <tr>
+          <td height="1" background="images/index_trade_line.gif"></td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+        </tr>
+      </table>
+    
+</div>
+</div>
+<{include file="footer.html"}>

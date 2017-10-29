@@ -1,0 +1,135 @@
+<{assign var="page_title" value="`$_yellow_page`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+<div class="content">
+<div class="company_list_left fl">
+<div class="co_store">
+    <div class="title_bar_s1">
+    <span class="title_top_s1"><span></span></span>
+    <h3><{$_yellow_page}></h3>
+    </div>
+</div>
+<div class="co_store_c">
+	<{$_find_marketing_company}>
+	<p><a href="register.php?type=company" class="submit_w118"><{$_add_company}></a></p>
+	<p class="hotline"><{$_hotline}><{$service_tel}></p>
+</div>
+<div class="co_store co_good">
+    <div class="title_bar_s1">
+    <span class="title_top_s1"><span></span></span>
+    <h3><{$_new_recommended_company}></h3>
+    </div>
+</div>
+<div class="co_store_c">
+	<ul>
+    	<{company row=11}>
+		<li><a href="[link:title]" title="[field:title]">[field:title]</a></li>
+        <{/company}>
+	</ul>
+</div>
+<div class="blank6"></div>
+<div class="fincco_ad"><a href="http://www.phpb2b.com/" target="_blank"><img src="<{$theme_img_path}>images/phpb2b_dev.jpg" /></a></div>
+<div class="blank6"></div>
+<div class="co_store">
+    <div class="title_bar_s1">
+    <span class="title_top_s1"><span></span></span>
+    <h3><{$_sub_area}></h3>
+    </div>
+</div>
+<div class="co_store_c area_subsite clearfix">
+	<ul>
+    <{area level=1}>
+		<li><a href="special/area.php?id=[field:id]">[field:title]</a></li>
+    <{/area}>
+	</ul>
+</div>
+<div class="co_store co_good">
+    <div class="title_bar_s1">
+    <span class="title_top_s1"><span></span></span>
+    <h3><{$_join_company}></h3>
+    </div>
+</div>
+<div class="co_store_c">
+	<ul>
+    	<{company row=11}>
+		<li><a href="[link:title]" title="[field:title]">[field:title]</a></li>
+        <{/company}>
+	</ul>
+</div>
+</div>
+<div class="company_list_right fr">
+<div class="company_list_focus fl"><{plugin name="vcastr"}></div>
+<div class="co_add fl">
+	<div class="co_store">
+        <div class="title_bar_s1">
+    <span class="title_top_s1"><span></span></span>
+    <h3><{$_add_yellow_page}></h3>
+    </div>
+	</div>
+	<div class="co_store_c">
+		<table width="275" border="0" cellspacing="0" cellpadding="0">
+			<{if $pb_username!=""}>
+			  <tr>
+				<td>&nbsp;</td>
+				<td colspan="2"><p class="co_tg fl"><a href="redirect.php?url=office-room/company" class="submit_w67"><{$_promotion_company}></a></p><p class="co_fb fl"><a href="redirect.php?url=office-room/product" class="submit_w67"><{$_release_product}></a></p></td>
+			  </tr>
+			<{else}>
+				<form name="loggingfrm" id="LoggingFrm" method="post" action="logging.php">
+					<input type="hidden" name="action" value="logging">
+					<input type="hidden" name="formhash" value="<{$formhash}>">
+					<input type="hidden" name="forward" value="<{$smarty.get.forward}>" />
+				  <tr>
+					<td align="left" width="60"><{$_user_name}></td>
+					<td align="left" width="150"><input type="text" name="data[login_name]" id="LoginName" tabindex="1" class="co_add_in" /></td>
+					<td width="65" rowspan="2" align="center"><input type="submit" value="<{$_login}>" class="co_login_but company_login_color" /></td>
+				  </tr>
+				  <tr>
+					<td align="left"><{$_password}></td>
+					<td align="left"><input name="data[login_pass]" type="password" id="LoginPass" tabindex="2" class="co_add_in" /></td>
+				  </tr>
+				</form>
+			  <tr>
+				<td>&nbsp;</td>
+				<td colspan="2" align="left"><p class="co_reg"><a href="member.php" class="submit_w165"><{$_logon_deal}></a></p></td>
+			  </tr>
+			<{/if}>
+		</table>
+	</div>
+</div>
+<div class="co_type fl">
+    <div class="title_bar_s1" style="height:28px; overflow:hidden">
+         <span class="title_top_s1"><span></span></span>
+         <h4><span class="titlebg_l"></span><span class="titlebg_m title_mouse"><{$_industry_sort}></span><span class="titlebg_r"></span></h4>
+    </div>
+	<div class="co_type_c">
+	    <{foreach from=$IndustryList item=item0 key=key0 name=level_0}>
+		<div class="co_type_c_title clearfix">
+		<span class="more"><a href="company/list.php?industryid=<{$item0.id}>"><{$_more}></a></span>
+		<h3><em><a href="company/list.php?industryid=<{$item0.id}>"><{$item0.name}></a></em></h3>
+		</div>
+		<ul class="clearfix">
+        <{if $item0.sub}>
+        <{foreach from=$item0.sub name=level_1_industry item=level1 key=key_level1}>
+		
+		   <li>
+			<a href="company/list.php?industryid=<{$level1.id}>" title="<{$level1.name}>" class="co_type_f"><{$level1.name}></a>
+            <br />
+            <{foreach from=$level1.sub name=level_2_industry item=level2 key=key_level2}>
+			<a href="company/list.php?industryid=<{$level2.id}>" title="<{$level2.name}>"><{$level2.name}></a><em>|</em>
+            <{/foreach}>
+		</li>
+		
+        <{/foreach}>
+        <{/if}>
+		</ul>
+        <{/foreach}>
+		<div class="cb"></div>
+	</div>
+</div>
+</div>
+<div class="blank6"></div>
+<script>
+$("#SearchFrm").attr("action","company/list.php");
+$("#topMenuCompany").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

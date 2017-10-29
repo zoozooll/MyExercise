@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="app_name">Driving records</string>
+	<!-- Common 通用 -->
+	<string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
+	<string name="wariness">Warning</string>
+	<string name="unknown">Unknown</string>
+	<string name="tip">Tip</string>
+        <string name="back">back</string>
+	<!-- DVRActivity -->
+	<string name="sdcard_not_mounted">Please insert the SD card.</string>
+	<string name="open_camera_error">Fail to open the camera.</string>
+	<string name="dialog_button_ok">OK</string>
+	<string name="status_loop_recording">Loop recording...</string>
+	<string name="status_regular_recording">Regular recording...</string>
+	<string name="status_saving">Saving...</string>
+	<string name="status_taking_picture">Capturing...</string>
+	<string name="background_notification_title">background recording...</string>
+	<string name="background_notification">Driving records is recording...</string>
+	<string name="background_sdcard_nofree_title">No sufficiant storage space in SD card</string>
+	<string name="background_sdcard_nofree">No sufficiant storage space in SD card, stop recording.</string>
+	<string name="sdcard_no_space">Storage space is not enough!</string>
+	<string name="clean_sdcard">Clean now</string>
+	<string name="do_later">Clean later</string>
+	<string name="background_exception_title">An error happens while driving records run</string>
+	<string name="background_exception">An error happens while driving records run, please try again.</string>
+	<string name="Navigation_exception">Fail to get navigation, please try again later.</string>
+	<string name="Setting_exception">Wrong settings, please try again later.</string>
+	<string name="Playback_exception">Video playback error, please try again later.</string>
+	<string name="stop_record_first">Do you want to stop record first?</string>
+	<string name="exit_stop_record">Please stop record first!</string>
+	<string name="dlg_title_attention">Attention</string>
+	
+	<!-- control_bar.xml -->
+	<string name="btn_text_exit">Exit</string>
+	<string name="btn_text_takepicture">Capture</string>
+	<string name="btn_text_playback">playback</string>
+	<string name="btn_text_navigation">Navigation</string>
+	<string name="btn_text_settings">Setting</string>
+	<string name="btn_record_play">record</string>
+	<string name="btn_record_stop">stop</string>
+	<!-- DVRActivity control_bar.xml -->
+	<string name="btn_text_loop_record">Loop</string>
+	<string name="btn_text_regular_record">Regular</string>
+	<string name="file_not_exist">File does not exist</string>
+	<!-- DVRActivity bottom_bar.xml -->
+	<string name="ellipsis_text">----</string>
+	<!-- play back -->
+	<string name="playback_latitude_str">Longitude:</string>
+	<string name="playback_longitude_str">Latitude:</string>
+	<string name="playback_time_str">Time:</string>
+	<string name="playback_speed_str">Speed:</string>
+    <!-- GPS -->
+    <string name="gps_tips">GPS location not open, which will affect the location information of our driving record, we suggest you open both network location and GPS location to improve the accuracy</string>
+    <string name="gps_gosetting">Setting</string>
+    <string name="gps_nosetting">Ignore</string>
+	<!-- myshowplayback -->
+	<string name="myshowplayback_warning">Warning</string>
+	<string name="myshowplayback_deletev">Delete all videos</string>
+	<string name="myshowplayback_deletep">Delete all pictures</string>
+	<string name="myshowplayback_yes">OK</string>
+	<string name="myshowplayback_cancel">Cancel</string>
+	<string name="myshowplayback_dele">Delete</string>
+	<string name="myshowplayback_deleing">Deleting, please wait...</string>
+	<string name="myshowplayback_shuxing">Properties</string>
+	<string name="myshowplayback_delete_file">Whether to delete the file</string>
+	<string name="myshowplayback_delete_dir">Whether to delete the folder</string>
+	<string name="myshowplayback_name">Name:</string>
+	<string name="myshowplayback_msize">Capacity:</string>
+	<string name="myshowplayback_mtimelong">Length:</string>
+	<string name="myshowplayback_geshi">Format:</string>
+	<string name="myshowplayback_look">View</string>
+	<string name="myshowplayback_msend">Send</string>
+	<string name="myshowplayback_mdescr">Description:</string>
+	<string name="myshowplayback_path">Path:</string>
+	<!-- msetting -->
+	<string name="msetting_open">ON</string>
+	<string name="msetting_closed">OFF</string>
+	<string name="msetting_camera_front">Front Camera</string>
+	<string name="msetting_camera_back">Back Camera</string>
+	<string name="msetting_jingxi">Fine</string>
+	<string name="msetting_gao">1080P</string>
+	<string name="msetting_zhong">720P</string>
+	<string name="msetting_di">480P</string>
+	<string name="msetting_shi">10</string>
+	<string name="msetting_shiwu">15</string>
+	<string name="msetting_ershi">20</string>
+	<string name="msetting_erwu">25</string>
+	<string name="msetting_sanshi">30</string>
+	<string name="msetting_sanwu">35</string>
+	<string name="msetting_sishi">40</string>
+	<string name="msetting_siwu">45</string>
+	<string name="msetting_wushi">50</string>
+	<string name="msetting_wuwu">55</string>
+	<string name="msetting_liushi">60</string>
+	<string name="msetting_one">1</string>
+	<string name="msetting_three">3</string>
+	<string name="msetting_five">5</string>
+	<string name="msetting_ten">10</string>
+	
+	<string name="msetting_asave">video hitting</string>
+	<string name="msetting_timelong">Length of loop(min)</string>
+	<string name="msetting_videoq">quality</string>
+	<string name="msetting_hitdelicacy ">sensitivity</string>
+	<string name="msetting_mScreenBright">LCD brightness</string>
+	<string name="msetting_isClickSave">screen video</string>
+	<string name="msetting_isHasvoice">sound  background</string>
+	<string name="msetting_isRecordSound">record  sound</string>
+	<string name="msetting_map">Offline map</string>
+	<string name="msetting_mulu">store  records</string>
+	<string name="msetting_save_path">Reset diretory to store the records</string>
+	<string name="msetting_defealt">default settings</string>
+	<string name="msetting_help">Help</string>
+	<string name="msetting_save_path_tip">Directory to store the records and pictures is:</string>
+	<string name="msetting_recordmode">record mode</string>
+	<string name="msetting_loop">loop</string>
+	<string name="msetting_regular">regular</string>
+	<string name="msetting_savepath_total">total size %d MB</string>
+	<string name="msetting_savepath_remind">remain size %d MB</string>
+	<string name="msetting_powermode">power saving mode</string>
+	<string name="msetting_isopenback">Open background</string>
+	<string name="msetting_backanim">Background animation</string>
+    <string name="msetting_recordset">Record Set</string>
+    <string name="msetting_autorun">Auto Run while power on</string>
+	<!-- offline map manager -->
+	<string name="offline_map_downloaded">Completed</string>
+	<string name="offline_map_downloading">Downloading</string>
+	<string name="offline_map_waiting">Waiting</string>
+	<string name="offline_map_pause">Pause</string>
+	<string name="offline_map_exist_tip">This map has been added to the download list!</string>
+	<string name="offline_map_success_tip">Map has been added to the download list!</string>
+	<string name="offline_map_current_city">Current city</string>
+	<string name="offline_map_download_list">Download list</string>
+	<string name="offline_map_download_all">Nationwide</string>
+	<string name="offline_map_loading">Capturing map information, please wait...</string>
+	<string name="offline_map_network_disable">Network unavailable, please open the network first!</string>
+	<string name="offline_map_delete">Sure to delete s% offline map</string>
+	<!-- videolist.xml -->
+	<string name="empty_text">Empty text</string>
+	
+    <string name="help_text">Help information ordered by customer!</string>
+    
+    <!-- preview_panel -->
+	<string name="text_starting_preview">Starting preview...</string>
+	
+    <!-- path choice -->
+    <string name="msetting_save_path_fromSD">Flash</string>
+    <string name="msetting_save_path_fromextSD">SD card</string>
+        <!-- <string name="dvr_id">yecon_mg701</string> -->
+    <string name="dvr_id">YM7101-0000-0.3-201206201024</string>
+    <string name="version_id">full_m805_892x_evm</string>
+    <string name="board_id">m805_892x</string>
+    <string name="no_permission">No permission</string>
+    <string name="playback_video_unlock">Video(unlock)</string>
+    <string name="playback_video_lock">Video(lock)</string>
+    <string name="playback_pic">Picture</string>
+
+	<string name="handBook">Help</string>
+    <string name="info1">
+        1 .Start the software will automatically preview, but do not save\r\n\n
+        2 .The difference between conventional recording and loop recording: conventional video: video start until the end of the video, ten minutes is automatically saved，
+        Until the memory card is full;Loop video: click the Record, save the video to record only the latest 1 minutes.\r\n\n
+        3 .Camera: When recording capabilities, click on the camera will interrupt the current recording\r\n\n
+        4 .Video Playback:You can view saved picture or video, and the machine connected to the network, you can see the location on google maps to show\r\n\n
+        5 .Navigation: while recording ,you can save your location information\r\n\n
+        6 .●Crash automatically save the video switch \r\n\n     
+        \t\tSelected to open when you click the video area will save the video\r\n\n
+		\t\tCheck off when click the video area, do not save the video\r\n\n
+        \t●Long loop video：\r\n\n
+        \t\t1 3 5 over 10 for a long time to save time is 1 or 3, or 5, or 10 
+        \t\tThe unit is minutes (m)\r\n\n
+        \t●Record a video screen：\r\n\n
+        \t\tVideo requirements of the screen the better, the greater the files take up space! Recommended high\r\n\n
+        \t●Screen brightness adjustment：\r\n\n
+        \t\tThe greater the value, the brighter the screen \r\n\n
+        \t●Click the screen to save the video：\r\n\n
+        \t\tOn: Indicates to turn on this feature\r\n
+        \t\tOff: turn off this feature\r\n\n
+        \t●The background can be recorded tone\r\n\n
+        \t\tOpen: said it will open the day after tomorrow to record sound, there will be the voice of the DDD！\r\n
+        \t\tOff: no, background recording sound\r\n\n
+        \t●Whether or not to record sounds：\r\n\n
+        \t\tOpen: open said recording\r\n
+        \t\tOff: not recorded\r\n
+        </string>
+	    <!--  background-->
+        <string name="background_recording">Background Recording</string>
+		<!-- MediaListActivity.xml -->
+		<string name="year">year</string>
+		<string name="month">month</string>
+		<string name="day">day</string>
+		<string name="Monday">Mon</string>
+		<string name="Tuesday">Tue</string>
+		<string name="Wedenesday">Wed</string>
+		<string name="Thursday">Thu</string>
+		<string name="Friday">Fri</string>
+		<string name="Saturday">Sat</string>
+		<string name="Sunday">Sun</string>
+		 <string name="chronometer_initial_format"><xliff:g id="initial-format">%s</xliff:g></string>
+		 <string name="total_record_time">Record Time:</string>
+</resources>

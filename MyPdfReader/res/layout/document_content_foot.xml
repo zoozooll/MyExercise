@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="match_parent"
+	android:layout_height="wrap_content" android:layout_gravity="bottom"
+	android:background="@android:drawable/bottom_bar">
+	<Button android:id="@+id/btnPreventPage" android:text="PREV"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<SeekBar android:id="@+id/sbrContent" android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:layout_weight="1"
+		android:layout_gravity="center_vertical" android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"></SeekBar>
+	<Button android:id="@+id/btnNextPage" android:text="NEXT"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+
+</LinearLayout>

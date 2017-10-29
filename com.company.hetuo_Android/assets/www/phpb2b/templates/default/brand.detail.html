@@ -1,0 +1,132 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="10"}>
+<{include file="`$ThemeName`/header.html"}>
+<style type="text/css">
+@import url(<{$theme_img_path}>effect.css);
+</style>
+<script type="text/javascript" src="scripts/jquery/jcarousel.js"></script>
+<div class="wrapper">
+	<div class="tips"><span><{$position}></span></div>
+	<div class="blank6"></div>
+	<div class="content">
+		<div class="main_left_w720">
+			 <div class="brand_file clearfix">
+				  <div class="brand_grade">
+					  <div class="brand_img">
+						 <div class="logo"><img src="<{$item.img}>" alt="<{$item.title}>" /></div>
+					  </div>
+					  <div><strong><{$item.title}></strong></div>
+				  </div>  
+				  <div class="brand_intro">
+					  <div class="title"><{$item.title}><em>(<{$item.alias_name}>)</em></div>
+					  <p><{$item.description|nl2br|default:$_full_the_data}></p>
+					  <div class="brand_intro_more"><input name="go" onclick="redirect('<{$SiteUrl}>space.php?id=<{$item.company_id}>');" type="button" value="<{$_visit}><{$_space_name}>" class="btn_submit"/></div>   
+				  </div>
+			 
+			 </div> 
+			 <div class="blank6"></div> 
+			 <div class="tag"><strong><{$_other_brands}>:</strong></div>
+			 <div class="blank6"></div>
+             
+             <ul id="mycarousel" class="jcarousel-skin">
+                <{brand row=12 type="image" companyid=$item.company_id}>
+                <li><div><span><a href="[link:title]"><img src="[img:src]" alt="[field:title]" /></a></span></div>
+					<p><a href="[link:title]">[field:title]</a></p>
+                <{/brand}>
+            </ul>
+            
+			<div class="blank6"></div>
+			<div class="brand_other">
+				 <div class="title">
+					  <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_similar_brands}></span><span class="corner_t_r"></span></h2>
+					 <{if $item.type_id}><span class="more"><a href="brand/list.php?do=search&catid=<{$item.type_id}>"><{$_more}><{$_industry_brand}>&raquo;</a></span><{/if}>
+				 </div>   
+			</div>
+			<div class="brand_other_list">
+				<div class="brand_list padding21 clearfix">
+					 <ul>
+					<{brand row=6 col=3 type="image" typeid=$item.type_id  removal=$item.id}>
+					<li><div><span><a href="[link:title]"><img src="[img:src]" alt="[field:title]" /></a></span></div>
+					<p><a href="[link:title]">[field:title]</a></p>
+					</li>
+                    
+					<{/brand}>
+				  </ul>
+				</div>
+			</div> 
+		</div>
+		<div class="main_right_w230">
+			
+			<div class="cornerbox">
+				<div class="title_bar_s6">
+					<span class="title_top_s6"><span></span></span>
+					<h2><{$_company_news}></h2>
+				</div>
+				<div class="corner_content_s6">
+				   <ul>
+					<{companynews row=6 companyid="$item.company_id"}>
+				   <li><a href="[link:title]" target="_blank" title="[field:title]">[field:title]</a>
+				  </li>
+					 <{/companynews}>
+				   </ul>
+				</div>
+				<div class="corner_bottom">
+					<div class="corner_bottom_l"></div>
+					<div class="corner_tottom_r"></div>
+				</div>
+			</div>
+			<div class="blank6"></div>
+			<div class="cornerbox">
+				<div class="title_bar_s6">
+					<span class="title_top_s6"><span></span></span>
+					<h2><{$_similar_product}></h2>
+				</div>
+				<div class="corner_content_s6">
+					<ul>
+					<{product row=6 brandid=$item.id}>
+						<li><a href="[link:title]">[field:title]</a></li>
+					 <{/product}>
+					</ul>
+				</div>
+				<div class="corner_bottom">
+					<div class="corner_bottom_l"></div>
+					<div class="corner_tottom_r"></div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+});
+</script>
+<script>
+$("#SearchFrm").attr("action","product/list.php");
+$("#topMenuProduct").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

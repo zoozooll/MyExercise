@@ -1,0 +1,81 @@
+<{assign var="page_title" value="`$_apply_friendlink`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="content">
+  <div class="tips"><span><{$position}></span></div>
+  <div class="blank6"></div>
+  <div class="add_link clearfix">
+    <div class="add_link_left">    
+         <div class="title_bar_s1">
+            <span class="title_top_s1"><span></span></span>
+            <h2><{$_friend_links}></h2>
+       </div>
+        <div class="add_link_leftcon">
+          <ul>
+		  	<{friendlink}>
+            <li><a href="[link:title]" title="[field:tip]" target="_blank">[field:title]</a></li>
+			<{/friendlink}>
+          </ul>
+        </div>
+    </div>
+    <div class="add_link_right">
+       <div class="title_bar_s1">
+            <span class="title_top_s1"><span></span></span>
+            <h2><{$_apply_friendlink}></h2>
+      </div>
+      <div class="add_link_rightcon">
+          <form action="friendlink.php" method="post" name="friendlink_frm" id="FriendlinkFrm">
+          <input type="hidden" name="formhash" value="<{$formhash}>">
+          <input type="hidden" name="do" value="apply_friendlink">
+          <table class="add_link_rightcon_info">
+            <tr>
+              <th><{$_local_sitename}></th>
+              <td align="left"><{$site_name}></td>
+            </tr>
+            <tr>
+              <th><{$_local_siteurl}></th>
+              <td align="left"><{$site_url}></td>
+            </tr>
+            <tr>
+              <th><{$_local_sitelogo}></th>
+              <td rowspan="2" align="left"><img src="<{$site_logo}>" alt="<{$site_title}>"></td>
+            </tr>
+            <tr align="left">
+              <th height="25">&nbsp;</th>
+            </tr>
+            <tr>
+              <th><{$_local_logourl}></th>
+              <td align="left"><{$SiteUrl}><{$site_logo}></td>
+            </tr>
+         
+             <tr>
+                <th><{$_your_site_name}></th>
+                <td ><input name="friendlink[title]" type="text" size="20"  class="form_text"/></td>
+              </tr>
+              <tr>
+                <th><{$_your_site_address}></th>
+                <td><input name="friendlink[url]" type="text" size="20"  class="form_text"/></td>
+              </tr>
+              <tr>
+                <th><{$_your_site_logo}></th>
+                <td><input name="friendlink[logo]" type="text" size="20"  class="form_text"/></td>
+              </tr>
+              <tr>
+                <th><{$_contact_mail}></th>
+                <td><input name="data[email]" type="text" size="20"  class="form_text"/></td>
+              </tr>
+              <tr>
+                <th><{$_your_site_description}></th>
+                <td><textarea name="friendlink[description]" cols="40" rows="5"></textarea></td>
+              </tr>
+              
+              <tr>
+                <th></th>
+                <td><input name="btn_friendlink" type="button" value="<{$_submit}>" class="btn_submit" onclick="$('#FriendlinkFrm').submit();"/>&nbsp;&nbsp;&nbsp;&nbsp;<input name="reset" type="reset" value="<{$_reset}>" class="btn_submit"/></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

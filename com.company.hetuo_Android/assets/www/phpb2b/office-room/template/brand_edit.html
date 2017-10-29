@@ -1,0 +1,70 @@
+<{assign var="page_title" value="`$_brands`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$_brands}></h2></div>
+
+	  <form method="post" action="brand.php" enctype="multipart/form-data" onsubmit="$('#Save').attr('disabled',true);">
+	  <input type="hidden" name="formhash" value="<{$formhash}>">
+	  <input type="hidden" name="id" value="<{$item.id}>">
+	  <input type="hidden" name="formattribute_ids" value="<{$item.formattribute_ids}>">
+       <div class="hint"><{$_must_input_with_star}></div>
+        <table class="offer_info_content">
+			  <tr>
+				<th><font class="red">*</font> <{$_brand_name}></th>
+				<td class="tdright"><input name="data[brand][name]" type="text" id="dataBrandtName" value="<{$item.name}>">
+				<font color="#666666"><{$_words_length}></font></td>
+			  </tr>
+			  <tr>
+				<th> <{$_brands}><{$_alias_name}></th>
+				<td class="tdright"><input name="data[brand][alias_name]" type="text" id="dataBrandtName" value="<{$item.alias_name}>">
+			     </td>
+			  </tr>
+			  <tr>
+				<th><{$_brand_type}></th>
+				<td>
+					<select name="data[brand][type_id]" id="Brandtypes">
+                           <{$BrandtypeOptions}>
+					</select>					
+				</td>
+			  </tr>
+			  <tr>
+			  <tr>
+                    <th><{$_description}></th>
+                    <td class="tdright"><textarea name="data[brand][description]" id="dataProductContent" rows="8" wrap="VIRTUAL" style="width:370px;"><{$item.description}></textarea>
+                      </td>
+              </tr>
+			<tr>
+             <th><{$_brand_image}></th>
+                    <td>
+                        <input name="pic" type="file" id="uploadfile" onchange="preview()" />
+                         <span class="gray"><br>
+                            <{$_image_size_format_provision}></span></td>
+                    </tr>
+                   <tr>
+				   <{if $item.image}>
+                     <th></th>
+                      <td><a href="<{$item.image|default:"javascript:;"}>" id="uploadpic_hover" rel="facebox"><img id="uploadpic" src="<{$item.image}>.small.jpg" alt="<{$item.name}>" width="75" height="75"  /></a></td>
+					  <{/if}>
+                    </tr>
+			  <tr>
+				<th class="circle_bottomleft"></th>
+				<td class="circle_bottomright"><input name="save" type="submit" id="save" value=" <{$_confirm_submit}> "></td>
+			  </tr>
+          </table>
+	</form>
+</div>
+</div>
+<script>
+var type_id="<{$item.type_id|default:1}>";
+jQuery(document).ready(function($) {
+$("#Brandtypes option[value='"+type_id+"']").attr("selected","selected");})
+</script>
+<{include file="footer.html"}>

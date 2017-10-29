@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/duoduo_lesson_layout_five"
+    android:background="@drawable/toptitle02"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_alignParentBottom="true">
+  <RelativeLayout
+       android:id="@+id/linear2"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/linear1">
+    <ImageButton
+        android:id="@+id/duoduo_lesson_list_img"
+        android:background="@drawable/bookshelf_nenubuttom_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dip"/>
+    <ImageButton
+        android:id="@+id/duoduo_lesson_back_img"
+        android:background="@drawable/bookshelf_buttom_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dip"
+    />
+    </RelativeLayout>
+  </RelativeLayout>
+

@@ -1,0 +1,43 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{include file="`$ThemeName`/header.html"}>
+<style type="text/css">
+@import url(<{$theme_img_path}>effect.css);
+</style>
+<script src="scripts/jquery.tools.js"></script>
+<div class="wrapper">
+	<div class="tips"><span><{$position}></span></div>
+	<div class="blank6"></div>  
+	<div class="content clearfix">
+	  <div class="main_left_w720"> 
+	   <!-- the tabs -->
+		<ul class="tabs2 title_mouse">
+        	  <li><a href="special/index.php?type=industry"><span><{$_sub_industry}></span></a></li>
+			  <li><a href="special/index.php?type=area"><span><{$_sub_area}></span></a></li>
+		</ul>
+		<!-- tab "panes" --> 
+		<div class="panes box_bord">
+		   <div class="substation clearfix">
+				<{category from="industry" depth=3}>
+		   </div>
+		   <div class="substation clearfix" style="display:block;">
+				<{category from="area" depth=3}>
+		   </div>
+		</div>
+	  </div>
+	  <div class="main_right_w230">
+	   <div class="title_bar_s4">
+	   <span class="title_top_s4"><span></span></span>
+	   <h3><{$_advertising}></h3>
+	   <div class="reports_ads">
+			<{ads typeid=6 row="10"}><span><a href="[link:url]" rel="promotion">[field:src]</a></span><{/ads}>
+	   </div>
+	   </div>
+	  </div>
+	</div>
+</div>
+<script>
+        $(function() {
+            $("ul.tabs2").tabs("div.panes > div");
+        });
+        </script>  
+<{include file="`$ThemeName`/footer.html"}>

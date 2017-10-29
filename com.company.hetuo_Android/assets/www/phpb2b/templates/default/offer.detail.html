@@ -1,0 +1,95 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="`$nav_id`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+	<div class="content">
+	<div class="tips"><span><{$position}></span></div>
+    <div class="blank6"></div>
+    <div class="detailtopcon clearfix">
+			<h3><{$item.title}></h3>
+            <{if $item.picture}>
+			<div class="detailtopconleft">
+				<p class="left1"><img src="<{$item.image}>" width="80" height="80" /></p>
+				<p class="left2"><a href="misc.php?source=<{$item.image_url}>" target="_blank"><img src="<{$theme_img_path}>images/detail_17.jpg" alt="" /></a><span><{$_enlarge_image}></span></p>
+			</div>
+            <{/if}>
+			<div class="detailtopconleft2">
+				<p><{$item.title|strip_tags}></p>
+				<p><{$_post_time}><{$item.pubdate}></p>
+				<p><{$_effective_date}><{$item.expdate}></p>
+				<p><{$_area}><a href="offer/list.php?areaid=<{$item.area_id1}>" target="_blank"><{$Areas[1][$item.area_id1]}></a>&raquo;<a href="offer/list.php?areaid=<{$item.area_id2}>" target="_blank"><{$Areas[2][$item.area_id2]}></a></p>
+                <p><{$_belong_industry}><a href="offer/list.php?industryid=<{$item.industry_id1}>" target="_blank"><{$Industry[1][$item.industry_id1]}></a>&raquo;<a href="offer/list.php?industryid=<{$item.industry_id2}>" target="_blank"><{$Industry[2][$item.industry_id2]}></a></p>
+				<p><{$_keyword}><{$item.tag}></p>
+                <p> 
+                 <form name="favor_frm" id="FavorFrm" action="office-room/favor.php" method="post" target="_blank">
+                     <input type="hidden" name="id" value="<{$item.id}>" />
+                     <input type="hidden" name="do" value="favor" />
+					  <input type="button" name="favor" value="<{$_add_favorite}>"  class="btn_submit" id="favor" onclick="$('#FavorFrm').submit();" />
+				  <{if $pb_userid==$item.member_id}>
+					  <input type="button" name="edit" value="<{$_to_edit}>"  class="btn_submit" onclick="redirect('<{$SiteUrl}>office-room/offer.php?do=edit&id=<{$item.id}>');" />					
+                    <{/if}>
+                     </form>
+ 
+                    </p>
+			</div>
+			<div class="detailtopconright">
+				<p class="right1"><{if $item.companyname}>
+<a href="space.php?userid=<{$item.space_name}>" target="_blank" title="<{$item.companyname}>"><{$item.companyname}></a><{else}><{$_released_by_personnal}><{/if}></p>
+				<p><{$_contact_people}><{$item.link_people}></p>
+				<p><{$_member_type}><{if $MEMBER.groupname}><img src="<{$MEMBER.groupimage}>" alt="<{$MEMBER.groupname}>" /><{/if}></p>
+				<p><{$_reputation_index_n}><{$MEMBER.credits}></p>
+				<p><{$_authentication_type}><{$MEMBER.trust_image}></p>
+			</div>
+		</div>
+     <div class="blank6"></div>
+	<div class="detailtop3">
+		<div class="detailtop3left">
+			<h3><img src="<{$theme_img_path}>images/lhighs.gif" alt="" /><{$_details}></h3>
+			<div class="detailtop3leftcon">
+				<table width="578" border="0">
+                <{foreach from=$ObjectParams name=op item=tparam}>
+					<tr>
+					  <td class="tableblue"><{$tparam.label}></td>
+					  <td classs="lightblue"><{$tparam.value}></td>
+				</tr>
+               	<{/foreach}>
+			   </table>
+               <{$item.content|nl2br}>
+			</div>				
+		</div>
+		<div class="detailtop3right">
+            <{if !$LoginCheck && $pb_username==""}>
+			<div class="contacttype">
+				<p class="right1"><{$_members_view}></p>
+				<p><{$_register_site_member}> 
+                            <input type="button" name="btn_login" value="<{$_login}>" onclick="redirect('<{$SiteUrl}>logging.php?forward=<{$smarty.server.REQUEST_URI}>');" class="btn_submit"><{$_fenhao}></p>
+				<p><{$_not_register_site_member}><input type="button" name="btn_register" value="<{$_free}><{$_register}>" class="btn_submit" onclick="redirect('<{$SiteUrl}>member.php');"><{$_registered_site_member}> 
+                </p>
+			</div>
+            <{else}>
+			<div class="contacttype">
+				<h3><img src="<{$theme_img_path}>images/lhighs.gif" /><{$_contact}></h3>
+				<p><{$_address}><{$item.address}><br /> 
+				   <{$_zip}><{$item.zipcode}><br /> 
+				   <{$_phone}><{$item.tel}><br />
+				   <{$_fax}><{$item.fax}><br /> 
+				   <{$_website}><{$item.site_url}></p>
+			</div>
+            <{/if}>
+			<div class="contacttype">
+				<h3><img src="<{$theme_img_path}>images/lhighs.gif" /><{$_add_information_release}></h3>
+				<ul>
+                	<{offer memberid=`$item.member_id` row=10}>
+					<li><span class="title"><a href="[link:title]" title="[field:fulltitle]">[field:title]</a></span><span class="type"><a target="_blank" href="offer/list.php?typeid=[field:typeid]">[[field:typename]]</a></span></li>
+                    <{/offer}>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+$("#SearchFrm").attr("action","offer/list.php");
+$("#topMenuOffer").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

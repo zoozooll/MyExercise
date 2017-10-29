@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+<style type="text/css">
+th{background:#EFEFEF}
+.red { color:red;}
+td div {float:left; text-align:center; border: 1px solid #DADADA; margin: 5px; padding:2px; width:130px;}
+td span {display:block; margin-left:10px;}
+.imga {display:block; margin-bottom:4px; height:100px;}
+</style>
+</head>
+<body>
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+		<div class="bigpart">
+			<div class="title_uc"><h3><span style="float:right; margin-right:15px;"><a href="modules.php?app=goods_list" style="color:#F67A06;">
+			{echo: lp{m_back_goodslist};/}</a>&nbsp;&nbsp;</span>{echo: lp{m_goods_image};/}</h3></div>
+			<form action="do.php?act=goods_gallery_update" method="post" name="form_goods_gallery_update" enctype="multipart/form-data">
+				<table class="form_table">
+					<tr><td class="center">
+					{sta: if(!empty($gallery_list)){
+						foreach($gallery_list as $value) [loop]}
+					<div id="gallery_{echo: $value['img_id'];/}">
+						<a href="javascript:;" onclick="if (confirm('{echo: lp{m_sure_delimg};/}')) 
+							dropImg('{echo: $value['img_id'];/}')">[{echo: lp{m_del};/}]</a>
+						{sta: if($value['is_set']) { 
+		                	echo lp{m_is_img}; 
+		                } else { ?>
+							<a href="do.php?act=goods_gallery_set&id={echo: $value['img_id'];/}&gid={echo: $value['goods_id'];/}">
+							[{echo: lp{m_set_img};/}]</a>
+						{end:if/}<br />
+						<a href="{echo: $value['img_original'];/}" target="_blank" class="imga">
+						<img src="{echo: $value['thumb_url'];/}" class="img" /></a>
+						<input type="text" value="{echo: $value['img_desc'];/}" size="15" 
+						name="old_img_desc[{echo: $value['img_id'];/}]" maxlength="50" />
+		            </div>
+					{sta: }}else {
+						echo "{echo: lp{m_not_uploadimg};/}";	
+					if/}
+					</td></tr>
+					<tr><td id="upload_img" class="textleft">
+					<span><a href="javascript:addNewUploadSpan();">[+]</a> {echo: lp{m_img_desc};/}:
+						<input type="text" name="img_desc[]" maxlength="50" /> {echo: lp{m_upload_file};/}:
+						<input type="file" name="attach[]" /></span>
+					</td></tr>
+					<tr><td class="center"><input type="hidden" name="goods_id" value="{echo: $goods_id;/}" />
+					<input type="submit" name="submit" value="{echo: lp{m_update_goodsimg};/}" /></td></tr>
+				</table>
+			</form>
+        </div>
+    </div>
+    <div class="clear"></div>
+    {inc: require("modules/footer.php");/}
+<script language="JavaScript" src="servtools/ajax_client/ajax.js"></script>
+<script language="JavaScript">
+<!--
+{sta:foreach($gallery_list as $value){
+	if($value['is_set']) {
+		echo "var is_set_img_id = '".$value['img_id']."';";
+	}
+foreach/}
+
+function addNewUploadSpan() {
+	var upload_img = document.getElementById("upload_img");
+	var newspan = document.createElement("span");
+	newspan.innerHTML = '<a href="javas'+'cript:removeUploadSpan();">[-]</a>';
+	newspan.innerHTML += '{echo: lp{m_img_desc};/}: <input type="text" name="img_desc[]" maxlength="50" /> ';
+	newspan.innerHTML += '{echo:  lp{m_upload_file};/}: <input type="file" name="attach[]" />';
+	upload_img.appendChild(newspan);
+}
+
+function removeUploadSpan() {
+	var upload_img = document.getElementById("upload_img");
+	var number = upload_img.children.length;
+	var delnode = upload_img.children[number-1];
+	upload_img.removeChild(delnode);
+}
+
+function dropImg(id) {
+	var s = 0;
+	if(is_set_img_id == id) {
+		s = 1;
+	}
+	ajax("do.php?act=goods_gallery_drop","POST","id="+id+"&s="+s+"&gid={echo:$goods_id;/}",function(data){
+		if(data==1) {
+			document.getElementById("gallery_"+id).style.display='none';
+		} else {
+			alert('{echo:  lp{m_delfail_tryagain};/}');
+		}
+	});
+}
+
+function resetimgwh() {
+	var imgarray = document.getElementsByTagName("img");
+	var top_height = 0;
+	for(var i=0; i<imgarray.length; i++) {
+		if(imgarray[i].className="img") {
+			if(imgarray[i].width > imgarray[i].height) {
+				imgarray[i].width = 100;
+				top_height = Math.ceil((100-imgarray[i].height*100/imgarray[i].width)/2);
+				imgarray[i].style.marginTop = top_height+'px';
+			} else {
+				imgarray[i].height = 100;
+			}
+		}
+	}
+}
+//-->
+</script>
+</body>
+</html>

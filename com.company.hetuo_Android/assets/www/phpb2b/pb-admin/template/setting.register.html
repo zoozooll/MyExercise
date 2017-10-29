@@ -1,0 +1,109 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_setting_global}> &raquo; <{$_reg_and_visit}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_reg_and_visit}></h3>
+    <ul class="subnav">
+		<li><a href="setting.php?do=register" class="btn1"><span>注册</span></a></li>
+        <li><a href="setting.php?do=registerfile">默认设置</a></li>
+    </ul>
+</div>
+<div class="info"> 
+    <form method="post" name="edit_frm" action="setting.php"> 
+    <input type="hidden" name="data[reg_filename]" value="<{$item.REG_FILENAME}>" />
+    <input type="hidden" name="data[post_filename]" value="<{$item.POST_FILENAME}>" />
+        <table class="infoTable"> 
+         	<tr> 
+                <th class="paddingT15">允许新用户注册:</th> 
+              	<td class="paddingT15 wordSpacing5">
+                <label for="close_register"><input type="radio" name="data[setting][register_type]" id="close_register" value="close_register" onclick="$('#tbRegItem').hide();" />关闭注册</label>
+  <br />
+  <label for="open_common_reg"><input type="radio" name="data[setting][register_type]" id="open_common_reg" value="open_common_reg" onclick="$('#tbRegItem').show();" />开放普通注册</label>
+  <br />
+  <label for="open_invite_reg"><input type="radio" name="data[setting][register_type]" id="open_invite_reg" value="open_invite_reg" onclick="$('#tbRegItem').show();" />开放邀请注册</label></td> 
+          	</tr> 
+            <tbody id="tbRegItem" style="display: none">
+			<tr> 
+                <th class="paddingT15">注册协议:</th> 
+       			<td class="paddingT15 wordSpacing5"><textarea name="data[setting1][agreement]" style="width:600px;" class="mceEditor"><{$item.agreement}></textarea><label class="field_notice">可以用参数%site_name%表示网站名称,%site_url%表示网站地址</label></td> 
+          	</tr> 
+         	<tr> 
+                <th class="paddingT15">新用户注册必须审核:</th> 
+              	<td class="paddingT15 wordSpacing5">
+                  <select name="data[setting][new_userauth]" id="NewUserauth">
+                  <option value="0" <{if $item.NEW_USERAUTH==0}>selected="selected"<{/if}>>无</option>
+                  <option value="1" <{if $item.NEW_USERAUTH==1}>selected="selected"<{/if}>>Email验证</option>
+                  <option value="2" <{if $item.NEW_USERAUTH==2}>selected="selected"<{/if}>>人工审核</option>
+                  </select>
+                </td> 
+          	</tr> 
+			<tr> 
+                <th class="paddingT15">禁止注册IP地址:</th> 
+       			<td class="paddingT15 wordSpacing5"><textarea name="data[forbid_ip]"><{$item.forbid_ip}></textarea></td> 
+          	</tr> 
+			<tr> 
+                <th class="paddingT15">关键字屏蔽:</th> 
+       			<td class="paddingT15 wordSpacing5"><textarea name="data[forbid_word]"><{$item.forbid_word}></textarea></td> 
+          	</tr> 
+         	<tr> 
+                <th class="paddingT15">同一 IP 注册间隔限制:</th> 
+              	<td class="paddingT15 wordSpacing5"><input type="text" name="data[setting][ip_reg_sep]" id="IP_REG_SEP" value="<{$item.IP_REG_SEP|default:0}>" class="infoTableInput" /><label class="field_notice">单位每小时，0为不限制</label></td> 
+          	</tr>
+         	<tr> 
+                <th class="paddingT15">发送欢迎信息：</th> 
+              	<td class="paddingT15 wordSpacing5">
+				  <label for="welcome_msg0"><input type="radio" name="data[setting1][welcome_msg]" id="welcome_msg0" value="0" onclick="$('#tbWelcomeMsg').hide();" />不发送</label>
+				  <br />
+				  <label for="welcome_msg1"><input type="radio" name="data[setting1][welcome_msg]" id="welcome_msg1" value="1" onclick="$('#tbWelcomeMsg').show();" />发送欢迎<{$_pms}></label>
+				  <br />
+				  <label for="welcome_msg2"><input type="radio" name="data[setting1][welcome_msg]" id="welcome_msg2" value="2" onclick="$('#tbWelcomeMsg').hide();" />发送欢迎 Email</label>
+				</td> 
+          	</tr> 
+            <tbody id="tbWelcomeMsg" style="display: none">
+         	<tr> 
+                <th class="paddingT15">欢迎信息标题：</th> 
+              	<td class="paddingT15 wordSpacing5"><input type="text" name="data[welcome_msg_title]" id="welcome_msg_title" value="<{$item.WELCOME_MSG_TITLE|default:"`$_welcome_title`"}>" class="infoTableInput" /></td> 
+          	</tr> 
+         	<tr> 
+                <th class="paddingT15">欢迎信息内容：</th> 
+              	<td class="paddingT15 wordSpacing5"><textarea name="data[welcome_msg_content]" style="width:600px;" class="mceEditor"><{$item.WELCOME_MSG_CONTENT|default:"`$_welcome_content`"}></textarea></td> 
+          	</tr> 
+            </tbody>
+            </tbody>
+            <tr> 
+            <th></th> 
+            <td class="ptb20"> 
+                <input class="formbtn" type="submit" name="saveregister" value="<{$_submit}>" /> 
+                <input class="formbtn" type="reset" name="reset" value="<{$_reset}>" /> 
+            </td> 
+        </tr> 
+        </table> 
+    </form> 
+</div> 
+<{editor type="tiny_mce" mode="specific_textareas"}>
+<script>
+var register_type = "<{$item.REGISTER_TYPE|default:open_common_reg}>";
+var welcome_msg = "<{$item.WELCOME_MSG|default:0}>";
+jQuery(document).ready(function($) {
+	if(register_type=="close_register"){
+		$("#close_register").attr("checked","checked");
+	}else if(register_type=="open_common_reg"){
+		$("#open_common_reg").attr("checked", "checked");
+		$("#tbRegItem").show();
+	}else if(register_type=="open_invite_reg"){
+		$("#open_invite_reg").attr("checked", "checked");
+		$("#tbRegItem").show();
+	}
+	if(welcome_msg=="1"){
+		$("#welcome_msg1").attr("checked","checked");
+		$("#tbWelcomeMsg").show();
+	}else if(welcome_msg=="2"){
+		$("#welcome_msg2").attr("checked","checked");
+		$("#tbWelcomeMsg").show();
+	}else{
+		$("#welcome_msg0").attr("checked", "checked");
+	}
+})
+</script>
+<{include file="footer.html"}>

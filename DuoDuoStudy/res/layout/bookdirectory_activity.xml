@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:background="#FFFFFF"
+  >
+  <TextView android:id="@+id/intro_title" 
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  />
+  <ImageView android:src="@drawable/line" 
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  />
+  <LinearLayout android:background="@drawable/line_background"  android:layout_width="fill_parent" android:layout_height="wrap_content">
+  	<TextView android:layout_gravity="center_vertical" android:text="简介" 
+  		android:textSize="16sp"
+  	android:textColor="#000" android:id="@+id/intro" android:layout_width="wrap_content" android:layout_height="20dip" />
+  	
+  </LinearLayout>
+  <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  	
+  >
+  	<TableLayout android:id="@+id/directory_table"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	
+  ><!-- 
+  	<TableRow android:id="@+id/directory_row"
+  	
+  	>
+  		<TextView android:id="@+id/c1" 
+  			android:layout_width="60dip"
+  			android:layout_height="wrap_content"
+  			android:text="54515545615"
+  			android:textColor="#000"
+  		/>
+  		<TextView android:id="@+id/c2" 
+  			android:layout_width="200dip"
+  			android:layout_height="wrap_content"
+  			android:text="tytujtyujyjy"
+  			android:textColor="#000"
+  		/>
+  		<TextView android:id="@+id/c3" 
+  			android:layout_width="60dip"
+  			android:layout_height="wrap_content"
+  			android:text="grfdhyfdhfrtgh"
+  			android:textColor="#000"
+  		/>
+  	</TableRow> -->
+  	</TableLayout>
+  </ScrollView>
+  
+</LinearLayout>

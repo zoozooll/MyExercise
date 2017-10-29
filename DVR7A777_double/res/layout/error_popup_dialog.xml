@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/error_popup_dialog"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg" >
+
+    <TextView
+        android:id="@+id/message_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/dlg_title_attention"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/textsize_setting" />
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_title_text"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/sdcard_no_space"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/textsize_setting" />
+
+    <Button
+        android:id="@+id/BtnOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_text"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dialog_btn"
+        android:text="@string/ok"
+        android:textColor="#000000"
+        android:textSize="@dimen/textsize_playback" />
+
+</RelativeLayout>

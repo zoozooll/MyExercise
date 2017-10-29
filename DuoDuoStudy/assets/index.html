@@ -1,0 +1,28 @@
+<script src="play.js"></script>
+
+<table border="0" cellpadding="0" cellspacing="1" bgcolor="#000000">
+  <tr>
+    <td>
+     <object id="movie" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+         codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" 
+        align="middle">
+       <param name="movie" value="about:blank" />
+       <param name="quality" value="high" />
+     </object>
+    </td>
+  </tr>
+</table>
+   
+   
+   <!-- <a href="javascript:CallJava.consoleFlashProgress(3)">add Progress</a>
+   <a href="#" onClick="loadSWF('','testFlash.swf','800','480')">TestButton</a>  -->
+    <p id="geolo"></p>
+<script type="text/javascript">
+  //loadSWF("testFlash.swf","800","480"); //loadSWF("flash地址","宽度","高度")
+  function setFlashPath(filePath){
+     var path = filePath;
+     loadSWF(path,"800","400"); //loadSWF("flash地址","宽度","高度")
+     //geolo.innerText = "abc: " + filePath.toString();
+  }
+</script>
+ 

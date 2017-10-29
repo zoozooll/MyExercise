@@ -1,0 +1,53 @@
+<{assign var="page_title" value="`$_product_sort`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+      <div class="hint"><{$_friendly_tip}></span><{$_adjustment_sequence}></div>
+
+		  <form name="prodtypefrm" action="producttype.php" method="post">
+		  <input type="hidden" name="formhash" value="{$formhash}>">
+		   <table class="product_type">
+            <tr>
+              <th colspan="4"><strong><{$_series_sort_product}></strong></th>
+            </tr>
+			 <{foreach from=$Items name=producttype item=item}>
+            <tr>
+              <td width="6%" align="center"><img src="images/on.gif"></td>
+              <td width="40%" align="left"><{$item.name}></td>
+              <td align="center"><a href="producttype.php?do=edit&id=<{$item.id}>"><{$_modify}></a></td>
+              <td align="center"><a href="producttype.php?do=del&id=<{$item.id}>"><{$_delete}></a></td>
+            </tr>
+			<{/foreach}>
+          </table>
+		  </form>
+		 
+		<form name="edit_frm" method="post" action="producttype.php" autocomplete="off">
+		<input type="hidden" name="formhash" value="<{$formhash}>">
+        <table>
+        <tr>
+          <td colspan="2">&nbsp;<{$_product_sort_name}>
+            <input name="data[name]" type="Text" value="">
+            <input type="Submit" name="save" value="&nbsp;<{$_add}>&nbsp;"></td>
+        </tr>
+        </table>
+		</form>
+        <table>
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="1" colspan="2" background="images/index_trade_line.gif"></td>
+        </tr>
+      </table>
+
+</div>
+</div>
+<{include file="footer.html"}>

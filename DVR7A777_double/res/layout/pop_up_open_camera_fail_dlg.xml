@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    
+      android:id="@+id/pop_up_open_camera_fail_id" 
+	  android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:background="@drawable/dialog_bg">
+      
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">  
+	    <TextView
+	        android:id="@+id/title_text_id"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="left|top"
+	        android:layout_marginLeft="73dp"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginTop="15dp"
+	        android:text="@string/dlg_title_attention"
+	        android:textColor="#ffffff"
+	        android:textSize="@dimen/textsize_setting" />
+	    <TextView
+	        android:id="@+id/cue_text_id"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="left|top"
+	        android:layout_marginLeft="63dp"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginTop="30dp"
+	        android:text="@string/open_camera_error"
+	        android:textColor="#ffffff"
+	        android:textSize="@dimen/textsize_setting" />
+    </LinearLayout> 
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">  
+	    <Button
+	        android:textSize="@dimen/textsize_playback"
+	        android:textColor="#000000"
+	        android:id="@+id/BtnOK"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/dialog_btn"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginLeft="90dp"
+	        android:text="@string/ok" />
+	</LinearLayout> 
+</LinearLayout>

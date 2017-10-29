@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="#FFFFFF">
+  
+  <RelativeLayout 
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:background="#FFFFFF">
+         <ImageView
+		        android:id="@+id/bookshelfgift_img"
+		        android:layout_width="70dip"
+		        android:layout_height="90dip"
+		        android:layout_margin="5dip"
+		        android:src="@drawable/book_img_icon"/>
+		        <TextView 
+					  android:id="@+id/bookshelfcommentlist_name"
+					  android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content" 
+					  android:textColor="#FF0000"
+					  android:textStyle="bold"
+					  android:textSize="15dip"
+					  android:layout_marginTop="10dip"  
+                      android:layout_marginLeft="60dip"
+					  android:text="获荐"/>
+ </RelativeLayout>
+		 <RelativeLayout 
+		      android:id="@+id/commentlistlinear1" 
+		      android:orientation="vertical"
+			  android:layout_width="fill_parent"
+			  android:layout_height="wrap_content"
+			  android:layout_margin="5dip">	  
+				  <LinearLayout 
+				      android:id="@+id/commentlistlinear1" 
+				      android:orientation="horizontal"
+					  android:layout_width="210dip"
+					  android:layout_height="20dip">	  
+				    <TextView 
+					  android:id="@+id/bookshelfcommentlist_name"
+					  android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content" 
+					  android:textColor="#000"
+					  android:textStyle="bold"
+					  android:textSize="12dip"
+					  android:text="书       名："/>
+				     <TextView 
+					  android:id="@+id/bookshelfgift_bookname"
+					   android:layout_width="140dip" 
+					  android:layout_height="wrap_content" 
+					  android:textColor="#9ACD32"
+					  android:textStyle="bold"
+					  android:textSize="12dip"
+					    android:ellipsize = "marquee"
+						android:focusable = "true"
+						android:marqueeRepeatLimit = "marquee_forever"
+						android:focusableInTouchMode = "true"
+						android:scrollHorizontally = "true"
+					  android:text="语文"/>
+	              </LinearLayout>
+				  <LinearLayout 
+				      android:id="@+id/commentlistlinear2" 
+				      android:orientation="horizontal"
+					  android:layout_width="250dip"
+				      android:layout_height="20dip"
+				      android:layout_below="@+id/commentlistlinear1">	  
+					  <TextView 
+					  android:id="@+id/bookname"
+					  android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content" 
+					  android:textColor="#000"
+					  android:textSize="10dip"
+					  android:layout_margin="2dip"
+					  android:text="推荐类型： "/>
+					  <TextView 
+					  android:id="@+id/bookshelfgift_gifttype"
+					  android:layout_width="wrap_content"
+					  android:layout_height="wrap_content"  
+					  android:textColor="#000"
+					  android:textSize="10dip"
+					  android:layout_margin="2dip"
+					  android:text="公开推荐"/>
+					  <TextView 
+					  android:id="@+id/bookshelfgift_gifttime"
+					  android:layout_width="wrap_content"
+					  android:layout_height="wrap_content"  
+					  android:textColor="#000"
+					  android:textSize="10dip"
+					  android:layout_marginLeft="40dip"
+					  android:text="2011-02-01  14:00"/>
+	              </LinearLayout>
+	               <LinearLayout 
+				      android:id="@+id/commentlistlinear3" 
+				      android:orientation="horizontal"
+					  android:layout_width="250dip"
+				      android:layout_height="20dip"
+				      android:layout_below="@+id/commentlistlinear2">	  
+					  <TextView 
+					  android:id="@+id/bookname"
+					  android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content" 
+					  android:textColor="#000"
+					  android:textSize="10dip"
+					  android:layout_margin="2dip"
+					  android:text="获  荐 人：  "/>
+					  <TextView 
+					  android:id="@+id/bookshelfgift_username"
+					  android:layout_width="wrap_content"
+					  android:layout_height="wrap_content"  
+					  android:textColor="#9ACD32"
+					  android:textSize="10dip"
+					  android:layout_margin="2dip"
+					  android:text="小丸子，小军，韩雪，曹操"/>
+	              </LinearLayout>
+	              <RelativeLayout 
+				      android:id="@+id/commentlistlinear4" 
+				      android:orientation="vertical"
+					  android:layout_width="wrap_content"
+				      android:layout_height="wrap_content"  
+				      android:background="@drawable/bookshelfgift_contentback"
+				      android:layout_below="@+id/commentlistlinear3">	  
+					   <TextView 
+					  android:id="@+id/bookshelfrecommend_contentby"
+					  android:layout_height="wrap_content" 
+					  android:layout_width="wrap_content" 
+					  android:layout_margin="5dip"
+					  android:textColor="#000"
+					  android:textSize="10dip"
+					  android:text="赠言：这本书是关于小鸭子和小羊的，喜洋洋与灰太郎的故事，今天是你的生日，希望你会喜欢"
+					  />
+					   <TextView 
+					  android:id="@+id/bookshelfrecommend_contentbyall"
+					  android:layout_height="wrap_content" 
+					  android:layout_width="wrap_content"
+					  android:textSize="12dip"
+					  android:textColor="#FFFFFF" 
+					  android:layout_alignParentRight="true"  
+					  android:layout_marginBottom="5dip"
+					  android:text="查看全部"
+					  android:gravity="center"
+					  android:background="@drawable/bookshelfgift_all"
+					  android:layout_below="@+id/bookshelfrecommend_contentby"/> 
+	              </RelativeLayout>
+         </RelativeLayout>
+</LinearLayout>

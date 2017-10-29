@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MimeTypes>
+	<!-- Image types -->
+	<type extension=".png" mimetype="image/png" />
+	<type extension=".gif" mimetype="image/gif" />
+	<type extension=".jpg" mimetype="image/jpg" />
+	<type extension=".jpeg" mimetype="image/jpeg" />
+	<type extension=".bmp" mimetype="image/bmp" />
+	    
+	<!-- Audio types -->
+	<type extension=".mp3" mimetype="audio/mp3" />
+	<type extension=".wav" mimetype="audio/wav" />
+	<type extension=".ogg" mimetype="audio/x-ogg" />
+	<type extension=".mid" mimetype="audio/mid" />
+	<type extension=".midi" mimetype="audio/midi" />
+	<type extension=".amr" mimetype="audio/AMR" />
+	<type extension=".wma" mimetype="audio/x-ms-wma" />
+	
+	<!-- Video types -->
+	<type extension=".mpeg" mimetype="video/mpeg" />
+	<type extension=".3gp" mimetype="video/3gpp" />
+	
+	<!-- Package types -->
+	<type extension=".jar" mimetype="application/java-archive" />
+	<type extension=".zip" mimetype="application/zip" />
+	<type extension=".swf" mimetype="application/swf" />
+	<type extension=".rar" mimetype="application/x-rar-compressed" />
+	<type extension=".gz" mimetype="application/gzip" />
+	<type extension=".apk" mimetype="application/vnd.android.package-archive" />
+	
+	<!-- Web browser types -->
+	<type extension=".htm" mimetype="text/html" />
+	<type extension=".html" mimetype="text/html" />
+	<type extension=".php" mimetype="text/php " />
+	
+	<!-- Text types -->
+	<type extension=".txt" mimetype="text/plain" />
+	<type extension=".csv" mimetype="text/csv" />
+	<type extension=".xml" mimetype="text/xml" />
+	
+	
+</MimeTypes>

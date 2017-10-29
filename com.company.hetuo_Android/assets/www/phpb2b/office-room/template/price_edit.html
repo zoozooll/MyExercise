@@ -1,0 +1,124 @@
+<{assign var="page_title" value="`$_product_prices`"}>
+<{include file="header.html"}>
+<script type="text/javascript">
+function CheckInput(){
+	if($('#dataPricetName').val()==""){
+		alert("<{$_pls_input_price_title}>");
+		$('#dataPricetName').focus();
+		return false;
+	}
+	return true;
+}
+</script>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$_product_prices}></h2></div>
+
+	  <form method="post" action="price.php" onsubmit="$('#Save').attr('disabled',true);">
+	  <input type="hidden" name="formhash" value="<{$formhash}>">
+	  <input type="hidden" name="id" value="<{$item.id}>">
+	  <input type="hidden" name="product_id" value="<{$item.product_id}>">
+       <div class="hint"><{$_must_input_with_star}></div>
+        <table class="offer_info_content">
+					  <tr>
+				<th><font class="red">*</font> <{$_price_title}></th>
+				<td class="tdright"><input name="price[title]" type="text" id="dataPricetName" value="<{$item.title}>">
+				<font color="#666666"><{$_words_length}></font></td>
+			  </tr>
+			  <tr>
+				<th> <{$_source}></th>
+				<td class="tdright"><input name="price[source]" type="text" id="dataPricetName" value="<{$item.source}>">
+				</td>
+			  </tr>
+			  <{if $item.product_id}>
+			  <tr>
+				<th> <{$_product_name}></th>
+				<td class="tdright"><{$item.productname}></td>
+			  </tr>
+			  <{/if}>
+			  <{if $item.brand}>
+			  <tr>
+				<th><{$_brand_name}></th>
+				<td class="tdright"><{$item.brand}></td>
+			  </tr>
+			  <{else}>
+			  <tr>
+				<th><{$_brand_name}></th>
+				<td class="tdright"><input name="data[brand]" type="text" id="dataProductName" value="<{$item.brand}>" />
+				</td>
+			  </tr>
+			  <{/if}>
+			  <tr>
+                   <th><{$_price_area}></th>
+                      <td>
+				<div id="dataArea">
+					<select name="data[area_id1]" id="dataTradeAreaId1" class="level_1" ></select>
+					<select name="data[area_id2]" id="dataTradeAreaId2" class="level_2" ></select>
+					<select name="data[area_id3]" id="dataTradeAreaId3" class="level_3" ></select>
+				</div>
+				</td>
+              </tr>
+			  <{if $item.category_id}>
+			  <tr>
+			  	  <tr>
+				<th><{$_price_sorts}></th>
+				<td><{$item.category}></td>
+			  </tr>
+			  <{else}>
+			  <tr>
+			  	  <tr>
+				<th><{$_price_sorts}></th>
+				<td><select name="price[category_id]" id="ProductpriceCategory">
+				<{$Productcategories}>	
+				</select></td>
+			  </tr>
+			  <{/if}>
+			  <tr>
+				<th><{$_the_price_n}></th>
+				<td><input name="price[price]" type="text" id="dataProductName" value="<{$item.price}>">&nbsp;<select name="price[currency]"><{html_options options=$Monetaries selected=$item.currency}>
+				</select><font size="4" color=""> / </font><select name="price[units]">
+				<{html_options options=$Measuries selected=$item.units}>	
+				</select></td>
+			  </tr>
+			  <tr>
+                        <th><{$_price_description}></th>
+                        <td class="tdright"><textarea name="price[description]" id="dataProductContent" rows="8" wrap="VIRTUAL" style="width:370px;"><{$item.description}></textarea></td>
+                      </tr>
+			  <tr>
+				<th><{$_price_types}></th>
+				<td><select name="price[type_id]">
+				<{html_options options=$PriceTypes selected=$item.type_id}>		
+				</select></td>
+			  </tr>
+			  <tr>
+				<th><{$_price_trends}></th>
+				<td><select name="price[price_trends]">
+				<{html_options options=$PriceTrends selected=$item.price_trends}>	
+				</select></td>
+			  </tr>
+			  <tr>
+				<th class="circle_bottomleft"></th>
+				<td class="circle_bottomright"><input name="save" type="submit" id="save" value=" <{$_confirm_submit}> " onclick="return CheckInput();"></td>
+			  </tr>
+          </table>
+	</form>
+</div>
+</div>
+<script>
+var cache_path = "../";
+var app_language = '<{$AppLanguage}>';
+var area_id1 =<{$item.area_id1|default:0}>  ;
+var area_id2 = <{$item.area_id2|default:0}>  ;
+var area_id3 = <{$item.area_id3|default:0}>  ;
+</script>
+<script src="../scripts/jquery/jquery.validate"></script>
+<script src="../scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="../scripts/script_area.js"></script>
+<{include file="footer.html"}>

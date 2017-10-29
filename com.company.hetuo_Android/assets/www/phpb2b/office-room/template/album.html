@@ -1,0 +1,39 @@
+<{assign var="page_title" value="`$_company_album`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+      <div class="hint"><span class="btn_hint"><a href="album.php?do=edit" class="btn_publish"><{$_click_add}></a></span><{$_upload_business_license}></div>               
+     <table class="album" >
+          <{foreach from=$Items item=item}>
+          <tr bgcolor="<{cycle values="#CCFFCC,#ffffff"}>">
+          <th><img src="<{$item.image}>" alt="" border="0" width="80" height="80" /></th>
+          <td>
+          <div id="certs" align="left">
+            <ul>
+            <li><{$_title_n}><{$item.title}></li>
+            <li><{$_description}><{$item.description}></li>
+            <li style="list-style:none"><a href="album.php?do=edit&id=<{$item.id}>"><{$_modify}></a>&nbsp;<a href="album.php?do=del&id=<{$item.id}>"><{$_delete}></a></li>
+            </ul>
+          </div>
+          </td>
+          </tr>
+          <{foreachelse}>
+          <tr><td colspan="2"><div align="center"><{$_no_datas_now}></div></td></tr>
+          <{/foreach}>
+      </table>				
+     <table class="room_pages">
+          <tr>
+            <td><{$ByPages}></td>
+          </tr>
+     </table> 
+</div>
+</div>
+<{include file="footer.html"}>

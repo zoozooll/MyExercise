@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo:lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+<script type="text/javascript" src="skin/{echo: $SYSINFO['templates'];/}/js/changeStyle.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+        <div class="bigpart">
+        	<div class="infobox">
+                <h3 class="welcome">{echo:lp{m_welcome_ucenter};/}</h3>
+                <p class="darkgray">{echo: lp{m_last_login};/}: {echo:$user_info['last_login_time'];/}</p>
+                <p class="darkgray">{echo:lp{m_last_ip};/}: {echo:$user_info['last_ip'];/}</p>
+                <p class="darkgray">{echo:lp{m_you_have};/} <span class="highlight bold">{echo:$remind_num;/}</span> {echo:lp{m_site_rem};/}，<a href="modules.php?app=user_remind_info" class="highlight bold">{echo:lp{m_click_view};/}</a></p>
+            </div>
+        	<div class="title_uc"><h3>{echo:lp{m_order_remind};/}</h3></div>
+            <div class="infobox">
+                <p class="darkgray">{echo:lp{m_you_have};/} <span class="highlight bold">{echo:$order_num_need_pay;/}</span> {echo:lp{m_pending_payment_order};/}“<a href="modules.php?app=user_my_order" class="highlight bold">{echo:lp{m_payment_orders_be};/}</a>”{echo:lp{m_in_payment};/}</p>
+                <p class="darkgray">{echo:lp{m_you_have};/} <span class="highlight bold">{echo:$order_num_send;/}</span> {echo:lp{m_seller_shipped_orders};/}“<a href="modules.php?app=user_my_order" class="highlight bold">{echo:lp{m_shipped_orders};/}</a>”</p>
+                <p class="darkgray">{echo:lp{m_you_have};/} <span class="highlight bold">{echo:$order_num;/}</span> {echo:lp{m_order_not_evaluated};/}“<a href="modules.php?app=user_my_order" class="highlight bold">{echo:lp{m_completed_orders};/}</a>”{echo:lp{m_confirmed};/}</p>
+            </div>
+        	<div class="title_uc"><h3>{echo:lp{m_groupbuy_remind};/}</h3></div>
+            <div class="infobox">
+                <p class="darkgray">{echo:lp{m_you_have};/} <span class="highlight bold">{echo:$group_buy_num;/}</span> {echo:lp{m_groupbuy_attended_activities};/}“<a href="modules.php?app=user_group" class="highlight bold">{echo:lp{m_group_buy_completed};/}</a>”{echo:lp{m_purchased};/}</p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    {inc: require("modules/footer.php");/}
+</div>
+</body>
+</html>

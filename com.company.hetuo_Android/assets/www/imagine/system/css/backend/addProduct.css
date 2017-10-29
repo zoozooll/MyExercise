@@ -1,0 +1,9 @@
+@import "form.css";
+
+input#chk_code{
+    font-size:13px!important;
+}
+
+.input_lable{
+    width:15em;
+}

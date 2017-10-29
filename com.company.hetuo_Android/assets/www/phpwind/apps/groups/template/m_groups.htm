@@ -1,0 +1,560 @@
+<!--<?php
+print <<<EOT
+-->
+<!-- 
+EOT;
+if($cssForum){print <<<EOT
+-->
+<div class="c"></div>
+<link rel="stylesheet" type="text/css" href="$pwModeImg/app.css" />
+<!-- 
+EOT;
+}print <<<EOT
+-->
+<div id="content" class="fr">
+    <table width="100%">
+    <tr class="vt"><td height="400" style="padding-bottom:20px;">
+	<div style="padding:15px 15px 0;">
+    <div class="app-title cc">
+<!--
+EOT;
+if($m == 'o'){print<<<EOT
+-->
+		<a href="{$basename}space=1" class="gray fr">进入个人空间浏览&raquo;</a>
+<!--
+EOT;
+}print<<<EOT
+-->
+		<span>群组</span>
+	</div>
+    <div class="tabB cc">
+		<ul>
+			<li id="type_friend"><a href="{$basename}a=friend">朋友的群</a></li>
+			<li id="type_index"><a href="{$basename}">我的群组</a></li>
+			<li id="type_all"><a href="{$basename}a=all">所有群组</a></li>
+		</ul>
+			<a href="{$basename}a=create" class="app-post2">创建群组</a>
+	</div>
+<SCRIPT type="text/javascript" LANGUAGE="JavaScript" src="js/core/core.js"></SCRIPT>	
+<script language="JavaScript">
+setCurrent('type_$current_tab_id','type_index','current');
+</script>
+	</div>	
+<!--
+EOT;
+if (empty($a)) {print <<<EOT
+-->
+		<div id="content_main" class="fl">
+        	<div class="p15">
+<!--
+EOT;
+if($feeds){print <<<EOT
+-->
+			<div class="o-info-a">群组新鲜事</div>
+			<div class="p10">
+<!--
+EOT;
+foreach ($feeds as $key => $value) {print <<<EOT
+-->
+				<div class="dynamic-h cc b"><div></div><span>$key</span></div>
+<!--
+EOT;
+foreach ($value as $k => $v) {print <<<EOT
+-->
+				<div class="lh24 mt10">
+					<div class="lh24 mt10">
+						<p class="b"><a href="{$baseUrl}q=group&cyid=$k">$groupdb[$k]</a></p>
+						<div class="p10">
+							<ul>
+<!--
+EOT;
+foreach ($v as $feed) {print <<<EOT
+-->
+								<li><a href="u.php?uid=$feed[uid]">$feed[username]</a>&nbsp;$feed[descrip]</li>
+<!--
+EOT;
+}print <<<EOT
+-->
+							</ul>
+							<p class="b"><a href="{$baseUrl}&q=group&cyid=$k">查看更多&raquo;&raquo;</a></p>
+						</div>
+					</div>
+				</div>
+<!--
+EOT;
+}}print <<<EOT
+-->
+			</div>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+			<p class="o-info-a">暂无群组最新动态</p>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</div>
+		</div>
+		<div id="sidebar" class="fr lh24">
+		<div class="p10">
+<!--
+EOT;
+if (!empty($apply)) {print <<<EOT
+-->
+			<div class="b">我申请加入的群组</div>
+			<table width="100%">
+<!--
+EOT;
+foreach ($apply as $key => $value) {print <<<EOT
+-->
+				<tr class="vt tr4">
+					<th class="img-80"><a href="{$baseUrl}q=group&cyid=$value[id]"><img src="$value[cnimg]" /></a></th>
+					<td><div class="pl10"><a href="{$baseUrl}q=group&cyid=$value[id]" class="b">$value[cname]</a>
+					<p>申请时间:<br />$value[addtime]</p></div></td>
+				</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</table>
+<!--
+EOT;
+}print <<<EOT
+-->				
+			<div class="b">我加入的群组</div>
+			<table width="100%">
+<!--
+EOT;
+if (!empty($colonyids)) {
+foreach ($group_own as $key => $value) {print <<<EOT
+-->
+				<tr class="vt tr4">
+					<th class="img-80"><a href="{$baseUrl}q=group&cyid=$value[id]"><img src="$value[cnimg]" /></a></th>
+					<td><div class="pl10"><a href="{$baseUrl}q=group&cyid=$value[id]" class="b">$value[cname]</a>
+					<p>$value[addtime] 创建</p>
+					<div>群主:<a href="u.php?uid=$value[uid]">$value[admin]</a></div></div>
+					</td>
+				</tr>
+<!--
+EOT;
+}
+foreach ($group_other as $key => $value) {print <<<EOT
+-->
+				<tr class="vt tr4">
+					<th class="img-80"><a href="{$baseUrl}q=group&cyid=$value[id]"><img src="$value[cnimg]" /></a></th>
+					<td><div class="pl10"><a href="{$baseUrl}q=group&cyid=$value[id]" class="b">$value[cname]</a>
+					<p>$value[addtime] 加入</p>
+					<div>群主:<a href="u.php?uid=$value[uid]">$value[admin]</a></div></div>
+					</td>
+				</tr>
+<!--
+EOT;
+}} else {print <<<EOT
+-->
+				<tr class="tr4">
+					<td>还没有加入任何群组</td>
+				</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+				<tr>
+					<td colspan="2" style="padding:5px 10px;"><a href="{$basename}a=my">查看我加入的所有群组&raquo;&raquo;</a></td>
+				</tr>
+			</table>
+			</div>
+		</div>
+<!--
+EOT;
+} elseif ($a == 'my') {print <<<EOT
+-->
+	<div class="p15">
+	<div class="o-info-a">
+<!--
+EOT;
+if (!$total['sum']) {print <<<EOT
+-->
+		您还没加入任何群组！
+<!--
+EOT;
+} else {
+$extra = '我';
+if ($total['creates']) {print <<<EOT
+-->
+		我创建了{$total[creates]}个群
+<!--
+EOT;
+$extra = '，';
+}if($total['adds']){print <<<EOT
+-->
+		{$extra}加入了{$total[adds]}个群
+<!--
+EOT;
+}}print <<<EOT
+-->
+		&nbsp;&nbsp;<a href="{$basename}">返回</a>
+	</div>
+	<ul id="list-groups" class="cc list-box-a mt10">
+<!--
+EOT;
+if ($group) {
+foreach ($group as $value) {print <<<EOT
+-->
+		<li>
+		<dl>
+		<dt><div><table style="height:100%;width:100%;"><tr><td class="tac"><a href="{$baseUrl}q=group&cyid=$value[id]"><img src="$value[cnimg]" onload="imgResize(this,100)" /></a></td></tr></table></div></dt>
+		<dd><a href="{$baseUrl}q=group&cyid=$value[id]" class="b f14">$value[cname]</a>
+			<div>已有$value[members]人加入</div>
+<!--
+EOT;
+if ($value['admin'] == $windid) {print <<<EOT
+-->
+			我是群主
+<!--
+EOT;
+}print <<<EOT
+-->
+		</dd>
+		</dl>
+		</li>
+<!--
+EOT;
+}}print <<<EOT
+-->
+	</ul>
+	<div class="mt10 cc">$pages</div>
+    </div>
+<!--
+EOT;
+} elseif ($a == 'friend') {print <<<EOT
+-->
+	<div class="p15">
+	<div class="o-info-a">好友共加入了{$total}个群</div>
+	<ul id="list-groups" class="cc list-box-a">
+<!--
+EOT;
+if ($group) {
+foreach ($group as $value) {print <<<EOT
+-->
+		<li>
+		<dl>
+		<dt><div><table style="height:100%;width:100%;"><tr><td class="tac"><a href="{$baseUrl}q=group&cyid=$value[id]"><img src="$value[cnimg]" onload="imgResize(this,100)" /></a></td></tr></table></div></dt>
+		<dd class="fl" style="width:215px;overflow:hidden;"><a href="{$baseUrl}q=group&cyid=$value[id]" class="b f14">$value[cname]</a>
+			<div>加入该群的好友：
+<!--
+EOT;
+$extra = '';
+foreach ($value['friends'] as $k => $v) {print <<<EOT
+-->
+				$extra<a href="u.php?uid=$k">$v</a>
+<!--
+EOT;
+$extra = '，';
+}if ($value['ifadd']){print <<<EOT
+-->
+				，以及我
+<!--
+EOT;
+}print <<<EOT
+-->
+			</div>
+			群主：<a href="u.php?username=$value[admin]">$value[admin]</a>
+		</dd>
+		</dl>
+		</li>
+<!--
+EOT;
+}} else {print <<<EOT
+-->
+		<li>您的好友还未加入群组</li>
+<!--
+EOT;
+}print <<<EOT
+-->
+	</ul>
+	<div class="mt10 cc">$pages</div>
+<script language="JavaScript" src="js/core/changeview.js"></script>
+<script language="JavaScript">
+var frist = New(changView,['list-groups','li',1]);
+</script>
+<div class="c"></div>
+	</div>
+<!--
+EOT;
+} elseif ($a == 'all') {print <<<EOT
+-->
+	<div id="content_main" class="fl">
+	<div class="p15">
+		<div class="o-info-a">共有{$total}个群</div>
+		<div class="group-list">
+			<table width="100%">
+<!--
+EOT;
+if (!empty($group)) {
+foreach ($group as $key => $value) {print <<<EOT
+-->
+				<tr class="tr3">
+					<th class="img-80 vt"><a href="{$baseUrl}q=group&cyid=$value[id]"><img src="$value[cnimg]" /></a></th>
+					<td><a href="{$baseUrl}q=group&cyid=$value[id]" class="f14 b">{$value[cname]}</a>
+<!--
+EOT;
+if (isset($cMembers[$key])) {print <<<EOT
+-->
+						<span class="o-tips fr" style="padding:4px 10px;line-height:1;margin-right:20px;">你已经加入该群</span>
+<!--
+EOT;
+}print<<<EOT
+-->	
+						<br />
+						类型： {$o_classdb[$value[classid]]}<br />
+						成员： {$value[members]}<br />
+						创建： {$value[createtime]}
+						<!--简介： {$value[descrip]}-->
+					</td>
+					<td width="70" class="tar">
+<!--
+EOT;
+if(isset($cMembers[$key])){print <<<EOT
+-->
+			<a href="{$baseUrl}q=group&a=out&cyid=$value[id]" onclick="return ajaxurl(this);"  class="del">退出该群</a><br />
+<!--
+EOT;
+}else{print <<<EOT
+-->
+			<a href="{$baseUrl}q=group&a=join&cyid=$value[id]" onclick="return ajaxurl(this);">加入该群</a><br />
+<!--
+EOT;
+}print<<<EOT
+-->		
+			<a href="{$baseUrl}q=group&cyid=$value[id]">浏览该群</a><br />
+<!--
+EOT;
+if($db_share_open && !$shareGM){print<<<EOT
+-->
+			<a href="javascript:;" class="a-reply" onclick="sendmsg('operate.php?action=share&ajax=1&type=group&id=$value[id]','',this.id);">分享<span>+</span></a><br />
+<!--
+EOT;
+}print<<<EOT
+-->
+			</td></tr>
+<!--
+EOT;
+}}print <<<EOT
+-->
+			</table>
+		</div>
+		<div class="mt10 cc">$pages</div>
+	</div>
+    </div>
+	<div id="sidebar" class="fr">
+		<div class="p10 lh24">
+		<h2>搜索群组</h2>
+		<form action="{$basename}a=$a" method="post">
+		<div class="mb10"><input name="keyword" type="text" size="12" class="input" /><span class="button"><span><button type="submit">搜索</button></span></span>&nbsp;&nbsp;&nbsp;<a style="cursor:pointer" onclick="read.open('menu_search',this.id,2)" id="id_search">高级</a></div></form>
+		<div id="menu_search" class="menu-post" style="display:none">
+			<div class="menu-b">
+				<form action="{$basename}q=$q&a=$a" method="post">
+				<table width="300" cellspacing="0" cellpadding="5">
+					<tr>
+						<th colspan="2" class="h" style="cursor:move" onmousedown="read.move(event);"><span class="fr" style="margin-top:2px;cursor:pointer" onclick="closep();"><img src="$imgpath/close.gif" /></span>群高级搜索</th>
+					</tr>
+					<tr class="tr3">
+						<td width="21%" align="center">群名称：</td>
+						<td><input type="text" name="keyword" class="input" size="25" /></td>
+					</tr>
+					<tr class="tr3">
+						<td align="center">类别：</td>
+						<td>
+							<select name="cid">
+<!--
+EOT;
+foreach ($o_cate as $key => $value) {print <<<EOT
+-->
+								<optgroup label="{$forum[$key][name]}">
+<!--
+EOT;
+foreach ($value as $k => $v) {print <<<EOT
+-->
+								<option value="$k">$v</option>
+<!--
+EOT;
+}print <<<EOT
+-->
+								</optgroup>
+<!--
+EOT;
+}print <<<EOT
+-->
+
+							</select>
+						</td>
+					</tr>
+					<tr class="tr3">
+						<td align="center">成员数：</td>
+						<td><input type="text" name="members" class="input" size="8" /> 以上</td>
+					</tr>
+					<tr class="tr3">
+						<td align="center"></td>
+						<td><input type="checkbox" name="friends" value="1" /> 好友加入的群</td>
+					</tr>
+				</table>
+				<div style="margin:.5em;text-align:center">
+                <span class="button"><span><button type="submit">提 交</button></span></span></div>
+				</form>
+			</div>
+		</div>
+		<div class="c"></div>
+		<h2 class="mt10">浏览群组分类</h2>
+		<ul>
+			<li><a href="{$basename}a=all" id="cid_all"><span class="pdr">所有分类</span></a></li>
+<!--
+EOT;
+foreach ($o_cate as $key => $value) {print <<<EOT
+-->	
+			<li>{$forum[$key][name]}<ul class="pl10">
+<!--
+EOT;
+foreach ($value as $k => $v) {print <<<EOT
+-->
+				<li><span class="gray2">┣ </span><a href="{$basename}q=$q&a=all&cid=$k" id="cid_$k">$v</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</ul>
+			</li>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</ul>
+<!--
+EOT;
+print <<<EOT
+-->
+<script language="JavaScript">
+setCurrent('cid_$cid','cid_all','current');
+</script>
+</div>
+	</div>
+	<div class="c"></div>
+<!--
+EOT;
+} elseif ($a == 'create') {print <<<EOT
+-->
+<div class="p15">
+<div class="o-info-a b">
+创建新群组
+</div>
+<script type="text/javascript">
+var cost = '$costs';
+var dosubmit = function(form){
+	if(cost){
+		showDialog("confirm","创建一个群组需要支付 "+cost+",您确定要创建吗?",0,function(){
+			form.submit();
+		});
+	}else{
+		form.submit();
+	}
+}
+</script>
+<form action="{$basename}a=$a" method="post" onsubmit="dosubmit(this);return false;">
+<input type="hidden" name="step" value="3" />
+<input type="hidden" name="verify" value="$verifyhash" />
+<table cellpadding="0" cellspacing="0" width="100%">
+	<tr class="tr6">
+		<td>分类：</td>
+		<td>
+			<select name="cid">
+				<option>&nbsp;&nbsp;选择关联版块</option>
+<!--
+EOT;
+foreach ($o_cate as $key => $value) {print <<<EOT
+-->
+				<optgroup label="{$forum[$key][name]}">
+<!--
+EOT;
+foreach ($value as $k => $v) {print <<<EOT
+-->
+				<option value="$k">$v</option>
+<!--
+EOT;
+}print <<<EOT
+-->
+				</optgroup>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</select>
+		</td>
+	</tr>
+	<tr class="tr6">
+		<td width="20%">群组名称：</td>
+		<td><input class="input" type="text" name="cname" id="cname" />&nbsp;<span id="cname_warn" class="gray">限 20 字节</span></td>
+	</tr>
+	<tr class="tr6 vt">
+		<td>简介:</td>
+		<td><textarea name="descrip" id="descrip" style="width:350px;height:70px"></textarea>
+		<div id="descrip_warn" class="gray">限 255 字节</div>
+		</td>
+	</tr>
+<!--
+EOT;
+if ($o_groups_gdcheck) {print <<<EOT
+-->
+	<tr class="tr6">
+		<td align="right">认证码:</td>
+		<td>
+			<img id="ckcode" style="cursor:pointer;display:none;margin-bottom:1px;" onclick="this.src='ck.php?nowtime='+new Date().getTime();" alt="看不清楚，换一张" />
+			<div><input class="input" onfocus="showCK();" type="text" name="gdcode" id="gdcode" style="width:50px;" tabindex="3"  /></div>
+		</td>
+	</tr>
+<script language="JavaScript">
+function showCK(){
+	getObj('ckcode').style.display="";
+	if (getObj('ckcode').src.indexOf('ck.php') == -1) {
+		getObj('ckcode').src = 'ck.php?nowtime=' + new Date().getTime();
+	}
+}
+</script>
+<!--
+EOT;
+}if($o_groups_qcheck){print <<<EOT
+-->
+	<tr class="tr6">
+		<td align="right">验证问答</td>
+		<td>
+			<div> {$db_question[$qkey]} （正确答案:{$db_answer[$qkey]}）</div>
+			<input class="input" name="qanswer" id="qanswer" size="25" tabindex="7" />
+			<input type="hidden" name="qkey" id="qkey" value="$qkey" />
+		</td>
+	</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+	<tr class="tr6">
+		<td></td>
+		<td>
+		<span class="button"><span><button type="submit">注册新群组</button></span></span>
+		</td>
+	</tr>
+</table>
+</form>
+<script language="JavaScript">
+var charset = '$db_charset';
+initCheckTextNum('cname','cname_warn',20);
+initCheckTextNum('descrip','descrip_warn',255);
+</script>
+</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+	</td></tr></table>
+</div>
+<!--
+EOT;
+?>-->

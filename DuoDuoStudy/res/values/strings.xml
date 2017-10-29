@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">朵朵学习通</string>
+	<string-array name="grid">
+		<item name="bookshop">朵朵书店</item>
+		<item name="bookrack">我的书架</item>
+		<item name="teaching">同步教学</item>
+	<!-- 	<item name="discuss">讨论园地</item>
+		<item name="practise">我的练习</item>
+		<item name="work">我的作业</item>
+		<item name="exam">我的考试</item> -->
+	</string-array>
+	
+	<!-- login -->
+	<string name="account">账号：</string>
+	<string name="password">密码：</string>
+	<string name="mindpswd">记住密码</string>
+	<string name="autologin">自动登录</string>
+	
+	<!-- public -->
+	<string name="time_out_exception">链接服务器超时请检查您的网络或稍后再试</string>
+	<string name="close_menu">关闭菜单</string>
+	
+	<!-- Lesson -->
+	<string name="sysnlesson">同步教学</string>
+	<string name="teacher">名师指导</string>
+	<string name="lectureTeacher">讲师:</string>
+	<string name="objectCourse">课件简介:</string>
+	<string name="search_label">多多网</string>
+	<string name="search_hint">请输入搜索的关键字</string>
+	<string name="sysnclassSearch">同步课程搜索</string>
+	<string name="sysnClassProject">科目:</string>
+	<string name="sysnClassName">年级:</string>
+	<string name="sysnClassType">类别:</string>
+	<string name="sysnClassFrom">来源:</string>
+	<string name="sysnClassLength">篇幅:</string>
+	<string name="sysnClassSelect">已选条件:</string>
+	<string name="gotobook">逛书店去</string>
+	<string name="heightSearch">高级搜索</string>
+	<string name="find_search">搜索</string>
+	<string name="collect">加入收藏</string>
+	<string name="delete">删除</string>
+	<string name="allselect">全选</string>
+	<string name="finish">完成</string>
+	<string name="download">下载</string>
+	<string name="downloading">正在下载</string>
+	<string name="downloadFinish">下载完成</string>
+
+	<!-- 科目 -->
+	<string name="allProject">全部</string>
+	<string name="chinese">语文</string>
+	<string name="math">数学</string>
+	<string name="english">英语</string>
+	<string name="physical">物理</string>
+	<string name="chemical">化学</string>
+	<string name="computer">计算机</string>
+	<!-- 班级 -->
+	<string name="allGrade">全部</string>
+	<string name="gradeOne">一</string>
+	<string name="gradeTwo">二</string>
+	<string name="gradeThree">三</string>
+	<string name="gradeFour">四</string>
+	<string name="gradeFive">五</string>
+	<string name="gradeSix">六</string>
+	<string name="gradeSeven">初一</string>
+	<string name="gradeEight">初二</string>
+	<string name="gradeNine">初三</string>
+	<string name="useSchool">小学通用</string>
+	<string name="useMiddleSchool">初中通用</string>
+	<string name="allUse">全部通用</string>
+
+	<!-- 类别 -->
+	<string name="allType">全部</string>
+	<string name="sysnCourseware">同步课件</string>
+	<string name="teacherGuidance">名师辅导</string>
+	<string name="schoolCourseware">名校课件</string>
+
+	<!-- 来源 -->
+	<string name="allFrom">全部</string>
+	<string name="fromSchool">学校</string>
+	<string name="fromPublish">出版社</string>
+	<string name="fromEducation">教育机构</string>
+	<string name="fromSelf">个人</string>
+
+	<!-- 篇幅 -->
+	<string name="allArticles">全部</string>
+	<string name="bookOne">上册</string>
+	<string name="bookTwo">下册</string>
+	<string name="bookAll">全册</string>
+
+	<!-- 下载 -->
+	<string name="myResource">我的资料库</string>
+	<string name="allPauseDownload">全部暂停</string>
+
+	<string name="myselfInfo">个人信息</string>
+	<string name="updataPassword">修改密码</string>
+	<string name="accountMessage">账户信息</string>
+	<string name="currentPassword"> 当前密码:</string>
+	<string name="newPassword"> 新密码:</string>
+	<string name="confirmPassword">确认新密码:</string>
+	<string name="confirm">确定</string>
+	<string name="backShelf">返回书架</string>
+	<string name="operate">操作</string>
+	<string name="continue_download">继续下载</string>
+
+
+	<!-- 下载管理 -->
+	<string name="notif_finish_tickertext">下载完成</string>
+	<string name="netException">连接失败，请检查网络</string>
+	<string name="can_not_open">"无法打开。"</string>
+	<string name="notif_networkstateerror_tickertext">无可用网络连接，下载终止，请检查网络</string>
+	<string name="notif_downloadprocesserror_tickertext">下载过程中出错</string>
+	<string name="notif_urlnotvaliderror_tickertext">下载链接不可用</string>
+	<string name="notif_notenoughavailableblockserror_tickertext">下载失败，磁盘空间不足，请及时清理磁盘空间</string>
+	<string name="notif_sdcardcannotuseerror_tickertext">下载失败，SD卡不可用，请检查</string>
+	<string name="notif_prestart_tickertext">正在准备下载</string>
+	<string name="notif_error_tickertext">下载终止，自动重试中</string>
+	<string name="notif_pause_tickertext">暂停下载</string>
+	<string name="notif_cancel_tickertext">取消下载</string>
+	<string name="notif_wait_tickertext">等待下载</string>
+	<string name="notif_fail_tickertext">下载失败</string>
+	<string name="failing">失败，请重试</string>
+	<string name="pause_downloading">暂停下载</string>
+	<string name="start_downloading_video">开始下载</string>
+	<string name="downloading_path_notnull">下载路径不能为空!</string>
+	<!-- 登陆 -->
+
+	<string name="userinfoerror">用户名或密码出现错误</string>
+	<string name="current_pswd_codes">(6-20个字符，区分大小写)</string>
+	<string name="update_pw_success">恭喜你，密码修改成功</string>
+	<string name="update_pw_fail">密码修改失败,请重新修改</string>
+	<string name="sdcard_read_fail">SD卡不存在或者已被损坏</string>
+	<string name="pay_success">恭喜你,充值成功!</string>
+	<string name="pay_fail">很遗憾，充值失败，请重试</string>
+
+	<!-- 书店 -->
+	<string name="storeBookShell">书架</string>
+	<string name="storeSearchMore">高级搜索</string>
+	<string name="storeAll">全部</string>
+	<string name="storeBooks">书籍</string>
+	<string name="storeCoursewares">课件</string>
+	<string name="storeExercises">习题</string>
+	<string name="storeExampapers">考卷</string>
+	<string name="storeGroupshop">团购</string>
+	<string name="storeSortPrice">价格</string>
+	<string name="storeSortTrunover">成交</string>
+	
+	<string name="storeMemuTitleCar">购物车</string>
+	<string name="storeMemuTitleFavorite">收藏夹</string>
+	<string name="storeMemuTitleRefresh">刷新</string>
+	<string name="storeMemuTitleSearch">搜索</string>
+
+	<string name="storeListAuthor">作者：</string>
+	<string name="storeListPrice">价格：</string>
+	<string name="storeBookNumStr">人学过</string>
+
+	<string name="storeWaitting">正在获取数据，请稍等...</string>
+	<string name="storeEmptyString">没有找到相关数据</string>
+
+
+	<string name="shoppingCarProName">名称</string>
+	<string name="shoppingCarProPrice">价格</string>
+	<string name="shoppingCarProNum">数量</string>
+	<string name="shoppingCarItemMoney">小结</string>
+	<string name="shoppingCarCtrl">操作</string>
+
+	<string name="shoppingCarMsgNoSelected">请选择购物选项！</string>
+	<string name="shoppingCarMsgCreateOrderSuccess">生成订单成功！！！</string>
+	<string name="shoppingCarMsgCreateOrderFail">生成订单失败！！！</string>
+	<string name="shoppingCarMsgBusinessSuccess">结算成功！！！</string>
+	<string name="shoppingCarMsgAddShellSuccess">加入书架成功！！！</string>
+	<string name="shoppingCarMsgAddShellFail">加入书架失败！！！</string>
+	<string name="shoppingCarMsgMoneyLess">结算失败，余额不足！！！</string>
+
+	<string name="shoppingOrderListOrderId">编号</string>
+	<string name="shoppingOrderListProName">商品名称</string>
+	<string name="shoppingOrderListOrderAccount">订单金额</string>
+	<string name="shoppingOrderListOrderDate">下单时间</string>
+	<string name="shoppingOrderListOrderState">状态</string>
+	<string name="shoppingOrderListCtrl">操作</string>
+
+	<!-- 找回密码 -->
+	<string name="acquire_str_code">获取验证码</string>
+	<string name="reset_str_pswd">重置密码</string>
+	<string name="finish_find_pswd">完成</string>
+	<!-- 书架 -->
+	<string name="bookshelf_toptitle">书架</string>
+	<string name="bookshelf_topgoshop">逛书店去</string>
+	<string name="bookshelf_topsearch">高级搜索</string>
+
+	<string name="bookshelf_author">作者：</string>
+	<string name="bookshelf_score">评分：</string>
+	<string name="bookshelf_comment">(46人评价)</string>
+	<string name="bookshelf_lastraed">上次阅读：</string>
+	<string name="bookshelf_lasttime">2011-5-26 12:00:00</string>
+	<string name="bookshelf_bookcount">当前已有 2本</string>
+	<string name="bookshelf_gift">赠送</string>
+	<string name="bookshelf_recommend">推荐</string>
+	<string name="bookshelf_note">笔记</string>
+	<string name="bookshelf_label">书签</string>
+	<string name="bookshelf_pag">页数超出范围</string>
+	
+	<string name="bookshelfgift_CLASSNAMTES">同学</string>
+	<string name="bookshelfgift_HOMEMMB">家庭</string>
+	<string name="bookshelfgift_TEACHERORSTU">老师</string>
+	<string name="bookshelfgift_FRIEND">好友</string>
+<string name="shelf_menu_download">下载管理</string>
+
+	<!-- 用户中心 -->
+	<string name="uc_keep">保存</string>
+	<string name="uc_pro">省</string>
+	<string name="uc_city">市</string>
+	<string name="uc_country">(区)县</string>
+	<string name="uc_id">ID</string>
+	<string name="uc_name">姓名</string>
+	<string name="uc_sex">性别</string>
+	<string name="uc_mail">男</string>
+	<string name="uc_femaile">女</string>
+	<string name="uc_birthday">生日</string>
+	<string name="uc_year">年</string>
+	<string name="uc_month">月</string>
+	<string name="uc_day">日</string>
+	<string name="uc_school">学校</string>
+	<string name="uc_class">班级</string>
+	<string name="uc_phone">联系电话</string>
+	<string name="uc_email">电子邮箱</string>
+	<string name="uc_qq">QQ号码</string>
+	<string name="uc_place">所在地区</string>
+	<string name="uc_language">座右铭</string>
+	<string name="uc_sets">隐私设置</string>
+	
+	
+</resources>
+ 

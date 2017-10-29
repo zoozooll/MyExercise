@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{echo: $header['title'];/}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="{echo: $header['keywords'];/}" />
+<meta name="description" content="{echo: $header['description'];/}" />
+<base href="{echo: $baseUrl;/}" />
+<link href="skin/{echo: $SYSINFO['templates'];/}/css/shop_{echo: $SHOP['shop_template'];/}.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="skin/{echo: $SYSINFO['templates'];/}/js/changeStyle.js"></script>
+<style>
+.shop_header {background:#4A9DA5;}
+{sta:if($SHOP['shop_template_img'])[exc]}
+.shop_header {background:transparent url({echo: $SHOP['shop_template_img'];/}) no-repeat scroll 0 0;}
+{end:if/}
+
+table { border-collapse:collapse; border:solid #D7D7D7; border-width:1px 0 0 1px; margin:5px auto;}
+table th, table td { border:solid #D7D7D7; border-width:0 1px 1px 0; padding:2px; line-height:24px;}
+table th {background:#F8F8F8;}
+
+th,td {text-align:center;}
+
+
+</style>
+</head>
+<body>
+<div id="wrapper">
+	{inc: require("shop/header.php");/}
+	<div class="clear"></div>
+	<div class="shop_header">
+		<h1>{echo: $SHOP['shop_name'];/}</h1>
+		{inc: require("shop/menu.php");/}
+	</div>
+	{inc: require("shop/left.php");/}
+<div class="bigpart">
+	<div class="shop_notice top10">
+        <div class="head_line"><div class="bg_left"></div><div class="bg_right"></div></div>
+        <div class="top"><h2><a class="highlight" href="javascript:;">{echo:lp{s_com};/}</a></h2></div>
+		<div class="c_m">
+		<table width="98%">
+		<tr><td style="background: #F4F9FF; text-align:right; border-right:0px; font-weight:bold;" colspan="2">{echo:lp{s_seller_credit};/}：{echo:$seller_credit;/} <td style="text-align:left; background: #F4F9FF; border-right:0px;"><span class="icon{echo:$seller_integral['int_grade'];/}" style="float:left;"></span></td></td><td style="background: #F4F9FF; text-align:right;" colspan="3">{echo: lp{s_good_pro};/}：{echo:$seller_percentage;/}%&nbsp;</td></tr>
+		<tr>
+			<th width="30"></th>
+			<th width="100">{echo:lp{s_week};/}</th>
+			<th width="110">{echo:lp{s_month};/}</th>
+			<th width="120">{echo:lp{s_sex_month};/}</th>
+			<th width="130">{echo:lp{s_before_smonth};/}</th>
+			<th>{echo:lp{s_sum};/}</th>
+		</tr>
+		<tr>
+			<td>{echo:lp{s_good};/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},1,'{echo:$LastWeek;/}',1);">{echo:$seller_credit_weed_2;/}</a></td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},1,'{echo:$LastMonth;/}',1);">{echo:$seller_credit_month_2;/}</a></td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},1,'{echo:$SexMonth;/}',1);">{echo:$seller_credit_sex_2;/}</a></td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},1,'-1',1);">{echo:$seller_credit_before_2;/}</a></td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},1,'',1);">{echo:$seller_credit_num_2;/}</a></td>
+		</tr>
+		<tr>
+			<td>{echo:lp{s_centre};/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},0,'{echo:$LastWeek;/}',1);">{echo:$seller_credit_weed_1;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},0,'{echo:$LastMonth;/}',1);">{echo:$seller_credit_month_1;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},0,'{echo:$SexMonth;/}',1);">{echo:$seller_credit_sex_1;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},0,'-1',1);">{echo:$seller_credit_before_1;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},0,'',1);">{echo:$seller_credit_num_1;/}</td>
+		</tr>
+		<tr>
+			<td>{echo:lp{s_diff};/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},-1,'{echo:$LastWeek;/}',1);">{echo:$seller_credit_weed_0;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},-1,'{echo:$LastMonth;/}',1);">{echo:$seller_credit_month_0;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},-1,'{echo:$SexMonth;/}',1);">{echo:$seller_credit_sex_0;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},-1,'-1',1);">{echo:$seller_credit_before_0;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},-1,'',1);">{echo:$seller_credit_num_0;/}</td>
+		</tr>
+		<tr>
+			<td>{echo:lp{s_sum};/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},'','{echo:$LastWeek;/}',1);">{echo:$seller_credit_weed;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},'','{echo:$LastMonth;/}',1);">{echo:$seller_credit_month;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},'','{echo:$SexMonth;/}',1);">{echo:$seller_credit_sex;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},'','-1',1);">{echo:$seller_credit_before;/}</td>
+			<td><a href="javascript:get_appraise('buyer',{echo:$user_id;/},'','',1);">{echo:$seller_credit_num;/}</td>
+		</tr>
+		</table>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<div class="shop_notice top10">
+        <div class="head_line"><div class="bg_left"></div><div class="bg_right"></div></div>
+        <div class="top"><h2><a class="highlight" href="javascript:;">{echo:lp{s_buyer_com};/}</a></h2></div>
+		<div class="c_m">
+		<table width="98%">
+		<tr><td style="background: #F4F9FF; text-align:right; border-right:0px; font-weight:bold;" colspan="2">{echo:lp{s_buyer_credit};/}：{echo:$buyer_credit;/} <td style="text-align:left; background: #F4F9FF; border-right:0px;"><span class="icon{echo:$buyer_integral['int_grade'];/}" style="float:left;"></span></td></td><td style="background: #F4F9FF; text-align:right;" colspan="3">{echo: lp{s_good_pro};/}：{echo:$buyer_percentage;/}%&nbsp;</td></tr>
+		<tr>
+			<th width="30"></th>
+			<th width="100">{echo:lp{s_week};/}</th>
+			<th width="110">{echo:lp{s_month};/}</th>
+			<th width="120">{echo:lp{s_sex_month};/}</th>
+			<th width="130">{echo:lp{s_before_smonth};/}</th>
+			<th>{echo:lp{s_sum};/}</th>
+		</tr>
+		<tr>
+				<td>{echo:lp{s_good};/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},1,'{echo:$LastWeek;/}',1);">{echo:$buyer_credit_weed_2;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},1,'{echo:$LastMonth;/}',1);">{echo:$buyer_credit_month_2;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},1,'{echo:$SexMonth;/}',1);">{echo:$buyer_credit_sex_2;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},1,'-1',1);">{echo:$buyer_credit_before_2;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},1,'',1);">{echo:$buyer_credit_num_2;/}</td>
+		</tr>
+		<tr>
+				<td>{echo:lp{s_centre};/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},0,'{echo:$LastWeek;/}',1);">{echo:$buyer_credit_weed_1;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},0,'{echo:$LastMonth;/}',1);">{echo:$buyer_credit_month_1;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},0,'{echo:$SexMonth;/}',1);">{echo:$buyer_credit_sex_1;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},0,'-1',1);">{echo:$buyer_credit_before_1;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},0,'',1);">{echo:$buyer_credit_num_1;/}</td>
+		</tr>
+		<tr>
+				<td>{echo:lp{s_diff};/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},-1,'{echo:$LastWeek;/}',1);">{echo:$buyer_credit_weed_0;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},-1,'{echo:$LastMonth;/}',1);">{echo:$buyer_credit_month_0;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},-1,'{echo:$SexMonth;/}',1);">{echo:$buyer_credit_sex_0;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},-1,'-1',1);">{echo:$buyer_credit_before_0;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},-1,'',1);">{echo:$buyer_credit_num_0;/}</td>
+		</tr>
+		<tr>
+				<td>{echo:lp{s_sum};/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},'','{echo:$LastWeek;/}',1);">{echo:$buyer_credit_weed;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},'','{echo:$LastMonth;/}',1);">{echo:$buyer_credit_month;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},'','{echo:$SexMonth;/}',1);">{echo:$buyer_credit_sex;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},'','-1',1);">{echo:$buyer_credit_before;/}</td>
+			<td><a href="javascript:get_appraise('seller',{echo:$user_id;/},'','',1);">{echo:$buyer_credit_num;/}</td>
+		</tr>
+		</table>
+		</div>
+	</div>
+	<!-- 评介内容列表 begin -->
+	<div id="comment_list" class="shop_notice top10">
+    	<div class="top">
+        	<div class="line"></div><ul><li id="seller_selected" class="selected"><a href="javascript:get_appraise('buyer',{echo:$user_id;/},'','',1);" hidefocus="true">{echo:lp{s_from_seller_credit};/}</a></li>
+			<li id="buyer_selected" class=""><a href="javascript:get_appraise('seller',{echo:$user_id;/},'','',1);" hidefocus="true">{echo:lp{s_from_buyer_credit};/}</a></li></ul>
+        </div>
+        <div class="c_m" style="border-bottom:1px solid #CCCCCC;" id="credit">
+
+		</div>
+	</div>
+	<!-- 评介内容列表 end -->
+</div>
+	{inc:  require("shop/footer.php");/}
+</div>
+<script language="JavaScript" src="servtools/ajax_client/ajax.js"></script>
+<script>
+function checkForm() {
+	var name = document.getElementsByName("name")[0];
+	var textareac = document.getElementById("textareac")[0];
+	if(!name.value) {
+		alert("{echo:lp{s_login_pls};/}");
+		return false;
+	}
+	if(textareac.value) {
+		alert("{echo:lp{s_type_comm_pls};/}");
+		return false;
+	}
+	return true;
+}
+
+function get_appraise(t,userid,credit,time,page){
+	var new_credit=credit;
+	var new_time=time;
+	ajax("do.php?act=shop_appraise&t="+t+"&userid="+userid+"&credit="+credit+"&time="+time+"&page="+page,"GET",'',function(data){
+		var obj_credit = document.getElementById("credit");
+		var seller_selected=document.getElementById("seller_selected");
+		var buyer_selected=document.getElementById("buyer_selected");
+		if(data!='-1'){
+			var obj = document.getElementById("page");
+			var prepage=data.prepage;
+			var nextpage=data.nextpage;
+			var firstpage=data.firstpage;
+			var lastpage=data.lastpage;
+			var page=data.page;
+			var countpage=data.countpage;
+			var seller_credit='';
+			var pagehtml="<tr><td id='page' colspan='4'><A href=\"javascript:get_appraise('"+t+"\',"+userid+",'"+new_credit+"','"+time+"',"+firstpage+");\">首页</A> <A href=\"javascript:get_appraise('"+t+"',"+userid+",'"+new_credit+"','"+time+"',"+prepage+");\">上一页</A> <A href=\"javascript:get_appraise('"+t+"',"+userid+",'"+new_credit+"','"+time+"',"+nextpage+");\">下一页</A> <A href=\"javascript:get_appraise('"+t+"',"+userid+",'"+new_credit+"','"+time+"',"+lastpage+");\">尾页</A> 当前第"+page+"页/总共"+countpage+"页</td></tr>";
+
+			var result = data.result;
+			var credit='';
+
+			if(t=='buyer'){
+
+				seller_selected.className="selected";
+				buyer_selected.className="";
+				for($i=0;$i<result.length;$i++){
+					credit=result[$i].seller_credit;
+					if(credit=='1'){
+						seller_credit="好";
+					}else
+					if(credit=='0'){
+						seller_credit="中";
+					}else
+					if(credit=='-1'){
+						seller_credit="差";
+					}
+					credit+='<tr><td class="center" width="30">'+seller_credit+'</td><td style="text-align:left" >'+result[$i].seller_evaluate+'<br />[解释]'+result[$i].seller_explanation+'<br />['+result[$i].seller_evaltime+']</td><td>'+result[$i].user_name+'</td><td style="text-align:left" width="200"><a href="goods.php?id='+result[$i].goods_id+'" target="_blank" style="font-size:12px; font-weight:bold; color:#0044DD" title="'+result[$i].goods_name+'">'+result[$i].goods_name+'</a><br />价格：￥<span style="color:#FF6600; font-weight:bold;">'+result[$i].goods_price+'</span>元</td></tr>';
+				}
+			}else
+			if(t=='seller'){
+				seller_selected.className="";
+				buyer_selected.className="selected";
+				for($i=0;$i<result.length;$i++){
+					credit=result[$i].buyer_credit;
+					if(credit=='1'){
+						buyer_credit="好";
+					}else
+					if(credit=='0'){
+						buyer_credit="中";
+					}else
+					if(credit=='-1'){
+						buyer_credit="差";
+					}
+					credit+='<tr><td class="center" width="30">'+buyer_credit+'</td><td style="text-align:left" >'+result[$i].buyer_evaluate+'<br />[解释]'+result[$i].buyer_explanation+'<br />['+result[$i].buyer_evaltime+']</td><td>'+result[$i].user_name+'</td><td style="text-align:left" width="200"><a href="goods.php?id='+result[$i].goods_id+'" target="_blank" style="font-size:12px; font-weight:bold; color:#0044DD" title="'+result[$i].goods_name+'">'+result[$i].goods_name+'</a><br />价格：￥<span style="color:#FF6600; font-weight:bold;">'+result[$i].goods_price+'</span>元</td></tr>';
+				}
+			}
+			obj_credit.innerHTML = "<table width='98%'>"+credit+pagehtml+"</table>";
+		}else{
+			if(t=='buyer'){
+				seller_selected.className="selected";
+				buyer_selected.className="";
+				obj_credit.innerHTML = "<table width='98%'><tr><td>{echo:lp{s_no_seller_credit};/}</td></tr></table>";
+			}else
+			if(t=='seller'){
+				seller_selected.className="";
+				buyer_selected.className="selected";
+				obj_credit.innerHTML = "<table width='98%'><tr><td>{echo:lp{s_no_buyer_credit};/}</td></tr></table>";
+			}
+		}
+
+	},'JSON');
+}
+
+get_appraise('buyer',{echo:$user_id;/},'','',1);
+</script>
+</body>
+</html>

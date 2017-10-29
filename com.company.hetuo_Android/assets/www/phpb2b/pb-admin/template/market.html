@@ -1,0 +1,86 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_pro_market}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_pro_market}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1" href="market.php"><span><{$_management}></span></a></li>
+        <li><a href="market.php?do=edit"><{$_add_or_edit}></a></li>
+		<li><a href="markettype.php"><{$_types}></a></li>
+		<li><a href="quote.php">价格行情</a></li>
+		<li><a href="quotetype.php">行情分类</a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" action="market.php" id="SearchFrm" method="get">
+        <input type="hidden" name="do" value="search" />
+             <div>
+				关键字 : <input class="queryInput" type="text" name="q" value="" />
+                <span id="dataArea">
+						<select name="data[market][area_id1]" id="dataMarketAreaId1" class="level_1" style="width:120px;" ></select>
+						<select name="data[market][area_id2]" id="dataMarketAreaId2" class="level_2" style="width:120px;"></select>
+						<select name="data[market][area_id3]" id="dataMarketAreaId3" class="level_3" style="width:120px;"></select>
+				</span>
+                <input type="submit" name="search" id="Search" class="formbtn" value="<{$_searching}>" /> 
+            </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll"><{$_naming}></label></th>
+		  <th>行业类别</th>
+		  <th>所在地区</th>
+		  <th>是否显示</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><label for="item_<{$item.id}>"><{$item.name}></label><{if $item.picture!=''}><span class="icon-pic"></span><{/if}><{if $item.if_commend==1}><span class="icon-commend"></span><{/if}></td>
+		  <td><{$item.industryname}></td>
+		  <td><{$item.areaname}></td>
+		  <td><{if $item.status==1}>显示<{else}>不显示<{/if}></td>
+		  <td class="handler">
+          <ul id="handler_icon">
+              <li><a class="btn_delete" href="market.php?id=<{$item.id}>&do=del<{$addParams}>" title="<{$_delete}>"><{$_delete}></a></li>
+              <li><a class="btn_edit" href="market.php?do=edit&id=<{$item.id}><{$addParams}>" title="<{$_edit}>"><{$_edit}></a></li>
+              <li><a class="btn_browse" href="<{$SiteUrl}>market/detail.php?id=<{$item.id}>" target="_blank" title="<{$_preview}>"><{$_preview}></a></li>
+           </ul> 
+		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="6"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+	  <input type="submit" name="recommend" value="<{$_commend}>市场" class="formbtn batchButton"/>
+      <input type="submit" name="check" value="显示" class="formbtn batchButton"/>
+      <input type="submit" name="uncheck" value="不显示" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<script>
+var cache_path = "../";
+var app_language = '<{$AppLanguage}>';
+</script>
+<script src="../scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="../scripts/script_area.js"></script>
+<{include file="footer.html"}>

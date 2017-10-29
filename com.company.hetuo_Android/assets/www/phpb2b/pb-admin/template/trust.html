@@ -1,0 +1,69 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_extension}> &raquo; <{$_trusts}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_trusts}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1" href="trust.php"><span>认证类型</span></a></li>
+		<li><a href="trust.php?do=rule">诚信指数</a></li>
+    </ul>
+</div>
+<div class="mrightTop"> 
+    <div class="fontl">如果你修改了某个类型的编号，可能会引起已有供求数据的错误。</div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th>图例</th>
+		  <th><label for="idAll"><{$_naming}></label></th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell">
+          <input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>">
+		  </td>
+		  <td><input type="hidden" name="tid[]" value="<{$item.id}>" /><input type="text" name="avatar[]" value="<{$item.avatar}>" />&nbsp;<{if $item.avatar}><img src="../images/icon/<{$item.avatar}>" alt="<{$item.name}>" /><{/if}></td>
+		  <td><input type="text" name="name[]" value="<{$item.name}>" /></td>
+		  <td class="handler">
+           <ul id="handler_icon">
+            <li><a class="btn_delete" href="trust.php?id=<{$item.id}>&do=del" title="<{$_delete}>"><{$_delete}></a></li>
+          </ul>   
+		  </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="3"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	<tbody>
+	  <tr class="tatr2" id="tRow0" style="display : none ;">
+        <td></td>
+        <td><input type="text" name="avatar[]" value="" /></td>
+        <td colspan="2"><input type="text" name="name[]" value="" /></td>
+	  </tr>
+	</tbody>    
+	<tr class="tatr2">
+		<td></td>
+		<td colspan="3"><img src="images/add.gif" /><a href="javascript:;" onclick="$('#tRow0').clone().show().appendTo( $('#tRow0').parent() );" style="color: blue;">&nbsp;添加新类型</a></td>
+	</tr>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+      <input type="submit" name="update" value="<{$_submit}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

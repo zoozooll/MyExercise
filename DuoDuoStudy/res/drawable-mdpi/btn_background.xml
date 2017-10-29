@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:state_focused="false" android:state_enabled="false"
+		android:drawable="@drawable/recommend_hot_normal_bg" />
+		<!-- 非触摸模式下获得焦点并单击时的背景图片 -->
+	<!-- <item android:state_focused="true" android:state_enabled="false"
+		android:state_pressed="true" android:drawable="@drawable/recommend_hot_pressed_bg" /> -->
+	<item android:state_focused="true" 
+		android:drawable="@drawable/recommend_hot_focus" />
+	<item android:state_pressed="true"
+		android:drawable="@drawable/recommend_hot_pressed_bg" />
+</selector>

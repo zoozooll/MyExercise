@@ -1,0 +1,45 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{assign var="nav_id" value="6"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+  <div class="content">
+    <div class="tips"><span><{$position}></span></div>
+    <div class="news_all clearfix">
+      <div class="news_all_left">
+       <div class="news_title">
+        <div class="title_bar_s4">
+          <span class="title_top_s4"><span></span></span>
+          <h2><{$item.name}><{$_quote_stat_charts}>
+          <p><{$_product_name}><span class="gray link-underline"><a href="product/content.php?id=<{$item.id}>"><{$item.name}></a></span><{$_publish_time}><span class="gray"><{$item.pubdate}></span></p>
+          </h2>
+       </div>
+       </div>
+        <div class="news_all_left_con">
+		  <{$chart_image}>
+		  <div class="clear"></div>
+		  <div><{$_max_price}><{$item.max_price}> <{$_low_price}><{$item.min_price}></div>
+          <div id="news_info">[<a href="javascript:window.close()"><{$_close_widow}></a>] [<a href="javascript: window.print();"><{$_print_page}></a>]</div>
+        </div>
+      </div>
+      <div class="all_right">
+       <div class="title_bar_s4">
+          <span class="title_top_s4"><span></span></span>
+          <h3><{$_related_info}></h3>
+       </div>
+        <div class="all_right_con">
+          <ul class="news_list">
+          <{news row=10 titlelen=32}>
+            <li> <a href="news/detail.php?id=[field:id]" title="[field:fulltitle]">[field:title]</a></li>
+          <{/news}>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<script>
+$("#SearchFrm").attr("action","news/list.php");
+$("#topMenuNews").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

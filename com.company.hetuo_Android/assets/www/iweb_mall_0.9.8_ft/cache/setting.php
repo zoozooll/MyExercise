@@ -1,0 +1,40 @@
+<?php
+if(!$IWEB_SHOP_IN) {die('Hacking attempt');} 
+$SYSINFO['sys_name'] = 'iweb Mall&shop'; 
+$SYSINFO['sys_title'] = 'iweb Mall'; 
+$SYSINFO['sys_keywords'] = 'iweb mall|iweb shop|iweb shop&mall'; 
+$SYSINFO['sys_description'] = 'iweb mall|iweb shop|iweb shop&mall'; 
+$SYSINFO['sys_company'] = '聚易开放式技术实验室'; 
+$SYSINFO['sys_copyright'] = 'Copyright © 2005-2009'; 
+$SYSINFO['sys_icp'] = '鲁ICP备01000010号'; 
+$SYSINFO['sys_countjs'] = ''; 
+$SYSINFO['sys_registerinfo'] = ''; 
+$SYSINFO['sys_kftelphone'] = '0531-'; 
+$SYSINFO['sys_kfqq'] = ''; 
+$SYSINFO['email_send'] = 'false'; 
+$SYSINFO['sys_smtpserver'] = 'smtp.163.com'; 
+$SYSINFO['sys_smtpserverport'] = '25'; 
+$SYSINFO['sys_smtpusermail'] = ''; 
+$SYSINFO['sys_smtpuser'] = ''; 
+$SYSINFO['sys_smtppass'] = ''; 
+$SYSINFO['web'] = 'http://localhost/iweb_mall_0.9.8/'; 
+$SYSINFO['lp'] = 'zh'; 
+$SYSINFO['timezone'] = '8'; 
+$SYSINFO['session'] = 'iweb_'; 
+$SYSINFO['url_r'] = 'false'; 
+$SYSINFO['sys_domain'] = '0'; 
+$SYSINFO['im_enable'] = 'false'; 
+$SYSINFO['offline'] = 'true'; 
+$SYSINFO['off_info'] = '站点维护中。。。'; 
+$SYSINFO['seller_page'] = '10'; 
+$SYSINFO['search_page'] = '10'; 
+$SYSINFO['product_page'] = '10'; 
+$SYSINFO['article_page'] = '10'; 
+$SYSINFO['height1'] = '84'; 
+$SYSINFO['width1'] = '84'; 
+$SYSINFO['height2'] = '300'; 
+$SYSINFO['width2'] = '300'; 
+$SYSINFO['map'] = 'false'; 
+$SYSINFO['map_key'] = ''; 
+$SYSINFO['sys_logo'] = 'skin/default/images/malllogo.gif'; 
+?>

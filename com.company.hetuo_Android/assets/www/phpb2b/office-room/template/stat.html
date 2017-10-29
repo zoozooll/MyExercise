@@ -1,0 +1,41 @@
+<{assign var="page_title" value="`$_statistics`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+      <table class="bggray">
+          <tr>
+            <td align="center"><span class="font14b_org"><{$_information_statistics}></span> </td>
+          </tr>
+      </table>
+        <table class="offer_info_count">
+
+                  <{foreach from=$UserTradeStat item=ut}>
+                    <tr>
+                      <td height="35" class="font14"><img src="images/stat.gif" width="13" height="13" border="0"> <strong><{$ut.name}><{$_information}><{$_colon}></strong> <{$_now_you_have}> <span class="orange"><strong><{$ut.Amount|default:"0"}></strong></span> <{$_number}><{$ut.name}><{$_information_g}></td>
+                    </tr>
+                    <{/foreach}>
+					<{if $pb_userlevel>1}>
+                    <tr>
+                      <td height="35" class="font14"><img src="images/stat.gif" width="13" height="13" border="0"> <strong><{$_products_n}></strong> <{$_now_you_have}> <span class="orange"><strong><{$ProductAmount}></strong></span><{$_account_product}></td>
+                    </tr>
+					<{/if}>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td height="1" background="images/index_trade_line.gif"></td>
+                    </tr>
+       </table>
+
+        
+</div>
+</div>
+<{include file="footer.html"}>

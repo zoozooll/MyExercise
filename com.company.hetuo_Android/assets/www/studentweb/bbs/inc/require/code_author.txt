@@ -1,0 +1,1 @@
+<div id="code_author">Power by <a href="http://www.162100.com" target="_blank" title="程序原创:162100.com">162100</a>SimpleBBS <?php echo $web['code_version']; ?></div><script type="text/javascript" src="js/version.js" language="javascript"></script>

@@ -1,0 +1,77 @@
+<{include file="header.html"}>
+<script src="../scripts/jquery/facebox.js" type="text/javascript"></script>
+<link href="../images/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+<script>
+jQuery(document).ready(function($) {
+	$.facebox.settings.loadingImage = '<{$SiteUrl}>images/facebox/loading.gif'; 
+	$.facebox.settings.closeImage = '<{$SiteUrl}>images/facebox/closelabel.gif'; 
+	$('a[rel*=facebox]').facebox()
+})
+</script>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_templet}> &raquo; <{$_templet}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_templet}></h3> 
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" id="SearchFrm" method="get">
+        <input type="hidden" name="do" value="search" />
+             <div> 
+				<{$_keywords}><input class="queryInput" type="text" name="q" value="" /> 
+                <input type="submit" name="search" id="Search" class="formbtn" value="<{$_search}>" /> 
+            </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th></th>
+		  <th><label for="idAll"><{$_templet_name}></label></th>
+		  <th><{$_directory}></th>
+		  <th><{$_author}></th>
+		  <th><{$_screenshot}></th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><{if $item.is_default==1}><img src="images/right.gif" alt="<{$_default}>" /><{/if}></td>
+		  <td style="color:<{$item.style}>"><label for="item_<{$item.id}>"><{$item.title}></label></td>
+		  <td><{$item.directory}></td>
+		  <td><{$item.author}></td>
+		  <td><{if $item.type=="system" and $item.available==1}><a href="templet.php?do=setup&name=<{$item.name}>&id=<{$item.id}>"><{$_setup}></a> | <{/if}><{if $item.picture}><a href="<{$item.picture}>" title="" rel="facebox"><{$_preview}></a><{else}><{$_preview}><{/if}></td>
+		  <td class="handler">
+           <ul id="handler_icon">
+            <{if $item.available}>
+            <li><a class="btn_edit" href="templet.php?do=edit&id=<{$item.id}>&type=<{$item.type}><{$addParams}>" title="<{$_edit}>"><{$_edit}></a></li>
+             <li><a class="btn_uninstall" href="templet.php?do=uninstall&type=<{$item.type}>&id=<{$item.id}><{$addParams}>" title="<{$_uninstall}>"><{$_uninstall}></a></li>
+             <{else}>
+            <li><a class="btn_install" href="templet.php?entry=<{$item.entry}>&do=install&type=<{$item.type}><{$addParams}>" title="<{$_install}>"><{$_insatll}></a></li>
+            <{/if}>
+          </ul>  
+		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="7"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction"><input type="submit" name="del" value="<{$_uninstall}>" class="formbtn batchButton"/></div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

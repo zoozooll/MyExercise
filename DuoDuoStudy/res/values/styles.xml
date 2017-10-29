@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="style_appname_text">
+		<item name="android:layout_height">27dip</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:ellipsize">marquee</item>
+		<item name="android:marqueeRepeatLimit">marquee_forever</item>
+		<item name="android:textColor">#000000</item>
+		<item name="android:textSize">18dip</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<!-- 有蓝色背景的文本域 -->
+	<!-- <style name="style_blue_textview" parent="android:attr/listSeparatorTextViewStyle"> 
+		<item name="android:layout_width">fill_parent</item> <item name="android:layout_height">25dip</item> 
+		<item name="android:textSize">18dip</item> <item name="android:textColor">#000000</item> 
+		<item name="android:textStyle">bold</item> <item name="android:gravity">center_vertical</item> 
+		<item name="android:paddingLeft">5dip</item> <item name="android:background">@drawable/d_title_bar_bg</item> 
+		</style> -->
+	<style name="style_detail_text">
+		<item name="android:textSize">18dip</item>
+		<item name="android:textColor">#000000 </item>
+	</style>
+<!-- 书架  -->
+	<style name="MyCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+		<item name="android:paddingLeft">35px</item>
+		<item name="android:textColor">#000000</item>
+		<item name="android:textSize">12dip</item>
+		<item name="android:button">@drawable/check_selector</item>
+	</style>
+	
+	<style name="contentTitleTextStyle">
+		<item name="android:textSize">15dip</item>
+		<item name="android:textColor">#000000</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="contentTextStyle">
+		<item name="android:textSize">13dip</item>
+		<item name="android:textColor">#000000</item>
+	</style>
+			
+	<style name="txtstyle">
+		<item name="android:textSize">12dip</item>
+		<item name="android:textColor">#FF7F50</item>
+	</style>
+	
+<!-- 同步教学 和 书架黑色文字风格  -->
+	<style name="lessonstyle">
+		<item name="android:textSize">15dip</item>
+		<item name="android:textColor">#000000</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+
+
+<!-- 同步教学 和 书架白色文字风格  -->
+	<style name="buttonTextStyle">
+		<item name="android:textSize">15dip</item>
+		<item name="android:textColor">#FFFFF0</item>
+		<item name ="android:textStyle">bold</item>
+		<item name="android:typeface">normal</item>
+	</style>
+</resources>

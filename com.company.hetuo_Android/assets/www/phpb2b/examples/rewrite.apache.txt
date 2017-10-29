@@ -1,0 +1,34 @@
+# BEGIN REWRITE
+ErrorDocument 404 /redirect.php?code=404
+ErrorDocument 403 /redirect.php?code=403
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+RewriteRule ^(.*)offer/detail/([0-9]+)\.html$ /offer/detail.php\?id=$2 [QSA]
+RewriteRule ^(.*)industry/([0-9]+)/$ /special/industry.php\?id=$2 [QSA]
+RewriteRule ^(.*)area/([0-9]+)/$ /special/area.php\?id=$2 [QSA]
+RewriteRule ^(.*)buy/detail/([0-9]+)\.html$ /offer/detail.php\?id=$2 [QSA]
+RewriteRule ^(.*)sell/detail/([0-9]+)\.html$ /offer/detail.php\?id=$2 [QSA]
+RewriteRule ^(.*)product/detail/([0-9]+)\.html$ /product/content.php\?id=$2 [QSA]
+RewriteRule ^(.*)news/detail/([0-9]+)\.html$ /news/detail.php\?id=$2 [QSA]
+RewriteRule ^(.*)market/detail/([0-9]+)\.html$ /market/detail.php\?id=$2 [QSA]
+RewriteRule ^(.*)announce/detail/([0-9]+)\.html$ /announce.php\?id=$2 [QSA]
+RewriteRule ^(.*)fair/detail/([0-9]+)\.html$ /fair/detail.php\?id=$2 [QSA]
+RewriteRule ^(.*)page/([a-zA-Z0-9]+)\.html$ /page.php\?name=$2 [QSA]
+RewriteRule ^(.*)dict/detail/([0-9]+)\.html$ /dict/detail.php\?id=$2 [QSA]
+RewriteRule ^(.*)standard/detail/([0-9]+)\.html$ /standard.php\?id=$2 [QSA]
+RewriteRule ^(.*)brand/detail/([0-9]+)\.html$ /brand/detail.php\?id=$2 [QSA]
+RewriteRule ^(.*)space/([a-zA-Z0-9%]+)/$ /space.php\?userid=$2 [L]
+RewriteRule ^(.*)space/([a-zA-Z0-9%]+)/([a-zA-Z]+)/$ /space.php\?userid=$2&do=$3 [L]
+RewriteRule ^(.*)space/([a-zA-Z0-9%]+)/([a-zA-Z]+)/type-([0-9]+)\.html$ /space.php\?userid=$2&do=$3&typeid=$4 [L]
+RewriteRule ^(.*)space/([a-zA-Z0-9%]+)/([a-zA-Z]+)/list-([0-9]+)\.html$ /space.php\?userid=$2&do=$3&page=$4 [L]
+RewriteRule ^(.*)space/([a-zA-Z0-9%]+)/([a-zA-Z]+)/detail-([0-9]+)\.html$ /space.php\?userid=$2&do=$3&nid=$4[L]
+RewriteCond %{HTTP_HOST} ^(www.)?(?!/.|www|bbs|demo)(.*)\.yourdomain\.com$
+RewriteRule ^/?$ /%{HTTP_HOST}
+RewriteRule ([^.]+)\.yourdomain\.com(.*)$ /space.php\?userid=$1 [L]
+RewriteRule ^(.*)space/([a-z]+)\.html$ /space.php\?userid=$1&do=$2 
+RewriteRule ^(.*)space/([a-z]+)/type-([0-9]+)\.html$ /space.php\?userid=$1&do=$2&typeid=$3
+RewriteRule ^(.*)space/([a-z]+)/list-([0-9]+)\.html$ /space.php\?userid=$1&do=$2&page=$3
+RewriteRule ^(.*)space/([a-z]+)/detail-([0-9]+)\.html$ /space.php\?userid=$1&do=$2&nid=$3
+</IfModule>
+# END REWRITE

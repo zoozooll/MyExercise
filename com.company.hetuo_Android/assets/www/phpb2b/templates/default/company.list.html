@@ -1,0 +1,97 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+	<div class="tips"><span><{$position}></span></div>
+    <div class="blank6"></div>
+    <div class="filter"><span class="quick_filter"><{$_fast_screening}></span><{foreach from=$OtherIndustry name=subindustry item=item1 key=key1}>
+		<a href="company/list.php?industryid=<{$key1}>" title="<{$item1}>"><{$item1}></a>
+		<{foreachelse}>
+		<a><{$_no_subclass}></a>
+		<{/foreach}>
+     </div>
+    <div class="blank6"></div>
+    <div class="filter">
+    <form name="search_frm" id="OfferSearchFrm" action="" method="get">
+    <span class="quick_filter"><{$_industry_screening}></span>
+		<select name="industryid" onchange="$('#OfferSearchFrm').submit();">
+			<option value="0"><{$_all_sort}></option>
+			<{html_options options=$OtherIndustry selected=$smarty.get.industryid}>
+		</select>
+		<select name="areaid" onchange="$('#OfferSearchFrm').submit();">
+				<option value="0"><{$_area}></option>
+				<{html_options options=$OtherArea selected=$smarty.get.areaid}>
+		</select>
+		<input type="submit"  value="<{$_screening}>" class="btn_submit_w45"/>
+		
+		</form>
+       </div>
+    <div class="blank6"></div>
+     <div class="content clearfix">
+    <div class="main_left_w750">
+        <div class="base_title">
+            <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_search_result}></span><span class="corner_t_r"></span></h2> 
+        </div>
+    <div class="base_company_content box_bord">
+     <table class="company_list_search">
+      <tr>
+        <th><{$_company}>Logo&nbsp;</th>
+        <th><{$_add_time}></th>
+        <th><{$_location}></th>
+        <th><{$_integrity_index}></th>
+        <th><{$_guestbook}></th>
+      </tr>
+      <{foreach from=$Items name=company item=item}>
+      <tr>
+		<td><a href="space.php?userid=<{$item.userid}>"><{$item.logosrc}></a></td>
+        <td>
+		<div class="company_info">
+        <p><span class="span4"><a href="space.php?userid=<{$item.userid}>" class="external" target="_blank"><strong><{$item.name}></strong></a></span> [<{$item.managetype}>]<span class="span5">(<{$item.pubdate|date_format:"%Y-%m-%d"}>)</span></p>
+	    <p><{$item.description|strip_tags|truncate:100}></p>
+        <p><{$_mainly_products}><{$item.main_prod}></p>
+		</div>
+		</td>
+        <td><{$Areas[1][$item.area_id1]}><br /><{$Areas[2][$item.area_id2]}></td>
+        <td><div><{if $item.gradename}><img src="<{$item.gradeimg}>" alt="<{$item.gradename}>" /><br /><{/if}><strong><{$item.credits}></strong></div></td>
+        <td><span class="span7"><a href="space.php?do=feedback&userid=<{$item.userid}>" target="_blank" title="<{$item.name}>"><span class="im_pms"></span></a></span></td>
+      </tr>
+      <{if !$smarty.foreach.company.last}>
+      <tr>
+        <td colspan="5"><div class="line"></div></td>
+      </tr>
+      <{/if}>
+    <{/foreach}>
+    </table>
+	   <div><{$ByPages}></div>
+		</div>
+	</div>	
+  
+    <div class="main_right_w200">
+	<div class="companylistconright">
+			<div class="lookcompany">
+				<div class="buymessagetop"><img src="<{$theme_img_path}>images/lhighs.gif" /><{$_industry_view_company}></div>
+				<p>
+				<{industry level=1}>
+				<a href="company/list.php?industryid=[field:id]">[field:title]</a><br /> 
+				<{/industry}>
+				</p>
+				<div class="clear"></div>
+			</div>
+			<div class="companylistsee">
+				<div class="recommendcompanytop"><img src="<{$theme_img_path}>images/lhighs.gif" /><{$_area_view_company}></div>
+				<div class="companylistseecon">
+					<{area level=1}>
+					<p><a href="company/list.php?areaid=[field:id]">[field:title]</a></p>
+					<{/area}>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>	
+     </div>
+<div class="clear"></div>
+</div>
+</div>
+<script>
+$("#SearchFrm").attr("action","company/list.php");
+$("#topMenuCompany").addClass("lcur");
+</script>
+<{include file="`$ThemeName`/footer.html"}>

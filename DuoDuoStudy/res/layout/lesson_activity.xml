@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:pageview="http://schemas.android.com/apk/res/com.iskyinfor.duoduo"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@color/darkcyan">
+<!-- 最顶层  -->   
+  <LinearLayout
+   android:id="@+id/duoduo_lesson_main_top"
+   android:orientation="vertical"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_alignParentTop="true">
+      <include layout="@layout/lesson_main_item_top"/>
+  </LinearLayout>
+  <LinearLayout 
+   android:id="@+id/linear1"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_above="@+id/duoduo_lesson_layout_bottom">
+  <ImageView
+        android:id="@+id/lessonimg"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="12dip"
+		android:background="@drawable/bookshelf_maincontent_buttom" />
+  </LinearLayout>
+ <!-- 最低层   -->
+  <LinearLayout
+	android:id="@+id/duoduo_lesson_layout_bottom"
+    android:layout_alignParentBottom="true"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	    <!-- <include layout="@layout/lesson_bottom_sqlit_page"/> -->
+		<include layout="@layout/download_bottom_item"/>
+</LinearLayout> 
+
+<!-- 中间 -->
+    <LinearLayout
+    android:id="@+id/duoduo_lesson_layout_fourth_all"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@id/duoduo_lesson_main_top"
+    android:layout_above="@+id/linear1"
+    
+   >
+       <!-- 同步教学 ＶＳ名师指导 -->
+       <LinearLayout
+        android:id="@+id/grid_lesson_btn_change"
+        android:layout_width="fill_parent"
+   		android:layout_height="wrap_content">
+  		<LinearLayout
+      	 android:id="@+id/lesson_btn_change"
+      	 android:background="@drawable/bookshelf_maincontent_top"
+         android:orientation="horizontal"
+         android:layout_width="fill_parent"
+   		 android:layout_height="wrap_content"
+   		 android:layout_marginLeft="10dip"
+   		>
+   		 <Button
+	      android:id="@+id/duoduo_lesson_sysn_class"
+	      android:background="@drawable/public_down01"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:text="@string/sysnlesson"
+	      android:layout_marginLeft="45dip"
+	      android:textColor="@color/white"/>
+	    <Button
+	      android:id="@+id/duoduo_lesson_teacher_class"
+	      android:background="@drawable/public_down02"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:text="@string/teacher"
+	      android:textColor="@color/white"/>
+      </LinearLayout> 
+    </LinearLayout>
+    
+    <FrameLayout
+    android:id="@+id/content_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"/>
+</LinearLayout>
+
+</RelativeLayout>

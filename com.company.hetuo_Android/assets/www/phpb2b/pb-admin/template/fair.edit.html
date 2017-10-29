@@ -1,0 +1,166 @@
+<{include file="header.html"}>
+<{fetch file="../scripts/date.js"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_fair}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_fair}></h3> 
+    <ul class="subnav">
+		<li><a href="fair.php"><{$_management}></a></li>
+        <li><a class="btn1" href="fair.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+        <li><a href="fairtype.php"><{$_sorts}></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form action="fair.php" method="post" id="EditFrm" name="edit_frm" enctype="multipart/form-data">
+  <input type="hidden" name="id" value="<{$smarty.get.id}>">
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+    <table class="infoTable">
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />
+		</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 展会标题：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[expo][name]" value="<{$item.name}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 展会类型：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<select name="data[expo][expotype_id]">
+        <{foreach from=$Expotypes name=Expotypes item=item1 key=key1}>
+        <option value="<{$key1}>" <{if $key1==$item.expotype_id}>selected="selected"<{/if}>><{$item1}></option>
+        <{/foreach}>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 概述：</th>
+        <td class="paddingT15 wordSpacing5">
+        <textarea style="width:550px;height:50px;" name="data[expo][description]"><{$item.description}></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_in_industry}></th>
+        <td class="paddingT15 wordSpacing5">
+        <span id="dataIndustry">
+					<select name="data[expo][industry_id1]" id="dataexpoIndustryId1" class="level_1" style="width:120px;" ></select>
+					<select name="data[expo][industry_id2]" id="dataexpoIndustryId2" class="level_2" style="width:120px;"></select>
+					<select name="data[expo][industry_id3]" id="dataexpoIndustryId3" class="level_3" style="width:120px;"></select>
+		</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_in_area}></th>
+        <td class="paddingT15 wordSpacing5">
+			<span id="dataArea">
+						<select name="data[expo][area_id1]" id="dataexpoAreaId1" class="level_1" style="width:120px;" ></select>
+						<select name="data[expo][area_id2]" id="dataexpoAreaId2" class="level_2" style="width:120px;"></select>
+						<select name="data[expo][area_id3]" id="dataexpoAreaId3" class="level_3" style="width:120px;"></select>
+			</span>        
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15">展出时间:</th>
+        <td class="paddingT15 wordSpacing5">
+        	<input id="date1" type="text" name="data[begin_time]" value="<{$item.begin_date}>" type="text" /><span class="btn_calendar" id="calendar-date1"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15">结束时间：</th>
+        <td class="paddingT15 wordSpacing5">
+        	<input id="date2" type="text" name="data[end_time]" value="<{$item.end_date}>" type="text" /><a href="javascript:;"><span class="btn_calendar" id="calendar-date2"></span></a>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 展会周期：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[expo][refresh_method]" value="<{$item.refresh_method}>" type="text" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">展会规模:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[expo][scope]" value="<{$item.scope}>" type="text" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">地址：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[expo][address]" value="<{$item.address}>" type="text" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 主办单位：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[expo][hosts]" value="<{$item.hosts}>" type="text" /></td>
+      </tr>      
+      <tr>
+        <th class="paddingT15">承办单位:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[expo][organisers]" value="<{$item.organisers}>" type="text" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 协办单位：</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[expo][co_organisers]" value="<{$item.co_organisers}>" type="text" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15">支持单位:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[expo][sponsors]" value="<{$item.sponsors}>" type="text" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 联系方式：</th>
+        <td class="paddingT15 wordSpacing5"><textarea style="width:550px;height:50px;" name="data[expo][contacts]"><{$item.contacts}></textarea></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 注意事项：</th>
+        <td class="paddingT15 wordSpacing5">
+        <textarea style="width:550px;height:50px;" name="data[expo][important_notice]"><{$item.important_notice}></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15">图片：</th>
+        <td class="paddingT15 wordSpacing5">
+        <input class="infoTableFile2" type="file" name="pic" id="pic" />
+          <label class="field_notice">（支持格式GIF,JPG,JPEG,PNG）</label>
+          <{if $item.picture}>
+          <br /><span><img src="<{$item.image}>" alt="<{$item.name}>"/></span>
+          <{/if}>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15">是否<{$_commend}>：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<{html_radios name="data[expo][if_commend]" options=$AskAction checked=$item.if_commend|default:"0" separator=" "}></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />
+		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+var cache_path = "../";
+var app_language = '<{$AppLanguage}>';
+var area_id1 = <{$item.area_id1|default:0}> ;
+var area_id2 = <{$item.area_id2|default:0}> ;
+var area_id3 = <{$item.area_id3|default:0}> ;
+var industry_id1 = <{$item.industry_id1|default:0}> ;
+var industry_id2 = <{$item.industry_id2|default:0}> ;
+var industry_id3 = <{$item.industry_id3|default:0}> ;
+Calendar.setup({
+	trigger    : "calendar-date1",
+	animation  : false,
+	inputField : "date1",
+	onSelect   : function() { this.hide() }
+});
+Calendar.setup({
+	trigger    : "calendar-date2",
+	animation  : false,
+	inputField : "date2",
+	onSelect   : function() { this.hide() }
+});
+</script>
+<script src="../scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="../scripts/script_area.js"></script>
+<script src="../scripts/script_industry.js"></script>
+<{editor type="tiny_mce"}>
+<{include file="footer.html"}>

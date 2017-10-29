@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="613dp"
+    android:layout_height="376dp"
+    android:layout_marginLeft="200dp"
+    android:layout_marginTop="70dp"
+    android:background="@drawable/setting_bg"
+    android:theme="@android:style/Theme.Translucent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingTop="2dp" >
+
+        <com.dvr.android.dvr.msetting.MyImageButton
+            android:id="@+id/recordmode_button_id"
+            android:layout_width="103dp"
+            android:layout_height="75dp"
+            android:background="#00000000"
+            android:src="@drawable/setting_btn_recordmode_bg_pressed"
+            android:text="@string/msetting_recordmode" />
+
+        <com.dvr.android.dvr.msetting.MyImageButton
+            android:id="@+id/recordquality_button_id"
+            android:layout_width="103dp"
+            android:layout_height="75dp"
+            android:background="#00000000"
+            android:src="@drawable/setting_btn_videoquality_bg_normal"
+            android:text="@string/msetting_videoq"
+            android:visibility="visible" />
+
+        <com.dvr.android.dvr.msetting.MyImageButton
+            android:id="@+id/hitdelicacy_button_id"
+            android:layout_width="103dp"
+            android:layout_height="75dp"
+            android:background="#00000000"
+            android:src="@drawable/setting_btn_hit_bg_normal"
+            android:text="@string/msetting_hitdelicacy"
+            android:visibility="visible" />
+
+        <com.dvr.android.dvr.msetting.MyImageButton
+            android:id="@+id/videoset_button_id"
+            android:layout_width="103dp"
+            android:layout_height="75dp"
+            android:background="#00000000"
+            android:src="@drawable/setting_btn_videoset_bg_normal"
+            android:text="@string/msetting_recordset"
+            android:visibility="visible" />
+
+        <com.dvr.android.dvr.msetting.MyImageButton
+            android:id="@+id/recordback_button_id"
+            android:layout_width="103dp"
+            android:layout_height="75dp"
+            android:background="#00000000"
+            android:src="@drawable/setting_btn_back_bg_normal"
+            android:text="@string/btn_text_playback"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/record_mode_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/recordmode_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/msetting_recordmode"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting"
+                android:visibility="gone" />
+
+            <com.dvr.android.dvr.msetting.MyImageButton
+                android:id="@+id/recordmode_normal_button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="90dp"
+                android:background="#00000000"
+                android:paddingLeft="20dip"
+                android:paddingTop="@dimen/textsize_list_paddingTop"
+                android:src="@drawable/btn_record_mode_noraml"
+                android:text="@string/msetting_regular"
+                android:visibility="gone" />
+
+            <com.dvr.android.dvr.msetting.MyImageButton
+                android:id="@+id/recordmode_cycle_button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="410dp"
+                android:layout_marginTop="90dp"
+                android:background="#00000000"
+                android:paddingLeft="20dip"
+                android:paddingTop="@dimen/textsize_list_paddingTop"
+                android:src="@drawable/btn_record_mode_noraml"
+                android:text="@string/msetting_loop"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/video_time_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="70dp"
+                android:text="@string/msetting_timelong"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <ImageView
+                android:id="@+id/video_time_left_button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/record_time_left_button_bg" />
+
+            <TextView
+                android:id="@+id/video_time_value_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/btn_record_quality_normal"
+                android:gravity="center"
+                android:text="@array/setting_record_time_str"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <ImageView
+                android:id="@+id/video_time_right_button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="478dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/record_time_right_button_bg" />
+
+            <TextView
+                android:id="@+id/power_save_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/power_save_text_x"
+                android:layout_marginTop="200dp"
+                android:text="@string/msetting_powermode"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <ImageView
+                android:id="@+id/power_save_left_button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="250dp"
+                android:background="@drawable/record_time_left_button_bg" />
+
+            <TextView
+                android:id="@+id/power_save_value_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="250dp"
+                android:background="@drawable/btn_record_quality_normal"
+                android:gravity="center"
+                android:text="@array/setting_power_saving_str"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <ImageView
+                android:id="@+id/power_save_right_button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="478dp"
+                android:layout_marginTop="250dp"
+                android:background="@drawable/record_time_right_button_bg" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/record_quality_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/msetting_videoq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/video_quality_text_x"
+                android:layout_marginTop="70dp"
+                android:text="@string/msetting_videoq"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <TextView
+                android:id="@+id/recordquality_high_button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/btn_record_quality_normal"
+                android:gravity="center"
+                android:paddingTop="@dimen/textsize_list_paddingTop"
+                android:text="@string/msetting_gao"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/recordquality_middle_button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="180dp"
+                android:background="@drawable/btn_record_quality_normal"
+                android:gravity="center"
+                android:paddingTop="@dimen/textsize_list_paddingTop"
+                android:text="@string/msetting_zhong"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/recordquality_lower_button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="250dp"
+                android:background="@drawable/btn_record_quality_normal"
+                android:gravity="center"
+                android:paddingTop="@dimen/textsize_list_paddingTop"
+                android:text="@string/msetting_di"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hit_delicacy_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/hit_delicacy_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/msetting_hitdelicacy"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <SeekBar
+                android:id="@+id/seekbar_delicacy"
+                android:layout_width="450dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="95dp"
+                android:maxHeight="12dp"
+                android:progressDrawable="@drawable/setting_seekbar_img"
+                android:thumb="@drawable/setting_thumb" />
+
+            <TextView
+                android:id="@+id/hit_auto_saving_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/hit_auto_saving_text_x"
+                android:layout_marginTop="135dp"
+                android:text="@string/msetting_asave"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <TextView
+                android:id="@+id/hit_auto_saving_open_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="240dp"
+                android:layout_marginTop="175dp"
+                android:text="@string/msetting_open"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <com.dvr.android.dvr.msetting.MyImageButton
+                android:id="@+id/hit_auto_saving_button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="170dp"
+                android:background="#00000000"
+                android:paddingLeft="20dip"
+                android:paddingTop="@dimen/textsize_list_paddingTop"
+                android:src="@drawable/btn_control_close" />
+
+            <TextView
+                android:id="@+id/hit_auto_saving_close_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="450dp"
+                android:layout_marginTop="175dp"
+                android:text="@string/msetting_closed"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <TextView
+                android:id="@+id/click_screen_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/click_screen_text_x"
+                android:layout_marginTop="235dp"
+                android:text="@string/msetting_isRecordSound"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <TextView
+                android:id="@+id/click_screen_open_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="240dp"
+                android:layout_marginTop="278dp"
+                android:text="@string/msetting_open"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <com.dvr.android.dvr.msetting.MyImageButton
+                android:id="@+id/click_screen_saving_button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="270dp"
+                android:background="#00000000"
+                android:paddingLeft="20dip"
+                android:paddingTop="@dimen/textsize_list_paddingTop"
+                android:src="@drawable/btn_control_close" />
+
+            <TextView
+                android:id="@+id/click_screen_close_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="450dp"
+                android:layout_marginTop="278dp"
+                android:text="@string/msetting_closed"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/starting_up_back_record_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/record_back_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/record_back_text_x"
+                android:layout_marginTop="210dp"
+                android:text="@string/msetting_isopenback"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <TextView
+                android:id="@+id/record_back_open_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="243dp"
+                android:layout_marginTop="258dp"
+                android:text="@string/msetting_open"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <com.dvr.android.dvr.msetting.MyImageButton
+                android:id="@+id/btnthree_bgrecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="250dp"
+                android:background="#00000000"
+                android:paddingLeft="20dip"
+                android:paddingTop="@dimen/textsize_list_paddingTop"
+                android:src="@drawable/btn_control_close" />
+
+            <TextView
+                android:id="@+id/record_back_close_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="440dp"
+                android:layout_marginTop="258dp"
+                android:text="@string/msetting_closed"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <TextView
+                android:id="@+id/power_on_auto_run_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/power_on_auto_run_text_x"
+                android:layout_marginTop="80dp"
+                android:text="@string/msetting_autorun"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <TextView
+                android:id="@+id/power_on_auto_open_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="243dp"
+                android:layout_marginTop="128dp"
+                android:text="@string/msetting_open"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <com.dvr.android.dvr.msetting.MyImageButton
+                android:id="@+id/btn_power_on_auto_run_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="120dp"
+                android:background="#00000000"
+                android:paddingLeft="20dip"
+                android:paddingTop="@dimen/textsize_list_paddingTop"
+                android:src="@drawable/btn_control_close" />
+
+            <TextView
+                android:id="@+id/power_on_auto_close_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="440dp"
+                android:layout_marginTop="128dp"
+                android:text="@string/msetting_closed"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/other_setting_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/open_back_camera_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/open_back_camera_text_x"
+                android:layout_marginTop="80dp"
+                android:text="@string/msetting_openbackcamera"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <TextView
+                android:id="@+id/open_back_camera_open_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="243dp"
+                android:layout_marginTop="128dp"
+                android:text="@string/msetting_open"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <com.dvr.android.dvr.msetting.MyImageButton
+                android:id="@+id/btn_open_back_camera_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="120dp"
+                android:background="#00000000"
+                android:paddingLeft="20dip"
+                android:paddingTop="@dimen/textsize_list_paddingTop"
+                android:src="@drawable/btn_control_close" />
+
+            <TextView
+                android:id="@+id/open_back_camera_close_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="440dp"
+                android:layout_marginTop="128dp"
+                android:text="@string/msetting_closed"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting" />
+
+            <TextView
+                android:id="@+id/btnfour_defealt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="267dp"
+                android:layout_marginTop="220dp"
+                android:background="@drawable/btn_defealt_setting_bg"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingTop="@dimen/textsize_list_paddingTop"
+                android:src="@drawable/btn_record_quality_normal"
+                android:text="@string/msetting_defealt" />
+
+            <TextView
+                android:id="@+id/apk_version_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnfour_defealt"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="30dp"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_setting"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/record_back_ani_text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="335dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/msetting_backanim"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_setting"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/record_back_ani_open_text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="243dp"
+            android:layout_marginTop="92dp"
+            android:text="@string/msetting_open"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_setting"
+            android:visibility="gone" />
+
+        <com.dvr.android.dvr.msetting.MyImageButton
+            android:id="@+id/btnthree_bganim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="80dp"
+            android:background="#00000000"
+            android:paddingLeft="20dip"
+            android:paddingTop="@dimen/textsize_list_paddingTop"
+            android:src="@drawable/btn_control_close"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/record_back_ani_close_text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="550dp"
+            android:layout_marginTop="92dp"
+            android:text="@string/msetting_closed"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_setting"
+            android:visibility="gone" />
+
+        <com.dvr.android.dvr.msetting.MyImageButton
+            android:id="@+id/btnfour_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="370dp"
+            android:layout_marginTop="120dp"
+            android:background="#00000000"
+            android:paddingLeft="20dip"
+            android:paddingTop="@dimen/textsize_list_paddingTop"
+            android:src="@drawable/btn_record_quality_pressed"
+            android:text="@string/msetting_mulu"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+<style type="text/css">
+.edit span{background:#efefef;}
+.search {margin:5px;}
+.search input {color:#444;}
+td.img img{cursor:pointer}
+</style>
+</head>
+<body>
+<form action="do.php?act=user_cart_del" name="form" method="post" onsubmit="return submitform();">
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+        <div class="bigpart">
+        <div class="title_uc"><h3>{echo:lp{m_cart};/}</h3></div>
+		<table width="98%" class="form_table">
+			<tr class="center">
+				<th width="20"><input type="checkbox" onclick="checkall(this);" /></th>
+				<th width="90">{echo: lp{m_goods_image};/}</th>
+				<th>{echo: lp{m_goods_info};/}</th>
+				<th>{echo: lp{m_buy_num};/}</th>
+				<th width="30">{echo: lp{m_manage};/}</th></tr>
+			<tbody>
+			{sta:if(!empty($result['result'])) {
+				foreach($result['result'] as $v) [loop]}
+			<tr>
+				<td><input type="checkbox" name="goods[]" value="{echo: $v['cart_id'];/}" /></td>
+				<td class="center"><a href="{echo: goods_url($v['goods_id']);/}" target="_blank"><img src="{echo: $v['goods_thumb'];/}" width="80" height="80"></a></td>
+				<td class="textleft"><a href="{echo: goods_url($v['goods_id']);/}" target="_blank" style="font-size:14px; font-weight:bold; color:#0044DD">{echo: $v['goods_name'];/}</a>
+				<br /> {echo: lp{m_order_shops};/}：<a href="{echo:shop_url($v['shop_id']);/}" target="_blank" style="color:#0044DD;">{echo: $v['shop_name'];/}</a> &nbsp;&nbsp; {echo: lp{m_price};/}：￥<span style="color:#FF6600; font-weight:bold;">{echo: $v['goods_price'];/}</span>{echo: lp{m_yuan};/}
+				<br /> {echo: lp{m_add_time};/}：{echo: substr($v['add_time'],0,16);/} &nbsp;&nbsp; <script src="imshow.php?u={echo: $v['user_id'];/}"></script>
+				</td>
+				<td class="center edit"  id="goodssortid_{echo: $v['cart_id'];/}">
+					<span onclick="edit_sort(this,{echo: $v['cart_id'];/})">&nbsp;{echo: $v['goods_number'];/}&nbsp;</span></td>
+				<td class="center"><a href="do.php?act=user_cart_del&id={echo: $v['cart_id'];/}{sta:if($v['cart_id']==0)[exc]}&goods_id={echo:$v['goods_id'];/}{end:if/}" onclick="return confirm('{echo: lp{m_sure_delcartgoods};/}');">{echo: lp{m_del};/}</a><br />
+				<a id="num_{echo: $v['cart_id'];/}" href="modules.php?app=user_order&gid={echo: $v['goods_id'];/}&v={echo: $v['goods_number'];/}">{echo: lp{m_ccbuy};/}</a></td>
+			</tr>
+			{end:foreach/}
+			<tr><td colspan="5" class="textleft"><INPUT onclick="return confirm('{echo:lp{m_manage_sure_del};/}');" type=submit value={echo:lp{m_pl_del};/} name=deletesubmit> </td></tr>
+			<tr><td colspan="5" class="center">{inc: require("modules/page.php");/}</td></tr>
+			{sta: } else [exc]}
+			<tr><td colspan="5" class="center">{echo: lp{m_nolist_record};/}</td></tr>
+			{end:if/}
+			</tbody>
+		</table>
+        </div>
+    </div>
+    <div class="clear"></div>
+    {inc: require("modules/footer.php");/}
+</form>
+</body>
+</html>
+<script language="JavaScript" src="servtools/ajax_client/ajax.js"></script>
+<script language="JavaScript">
+<!--
+function toggle_show(obj,id) {
+	var re = /yes/i;
+	var src = obj.src;
+	var isshow = 1;
+	var sss = src.search(re);
+	if(sss > 0) {
+		isshow = 0;
+	}
+	ajax("do.php?act=shop_isshow_toggle","POST","id="+id+"&s="+isshow,function(data){
+		if(data) {
+			obj.src = 'skin/default/images/'+data+'.gif';
+		}
+	});
+}
+
+var inputs = document.getElementsByTagName("input");
+function submitform() {
+	var status = document.getElementsByName("goods");
+	var checknum = 0;
+	for(var i=0; i<inputs.length; i++) {
+		if(inputs[i].type=='checkbox') {
+			if(inputs[i].checked) {
+				checknum++;
+			}
+		}
+	}
+	if(checknum==0) {
+		alert("{echo:lp{m_selceted_one};/}");
+		return false;
+	}
+	return true;
+}
+function checkall(obj) {
+	if(obj.checked) {
+		for(var i=0; i<inputs.length; i++) {
+			if(inputs[i].type=='checkbox') {
+				inputs[i].checked = true;
+			}
+		}
+	} else {
+		for(var i=0; i<inputs.length; i++) {
+			if(inputs[i].type=='checkbox') {
+				inputs[i].checked = false;
+			}
+		}
+	}
+}
+
+var sort_value,number_value,price_value;
+function edit_sort(span,id) {
+	obj = document.getElementById("goodssortid_"+id);
+	sort_value = span.innerHTML;
+	sort_value = sort_value.replace(/&nbsp;/ig,"");
+	obj.innerHTML = '<input style="width:35px" type="text" id="input_goodssortid_' + id + '" value="' + sort_value + '" onblur="edit_sort_post(this,' + id + ')"  maxlength="2" />';
+	document.getElementById("input_goodssortid_"+id).focus();
+}
+
+function edit_sort_post(input,id) {
+	var obj = document.getElementById("goodssortid_"+id);
+	var num = document.getElementById("num_"+id);
+	var re = /v=[0-9]+/g;
+	if(isNaN(input.value)) {
+		alert("{echo:lp{m_input_numpl};/}");
+		obj.innerHTML = '<span onclick="edit_sort(this,' + id + ')">&nbsp;' + sort_value + '&nbsp;</span>';
+		return ;
+	}
+	if(sort_value==input.value) {
+		obj.innerHTML = '<span onclick="edit_sort(this,' + id + ')">&nbsp;' + sort_value + '&nbsp;</span>';
+	} else {
+		ajax("do.php?act=goods_num_edit","POST","id="+id+"&v="+input.value,function(data){
+			if(data==1) {
+				num.href = num.href.replace(re, "v="+input.value);
+				obj.innerHTML = '<span onclick="edit_sort(this,' + id + ')">&nbsp;' + input.value + '&nbsp;</span>';
+			} else {
+				obj.innerHTML = '<span onclick="edit_sort(this,' + id + ')">&nbsp;' + sort_value + '&nbsp;</span>';
+			}
+		});
+	}
+}
+//-->
+</script>

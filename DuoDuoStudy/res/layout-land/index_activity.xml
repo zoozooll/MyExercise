@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/bg2">
+<LinearLayout
+			android:layout_centerHorizontal="true"
+  			android:id="@+id/index_top_layout"
+			android:layout_width="fill_parent" 
+  			android:layout_height="wrap_content"
+  			android:orientation="vertical"
+  			android:paddingTop="10dip">
+  <ImageView 
+  			android:id="@+id/index_image"
+			android:layout_width="wrap_content" 
+  			android:layout_height="wrap_content" 
+			android:src="@drawable/logo01"
+			android:layout_gravity="center"/>
+</LinearLayout>
+	
+	<GridView 
+		android:id="@+id/GridView"
+		android:paddingTop="10dip"
+		android:numColumns="5" 
+		android:horizontalSpacing="10dip"
+		android:stretchMode="columnWidth"
+		android:verticalSpacing="10dip"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:gravity="center"
+		android:layout_below="@id/index_top_layout"/>
+		
+	<TextView  android:id="@+id/blackText"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/GridView"/>
+	
+<LinearLayout
+	android:id="@+id/duoduo_index_layout_bottom"
+    android:layout_alignParentBottom="true"
+	android:layout_width="fill_parent"
+	android:layout_height="55dip">
+	<include layout="@layout/index_bottom"/>
+</LinearLayout>
+
+</RelativeLayout>

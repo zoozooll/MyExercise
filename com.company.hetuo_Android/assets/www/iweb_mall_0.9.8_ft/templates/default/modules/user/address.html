@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/layout.css">
+<style type="text/css">
+th{background:#EFEFEF}
+
+</style>
+</head>
+<body>
+<div class="container">
+	{inc: require("modules/header.php");/}
+    <div class="clear"></div>
+    <div class="apart">
+    	{inc: require("modules/left_menu.php");/}
+        <div class="bigpart">
+		<div class="title_uc"><h3>{echo: lp{m_getgoods_address};/}</h3></div>
+			<table width="98%" class="form_table">
+				<tr><th class="center">{echo:lp{m_getpackage_pop};/}</th><th>{echo:lp{m_getpackage_area};/}</th><th>{echo:lp{m_address};/}</th><th class="center">{echo:lp{m_zipcode};/}</th><th class="center">{echo:lp{m_mobile};/}/{echo:lp{m_telphone};/}</th><th class="center">{echo:lp{m_email};/}</th><th class="center">{echo:lp{m_manage};/}</th></tr>
+				{sta:if(empty($address_rs))[exc]}
+					<tr><td class="center" colspan="7">{echo:lp{m_dontsave_getgoods_addresslist};/}</td></tr>
+				{sta:}else[loop]}
+				{sta:foreach($address_rs as $val)[loop]}
+				<tr>
+					<td class="center">{echo:$val['to_user_name'];/}</td><td>{echo:$areas_info[0][$val['user_country']]['area_name'];/} {echo:$areas_info[1][$val['user_province']]['area_name'];/} {echo:$areas_info[2][$val['user_city']]['area_name'];/} {echo:$areas_info[3][$val['user_district']]['area_name'];/}</td><td>{echo:$val['full_address'];/}</td><td class="center">{echo:$val['zipcode'];/}</td><td class="center">{echo:$val['mobile'];/}/{echo:$val['telphone'];/}</td><td class="center">{echo:$val['email'];/}</td><td class="center"><a href="modules.php?app=user_address&address_id={echo:$val['address_id'];/}">{echo:lp{m_edit};/}</a> | <a href="do.php?act=user_address_del&address_id={echo:$val['address_id'];/}">{echo:lp{m_del};/}</a></td>
+				</tr>
+				{end:foreach/}
+				{end:if/} 
+			</table>
+			<form action="do.php?act=user_address_add" method="post" name="form_profile" onsubmit="return checkform();">
+				<table width="98%" class="form_table">
+					<input type="hidden" name="address_id" value="{echo: $user_info['address_id'];/}" />
+					<tr class="center"><th colspan="2">{echo:lp{m_addnew_getpackage_address};/}</th></tr>
+					<tr><td class="textright">{echo:lp{m_getpackage_name};/}：</td><td class="textleft"><input type="text" name="to_user_name" value="{echo: $user_info['to_user_name'];/}" maxlength="12" /></td></tr>
+					<tr>
+						<td class="textright">{echo: lp{m_stayarea};/}：</td>
+						<td class="textleft">
+							<span id="user_country"><select name="country" onchange="areachanged(this.value,0);">
+								<option value='0'>{echo: lp{m_select_country};/}</option>
+							 {sta:  foreach($areas_info[0] as $v)[loop]}
+								<option value="{echo: $v['area_id'];/}" {sta: if($v['area_id']==$user_info['user_country']){echo 'selected';if/}>{echo: $v['area_name'];/}</option>
+							{end:foreach/}
+							</select></span>
+							<span id="user_province">{sta: if($user_info['user_country'])[exc]}
+							<select name="province" onchange="areachanged(this.value,1);">
+								<option value='0'>{echo: lp{m_select_province};/}</option>
+							{sta:foreach($areas_info[1] as $v) {
+									if($v['parent_id'] == $user_info['user_country'])[exc]}
+								<option value="{echo: $v['area_id'];/}" {sta:  if($v['area_id']==$user_info['user_province']){echo 'selected';if/}>{echo: $v['area_name'];/}</option>
+							{sta:	}
+							foreach/}
+							</select>
+							{end:if/}</span>
+							<span id="user_city">{sta:	 if($user_info['user_province'])[exc]}
+							<select name="city" onchange="areachanged(this.value,2);">
+								<option value='0'>{echo: lp{m_select_city};/}</option>
+							{sta:	 foreach($areas_info[2] as $v) {
+									if($v['parent_id'] == $user_info['user_province'])[exc]}
+								<option value="{echo: $v['area_id'];/}" {sta: if($v['area_id']==$user_info['user_city']){echo 'selected';if/}>{echo: $v['area_name'];/}</option>
+							{sta:	}
+							foreach/}</select>
+							{end:if/}</span>
+							<span id="user_district">{sta: if($user_info['user_city']) [exc]}
+							<select name="district">
+								<option value='0'>{echo: lp{m_select_district};/}</option>
+							{sta:foreach($areas_info[3] as $v) {
+									if($v['parent_id'] == $user_info['user_city'])[exc]}
+								<option value="{echo: $v['area_id'];/}" {sta:  if($v['area_id']==$user_info['user_district']){echo 'selected';if/}>{echo: $v['area_name'];/}</option>
+							{sta:	}
+							foreach/}</select>
+							{end:if/}</span>
+						</td>
+					</tr>
+					<tr><td class="textright">{echo: lp{m_address};/}：</td><td class="textleft"><input type="text" name="full_address" value="{echo: $user_info['full_address'];/}" style="width:250px;" maxlength="200" /></td></tr>
+					<tr><td class="textright">{echo: lp{m_zipcode};/}：</td><td class="textleft"><input type="text" name="zipcode" value="{echo: $user_info['zipcode'];/}" maxlength="6" /></td></tr>
+					<tr><td class="textright">{echo: lp{m_mobile};/}：</td><td class="textleft"><input type="text" name="mobile" value="{echo: $user_info['mobile'];/}" maxlength="20" /></td></tr>
+					<tr><td class="textright">{echo: lp{m_telphone};/}：</td><td class="textleft"><input type="text" name="telphone" value="{echo: $user_info['telphone'];/}" maxlength="20" /></td></tr>
+					<tr><td class="textright">{echo: lp{m_email};/}：</td><td class="textleft"><input type="text" name="email" value="{echo: $user_info['email'];/}" maxlength="20" /></td></tr>
+					<tr><td colspan="2" align="center"><input type="hidden" name="user_id" value="{echo: $user_id;/}" /><input type="submit" name="submit" value="提交" /></td></tr>
+				</table>
+			</form>
+        </div>
+    </div>
+    <div class="clear"></div>
+    {inc: require("modules/footer.php");/}
+</div>{inc: require("modules/footer.php");/}</div>
+<script language="JavaScript" src="servtools/ajax_client/ajax.js"></script>
+<script language="JavaScript">
+<!--
+function areachanged(value,type){
+	if(value > 0) {
+		ajax("do.php?act=ajax_areas","POST","value="+value+"&type="+type,function(return_text){
+			var return_text = return_text.replace(/[\n\r]/g,"");
+			if(return_text==""){
+				alert("{echo: lp{m_select_again};/}！");
+			} else {
+				if(type==0) {
+					document.getElementById("user_province").innerHTML = return_text;
+					show("user_province");
+					hide("user_city");
+					hide("user_district");
+				} else if(type==1) {
+					document.getElementById("user_city").innerHTML = return_text;
+					show("user_city");
+					hide("user_district");
+				} else if(type==2) {
+					document.getElementById("user_district").innerHTML = return_text;
+					show("user_district");
+				}
+			}
+		});
+	} else {
+		if(type==2) {
+			hide("user_district");
+		} else if(type==1) {
+			hide("user_district");
+			hide("user_city");
+		} else if(type==0) {
+			hide("user_district");
+			hide("user_city");
+			hide("user_province");
+		}
+	}
+}
+
+function hide(id) {
+	document.getElementById(id).style.display = 'none';
+}
+
+function show(id) {
+	document.getElementById(id).style.display = '';
+}
+
+function checkform(){
+	var to_user_name = document.getElementsByName('to_user_name')[0];
+	if(to_user_name.value==''){
+		alert('{echo:lp{m_pl_getgoods_name};/}');
+		return false;
+	}
+
+	var province = document.getElementsByName('province')[0];
+	if(province.value==0){
+		alert('{echo:lp{m_pl_getgoods_province};/}');
+		return false;
+	}
+
+	var city = document.getElementsByName('city')[0];
+	if(city.value==0){
+		alert('{echo:lp{m_pl_getgoods_city};/}');
+		return false;
+	}
+
+	var district = document.getElementsByName('district')[0];
+	if(district.value==0){
+		alert('{echo:lp{m_pl_getgoods_district};/}');
+		return false;
+	}
+
+	var full_address = document.getElementsByName('full_address')[0];
+	if(full_address.value==''){
+		alert('{echo:lp{m_pl_getgoods_address};/}');
+		return false;
+	}
+
+	var zipcode = document.getElementsByName('zipcode')[0];
+	if(zipcode.value==''){
+		alert('{echo:lp{m_pl_getgoods_zipcode};/}');
+		return false;
+	}
+
+	var email = document.getElementsByName('email')[0];
+	var user_email_reg = /^[0-9a-zA-Z_\-\.]+@[0-9a-zA-Z_\-]+(\.[0-9a-zA-Z_\-]+)*$/;
+	if(!email.value=='' && !user_email_reg.test(email.value)){
+		alert('{echo:lp{m_email_type_notine};/}');
+		return false;
+	}
+
+	var user_mobile = document.getElementsByName('mobile')[0];
+	var user_mobile_reg = new RegExp("[0-9-]{5,15}");
+
+	var user_telphone = document.getElementsByName('telphone')[0];
+	var user_telphone_reg = new RegExp("[0-9-]{5,15}");
+
+	if(user_mobile.value=='' && user_telphone.value=='') {
+		alert('{echo:lp{m_sorry_p_mselectone};/}');
+		return false;
+	} else if(!user_mobile.value=='' && !user_mobile_reg.test(user_mobile.value)) {
+		alert('{echo:lp{m_sorry_mobiletype};/}');
+		return false;
+	} else if(!user_telphone.value=='' && !user_telphone_reg.test(user_telphone.value)) {
+		alert('{echo:lp{m_sorry_phonetype};/}');
+		return false;
+	}else {
+		return true;
+	}
+
+}
+//-->
+</script>
+</body>
+</html>

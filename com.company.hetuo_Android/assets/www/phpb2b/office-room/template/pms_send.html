@@ -1,0 +1,38 @@
+<{assign var="page_title" value="`$_send_message`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+     <div class="hint"><{$_must_input_with_star}></div>
+	  <form name="sendmsgfrm" action="pms.php" method="post">
+	  <input type="hidden" name="formhash" value="<{$formhash}>">
+       <table class="offer_info_content">
+          <tr>
+            <th class="circle_left"><font color="#FF6600">*</font><{$_send_to}></th>
+             <td class="circle_right"><input name="to" type="text" id="To" size="30" value="<{$item.to}>"><font color="#666666"><{$_send_other_username}></font></td>
+          </tr>
+          <tr>
+            <th> <font color="#FF6600">*</font><{$_theme_n}></th>
+            <td><input name="pms[title]" type="text" id="title" size="30" value=""></td>
+          </tr>
+          <tr>
+             <th><font color="#FF6600">*</font><{$_content}></th>
+             <td><textarea name="pms[content]" cols="50" rows="6" wrap="VIRTUAL"></textarea></td>
+          </tr>
+          <tr>
+             <th class="circle_bottomleft"></th>
+             <td class="circle_bottomright"><input name="send" type=submit id="Send" value=" <{$_send}> ">&nbsp;&nbsp;<input name=reset type=reset id="reset" value=" <{$_cancel}> "></td>
+          </tr>
+           
+        </table>
+	  </form>
+ </div>
+ </div> 
+<{include file="footer.html"}>

@@ -1,0 +1,15 @@
+	<ul class="tabbar">
+	<li {sta:if($app == 'index') [loop]}class="selected"{end:if/}><a href="{echo: shop_url($shop_id,'index');/}" hideFocus=true>{echo:lp{s_shop_indexs};/}</a></li>
+	<li {sta:if($app == 'credit') [loop]}class="selected"{end:if/}><a href="{echo: shop_url($shop_id,'credit');/}" hideFocus=true>{echo:lp{s_shop_credit};/}</a></li>
+	<li {sta:if($app == 'intro') [loop]}class="selected"{end:if/}><a href="{echo: shop_url($shop_id,'intro');/}" hideFocus=true>{echo:lp{s_shop_intro};/}</a></li>
+	<li {sta:if($app == 'products') [loop]}class="selected"{end:if/}><a href="{echo: shop_url($shop_id,'products');/}" hideFocus=true>{echo: lp{s_products};/}</a></li>
+	<li {sta:if($app == 'groupbuy') [loop]}class="selected"{end:if/}><a href="{echo: shop_url($shop_id,'groupbuy');/}" hideFocus=true>{echo: lp{s_shop_groupbuy};/}</a></li>
+	{sta:if($SYSINFO['map'] == 'true' && ($SHOP['map_x']!=0 || $SHOP['map_y']!=0) ) [loop]}
+	<li {sta:if($app == 'map') [loop]}class="selected"{end:if/}><a href="{echo: shop_url($shop_id,'map');/}" hideFocus=true>{echo:lp{s_shop_seat};/}</a></li>
+	{end:if/}
+	<!-- plugins !-->
+	<div id="shop_menu_buttun">
+		{echo:isset($plugins['shop_menu_buttun'])?show_plugins($plugins['shop_menu_buttun']):'';/}
+	</div>
+	<!-- plugins !-->
+	</ul>

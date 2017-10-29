@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:spinnerview="http://schemas.android.com/apk/res/com.iskyinfor.duoduo"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:gravity="center_vertical">
+
+<LinearLayout
+  android:id="@+id/test_lesson_top"
+  android:layout_width="fill_parent"
+  android:layout_height="50dip"
+  android:orientation="horizontal"
+  android:gravity="center_vertical"
+  android:background="@drawable/toptitle02">
+
+<TextView
+    android:id="@+id/lesson_text_name" 
+    style="@style/buttonTextStyle"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" 
+	android:layout_marginLeft="10dip"
+	android:text="@string/sysnlesson"/>
+	
+<RelativeLayout 
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:gravity="right"
+  android:paddingRight="5dip"
+  android:layout_marginTop="5dip">
+ <ImageView 
+      android:id="@+id/lesson_img_switch"
+	  android:layout_height="wrap_content" 
+	  android:layout_width="wrap_content"
+	  android:background="@drawable/bookshelf_list_switch_selector"/>
+	  <com.iskyinfor.duoduo.ui.SpinnerView
+	  android:id="@+id/lesson_alldata"
+	  android:background="@drawable/bookshelf_topall_selector"
+	  android:layout_toRightOf="@id/lesson_img_switch"
+	  android:layout_height="wrap_content" 
+	  android:layout_width="80dip"
+	  android:layout_marginTop="3dip" 
+	  android:text="全部"
+	  android:textColor="#FFFFF0"
+	  spinnerview:textWidth="80"
+	  spinnerview:textInfo="@array/lesson_project_spinner"
+	  spinnerview:lesson_spinner_first="@drawable/lesson_spinner_first"
+	  spinnerview:lesson_spinner_center="@drawable/lesson_spinner_thrid"
+	  spinnerview:lesson_spinner_end="@drawable/lesson_spinner_fourth"/>
+  <ImageView 
+      android:id="@+id/lesson_bookshelf_shop"
+      android:layout_toRightOf="@id/lesson_alldata"
+	  android:paddingRight="0dip"
+	  android:layout_marginTop="8dip"
+	  android:layout_height="wrap_content" 
+	  android:layout_width="wrap_content"  
+	  android:src="@drawable/strollbookstore"/>
+</RelativeLayout>  
+</LinearLayout>
+  
+  <!-- 搜索  -->
+<!-- <LinearLayout 
+  android:id="@+id/lesson_linear2"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="40dip"
+  android:layout_below="@+id/linear1">
+         <EditText 
+	        android:id="@+id/edits_serach"
+	        android:layout_height="30dip" 
+			android:layout_width="fill_parent"
+			android:layout_marginLeft="5dip"
+			android:layout_weight="1"
+			android:textSize="13dip"
+            android:layout_marginTop="8dip"
+			android:background="@drawable/searchinput"/>
+		<ImageView 
+		      android:id="@+id/lesson_searchbtn"
+			  android:layout_height="30dip" 
+			  android:layout_width="wrap_content"  
+              android:layout_marginTop="8dip"
+              android:layout_marginRight="10dip"
+			  android:background="@drawable/bookshelf_searchbtn_selector"/>
+		 
+		<ImageView 
+	        android:id="@+id/lesson_seach_text" 
+		    android:layout_height="wrap_content" 
+		    android:layout_width="wrap_content" 
+		    android:layout_margin="5dip"
+            android:layout_marginTop="10dip"
+		    android:background="@drawable/bookshelf_advancedbtnhover_selector"/>
+		
+</LinearLayout>  
+ -->
+</LinearLayout>

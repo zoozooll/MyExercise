@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:pageview="http://schemas.android.com/apk/res/com.iskyinfor.duoduo"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FFFFFF">
+  <LinearLayout
+  android:id="@+id/bookshelfmanage_top"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_alignParentTop="true">
+  <include  layout="@layout/bookshelf_main_item_top"/>
+  </LinearLayout>
+  
+  <LinearLayout
+  android:id="@+id/bookshelf_main_center"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_above="@+id/bookshelfmanage_buttom"
+  android:layout_below="@+id/bookshelfmanage_top"
+  >
+     <com.iskyinfor.duoduo.ui.custom.page.PageListView
+	  android:id="@+id/bookshelfmanage_lv"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:cacheColorHint="#ffffff"
+	  pageview:itemPageCount="3"  
+	  />
+  </LinearLayout>
+  
+   <LinearLayout
+    android:id="@+id/bookshelfmanage_buttom"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+  >
+  <include layout="@layout/bookshelf_main_item_buttom"/>
+  </LinearLayout>
+</RelativeLayout>

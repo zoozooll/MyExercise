@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 下载项目的item -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/offline_map_list_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="6" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#fff" 
+        android:layout_weight="1"
+        android:id="@+id/offline_map_download_city_name"
+        />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/offline_map_download_status"
+        />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#fff" 
+        android:layout_weight="1"
+        android:text="0%"
+        android:id="@+id/offline_map_download_percent"
+        />
+    
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#fff" 
+        android:layout_weight="1"
+        android:id="@+id/offline_map_download_size"
+        />
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/offline_map_download_operation"
+        android:background="@null"
+        android:src="@drawable/offline_map_disable"
+        />
+    
+     <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/offline_map_download_delete"
+        android:src="@drawable/offline_map_download_delete"
+        android:background="@null"
+        />
+</LinearLayout>

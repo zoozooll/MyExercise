@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{echo: $header['title'];/}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{echo: $header['keywords'];/}" />
+<meta name="description" content="{echo: $header['description'];/}" />
+<base href="{echo: $baseUrl;/}" />
+<link href="skin/{echo: $SYSINFO['templates'];/}/css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="skin/{echo: $SYSINFO['templates'];/}/js/changeStyle.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	{inc: require("shop/index_header.php");/}
+<!--search end -->
+<div class="asd top5 clear"><script language="JavaScript" src="uploadfiles/asd/1.js"></script></div>
+<div class="main_right2 left top5">
+        <div class="head_line"><div class="bg_left"></div><div class="bg_right"></div></div>
+        <div class="top"><h2 class="highlight">{echo:lp{i_article_list};/}</h2></div>
+        <div class="c_m article_list">
+            <ul>
+            {sta:foreach($article_cat as $val)[loop]}
+                <li><a href="{echo:article_list_url($val['cat_id']);/}">{echo:$val['cat_name'];/}</a></li>
+            {end:foreach/}
+            </ul>
+        </div>
+</div>
+<!--main right end-->
+<div class="main2 right top5">
+	<div class="path" style="padding:2px 0 6px 0; line-height:14px;">{echo:lp{i_location};/}：<a href="index.php">{echo:lp{i_index};/}</a> > {echo:$cat_name;/}</div>
+    <div class="article pro_class">
+        <ul>
+        {sta:if($result['result'])[exc]}
+        {sta:foreach($result['result'] as $val)[loop]}
+            <li><span class="right">{echo: $val['add_time'];/}</span><a href="{echo:article_list_url($val['cat_id']);/}">[{echo:$cat_name;/}]</a> <a href="{echo:article_url($val['article_id']);/}">{echo: $val['title'];/}</a></li>
+        {end:foreach/}
+        {end:}else{ ;/}
+        {echo:lp{i_none_articles};/}
+        {end:if/}
+        </ul>
+		<div class="page"><span>{echo: str_replace("{num}",$result['countnum'],lp{i_page_num});/}</span><a href="{echo: article_list_url($cat_id,$result['firstpage']);/}" >{echo: lp{i_page_first};/}</a><span><a href="{echo: article_list_url($cat_id,$result['prepage']);/}">{echo: lp{i_page_pre};/}</a></span><a href="{echo: article_list_url($cat_id,$result['nextpage']);/}" >{echo: lp{i_page_next};/}</a><a href="{echo: article_list_url($cat_id,$result['lastpage']);/}" >{echo: lp{i_page_last};/}</a><span>{echo: lp{i_page_now};/}{echo: $result['page'];/}/{echo: $result['countpage'];/}</span><span>{echo: str_replace("{num}",$result['countpage'],lp{i_page_count});/}</span></div>
+	</div>
+</div>
+<div class="clear"></div>
+<!-- main end -->
+{inc: require("shop/index_footer.php");/}
+<!--footer end-->
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{echo: lp{m_u_center};/}</title>
+<link rel="stylesheet" type="text/css" href="skin/{echo: $SYSINFO['templates'];/}/css/modules.css">
+<style type="text/css">
+.right_operate .title {font-size:12px; color:#fff; background-color:#1E88C0; padding-left:10px; font-weight:bold; line-height:24px; height:24px;}
+table { border-collapse:collapse; border:solid #999; border-width:1px 0 0 1px; margin:5px auto;} 
+table th, table td { border:solid #999; border-width:0 1px 1px 0; padding:2px; } 
+.textright {text-align:right; width:160px;}
+</style>
+</head>
+<body>
+<div class="header">{inc: require("modules/header.php");/}</div>
+<div class="main">
+	<div class="left_menu">
+		{inc: require("modules/left_menu.php");/}
+	</div>
+	<div class="right_operate">
+		<div class="title">{echo:lp{m_safe_setting};/}</div>
+		<form action="do.php?act=user_profile" method="post" name="form_profile">
+		<table width="98%">
+
+		</table>
+		</form>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="footer">{inc: require("modules/footer.php");/}</div>
+</body>
+</html>

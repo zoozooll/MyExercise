@@ -1,0 +1,632 @@
+<?php
+if(!$IWEB_SHOP_IN) {
+	die('Hacking attempt');
+}
+
+class moduleslp{
+	/* error message */
+	var $m_error_message1 = "您現在是{name}, 只能上傳{num}個商品！";
+	var $m_error_createshop = "只有企業會員可以創建店舖！";
+
+	var $m_error_messageshow = "錯誤信息提示";
+
+	/* menu */
+	var $m_u_center = "用戶中心";
+	var $m_buyer = "我是買家";
+	var $m_seller = "我是賣家";
+	var $m_my_cart = "我的購物車";
+	var $m_my_order = "我的訂單";
+	var $m_my_favorite = "我的收藏";
+	var $m_my_guestbook = "我的留言";
+	var $m_shop_category = "店舖商品分類";
+	var $m_cart = "購物車";
+	var $m_sell = "我要賣";
+	var $m_buy = "我要買";
+	var $m_logout = "安全退出";
+	var $m_add_newgoods = "添加新商品";
+	var $m_rc_order = "收到的訂單";
+	var $m_rc_guestbook = "收到的留言";
+	var $m_rc_askprice = "收到的詢價";
+	var $m_base_setting = "基本設置";
+	var $m_profile = "個人信息";
+
+	var $m_createshop_vip = "企業會員才可以";
+	var $m_shop_view = "預覽";
+	var $m_payment_setting = "支付方式設置";
+	var $m_shoprate_manage = "評價管理";
+	var $m_shoprate_frombuyer = "來自買家的評價";
+	var $m_shoprate_fromseller = "來自賣家的評價";
+	var $m_shoprate_topep = "給他人的評價";
+	var $m_remind_setting = "提醒設置";
+	var $m_my_remind = "我的提醒";
+	var $m_userico_setting = "頭像設置";
+	var $m_open = "開啟";
+	var $m_open_message = "您確定要關閉商舖嗎？關閉商舖的時商舖下的商品同時下架！";
+	var $m_lock = "鎖定";
+	var $m_shop_lock = "您的商舖已經被鎖定";
+	var $m_email_ver = "郵箱驗證";
+	var $m_my_groupbuy ="我的團購";
+	var $m_groupbuy_list ="團購列表";
+	var $m_add_groupbuy ="添加新團購";
+	//user
+	var $m_collect_num= "收藏人氣";
+	var $m_ico_set = "頭像設置";
+	var $m_user_ico = "用戶頭像";
+	var $m_img_limit = "圖片應小於1M，jpg、png或gif格式。建議為100x100像素";
+	var $m_youbelocked = "您已被管理員鎖定，您将不能登陸，請聯繫管理員！";
+	var $m_payment_cho = "選擇支付方式";
+	var $m_rem_con= "提醒内容";
+	var $m_time_send= "發出時間";
+	var $m_rem_fettle= "提醒狀態";
+	var $m_mark_read= "標為已讀";
+	var $m_mark_unread ="標為未讀";
+	var $m_read ="已讀";
+	var $m_unread ="未讀";
+	var $m_confirm= "確定要執行此操作嗎？";
+	var $m_choice= "至少要選擇一項！";
+	var $m_rem_type= "提醒類型";
+	var $m_rem_name= "提醒名稱";
+	var $m_site_rem= "站内提醒";
+	var $m_inputtrue_username = "請輸入正確的用戶名";
+	var $m_email_reminder ="郵件提醒";
+	var $m_complaints ="投訴";
+	var $m_refund ="退款";
+	var $m_by_complainant ="被投訴人";
+	var $m_related_products ="相關商品";
+	var $m_of_complaint ="投訴原因";
+	var $m_select_complaints_reason ="請選擇投訴原因";
+	var $m_choose_trade_complaints ="請選擇正確的投訴原因，否則您将失去本交易投訴的機會。";
+	var $m_complaints_content ="投訴内容";
+	var $m_please_enter_complaints ="請輸入投訴内容";
+	var $m_current ="當前";
+	var $m_upto_bytes ="字節,最多500字節";
+	var $m_real_evidence_dispute ="請您盡可能提供真實且詳細的糾紛描述及證據（包括聊天記錄、商品圖片及相關鏈接），這樣我們才能在最快的時間裡更正確地給您處理投訴。";
+
+	/* goods */
+	var $m_add_goods = "添加商品";
+	var $m_goods_list = "商品列表";
+	var $m_edit_goods = "修改商品";
+	var $m_goods_name = "商品名稱";
+	var $m_goods_category = "商品分類";
+	var $m_select_cateogry = "選擇分類";
+	var $m_goods_price = "商品價格";
+	var $m_goods_pricezero = "商品價格等於0時即為面議";
+	var $m_transport_price = "運費";
+	var $m_goods_intro = "商品介紹";
+
+	var $m_wholesale = "批發說明";
+	var $m_goods_number = "庫存量";
+	var $m_keyword = "關鍵字";
+	var $m_on_sale = "上架";
+	var $m_view_status = "打勾表示允許查看，否則不允許查看。";
+	var $m_add_recommend = "加入推薦";
+	var $m_goodsname_notnone = "商品名稱不能為空！";
+	var $m_select_categorypl = "請選擇分類！";
+	var $m_goods_keyword = "商品名稱關鍵字";
+	var $m_search_goods = "搜索商品";
+
+	var $m_image_upload = "圖片上傳";
+	var $m_upload_tolimit = "大小限制為1M,建議像素小於600*400";
+	var $m_sure_delgoods = "確定要刪除這商品嗎？";
+	var $m_nogoods_list = "沒有產品列表！";
+	var $m_input_numpl = "請輸入數字";
+	var $m_back_goodslist = "返回商品列表";
+	var $m_goods_image = "商品圖片";
+	var $m_sure_delimg = "您確實要刪除該圖片嗎？";
+	var $m_not_uploadimg = "您還沒有上傳圖片！";
+	var $m_set_img = "設為首圖";
+	var $m_is_img = "已是首圖";
+	var $m_img_desc = "圖片描述";
+	var $m_upload_file = "上傳文件";
+	var $m_update_goodsimg = "更新商品圖片";
+	var $m_goods_attr = "商品屬性";
+	var $m_goods_type = "商品類型";
+	var $m_goodsimg_updatesuccess = "商品圖片更新成功！";
+	var $m_addgoods_success = "添加新商品成功！";
+	var $m_goodsupdate_success = "商品屬性更新成功！";
+	var $m_addgoods_fail = "添加新商品失敗";
+	var $m_delgoods_success = "刪除商品成功！";
+	var $m_delgoods_fail = "刪除商品失敗";
+	var $m_editgoods_success = "修改商品成功！";
+	var $m_editgoods_fail = "修改商品失敗";
+	var $m_fgoodsimg_setsuccess = "首圖設置成功！";
+	var $m_fgoodsimg_setfail = "首圖設置失敗，請重試！";
+	var $m_dontbuy_youself = "不能購買自己的商品！";
+	var $m_custom_categories = "自定義分類";
+	var $m_undefinition = "未定義";
+	var $m_goods_photo = "相冊";
+	var $m_goods_ushelves = "批量下架";
+	var $m_goods_dshelves = "批量上架";
+	var $m_over_setnum = "已超出您可以設置的數量限制！";
+	var $m_showgoods_photo = "商品圖片";
+	var $m_categoryname_notnone = "分類名稱不能為空！";
+	var $m_set_num = "您最多可以設置";
+	var $m_num_much = "過多設置無效";
+	var $m_add_cat = "添加自定義分類";
+	var $m_add = "增加";
+	var $m_csv_export = "CSV導出";
+	var $m_csv_import = "CSV導入";
+	var $m_not_csv ="只能選擇CSV文件";
+	var $m_no_chose_goods="請選擇要導出的商品";
+	var $m_no_csv_name="請輸入要導出的文件名";
+	var $m_no_csv_import="請選擇要導入的文件";
+	var $m_csv_name = "導出的文件名";
+	var $m_all_goods ="全部商品";
+	var $m_export_code ="導出編碼";
+	var $m_file_encoding ="文件的編碼";
+
+//	var $m_goods_photo = "相冊";	/* favorite */
+	var $m_favorite = "收藏夾";
+	var $m_suredel_favorite = "確定要刪除這條收藏嗎？";
+	var $m_is_transport_template="選擇郵費模板";
+	var $m_add_transport_template="新增郵費模板";
+	var $m_edit_transport_template="修改郵費模板";
+	var $m_list_transport_template="運費模板列表";
+	var $m_transport_name="模板名稱";
+	var $m_transport_name_message="請輸入運費模板的名稱";
+	var $m_transport_description="模板描述";
+	var $m_transport_description_message="請輸入模板的描述";
+	var $m_transport_cont="配置運費地區";
+	var $m_choose_transport_type="請選擇運送方式";
+	var $m_choose_transport_type_message="(提示：除指定地區外，其餘地區的運費采用“默認運費”)";
+	var $m_transport_template_frist="默認運費：";
+	var $m_transport_template_second="每超過一件需要增加運費：";
+	var $m_shure="確定";
+	var $m_eidt_transport_template="修改運費模板";
+	var $m_goods_brand="商品品牌";
+
+	/* password */
+	var $m_find_password = "找回密碼";
+	var $m_edit_password = "修改密碼";
+	var $m_new_password = "新　密碼";
+	var $m_re_password = "確認密碼";
+	var $m_password_notnone = "新密碼不能為空！";
+	var $m_ppassword_notnone = "密碼不能為空";
+	var $m_oldpassword_notnone = "原始密碼不能為空！";
+	var $m_password_notsame = "新密碼與確認密碼不一致！";
+	var $m_password_same = "原始密碼和新密碼一樣，請重設新密碼！";
+	var $m_old_password = "原始密碼";
+	var $m_editpassword_success = "密碼修改成功";
+	var $m_editpassword_fail = "密碼修改失敗";
+	var $m_oprate_fail = "操作失敗，請重新修改";
+	var $m_oldpassword_notture = "原始密碼不正確";
+
+	/* profile */
+	var $m_edit_profile = "修改個人信息";
+	var $m_truename = "真實姓名";
+	var $m_birthday = "出生日期";
+	var $m_gender = "性别";
+	var $m_marry = "婚煙";
+	var $m_mobile = "手機";
+	var $m_telphone = "電話";
+	var $m_stayarea = "所在地區";
+	var $m_select_country = "選擇國家";
+	var $m_select_province = "選擇省份";
+	var $m_select_city = "選擇城市";
+	var $m_select_district = "選擇地區";
+	var $m_address = "詳細地址";
+	var $m_zipcode = "郵政編碼";
+	var $m_useremail_notnonoe = "用戶Email帳戶不能為空！";
+	var $m_inputtrue_useremail = "請輸入合法的用戶Email帳戶！";
+	var $m_verifycode_error = "驗證碼錯誤!";
+	var $m_usernot_exi = "用戶不存在!請確認您輸入的是Email帳戶!";
+	var $m_inputerror_emailpassword = "您輸入的Email帳戶或密碼錯誤!";
+	var $m_username_notnone = "用戶名不能為空!";
+	var $m_usernameoremail_exied = "您的用戶名或郵箱已存在!";
+	var $m_truename_nonone = "真實姓名不能為空!";
+	var $m_register_fail = "註冊失敗請重試!";
+	var $m_sendagain_viewyoumail = "已重新發送，請查看您註冊時的郵箱！";
+	var $m_username_isexied = "用戶名已存在！";	/* guestbook */
+	var $m_guestbook_list = "留言信息列表";
+	var $m_company_name = "公司名稱";
+	var $m_guestbook_content = "留言内容";
+	var $m_suredel_guestbook = "確定要刪除這條留言嗎？";
+	var $m_other_contact = "其它聯繫";
+
+	/* askprice */
+	var $m_askprice_list = "詢價信息列表";
+	var $m_name = "姓名";
+	var $m_email = "郵箱";
+	var $m_askprice_content = "詢價内容";
+	var $m_suredel_askprice = "確定要刪除這條詢價信息嗎？";
+
+	/* ucategory */
+	var $m_add_ucategory = "添加商舖分類";
+	var $m_edit_ucategory = "修改商舖分類";
+	var $m_ucategory = "商舖自定義分類";
+	var $m_category_name = "分類名稱";
+	var $m_parent_cat = "上級分類";
+	var $m_top_cat = "頂級分類";
+	var $m_number_unit = "數量單位";
+	var $m_nocat_addnow = "您還沒有添加分類，現在要添加嗎？";
+	var $m_add_subcategory = "添加子分類";
+	var $m_remark_edit = "註：帶灰色背景的可直接點擊修改;";
+	var $m_input_num= "請輸入數字！";
+	var $m_sure_delcat= "您確定要刪除此分類及其下頭的所有子分類嗎？";
+	var $m_ucategory_notnone = "店舖分類名稱不能為空！";
+
+	/* shop */
+	var $m_create_shop = "創建店舖";
+	var $m_edit_shop = "修改店舖";
+	var $m_shop_name = "店舖名稱";
+	var $m_shop_info = "店舖設置";
+	var $m_shop_management = "主要經營範圍";
+	var $m_select_template = "選擇模板";
+	var $m_shop_intro = "店舖簡介";
+	var $m_shop_introimg = "店舖簡介圖片";
+	var $m_shop_introimg_msg = "建議大小:200X200,不修改請留空！";
+	var $m_shop_logoimg = "店舖LOGO圖片";
+	var $m_shop_logoimg_msg = "建議大小:200X100,不修改請留空！";
+	var $m_shop_bannerimg = "店舖頭上大圖片";
+	var $m_shop_bannerimg_msg = "建議大小:960X130,不修改請留空！";
+	var $m_shopname_notnone = "店舖名稱不能為空！";
+	var $m_select_countrypl = "請選擇國家！";
+	var $m_select_provincepl = "請選擇省份！";
+	var $m_select_citypl = "請選擇城市！";
+	var $m_select_districtpl = "請選擇地區！";
+	var $m_address_notnone = "詳細地址不能為空！";
+	var $m_shopmanagement_notnone = "主要經營範圍不能為空！";
+	var $m_createshop_now = "您還沒有創建店舖，現在要<a href='modules.php?app=shop_create' style='color:#1E88C0'>創建</a>嗎？";
+	var $m_shopcatname_notnone = "店舖分類名稱不能為空";
+	var $m_shopcreate_success = "店舖創建成功！";
+	var $m_shopcreate_fail = "店舖創建失敗！";
+	var $m_post_app = "提交申請";
+	var $m_comment = "評論";
+	var $m_commentators = "評論人";
+	var $m_commentate = "解釋";
+	var $m_evaluate_con = "評價内容";
+	var $m_evaluate_time = "評價時間";
+	var $m_my_commentate = "我要解釋";
+	var $m_commentate_con = "解釋内容";
+	var $m_send = "提交";
+	var $m_commentate_null = "解釋内容不能為空！";
+	var $m_my_appraise = "我要評價";
+	var $m_appraise_grade = "評價等級";
+	var $m_appraiser = "被評價人";
+	var $m_surface ="平郵";
+	var $m_express_delivery ="快遞";
+	var $m_in_template_name ="請填寫模板名稱";
+	var $m_in_template_description ="請填寫模板描述";
+	var $m_choose_shipping_method ="至少選擇一種運送方式";
+	var $m_set_shipping_cost ="設置默認配送費用";
+	var $m_open_map ="點擊打開地圖，設置我的位置";
+	var $m_domain ="二級域名";
+
+	/* honor */
+	var $m_shop_honor = "店舖資質榮譽";
+	var $m_suredel_honor = "您確實要刪除該資質榮譽嗎？";
+	var $m_update_image = "更新圖片";
+	var $m_honor_updatesuccess = "資質榮譽更新成功！";
+
+	/* news */	var $m_shopnews_manage = "店舖資訊管理";
+	var $m_add_shopnews = "添加店舖資訊";
+
+	/* notice */
+	var $m_shop_notice = "店舖公告";
+	var $m_edit_shopnotice = "修改店舖公告";
+
+	/*團購*/
+	var $m_group_list = "團購列表";
+	var $m_group_name = "團購名稱";
+	var $m_group_status = "活動狀態";
+	var $m_start_time = "起止時間";
+	var $m_order_num = "訂購數/成團數";
+	var $m_order = "下訂單";
+	var $m_ing = "進行中";
+	var $m_no_published = "未發布";
+	var $m_published = "發布";
+	var $m_end = "已完成";
+	var $m_sta_time = "開始時間";
+	var $m_end_time = "結束時間";
+	var $m_group_shows ="團購說明";
+	var $m_select_products ="選擇商品";
+	var $m_products_name ="產品名稱";
+	var $m_products_sort ="產品分類";
+	var $m_select ="搜索";
+	var $m_search_above ="請先從上面搜索";
+	var $m_group_number ="成團件數";
+	var $m_group_price ="團購價格";
+	var $m_group_submit ="提交";
+	var $m_group_no_name ="團購名稱不能為空！";
+	var $m_sta_no_time ="開始時間不能為空！";
+	var $m_end_no_time ="結束時間不能為空！";
+	var $m_products_no_name ="商品名稱不能為空！";
+	var $m_group_no_number ="成團件數不能為空！";
+	var $m_group_no_price ="團購價格不能為空！";
+	var $m_group_add ="添加團購";
+	var $m_to ="至";
+	var $m_order_group ="訂單";
+	var $m_order_status ="訂購情況";
+	var $m_event_title="活動名稱";
+	var $m_group_user_name ="用戶名";
+	var $m_group_contact ="聯繫人";
+	var $m_group_tel ="聯繫電話";
+	var $m_group_quantity ="訂購數量";
+	var $m_group_buy = "團購";
+	var $m_group_refund ="要求退款";
+	var $m_payment_message ="支付留言";
+	var $m_my_group_buy_orders ="我的團購訂單";
+
+	/* order */
+	var $m_buy_num = "購買數量";
+	var $m_ccbuy = "購買";
+	var $m_sure_delcartgoods = "確定要刪除這商品在購物車嗎？";
+	var $m_order_nomoregoods = "庫存中已沒有這麼多商品，前重新購買！";
+	var $m_goods_info = "商品信息";
+	var $m_order_getsting = "收貨信息";
+	var $m_order_thisbuyprice = "些次購物需要支付的總價";
+	var $m_contact = "聯繫人";
+	var $m_sureaddress_rcgoods = "請確認以上的收貨信息，以確保能夠收到商品！";
+	var $m_sure_postorder = "確認提交訂單";
+	var $m_order_message = "訂單附言";
+	var $m_post_order = "提交訂單";
+	var $m_order_success = "訂單成功";
+	var $m_postsuccess_rempayid = "您的訂單已提交成功，請記住您的訂單號";
+	var $m_back_myorder = "返回到我的訂單";
+	var $m_recver_order = "收到的訂單";
+	var $m_order_info = "訂單詳情";
+	var $m_order_editprice = "修改價格";
+	var $m_order_time = "下訂單時間";
+	var $m_pay_time = "支付時間";
+	var $m_shipping_time = "發貨時間";
+	var $m_receive_time = "收貨時間";
+	var $m_sure_thisorder = "要確認該訂單嗎？";
+	var $m_sure_cancelthisorder = "確定要取消該訂單嗎？";
+	var $m_cancelorder = "取消訂單";
+	var $m_sure_ordernow = "確認訂單";
+	var $m_sure_shippingnow = "確認發貨";
+	var $m_iwant_pay = "我要支付";
+	var $m_your_payid = "您的訂單號";
+	var $m_order_amount = "總價格";
+	var $m_view_orderinfo = "查看訂單詳情";
+	var $m_order_cancel = "訂單已取消";
+	var $m_order_combuy = "已完成購買";
+	var $m_order_nosure = "未確認";
+	var $m_order_sure = "已確認";
+	var $m_order_payed = "已支付";
+	var $m_order_nopayed = "未支付";
+	var $m_order_transported = "已發貨";
+	var $m_order_notransported = "未發貨";
+	var $m_pay = "付款";
+	var $m_sure_thisgoodsreceive = "您購買的商品確認已收到？";
+	var $m_sure_receive = "確認收貨";
+	var $m_noex_thisorder = "不存在此訂單！";
+	var $m_order_becheck = "您已確認該訂單！";
+	var $m_order_becheckfail = "該訂單確認失敗";
+	var $m_sure_shippingnowfail = "確認發貨失敗";
+	var $m_price_editfail = "價格修改失敗";
+	var $m_order_notcancel = "此訂單已完成不能取消";
+	var $m_order_becanceled = "此訂單已成功取消";
+	var $m_order_becanceledfail = "此訂單取消失敗";
+	var $m_sureyou_receive = "您已確認收貨！";
+	var $m_sureyou_receivefail = "確認收貨失敗";
+	var $m_cartnotthis_goods = "購物車裡不存在此商品！";
+	var $m_cartgoods_delsuceess = "購物車商品刪除成功";
+	var $m_cartgoods_delfail = "購物車商品刪除失敗";
+	var $m_order_fail = "訂單失敗";
+	var $m_view_orderinfo2 = "查看詳情";
+	var $m_order_poststing = "發貨信息";
+	var $m_shipping_name = "物流公司名稱";
+	var $m_shipping_no = "物流發貨單號";
+	var $m_shipping_type = "發貨運輸類型";
+	var $m_alipay_tradeno = "支付寶訂單號";
+
+	var $m_welcome_ucenter = "歡迎您來到<span class=\"highlight\">IwebMall</span>用戶管理中心！";
+	var $m_bubuser_info = "買家信息";
+	var $m_babuser_info = "賣家信息";
+	var $m_deal_order = "成交的訂單";
+	var $m_allgoods_num = "商品總數";
+	var $m_anum_goods = "個商品";
+	var $m_index_myfav = "我的收藏夾";
+	var $m_goodskc_w_num = "庫存警告商品數(少於5個)";
+	var $m_newgoods_re_num = "新品推薦數";
+	var $m_bestgoods_re_num = "精品推薦數";
+	var $m_hotgoods_re_num = "熱銷商品數";
+	var $m_promotegoods_re_num = "特價商品數";
+	var $m_getgoods_address = "收貨地址";
+
+	var $m_last_login = "您的上一次登錄時間";
+	var $m_last_ip = "上次登錄 IP";
+
+	var $m_reg_com_user = "申請成為企業會員";
+	var $m_i_mk_store = "我要開店";
+	var $m_shop_help = "商城幫助";
+
+	var $m_view_card = "查看購物車";
+	var $m_check_order_info = "確認訂單信息";
+	var $m_pay_to_alipay = "付款到支付寶";
+	var $m_check_get_goods = "確認收貨";
+	var $m_com_deal = "完成交易";
+	var $m_thisorder_cancel = "訂單已取消";
+	var $m_order_get_back="正在退款";
+
+	var $m_getpackage_address = "收件人地址";
+	var $m_getpackage_pop = "收件人";
+	var $m_getpackage_area = "所在地";
+
+	var $m_safe_setting = "安全設置";
+	var $m_buy_mk_order = "買家下訂單";
+	var $m_buyer_pay = "買家付款";
+	var $m_check_put_goods = "確認發貨";
+	var $m_buyer_checkget_goods = "買家確認收貨";
+	var $m_pls_select_cateogry = "未選擇分類";
+	var $m_plss_select_cateogry = "請選擇分類";
+	var $m_edit_cateogry = "編輯分類";
+	var $m_goods_new = "全新";
+	var $m_goods_notnew = "二手";
+	var $m_goods_isnull = "閒置";
+	var $m_post = "提 交";
+	var $m_more_keyword_exp = "多個關鍵字，請以空格或逗號進行分割";
+	var $m_getgoods_addresslist = "收件人地址列表";
+	var $m_dontsave_getgoods_addresslist = "沒有保存的收貨地址";
+	var $m_userother_address = "使用其它收貨地址";
+	var $m_pl_getgoods_name = "請填寫收件人姓名";
+	var $m_pl_getgoods_province = "請選擇收件人省份";
+	var $m_pl_getgoods_city = "請選擇收件人城市";
+	var $m_pl_getgoods_district = "請選擇收件人地區";
+	var $m_pl_getgoods_address = "請填寫收件人詳細地址";
+	var $m_pl_getgoods_zipcode = "請填寫郵政編碼";
+	var $m_email_type_notine = "您填寫的郵箱格式不正確";
+	var $m_sorry_p_mselectone = "對不起，電話和手機至少填寫一項。";
+	var $m_sorry_mobiletype = "對不起，您輸入的手機號碼錯誤。";
+	var $m_sorry_phonetype = "對不起，您輸入的電話號碼錯誤。";
+	var $m_addnew_getpackage_address = "新增收貨地址";
+	var $m_getpackage_name = "收件人姓名";
+	var $m_selceted_one = "致少要選擇一項，才能進行操作！";
+	var $m_manage_sure_del = "本操作不可恢復，確認刪除？";
+	var $m_pl_del = "批量刪除";
+	var $m_payment_name = "支付名稱";
+	var $m_payment_desc = "簡介";
+	var $m_payment_enable = "啟用";
+	var $m_payment_config = "配置";
+	var $m_payment_delete = "卸載";
+	var $m_payment_install = "安 裝";
+	var $m_payment_suredel = "確認要卸載此支付方式嗎？";
+	var $m_payment_showuser_pay = "該信息會在用戶付款時看到。";
+	var $m_hiserver_member = "申請成為企業會員";
+	var $m_hiserver_member_suc = "已通過審核，您現在已是企業會員，請重新登陸會員後台！";
+	var $m_hiserver_member_wait = "您的企業信息已提交，管理員正在審核中，請請等待！";
+	var $m_hiserver_member_fail = "審核失敗，請詳細正確填寫以下選項。";
+	var $m_request_compayname = "企業名稱";
+	var $m_request_personname = "法人代表姓名";
+	var $m_request_criedtype = "證件類型";
+	var $m_request_sfz = "身份證";
+	var $m_request_jgz = "軍官證";
+	var $m_request_criednum = "證件號碼";
+	var $m_request_operatenum = "營業執照";
+	var $m_request_supporttype = "支持的文件格式";
+	var $m_request_comaddress = "公司所在地";
+	var $m_request_moraddress = "詳細通訊地址";
+	var $m_request_zip = "郵編";
+	var $m_request_mobile = "手機號碼";
+	var $m_request_phone = "聯繫電話";
+	var $m_request_suc_correctnum = "請詳細正確的填寫信息，如有錯誤不能通過審核！";
+	var $m_order_goods_info = "產品信息";
+	var $m_order_orderinfo = "訂單信息";
+	var $m_order_shops = "商家";
+	var $m_order_payids = "訂單號";
+	var $m_order_ordertime = "下單時間";
+	var $m_order_paytype = "支付方式";
+	var $m_evaluate = "評價";
+	var $m_clicksure_s = "點擊確認發貨時，請您也要前往您收款所設的支付中介網站進行確認！";
+	var $m_my_write_back = "我的回復";
+	var $m_write_back = "回復";
+	var $m_addseller_write_back = "添加賣家回復";
+	var $m_iwantto_write_back = "我要回復";
+	var $m_write_back_content = "回復内容";
+	var $m_post_notnull = "回復内容不能為空！";	//forgot
+	var $m_getback_pw = "找回密碼";
+	var $m_mail_register = "請輸入您註冊時的郵箱帳號";
+	var $m_name_register = "請輸入您註冊時的用戶名";
+	var $m_caution_register = "找回密碼註意事項：<br />
+		1. 找回密碼時請正確填寫您的郵箱帳號 <br />
+		2. 如果您的郵箱填寫不正確網站不會給您發送找回密碼郵件 <br />
+		3. 當您收到找回密碼郵件時，按提示操作，便可以對您的帳號進行密碼重設";
+	var $m_mail_null = "郵件名稱不能為空！";
+	var $m_name_null = "會員名稱不能為空！";
+	var $m_caution_app = "<div>您的申請已經成功提交，如果您的資料正確，我們會給您的郵箱發出通知信！</div>
+	<div style='font-weight: normal'>請您登錄該郵箱，並按信中提示完成找回密碼的操作。</div>
+	<div style='font-weight: normal'>註意: 如果您連續多次申請找回密碼，請以最新收到的通知信為準！</div>";
+	var $m_accomplish = "完成";
+
+	//action
+	var $m_upd_suc = "更新成功！";
+	var $m_upd_lose = "更新失敗！";
+	var $m_ico_set_lose = "頭像設置失敗";
+	var $m_put_suc = "提交成功！";
+	var $m_put_lose = "提交失敗！";
+	var $m_adm_suc = "執行成功！";
+	var $m_adm_lose = "執行失敗！";
+	var $m_handle_err = "非法操作！";
+	var $m_plug_unin_suc = "支付插件已卸載！";
+	var $m_plug_unin_lose = "支付插件卸載失敗！";
+	var $m_oneself_shop = "不能給自己店舖留言！";
+	var $m_mess_suc = "留言成功！";
+	var $m_mess_lose = "留言失敗！";
+	var $m_shopname_null = "店舖分類名稱不能為空";
+	var $m_upl_lose = "上傳失敗";
+
+	/* page */
+	var $m_page_num = "共{num}條記錄";
+	var $m_page_first = "首頁";
+	var $m_page_pre = "上一頁";
+	var $m_page_next = "下一頁";
+	var $m_page_last = "尾頁";
+	var $m_page_now = "當前第{num}頁";
+	var $m_page_count = "共{num}頁";
+
+	/* public */
+	var $m_sort = "排序";
+	var $m_close = "關閉";
+	var $m_manage = "操作";
+	var $m_edit = "修改";
+	var $m_del = "刪除";
+
+	var $m_count = "總計";
+	var $m_status = "狀態";
+
+	var $m_back_index = "返回首頁";
+	var $m_back_list = "返回列表";
+	var $m_click_editcontent = "點擊修改内容";
+	var $m_delfail_tryagain = "刪除失敗，請重試！";
+	var $m_select_pl = "請選擇";
+	var $m_nolist_record = "沒有列表信息！";
+	var $m_select_again = "請重新選擇!";
+	var $m_add_time = "添加日期";
+	var $m_hi = "您好！";
+
+	var $m_edit_success = "修改成功";
+	var $m_edit_fail = "修改失敗";
+	var $m_del_success = "刪除成功";
+	var $m_del_fail = "刪除失敗";
+	var $m_add_success = "添加成功";
+	var $m_add_fail = "添加失敗";
+
+	var $m_best = "精品";
+	var $m_promote = "特價";
+	var $m_new = "新品";
+	var $m_hot = "熱銷";
+
+	var $m_yuan = "元";
+	var $m_jian = "件";	var $m_price = "價格";
+	var $m_year = "年";
+	var $m_month = "月";
+	var $m_day = "日";
+	var $m_secret = "保密";
+	var $m_man = "男";
+	var $m_woman = "女";
+	var $m_unmarried = "未婚";
+	var $m_married = "已婚";
+	var $m_tiao = "條";
+	var $m_yes = "是";
+	var $m_no = "否";
+	var $m_more ="更多";
+	var $m_free_shop ="免費開店";
+	var $m_you_have ="您有";
+	var $m_short_message ="條短消息";
+	var $m_click_view ="點擊查看";
+	var $m_order_remind ="訂單提醒";
+	var $m_groupbuy_remind ="團購提醒";
+	var $m_pending_payment_order ="待付款的訂單，請盡快到";
+	var $m_payment_orders_be ="待付款訂單";
+	var $m_in_payment ="中付款";
+	var $m_seller_shipped_orders ="訂單賣家已發貨，等待您的確認，請盡快到";
+	var $m_shipped_orders ="已發貨訂單";
+	var $m_order_not_evaluated ="訂單還沒有評價，請盡快到";
+	var $m_completed_orders ="已完成訂單";
+	var $m_confirmed ="中確認";
+	var $m_groupbuy_attended_activities ="個參加的團購活動已完成，請盡快到";
+	var $m_purchased ="中購買";
+	var $m_group_buy_completed ="已完成的團購";
+	var $m_frequently_asked_questions ="常見問題";
+	var $m_secure_transaction ="安全交易";
+	var $m_purchase_process ="購買流程";
+	var $m_how_to_pay ="如何付款";
+	var $m_contact_us ="聯繫我們";
+	var $m_cooperation_proposal ="合作提案";
+	var $m_site_map ="網站地圖";
+
+	var $m_copyright = "版權所有 © 2005-2009 聚易開放式技術實驗室，並保留所有權利。";
+	var $m_isset_payment = "您還沒有設置支付方式!";
+}
+?>

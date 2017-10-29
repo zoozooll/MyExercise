@@ -1,0 +1,133 @@
+<{assign var="page_title" value="`$_search_offer`"}>
+<{include file="`$ThemeName`/header.html"}>
+  <div class="blank6"></div>
+  <div class="container clearfix">
+    <div class="fullsrceen_ad"><{ads typeid=2}><a href="[link:url]" rel="promotion">[field:src]</a><{/ads}></div>
+    <div class="blank6"></div>
+    <div class="offer_list">
+      <div class="offer_list_top">
+        <div class="offer_list_top1 fl">
+          <div class="offer_list_top1_news">
+            <div class="title_bar_s1">
+            <span class="title_top_s1"><span></span></span>
+            <h2><{$_new_offer}></h2>
+            </div>
+            <div class="offer_list_top1_newscon">
+                <div class="title_time">
+                  <h4><span id="currentDate"><{$_today_is}><{$smarty.now|date_format:"%Y-%m-%d"}></span></h4>
+                </div>
+              <ul>
+			  <{offer row=10}>
+                <li class="even">
+                <span class="even_width" ><a href="[link:title]" title="[field:title]">[field:title]</a></span>
+                <span class="even_padding" >[[field:typename]]</span>
+                <span class="even_padding">[field:pubdate]</span>
+                
+                </li>
+				<{/offer}>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="offer_list_right clearfix">
+        <div class="offer_list_top2">
+			<div><{ads typeid=3}>This text is replaced by the Flash movie.<{/ads}></div>
+			<div class="blank6"></div>            
+        </div>
+        <div class="offer_list_top3">
+           <div class="title_bar_s1">
+               <span class="title_top_s1"><span></span></span>
+               <h5><{$_welcome_join}><{$site_name}></h5>
+            </div>
+
+          <div class="offer_list_top3_c">
+            <div class="offer_list_top3_c1 cursor-hand">
+              <ul><{$_offer_introduction}></ul>
+              <div class="clear"></div>
+            </div>
+            <div class="offer_list_top3_c2">
+              <h2><span><a href="member.php" title="<{$_free_reg}>"><{$_free_reg}></a></span></h2>
+              <{$_reg_and_upgrade_vip}>
+              <{$_service_hotline}><span class="font14" ><{$service_tel}></span>
+              </div>
+          </div>
+        </div>
+        </div>
+        <!--top3 end -->
+      </div>
+     <div class="clear"></div>
+    </div>
+           <div class="offer_list_con">
+                <div class="offer_list_con_left">
+                    
+                     <div class="title_bar_s1">
+                        <span class="title_top_s1"><span></span></span>
+                        <h2><{$_urgent_buy}></h2>
+                        </div>
+                     <div class="offer_list_con_left2_c offer_list_con_left_con">
+                     <ul>
+                        <{offer row=8}>
+                        <li><a href="[link:title]">[field:title]</a></li>
+                        <{/offer}>
+                        </ul>
+                      </div>  
+                    <div class="blank6"></div>
+
+                    <div class="title_bar_s1">
+                        <span class="title_top_s1"><span></span></span>
+                        <h2><{$_commend}><{$_seller}></h2>
+                    </div>
+                    <div  class="offer_list_con_left3_c offer_list_con_left_con">
+                    <ul>
+                         <{company row=8}>
+                         <li><a href="[link:title]">[field:title]</a></li>
+                         <{/company}>
+                     </ul>
+                     </div>
+                     <div class="blank6"></div>
+                   
+                       <div class="title_bar_s1">
+                        <span class="title_top_s1"><span></span></span>
+                        <h2><{$_stored_product}></h2>
+                        </div>
+                        
+                       <div  class="offer_list_con_left4_c offer_list_con_left_con">
+                         <ul>
+                         <{product row=8}>
+                         <li><a href="[link:title]">[field:title]</a></li>
+                         <{/product}>
+                         </ul>
+                      </div>
+                  
+                </div>
+                <div class="co_assort fr" >
+                  <div class="title_bar_s1" style="height:28px; overflow:hidden">
+                    <span class="title_top_s1"><span></span></span>
+                    <h4><span class="titlebg_l"></span><span class="titlebg_m title_mouse"><{$_industry_sort}></span><span class="titlebg_r"></span></h4>
+                </div>
+            <div class="co_assort_c clearfix" >
+                <{foreach from=$IndustryList item=item0 key=key0 name=level_0}>
+                <h3 class="cb"><em class="fl"><a href="offer/list.php?industryid=<{$item0.id}>"><{$item0.name}></a></em><p class="fr"><a href="offer/list.php?industryid=<{$item0.id}>"><{$_more}></a></p></h3>
+                <{if $item0.sub}>
+                <{foreach from=$item0.sub name=level_1_industry item=level1 key=key_level1}>
+                <div class="fl">
+                    <a href="offer/list.php?industryid=<{$level1.id}>" title="<{$level1.name}>" class="co_type_f"><{$level1.name}></a>
+                    <br />
+                    <{foreach from=$level1.sub name=level_2_industry item=level2 key=key_level2}>
+                    <a href="offer/list.php?industryid=<{$level2.id}>" title="<{$level2.name}>"><{$level2.name}></a><em>|</em>
+                    <{/foreach}>
+                </div>
+                <{/foreach}>
+                <{/if}>
+                <{/foreach}>
+                <div class="cb"></div>
+            </div>
+        </div>
+      </div> 
+</div>
+<script>
+$("#SearchFrm").attr("action","offer/list.php");
+$("#topMenuOffer").addClass("lcur");
+</script>   
+</script>
+<{include file="`$ThemeName`/footer.html"}>

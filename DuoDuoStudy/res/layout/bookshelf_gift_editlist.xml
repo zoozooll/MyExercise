@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="#FFFFFF">
+  <LinearLayout
+  android:id="@+id/bookshelfgift_editpoplist"
+  android:layout_marginTop="30dip"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_alignParentTop="true">
+  <RadioGroup android:id="@+id/bookshelfgift_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+ <RadioButton 
+ android:id="@+id/bookshelfgift_all"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:textColor="#000"
+ android:textSize="12dip"
+ android:checked="true"
+ style="@drawable/bookshelfgift_editlistselector"
+ android:text="全部"
+ />
+  <RadioButton 
+  android:id="@+id/bookshelfgift_class"
+  android:layout_height="wrap_content"
+  android:layout_width="wrap_content"
+  android:textColor="#000"
+  android:textSize="12dip"
+  android:text="同学"
+  />
+  <RadioButton 
+  android:id="@+id/bookshelfgift_home"
+  android:layout_height="wrap_content"
+  android:layout_width="wrap_content"
+  android:textColor="#000"
+  android:textSize="12dip"
+  android:text="家庭"
+  />
+  <RadioButton 
+  android:id="@+id/bookshelfgift_taecher"
+  android:layout_height="wrap_content"
+  android:layout_width="wrap_content"
+  android:textColor="#000"
+  android:textSize="12dip"
+  android:text="老师"
+  />
+  <RadioButton 
+  android:id="@+id/bookshelfgift_friend"
+  android:layout_height="wrap_content"
+  android:layout_width="wrap_content"
+  android:textColor="#000"
+  android:textSize="12dip"
+  android:text="好友"
+  /></RadioGroup>
+</LinearLayout>
+<GridView 
+android:id="@+id/bookshelfgiftedit_grid"
+  android:numColumns="3"
+  android:layout_height="wrap_content"
+  android:layout_width="fill_parent"
+  android:layout_below="@+id/bookshelfgift_editpoplist"
+/>
+<RelativeLayout
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_alignParentBottom="true"
+  android:layout_alignParentRight="true">
+<TextView 
+  android:id="@+id/bookshelf_ok"
+  android:layout_height="wrap_content"
+  android:layout_width="wrap_content"
+  android:layout_marginBottom="30dip"
+  android:layout_marginRight="30dip"
+  android:textColor="#000"
+    android:gravity="center"
+  android:text="确定"
+  android:background="@drawable/button_selector"
+/>
+</RelativeLayout>
+</RelativeLayout>

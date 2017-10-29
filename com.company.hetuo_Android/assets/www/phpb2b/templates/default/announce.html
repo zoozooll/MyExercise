@@ -1,0 +1,23 @@
+<{assign var="page_title" value="`$_announce`"}>
+<{assign var="nav_id" value="`$nav_id`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+  <div class="content">
+    <div class="tips"><span><{$position}></span></div>
+    <div class="blank"></div>
+    <div class="body_content">
+        <div class="title_bar_s3">
+            <span class="title_top_s3"><span></span></span>
+            <h2><{$_announce}></h2>
+         </div>  
+		<ul class="announce_list">
+			<{foreach from=$Items name=announce item=item}>
+			<li><a href="announce.php?id=<{$item.id}>" target="_blank"><{$item.subject}></a>&nbsp;[<{$item.pubdate}>]</li>
+			<{/foreach}>
+		</ul>
+	 
+       <div class="blank"></div>
+    </div>
+    </div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

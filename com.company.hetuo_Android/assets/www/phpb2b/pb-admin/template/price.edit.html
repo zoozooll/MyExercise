@@ -1,0 +1,151 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_product_center}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_product_center}></h3>
+    <ul class="subnav">
+		<li><a href="product.php"><{$_management}></a></li>
+		<li><a href="productsort.php">类型</a></li>
+		<li><a href="productcategory.php">产品种类</a></a></li>
+		<li><a href="brand.php">品牌</a></a></li>
+		<li><a href="brandtype.php">品牌分类</a></a></li>
+        <li><a href="price.php">报价</a></li>
+        <li><a class="btn1" href="price.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" id="EditFrm" action="price.php" name="edit_frm"  >
+    <input type="hidden" name="id" value="<{$item.id}>" />
+   <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+  <input type="hidden" name="username" value="<{$item.username}>" />
+  <input type="hidden" name="company_name" value="<{$item.companyname}>" />
+   <input type="hidden" name="brand_name" value="<{$item.brandname}>" />
+    <input type="hidden" name="product_name" value="<{$item.productname}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15">标题：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[title]" value="<{$item.title}>" />
+        </td>
+      </tr>
+	    <tr>
+        <th class="paddingT15">来源：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[source]" value="<{$item.source}>" />
+        </td>
+      </tr>
+	  <{if $smarty.get.id}>
+      <tr>
+        <th class="paddingT15">产品名称:</th>
+        <td class="paddingT15 wordSpacing5"><{$item.productname}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 品牌名称:</th>
+        <td class="paddingT15 wordSpacing5"><{$item.brandname}></td>
+      </tr>
+	   <tr>
+        <th class="paddingT15"> 会员名称:</th>
+        <td class="paddingT15 wordSpacing5"><{$item.username}></td>
+      </tr>
+	   <tr>
+        <th class="paddingT15"> 公司名称:</th>
+        <td class="paddingT15 wordSpacing5"><{$item.companyname}></td>
+      </tr>
+	  <{else}>
+            <tr>
+        <th class="paddingT15">产品名称:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="price[product_name]" id="dataProductName" value="<{$item.productname}>"  /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 品牌名称:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="price[brand_name]" value="<{$item.brandname}>" /></td>
+      </tr>
+	   <tr>
+        <th class="paddingT15"> 会员名称:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="price[username]" value="<{$item.username}>"  /></td>
+      </tr>
+	   <tr>
+        <th class="paddingT15"> 公司名称:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="price[company_name]" value="<{$item.companyname}>" /></td>
+      </tr>
+	  <{/if}>
+	  <tr>
+        <th class="paddingT15"> 市场价格:</th>
+        <td class="paddingT15 wordSpacing5"><input class="infoTableInput2" name="data[price]" value="<{$item.price}>" /></td>
+      </tr>
+	  </tr>
+		  <tr>
+		   <th>报价地区：</th>
+			  <td>
+		<div id="dataArea">
+			<select name="price[area_id1]" id="dataTradeAreaId1" class="level_1" ></select>
+			<select name="price[area_id2]" id="dataTradeAreaId2" class="level_2" ></select>
+			<select name="price[area_id3]" id="dataTradeAreaId3" class="level_3" ></select>
+		</div>
+		</td>
+		</tr>
+			  <tr>
+        <th class="paddingT15"> 报价种类:</th>
+        <td><select name="data[category_id]" id="ProductpriceCategory">
+        <{$Productcategories}>
+		</select> </td>
+      </tr>
+	  	<tr>
+        <th class="paddingT15"> 计量单位:</th>
+        <td><select name="data[units]" id="ProductpriceUnits">
+        <{html_options options=$Measuries selected=$item.units}>
+		</select> </td>
+      </tr>
+	  <tr>
+        <th class="paddingT15"> 货币单位:</th>
+        	<td>	<select name="data[currency]" id="ProductpriceCurrency">
+       <{html_options options=$Monetaries selected=$item.currency}>
+		</select>  </td>
+      </tr>
+	  	<tr>
+        <th class="paddingT15"> 报价类型:</th>
+             <td><select name="data[type_id]" id="ProductpriceTypes">
+        <{html_options options=$PriceTypes selected=$item.type_id}>	</td>
+		</select> 
+      </tr>
+	  	  	<tr>
+        <th class="paddingT15">价格走势:</th>
+        <td><select name="data[price_trends]" id="ProductpriceTrends">
+        <{html_options options=$PriceTrends selected=$item.price_trends}>
+		</select> </td>
+      </tr>
+	  <tr>
+      <tr>
+      <tr>
+        <th class="paddingT15"> 详细说明:</th>
+        <td class="paddingT15 wordSpacing5"><textarea style="width:650px;height:300px;" name="data[description]" id="dataProductContent"><{$item.description}></textarea>
+		</td>
+
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />
+		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<script>
+var cache_path = "../";
+var app_language = '<{$AppLanguage}>';
+var area_id1 =<{$item.area_id1|default:0}>  ;
+var area_id2 = <{$item.area_id2|default:0}>  ;
+var area_id3 = <{$item.area_id3|default:0}>  ;
+</script>
+<script>
+jQuery(document).ready(function($) {
+	$("#ProductpriceCategory").val("<{$item.category_id|default:0}>")
+})
+</script>
+<script src="../scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="../scripts/script_area.js"></script>
+<{editor type="tiny_mce"}>
+<{include file="footer.html"}>

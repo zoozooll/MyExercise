@@ -1,0 +1,85 @@
+<{include file="header.html"}>
+<{fetch file="../scripts/date.js"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_trade_management}> &raquo; <{$_standards}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_standards}></h3> 
+    <ul class="subnav">
+		<li><a href="standard.php"><{$_management}></a></li>
+        <li><a class="btn1" href="standard.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+        <li><a href="standard.php?do=type"><{$_types}></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form action="standard.php" method="post" id="EditFrm" name="edit_frm" enctype="multipart/form-data">
+  <input type="hidden" name="id" value="<{$item.id}>" />
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> <{$_title_n}></th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[standard][title]" value="<{$item.title}>" /><label class="field_notice">显示名称</label>        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 来源：</th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="data[standard][source]" value="<{$item.source|default:$site_name}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 分类：</th>
+        <td class="paddingT15 wordSpacing5">
+		<select name="data[standard][type_id]">
+		<{html_options options=$StandardTypes selected=$item.type_id}>
+		 </select>
+		</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 颁布时间：</th>
+        <td class="paddingT15 wordSpacing5"><input name="data[publish_time]" id="date1" value="<{$item.publish_date}>" /><span class="btn_calendar" id="calendar-date1"></span></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 实施时间：</th>
+        <td class="paddingT15 wordSpacing5"><input name="data[force_time]" value="<{$item.force_date}>" id="date2" /><span class="btn_calendar" id="calendar-date2"></span></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 附件：</th>
+        <td class="paddingT15 wordSpacing5"><input name="attach" type="file" id="attach" /><{if $item.attach}><br /><br><{$item.attach}><{/if}></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 摘要：</th>
+        <td class="paddingT15 wordSpacing5">
+        <textarea name="data[standard][digest]"><{$item.digest}></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> 详细内容：</th>
+        <td class="paddingT15 wordSpacing5">
+        <textarea style="width:550px;height:50px;" name="data[standard][content]" class="mceEditor"><{$item.content}></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />
+		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+    Calendar.setup({
+        trigger    : "calendar-date1",
+		animation  : false,
+        inputField : "date1",
+		onSelect   : function() { this.hide() }
+    });
+    Calendar.setup({
+        trigger    : "calendar-date2",
+		animation  : false,
+        inputField : "date2",
+		onSelect   : function() { this.hide() }
+    });
+</script>
+<{editor type="tiny_mce" mode="specific_textareas"}>
+<{include file="footer.html"}>

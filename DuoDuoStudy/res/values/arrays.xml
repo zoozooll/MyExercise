@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="operate_menu_pause">
+		<item>删除</item>
+		<item>暂停下载</item>
+	</string-array>
+	<string-array name="operate_menu_continue">
+		<item>删除</item>
+		<item>继续下载</item>
+	</string-array>
+	<string-array name="operate_menu_delete">
+		<item>删除</item>
+	</string-array>
+	
+	<!-- 同步教学所有的课程列表 -->
+	<string-array name="lesson_project_spinner">
+		<item>全部</item>
+		<item>语文</item>
+		<item>数学</item>
+		<item>英语</item>
+		<item>物理</item>
+		<item>化学</item>
+		<item>计算机</item>
+	</string-array>
+	
+	<!-- 书店分类 -->
+	<string-array name="duoduo_type_spinner">
+		<item>全部</item>
+		<item>书籍</item>
+		<item>课件</item>
+		<item>习题</item>
+		<item>考卷</item>
+		<item>团购</item>
+	</string-array>
+	
+	<!-- 书架分类 -->
+		<string-array name="duoduo_shelftype_spinner">
+		<item>全部</item>
+		<item>书名</item>
+		<item>作者</item>
+		<item>分类</item>
+	</string-array>
+</resources>

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<{$Charset}>">
+<title><{$_control_login}> - <{$site_title}></title>
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+<script language="javascript" src="../scripts/jquery.js"></script>
+<script language="javascript" src="js/jquery.pngFix.js"></script>
+<body>
+<div id="header">
+   <div class="logo"></div>
+</div>
+<div id="wrapper">
+   <div class="console_left">
+	   <div class="title"><{$_control_login}></div>
+	   <p><{$_phpb2b_info}></p>
+	   <div class="intro_1"><{$_config_your_info}></div>
+	   <div class="intro_2"><{$_manage_your_ads}></div>
+	   <div class="intro_3"><{$_set_site_secure}></div>
+	  
+   </div>
+   <div class="console_right">
+	   <div class="title"><{$_cp_login_first}></div>
+	   <div class="login">
+		  <form action="login.php" method="post" name="login_frm" id="LoginFrm" class="s_lo_f" autocomplete="off">
+			<input type="hidden" name="do" value="login"  />
+			<input type="hidden" name="formhash" value="<{$formhash}>" />
+		   <div class="user"><label><{$_cp_username_n}></label><input tabindex="1" type="text" name="data[username]" id="username" size="16" maxLength="20" value=""><{$LoginError}></div>
+		   <div class="pwd"><label><{$cp_passwd}></label><input tabindex="2" type="password" name="data[userpass]" id="userpass" size="16" maxLength="20" value=""></div>
+		   <div class="forget"><a href="<{$SiteUrl}>getpasswd.php"><{$_cp_forget_passwd}></a></div>
+		   <{if $ifcapt}>
+		   <div class="code"><label><{$_cp_capt}></label><input type="text" value="" name="data[capt_login_admin]" size="16" tabindex="3" id="capt_login_admin" /><img id="imgcaptcha" src="../captcha.php?sid=<{$sid}>" alt="<{$_refresh_capt}>" /></div>
+		   <{/if}>
+		   <div class="btn_login"><input type="submit" name="login" id="Login" value="<{$_cp_login}>" /></div>
+		   </form>
+	   </div>
+   </div>
+   <div class="clear"></div>
+	<div class="reg"><{$_meet_with_more_phpb2b_users}>&nbsp;<input name="" id="register_member" type="button" value="<{$_register_now}>" onclick="location.href='http://bbs.phpb2b.com/'" /></div>
+	<hr class="hr_solid" /></div>
+</div>
+<div id="footer"><span class="left">&copy;2007-2010 Powered By <{$_soft_name}> <{$smarty.const.PHPB2B_VERSION}>, <a href="http://www.phpb2b.com/">Ualink</a> Inc.
+</span><span class="right"><a href="<{$SiteUrl}>index.php" title="<{$_return_homepage}>"><{$_return_homepage}></a>&nbsp;|&nbsp;<a href="http://bbs.phpb2b.com/"><{$_feed_back}></a></span> 
+</div>   
+<script language="javascript">
+<!-- 
+$(document).ready(function(){   
+	$('#username').focus();
+	$('#imgcaptcha').click(
+		function(){
+		$('#imgcaptcha').attr('src','../captcha.php?sid=' + Math.random());
+		$('#capt_login_admin').focus();
+		return false;
+		}
+	);
+	$("#Login").click(
+		function(){   
+			<{if $smarty.session.is_admin==""}>
+				if($('#username').val() == ""){
+					alert("<{$_pls_input_username}>");
+					$('#username').focus();
+					return false;
+				}
+			<{/if}>
+			if($('#userpass').val() == ""){
+				alert("<{$_pls_input_passwd}>");
+				$('#userpass').focus();
+				return false;
+			}
+			<{if $ifcapt}>
+			if($('#capt_login_admin').val() == ""){
+				alert("<{$_pls_input_authcode}>");
+				$('#capt_login_admin').focus();
+				return false;
+			}
+			<{/if}>
+			$("#LoginFrm").submit();   
+			$("#Login").attr("disabled", "disabled");
+		}
+	);
+});
+//-->
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('div.logo').pngFix( );
+	});
+</script>
+</body>
+</html>

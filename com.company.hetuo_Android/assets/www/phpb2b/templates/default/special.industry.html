@@ -1,0 +1,84 @@
+<{assign var="page_title" value="`$page_title`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+	<div class="tips"><span><{$position}></span></div>
+	<div class="blank6"></div>  
+	<div class="content clearfix">
+	  <div class="main_left_w220">
+	   <div class="sub_nominate">
+		<div class="title_bar_s1">
+		<span class="title_top_s1"><span></span></span>
+		<h3><{$_recommend_company_database}></h3>
+		</div>
+		 <ul class="sub_nominate_txt">
+			<{company row="10" industryid="`$item.id`"}>
+				<li><a href="[link:title]" title="[field:name]">[field:name]</a></li>
+			<{/company}>
+		 </ul>
+		<div class="corner_bottom_bar">
+			 <span class="corner_bottom_s1"><span></span></span>
+		</div>
+		</div>
+		<div class="blank6"></div>
+		<div class="sub_nominate">
+            <div class="title_bar_s1">
+            <span class="title_top_s1"><span></span></span>
+            <h3><{$_recommended_supply_demand}></h3>
+            </div>
+		 	<ul class="sub_nominate_txt">
+			<{offer row="10" industryid="`$item.id`"}>
+				<li><a href="[link:title]">[field:title]</a></li>
+			<{/offer}>
+		   </ul>
+            <div class="corner_bottom_bar">
+                 <span class="corner_bottom_s1"><span></span></span>
+            </div>
+		</div>
+		<div class="blank6"></div>
+		<div class="sub_nominate">
+            <div class="title_bar_s1">
+            <span class="title_top_s1"><span></span></span>
+            <h3><{$_similar_news}></h3>
+            </div>
+		 	<ul class="sub_nominate_txt">
+			<{news row="10" industryid="`$item.id`"}>
+				<li><a href="[link:title]">[field:title]</a></li>
+			<{/news}>
+		   </ul>
+            <div class="corner_bottom_bar">
+                 <span class="corner_bottom_s1"><span></span></span>
+            </div>
+		</div>
+		<div class="blank6"></div>
+		<div class="sub_nominate">
+            <div class="title_bar_s1">
+            <span class="title_top_s1"><span></span></span>
+            <h3><{$_market}></h3>
+            </div>
+		 	<ul class="sub_nominate_txt">
+			<{market row="10" industryid="`$item.id`"}>
+				<li><a href="[link:title]">[field:title]</a></li>
+			<{/market}>
+		   </ul>
+            <div class="corner_bottom_bar">
+                 <span class="corner_bottom_s1"><span></span></span>
+            </div>
+		</div>
+	  </div>
+	  <div class="main_right_w730">
+		<div class="substation_industry">
+		<h2><{$_sub_industry}>&middot;<{$item.name}></h2>
+		</div>
+		<div class="blank6"></div>
+		<div class="substation_main"><{$item.description}></div> 
+        <{if $HaveProducts}>  
+		<ul class="substation_product clearfix">
+			<{product type="image" row=7 titlelen="12" industryid="`$item.id`"}>
+				<li><a href="[link:title]"><img src="[img:src]" /></a><p><a href="[link:title]">[field:title]</a></p></li>
+			<{/product}>
+		 </ul>
+        <{/if}>
+	  </div>
+	</div>
+</div>
+<{include file="`$ThemeName`/footer.html"}>

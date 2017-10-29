@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/down_info" android:fadingEdge="none"
+	android:alwaysDrawnWithCache="false" android:orientation="horizontal"
+	android:layout_width="fill_parent" android:layout_height="60dip"
+	android:background="#dddddd">
+	<RelativeLayout android:layout_width="60dip"
+		android:layout_height="fill_parent">
+		<ImageView android:id="@+id/down_icon" android:background="@drawable/download_notification_icon"
+			android:layout_width="48dip" android:layout_height="48dip"
+			android:layout_centerInParent="true" />
+	</RelativeLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="vertical"
+		android:layout_marginLeft="5dip">
+		<TextView android:id="@+id/down_name" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" style="@style/style_appname_text"
+			android:text="" />
+		<ProgressBar android:paddingRight="10dip" android:id="@+id/down_progress_bar"
+			style="?android:attr/progressBarStyleHorizontal"
+			android:progressDrawable="@drawable/progress_horizontal"
+			android:layout_width="fill_parent" android:layout_height="10dip"
+			android:max="1000" android:progress="0" android:layout_below="@id/down_name" />
+		<TextView android:id="@+id/down_state" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:textSize="10dip"
+			android:textColor="@android:color/black" />
+	</LinearLayout>
+</LinearLayout>

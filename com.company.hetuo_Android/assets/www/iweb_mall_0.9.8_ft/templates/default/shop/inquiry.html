@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{echo:lp{i_inquiry};/} - {echo:$info['shop_name'];/}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="{echo:$baseUrl;/}" />
+<link href="skin/{echo: $SYSINFO['templates'];/}/css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<style type="text/css">
+table{ border:#ccc 1px solid; text-align:left}
+td{ height:22px; padding:5px; border-bottom:#ccc 1px dashed;}</style>
+<body>
+<div id="wrapper">
+  <!-- 顶部 -->
+  {inc: include("shop/index_header.php");/}
+  <!-- 头部 -->
+<div class="path">{echo:lp{i_location};/}：<a href="index.php">{echo:lp{i_index};/}</a> > {echo:lp{i_iwantget_price};/} </div>
+<div class="">
+<form action="inquiry.php?app=post&gid={echo:$goods_id;/}" method="post">
+<TABLE cellSpacing=2 cellPadding=0 width="100%" align=center border=0>
+  <TR>
+    <TD align=right width="22%">{echo:lp{i_send_to};/}：</TD>
+    <TD width="78%"><span class="subtitle">
+		<a href="shop.php?shopid=2&app=index>">{echo:$info['shop_name'];/}</a>
+		<input name="shop_id" type="hidden" value="{echo:$info['shop_id'];/}" />
+		<input name="goods_id" type="hidden" value="{echo:$info['goods_id'];/}" />
+		<input name="goods_name" type="hidden" value="{echo:$info['goods_name'];/}" />
+    </span></TD></TR>
+  <TR>
+    <TD align=right>{echo:lp{i_askprice_title};/}：</TD>
+    <TD> <input class=InputBorder maxlength=120 size=40 name="title" type="text" value="{echo:str_replace("{name}",$info['goods_name'],lp{i_inq_msat});/}" /></TD></TR>
+  <TR>
+    <TD align=right valign="top">{echo:lp{i_inq_askinfo};/}：</TD>
+    <TD><textarea name="content" cols="40" rows="10"></textarea></TD></TR>
+  <TR>
+    <TD align=right>{echo:lp{i_inq_truename};/}：</TD>
+    <TD><input name="user_truename" type="text" value="{echo:$user_info['user_truename'];/}" /></TD></TR>
+  <tr>
+    <td align="right"><label>{echo:lp{i_inq_email};/}</label>：</td>
+    <td><input name="user_email" type="text" value="{echo:$user_info['user_email'];/}" /></td>
+  </tr>
+  <tr>
+    <td align="right">{echo:lp{i_inq_tel};/}：</td>
+    <td><input name="user_telphone" type="text" value="{echo:$user_info['user_telphone'];/}" /></td>
+  </tr>
+  <tr>
+    <td align="right">{echo:lp{i_inq_mob};/}：</td>
+    <td><input name="user_mobile" type="text" value="{echo:$user_info['user_mobile'];/}" /></td>
+  </tr>
+  <TR>
+    <TD  style="border-bottom:0px;" align=right>&nbsp;</TD>
+    <TD height="40" style="border-bottom:0px;"><input name="button" type="submit" class="button" value="{echo:lp{i_inq_sendmsg};/}" />
+    </TD></TR>
+  </TABLE></FORM>
+</div>
+<div class="top5 clear"></div>
+<!-- 底部 -->
+{inc: require("shop/index_footer.php");/}
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--<?php
+include_once PrintEot('user_space');
+print <<<EOT
+-->
+<div id="content" class="fr">
+	<div style="padding-top:10px;">
+		<div class="cc p-info">
+            <h1><strong class="f24 blue"><a href="u.php?uid=$u">$username</a></strong> <span class="f24 gray">/</span> <span class="red b f16">群组</span> <span class="gray">( {$count}个 )</span>
+			</h1>
+        </div>
+        <div class="breadCrumb">
+		<a href="u.php?uid=$u" class="gray">&laquo;返回首页继续浏览</a>
+		</div>
+	</div>
+    <div id="content_main" class="fl">
+    <table width="100%">
+    	<tr><td height="600" style="padding-bottom:20px;vertical-align:top;">
+    	<div style="padding:0 10px;">
+		<ul id="list-box" class="cc list-box-a">
+<!--
+EOT;
+if (!empty($group)) {
+foreach ($group as $key => $value) {print <<<EOT
+-->
+	<li>
+		<dl>
+			<dt><div><table style="height:100%;width:100%;"><tr><td class="tac"><a href="{$baseUrl}q=group&cyid=$value[id]"><img src="$value[cnimg]" onload="imgResize(this,100)" /></a></td></tr></table></div></dt>
+					<dd><a href="{$baseUrl}q=group&cyid=$value[id]" class="b">$value[cname]</a><br />
+						<p class="f10">申请时间:<br />$value[addtime]</p>
+						群主:$value[admin]
+					</dd>
+					</dl>
+				</li>
+<!--
+EOT;
+}} else {print <<<EOT
+-->
+					<li>还没有加入任何群组</li>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</ul>
+		<div class="mt10">$pages</div>
+        </div>
+        </td></tr>
+    </table>
+	</div>
+</div>
+<SCRIPT type="text/javascript" LANGUAGE="JavaScript" src="js/core/core.js"></SCRIPT>	
+<!--
+EOT;
+?>

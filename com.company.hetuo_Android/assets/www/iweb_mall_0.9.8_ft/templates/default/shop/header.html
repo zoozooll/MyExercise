@@ -1,0 +1,47 @@
+{sta:plugin_hook('shop_menu_buttun','shop_right');/}
+<div class="header">
+    <div class="top">
+        <div class="top_left left"></div>
+            <div class="top_center left">
+                <span class="left"><a href="search.php">{echo: lp{s_want_buy};/}</a>|<a href="modules.php?app=goods_add">{echo: lp{s_want_sell};/}</a>|<a href="modules.php?app=shop_info">{echo:lp{s_want_mkstore};/}</a></span>
+                <span class="right top_ico"><a href="{echo:article_list_url(2);/}">{echo:lp{s_shop_help};/}</a><a href="index.php">{echo:lp{s_back_index};/}</a></span>
+            </div>
+         <div class="top_right left"></div>
+    </div>
+    <!--top end -->
+    {sta: if($SYSINFO['sys_logo'])[exc]}
+		<div class="logo left">
+	    	<a href="index.php"><img style="-moz-background-clip:border;-moz-background-inline-policy:continuous;-moz-background-origin:padding;display:block;height:43px;margin:8px 0 0 8px;overflow:hidden;text-indent:9999px;width:177px;" src="{echo: $SYSINFO['sys_logo'];/}"/>
+</a>
+	    </div>
+	{sta:} else [exc]}
+		<div class="logo left">
+	    	<h1><a href="index.php">jooyea</a></h1>
+	    </div>
+	{end:if/}
+	<div class="tool left">
+		<div class="tool_right"><a href="modules.php?app=user_favorite">{echo: lp{s_favorite};/}</a></div>
+    </div>
+    <div class="tool left">
+        <div class="tool_right"><a href="modules.php?app=user_cart">{echo: lp{s_cart};/}</a></div>
+    </div>
+{sta: if($USER['login'])[exc]}
+	<div class="tool left">
+        <div class="tool_right"><a href="do.php?act=logout">{echo: lp{s_logout};/}</a></div>
+    </div>
+	<div class="tool left">
+        <div class="tool_right"><a href="modules.php">{echo: lp{s_u_center};/}</a></div>
+    </div>
+	<div class="welcome left">
+        <div class="welcome_right">{echo: lp{s_hi};/}，{echo: $USER['user_name'];/}</div>
+    </div>
+{sta:} else [exc]}
+    <div class="tool left">
+        <div class="tool_right"><a href="modules.php?app=reg">{echo:lp{s_register_free};/}</a></div>
+    </div>
+    <div class="tool left">
+        <div class="tool_right"><a href="login.php">{echo:lp{s_login};/}</a></div>
+    </div>
+{end:if/}
+
+</div>

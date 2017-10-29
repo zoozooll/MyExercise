@@ -1,0 +1,260 @@
+<!--<?php
+include_once PrintEot('left');
+print<<<EOT
+-->
+<h2 class="h1 mb10"><a href="$admin_file?adminjob=app&admintype=appslist">返回基础应用列表</a></h2>
+<!--
+EOT;
+if(!$action){print <<<EOT
+-->
+<div class="nav3 mb10">
+  <ul class="cc">
+    <li class="current"><a href="$basename">分享设置</a></li>
+  </ul>
+</div>
+<form action="$basename&" method="post">
+  <input type="hidden" name="step" value="2">
+  <h2 class="h1">分享基本设置</h2>
+  <div class="admin_table mb10">
+  <table width="100%" cellspacing="0" cellpadding="0">
+    <tr class="tr1 vt">
+      <td class="td1"><span class="xia2">分享功能</span></td>
+      <td class="td2">
+      	<ul class="cc list_80 list_A">
+           <li><input type="radio" name="share_open" value="1" $share_open_Y />开启</li>
+           <li><input type="radio" name="share_open" value="0" $share_open_N />关闭</li>
+        </ul>
+        </td>
+    </tr>
+    <tr class="tr1 vt">
+      <td class="td1"><span class="xia2">验证码</span></td>
+      <td class="td2">
+      <ul class="cc list_80 list_A">
+           <li><input type="radio" name="config[share_gdcheck]" value="1" $share_gdcheck_Y />开启</li>
+           <li><input type="radio" name="config[share_gdcheck]" value="0" $share_gdcheck_N />关闭</li>
+        </ul>
+	</td>
+    </tr>
+    <tr class="tr1 vt">
+      <td class="td1"><span class="xia2">验证问题</span></td>
+      <td class="td2">
+      <ul class="cc list_80 list_A">
+           <li><input type="radio" name="config[share_qcheck]" value="1" $share_qcheck_Y />开启</li>
+           <li><input type="radio" name="config[share_qcheck]" value="0" $share_qcheck_N />关闭</li>
+        </ul>
+     </td>
+    </tr>
+    <tr class="tr1 vt">
+      <td class="td1"><span class="xia2">允许分享的用户组</span><br />(全不选表示无限制)</td>
+      <td class="td2">$creategroup</td>
+    </tr>
+  </table>
+  </div>
+  <h3 class="h1"><span class="mr20">分享积分奖惩设置</span><span class="linka">注:<b>威望积分</b>支持小数点后一位，其他积分只允许整数！</span></h3>
+  <div class="admin_table mb10">
+  <table width="100%" cellspacing="0" cellpadding="0">
+    <tr class="tr2">
+      <td>积分名称</td>
+      <td>发表分享(+)</td>
+      <td>删除分享(-)</td>
+    </tr>
+<!--
+EOT;
+foreach($credit->cType as $key => $value){print <<<EOT
+-->
+    <tr class="tr1 vt">
+      <td class="td2">$value</td>
+      <td class="td2"><input name="creditset[Post][$key]" value="{$creditset[Post][$key]}"class="input input_wc" /></td>
+      <td class="td2"><input name="creditset[Delete][$key]" value="{$creditset[Delete][$key]}"class="input input_wc" /></td>
+    </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+  </table>
+  </div>
+  <h3 class="h1"><span class="mr20">分享积分流通记录</span><span class="linka">此功能可以详细记录某种积分的流通情况，帮助站长更加清晰地掌握论坛的积分状况！</span></h3>
+  <div class="admin_table mb10">
+  <table width="100%" cellspacing="0" cellpadding="0">
+    <tr class="tr2">
+      <td>积分名称</td>
+      <td>发表分享</td>
+      <td>删除分享</td>
+    </tr>
+<!--
+EOT;
+foreach($credit->cType as $key => $value){print <<<EOT
+-->
+    <tr class="tr1 vt">
+      <td class="td2">$value</td>
+      <td class="td2"><input type="checkbox" name="creditlog[Post][$key]" value="1" {$creditlog[Post][$key]} /></td>
+      <td class="td2"><input type="checkbox" name="creditlog[Delete][$key]" value="1" {$creditlog[Delete][$key]} /></td>
+    </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+  </table>
+  </div>
+  <div class="mb10 tac">
+    <span class="btn"><span><button type="submit">提 交</button></span></span>
+   </div>
+</form>
+<!--
+EOT;
+} elseif ($action == 'share') {print <<<EOT
+-->
+<div class="nav3 mb10">
+  <ul class="cc">
+      <li class="current"><a href="$basename&action=share">分享管理</a></li>
+    </ul>
+</div>
+<!--
+EOT;
+if (!$job){print <<<EOT
+-->
+<script language="JavaScript" src="js/date.js"></script>
+<form method="POST" action="$basename&action=share&job=list&">
+  <h2 class="h1">分享搜索</h2>
+  <div class="admin_table mb10">
+  <table width="100%" cellspacing="0" cellpadding="0">
+    <tr class="tr1 vt">
+      <td class="td1">分享类型</td>
+      <td class="td2"><select name="type" class="select_wa">
+          <option value="">全部</option>
+          <option value="user">用户</option>
+          <option value="diary">日志</option>
+          <option value="photo">照片</option>
+          <option value="album">相册</option>
+          <option value="group">群组</option>
+          <option value="video">视频</option>
+          <option value="music">音乐</option>
+          <option value="flash">flash</option>
+          <option value="web">网页</option>
+        </select></td>
+    </tr>
+    <tr class="tr1 vt">
+      <td class="td1">是否私有</td>
+      <td class="td2"><select name="ifhidden" class="select_wa">
+          <option value="-1">全部</option>
+          <option value="0">公开</option>
+          <option value="1">私有</option>
+        </select></td>
+    </tr>
+    <tr class="tr1 vt">
+      <td class="td1">作者名称</td>
+      <td class="td2"><input type="text" name="username" value="" class="input input_wa mr20">可用通配符"*"</td>
+	  
+    </tr>
+    <tr class="tr1 vt">
+      <td class="td1">分享日期</td>
+      <td class="td2">
+      <div class="input_img fl"><i class="input_time" title="选择时间">选择时间</i><input type="text" name="postdate_s" value="" id="postdate_s" onclick="javascript:ShowCalendar(this.id)"></div><span class="p_lr_10 fl">至</span><div class="input_img fl"><i class="input_time" title="选择时间">选择时间</i><input type="text" name="postdate_e" id="postdate_e" value="" onclick="javascript:ShowCalendar(this.id)"></div>
+        </td>
+    </tr>
+    <tr class="tr1 vt">
+      <td class="td1">顺序</td>
+      <td class="td2">
+     		 <ul class="cc list_80 list_A fl mr20">
+                	<li><input type="radio" name="ordertype" value="asc">正序</li>
+                    <li><input type="radio" name="ordertype" value="desc" checked="checked">倒序</li>
+                </ul>按发表时间排序
+
+        </td>
+    </tr>
+    <tr class="tr1 vt">
+      <td class="td1">每页显示条数</td>
+      <td class="td2"><input type="text" name="lines" value="30" class="input input_wa"></td>
+    </tr>
+  </table>
+  </div>
+  <div class="mb10 tac">
+    <span class="btn"><span><button type="submit">提 交</button></span></span>
+   </div>
+</form>
+<!--
+EOT;
+} elseif ($job == 'list') {print<<<EOT
+-->
+<form method="POST" action="$basename&action=share&">
+  <input type="hidden" name="job" value="delete">
+  <input type="hidden" name="type" value="$type">
+  <input type="hidden" name="username" value="$username">
+  <input type="hidden" name="postdate_s" value="$postdate_s">
+  <input type="hidden" name="postdate_e" value="$postdate_e">
+  <input type="hidden" name="ordertype" value="$ordertype">
+  <input type="hidden" name="page" value="$page">
+  <input type="hidden" name="lines" value="$lines">
+  <h2 class="h1">分享列表</h2>
+  <div class="admin_table mb10">
+  <table width="100%" cellspacing="0" cellpadding="0">
+    <tr class="tr2">
+      <td>ID</td>
+      <td>标题</td>
+      <td>作者</td>
+      <td>按发表时间排序</td>
+      <td>类型</td>
+      <td>是否私有</td>
+      <td>评论数</td>
+      <td>删除</td>
+    </tr>
+<!--
+EOT;
+$db_sharetype = array('user'=>'用户','diary'=>'日志','photo'=>'照片','album'=>'相册','group'=>'群组','video'=>'视频','music'=>'音乐','flash'=>'flash','web'=>'网页');
+foreach ($sharedb as $key => $share) {
+if(!$share['title'])continue;
+$key+=($page-1)*$lines+1;
+$ifhidden = $ifhidden == 1 ? '开启' : '关闭';
+print <<<EOT
+-->
+    <tr class="tr1 vt">
+      <td class="td2">$key</td>
+      <td class="td2">$share[title]</td>
+      <td class="td2"><a href="u.php?uid=$share[uid]" target="_blank">$share[username]</a></td>
+      <td class="td2">$share[postdate]</td>
+      <td class="td2">{$db_sharetype[$share[type]]}</td>
+      <td class="td2">$ifhidden</td>
+      <td class="td2">
+<!--
+EOT;
+if ($share['c_num'] > 0) {print <<<EOT
+-->
+        <a href="$admin_file?adminjob=mode&admintype=o_comments&job=list&type=share&typeid=$share[id]">$share[c_num]</a>
+<!--
+EOT;
+} else {print <<<EOT
+-->
+        0
+<!--
+EOT;
+}print <<<EOT
+-->
+      </td>
+      <td class="td2"><input type="checkbox" name="selid[]" value="$share[id]"></td>
+    </tr>
+<!--
+EOT;
+}print<<<EOT
+-->
+  </table>
+  </div>
+  <div class="cc">$pages</div>
+  <div class="mb10 tac">
+    <span class="bt"><span><button type="button" name="chkall" onclick="CheckAll(this.form)">全 选</button></span></span>
+    <span class="btn"><span><button type="submit" onclick="return checkdel();">提 交</button></span></span>
+   </div>
+</form>
+<script language="JavaScript">
+function checkdel(){
+	if(confirm("确定要删除所选分享吗？" )){
+		return true;
+	}else{
+		return false;
+	}
+}
+</script>
+<!--
+EOT;
+}
+}include_once PrintEot('adminbottom');
+?>-->

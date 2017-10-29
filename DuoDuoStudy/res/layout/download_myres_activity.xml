@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+  <!-- 页面标题栏 -->
+  <RelativeLayout
+  android:id="@+id/download_layout_titleBanner"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+  <TextView
+   android:id="@+id/download_titlebanner_content"
+   android:layout_alignParentLeft="true"
+   android:layout_alignRight="@+id/download_titlebanner_myres"
+   android:layout_width="wrap_content"
+   android:layout_height="40dp"
+   android:paddingTop="5dp"
+   android:text="下载管理"/>
+  <Button
+   android:id="@+id/download_titlebanner_myres"
+   android:layout_width="wrap_content"
+   android:layout_height="40dp"
+   android:layout_alignRight="@+id/download_titlebanner_allpause"
+   android:layout_marginRight="80dp"
+   android:text="@string/myResource"/>
+  <Button
+   android:id="@+id/download_titlebanner_allpause"
+   android:layout_alignParentRight="true"
+   android:layout_width="wrap_content"
+   android:layout_height="40dp"
+   android:text="@string/allPauseDownload"/>
+  </RelativeLayout>
+  
+  
+</RelativeLayout>

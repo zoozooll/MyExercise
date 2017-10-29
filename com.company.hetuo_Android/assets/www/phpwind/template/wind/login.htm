@@ -1,0 +1,153 @@
+<!--<?php print <<<EOT
+-->
+<style type="text/css">
+.regItem { padding-bottom:2em ;}
+.regItem dl { padding:.2em 0; margin:0 0 1em 0;}
+.regItem dt{  margin:0;width:30%; float:left; padding-right:2em;text-align:right; font-size:12px; }
+.regItem dd{ float:left;padding-right:2em; margin:0;}
+</style>
+<div id="breadCrumb">
+		<img src="$imgpath/$stylepath/thread/home-old.gif" align="absmiddle" />&nbsp;<a href="$db_bfn" title="$db_bbsname">$db_bbsname</a> &raquo; 登录
+</div>
+
+<form action="login.php?" method="post" name="login">
+<input type="hidden" value="$forward" name="forward" />
+<input type="hidden" value="$jumpurl" name="jumpurl" />
+<input type="hidden" value="2" name="step" />
+<div class="t" style="margin-top:8px;">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr><th class="h">登录</th></tr>
+<tr><td>
+	<div class="cc p10 regItem">
+<!--
+EOT;
+if($db_sitemsg['login']['0']){
+print<<<EOT
+-->
+		<dl class="cc">
+			<dt>&nbsp;</dt>
+			<dd><div class="blockquote" style="margin:0;">{$db_sitemsg[login][array_rand($db_sitemsg[login])]}</div></dd>
+		</dl>
+<!--
+EOT;
+}print<<<EOT
+-->
+<!--
+EOT;
+print <<<EOT
+-->
+							<dl class="cc">
+								<dt onclick="document.login.pwuser.focus();">
+<!--
+EOT;
+$arr_logintypename = array('用户名','UID','Email');
+if(count($arr_logintype)==1){
+$value = current($arr_logintype);
+print <<<EOT
+-->
+<input type="radio" name="lgt" value="$value" checked /> $arr_logintypename[$value]
+<!--
+EOT;
+}elseif(count($arr_logintype)>1){
+$i=1;
+foreach($arr_logintype as $value){
+$str_checked = $i==1? 'checked':'';
+$i++;
+print <<<EOT
+-->
+<input type="radio" name="lgt" value="$value" $str_checked /> $arr_logintypename[$value]
+<!--
+EOT;
+}print <<<EOT
+-->
+<!--
+EOT;
+}else{print <<<EOT
+-->
+<input type="radio" name="lgt" value="$value" checked /> 
+<!--
+EOT;
+}print <<<EOT
+--></dt>
+								<dd>
+<input class="input" type="text" maxLength="60" name="pwuser" size="40" tabindex="2" /> <a href="$db_registerfile">马上注册</a>
+								</dd>
+								</dl>
+			<dl class="cc">
+				<dt>密　码</dt>
+				<dd><input class="input" type="password" maxLength="20" name="pwpwd" size="40" tabindex="3" /> <a href="sendpwd.php" target="_blank">找回密码</a></dd>
+			</dl>
+
+<!--
+EOT;
+if($db_gdcheck & 2){
+print <<<EOT
+-->
+							<dl class="cc">
+								<dt>认证码</dt>
+								<dd>
+<input class="input" type="text" name="gdcode" size="5" tabindex="4" onfocus="try{opencode('menu_gd',this)}catch(e){}" /><span style="cursor:pointer; margin-left:3px" onclick="this.previousSibling.focus();">&nbsp;点此显示验证码</span>
+			<div class="menu" id="menu_gd" style="visibility:hidden;"><img src="ck.php?" align="absmiddle" style="cursor:pointer;" id="ckcode" alt="看不清楚，换一张" /></div>
+								</dd>
+								</dl>
+
+
+<!--
+EOT;
+}
+if($db_ifsafecv){print <<<EOT
+-->
+			<dl class="cc">
+				<dt>安全问题</dt>
+				<dd>			<select name="question" onchange="showcustomquest(this.value)" tabindex="4">
+<option value="0">无安全问题</option><option value="1">我爸爸的出生地</option><option value="2">我妈妈的出生地</option><option value="3">我的小学校名</option><option value="4">我的中学校名</option><option value="5">我最喜欢的运动</option><option value="6">我最喜欢的歌曲</option><option value="7">我最喜欢的电影</option><option value="8" >我最喜欢的颜色</option><option value="-1">自定义问题</option>
+			</select>
+			<input id="customquest" style="display:none" type="text" name="customquest" class="input" size="17" tabindex="5" /></dd>
+			</dl>
+			<dl class="cc">
+				<dt>您的答案</dt>
+				<dd><input type="text" name="answer" class="input" size="40" tabindex="6" /> <span class="gray">如果您设置了安全问题，需要填写正确的答案才能登录站点</span></dd>
+			</dl>
+<!--
+EOT;
+}if($loginq && $db_question){
+$qkey = array_rand($db_question);
+print <<<EOT
+-->
+			<dl class="cc">
+				<dt>验证问答</dt>
+				<dd>问题：{$db_question[$qkey]}<br /><input class="input" type="text" name="qanswer" tabindex="7" /><input type="hidden" name="qkey" value="$qkey" />  正确答案:{$db_answer[$qkey]}</dd>
+			</dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+			<dl class="cc">
+				<dt>隐身登录</dt>
+				<dd>			<input name="hideid" type="radio" value="1" />          开启
+			<input name="hideid" type="radio" value="0" checked tabindex="8" />　关闭</dd>
+			</dl>
+			<dl class="cc">
+				<dt>Cookie 有效期:</dt>
+				<dd>			<input type="radio" name="cktime" value="31536000" checked tabindex="9" />        一年 &nbsp;
+			<input type="radio" name="cktime" value="2592000" /> 一个月 &nbsp;
+			<input type="radio" name="cktime" value="86400" />			一天 &nbsp;
+			<input type="radio" name="cktime" value="3600" />			一小时 &nbsp;
+			<input type="radio" name="cktime" value="0" />				即时 &nbsp; &nbsp;</dd>
+			</dl>
+			<dl class="cc">
+				<dt>&nbsp;</dt>
+				<dd><input class="btn" type="submit" name="submit" value="登录" style="width:80px" tabindex="10" /></dd>
+			</dl>
+		</td></tr>
+</table></div>
+</form>
+<script language="JavaScript">
+document.login.pwuser.focus();
+function showcustomquest(qid){
+	getObj("customquest").style.display = qid==-1 ? '' : 'none';
+}
+</script>
+<!--
+EOT;
+?>-->

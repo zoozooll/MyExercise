@@ -1,0 +1,688 @@
+<!--<?php
+include_once PrintEot('left');print <<<EOT
+-->
+<!--
+EOT;
+if($action == "edit" || $action == "add"){print <<<EOT
+-->
+<script type="text/javascript" language="JavaScript">
+function findPosX(obj) {
+	var curleft = 0;
+	if (obj.offsetParent) {
+		while (obj.offsetParent) {
+			curleft += obj.offsetLeft
+			obj = obj.offsetParent;
+		}
+	} else if (obj.x) {
+		curleft += obj.x;
+	}
+	return curleft - getLeft();
+}
+function findPosY(obj) {
+	var curtop = 0;
+	if (obj.offsetParent) {
+		while (obj.offsetParent) {
+			curtop += obj.offsetTop
+			obj = obj.offsetParent;
+		}
+	} else if (obj.y) {
+		curtop += obj.y;
+	}
+	return curtop - getTop();
+}
+function pickReback(obj,color){
+	if (typeof obj == 'string') {
+		obj = getObj(obj);
+	}
+	obj.style.color = color;
+}
+function selupid(t){
+try{
+<!--
+EOT;
+foreach($navtitle as $key=>$value){print <<<EOT
+-->
+	getObj('upid_$key').style.display = 'none';
+<!--
+EOT;
+}print <<<EOT
+-->
+	getObj(t).style.display = '';
+}catch(e){}
+}
+</script>
+<script type="text/javascript" language="JavaScript" src="js/global.js"></script>
+<script type="text/javascript" language="JavaScript" src="js/pw_ajax.js"></script>
+<script type="text/javascript" language="JavaScript" src="js/color_picker.js"></script>
+<div class="nav3 mb10">
+	<ul class="cc">
+<!--
+EOT;
+if($admintype == 'navside'){print <<<EOT
+-->
+		<li><a href="$basename">头部导航栏</a></li>
+		<li><a href="$basename&type=foot">底部导航栏</a></li>
+<!--
+EOT;
+}elseif($admintype == 'navmain'){print <<<EOT
+-->
+		<li><a href="$basename&type=main">社区主导航</a></li>
+<!--
+EOT;
+}elseif($admintype == 'navmode'){
+foreach($navtitle as $key=>$value){print <<<EOT
+-->
+		<li><a href="$basename&type=$key">{$value}导航</a></li>
+<!--
+EOT;
+}}if($action == "add"){print <<<EOT
+-->
+		<li class="current"><a href="$basename&action=add&type=$type">+添加导航</a></li>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+		<li><a href="$basename&action=add&type=$type">+添加导航</a></li>
+		<li class="current"><a href="$basename&action=edit&nid=$nid&type=$type">编辑导航</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+	</ul>
+</div>
+<form action="$basename" method="post">
+<!--
+EOT;
+foreach($navtitle as $key=>$value){
+if ($key == $type) {
+	$nav_type = $value;
+}}print<<<EOT
+-->
+<h2 class="h1">{$nav_type}导航自定义</h2>
+<div class="admin_table mb10">
+<table width="100%" cellspacing="0" cellpadding="0">
+<!--
+EOT;
+if($admintype == 'navside'){print <<<EOT
+-->
+	<tr class="tr1 vt">
+		<td class="td1">导航类型<span class="s1">*</span></td>
+		<td class="td2">
+			<ul class="list_A list_80">
+				<li><input type="radio" name="type" value="head" $head_check />头部导航</li>
+				<li><input type="radio" name="type" value="foot" $foot_check />底部导航</li>
+			</ul>
+		</td><td class="td2"></td>
+	</tr>
+<!--
+EOT;
+}elseif($admintype == 'navmain'){print <<<EOT
+-->
+	<tr style="display:none;"><td><input type="hidden" name="type" value="main" /></td><td></td></tr>
+<!--
+EOT;
+}elseif($admintype == 'navmode'){
+if($action == 'add'){print <<<EOT
+-->
+	<tr class="tr1 vt">
+		<td class="td1">导航类型<span class="s1">*</span></td>
+		<td class="td2">
+			<ul class="list_A list_80 cc">
+<!--
+EOT;
+foreach($navtitle as $key=>$value){
+if ($key == $type) {print <<<EOT
+-->
+				<li class="current"><input type="radio" name="type" value="$key" onclick="selupid('upid_$key');" checked />{$value}导航</li>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+				<li><input type="radio" name="type" value="$key" onclick="selupid('upid_$key');" />{$value}导航</li>
+<!--
+EOT;
+}}print <<<EOT
+-->
+			</ul>
+		</td><td class="td2"></td>
+	</tr>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+	<tr class="tr1 vt">
+		<td class="td1">导航类型<span class="s1">*</span></td>
+		<td class="td2">$navtitle[$type]导航 <input type="hidden" name="type" value="$type" /></td>
+		<td class="td2"></td>
+	</tr>
+<!--
+EOT;
+}}if($admintype == 'navmode'){print <<<EOT
+-->
+	<tr class="tr1 vt" id="upid_nav">
+		<td class="td1">上级导航<span class="s1">*</span></td>
+		<td class="td2">
+<!--
+EOT;
+foreach ($upnavlist as $key => $value) {
+$tmpStyle = $key == $type ? '' : 'style="display:none"';
+$tmpDisabled = $key == 'bbs_navinfo' ? '' : 'disabled';print <<<EOT
+-->
+			<select name="upid[$key]" id="upid_$key" $tmpStyle $tmpDisabled>
+				<option value="0">-顶级导航</option>
+<!--
+EOT;
+foreach ($value as $k => $v) {
+if ($upid == $k) {print <<<EOT
+-->
+				<option value="$k" SELECTED>--$v</option>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+				<option value="$k">--$v</option>
+<!--
+EOT;
+}}print <<<EOT
+-->
+			</select>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</td><td class="td2"></td>
+	</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+	<tr class="tr1 vt">
+	  <td class="td1">栏目名称<span class="s1">*</span></td>
+	  <td class="td2"><input name="title" type="text" class="input input_wa" id="title" value="$title" /></td>
+       <td class="td2"><div class="help_a"> </div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">栏目链接</td>
+		<td class="td2"><input name="link" type="text" class="input input_wb" id="link" value="$link" /></td>
+		<td class="td2"><div class="help_a">外部链接以http://开头</div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">字体样式</td>
+		<td class="td2">
+			<div class="input_img fl mr10"><i title="选择颜色" class="input_color" onclick="showColorPicker(this,'bgcolor',function(){pickReback('bgcolor_s',color_picker)})">选择颜色</i><input id="bgcolor" value="$style_color" name="color" class="color_input" type="text" /></div>
+			<ul class="fl list_A list_80 cc">
+				<li><input name="b" type="checkbox" id="b" value="1" onchange="if (this.checked){getObj('bgcolor_s').style.fontWeight='bolder';}else{getObj('bgcolor_s').style.fontWeight='normal';}" $b_check />粗体</li>
+				<li><input name="i" type="checkbox" id="i" value="1" onchange="if (this.checked){getObj('bgcolor_s').style.fontStyle='italic';}else{getObj('bgcolor_s').style.fontStyle='normal';}" $i_check />斜体</li>
+				<li><input name="u" type="checkbox" id="u" value="1" onchange="if (this.checked){getObj('bgcolor_s').style.textDecoration='underline';}else{getObj('bgcolor_s').style.textDecoration='none';}" $u_check>下划线</li>
+			</ul>
+			<span class="fl">(<span id='bgcolor_s' style="$fontstyle">字体样式效果</span>)</span>
+		</td><td class="td2"><div class="help_a"> </div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">文字说明</td>
+		<td class="td2"><input name="alt" type="text" class="input input_wb" id="alt" value="$alt"></td>
+		<td class="td2"><div class="help_a">鼠标悬浮于链接文字上时的说明内容 </div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">目标框架</td>
+		<td class="td2">
+			<ul class="list_A list_80 cc">
+				<li><input type="radio" name="target" value="0" $self_check />本窗口</li>
+				<li><input type="radio" name="target" value="1" $blank_check />新窗口</li>
+			</ul>
+		</td> <td class="td2"><div class="help_a"> </div></td>
+	</tr>
+<!--
+EOT;
+if($admintype != 'navmode'){print <<<EOT
+-->
+	<tr class="tr1 vt">
+		<td class="td1">显示位置</td>
+		<td class="td2">
+			<ul class="list_A list_80 cc">
+<!--
+EOT;
+foreach($db_modes as $key=>$value){
+$tmpchecked = ($pos == '-1' || strpos(",$pos,",",$key,") !== false) ? 'CHECKED' : '';
+print <<<EOT
+-->
+				<li><input name="pos[]" type="checkbox" value="$key" $tmpchecked>{$value['m_name']}</li>
+<!--
+EOT;
+}print <<<EOT
+-->
+			</ul>
+		</td><td class="td2"><div class="help_a"> </div></td>
+	</tr>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+	<input type="hidden" name="pos" value="$pos" />
+<!--
+EOT;
+}print <<<EOT
+-->
+	<tr class="tr1 vt">
+		<td class="td1">位置顺序</td>
+		<td class="td2"><input name="view" type="text" class="input input_wa" id="view" value="$view" /></td>
+		<td class="td2"><div class="help_a"> </div></td>
+	</tr>
+	<tr class="tr1 vt">
+		<td class="td1">是否启用</td>
+		<td class="td2">
+			<ul class="list_A list_80 cc">
+				<li><input name="isshow" type="checkbox" value="1" $sel_isshow />启用</li>
+			</ul>
+		</td><td class="td2"><div class="help_a"> </div></td>
+	</tr>
+</table>
+</div>
+<div class="tac mb10">
+	<input name="nid" type="hidden" id="nid" value="$nid" />
+	<input name="action" type="hidden" id="action" value="save" />
+	<span class="btn"><span><button type="submit">提 交</button></span></span>
+</div>
+</form>
+<!--
+EOT;
+}else{
+if($admintype == 'navmode'){print <<<EOT
+-->
+<div class="nav3 mb10">
+	<ul class="cc">
+<!--
+EOT;
+foreach($navtitle as $key=>$value){
+if ($key == $type) {print <<<EOT
+-->
+		<li class="current"><a href="$basename&type=$key">{$value}导航</a></li>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+		<li><a href="$basename&type=$key">{$value}导航</a></li>
+<!--
+EOT;
+}}print <<<EOT
+-->
+		<li><a href="$basename&action=add&type=$type">+添加导航</a></li>
+	</ul>
+</div>
+<!--
+EOT;
+if($type == 'area_navinfo'){print <<<EOT
+-->
+<div class="admin_info mb10">
+	<h3 class="h1"><b>提示信息</b></h3>
+	<div class="legend">注意：因为门户不设隐私权限，当论坛版块设置权限时，建议关闭门户相应的频道或模块，否则会导致帖子无法调用到频道而影响用户正常浏览</div>
+</div>
+<form action="$basename" method="post" name="FORM">
+<input name="type" type="hidden" value="$type" />
+<input name="action" type="hidden" value="editview" />
+<h2 class="h1">频道导航名称展现</h2>
+<div class="admin_table mb10">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr class="tr1 vt">
+		<td class="td2">
+			<ul class="list_A list_120 mb5 cc">
+				<li><input name="config[navshow]" type="radio" value="0" $navshow_N />等间距展现</li>
+				<li><input name="config[navshow]" type="radio" value="1" $navshow_Y />等宽展现</li>
+			</ul>
+		</td>
+        <td class="td2"><div class="help_a">频道多行排版建议使用等宽展现更美观</div></td>
+	</tr>
+</table>
+</div>
+<h2 class="h1">社区模式频道导航</h2>
+<div class="admin_table mb10">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr class="tr2 td_bgB">
+        <td width="30">顺序</td>
+        <td width="100">版块</td>
+        <td width="215">自定义显示名称</td>
+      	<td width="80">链接地址</td>
+        <td>操作</td>
+        <td width="24"><span onclick="CheckAll(document.FORM)" class="cp">启用</span></td>
+	</tr>
+<!--
+EOT;
+foreach($nav as $n){print <<<EOT
+-->
+	<tr class="tr1 vt">
+		<td class="td2"><input name="view[$n[nid]]" type="text" class="input input_wd" value="$n[view]" /></td>
+		<td class="td2">
+<!--
+EOT;
+if($forum[$n['nkey']]){print <<<EOT
+-->
+		{$forum[$n['nkey']]['name']}
+<!--
+EOT;
+}else{print <<<EOT
+-->
+		<span class="gray">自定义导航</span>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</td>
+		<td class="td2"><input name="title[$n[nid]]" type="text" class="input input_wa" value="$n[title]" style="$n[fontstyle]" /></td>
+		<td class="td2"><p class="lh_18"><a href="$n[link]" target="_blank" title="$n[alt]">$n[link]</a></p></td>
+		<td class="td2">
+			<a href="$basename&amp;action=edit&amp;nid=$n[nid]&amp;type=$n[type]" title="编辑">[编辑]</a>
+<!--
+EOT;
+if(!$n['nkey']){print <<<EOT
+-->
+			<a title="删除" href="$basename&amp;action=del&amp;nid=$n[nid]&amp;type=$n[type]" onclick="return delnav();">[删除]</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</td>
+		<td class="td2"><input name="isshow[$n[nid]]" type="checkbox" value="1" $n[isshow] /></td>
+	</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+	<tr class="tr2">
+		<td colspan="6">
+			<a class="fl" href="javascript:;" onclick="toRestore('$basename&action=restore&type=$type');">恢复默认</a>
+			<a class="fr" href="javascript:;" onclick="CheckAll(document.FORM);">全选</a>
+		</td>
+	</tr>
+</table>
+</div>
+<div class="tac mb10">
+	<span class="btn"><span><button type="submit" name="Submit2">提 交</button></span></span>
+</div>
+</form>
+<!--
+EOT;
+}elseif($type == 'o_navinfo'){print <<<EOT
+-->
+<form action="$basename" method="post" name="FORM">
+<input name="type" type="hidden" value="$type" />
+<input name="action" type="hidden" value="editview" />
+<h2 class="h1">圈子模式导航列表</h2>
+<div class="admin_table mb10">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr class="tr2 td_bgB">
+        <td width="30">顺序</td>
+        <td width="100">链接名称</td>
+      	<td width="215">链接地址</td>
+        <td>操作</td>
+        <td width="24"><span onclick="CheckAll(document.FORM)" class="cp">启用</span></td>
+	</tr>
+<!--
+EOT;
+foreach($nav as $n){print <<<EOT
+-->
+	<tr class="tr1 vt">
+		<td class="td2"><input name="view[$n[nid]]" type="text" class="input input_wd" value="$n[view]" /></td>
+		<td class="td2"><input name="title[$n[nid]]" type="text" class="input input_wa" value="$n[title]" style="$n[fontstyle]" /></td>
+		<td class="td2"><p class="lh_18"><a href="$n[link]" target="_blank" title="$n[alt]">$n[link]</a></p></td>
+		<td class="td2">
+			<a href="$basename&amp;action=edit&amp;nid=$n[nid]&amp;type=$n[type]" title="编辑">[编辑]</a>
+<!--
+EOT;
+if(!$n['nkey']){print <<<EOT
+-->
+			<a title="删除" href="$basename&amp;action=del&amp;nid=$n[nid]&amp;type=$n[type]" onclick="return delnav();">[删除]</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</td>
+		<td class="td2"><input name="isshow[$n[nid]]" type="checkbox" value="1" $n[isshow] /></td>
+	</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+	<tr class="tr2">
+		<td colspan="5">
+			<a class="fl" href="javascript:;" onclick="toRestore('$basename&action=restore&type=$type');">恢复默认</a>
+			<a class="fr" href="javascript:;" onclick="CheckAll(document.FORM);">全选</a>
+		</td>
+	</tr>
+</table>
+</div>
+<div class="tac mb10">
+	<span class="btn"><span><button type="submit" name="Submit2">提 交</button></span></span>
+</div>
+</form>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+<form action="$basename" name="FORM" method="post">
+<input name="type" type="hidden" value="$type" />
+<input name="action" type="hidden" value="editview" />
+<h2 class="h1">论坛模式导航列表</h2>
+<div class="admin_table mb10">
+<table cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+	<tr class="tr2 td_bgB">
+		<td>[顺序]版块名称</td>
+		<td width="160">链接地址</td>
+		<td width="120">操作</td>
+		<td width="24"><span onclick="CheckAll(document.FORM)" class="cp">启用</span></td>
+	</tr>
+<!--
+EOT;
+$tmpOpenTag = false;
+foreach ($nav as $key => $value) {
+if ($value['upid'] <= 0 && $tmpOpenTag){print <<<EOT
+-->
+</tbody>
+<!--
+EOT;
+}if ($value['isshow']) {print <<<EOT
+-->
+	<tr class="tr1 vt">
+<!--
+EOT;
+}else{print <<<EOT
+-->
+	<tr class="tr1 vt unchecked">
+<!--
+EOT;
+}print <<<EOT
+-->
+		<td class="td3">
+<!--
+EOT;
+if ($value['upid'] > 0) {print <<<EOT
+-->
+			<i class="lower"></i><input name="view[$key]" type="text" class="input input_wd mr5" value="$value[view]" /><input type="text" class="input input_wa" name="title[$key]" value="$value[title]">
+<!--
+EOT;
+}else{print <<<EOT
+-->
+			<i id="bt_$key" class="expand expand_a" onclick="cateopen('$key')">展开</i>
+			<input name="view[$key]" type="text" class="input input_wd mr5"  value="$value[view]" /><input type="text" class="input input_wa" name="title[$key]" value="$value[title]">
+<!--
+EOT;
+}print <<<EOT
+-->
+		</td>
+		<td class="td2"><p class="lh_18">$value[link]</p></td>
+		<td class="td2">
+			<a href="$basename&action=edit&nid=$key" class="mr10">[编辑]</a>
+<!--
+EOT;
+if (!$value['nkey']) {print <<<EOT
+-->
+			<a href="$basename&action=del&nid=$key&" onclick="return delNav(this.id);" id="del_$value[nid]">[删除]</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</td>
+		<td class="td2"><input type="checkbox" name="isshow[$key]" value="1" {$value['isshow']}></td>
+	</tr>
+<!--
+EOT;
+if ($value['upid'] <= 0) {print <<<EOT
+-->
+<tbody id="cate_{$key}">
+<!--
+EOT;
+$tmpOpenTag=true;
+}}print <<<EOT
+-->
+	<tr class="tr2">
+		<td colspan="4">
+<!--
+EOT;
+if($type == 'bbs_navinfo'){print <<<EOT
+-->
+			<a class="fl" href="javascript:;" onclick="toRestore('$basename&action=restore&type=$type');">恢复默认</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+			<a href="javascript:;" onclick="CheckAll(document.FORM);" class="fr">全选</a>
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>
+<div class="tac mb10">
+	<span class="btn"><span><button type="submit">提 交</button></span></span>
+</div>
+</form>
+<script language="JavaScript">
+function delNav(id){
+	var objurl = getObj(id);
+	if(!confirm("确实要删除自定义链接吗？"))
+		return false;
+	location.href=objurl;
+}
+function cateopen(id) {
+try{
+	var o = getObj('cate_' + id);
+	if (o == null) return;
+	if (o.style.display == 'none') {
+		o.style.display = '';
+		getObj('bt_' + id).className = 'expand expand_a';
+	} else {
+		o.style.display = 'none';
+		getObj('bt_' + id).className = 'expand expand_b';
+	}
+} catch(e){}
+}
+</script>
+<!--
+EOT;
+}}else{print <<<EOT
+-->
+<div class="nav3 mb10">
+	<ul class="cc">
+<!--
+EOT;
+if($admintype == 'navside'){
+if($type == 'foot'){print <<<EOT
+-->
+		<li><a href="$basename">头部导航栏</a></li>
+		<li class="current"><a href="$basename&type=foot">底部导航栏</a></li>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+		<li class="current"><a href="$basename">头部导航栏</a></li>
+		<li><a href="$basename&type=foot">底部导航栏</a></li>
+<!--
+EOT;
+}}elseif($admintype == 'navmain'){print <<<EOT
+-->
+		<li class="current"><a href="$basename&type=main">社区主导航</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+		<li><a href="$basename&action=add&type=$type">+添加导航</a></li>
+	</ul>
+</div>
+<form action="$basename" method="post" name="FORM">
+<input name="type" type="hidden" value="$type" />
+<input name="action" type="hidden" value="editview" />
+<h2 class="h1">社区导航自定义</h2>
+<div class="admin_table mb10">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr class="tr2 td_bgB">
+		<td width="24">顺序</td>
+		<td width="80">链接名称</td>
+		<td width="215">链接地址</td>
+		<td width="80">显示位置</td>
+		<td>操作</td>
+		<td width="24"><span onclick="CheckAll(document.FORM)" class="cp">启用</span></td>
+	</tr>
+<!--
+EOT;
+foreach($nav as $n){print <<<EOT
+-->
+	<tr class="tr1 vt">
+		<td class="td2"><input name="view[$n[nid]]" type="text" class="input input_wd" value="$n[view]" /></td>
+		<td class="td2"><input name="title[$n[nid]]" type="text" class="input input_wa" value="$n[title]" style="$n[fontstyle]" /></td>
+		<td class="td2"><p class="lh_18"><a href="$n[link]" target="_blank" title="$n[alt]">$n[link]</a></p></td>
+		<td class="td2">$n[posname]</td>
+		<td class="td2">
+			<a href="$basename&amp;action=edit&amp;nid=$n[nid]&amp;type=$n[type]" title="编辑">[编辑]</a>
+<!--
+EOT;
+if(!$n['nkey']){print <<<EOT
+-->
+			<a title="删除" href="$basename&amp;action=del&amp;nid=$n[nid]&amp;type=$n[type]" onclick="return delnav();">[删除]</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</td>
+		<td class="td2"><input name="isshow[$n[nid]]" type="checkbox" value="1" $n[isshow] /></td>
+	</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+	<tr class="tr2">
+		<td colspan="6">
+<!--
+EOT;
+if($type == 'main'){print <<<EOT
+-->
+		<a class="fl" href="javascript:;" onclick="toRestore('$basename&action=restore&type=$type');">恢复默认</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+		<a class="fr" href="javascript:;" onclick="CheckAll(document.FORM);">全选</a>
+		</td>
+	</tr>
+</table>
+</div>
+
+<div class="tac mb10">
+	<span class="btn"><span><button type="submit" name="Submit2">提 交</button></span></span>
+</div>
+</form>
+<!--
+EOT;
+}print <<<EOT
+-->
+<script type="text/javascript" language="JavaScript">
+function toRestore(url) {
+	if (confirm("恢复默认将清空当前导航设置,请确认！")) {
+		window.location=(url);
+	} else {
+		return false;
+	}
+}
+</script>
+<!--
+EOT;
+}include_once PrintEot('adminbottom');
+?>-->

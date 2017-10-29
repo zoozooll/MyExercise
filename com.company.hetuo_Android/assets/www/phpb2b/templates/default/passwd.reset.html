@@ -1,0 +1,46 @@
+<{assign var="page_title" value="`$_get_password`"}>
+<{assign var="nav_id" value="`$nav_id`"}>
+<{include file="`$ThemeName`/header.html"}>
+<div class="wrapper">
+		<div class="content">
+			<div class="tips"><span><{$site_name}></span><{$_pls_reset_passwd}></div>
+            <div class="base_title">
+               <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_pls_reset_passwd}></span><span class="corner_t_r"></span></h2>
+	        </div>
+			<div class="quhuimima">
+					<div class="remessagecon">
+						<form id="form1" name="form1" method="post" action="">
+						<p><{$_input_info_reset_password}></p><br />
+						 <table class="messagecon_list">
+                          <tr>
+                            <th><{$_user_authentication}></th>
+                            <td> <input type="text" name="textfield" /></td>
+                          </tr>
+                          <tr>
+                            <th><{$_login_your_account}></th>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th><{$_reset_password}></th>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <th><{$_new_password}></th>
+                            <td> <input type="text" name="textfield" />&nbsp;<{$_set_new_password}></td>
+                          </tr>
+                          <tr>
+                            <th><{$_re_enter_new_password}></th>
+                            <td><input type="text" name="textfield" />&nbsp;<{$_set_new_password}></td>
+                          </tr>
+                          <tr>
+                            <th><{$_new_password}></th>
+                            <td> <input type="submit" name="Submit" value="<{$_submit_reset_password}>" class="submitpassword" /> </td>
+                          </tr>
+                        </table>
+						
+						</form>
+					</div>
+			</div>
+		</div>
+	</div>
+<{include file="`$ThemeName`/footer.html"}>

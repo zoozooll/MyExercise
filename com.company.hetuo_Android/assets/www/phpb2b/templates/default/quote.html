@@ -1,0 +1,151 @@
+<{assign var="page_title" value="`$_quotes`"}>
+<{assign var="nav_id" value="6"}>
+<{include file="`$ThemeName`/header.html"}>
+<{fetch file="../scripts/date2.js"}>
+	<div class="wrapper">
+        <div class="place_price clearfix">
+             <strong><{$_area_prices}></strong>
+             <div><{category type="area"}></div>
+        </div>
+        <div class="blank6"></div>        
+        <div class="content">
+            <div class="main_left_w180">
+                <div class="cornerbox">
+                    <div class="title_bar_s6">
+                        <span class="title_top_s6"><span></span></span>
+                        <h2><{$_quotes}><{$_categories}></h2>
+                    </div>
+                    <div class="price_menu_today clearfix">
+                        <ul>
+							<{foreach from=$Categories item=item}>
+							<li><a href="market/quote.php?catid=<{$item.id}>" title="<{$item.title}>"><{$item.title}></a></li>
+							<{/foreach}>
+                      </ul>
+                        <div class="blank"></div>
+                        <div class="btn_price_all"><a href="market/quote.php"><{$_the_all}><{$_price_quotes}></a></div>
+                        <div class="blank6"></div>
+                  </div>
+                   <div class="corner_bottom">
+                        <div class="corner_bottom_l"></div>
+                        <div class="corner_tottom_r"></div>
+                    </div>
+                </div>
+                <div class="blank6"></div>
+                <div class="cornerbox">
+                    <div class="title_bar_s6">
+                        <span class="title_top_s6"><span></span></span>
+                        <h2><{$_quote_search}></h2>
+                    </div>
+                    <div class="corner_content_s6">
+                       <div class="box_date_search">
+						<form method="get" action="">
+						<input type="hidden" name="do" value="chart" />
+						   <div><{$_searching_product}><input type="text" name="pn" value="" class="s_input"></div>
+						   <div><{$_date_start}><input name="ds" id="date1" value="<{$QuoteSearchFrom}>" class="s_input"/><span class="btn_calendar" id="calendar-date1"></span></div>
+						   <div><{$_date_end}><input name="de" id="date2" value="<{$QuoteSearchTo}>" class="s_input"/><span class="btn_calendar" id="calendar-date2"></span></div>
+						   <div class="text_center"><input type="submit" class="btn_submit" value="<{$_search}>"></div>
+						</form> 
+                        </div>                   
+					</div>
+                   <div class="corner_bottom">
+                        <div class="corner_bottom_l"></div>
+                        <div class="corner_tottom_r"></div>
+                    </div>
+                </div>
+                 <div class="blank6"></div>
+                <div class="cornerbox">
+                    <div class="title_bar_s6">
+                        <span class="title_top_s6"><span></span></span>
+                        <h2><{$_commend}><{$_pro_market}></h2>
+                    </div>
+                    <div class="corner_content_s6">
+                       <ul>
+						<{market row=10 type="commend"}>
+                         <li><a href="[link:title]">[field:title]</a></li>
+						<{/market}>
+                       </ul>
+                    </div>
+                   <div class="corner_bottom">
+                        <div class="corner_bottom_l"></div>
+                        <div class="corner_tottom_r"></div>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="main_right_w770">
+                <div class="brand_hot">
+                    <div class="title">
+                        <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><{$_commend}><{$_product}></span><span class="corner_t_r"></span></h2>
+                    </div>
+                     <div class="product_hot commend box_bord clearfix">
+					<ul>
+						<{product col=6 row=1  type="image,commend"}>
+						<li><a href="[link:title]"><img src="[img:src]" alt="[field:title]" /></a>
+						<p><a href="[link:title]">[field:title]</a></p>
+						</li>
+					   <{/product}>  
+                        </ul>
+                     </div>
+                </div>
+               
+                <div class="blank6"></div>
+                <div class="product_brand_intro">
+                    <table id="hacker">
+                     <thead>
+                      <tr>
+                        <th><{$_product_name_n}></th>
+                        <th><{$_av_price}></th>
+                        <th><{$_area_n}></th>
+                        <th><{$_market_name_n}></th>
+                        <th><{$_post_time_n}></th>
+                      </tr>
+                      </thead>
+					  <{foreach from=$Items item=item}>
+                      <tbody>
+                      <tr>
+                        <td><{$item.title}></td>
+                        <td><{$item.price}><{$Monetaries[$item.currency]}>/<{$Measuries[$item.units]}></td>
+                        <td><{$Areas[1][$item.area_id1]}><{$Areas[2][$item.area_id2]}></td>
+                        <td><{$item.marketname}></td>
+                        <td class="pb_datetime"><{$item.pubdate|date_format:"%Y-%m-%d"}></td>
+                      </tr>
+                      </tbody>
+					  <{/foreach}>
+                      <tfoot>
+                      <tr>
+                        <th><{$_product_name_n}></th>
+                        <th><{$_av_price}></th>
+                        <th><{$_area_n}></th>
+                        <th><{$_market_name_n}></th>
+                        <th><{$_post_time_n}></th>
+                      </tr>
+                      </tfoot>
+                      <tr>
+                        <td colspan="8" id="noborder"><{$ByPages}></td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+	</div>
+<style> 
+#hacker tr:hover{ 
+background-color: #F6FAFD;
+} 
+</style>
+<script>
+    Calendar.setup({
+        trigger    : "calendar-date1",
+		animation  : false,
+        inputField : "date1",
+		onSelect   : function() { this.hide() }
+    });
+    Calendar.setup({
+        trigger    : "calendar-date2",
+		animation  : false,
+        inputField : "date2",
+		onSelect   : function() { this.hide() }
+    });
+</script>
+<{include file="`$ThemeName`/footer.html"}>

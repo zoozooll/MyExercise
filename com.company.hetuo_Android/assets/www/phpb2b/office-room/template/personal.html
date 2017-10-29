@@ -1,0 +1,154 @@
+<{assign var="page_title" value="`$_profile`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+     <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+     <div class="offer_info_title"><h2><{$page_title}></h2></div>
+     <div class="hint"><{$_must_input_with_star}></div>
+	  <form name="companyeditfrm" action="personal.php" method="post" enctype="multipart/form-data">
+	  <input type="hidden" name="formhash" value="<{$formhash}>">
+
+	       <table class="offer_info_content">
+                      <tr>
+                        <th class="circle_left"><{$_vorname}></th>
+                        <td class="circle_right"><input name="memberfield[last_name]" type="text" id="memberlastname" value="<{$item.last_name}>"><font color="#FF6600">*</font></td>
+                      </tr>
+                      
+                      <tr>
+                        <th><{$_sex_n}></th>
+                        <td><{html_radios name="memberfield[gender]" options=$Genders checked=$item.gender|default:"1" separator=" "}></td>
+                      </tr>
+                      <tr>
+                        <th><{$_provinces_city}></th>
+                        <td>
+						<div id="dataArea">
+							<select name="memberfield[area_id1]" id="dataMemberfieldAreaId1" class="level_1" style="width:120px;" ></select>
+							<select name="memberfield[area_id2]" id="dataMemberfieldAreaId2" class="level_2" style="width:120px;"></select>
+							<select name="memberfield[area_id3]" id="dataMemberfieldAreaId3" class="level_3" style="width:120px;"></select>
+						</div>
+						</td>
+                      </tr>
+                      <tr>
+                        <th><{$_address}></th>
+                        <td><input name="memberfield[address]" type="text" id="memberaddress" value="<{$item.address}>"></td>
+                      </tr>
+                      <tr>
+                        <th><{$_postcode}></th>
+                        <td><input name="memberfield[zipcode]" type="text" id="memberzipcode" value="<{$item.zipcode}>"></td>
+                      </tr>
+                      <tr>
+                        <th>QQ<{$_number_n}></th>
+                        <td><input name="memberfield[qq]" type="text" id="memberqq" value="<{$item.qq}>"></td>
+                      </tr>
+                      <tr>
+                        <th>ICQ<{$_number_n}></th>
+                        <td><input name="memberfield[icq]" type="text" id="membericq" value="<{$item.icq}>"></td>
+                      </tr>
+                      <tr>
+                        <th>Msn Messenger<{$_colon}></th>
+                        <td><input name="memberfield[msn]" type="text" id="membermsn" value="<{$item.msn}>"></td>
+                      </tr>
+                      <tr>
+                        <th>Yahoo Messenger<{$_colon}></th>
+                        <td><input name="memberfield[yahoo]" type="text" id="memberyahoo" value="<{$item.yahoo}>"></td>
+                      </tr>
+                      <tr>
+                        <th>Skype<{$_colon}></th>
+                        <td><input name="memberfield[skype]" type="text" id="memberskype" value="<{$item.skype}>"></td>
+                      </tr>
+                      <tr>
+                        <th><{$_contact_phone}></th>
+                        <td><input name="memberfield[tel]" type="text" id="membertel" value="<{$item.tel}>"></td>
+                      </tr>
+                      <tr>
+                        <th><{$_fax_number}></th>
+                        <td><input name="memberfield[fax]" type="text" id="memberfax" value="<{$item.fax}>"></td>
+                      </tr>
+                      <tr>
+                        <th><{$_mobile_number}></th>
+                        <td><input name="memberfield[mobile]" type="text" id="membermobile" value="<{$item.mobile}>"></td>
+                      </tr>
+                      <tr>
+                        <th><{$_personal_homepage}></th>
+                        <td><input name="memberfield[site_url]" type="text" id="site_url" value="<{$item.site_url}>"></td>
+                      </tr>
+                      <tr>
+                        <th><{$_email_addr}></th>
+                        <td><input name="member[email]" type="text" id="memberemail" value="<{$item.email}>" size="32" disabled>(<a name="mod" href="javascript:;" onclick="javascript:$('#memberemail').attr('disabled',false);"><{$_modify}></a>)</td>
+                      </tr>
+                      <tr>
+                        <th><{$_job_status}></th>
+                        <td><input type="radio" name="personal[resume_status]" value="1" <{if $resume_status==1}>checked="checked"<{/if}>><{$_like_job}><input type="radio" name="personal[resume_status]" value="0" <{if $resume_status==0}>checked="checked"<{/if}>><{$_not_like_job}></td>
+                      </tr>
+                      <tr>
+                        <th><{$_highest_education}></th>
+                        <td>
+						<select name="personal[max_education]" id="MaxEducation">
+						<{foreach from=$Educations name=Educations item=item1 key=key1}>
+						<option value="<{$key1}>" <{if $max_education==$key1}>selected<{/if}>><{$item1}></option>
+						<{/foreach}>
+						</select>
+						</td>
+                      </tr>
+                      <tr>
+                        <th><{$_personal_picture}></th>
+                        <td><input type="file" name="photo" id="MemberPhoto">
+						<{if $item.photo}><br /><img src="<{$item.image}>" /><{/if}>
+						</td>
+                      </tr>
+                       <tr>
+                        <th><{$_login_jump}></th>
+                        <td><select name="member[office_redirect]" id="MemberOfficeRedirect">
+							<{foreach from=$OfficeRedirects name=office_redirect key=key1 item=item1}>
+							<option value="<{$key1}>" <{if $key1==$item.office_redirect}>selected<{/if}>><{$item1}></option>
+							<{/foreach}>
+                        </select></td>
+                      </tr>
+                      <tr>
+						<th class="circle_bottomleft"></th>
+                        <td class="circle_bottomright"><input name="save" type="submit" id="save" onClick="return checkinput();" value="<{$_save}>"></td>
+                      </tr>
+                 </table>
+	</form>
+  </div>
+ </div>
+<script language="javascript"> 
+function IsURL(urlString)
+{
+	regExp = /(?:(?:http[s]?|ftp):\/\/)?[^\/\.]+?\.[^\.\\\/]+?\.\w{2,}$/i;
+	if (urlString.match(regExp))return true;
+	else return false;
+}
+
+function checkinput(){
+	if($('#memberlastname').val()==""){
+		alert("<{$_enter_name}>");
+		$('#memberlastname').focus();
+		return false;
+	}
+	if($('#MemberfieldSiteUrl').val()!=""){
+		if(!IsURL($('#MemberfieldSiteUrl').val())){
+			alert("<{$_enter_website_error}>");
+			$('#MemberfieldSiteUrl').focus();
+			return false;
+		}
+	}
+	return true;
+}
+</script>
+<script>
+var cache_path = "../";
+var app_language = '<{$AppLanguage}>';
+var area_id1 = <{$item.area_id1|default:0}> ;
+var area_id2 = <{$item.area_id2|default:0}> ;
+var area_id3 = <{$item.area_id3|default:0}> ;
+</script>
+<script src="../scripts/multi_select.js" charset="<{$Charset}>"></script>
+<script src="../scripts/script_area.js"></script>
+<{include file="footer.html"}>

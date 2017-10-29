@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+>
+    <ImageView android:id="@+id/bookshelfmanage_imgchk_img"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+			   android:layout_marginLeft="10dip"
+			   android:layout_marginRight="10dip"             
+               />
+    <CheckBox android:id="@+id/bookshelfmanage_imgchk_chk"
+               android:layout_width="25dip"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="30dip"
+               android:layout_gravity="bottom"
+               android:visibility="gone"
+               style="@style/MyCheckBox"/>           
+</FrameLayout>

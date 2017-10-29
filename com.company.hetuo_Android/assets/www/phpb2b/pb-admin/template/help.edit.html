@@ -1,0 +1,45 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_extension}> &raquo; <{$_help_file}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_help_file}></h3> 
+    <ul class="subnav">
+		<li><a href="help.php"><{$_management}></a></li>
+        <li><a class="btn1" href="help.php?do=edit"><span><{$_add_or_edit}></span></a></li>
+		<li><a href="helptype.php"><{$_sorts}></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form method="post" action="help.php" id="EditFrm" name="edit_frm">
+  <input type="hidden" name="id" value="<{$item.id}>" />
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> <{$_help_file}><{$_title_n}></th>
+        <td class="paddingT15 wordSpacing5">          
+		<input class="infoTableInput2" name="help[title]" value="<{$item.title}>" /></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> <{$_help_file}><{$_type_sort}></th>
+        <td class="paddingT15 wordSpacing5">
+		<select name="help[helptype_id]" id="HelpTypeId">
+		<option><{$_pls_select}></option>
+		<{$HelptypeOptions}>
+		</select>        
+        </td>
+      </tr>
+      <tr>
+        <th class="paddingT15"><{$_content}></th>
+        <td class="paddingT15 wordSpacing5"> <textarea style="width:550px;height:100px;" name="help[content]" id="helpContent"><{$item.content}></textarea></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+<{editor type="ckeditor" element="helpContent" toolbar="Full"}>
+<{include file="footer.html"}>

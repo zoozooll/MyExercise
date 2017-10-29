@@ -1,0 +1,68 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> <{$_plugin}> &raquo; <{$_plugin}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_plugin}></h3> 
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" action="http://www.phpb2b.com/plugin/" id="SearchFrm" method="get" target="_blank">
+        <input type="hidden" name="do" value="search" />
+             <div> 
+				关键字 : <input class="queryInput" type="text" name="q" value="" /> 
+                <input type="submit" name="search" id="Search" class="formbtn" value="站外搜索" /> 
+            </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="plugin.php" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll"><{$_the_title}></label></th>
+		  <th>版本</th>
+		  <th>描述</th>
+		  <th>作者</th>
+		  <th><{$_action}></th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" <{if !$item.id}>disabled="disabled"<{/if}> value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><{$item.title}></td>
+		  <td><{$item.version}></td>
+		  <td><{$item.description}></td>
+		  <td><{$item.copyright}></td>
+		  <td class="handler">
+          <ul id="handler_icon">
+            <{if $item.available}>
+            <li><a class="btn_config" href="plugin.php?do=edit&id=<{$item.id}><{$addParams}>" title="设置"><{$_setting}></a></li>
+             <li><a class="btn_uninstall" href="plugin.php?do=uninstall&id=<{$item.id}><{$addParams}>"  title="<{$_uninstall}>"><{$_uninstall}></a></li>
+             <{else}>
+            <li><a class="btn_install" href="plugin.php?entry=<{$item.entry}>&do=install<{$addParams}>" title="<{$_install}>"><{$_install}></a></li>
+            <{/if}>
+          </ul>  
+		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="6"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_uninstall}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>
