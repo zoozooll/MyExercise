@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Canvas">
+        <menu>
+            <item
+                android:id="@+id/canvas_clip"
+                android:icon="@drawable/ic_menu_share"
+                android:title="clip" />
+            <item
+                android:id="@+id/canvas_transform"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="transform" />
+            <group
+                android:id="@+id/canvac_geometric"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="geometric" >
+
+                <item
+                    android:id="@+id/canvas_points"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Points" />
+                <item
+                    android:id="@+id/canvas_lines"
+                    android:icon="@android:drawable/stat_sys_download_done"
+                    android:title="Lines" />
+                <item
+                    android:id="@+id/canvas_rect"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="rect" />
+                <item
+                    android:id="@+id/canvas_roundRect"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Round Rect" />
+                <item
+                    android:id="@+id/canvas_circle"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Circle" />
+                <item
+                    android:id="@+id/canvas_oval"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Oval" />
+                <item
+                    android:id="@+id/canvas_arc"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Arc" />
+                <item
+                    android:id="@+id/canvas_path"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Path" />
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="Paint">
+        <menu>
+            <item
+                android:id="@+id/paint_antialias"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Anti Alias" />
+            <item
+                android:id="@+id/paint_dither"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Dither" />
+            <item
+                android:id="@+id/paint_color"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Color" />
+            <item
+                android:id="@+id/paint_colorFilter"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Color Filter" />
+            <item
+                android:id="@+id/paint_filterBitmap"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Filter Bitmap" />
+            <item
+                android:id="@+id/paint_hinting"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Hinting" />
+            <item
+                android:id="@+id/paint_maskFilter"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Mask Filter" />
+            <item
+                android:id="@+id/paint_pathEffect"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Path Effect" />
+            <item
+                android:id="@+id/paint_shader"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Shader" />
+            <item
+                android:id="@+id/paint_shadowLayer"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Shadow Layer" />
+            <item
+                android:id="@+id/paint_stroke"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Stroke" />
+            <item
+                android:id="@+id/paint_xfermode"
+                android:icon="@drawable/ic_menu_share"
+                android:title="X Fermode" />
+        </menu>
+    </item>
+</menu>
