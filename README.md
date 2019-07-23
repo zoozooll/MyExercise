@@ -15,5 +15,5 @@ MyExercise source code
 - VRLauncher-you： VRLaunche
 - e-bridge-c2csho： e-bridge电商源码，使用Struct-Spring-Hibrinate
 - openmp_sample: Android Open MP Demo
-- photoeditor： 图片编辑器，从android source 4.0版本的gallery3D中取出
+- photoeditor： 使用OpenGL ES 2.0编辑的图片编辑器，从android source 4.0版本的gallery3D中取出
 - shelves： 书架源代码，可以背景跟着拖动的GridView
