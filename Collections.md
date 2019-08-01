@@ -83,6 +83,8 @@
 
 **[recordabletextureview](https://github.com/zoozooll/recordabletextureview)**
 
+**[Open Camera](https://sourceforge.net/p/opencamera/code/ci/master/tree/)**
+
 [**BradLarson /**](https://github.com/BradLarson/GPUImage) [](https://github.com/BradLarson/GPUImage) [**GPUImage**](https://github.com/BradLarson/GPUImage)
 
 [**cats-oss /**](https://github.com/cats-oss/android-gpuimage) [](https://github.com/cats-oss/android-gpuimage) [**android-gpuimage**](https://github.com/cats-oss/android-gpuimage)
