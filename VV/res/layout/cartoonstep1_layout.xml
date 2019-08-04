@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#666666" >
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/select_sex_layout" >
+
+        <RelativeLayout
+            android:id="@+id/people_imageview_wraper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#345623" >
+
+            <ImageView
+                android:id="@+id/people_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                />
+        </RelativeLayout>
+
+        <com.beem.project.btf.ui.MagnifyView
+            android:id="@+id/cartoon_magn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/cartoon_gif_tip"
+            android:layout_width="65dip"
+            android:layout_height="73dip"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitCenter" 
+            android:background="@anim/gifanim"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/select_sex_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_background"
+        android:paddingLeft="30dip"
+        android:paddingRight="30dip"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/take_photo_man"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/man_btn_selector"
+            android:drawableLeft="@drawable/take_photo_man"
+            android:drawablePadding="20dip"
+            android:gravity="center"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:text="男"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/take_photo_woman"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/woman_btn_selector"
+            android:drawableLeft="@drawable/take_photo_woman"
+            android:drawablePadding="20dip"
+            android:gravity="center"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:text="女"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

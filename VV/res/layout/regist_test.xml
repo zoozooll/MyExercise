@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:orientation="vertical" >
+
+        <com.beem.project.btf.bbs.view.ClearEditText
+            android:id="@+id/phonenum"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/transparent"
+            android:gravity="center_vertical|left"
+            android:hint="请输入手机号码"
+            android:inputType="phone"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="@color/edittext"
+            android:textColorHint="@color/edithint"
+            android:textSize="15sp" />
+
+        <View style="@style/group_item_divider_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.beem.project.btf.bbs.view.ClearEditText
+                android:id="@+id/testnum"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/transparent"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="@color/edittext"
+                android:textColorHint="@color/edithint"
+                android:textSize="15sp" />
+			<View 
+			    android:layout_width="1dp"
+			    android:layout_height="fill_parent"
+			    android:background="@color/devideline"
+			    android:layout_marginTop="5dp"
+			    android:layout_marginBottom="5dp"
+			     />
+            <Button
+                android:id="@+id/get_num"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/transparent"
+                android:text="获取验证码"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/regist_testtext_color_selector"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View style="@style/group_item_divider_style" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="50dip"
+        android:background="@drawable/regist_btn_color_selector"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/login_forgetpw_next"
+        android:textColor="@color/white_font"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pg_detail_llt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/setting_item_selector2"
+    android:orientation="vertical"
+    android:paddingBottom="10dp" >
+
+    <!--
+         <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/share_commentItemBg" />
+    -->
+
+    <ImageView
+        android:id="@+id/gradeHotImageview"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/line"
+        android:scaleType="fitStart" />
+
+    <RelativeLayout
+        android:id="@+id/user_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line" >
+
+        <com.butterfly.vv.view.CircleImageView
+            android:id="@+id/head"
+            android:layout_width="43dip"
+            android:layout_height="43dip"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="7.7dp"
+            android:src="@drawable/default_head_selector" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8.7dp"
+            android:layout_toRightOf="@+id/head"
+            android:text=""
+            android:textColor="#1badf3"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+        <TextView
+            android:id="@+id/mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dp"
+       		android:paddingRight="12dp"
+       		android:layout_marginBottom="3dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:layout_below="@+id/user_bar"
+            android:textColor="#434343"
+            android:textSize="16.0sp"
+            android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/signature"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mark"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:maxLines="4"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="#484848"
+        android:textSize="14.0sp"
+        android:visibility="visible" />
+
+    <com.butterfly.vv.view.timeflyView.HolderTwowayView
+        android:id="@+id/myGrid_info"
+        android:layout_width="fill_parent"
+        android:layout_height="107dp"
+        android:layout_below="@+id/signature"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6.7dp"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/foldertime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myGrid_info"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8.7dp"
+        android:text="3小时前"
+        android:textColor="@color/bbs_date_color"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/picNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/foldertime"
+        android:layout_below="@+id/myGrid_info"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/foldertime"
+        android:text="(10张)"
+        android:textColor="@color/bbs_date_color"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/viedo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/foldertime"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/video_play" />
+
+    <TextView
+        android:id="@+id/comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/foldertime"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/viedo_btn"
+        android:background="@drawable/shared_comment_support_selector"
+        android:drawableLeft="@drawable/comment_icon"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:text="34"
+        android:textColor="@color/share_ranking_textcolor_selector"
+        android:textSize="14.0sp" />
+
+    <TextView
+        android:id="@+id/support_count"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/foldertime"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/comment_count"
+        android:background="@drawable/shared_comment_support_selector"
+        android:drawableLeft="@drawable/sharetrance_praise_selector"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:text="34"
+        android:textColor="@color/share_ranking_textcolor_selector"
+        android:textSize="14.0sp" />
+    <!-- 默认取3条评论 -->
+
+    <com.beem.project.btf.bbs.view.CustomListView
+        android:id="@+id/comment_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viedo_btn"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="-1dp"
+        android:paddingBottom="4dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:scrollbars="none"
+        android:visibility="visible" />
+
+</RelativeLayout>

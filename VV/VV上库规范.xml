@@ -1,0 +1,16 @@
+VV代码规范（...欢迎更正补充）：
+1.提交代码前先更新代码，用Eclipse执行"clean up","Formate"后确保本地编译正常，无严重bug情况下提交。
+2.提交时请写修改日志
+3.有可能的话，找他人代码检视后再提交。
+4.有可能的话，尽量上班前更新以下，下班前提交一次，避免冲突文件太多。
+5.不要把bin,gen之类的代码生成目录上库
+6.更改包名，类名，移动类要慎重，要确保这个类的改动都上库了，再更改。
+
+
+
+注：
+"Formate"的格式化文件为：VV_CodeFormatter.xml，此文件在VV项目文件下可找到，在Eclipse中配置：
+Windows->Preferences->Java->Code Style->Formatter->Import...，选中VV_CodeFormatter.xml即可。
+"clean up"：右键项目->source->clean up
+"Formatter":右键项目->source->Formate
+

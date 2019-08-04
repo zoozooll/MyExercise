@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical" >
+
+    <ScrollView
+        style="@style/Style_Scrollable"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.butterfly.vv.view.grid.OptimizeGridView
+                android:id="@+id/myGrid_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:columnWidth="@dimen/itemSize"
+                android:gravity="center"
+                android:horizontalSpacing="2dp"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="vertical"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_marginTop="-13dip"
+                android:background="@drawable/friend_checkmore_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="@string/friend_changeheadphoto3"
+                android:textColor="#ffffff"
+                android:visibility="visible" />
+
+            <include layout="@layout/include_otherprofile_editinfo" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

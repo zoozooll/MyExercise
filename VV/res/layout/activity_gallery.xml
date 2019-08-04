@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/about_us"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_bg_color"
+    android:orientation="vertical" >
+    
+    <com.vv.image.gallery.viewer.ScrollingViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_navigation_view"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_bg_color"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+    
+    <FrameLayout
+        android:id="@+id/layuout_frameContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_navigation_view"
+        android:layout_alignParentBottom="true"
+        />
+    
+    <FrameLayout
+        android:id="@+id/layuout_frameDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        />
+    
+    <com.butterfly.vv.GalleryNavigation 
+        android:id="@+id/main_navigation_view"
+		android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/new_title_bg" />
+    
+</RelativeLayout>

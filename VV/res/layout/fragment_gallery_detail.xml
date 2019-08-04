@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:informationcell="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/newdetail"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <com.beem.project.btf.ui.views.MyViewPager
+        android:id="@+id/big_image_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" >
+    </com.beem.project.btf.ui.views.MyViewPager>
+
+    <!-- 下部快捷图标 -->
+    <RelativeLayout
+        android:id="@+id/upload_beauti_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/xc_bottom_infobar_bg"
+        android:padding="10dip" >
+
+            <TextView android:id="@+id/tvw_detail_rotate"
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentLeft="true"
+            	android:layout_centerVertical="true"
+            	android:layout_marginLeft="@dimen/menubar_horizontal_margin"
+                android:text="@string/detail_rotate"
+                android:textSize="@dimen/gallery_TopbarTitleTextsize"
+                android:drawableLeft="@drawable/gallerydetail_rotate_selector"
+                android:textColor="@color/gallerydetail_rotatebtn_font"
+                android:drawablePadding="6.5dp" ></TextView>
+            
+            <CheckBox android:id="@+id/check_detail_selected"
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentRight="true"
+            	android:layout_centerVertical="true"
+            	android:button="@drawable/pictures_select_icon" 
+            	android:layout_marginRight="@dimen/menubar_horizontal_margin"
+            	android:textSize="@dimen/gallery_TopbarTitleTextsize"
+                android:text="@string/detail_choose"
+                android:textColor="@color/gallerydetail_rotatebtn_font"
+                style="@style/gallerydetail_Checkbox"
+                 ></CheckBox>
+    </RelativeLayout>
+
+</RelativeLayout>

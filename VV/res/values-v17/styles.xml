@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="gallerydetail_Checkbox">
+        <item name="android:paddingLeft">6.5dp</item> 
+        <item name="android:drawablePadding">0dp</item> 
+    </style>
+</resources>

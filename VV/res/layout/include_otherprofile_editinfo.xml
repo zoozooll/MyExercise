@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile_layout_acount_info"
+    style="@style/main_info_style"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/info_group_title_style"
+            android:text="基本信息" />
+
+        <include layout="@layout/include_fillparent_blueline" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_name"
+        style="@style/group_item_style" >
+
+        <TextView
+            android:id="@+id/textview_shownamess"
+            style="@style/group_item_text_left"
+            android:text="昵称" />
+
+        <TextView
+            android:id="@+id/profile_tv_name"
+            style="@style/group_item_text_right"
+            android:text="小胖" />
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout_sex"
+        style="@style/group_item_style" >
+
+        <TextView
+            style="@style/group_item_text_left"
+            android:text="性别" />
+
+        <TextView
+            android:id="@+id/profile_tv_sex"
+            style="@style/group_item_text_right"
+            android:text="女" />
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_birthday"
+        style="@style/group_item_style" >
+
+        <TextView
+            style="@style/group_item_text_left"
+            android:text="生日" />
+
+        <TextView
+            android:id="@+id/profile_tv_birthday"
+            style="@style/group_item_text_right"
+            android:text="2014-5-8" />
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_email"
+        style="@style/group_item_style" >
+
+        <TextView
+            style="@style/group_item_text_left"
+            android:text="邮箱" />
+
+        <TextView
+            android:id="@+id/layout_email_tv"
+            style="@style/group_item_text_right"
+            android:text="123465678@qq.com" />
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sign"
+        style="@style/group_item2_style"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/profile_intro_habit"
+            style="@style/group_item_title"
+            android:text="个人签名" />
+
+        <TextView
+            android:id="@+id/profile_tv_sign"
+            style="@style/group_item_content"
+            android:layout_marginTop="5dip"
+            android:text="飒飒西风满院载，蕊寒香冷蝶难来。他年我若为青帝，报与桃花一处开。" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/info_group_title_style"
+            android:text="个人信息" />
+
+        <include layout="@layout/include_fillparent_blueline" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_city"
+        style="@style/group_item_style" >
+
+        <TextView
+            android:id="@+id/layout_city_title"
+            style="@style/group_item_text_left"
+            android:text="所在城市" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/layout_city_title"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/profile_tv_city"
+                style="@style/group_item_text_right"
+                android:text="广东省深圳市" />
+        </LinearLayout>
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_univ"
+        style="@style/group_item_style" >
+
+        <TextView
+            android:id="@+id/layout_univ_title"
+            style="@style/group_item_text_left"
+            android:text="毕业院校" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/layout_univ_title"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/profile_tv_univ"
+                style="@style/group_item_text_right"
+                android:text="吉林艺术学院" />
+        </LinearLayout>
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_company"
+        style="@style/group_item_style" >
+
+        <TextView
+            android:id="@+id/profile_intro_company"
+            style="@style/group_item_text_left"
+            android:text="专业" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profile_intro_company"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/profile_tv_major"
+                style="@style/group_item_text_right"
+                android:text="计算机科学xxxxxsdsds" />
+        </LinearLayout>
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_en_time"
+        style="@style/group_item_style" >
+
+        <TextView
+            android:id="@+id/layout_en_time_title"
+            style="@style/group_item_text_left"
+            android:text="入学时间" />
+
+        <TextView
+            android:id="@+id/profile_tv_en_date"
+            style="@style/group_item_text_right"
+            android:text="2010" />
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_interest"
+        style="@style/group_item2_style"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/profile_intro_hobby"
+            style="@style/group_item_title"
+            android:text="兴趣爱好" />
+
+        <TextView
+            android:id="@+id/profile_tv_interest"
+            style="@style/group_item_content"
+            android:layout_marginTop="5dp"
+            android:text="舞蹈.绘画.看电影.旅游" />
+    </LinearLayout>
+
+</LinearLayout>

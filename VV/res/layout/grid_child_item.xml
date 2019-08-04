@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/framelayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" >
+
+    <com.butterfly.vv.camera.displayimage.PhotoFolderImageView
+        android:id="@+id/child_image"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip"
+        android:scaleType="centerCrop"
+         />
+
+    <!-- <CheckBox
+        android:id="@+id/child_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        style="@style/chooser_select"
+        android:focusable="false"/> -->
+        
+         <ImageView
+            android:id="@+id/btn_showDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+        	android:focusable="false"
+        	android:gravity="center"
+            android:src="@drawable/gallery_showdetail_selector"/>
+
+		<ImageView android:id="@+id/imv_check"
+		    android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="@color/translucent"
+	        android:scaleType="center"
+	        android:src="@drawable/checkbox_bg_checked"
+	        android:visibility="gone" />
+
+</FrameLayout>

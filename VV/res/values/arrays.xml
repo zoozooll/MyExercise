@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="LiveArray">
+        <item>无</item>
+        <item>样式一</item>
+        <item>样式二</item>
+    </string-array>
+    <string-array name="RightTopArray">
+        <item>无</item>
+        <item>CCCV</item>
+        <item>CNTV</item>
+    </string-array>
+    <string-array name="MovieArray">
+        <item>打开</item>
+        <item>关闭</item>
+    </string-array>
+    <string-array name="AreaTitle">
+        <item>北京</item>
+        <item>天津</item>
+        <item>上海</item>
+        <item>重庆</item>
+        <item>河北</item>
+        <item>山东</item>
+        <item>山西</item>
+        <item>河南</item>
+        <item>江苏</item>
+        <item>浙江</item>
+        <item>安徽</item>
+        <item>福建</item>
+        <item>台湾</item>
+        <item>湖北</item>
+        <item>湖南</item>
+        <item>江西</item>
+        <item>四川</item>
+        <item>贵州</item>
+        <item>云南</item>
+        <item>广东</item>
+        <item>海南</item>
+        <item>陕西</item>
+        <item>甘肃</item>
+        <item>青海</item>
+        <item>內蒙古</item>
+        <item>广西</item>
+        <item>西藏</item>
+        <item>宁夏</item>
+    </string-array>
+
+</resources>

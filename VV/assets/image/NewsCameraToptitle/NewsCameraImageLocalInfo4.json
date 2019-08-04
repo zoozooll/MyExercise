@@ -1,0 +1,60 @@
+{
+ "data"          : [
+   {
+   "id"            : "Bd001",
+   "groupid"       : "Bd",
+   "path"          : "assets://image/NewsCameraToptitle/Bd001.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bd001_thumbnail.jpg",
+   "srcbmposition" : "0.0,0.0",
+   "srcbmsize"     : "100.0,100.0",
+   "toptitle"      : null
+   },
+   {
+   "id"            : "Bd002",
+   "groupid"       : "Bd",
+   "path"          : "assets://image/NewsCameraToptitle/Bd002.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bd002_thumbnail.jpg",
+   "srcbmposition" : "0.0,0.0",
+   "srcbmsize"     : "100.0,100.0",
+   "toptitle"      : null
+   },
+   {
+   "id"            : "Bd003",
+   "groupid"       : "Bd",
+   "path"          : "assets://image/NewsCameraToptitle/Bd003.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bd003_thumbnail.jpg",
+   "srcbmposition" : "0.0,0.0",
+   "srcbmsize"     : "100.0,100.0",
+   "toptitle"      : null
+   },
+   {
+   "id"            : "Bd006",
+   "groupid"       : "Bd",
+   "path"          : "assets://image/NewsCameraToptitle/Bd006.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bd006_thumbnail.jpg",
+   "srcbmposition" : "0.0,0.0",
+   "srcbmsize"     : "100.0,100.0",
+   "toptitle"      : null
+   },
+   {
+   "id"            : "Bd007",
+   "groupid"       : "Bd",
+   "path"          : "assets://image/NewsCameraToptitle/Bd007.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bd007_thumbnail.jpg",
+   "srcbmposition" : "5.6666665,21.068031",
+   "srcbmsize"     : "88.55556,58.156548",
+   "toptitle"      : [
+    {
+     "textColor"     : "#f00017",
+     "textPosition"  : "8.888889,11.558157",
+     "textSize"      : "3.8039503",
+     "textBound"     : "81.0,5.7059255",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "HAPPY NEW YEAR"
+    }
+   ]
+  }
+ ]
+}

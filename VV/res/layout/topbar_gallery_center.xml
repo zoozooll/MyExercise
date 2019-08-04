@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@drawable/topbar_corners_bg"
+    >
+    
+    	<TextView
+            android:id="@+id/tvw_gallery_topbar_tab0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:minHeight="30dp"
+            android:maxHeight="33dp"
+            android:gravity="center"
+            android:text="@string/tabtitle_date"
+            android:background="@drawable/gallery_topbar_tableft_bg"
+            android:textColor="@drawable/gallery_topbar_tab_font"
+            android:textSize="@dimen/gallery_TopbarTitleTextsize"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tvw_gallery_topbar_tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:minHeight="30dp"
+            android:maxHeight="33dp"
+            android:text="@string/tabtitle_photo"
+            android:background="@drawable/gallery_topbar_tabright_bg"
+            android:textColor="@drawable/gallery_topbar_tab_font"
+            android:textSize="@dimen/gallery_TopbarTitleTextsize"
+            android:singleLine="true"  />
+        
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/animImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/login_bg_yiyongbao" />
+    
+    <RelativeLayout
+        android:id="@+id/ad_wraper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true" 
+        >
+
+        <RelativeLayout
+            android:id="@+id/adsRl"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/bottomIcon" >
+        </RelativeLayout>
+
+       <!--  <ImageView
+            android:id="@+id/bottomIcon"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/yidonglianmeng" /> -->
+    </RelativeLayout>
+
+</RelativeLayout>

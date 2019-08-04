@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PullToRefresh">
+
+        <!-- A drawable to use as the background of the Refreshable View -->
+        <attr name="ptrRefreshableViewBackground" format="reference|color" />
+
+        <!-- A drawable to use as the background of the Header and Footer Loading Views -->
+        <attr name="ptrHeaderBackground" format="reference|color" />
+
+        <!-- Text Color of the Header and Footer Loading Views -->
+        <attr name="ptrHeaderTextColor" format="reference|color" />
+
+        <!-- Text Color of the Header and Footer Loading Views Sub Header -->
+        <attr name="ptrHeaderSubTextColor" format="reference|color" />
+
+        <!-- Mode of Pull-to-Refresh that should be used -->
+        <attr name="ptrMode">
+            <flag name="disabled" value="0x0" />
+            <flag name="pullFromStart" value="0x1" />
+            <flag name="pullFromEnd" value="0x2" />
+            <flag name="both" value="0x3" />
+            <flag name="manualOnly" value="0x4" />
+
+            <!-- These last two are depreacted -->
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+        </attr>
+
+        <!-- Whether the Indicator overlay(s) should be used -->
+        <attr name="ptrShowIndicator" format="reference|boolean" />
+
+        <!-- Drawable to use as Loading Indicator. Changes both Header and Footer. -->
+        <attr name="ptrDrawable" format="reference" />
+
+        <!-- Drawable to use as Loading Indicator in the Header View. Overrides value set in ptrDrawable. -->
+        <attr name="ptrDrawableStart" format="reference" />
+
+        <!-- Drawable to use as Loading Indicator in the Footer View. Overrides value set in ptrDrawable. -->
+        <attr name="ptrDrawableEnd" format="reference" />
+
+        <!-- Whether Android's built-in Over Scroll should be utilised for Pull-to-Refresh. -->
+        <attr name="ptrOverScroll" format="reference|boolean" />
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views -->
+        <attr name="ptrHeaderTextAppearance" format="reference" />
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views Sub Header -->
+        <attr name="ptrSubHeaderTextAppearance" format="reference" />
+
+        <!-- Style of Animation should be used displayed when pulling. -->
+        <attr name="ptrAnimationStyle">
+            <flag name="rotate" value="0x0" />
+            <flag name="flip" value="0x1" />
+        </attr>
+
+        <!-- Whether the user can scroll while the View is Refreshing -->
+        <attr name="ptrScrollingWhileRefreshingEnabled" format="reference|boolean" />
+
+        <!--
+        	Whether PullToRefreshListView has it's extras enabled. This allows the user to be 
+        	able to scroll while refreshing, and behaves better. It acheives this by adding
+        	Header and/or Footer Views to the ListView.
+        -->
+        <attr name="ptrListViewExtrasEnabled" format="reference|boolean" />
+
+        <!--
+        	Whether the Drawable should be continually rotated as you pull. This only
+        	takes effect when using the 'Rotate' Animation Style.
+        -->
+        <attr name="ptrRotateDrawableWhilePulling" format="reference|boolean" />
+
+        <!-- BELOW HERE ARE DEPRECEATED. DO NOT USE. -->
+        <attr name="ptrAdapterViewBackground" format="reference|color" />
+        <attr name="ptrDrawableTop" format="reference" />
+        <attr name="ptrDrawableBottom" format="reference" />
+    </declare-styleable>
+
+    <!-- 自定义button属性 -->
+    <declare-styleable name="customtitlebtn">
+        <attr name="src" format="reference|color" />
+        <attr name="text" format="string|reference" />
+        <attr name="textColor" format="reference|color" />
+        <attr name="imgBackgroud" format="reference|color" />
+        <attr name="imgWidth" format="dimension"></attr>
+        <attr name="imgHeight" format="dimension"></attr>
+    </declare-styleable>
+    <declare-styleable name="FiltersGallery">
+        <attr name="android:galleryItemBackground" />
+    </declare-styleable>
+    <declare-styleable name="IconIndicator">
+        <attr name="icons" format="reference" />
+        <attr name="modes" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="IconListPreference">
+        <attr name="icons" />
+    </declare-styleable>
+    <declare-styleable name="EvenlySpacedLayout">
+        <attr name="orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <!-- Weather we keep the space in both ends -->
+        <attr name="keepEndSpace" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ScrollLayout">
+        <attr name="labelerClass" format="string" />
+        <attr name="labelerFormat" format="string" />
+        <attr name="childWidth" format="dimension" />
+        <attr name="childHeight" format="dimension" />
+    </declare-styleable>
+
+    <!-- 自定义button属性 -->
+    <declare-styleable name="customerdotsview">
+        <attr name="dotsNum" format="integer" />
+        <attr name="dotsDrawable" format="reference|color" />
+        <attr name="dotsPadding" format="dimension" />
+        <attr name="dotsorientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+    <!-- 圆形进度 -->
+    <declare-styleable name="CircularProgressBar">
+        <attr name="hasShadow" format="boolean" />
+        <attr name="progressColor" format="string" />
+        <attr name="backgroundColor" format="string" />
+        <attr name="titleColor" format="string" />
+        <attr name="subtitleColor" format="string" />
+        <attr name="strokeWidth" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="StickyListHeadersListView">
+
+        <!-- View attributes -->
+        <attr name="android:clipToPadding" />
+        <attr name="android:scrollbars" />
+        <attr name="android:overScrollMode" />
+        <attr name="android:padding" />
+        <attr name="android:paddingLeft" />
+        <attr name="android:paddingTop" />
+        <attr name="android:paddingRight" />
+        <attr name="android:paddingBottom" />
+
+        <!-- ListView attributes -->
+        <attr name="android:fadingEdgeLength" />
+        <!-- <attr name="android:requiresFadingEdge" /> -->
+        <attr name="android:cacheColorHint" />
+        <attr name="android:choiceMode" />
+        <attr name="android:drawSelectorOnTop" />
+        <attr name="android:fastScrollEnabled" />
+        <!-- <attr name="android:fastScrollAlwaysVisible" /> -->
+        <attr name="android:listSelector" />
+        <attr name="android:scrollingCache" />
+        <attr name="android:scrollbarStyle" />
+        <attr name="android:divider" />
+        <attr name="android:dividerHeight" />
+
+        <!-- StickyListHeaders attributes -->
+        <attr name="hasStickyHeaders" format="boolean" />
+        <attr name="isDrawingListUnderStickyHeader" format="boolean" />
+    </declare-styleable>
+
+    <!-- 圆角图片 -->
+    <declare-styleable name="roundimageview">
+        <attr name="type">
+            <enum name="Normal" value="0"></enum>
+            <enum name="Round" value="1"></enum>
+            <enum name="Ring" value="2"></enum>
+            <enum name="RoundCorner" value="3"></enum>
+        </attr>
+        <attr name="img_src" format="reference"></attr>
+        <attr name="padding_src" format="dimension"></attr>
+        <attr name="padding_cover" format="dimension"></attr>
+        <attr name="radius_weight" format="float" />
+        <attr name="img_cover" format="reference"></attr>
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <!-- limitedittext属性 -->
+    <declare-styleable name="HintEditText">
+
+        <!-- maxLength为自定义控件的属性，这样自定义属性之后，可以在xml文件中直接设置该属性 -->
+        <attr name="maxLength" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="HalfRoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textSize" format="dimension"></attr>
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+    <!-- waizhu tan -->
+    <declare-styleable name="navigation">
+        <attr name="btn_leftText" format="string" />
+        <attr name="btn_rightText" format="string" />
+        <attr name="tv_title" format="string" />
+        <attr name="left_drawable" format="reference"></attr>
+        <attr name="right_drawable" format="reference"></attr>
+    </declare-styleable>
+    <declare-styleable name="dateselect">
+        <attr name="dataselectbackground" format="reference"></attr>
+        <attr name="data_select_line" format="reference"></attr>
+    </declare-styleable>
+    <declare-styleable name="informationcell">
+        <attr name="title_drawable" format="reference"></attr>
+        <attr name="content" format="string"></attr>
+    </declare-styleable>
+
+    
+    <declare-styleable name="WheelView">
+        <attr name="WheelView_SingleLine" format="boolean"></attr>
+        <attr name="WheelView_Ellipsize" format="string" />
+    </declare-styleable>
+    <!--  单点操作的view,用于控制图片 -->
+     <declare-styleable name="SingleTouchView">
+        <attr name="image_src" format="reference" />            <!-- 用于缩放旋转的图片 -->
+        <attr name="editable" format="boolean"/>          <!-- 是否处于可编辑状态 -->
+        <attr name="frameColor" format="color" />         <!-- 边框颜色 -->
+        <attr name="frameWidth" format="dimension" />     <!-- 边框线宽度 -->
+        <attr name="framePadding" format="dimension" />   <!-- 边框与图片的间距 -->
+        <attr name="degree" format="float" />             <!-- 旋转角度 -->
+        <attr name="scale" format="float" />              <!-- 缩放比例 -->
+        <attr name="controlDrawable1" format="reference"/> <!-- 控制图标 1 -->
+        <attr name="controlDrawable2" format="reference"/> <!-- 控制图标 2-->
+        <attr name="controlLocation1">                     <!-- 控制图标1的位置 -->
+            <enum name="left_top" value="0" />
+            <enum name="right_top" value="1" />
+            <enum name="right_bottom" value="2" />
+            <enum name="left_bottom" value="3" />
+        </attr>
+        <attr name="controlLocation2">                     <!-- 控制图标2的位置 -->
+            <enum name="left_top" value="0" />
+            <enum name="right_top" value="1" />
+            <enum name="right_bottom" value="2" />
+            <enum name="left_bottom" value="3" />
+        </attr>
+       <!--  用于气泡图片的自定义属性 -->
+    </declare-styleable>
+        <declare-styleable name="BubbleImageView">
+        <attr name="bubble_arrowTop" format="dimension|reference" />
+        <attr name="bubble_arrowWidth" format="dimension|reference" />
+        <attr name="bubble_arrowHeight" format="dimension|reference" />
+        <attr name="bubble_arrowOffset" format="dimension|reference" />
+        <attr name="bubble_angle" format="dimension|reference" />
+        <attr name="bubble_arrowLocation" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    
+    <!-- attrs about twowayview BEGIN -->
+    <declare-styleable name="TwoWayView">
+        <attr name="android:orientation" />
+        <attr name="android:choiceMode" />
+        <attr name="android:listSelector" />
+        <attr name="android:drawSelectorOnTop" />
+    </declare-styleable>
+    <!-- attrs about twowayview END -->
+
+
+</resources>

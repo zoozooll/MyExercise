@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_layout_timecontainer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="15.0dip"
+    android:gravity="center"
+    android:visibility="visible" >
+
+    <LinearLayout
+       	android:id="@+id/layout_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/message_tv_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息时间"
+            android:textColor="@color/font_value"
+            android:textSize="12.0sp" />
+
+        <TextView
+            android:id="@+id/timebar_tv_distance"
+            style="@style/WrapContent"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="2.0dip"
+            android:textColor="@color/font_value"
+            android:textSize="12.0sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="55.0dip"
+        android:layout_toLeftOf="@+id/layout_timestamp"
+        android:background="@color/timestampline"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="55.0dip"
+        android:layout_toRightOf="@+id/layout_timestamp"
+        android:background="@color/timestampline"
+        android:visibility="gone" />
+
+</RelativeLayout>

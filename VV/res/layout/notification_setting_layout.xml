@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+
+    <LinearLayout
+        android:id="@+id/selecRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <CheckBox
+            android:id="@+id/rBtnVoice"
+            style="@style/Checkbox_style"
+            android:text="声音" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            android:background="@color/dialog_line" />
+
+        <CheckBox
+            android:id="@+id/rBtnVibrate"
+            style="@style/Checkbox_style"
+            android:text="震动" />
+    </LinearLayout>
+
+</RelativeLayout>

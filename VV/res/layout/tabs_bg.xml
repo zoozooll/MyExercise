@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/shareranking_bottom_normal"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="0dip" >
+
+    <RelativeLayout
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5" >
+
+        <ImageView
+            android:id="@+id/imageViewttt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/news_selector" />
+
+        <TextView
+            android:id="@+id/main_tab_new_tv"
+            android:layout_width="8dip"
+            android:layout_height="8dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dip"
+            android:layout_marginTop="3dip"
+            android:background="@drawable/text_roundbackground"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tabsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-5dip"
+        android:layout_weight="0.5"
+        android:text="@string/information"
+        android:textColor="@color/tab_text_selector"
+        android:textSize="12dip" />
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_normal"
+    android:orientation="vertical" >
+	 
+    <com.vv.image.gallery.viewer.ScrollingViewPager
+        android:id="@+id/scrollLyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" 
+        android:background="@color/share_commentItemBg"
+        />
+	
+</LinearLayout>

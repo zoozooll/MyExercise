@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundImg="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_anim_wraper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#97C761" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="70dip"
+        android:visibility="visible" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_none_logo" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <com.butterfly.vv.view.CircleImageView
+            android:id="@+id/roundImageViewEx"
+            android:layout_width="117dip"
+            android:layout_height="117dip"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            roundImg:border_color="@color/white"
+            roundImg:border_width="5dip" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="200dip"
+            android:layout_height="200dip"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/progress_small"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

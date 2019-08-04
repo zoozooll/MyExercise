@@ -1,0 +1,9 @@
+Import( 'env buildLibrary' )
+
+buildLibrary( env, Split( """
+    FMjson_reader.cpp
+    FMjson_value.cpp
+    FMjson_writer.cpp
+     """ ),
+    'json' )
+sconscript

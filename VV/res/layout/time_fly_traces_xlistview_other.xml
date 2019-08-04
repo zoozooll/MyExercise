@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/blue"
+    android:orientation="vertical" >
+
+    <com.agimind.widget.SlideHolder
+        android:id="@+id/slideHolder"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background_normal" >
+        <include
+            android:id="@+id/gallery_pageview"
+            android:layout_width="240dip"
+            android:layout_height="fill_parent"
+            layout="@layout/gallery_pageview_slidelist_date" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <include layout="@layout/title_top_bar" />
+
+            <include layout="@layout/fuction_items_bar_other" />
+
+            <com.pullToRefresh.ui.PullToProcessStateListView
+                android:id="@+id/myxlistview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </com.agimind.widget.SlideHolder>
+
+</LinearLayout>

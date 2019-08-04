@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f3f5"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_top_bar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/card_info_wraper"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:layout_marginBottom="@dimen/setting_top_margin"
+                android:layout_marginTop="@dimen/setting_bottom_margin"
+                android:background="@drawable/setting_item_selector2"
+                android:paddingLeft="@dimen/setting_left_padding"
+                android:paddingRight="@dimen/setting_right_padding" >
+
+                <com.butterfly.vv.view.CircleImageView
+                    android:id="@+id/card_info"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="11dp"
+                    android:src="@drawable/default_head_selector" />
+
+                <ImageView
+                    android:id="@+id/card_info_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_listitem_arrow" />
+
+                <TextView
+                    android:id="@+id/card_info_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_toLeftOf="@+id/card_info_arrow"
+                    android:layout_toRightOf="@+id/card_info"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/timefly_unlogin"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/card_info_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_toLeftOf="@+id/card_info_arrow"
+                    android:layout_toRightOf="@+id/card_info"
+                    android:ellipsize="end"
+                    android:hint="没签名也是一种态度!"
+                    android:singleLine="true"
+                    android:textColor="@color/text_shallow_black"
+                    android:textColorHint="@color/text_gray_more"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout android:id="@+id/layout_accountSettings"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/setting_top_margin"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/account_pwd"
+                    style="@style/setting_text_style"
+                    android:background="@drawable/setting_item_selector2"
+                    android:drawableLeft="@drawable/account_pwd_icon"
+                    android:drawableRight="@drawable/ic_listitem_arrow"
+                    android:text="密码修改"
+                    android:visibility="visible" />
+
+                <View style="@style/setting_devideline_style" />
+
+                <TextView
+                    android:id="@+id/blacklist"
+                    style="@style/setting_text_style"
+                    android:background="@drawable/setting_item_selector2"
+                    android:drawableLeft="@drawable/blacklist_icon"
+                    android:drawableRight="@drawable/ic_listitem_arrow"
+                    android:text="黑名单"
+                    android:visibility="visible" />
+            </LinearLayout>
+            
+            <!-- <LinearLayout android:id="@+id/layout_upload_zip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/setting_top_margin"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvw_uploadZip"
+                    style="@style/setting_text_style"
+                    android:background="@drawable/setting_item_selector2"
+                    android:drawableLeft="@drawable/blacklist_icon"
+                    android:drawableRight="@drawable/ic_listitem_arrow"
+                    android:text="上传压缩文件"
+                    android:visibility="visible" />
+            </LinearLayout> -->
+
+            <LinearLayout android:id="@+id/layout_localSettings"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/setting_top_margin"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/uploadpath_list_preference"
+                    style="@style/setting_text_style"
+                    android:background="@drawable/setting_item_selector2"
+                    android:drawableLeft="@drawable/uploadimg_icon"
+                    android:drawableRight="@drawable/ic_listitem_arrow"
+                    android:text="上传图片默认属性" />
+
+                <View style="@style/setting_devideline_style" />
+
+                <TextView
+                    android:id="@+id/notification"
+                    style="@style/setting_text_style"
+                    android:background="@drawable/setting_item_selector2"
+                    android:drawableLeft="@drawable/notification_icon"
+                    android:drawableRight="@drawable/ic_listitem_arrow"
+                    android:text="消息通知" />
+
+                <View style="@style/setting_devideline_style" />
+
+                <TextView
+                    android:id="@+id/uploadpath_list_clearcachetime"
+                    style="@style/setting_text_style"
+                    android:background="@drawable/setting_item_selector2"
+                    android:drawableLeft="@drawable/clearcachetime_icon"
+                    android:drawableRight="@drawable/ic_listitem_arrow"
+                    android:text="缓存时间" />
+
+                <View style="@style/setting_devideline_style" />
+
+                <TextView
+                    android:id="@+id/clear_cache_left"
+                    style="@style/setting_text_style"
+                    android:background="@drawable/setting_item_selector2"
+                    android:drawableLeft="@drawable/clearallcache_icon"
+                    android:drawableRight="@drawable/ic_listitem_arrow"
+                    android:text="清除缓存" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/about_screen_preference"
+                style="@style/setting_text_style"
+                android:background="@drawable/setting_item_selector2"
+                android:drawableLeft="@drawable/aboutapp_icon"
+                android:drawableRight="@drawable/ic_listitem_arrow"
+                android:paddingLeft="@dimen/setting_left_padding"
+                android:paddingRight="@dimen/setting_right_padding"
+                android:text="关于时光机" />
+
+            <Button
+                android:id="@+id/exit_screen_preference"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_margin="28dp"
+                android:background="@drawable/setting_exit_btn_selector2"
+                android:text="@string/settings_logout"
+                android:textColor="#fa6053"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

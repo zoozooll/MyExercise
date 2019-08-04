@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f9fdff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/timefly_profile_llt"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+        
+        <TextView
+            android:id="@+id/CoverImageView_Cartoon"
+            style="@style/CoverImageView_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/timefly_beautycamera_selecter"
+            android:text="@string/vv_camera_cartooncamera" />
+
+        <TextView
+            android:id="@+id/CoverImageView_NewsCamera"
+            style="@style/CoverImageView_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/newstv_icon_selector"
+            android:text="@string/vv_camera_tvcamera" />
+
+        <TextView
+            android:id="@+id/CoverImageView_Beautify"
+            style="@style/CoverImageView_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/timefly_camera_selecter"
+            android:text="@string/vv_camera_timecamera" />
+
+        <TextView
+            android:id="@+id/CoverImageView_Gallery"
+            style="@style/CoverImageView_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/timefly_album_selecter"
+            android:text="@string/vv_camera_photo" />
+    </LinearLayout>
+
+    <include layout="@layout/include_fillparent_blueline" />
+
+</LinearLayout>

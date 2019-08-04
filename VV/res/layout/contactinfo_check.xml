@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scroll_lt"
+        style="@style/Style_Scrollable"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.butterfly.vv.view.grid.OptimizeGridView
+                android:id="@+id/myGrid_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:columnWidth="@dimen/itemSize"
+                android:gravity="center"
+                android:horizontalSpacing="2dp"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="vertical"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="-13dip"
+                android:background="@drawable/friend_checkmore_bg"
+                android:gravity="center"
+                android:text="点击查看大图"
+                android:textColor="#ffffff" />
+
+            <include layout="@layout/include_otherprofile_acountinfo" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/profile_layout_bottom"
+        layout="@layout/include_otherprofile_bottom"
+        android:visibility="gone" />
+
+</LinearLayout>

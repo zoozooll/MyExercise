@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:id="@+id/rl_instructions">
+        
+		<TextView
+		    android:id="@+id/tv_new_pictures"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="15dp"
+		    android:layout_centerVertical="true"
+		    android:text="@string/str_new_picture"
+		    android:textSize="13sp"
+		    android:textColor="#ffc0c0c0"
+		    android:clickable="false" />
+		
+		<Button 
+		    android:id="@+id/loading_btn"
+		    android:layout_width="75dp"
+		    android:layout_height="34dp"
+		    android:layout_alignParentRight="true"
+		    android:layout_marginRight="17dp"
+		    android:text="@string/str_load"
+		    android:textSize="13sp"
+		    android:textColor="#ffffffff"
+		    android:background="@drawable/button_selected_style" />
+		
+		<Button 
+		    android:id="@+id/cancel_btn"
+		    android:layout_width="74dp"
+		    android:layout_height="34dp"
+		    android:layout_toLeftOf="@id/loading_btn"
+		    android:layout_marginRight="17dp"
+		    android:layout_alignBottom="@id/loading_btn"
+		    android:text="@string/str_cancel"
+		    android:textSize="13sp"
+		    android:textColor="#ff00d0ff"
+		    android:background="@drawable/button_normal_style"/>
+		
+    </RelativeLayout>
+    
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/rl_instructions">
+        
+        <com.butterfly.vv.view.timeflyView.HolderTwowayView
+                android:id="@+id/loading_images"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="@android:color/transparent"
+                android:fadingEdgeLength="0dip"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="2dp"
+                android:orientation="horizontal"  />
+      
+    </LinearLayout> 
+    
+
+</RelativeLayout>

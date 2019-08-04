@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+    <ImageView
+           android:id="@+id/clock"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/date_clock1"
+           android:layout_marginLeft="12dip"
+        	android:layout_marginTop="4dip" />
+    
+    <ImageView
+            android:id="@+id/vertical_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/clock"
+            android:layout_alignLeft="@+id/clock"
+            android:layout_marginTop="2dip"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/date_linebelow"
+            />
+    
+    <RelativeLayout
+        android:id="@+id/date_picnum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginTop="2dip"
+        android:layout_toRightOf="@id/clock" >
+
+        <TextView
+            android:id="@+id/month_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="2月20日"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@id/month_day"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:text="200张" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/year_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/month_day"
+            android:singleLine="true"
+            android:textColor="@color/text_gray_more"
+            android:textSize="14sp"
+            android:text="2008年" >
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>

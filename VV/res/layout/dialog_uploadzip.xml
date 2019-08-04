@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="338dp"
+    android:maxHeight="338dp"
+    android:background="@drawable/bg_uploadzip_dialog" >
+
+	<Button
+	    android:id="@+id/btn_upload"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal|bottom"
+	    android:layout_marginBottom="50dp"
+	    android:text="开始上传" />
+
+</FrameLayout>

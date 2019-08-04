@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f9fdff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/friend_profile_llt"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="13dip"
+         >
+
+        <ImageView
+            android:id="@+id/others_info"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_head_selector"
+            android:textSize="24dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_marginLeft="10dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/contactlistpseudo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="马晓晓"
+                android:textColor="#434343" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/ageSex_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bbs_sexage_background_selector"
+                    android:drawableLeft="@drawable/bbs_sexage_foreground_selector"
+                    android:drawablePadding="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="11"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/nearBy_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:drawableLeft="@drawable/bbs_location"
+                    android:drawablePadding="5dp"
+                    android:hint="无数据"
+                    android:text="2.3km"
+                    android:textColor="#c8c8c8"
+                    android:textColorHint="#c8c8c8"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="10dip"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginRight="3dip"
+                    android:background="#c8c8c8" />
+
+                <TextView
+                    android:id="@+id/timePoint_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="无数据"
+                    android:text="18分钟前"
+                    android:textColor="#c8c8c8"
+                    android:textColorHint="#c8c8c8"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/contactlistmsgperso"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:hint="暂无签名"
+                android:maxLines="2"
+                android:text="测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试试测试测试测试试测试测试测试"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/include_fillparent_blueline" />
+
+</LinearLayout>

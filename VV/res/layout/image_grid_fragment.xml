@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:padding="10dip"
+    android:orientation="vertical" >
+
+    <GridView
+        android:id="@+id/image_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="10dip"
+		android:verticalSpacing="10dip"
+		android:scrollbars="none"
+		android:fadingEdge="none"
+		android:listSelector="@color/transparent"       
+        android:numColumns="2" >
+    </GridView>
+
+    <TextView
+        android:id="@+id/empty_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:drawableTop="@drawable/no_material_download"
+        android:drawablePadding="5dp"
+        android:textColor="@color/text_gray"
+        android:textSize="15sp"
+        android:text="暂无数据" 
+        android:visibility="visible"
+        />
+	
+</FrameLayout>

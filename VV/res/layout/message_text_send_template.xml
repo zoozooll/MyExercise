@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MessageItemLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:orientation="vertical" >
+
+    <include layout="@layout/message_timestamp" />
+
+    <LinearLayout
+        style="@style/Message_layout_contentcontainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:gravity="right" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_gravity="bottom" >
+
+            <include layout="@layout/message_state_send_template" />
+
+            <TextView
+                android:id="@+id/message_chat_text"
+                style="@style/Style_message_sd_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_msgbox_send_normal"
+                android:gravity="center_vertical|left"
+                android:text="首"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <com.butterfly.vv.view.CircleImageView
+            android:id="@+id/message_iv_userphoto"
+            android:layout_width="@dimen/message_userphoto_size"
+            android:layout_height="@dimen/message_userphoto_size"
+            android:layout_gravity="bottom"
+            android:src="@drawable/default_head_selector" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listView_HeadView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- android:layout_height="340dip" -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:layout_marginLeft="8.7dp"
+            android:layout_marginRight="8.7dp"
+            android:layout_marginTop="9dp" >
+
+            <com.beem.project.btf.bbs.view.CustomerViewPager
+                android:id="@+id/picPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/pager_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dip"
+                android:layout_marginRight="15dip"
+                android:text="1/5"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+        <com.butterfly.vv.view.timeflyView.HorizontalListView
+            android:id="@+id/thumbnail_list"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5.7dp" />
+    </LinearLayout>
+
+    <!-- <LinearLayout
+        android:id="@+id/tags_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.7dp"
+        android:layout_marginRight="8.7dp"
+        android:layout_marginTop="8.3dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:src="@drawable/share_signiconl" /> -->
+
+        <TextView
+            android:id="@+id/tags_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.7dp"
+	        android:layout_marginRight="8.7dp"
+	        android:layout_marginTop="8.3dp"
+            android:hint="@string/ContactSign"
+            android:textColor="@color/bbs_title_color"
+            android:textSize="13.0sp" />
+   <!--  </LinearLayout> -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="9.7dp"
+        android:layout_marginRight="9.7dp"
+        android:layout_marginTop="4.7dp"
+        android:orientation="horizontal" >
+
+        <com.butterfly.vv.view.CircleImageView
+            android:id="@+id/pic_btn"
+            android:layout_width="43.7dip"
+            android:layout_height="43.7dip"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_head_selector" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/bbs_title_color" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/shareranking_comments_arrow" >
+    </ImageView>
+    
+    <TextView
+        android:id="@+id/comment_nodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/no_comment_icon"
+        android:padding="10dp"
+        android:text="暂时还没有评论"
+        android:textColor="@color/text_gray"
+        android:textSize="12.0sp"
+        android:visibility="visible" />
+
+</LinearLayout>

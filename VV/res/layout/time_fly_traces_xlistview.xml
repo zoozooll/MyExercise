@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/blue"
+    android:orientation="vertical" >
+
+    <com.agimind.widget.SlideHolder
+        android:id="@+id/slideHolder"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background_normal" >
+
+        <include
+            android:id="@+id/gallery_pageview"
+            layout="@layout/gallery_pageview_slidelist_date" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+           <!--  <include layout="@layout/title_top_bar" /> -->
+
+            <RelativeLayout
+                android:id="@+id/title_top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@color/tab_blue" >
+
+
+                    <ImageView
+                        android:id="@+id/tooglebtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="visible"
+                        android:src="@drawable/more_selector" />
+                    
+                    <ImageView
+                        android:id="@+id/settingBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="visible"
+                        android:src="@drawable/setting_selector" />
+                    
+                    <TextView android:id="@+id/tvw_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white"
+            			android:textSize="20sp"
+                        android:text="@string/time_machine" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/network_invalid_layout"
+                layout="@layout/time_fly_traces_network_invalid" />
+
+            <include layout="@layout/fuction_items_bar" />
+
+            <com.pullToRefresh.ui.PullToProcessStateListView
+                android:id="@+id/myxlistview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </com.pullToRefresh.ui.PullToProcessStateListView>
+        </LinearLayout>
+    </com.agimind.widget.SlideHolder>
+
+</LinearLayout>

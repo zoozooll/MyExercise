@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical" >
+
+    <com.butterfly.vv.GalleryNavigation
+        android:id="@+id/share_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/new_title_bg" />
+
+    <CheckBox
+        android:id="@+id/autosharecheck"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:button="@null"
+        android:drawableLeft="@drawable/autosharecheck_selector"
+        android:drawablePadding="10dp"
+        android:text="自动分享到时光机"
+        android:textColor="@color/text_gray_more"
+        android:textSize="15sp" />
+
+    <FrameLayout
+        android:id="@+id/share_img_wraper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0" >
+
+        <ImageView
+            android:id="@+id/cartoon_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@drawable/viewshadow"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/share_table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip" >
+
+        <LinearLayout
+            android:id="@+id/camera_share_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <include
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                layout="@layout/cartoon_camera_share_redline" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="分享"
+                android:textColor="@color/cartoon_camera_share_red"
+                android:textSize="16sp" />
+
+            <include
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                layout="@layout/cartoon_camera_share_redline" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" 
+            android:clickable="false"
+            android:focusable="false">
+
+            <LinearLayout
+                android:id="@+id/share_friend_wrap"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" 
+                >
+
+                <com.beem.project.btf.ui.views.ScaleImageView
+                    android:id="@+id/share_friend"
+                    android:layout_width="@dimen/padding_49"
+                    android:layout_height="@dimen/padding_49"
+                    android:layout_marginBottom="@dimen/padding_3"
+                    android:src="@drawable/share_friend" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_friend"
+                    android:textColor="@color/text_shallow_black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/share_qq_zone_wrap"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" 
+                >
+
+                <com.beem.project.btf.ui.views.ScaleImageView
+                    android:id="@+id/share_qq_zone"
+                    android:layout_width="@dimen/padding_49"
+                    android:layout_height="@dimen/padding_49"
+                    android:layout_marginBottom="@dimen/padding_3"
+                    android:src="@drawable/share_qqzone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_qqzone"
+                    android:textColor="@color/text_shallow_black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/share_weibo_wrap"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" 
+                >
+
+                <com.beem.project.btf.ui.views.ScaleImageView
+                    android:id="@+id/share_weibo"
+                    android:layout_width="@dimen/padding_49"
+                    android:layout_height="@dimen/padding_49"
+                    android:layout_marginBottom="@dimen/padding_3"
+                    android:src="@drawable/share_webo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_weibo"
+                    android:textColor="@color/text_shallow_black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/share_more_wrap"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" 
+                >
+
+                <com.beem.project.btf.ui.views.ScaleImageView
+                    android:id="@+id/share_more"
+                    android:layout_width="@dimen/padding_49"
+                    android:layout_height="@dimen/padding_49"
+                    android:layout_marginBottom="@dimen/padding_3"
+                    android:src="@drawable/sharesdk_more" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_more"
+                    android:textColor="@color/text_shallow_black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

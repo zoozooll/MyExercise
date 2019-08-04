@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <SurfaceView
+        android:id="@+id/preview_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_widgets_ctrl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+     <RelativeLayout android:id="@+id/layout_camerapreviewTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top" >
+
+        <Button
+            android:id="@+id/change_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dip"
+            android:background="@drawable/change_camera" />
+
+        <Button
+            android:id="@+id/PreviewPose_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/previewpose_btn_selector" />
+    </RelativeLayout>
+
+	<RelativeLayout
+	    android:id="@+id/layout_contentSelector"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="bottom" >
+
+	    <LinearLayout
+	        android:id="@+id/layout_lastphotos"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:orientation="horizontal" >
+
+	        <TextView
+	            android:id="@+id/tvw_widgets_download"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:drawablePadding="4dp"
+	            android:drawableTop="@drawable/timecamera_album_selector"
+	            android:text="图库" >
+	        </TextView>
+
+	        <org.lucasr.twowayview.TwoWayView
+	            android:id="@+id/list_widgets"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" />
+	    </LinearLayout>
+	    
+	    <ImageView android:id="@+id/btn_Slider"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/layout_lastphotos"
+	        android:src="@drawable/aboutapp_icon"
+	        android:contentDescription="widget slider" />
+	</RelativeLayout>
+
+</FrameLayout>

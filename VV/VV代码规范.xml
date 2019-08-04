@@ -1,0 +1,66 @@
+VV技术交流（...欢迎更正补充）
+1.代码中尽量不要用魔鬼数字，建议用枚举，其次再是自定义常量。
+2.日志不要用System.out,建议VV项目中LogUtils中的日志类，其次使用Androd的Log类。
+3.命名尽量有意义，能“望文生义”,即名字能表达要做的事情。
+4.尽量避免使用全局变量，很丑陋，使用不可控，会破坏代码流程，类似与“goto”
+5.成员变量一般访问权限设置为private，不要粗鲁的暴露数据，违反封装性，如果这样做就跟全局变量没什么区别。6.对JAVA集合进行遍历删除时务必要用迭代器，否则会引发ConcurrentModificationException
+例如：List<String> famous = new ArrayList<String>();
+    famous.add("liudehua");
+    for (String s : famous) {
+        if (s.equals("madehua")) {
+            famous.remove(s);
+        }
+    }
+   【正确写法】
+    for(Iterator<String> it = famous.iterator();it.hasNext();){
+         String s = it.next();
+         if(s.equals("madehua")){
+             it.remove()
+         }
+     }
+7.VV代码之乱：
+(1)流程混乱:数据流程和业务流程混乱，没有清晰的主线
+(2)无效代码混乱：无效代码太多不仅影响代码阅读理解，在排版上十分丑陋，而且导致类臃肿。
+(3)注释之乱：注释必不可少，但注释太多却会形成轻重颠倒：“写得不是代码，而是注释”,通常好的命名就是好的注释,
+以下地方建议增加注释：（1）类注释(类的用途，类的使用流程)	（2）逻辑较强的代码注释	（3）较复杂的方法	（4）难理解的变量
+(4)数据类型重复太多： 如Contact这个类就存在3个，代码中盘根错节，在代码中类型转换不仅耗费性能，还增加了不必要的开发难度。
+(5)业务和UI交错之乱：如连接登录服务器操作， CopyOfAccountConfigureFragment ，BeemService，LoginAnim存在相同的操作，这样把业务代码与UI代码容在一起，
+不仅代码冗余，而且增加了维护难度。	建议将业务代码抽离UI，由独自的类实现，UI界面用得的时候调用这个类即可。
+8.新生成的Activity请继承VVBaseActivity或者VVBaseFragmentActivty，便于同一管理
+9.将自定义的类对象加入到一个List中，传入一个新new对象删除与这个对象一样的值，要重写这个类的equal方法。
+如：
+		ArrayList<Person> collections = new ArrayList<Person>();
+		collections.add(new Person("4", 4));
+		collections.add(new Person("5", 5));
+		collections.remove(new Person("5", 5));
+需要重写Person中的equal方法，否则移除无效
+
+10. 【res资源问题】所有字符串资源都必须在默认文件夹下有定义，然后才是到其他语言的文件夹中。
+	例如在  res/values-rCN/strings.xml出现了一个资源字符串id为my_cancel_str， 而在默认文件夹res/values/strings.xml未定义有id为my_cancel_str;
+	这是不允许的，在有的机器上运行于其他非中文（大陆）环境下将会报错，在android studio也编译不过。而且会对多语言统一翻译造成极大的麻烦。
+11. 【res资源问题】所有需要显示的文字，一律要配置成资源字符串。包括在java代码中形成的，还有在layout文件下设置的，都不能直接写字符串。否则对维护
+	造成极大的不便，更不利于翻译。
+	补充：所有的数组原则上也应该这样写：
+	<string-array name="loganim_state">
+        <item>@string/loganim_connecting</item>
+        <item>@string/loganim_authenticating</item>
+        <item>@string/loganim_login_success</item>
+        <item>@string/loganim_login_failed</item>
+    </string-array>
+	而不应该这样写：
+    <string-array name="auth_assign_items">
+        <item>公开</item>
+        <item>好友</item>
+        <item>指定好友</item>
+        <item>私密</item>
+    </string-array>
+
+12. 程序访问原则，除了第5点访问权限private之外，还要注意，访问方向，只能由上层访问底层，而下一层不能直接访问上层。
+	当下层需要访问上层的时候，需要通过回调方法（例如:OnClickListener），或者监听者模式(evenbus)出发响应。
+	原则上能够达到的效果是底层的代码完全copy到另外一个项目，或者地方，同样能够编译不出错。
+	杜绝把activity类里面设一个类型为Activity或者Context等的static, 访问级别为public，然后引用自身,这样在任何一个地方都可以直接访问
+	这个activity。但这样做会引起很多问题。
+
+13. 【logcat】问题。尽可能不要提交做打印log用的代码，即使用了自身的打印库LogUtils。因为大部分打印的log信息都是对自己有用，
+	而对其他使用者来说就是干扰。如有需要公用，或者需要给其他人做测试用的，也尽量简介为主，尽快删除。
+	

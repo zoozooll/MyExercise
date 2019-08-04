@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.butterfly.vv.view.grid.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <com.butterfly.vv.camera.displayimage.PhotoFolderImageView
+        android:id="@+id/child_image_image_gridview"
+        android:layout_width="95dip"
+        android:layout_height="95dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/deafult_imgloading" />
+
+</com.butterfly.vv.view.grid.SquareLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MessageItemLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:orientation="vertical" >
+
+    <include layout="@layout/message_timestamp" />
+
+    <LinearLayout
+        android:id="@+id/message_layout_contentcontainer"
+        style="@style/Message_layout_contentcontainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:gravity="right" >
+
+        <LinearLayout
+            android:id="@+id/message_layout_leftcontainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical|right" >
+
+            <include layout="@layout/message_state_send_template" />
+
+            <LinearLayout
+                android:id="@+id/message_layout_messagecontainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_msgbox_send_normal"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal" >
+
+                <ProgressBar
+                    android:id="@+id/audio_play_progressBar"
+                    style="@style/voice_mine_progressBarHorizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/audio_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:text="6&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/audio_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/mine_voice_selector" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.butterfly.vv.view.CircleImageView
+            android:id="@+id/message_iv_userphoto"
+            android:layout_width="@dimen/message_userphoto_size"
+            android:layout_height="@dimen/message_userphoto_size"
+            android:layout_gravity="bottom"
+            android:src="@drawable/default_head_selector" />
+    </LinearLayout>
+
+</LinearLayout>

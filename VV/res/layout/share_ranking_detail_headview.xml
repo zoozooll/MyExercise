@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- com.beem.project.btf.bbs.view.CustomScrollView -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/listView_HeadView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#eeeeee"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" >
+
+            <ImageView
+                android:id="@+id/pic_btn"
+                android:layout_width="43dip"
+                android:layout_height="43dip"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_head_selector" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="张三"
+                        android:textColor="#494949"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/timePoint_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="2013-8-23"
+                        android:textColor="#494949"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/ageSex_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bbs_sexage_background_selector"
+                        android:drawableLeft="@drawable/bbs_sexage_foreground_selector"
+                        android:drawablePadding="4dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="5"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/locPoint_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ageSex_tv"
+                        android:drawableLeft="@drawable/map_icon"
+                        android:drawablePadding="3dp"
+                        android:hint="@string/locPointHint"
+                        android:textColor="#888888"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/picNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="(10张)"
+                        android:textColor="#434343"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- android:layout_height="340dip" -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:padding="5dp" >
+
+                <com.beem.project.btf.bbs.view.CustomerViewPager
+                    android:id="@+id/picPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/pager_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginRight="15dip"
+                    android:text="1/5"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+
+            <com.butterfly.vv.view.timeflyView.HorizontalListView
+                android:id="@+id/thumbnail_list"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/tags_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dip"
+                    android:src="@drawable/share_signiconl" />
+
+                <TextView
+                    android:id="@+id/tags_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:gravity="bottom"
+                    android:hint="@string/ContactSign"
+                    android:text="是地地道道地地道道地地道道地地道道都是地地道道地地道道地地道道地地道道地地道道地地道道"
+                    android:textColor="#888888"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:id="@+id/praise_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/share_ranking_background_selector"
+                    android:drawableLeft="@drawable/share_ranking_praise_selector"
+                    android:drawablePadding="5dip"
+                    android:gravity="center_vertical"
+                    android:text="赞   236"
+                    android:textColor="@color/share_ranking_textcolor_selector"
+                    android:textSize="12.0sp" />
+
+                <TextView
+                    android:id="@+id/replyNum_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/share_ranking_background_selector"
+                    android:drawableLeft="@drawable/share_coments_enabled"
+                    android:drawablePadding="5dip"
+                    android:gravity="center_vertical"
+                    android:text="评论  256"
+                    android:textColor="@color/share_ranking_textcolor_selector"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="#d3d3d3" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dip"
+                android:text="评论:"
+                android:textColor="#343434" />
+
+            <TextView
+                android:id="@+id/comment_nodata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/no_comment_icon"
+                android:padding="10dp"
+                android:text="暂时还没有评论"
+                android:textColor="@color/text_gray"
+                android:textSize="12.0sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

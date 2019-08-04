@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_top_bar" />
+
+    <ScrollView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:scrollbarStyle="insideOverlay" >
+
+        <include layout="@layout/timefly_remind_layout" />
+    </ScrollView>
+
+</LinearLayout>

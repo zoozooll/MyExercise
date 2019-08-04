@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/expandable_toggle_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/connectline_top"
+            layout="@layout/timefly_vertical_line"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip" >
+
+            <ImageView
+                android:id="@+id/imv_MonthIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dip"
+                android:adjustViewBounds="true"
+                android:src="@drawable/timefly_month_1"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tvw_MonthTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@+id/imv_MonthIcon"
+                android:text="十二月"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/up_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="23dip"
+                android:layout_toRightOf="@+id/tvw_MonthTitle"
+                android:src="@drawable/month_updown_selector"
+                android:clickable="true"
+                android:focusable="true" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/connectline"
+            layout="@layout/timefly_vertical_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/expandable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+</LinearLayout>

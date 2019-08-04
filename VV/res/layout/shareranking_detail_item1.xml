@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8.7dp"
+    android:paddingRight="8.7dp" >
+
+    <LinearLayout
+        android:id="@+id/reply_wraper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/share_commentItemBg"
+        android:orientation="horizontal"
+        android:paddingBottom="5dip"
+        android:paddingLeft="5.7dip"
+        android:paddingTop="7.3dip" >
+
+        <com.butterfly.vv.view.CircleImageView
+            android:id="@+id/head"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_headw_selector" />
+
+        <RelativeLayout
+            android:id="@+id/personNameViewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7.3dp"
+            android:layout_marginRight="7.3dip"
+            android:background="@drawable/setting_item_selector" >
+
+            <TextView
+                android:id="@+id/commentitem_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:textColor="@color/bbs_title_color"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/commentitem_name"
+                android:text="---"
+                android:textColor="@color/bbs_content_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/replyTimePoint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/commentitem_name"
+                android:layout_alignBottom="@+id/commentitem_name"
+                android:layout_alignParentRight="true"
+                android:text="2013-8-23"
+                android:textColor="@color/bbs_date_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

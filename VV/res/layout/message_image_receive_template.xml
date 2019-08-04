@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MessageItemLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <include layout="@layout/message_timestamp" />
+
+    <LinearLayout
+        android:id="@+id/message_layout_contentcontainer"
+        style="@style/Message_layout_contentcontainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false" >
+
+        <com.butterfly.vv.view.CircleImageView
+            android:id="@+id/message_iv_userphoto"
+            android:layout_width="@dimen/message_userphoto_size"
+            android:layout_height="@dimen/message_userphoto_size"
+            android:layout_gravity="bottom"
+            android:src="@drawable/default_head_selector" />
+        <!-- android:layout_marginRight="@dimen/message_padding_default" -->
+
+        <LinearLayout
+            android:id="@+id/message_layout_rightcontainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/message_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_msgbox_receive_normal" />
+
+            <include layout="@layout/message_state_receive_template" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

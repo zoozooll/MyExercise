@@ -1,0 +1,523 @@
+{
+ "data"          : [
+  {
+   "id"            : "Bc014",
+   "groupid"       : "Bc",
+   "path"          : "assets://image/NewsCameraToptitle/Bc014.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bc014_thumbnail.jpg",
+   "srcbmposition" : "1.8888888,22.384785",
+   "srcbmsize"     : "95.888885,76.37162",
+   "toptitle"      : [
+    {
+     "textColor"     : "#e02400",
+     "textPosition"  : "61.444443,1.3899049",
+     "textSize"      : "1.4630578",
+     "textBound"     : "30.222221,2.3408926",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "时光机娱乐集团联合发行"
+    },
+    {
+     "textColor"     : "#020202",
+     "textPosition"  : "48.77778,23.482077",
+     "textSize"      : "1.1704463",
+     "textBound"     : "44.22222,1.9019752",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "2018年11月"
+    },
+    {
+     "textColor"     : "#020202",
+     "textPosition"  : "48.77778,25.384052",
+     "textSize"      : "2.4140453",
+     "textBound"     : "44.22222,2.5603511",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "18"
+    },
+    {
+     "textColor"     : "#020202",
+     "textPosition"  : "48.77778,28.09071",
+     "textSize"      : "0.9509876",
+     "textBound"     : "44.22222,1.316752",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "星期三"
+    },
+    {
+     "textColor"     : "#020202",
+     "textPosition"  : "48.77778,29.62692",
+     "textSize"      : "1.316752",
+     "textBound"     : "44.22222,1.7556694",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "农历十月初四"
+    },
+    {
+     "textColor"     : "#020202",
+     "textPosition"  : "48.77778,31.455742",
+     "textSize"      : "1.1704463",
+     "textBound"     : "44.22222,1.7556694",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "23℃~27℃"
+    },
+    {
+     "textColor"     : "#020202",
+     "textPosition"  : "48.77778,33.284565",
+     "textSize"      : "1.1704463",
+     "textBound"     : "44.22222,1.7556694",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "多云转小雨微风"
+    },
+    {
+     "textColor"     : "#ff0000",
+     "textPosition"  : "3.3333333,89.02707",
+     "textSize"      : "3.0724213",
+     "textBound"     : "93.111115,3.877103",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "北方大雪,南方烈日"
+    },
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "3.3333333,92.90417",
+     "textSize"      : "2.1214337",
+     "textBound"     : "93.111115,2.5603511",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "似乎来自不同星球"
+    }
+	 ]
+    },
+  {
+   "id"            : "Bc012",
+   "groupid"       : "Bc",
+   "path"          : "assets://image/NewsCameraToptitle/Bc012.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bc012_thumbnail.jpg",
+   "srcbmposition" : "0.7777778,21.214338",
+   "srcbmsize"     : "98.333336,78.34675",
+   "toptitle"      : [
+    {
+     "textColor"     : "#3e5b69",
+     "textPosition"  : "80.888885,7.754206",
+     "textSize"      : "1.1704463",
+     "textBound"     : "18.0,1.7556694",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "2018年11月"
+    },
+    {
+     "textColor"     : "#3e5b69",
+     "textPosition"  : "80.888885,9.656181",
+     "textSize"      : "2.1214337",
+     "textBound"     : "18.0,2.4140453",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "18"
+    },
+    {
+     "textColor"     : "#3e5b69",
+     "textPosition"  : "80.888885,12.143379",
+     "textSize"      : "1.0241405",
+     "textBound"     : "18.0,1.3899049",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "星期三"
+    },
+    {
+     "textColor"     : "#3e5b69",
+     "textPosition"  : "81.0,13.825896",
+     "textSize"      : "1.316752",
+     "textBound"     : "17.88889,1.6093636",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "农历十月初四"
+    },
+    {
+     "textColor"     : "#3e5b69",
+     "textPosition"  : "81.0,15.727871",
+     "textSize"      : "0.9509876",
+     "textBound"     : "17.88889,1.6093636",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "23~27℃"
+    },
+    {
+     "textColor"     : "#3e5b69",
+     "textPosition"  : "81.0,17.629847",
+     "textSize"      : "1.1704463",
+     "textBound"     : "17.88889,1.6093636",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "多云转小雨微风"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "3.0,24.945135",
+     "textSize"      : "2.706657",
+     "textBound"     : "94.0,4.3160205",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "光影技术将十年前的太空"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "3.0,29.992685",
+     "textSize"      : "2.706657",
+     "textBound"     : "94.0,4.3160205",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "信息与2055年传达地球"
+    }
+    ]
+	},
+  {
+   "id"            : "Bc003",
+   "groupid"       : "Bc",
+   "path"          : "assets://image/NewsCameraToptitle/Bc003.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bc003_thumbnail.jpg",
+    "srcbmposition" : "3.2222223,13.752743",
+   "srcbmsize"     : "94.44444,39.575714",
+   "toptitle"      : null
+  },
+  {
+   "id"            : "Bc007",
+   "groupid"       : "Bc",
+   "path"          : "assets://image/NewsCameraToptitle/Bc007.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bc007_thumbnail.jpg",
+   "srcbmposition" : "6.6666665,24.652523",
+   "srcbmsize"     : "86.77778,66.71544",
+   "toptitle"      : [
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "4.4444447,16.898317",
+     "textSize"      : "4.3160205",
+     "textBound"     : "91.111115,6.5837603",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "对抗外星入侵  招聘太空飞行员"
+    }
+   ]
+  },
+   {
+   "id"            : "Bc006",
+   "groupid"       : "Bc",
+   "path"          : "assets://image/NewsCameraToptitle/Bc006.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bc006_thumbnail.jpg",
+   "srcbmposition" : "5.0,30.943672",
+   "srcbmsize"     : "90.77778,40.5267",
+   "toptitle"      : [
+    {
+     "textColor"     : "#fe0100",
+     "textPosition"  : "5.2222223,3.218727",
+     "textSize"      : "7.168983",
+     "textBound"     : "38.77778,9.36357",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "FRIDAY"
+    },
+    {
+     "textColor"     : "#fffff7",
+     "textPosition"  : "5.111111,25.384052",
+     "textSize"      : "3.5113387",
+     "textBound"     : "91.888885,4.8280907",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "FRIDAY WORKDAY"
+    }
+   ]
+  },
+  {
+   "id"            : "Bc004",
+   "groupid"       : "Bc",
+   "path"          : "assets://image/NewsCameraToptitle/Bc004.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bc004_thumbnail.jpg",
+   "srcbmposition" : "5.0,23.482077",
+   "srcbmsize"     : "90.22222,71.470375",
+   "toptitle"      : [
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "5.5555553,28.822239",
+     "textSize"      : "4.462326",
+     "textBound"     : "89.0,5.413314",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "成则王，众人捧"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "5.5555553,34.60132",
+     "textSize"      : "4.462326",
+     "textBound"     : "89.0,5.413314",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "败者寇，众人踩"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "5.5555553,42.136063",
+     "textSize"      : "1.8288223",
+     "textBound"     : "89.0,2.1945868",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "世界上最远的距离    是我们与事实的距离"
+    }
+   ]
+  },
+  {
+   "id"            : "Bc005",
+   "groupid"       : "Bc",
+   "path"          : "assets://image/NewsCameraToptitle/Bc005.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bc005_thumbnail.jpg",
+   "srcbmposition" : "3.5555556,15.215801",
+   "srcbmsize"     : "93.22222,76.95684",
+   "toptitle"      : [
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "26.11111,2.1945868",
+     "textSize"      : "6.9495244",
+     "textBound"     : "47.444443,8.412582",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "东莞早报"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "7.0,77.46891",
+     "textSize"      : "4.681785",
+     "textBound"     : "86.888885,5.486467",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "娱乐争夺战"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "7.0,83.174835",
+     "textSize"      : "1.7556694",
+     "textBound"     : "86.888885,2.4140453",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "东城再战儿童剧场，誓死夺回冠军席位"
+    }
+   ]
+  },
+ {
+   "id"            : "Bc013",
+   "groupid"       : "Bc",
+   "path"          : "assets://image/NewsCameraToptitle/Bc013.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bc013_thumbnail.jpg",
+   "srcbmposition" : "4.7777777,13.825896",
+   "srcbmsize"     : "91.22222,84.711044",
+   "toptitle"      : [
+    {
+     "textColor"     : "#ff0000",
+     "textPosition"  : "71.888885,7.900512",
+     "textSize"      : "0.8046818",
+     "textBound"     : "23.11111,1.1704463",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "2018年11月"
+    },
+    {
+     "textColor"     : "#ff0000",
+     "textPosition"  : "71.888885,9.144112",
+     "textSize"      : "0.8046818",
+     "textBound"     : "23.11111,1.1704463",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "星期三"
+    },
+    {
+     "textColor"     : "#ff0000",
+     "textPosition"  : "71.888885,10.387711",
+     "textSize"      : "0.8046818",
+     "textBound"     : "23.11111,1.2435992",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "第  20151113-15期"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "6.2222223,15.508412",
+     "textSize"      : "2.706657",
+     "textBound"     : "88.888885,3.5844915",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "落泪 ! 曼联全场为1人动情"
+    },
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "6.2222223,19.458668",
+     "textSize"      : "1.3899049",
+     "textBound"     : "88.888885,1.975128",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "———————————国际足联报(2~10)"
+    }
+   ]
+  },
+   {
+   "id"            : "Bc001",
+   "groupid"       : "Bc",
+   "path"          : "assets://image/NewsCameraToptitle/Bc001.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bc001_thumbnail.jpg",
+   "srcbmposition" : "20.666666,22.384785",
+   "srcbmsize"     : "74.333336,51.57279",
+   "toptitle"      : [
+    {
+     "textColor"     : "#000801",
+     "textPosition"  : "19.222221,75.85954",
+     "textSize"      : "1.7556694",
+     "textBound"     : "62.11111,2.5603511",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "RESCUE ELEGANCEVULGAR WORLD"
+    }
+   ]
+  },
+   {
+   "id"            : "Bc008",
+   "groupid"       : "Bc",
+   "path"          : "assets://image/NewsCameraToptitle/Bc008.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bc008_thumbnail.jpg",
+   "srcbmposition" : "5.111111,23.482077",
+   "srcbmsize"     : "89.888885,74.03072",
+   "toptitle"      : [
+    {
+     "textColor"     : "#020202",
+     "textPosition"  : "10.333333,0.7315289",
+     "textSize"      : "1.1704463",
+     "textBound"     : "16.666666,1.6825165",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "2015年11月"
+    },
+    {
+     "textColor"     : "#020202",
+     "textPosition"  : "10.444445,2.5603511",
+     "textSize"      : "2.3408926",
+     "textBound"     : "16.666666,2.706657",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "18"
+    },
+    {
+     "textColor"     : "#1e1e1e",
+     "textPosition"  : "10.444445,5.486467",
+     "textSize"      : "1.0241405",
+     "textBound"     : "16.666666,1.4630578",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "星期三"
+    },
+    {
+     "textColor"     : "#1e1e1e",
+     "textPosition"  : "10.444445,6.9495244",
+     "textSize"      : "1.3899049",
+     "textBound"     : "16.666666,1.6825165",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "农历十月初四"
+    },
+    {
+     "textColor"     : "#1e1e1e",
+     "textPosition"  : "10.333333,8.632041",
+     "textSize"      : "1.1704463",
+     "textBound"     : "16.666666,1.975128",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "23~27℃"
+    },
+    {
+     "textColor"     : "#1e1e1e",
+     "textPosition"  : "10.333333,10.534016",
+     "textSize"      : "1.316752",
+     "textBound"     : "16.666666,1.975128",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "多云转小雨微风"
+    },
+    {
+     "textColor"     : "#2a2a2a",
+     "textPosition"  : "5.0,17.629847",
+     "textSize"      : "2.9992685",
+     "textBound"     : "89.666664,3.5113387",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "安提瓜和巴布达护照成移民行业新宠"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "7.2222223,80.68764",
+     "textSize"      : "3.1455743",
+     "textBound"     : "85.0,3.1455743",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "美到想不离开的地方"
+    },
+    {
+     "textColor"     : "#ad0520",
+     "textPosition"  : "7.2222223,83.760056",
+     "textSize"      : "2.048281",
+     "textBound"     : "85.0,3.1455743",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "据说这里离天堂很近,"
+    },
+    {
+     "textColor"     : "#ad0520",
+     "textPosition"  : "7.2222223,87.49085",
+     "textSize"      : "1.975128",
+     "textBound"     : "71.333336,2.4140453",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "来到这就耐着不想走"
+    }
+   ]
+   }
+ ]
+}

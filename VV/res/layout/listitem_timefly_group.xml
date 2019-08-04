@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/expandable_toggle_button"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip" >
+
+        <ImageView
+            android:id="@+id/year_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dip"
+            android:adjustViewBounds="true"
+            android:src="@drawable/timefly_month_1"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/year_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@+id/year_icon"
+            android:text="2014年"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/up_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/year_text"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/month_updown_selector"
+            />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/connectline"
+        layout="@layout/timefly_vertical_line" />
+
+</LinearLayout>

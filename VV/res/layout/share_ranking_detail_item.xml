@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/personNameViewGroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="5dip"
+    android:background="@drawable/setting_item_selector"
+    android:paddingLeft="10dip" >
+    <com.butterfly.vv.view.CircleImageView
+        android:id="@+id/head"
+        android:layout_width="34.7dip"
+        android:layout_height="34.7dip"
+        android:layout_marginRight="10.0dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_headw_selector" />
+
+    <TextView
+        android:id="@+id/commentitem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@+id/replyTimePoint_tv"
+        android:layout_toRightOf="@+id/head"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="是多少速"
+        android:textColor="#434343"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/replyTimePoint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/commentitem_name"
+        android:layout_alignParentRight="true"
+        android:text="2013-8-23"
+        android:textColor="@color/text_gray"
+        android:textSize="9sp" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/commentitem_name"
+        android:layout_below="@+id/commentitem_name"
+        android:text="速度是多少收复失地是多少的速度是多少首都师大是多少的速度"
+        android:textColor="#888888"
+        android:textSize="13sp" />
+
+</RelativeLayout>

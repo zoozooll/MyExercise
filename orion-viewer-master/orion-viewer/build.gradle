@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: 'version.gradle'
+apply from: '../project.gradle'
+
+println "do singing: " + doSigning
+if (doSigning) {
+    apply from: 'signing.gradle'
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile project(':tree-view-list-android')
+    androidTestCompile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+
+    defaultConfig {
+        versionCode = orionVersionCode
+        versionName = orionVersionName
+
+        minSdkVersion 7
+        targetSdkVersion 19
+
+        testApplicationId "universe.constellation.orion.viewer.test"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            jniLibs.srcDirs = [mupdf_libs, djvu_libs]
+            resources.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        //test
+        androidTest {
+            setRoot('androidTest')
+            java.srcDirs += 'androidTest/kotlin'
+            kotlin.srcDirs += 'androidTest/kotlin'
+        }
+    }
+
+    buildTypes {
+        release {
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def file = output.outputFile
+                    output.outputFile = new File(file.parent, file.name.replace("orion-viewer-", "orion_viewer_" + defaultConfig.versionName + "_").replace("-release", ""))
+                }
+            }
+
+            if (doSigning) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    productFlavors {
+        arm5 {
+            versionCode = 0
+            ndk {
+                abiFilter "armeabi"
+            }
+        }
+        arm7 {
+            versionCode = 1
+            ndk {
+                abiFilter "armeabi-v7a"
+            }
+        }
+        x86 {
+            versionCode = 2
+            ndk {
+                abiFilter "x86"
+            }
+        }
+        mips {
+            versionCode = 3
+            ndk {
+                abiFilter "mips"
+            }
+        }
+    }
+
+    // make per-variant version code
+    applicationVariants.all { variant ->
+        // get the version code of each flavor
+        def abiVersion = variant.productFlavors.get(0).versionCode
+
+        // set the composite code
+        variant.mergedFlavor.versionCode = abiVersion + defaultConfig.versionCode
+
+        println "New version code for " + variant.productFlavors.name + " is " + variant.mergedFlavor.versionCode
+    }
+
+    lintOptions { abortOnError false }
+}

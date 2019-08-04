@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants"
+    android:id="@+id/framelayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <com.butterfly.vv.camera.displayimage.PhotoFolderImageView
+        android:id="@+id/load_image"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:background="@drawable/deafult_imgloading"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image_checkbox"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pictures_select_icon" />
+
+</FrameLayout>

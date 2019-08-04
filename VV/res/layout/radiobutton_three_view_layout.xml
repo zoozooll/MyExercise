@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+        <RadioGroup
+            android:id="@+id/selecRange"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/All"
+                style="@style/Radiobutton_style"
+                android:text="所有人可见" />
+			<View style="@style/setting_dialog_devideline_style" />
+            <RadioButton
+                android:id="@+id/friends"
+                style="@style/Radiobutton_style"
+                android:text="好友可见" />
+			<View style="@style/setting_dialog_devideline_style" />
+            <RadioButton
+                android:id="@+id/privateMe"
+                style="@style/Radiobutton_style"
+                android:text="仅自己可见" />
+
+        </RadioGroup>
+
+
+</RelativeLayout>

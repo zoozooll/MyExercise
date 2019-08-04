@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/layout_shareLike"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="134.7"
+            android:background="@drawable/share_ranking_like_bg_selector" >
+
+            <TextView
+                android:id="@+id/tvw_shareLike"
+                style="@style/shareranking_bottom_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:drawableLeft="@drawable/share_like_selector"
+                android:text="@string/share_like" />
+        </FrameLayout>
+		<View 
+		    android:layout_width="1dp"
+		    android:layout_height="match_parent"
+		    android:background="@color/shareranking_divide"  />
+        <FrameLayout
+            android:id="@+id/layout_shareComment"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="134.7"
+            android:background="@drawable/share_ranking_like_bg_selector" >
+
+            <TextView
+                android:id="@+id/tvw_shareComment"
+                style="@style/shareranking_bottom_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/share_comment"
+                android:text="@string/share_comment" />
+        </FrameLayout>
+		<View 
+		    android:layout_width="1dp"
+		    android:layout_height="match_parent"
+		    android:background="@color/shareranking_divide"  />
+        <FrameLayout
+            android:id="@+id/layout_shareShare"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="90"
+            android:background="@drawable/share_ranking_like_bg_selector" >
+
+            <TextView
+                android:id="@+id/tvw_shareShare"
+                style="@style/shareranking_bottom_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/share_share"
+                android:text="@string/vvim_share" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/shareranking_divide" />
+
+</RelativeLayout>

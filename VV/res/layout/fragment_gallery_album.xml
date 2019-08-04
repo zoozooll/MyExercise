@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_bg_color"
+    android:orientation="vertical" >
+
+ <!--    <com.butterfly.vv.GalleryNavigation
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_bar_height"
+        android:background="@color/new_title_bg"
+        android:orientation="vertical" > -->
+
+  <!--       <com.butterfly.vv.camera.MyNavigationView
+        android:id="@+id/photo_grid_title_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/new_title_bg"
+        navigation:left_drawable="@drawable/xc_navi_back_selector"
+        navigation:right_drawable="@drawable/vv_navi_add_selector_new"
+        /> -->
+
+    <GridView
+        android:id="@+id/photo_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_layout"
+        android:horizontalSpacing="4dp"
+        android:numColumns="3"
+        android:verticalSpacing="4dp"
+        android:scrollbars="none" />
+    
+    <include
+        android:id="@android:id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/layout_empty"
+        android:visibility="gone" />
+    
+    <!-- loading progress when loading message -->
+	<include
+        android:id="@+id/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_progress"
+        android:visibility="gone" />
+
+</RelativeLayout>

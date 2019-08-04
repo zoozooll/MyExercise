@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/parent_maxHeight" >
+    
+	<ImageView android:id="@+id/back"
+	    android:layout_width="@dimen/topbtn_width"
+	    android:layout_height="@dimen/topbtn_width"
+	    android:layout_marginTop="@dimen/topbtn_marginTop"
+	    android:layout_marginLeft="@dimen/topbtn_marginHorizontal"
+	    android:src="@drawable/share_back"
+	    android:background="@drawable/share_bg_btn"
+	    android:scaleType="centerInside" />
+	
+	<ImageView android:id="@+id/imv_shareEdit"
+	    android:layout_width="@dimen/topbtn_width"
+	    android:layout_height="@dimen/topbtn_width"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginTop="@dimen/topbtn_marginTop"
+	    android:layout_marginRight="@dimen/topbtn_marginHorizontal"
+	    android:src="@drawable/share_edit"
+	    android:background="@drawable/share_bg_btn"
+	    android:scaleType="centerInside"  />
+	
+	<TextView android:id="@+id/tvw_Title"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBottom="@+id/back"
+	    android:layout_centerHorizontal="true"
+	    android:textColor="@color/white"
+	    android:textSize="20sp"
+	    android:gravity="center"
+	    android:text="Time" />
+	
+	<ImageView android:id="@+id/imv_playenter"
+	    android:layout_width="@dimen/playenter_width"
+	    android:layout_height="@dimen/playenter_width"
+	    android:layout_centerHorizontal="true"
+	    android:layout_below="@+id/back"
+	    android:layout_marginTop="@dimen/playenter_maiginTop"
+	    android:scaleType="fitXY"
+	    android:src="@drawable/share_playenter" />
+	
+</RelativeLayout> -->
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/parent_minHeight"
+    android:background="@color/tab_blue" >
+    
+	<ImageView android:id="@+id/back"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="14dp"
+	    android:layout_centerVertical="true"
+	    android:src="@drawable/bbs_back_normal"
+	    />
+	
+	<ImageView android:id="@+id/imv_shareEdit"
+	    android:layout_width="@dimen/topbtn_final_width"
+	    android:layout_height="@dimen/topbtn_final_width"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginTop="@dimen/topbtn_final_marginTop"
+	    android:layout_marginRight="@dimen/topbtn_final_marginRight"
+	    android:src="@drawable/share_edit"
+	    android:background="@drawable/share_bg_btn"
+	    android:scaleType="centerInside"
+	    android:visibility="gone" 
+	    android:contentDescription="TODO"/>
+	
+	<TextView android:id="@+id/tvw_Title"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/back"
+	    android:layout_centerVertical="true"
+	    android:layout_marginLeft="5.7dp"
+	    android:textColor="@color/white"
+	    android:gravity="center"
+	    />
+	
+	<ImageView android:id="@+id/imv_playenter"
+	    android:layout_width="@dimen/topbtn_final_width"
+	    android:layout_height="@dimen/topbtn_final_width"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginTop="@dimen/topbtn_final_marginTop"
+	    android:layout_marginRight="@dimen/topbtn_final_marginRight"
+	    android:scaleType="fitXY"
+	    android:src="@drawable/share_playenter" />
+	
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/date_photo_grid_item_height"
+    android:background="@color/common_bg_image_color" >
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/item_image" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="@dimen/date_photo_grid_item_height" -->
+    <!-- android:scaleType="centerCrop" /> -->
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/date_photo_grid_item_height"
+        android:scaleType="centerCrop"
+        />
+
+   <!--  <RelativeLayout
+        android:id="@+id/date_grid_check_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="visible" > -->
+        <!-- <CheckBox
+            android:id="@+id/item_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_image"
+            android:layout_alignParentRight="true"
+        	android:focusable="false"
+        	android:gravity="center"
+            style="@style/chooser_select" /> -->
+        
+     <!--    android:button="@null"
+             android:background="@drawable/xc_btn_check"
+            android:checked="true"
+            android:focusable="false" -->
+    <!-- </RelativeLayout> -->
+    
+    <ImageView
+            android:id="@+id/btn_showDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_image"
+            android:layout_alignParentRight="true"
+        	android:focusable="false"
+        	android:gravity="center"
+            android:src="@drawable/gallery_showdetail_selector"/>
+
+	<ImageView android:id="@+id/imv_check"
+	    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucent"
+        android:scaleType="center"
+        android:src="@drawable/checkbox_bg_checked"
+        android:visibility="gone" />
+</RelativeLayout>

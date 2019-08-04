@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="accountsetting"
+        android:title="基本信息" >
+        <Preference
+            android:key="my"
+            android:title="我的资料" >
+        </Preference>
+
+        <PreferenceScreen
+            android:key="account_username"
+            android:summary="当前登陆账号"
+            android:title="@string/settings_account_username" >
+            <intent
+                android:targetClass="com.beem.project.btf.ui.wizard.Account"
+                android:targetPackage="com.beem.project.btf" />
+        </PreferenceScreen>
+
+      <!--   <Preference
+            android:defaultValue="zhong"
+            android:key="account_gps_location"
+            android:summary="当前用户所在位置"
+            android:title="目前所在位置" >
+            <intent
+                android:targetClass="com.beem.project.btf.ui.wizard.Account"
+                android:targetPackage="com.beem.project.btf" />
+        </Preference> -->
+
+        <Preference
+            android:key="account_pwd"
+            android:title="密码修改" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.beem.project.btf.ui.ChangeAccountConfigure"
+                android:targetPackage="com.beem.project.btf" />
+        </Preference>
+        <Preference
+            android:key="blacklist"
+            android:title="黑名单" >
+            <intent
+                android:action="com.vv.blackroster.vcardinfo"
+                android:targetClass="com.butterfly.vv.search.GpsUserGrid"
+                android:targetPackage="com.beem.project.btf" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="systemsetting"
+        android:title="系统信息" >
+        <Preference
+            android:defaultValue="A"
+            android:key="uploadpath_list_preference"
+            android:title="上传图片默认属性" >
+
+            <!-- <intent -->
+            <!-- android:action="android.intent.action.MAIN" -->
+            <!-- android:targetClass="com.beem.project.btf.ui.UploadPropertiesActivity" -->
+            <!-- android:targetPackage="com.beem.project.btf" /> -->
+        </Preference>
+        <!-- <Preference
+            android:defaultValue="@string/default_picstoragepath"
+            android:key="@string/downloadpath_edittext_preference"
+            android:summary="@string/default_picstoragepath"
+            android:title="缓存图片保存路径"
+            android:widgetLayout="@null" />
+        <Preference
+            android:defaultValue="@string/default_picstoragepath"
+            android:key="@string/processpath_edittext_preference"
+            android:summary="/Android/data/com.butterfly.vv/"
+            android:title="图片编辑完成后保存在此文件夹中"
+            android:widgetLayout="@null" /> -->
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="auto_login_vv"
+            android:summary="自动登录"
+            android:title="设置自动登录"
+            android:widgetLayout="@layout/setting_cusomerlayout_checkbox" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="gprs_checkbox_preference"
+            android:summary="开启gprs服务"
+            android:title="设置gprs"
+            android:widgetLayout="@layout/setting_cusomerlayout_checkbox" />
+
+       <!--  <PreferenceScreen
+            android:key="notification_screen_preference"
+            android:summary="设置消息提醒方式"
+            android:title="消息提醒" >
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="notification_vibrate"
+                android:summary="@string/notification_enable_vibrate_sum"
+                android:title="@string/notification_enable_vibrate_title"
+                android:widgetLayout="@layout/setting_cusomerlayout_checkbox" />
+
+            <RingtonePreference
+                android:defaultValue="content://settings/system/notification_sound"
+                android:key="notification_sound"
+                android:ringtoneType="notification"
+                android:showDefault="true"
+                android:summary="@string/notification_snd_sum"
+                android:title="@string/notification_snd_title" />
+        </PreferenceScreen> -->
+          <Preference
+            android:key="notification"
+            android:title="消息通知" >
+        </Preference>
+         <Preference
+            android:key="uploadpath_list_clearcachetime"
+            android:title="缓存时间" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.beem.project.btf.ui.CacheActivity"
+                android:targetPackage="com.beem.project.btf" />
+        </Preference>
+        <Preference
+            android:key="uploadpath_list_clearallcache"
+            android:title="清除缓存" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.beem.project.btf.ui.ClearCacheActivity"
+                android:targetPackage="com.beem.project.btf" />
+        </Preference>
+       
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="otherCategory"
+        android:title="其他" >
+        <Preference
+            android:key="about_screen_preference"
+            android:title="关于时光机" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.butterfly.vv.AboutUsActivity"
+                android:targetPackage="com.beem.project.btf" />
+        </Preference>
+
+        <PreferenceScreen
+            android:key="exit_screen_preference"
+            android:title="退出当前账号" >
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

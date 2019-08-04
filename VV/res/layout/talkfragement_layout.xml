@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rzlay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#d3d3d3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9f9f9"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+        <ImageButton
+            android:id="@+id/voice_input_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:src="@drawable/voice_input_selector"
+            android:tag="NORMALINPUT"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" >
+
+            <FrameLayout
+                android:id="@+id/msg_edit_wraper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="30dip"
+                android:visibility="visible" >
+
+                <EditText
+                    android:id="@+id/msg_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/clearedit_bg_selector"
+                    android:hint="输入信息"
+                    android:maxHeight="80dip"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="35dip"
+                    android:textColor="#414141"
+                    android:textColorHint="#cacaca"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/face_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/face_normal_selector" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/voice_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:background="@drawable/voice_btn_selector"
+                android:gravity="center"
+                android:text="按住 说话"
+                android:textColor="@color/voice_btn_text_selector"
+                android:visibility="gone" >
+            </Button>
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/sendmsg_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/open_more_selector"
+            android:tag="IMAGEINPUT"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#d3d3d3"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/face_wraper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/face_wraper_emotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dip" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/emotion_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/del_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:background="#00000000"
+                    android:src="@drawable/del_btn_normal" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/emotion_scr"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#e8e8e8" >
+
+                <LinearLayout
+                    android:id="@+id/emotion_selectedllt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <ImageButton
+                        android:id="@+id/emotion_selected1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/switchemotion_selector"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:src="@drawable/zem00" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/face_wraper_btn"
+            android:layout_width="match_parent"
+            android:layout_height="150dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/takephoto_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:background="#00000000"
+                android:drawablePadding="5dip"
+                android:drawableTop="@drawable/takephoto_btn"
+                android:text="相册"
+                android:textColor="#414141" />
+
+            <Button
+                android:id="@+id/takecamera_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:background="#00000000"
+                android:drawablePadding="5dip"
+                android:drawableTop="@drawable/takecamera_btn"
+                android:text="相机"
+                android:textColor="#414141" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

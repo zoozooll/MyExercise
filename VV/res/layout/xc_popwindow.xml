@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popupwin"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_bg_color"
+    >
+        
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.butterfly.vv.camera.date.HalfRoundProgressBar
+            android:id="@+id/half_round_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+       
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip" >
+
+        <RelativeLayout
+            android:id="@+id/left_layout"
+            android:layout_width="68dip"
+            android:layout_height="wrap_content" >
+
+            <FrameLayout
+                android:id="@+id/left_date_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/left_date_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pop_date_bg" />
+
+                <ImageView
+                    android:id="@+id/left_date_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="matrix"
+                    android:src="@drawable/pop_date_min" />
+
+                <ImageView
+                    android:id="@+id/left_date_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="matrix"
+                    android:src="@drawable/pop_date_hour" />
+
+                <ImageView
+                    android:id="@+id/left_date_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pop_date_point" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/date_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/left_date_frame"
+                android:layout_centerHorizontal="true"               
+                android:textColor="#999999"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <!-- 显示日期 -->
+
+        <RelativeLayout
+            android:id="@+id/showdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dip"
+            android:layout_toRightOf="@id/left_layout" >
+
+            <ImageView
+                android:id="@+id/ten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/ten" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dip"
+            android:layout_toRightOf="@id/showdate" >
+
+            <ImageView
+                android:id="@+id/image_count_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pop_count_bg" />
+
+            <TextView
+                android:id="@+id/image_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_count_iv"
+                android:layout_centerHorizontal="true"
+                android:text="2 pieces"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- 年月 -->
+
+    <TextView
+        android:id="@+id/showmonthyear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dip"
+        android:text="2014-10"
+        android:textColor="#999999"
+        android:textSize="20sp" />
+
+</RelativeLayout>
+

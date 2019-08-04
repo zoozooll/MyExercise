@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="com/beem/project/btf/camera/widgetscamera/|com/vv/geo/|com/butterfly/vv/camera/CameraActivity.java|com/butterfly/vv/camera/ShowImageActivity.java|com/butterfly/vv/camera/renew/RenewDetailBaseActivity.java|com/butterfly/vv/camera/photo/ChildAdapter.java|com/butterfly/vv/camera/date/GalleryDateListAdapter.java|com/beem/project/btf/ui/activity/ClipPictureActivity.java|com/beem/project/btf/ui/activity/LoginAnim.java|com/beem/project/btf/ui/activity/ContactList.java|com/beem/project/btf/service/LoginHelper.java" kind="src" path="src"/>
+	<classpathentry kind="src" path="jamendo"/>
+	<classpathentry kind="src" path="asmackbeem"/>
+	<classpathentry kind="src" path="twowayview-src"/>
+	<classpathentry kind="src" path="pageindicator"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="src" path="pullToRefresh"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

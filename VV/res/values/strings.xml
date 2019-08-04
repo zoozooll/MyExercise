@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Generic terms -->
+    <string name="app_name">时光机</string>
+    <string name="downloadProgress">下载进度</string>
+    <string name="notif_down_file">正在下载</string>
+    <string name="downloadSuccess">下载成功</string>
+    <string name="downloadFailure">下载失败</string>
+    <string name="mtm_accept_cert">Accept Unknown Certificate?</string>
+    <string name="mtm_decision_always">Always</string>
+    <string name="mtm_decision_once">Once</string>
+    <string name="mtm_decision_abort">Abort</string>
+    <string name="mtm_notification">Certificate Verification</string>
+
+    <!-- baoyuedong 20131031 add begin -->
+    <!-- 登录模块 -->
+
+    <string name="login_ok">确定</string>
+    <string name="login_defaultname">我</string>
+    <string name="login_forgetpw_next">下一步</string>
+    <string name="register_btn">注&#160;&#160;&#160;册</string>
+    <string name="login_register_protocol">注册即表示您同意时光机用户协议 ，其中包含位置服务和隐私条款</string>
+    <string name="login_register_aboutvv">关于时光机</string>
+    <string name="login_register_vvprotocol">用户协议</string>
+    <string name="register_finish">获取验证码</string>
+    <string name="unqualified_password">密码少于6位，请重新输入</string>
+    <string name="mismatching_password">密码不匹配，请重新输入</string>
+
+    <!-- 好友模块 -->
+    <string name="friend_findperson">搜索</string>
+    <string name="friend_friend">好友</string>
+    <string name="friend_nearby">附近</string>
+    <string name="friend_man">男生</string>
+    <string name="friend_woman">女生</string>
+    <string name="friend_all">全部</string>
+    <string name="friend_changeheadphoto3">点击修改头像或添加头像</string>
+    <string name="friend_search_addfriend">添加好友</string>
+    <string name="friend_search_blacklist">黑名单</string>
+    <string name="friend_newfriend">新的朋友</string>
+    <!-- 时光模块 -->
+    <string name="timefly_unlogin">您未登录</string>
+    <string name="timefly_network_failed">网络未连接</string>
+    <string name="uploadalbum_notags">请输入相册签名（最多1000个字）</string>
+
+    <!-- 分享模块 -->
+    <string name="share_ranking">分享榜</string>
+    <string name="share_footprint">周边</string>
+    <string name="comment_empty_show">请输入评论</string>
+    <string name="comment_unlogin_show">请先登录</string>
+    <string name="comment_success">评论成功</string>
+    <string name="comment_failed">评论失败</string>
+    <string name="comment_timeout">评论超时</string>
+    <string name="like_error_double">不能重复点赞</string>
+    <string name="like_error_unlogin">离线模式不能点赞</string>
+    <string name="like_error_failed">点赞失败，请稍后再试</string>
+    <string name="like_success">点赞成功</string>
+
+    <!-- 消息模块 -->
+    <string name="session_del">删除</string>
+    <string name="session_session">消息</string>
+    <string name="liked_message">赞了你的图片</string>
+    <string name="commented_photogroup_message">评论了你的图片</string>
+    <string name="commented_tocomment_message">回复了你的评论</string>
+    <string name="friend_access_message">同意</string>
+    <string name="friend_refuse_message">拒绝</string>
+    <string name="friend_accessed_message">已同意</string>
+    <string name="friend_refused_message">已拒绝</string>
+    <string name="friend_apply">你%s好友请求</string>
+
+    <string name="liked_list_title">赞的人</string>
+
+    <!-- 设置 -->
+    <string name="settings_logout">退出账号</string>
+    <string name="settings_login">登录账号</string>
+
+    <!-- <string name="default_picstoragepath">/Android/data/com.beem.project.btf/download/</string> -->
+
+
+    <!-- baoyuedong 20131031 add end -->
+
+    <string name="image_uploaded_successfully">图片上传成功！</string>
+    <string name="image_upload_failed">图片上传失败！</string>
+    <string name="please_wait_picture_is_uploading">图片正在上传…</string>
+    <string name="time_machine">时光</string>
+    <string name="friends">好友</string>
+    <string name="vvim_share">分享</string>
+    <string name="information">消息</string>
+    <string name="vv_camera_timecamera">时光相机</string>
+    <string name="vv_camera_tvcamera">娱乐相机</string>
+    <string name="vv_camera_cartooncamera">手绘相机</string>
+    <string name="vv_camera_photo">相册库</string>
+    <string name="tabtitle_date">日期</string>
+    <string name="tabtitle_photo">相册</string>
+    <string name="str_detail_unknown">未知</string>
+    <string name="str_img_piece">张</string>
+    <string name="str_year">年</string>
+    <string name="str_month">月</string>
+    <string name="str_had_selected">上传 %1$d/%2$d</string>
+
+    <!-- 图片组提示 -->
+    <string name="picGroupSign">图片组暂无签名</string>
+    <string name="ContactSign">暂无签名</string>
+    <string name="locPointHint">未知地点</string>
+    <string name="camera_failed">拍照失败</string>
+    <string name="crop_failed">剪裁失败</string>
+    <string name="pick_photo_failed">没有选择图片</string>
+    <!-- 上拉下拉 -->
+
+
+    <!-- 图片排列方式 -->
+    <string name="ImageArrangementMode_List">列表</string>
+    <string name="ImageArrangementMode_TILE">平铺</string>
+    <string name="message_image_desc">Message Image</string>
+    <string name="str_new_picture">"本地发现新的图片"</string>
+    <string name="str_cancel">"取消"</string>
+    <string name="str_load">"上传"</string>
+    <string name="str_cancelbtn">"跳过"</string>
+
+    <!-- Generic terms -->
+    <string name="OkButton">确定</string>
+
+    <!-- AccountConfigure class -->
+
+
+    <!-- Beem class -->
+
+
+    <!-- BeemApplication class -->
+    <string name="BeemApplicationConnect">连接中...</string>
+    <!-- AddContact class -->
+
+
+    <!-- ChangeStatus class -->
+
+
+    <!-- Settings class -->
+
+    <string name="settings_account_username">时光号</string>
+    <string name="settings_smack_debug">允许XMPPP调试</string>
+
+    <!-- BeemChatManager -->
+
+
+    <!-- BeemBroadcastReceiver class -->
+    <string name="BeemBroadcastReceiverDisconnect">时光机:你的连接已断开</string>
+
+    <!-- XmppConnectionAdapter class -->
+    <string name="AcceptContactRequest">%s刚将你添加到他/她的好友列表.</string>
+    <string name="AcceptContactRequestFrom">批准%s联系你</string>
+
+    <!-- Activities -->
+
+    <string name="edit_settings_name">时光机 - 设置</string>
+    <string name="contact_list_name">好友列表</string>
+
+    <!-- Buttons -->
+
+
+    <!-- LogAs Activity -->
+
+    <string name="login_login_progress">连接中,请等待...</string>
+    <string name="login_out_of_city">你的账号存在异地登录，请重新登录。</string>
+
+    <!-- LoginAnim activity -->
+
+    <string name="register_get_testnum">获取验证码</string>
+
+    <!-- EditSettings Activity -->
+
+
+    <!-- EditSettings Activity Categories -->
+
+
+    <!-- EditSettings Activity Tabs -->
+
+
+    <!-- wizard activities -->
+
+
+    <!-- Create an account Activity -->
+
+
+    <!-- ContactList Activity -->
+
+    <string name="contact_list_all_contact">所有联系人</string>
+
+    <!-- UserInfo dialog -->
+
+    <string name="chat_name">时光机 - 聊天</string>
+    <string name="chat_self">我</string>
+    <string name="chat_state_composing">正在输入信息</string>
+    <string name="chat_state_gone">已经离开了会话</string>
+    <string name="chat_state_active">关注会话</string>
+    <string name="chat_state_inactive">正在做其他事情</string>
+    <string name="contact_status_msg_available">我有空</string>
+    <string name="contact_status_msg_available_chat">我有空聊天</string>
+    <string name="contact_status_msg_dnd">请勿打扰</string>
+    <string name="contact_status_msg_away">离开</string>
+    <string name="contact_status_msg_xa">没有空</string>
+    <string name="contact_status_msg_offline">连接已断开</string>
+    <string name="UpdateButton">更新</string>
+
+    <!-- Xmpp Error messages -->
+    <string name="error_login_authentication">验证时发生错误,用户名或者密码错误.</string>
+    <string name="interna_server_error">远程服务器错误</string>
+    <string name="bad_request">错误的请求</string>
+    <string name="forbidden">被拒绝</string>
+    <string name="item_not_found">项目未找到</string>
+    <string name="conflict">冲突</string>
+    <string name="feature_not_implemented">功能未实现</string>
+    <string name="gone">离开</string>
+    <string name="jid_malformed">Jid畸形</string>
+    <string name="no_acceptable">无法接受</string>
+    <string name="not_allowed">未被允许</string>
+    <string name="not_authorized">未验证</string>
+    <string name="payment_required">需要付费</string>
+    <string name="recipient_unavailable">接收方无响应</string>
+    <string name="redirect">重定向</string>
+    <string name="registration_required">需要注册</string>
+    <string name="remote_server_not_found">未发现远程服务器</string>
+    <string name="remote_server_timeout">服务器超时</string>
+    <string name="remote_server_error">远程服务器错误</string>
+    <string name="resource_constraint">资源限制</string>
+    <string name="service_unavailable">暂时无法提供服务</string>
+    <string name="subscription_required">需要订阅</string>
+    <string name="undefined_condition">未定义的情况</string>
+    <string name="unexpected_condition">例外情况</string>
+    <string name="request_timeout">请求超时</string>
+    <!-- Error messages -->
+
+
+    <!-- nn -->
+
+
+    <!-- button indicating that the cropped image should be saved -->
+
+
+    <!-- button indicating that the cropped image should be reverted back to the original -->
+
+
+    <!-- button indicating that the picture just taken should be set as a contact photo, wallpaper, etc -->
+
+
+    <!-- button indicating that the video just taken should be played -->
+
+
+    <!-- button indicating that the video just taken should be accepted as an attachment -->
+
+
+    <!-- button indicating that the video recording session should be canceled -->
+
+
+    <!-- button indicating that the picture just taken should be deleted -->
+
+
+    <!-- button indicating that the picture just taken should be shared by email, mms, etc -->
+
+    <string name="vvim_current_version">当前版本:</string>
+    <string name="vvim_new_version">,\n已是最新版,无需更新!</string>
+    <string name="vvim_software_update">软件更新</string>
+    <string name="vvim_discover_new_version">, 发现新版本:</string>
+    <string name="vvim_whether_the_update">, 是否更新?</string>
+    <string name="vvim_temporarily_update">暂不更新</string>
+
+    <!-- Add by aaron for timefly -->
+    <string name="timefly_yearSting">%d年</string>
+    <string name="timefly_daySting">%s号</string>
+    <string name="timefly_picCountSting">%s张</string>
+    <string name="timefly_imagesCountString">%d张图片</string>
+    <string name="timefly_daysCountString">%d天</string>
+
+    <!-- Add by aaron for gallery -->
+    <string name="gallery_dateStringFormat">%1$d月%2$d日</string>
+    <string name="showimage_uploadCountFull">您选择的图片已到达上限</string>
+    <string name="detail_rotate">旋转</string>
+    <string name="detail_choose">选择</string>
+    <string name="connect_server_failed">您未登录或者网络有问题</string>
+    <string name="gallery_no_pic">未发现照片</string>
+    <string name="time_editer_success">时光照片制作成功</string>
+
+    <!-- 娱乐相机 -->
+    <string name="Subtitle">这种事情是要讲天分的</string>
+    <string name="BigTitle">大标题在这里哦</string>
+    <string name="SmallTitle">小标题在这里哦</string>
+    <string name="Marquee">跑马灯在这里哦，每个版型容纳的长度不一样,自行排列</string>
+    <string name="Area">北京</string>
+    <string name="Time">12:00</string>
+    <string name="RightTop">无</string>
+    <string name="Movie">关闭</string>
+    <string name="Live">无</string>
+    <!-- 分享 -->
+    <string name="share_friend">朋友圈</string>
+    <string name="share_qqzone">QQ空间</string>
+    <string name="share_weibo">微博</string>
+    <string name="share_more">更多</string>
+    <string name="share_like">赞</string>
+    <string name="share_liked">已赞</string>
+    <string name="share_comment">评论</string>
+    <string name="share_play">播放</string>
+    <string name="shareranking_novideo">该相册未生成动态相册</string>
+    <!-- 动态相册 -->
+
+
+    <!-- Xlistview -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <!-- Action bar activity -->
+    <string name="action_refreshing">刷新</string>
+    <string name="messagenotify_friendrequest">好友请求</string>
+    <string name="mailer_content_sf">给%s后的自己</string>
+
+</resources>

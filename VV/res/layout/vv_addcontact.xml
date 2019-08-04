@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_top_bar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <com.beem.project.btf.bbs.view.ClearEditText3
+                android:id="@+id/search_id_Edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/search_btn"
+                android:background="@drawable/clearedit_bg"
+                android:gravity="center_vertical|left"
+                android:hint="搜索时光号/手机号"
+                android:inputType="number"
+                android:paddingBottom="3dip"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:singleLine="true"
+                android:textColor="@color/edittext"
+                android:textColorHint="@color/tab_blue"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="60dip"
+                android:layout_height="30dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/post_btn_selector"
+                android:enabled="false"
+                android:text="查找"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/search_result_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/divider_line"
+        android:fadingEdge="none"
+        android:listSelector="#00000000" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00000000" >
+
+    <FrameLayout
+        android:id="@+id/volume_dialog_wraper"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/volume_dialog_narmal" >
+
+        <TextView
+            android:id="@+id/volume_dialog_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawableTop="@drawable/volume_dialog_icon"
+            android:drawablePadding="10dip"
+            android:textColor="#ffffff"
+            android:text="开始说话"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/volume_dialog_anim_wraper"
+            android:layout_width="140dip"
+            android:layout_height="140dip"
+            android:visibility="visible"
+            android:layout_gravity="center" >
+
+            <TextView
+                android:id="@+id/volume_dialog_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dip"
+                android:textColor="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="130dip"
+                android:layout_height="60dip"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <com.beem.project.btf.ui.views.VolumeWaveView
+                    android:id="@+id/volumeWaveView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"  />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/volume_dialog_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="17dip"
+                android:text="手指上滑  取消发送"
+                android:textColor="#ffffff"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

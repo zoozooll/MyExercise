@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_wraper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:visibility="visible" >
+
+    <ImageView
+        android:id="@+id/empty_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:layout_marginBottom="15dip"
+        android:visibility="visible"
+        android:src="@drawable/timefly_user_nopic" />
+
+    <TextView
+        android:id="@+id/empty_note_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="没有数据"
+        android:textColor="@color/text_gray"
+        android:visibility="visible"
+        android:textSize="14sp" />
+	<Button
+        android:id="@+id/empty_btn"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/blue_btn_selector"
+        android:visibility="visible"
+        android:text="干点什么" />
+</LinearLayout>

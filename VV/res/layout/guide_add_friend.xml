@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/guide_friend_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f9fdff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/new_friend"
+        style="@style/Style_Patterns_Content_Clickable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_newfriend"
+                style="@style/Setting_shareItem_Left_Text"
+                android:drawableLeft="@drawable/new_friends"
+                android:drawablePadding="15dp"
+                android:text="@string/friend_newfriend" />
+
+           <!--  <ImageView
+                android:id="@+id/status_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tv_newfriend"
+                android:src="@drawable/status_new" />
+ -->
+            <ImageView
+                android:id="@+id/img"
+                style="@style/Item_Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_listitem_arrow" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_fillparent_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_friend"
+        style="@style/Style_Patterns_Content_Clickable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/Setting_shareItem_Left_Text"
+                android:layout_width="fill_parent"
+                android:drawableLeft="@drawable/add_friend"
+                android:drawablePadding="15dp"
+                android:drawableRight="@drawable/ic_listitem_arrow"
+                android:gravity="left|center_vertical"
+                android:text="@string/friend_search_addfriend" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_fillparent_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ignore_friend"
+        style="@style/Style_Patterns_Content_Clickable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/Setting_shareItem_Left_Text"
+                android:layout_width="fill_parent"
+                android:drawableLeft="@drawable/ignore_friend"
+                android:drawablePadding="15dp"
+                android:drawableRight="@drawable/ic_listitem_arrow"
+                android:gravity="left|center_vertical"
+                android:text="@string/friend_search_blacklist" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_fillparent_line" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/friendtlistcontact"
+        android:visibility="gone" />
+
+</LinearLayout>

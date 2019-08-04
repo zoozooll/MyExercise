@@ -1,0 +1,31 @@
+<resources>
+    <!-- ViewPager的间隔 -->
+     
+    <!-- 工具栏上按钮的间距 -->
+     
+     
+    <!-- 重新加载文字字体大小 -->
+     
+    <!-- 图集标题字体大小 -->
+     
+    <!-- 图集中图片数量字体大小 -->
+     
+    <!-- 图集View的间隔 -->
+     
+     
+     
+     
+     
+     
+    <!-- 工具栏上显示1/6文字的字体大小 -->
+     
+    <!-- 用户引导边距 -->
+     
+    <!-- 正在加载文本上边距 -->
+     
+    <!-- 下拉刷新字体 -->
+     
+    <dimen name="picture_pull_to_refresh_last_update_time_text_size">10dp</dimen>
+    <dimen name="picture_pull_to_refresh_last_update_time_top_margin">6dp</dimen>
+     
+</resources>

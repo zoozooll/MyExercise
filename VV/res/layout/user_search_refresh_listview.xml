@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/blacklist_wraper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#f9fdff"
+        android:orientation="vertical" >
+
+        <include layout="@layout/title_top_bar" />
+
+        <com.pullToRefresh.ui.PullToProcessStateListView
+            android:id="@+id/app_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.pullToRefresh.ui.PullToProcessStateListView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_remove_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_marginTop="42dip"
+        android:background="#551aaef1"
+        android:drawableRight="@drawable/icon_remove_close_selector"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="长按,可以解除黑名单哟!"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+</RelativeLayout>

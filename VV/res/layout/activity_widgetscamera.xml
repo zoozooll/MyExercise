@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/layout_mainbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/layout_take_photo"
+        android:layout_alignWithParentIfMissing="true"
+        layout="@layout/widgetscammera_mainbar" >
+    </include>
+
+    
+
+    <RelativeLayout
+        android:id="@+id/layout_take_photo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/time_save_btm_bar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_bg_color"
+         >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="50dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:scaleType="fitStart"
+            android:src="@drawable/take_photo_back" />
+
+        <Button
+            android:id="@+id/btn_camera_takephoto"
+            android:layout_width="90dip"
+            android:layout_height="90dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/time_takephoto_selector" />
+
+        <TextView
+            android:id="@+id/btn_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/timecamera_album_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="文字"
+            android:textColor="@color/tab_text_selector"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

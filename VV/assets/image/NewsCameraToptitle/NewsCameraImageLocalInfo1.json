@@ -1,0 +1,414 @@
+{
+ "data"          : [
+ {
+   "id"            : "Ba001",
+   "groupid"       : "Ba",
+   "path"          : "assets://image/NewsCameraToptitle/Ba001.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Ba001_thumbnail.jpg",
+   "srcbmposition" : "0.0,0.0",
+   "srcbmsize"     : "100.0,100.0",
+   "toptitle"      : [
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "28.88889,5.1207023",
+     "textSize"      : "9.87564",
+     "textBound"     : "65.55556,11.850768",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "湖润白富"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "3.1111112,25.09144",
+     "textSize"      : "2.1214337",
+     "textBound"     : "89.22222,2.8529627",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "胡润百富年度富豪排行榜"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "3.1111112,27.944405",
+     "textSize"      : "2.1214337",
+     "textBound"     : "89.22222,2.8529627",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "看看你排在哪里?"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "3.1111112,31.089977",
+     "textSize"      : "2.1214337",
+     "textBound"     : "89.22222,3.0724213",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "新世纪新的财富筹码"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "3.1111112,34.38186",
+     "textSize"      : "2.1214337",
+     "textBound"     : "89.22222,3.0724213",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "海外夏令营:富豪子女们的教育新潮"
+    }
+   ]
+  },
+  {
+   "id"            : "Ba002",
+   "groupid"       : "Ba",
+   "path"          : "assets://image/NewsCameraToptitle/Ba002.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Ba002_thumbnail.jpg",
+   "srcbmposition" : "2.4444444,39.648865",
+   "srcbmsize"     : "95.0,54.864666",
+   "toptitle"      : [
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "37.555557,7.6079006",
+     "textSize"      : "1.6825165",
+     "textBound"     : "25.555555,2.4140453",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "全球视角 中国精英"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "5.5555553,84.85735",
+     "textSize"      : "3.7307973",
+     "textBound"     : "88.333336,4.535479",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "保卫和平70年"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "5.5555553,89.9049",
+     "textSize"      : "2.3408926",
+     "textBound"     : "88.333336,2.9261155",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "国际著名人土洋洋"
+    }
+   ]
+  },
+  {
+   "id"            : "Ba003",
+   "groupid"       : "Ba",
+   "path"          : "assets://image/NewsCameraToptitle/Ba003.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Ba003_thumbnail.jpg",
+   "srcbmposition" : "7.5555553,28.09071",
+   "srcbmsize"     : "85.0,65.03292",
+   "toptitle"      : [ ]
+  },
+  {
+   "id"            : "Ba004",
+   "groupid"       : "Ba",
+   "path"          : "assets://image/NewsCameraToptitle/Ba004.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Ba004_thumbnail.jpg",
+   "srcbmposition" : "3.0,26.920263",
+   "srcbmsize"     : "94.0,71.470375",
+   "toptitle"      : [
+     {
+     "textColor"     : "#0b0b0b",
+     "textPosition"  : "16.11111,78.4199",
+     "textSize"      : "2.9261155",
+     "textBound"     : "79.111115,3.4381857",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "见证全宇宙最强魅力人物"
+    },
+    {
+     "textColor"     : "#0b0b0b",
+     "textPosition"  : "16.11111,82.150696",
+     "textSize"      : "1.9019752",
+     "textBound"     : "80.333336,2.1945868",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "宋江 武松 鲁智深 林冲 鼎力支持"
+    },
+    {
+     "textColor"     : "#ac7538",
+     "textPosition"  : "9.888889,84.930504",
+     "textSize"      : "3.8039503",
+     "textBound"     : "85.333336,4.8280907",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "《文艺青年》为青春做主"
+    }
+   ]
+  },
+  {
+   "id"            : "Ba005",
+   "groupid"       : "Ba",
+   "path"          : "assets://image/NewsCameraToptitle/Ba005.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Ba005_thumbnail.jpg",
+   "srcbmposition" : "4.888889,25.384052",
+   "srcbmsize"     : "90.333336,68.69057",
+   "toptitle"      : [
+    {
+     "textColor"     : "#1d1c12",
+     "textPosition"  : "12.888889,10.534016",
+     "textSize"      : "7.6079006",
+     "textBound"     : "76.111115,9.070958",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "精品男士指南"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "8.555555,67.22751",
+     "textSize"      : "6.0716896",
+     "textBound"     : "84.44444,6.803219",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "靓仔"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "8.555555,74.46964",
+     "textSize"      : "3.2918801",
+     "textBound"     : "84.44444,3.6576445",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "我是帅哥 帅哥就是我"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "8.555555,79.6635",
+     "textSize"      : "1.6825165",
+     "textBound"     : "84.44444,4.3891735",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "2017好男人市场报告"
+    }
+   ]
+  },
+  {
+   "id"            : "Ba006",
+   "groupid"       : "Ba",
+   "path"          : "assets://image/NewsCameraToptitle/Ba006.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Ba006_thumbnail.jpg",
+   "srcbmposition" : "4.111111,2.7798097",
+   "srcbmsize"     : "91.666664,94.513535",
+   "toptitle"      : [
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "4.7777777,5.267008",
+     "textSize"      : "7.5347476",
+     "textBound"     : "25.88889,9.436723",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "娱乐"
+    },
+    {
+     "textColor"     : "#c38e5d",
+     "textPosition"  : "7.888889,43.233356",
+     "textSize"      : "4.3160205",
+     "textBound"     : "87.22222,5.340161",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "中国第一神人"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "7.888889,78.93197",
+     "textSize"      : "4.535479",
+     "textBound"     : "86.22222,5.267008",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "娱乐专家"
+    }
+   ]
+  },
+  {
+   "id"            : "Ba007",
+   "groupid"       : "Ba",
+   "path"          : "assets://image/NewsCameraToptitle/Ba007.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Ba007_thumbnail.jpg",
+   "srcbmposition" : "1.1111112,27.944405",
+   "srcbmsize"     : "97.77778,68.61741",
+   "toptitle"      : [
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "34.666668,76.00585",
+     "textSize"      : "8.997806",
+     "textBound"     : "29.666666,19.678127",
+     "textGravity"   : "left|top",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "linenum"       : 2,
+     "noteText"      : "大胆尝试"
+    }
+   ]
+  },
+  {
+   "id"            : "Ba008",
+   "groupid"       : "Ba",
+   "path"          : "assets://image/NewsCameraToptitle/Ba008.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Ba008_thumbnail.jpg",
+   "srcbmposition" : "0.0,0.0",
+   "srcbmsize"     : "100.0,100.0",
+   "toptitle"      : [
+    {
+     "textColor"     : "#ef0019",
+     "textPosition"  : "1.7777778,74.615944",
+     "textSize"      : "3.218727",
+     "textBound"     : "96.77778,4.3160205",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "一个少数人的挑战"
+    },
+    {
+     "textColor"     : "#ef0019",
+     "textPosition"  : "2.0,80.54133",
+     "textSize"      : "5.852231",
+     "textBound"     : "96.55556,7.5347476",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "跳伞，胆量的极限"
+    }
+   ]
+  },
+  {
+   "id"            : "Ba009",
+   "groupid"       : "Ba",
+   "path"          : "assets://image/NewsCameraToptitle/Ba009.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Ba009_thumbnail.jpg",
+   "srcbmposition" : "4.111111,3.8039503",
+   "srcbmsize"     : "91.666664,92.3921",
+   "toptitle"      : [
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "27.222221,73.006584",
+     "textSize"      : "4.2428675",
+     "textBound"     : "65.44444,4.9012437",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "娱乐圈新达人"
+    },
+    {
+     "textColor"     : "#31b3c6",
+     "textPosition"  : "27.222221,81.12656",
+     "textSize"      : "2.2677395",
+     "textBound"     : "65.44444,2.9261155",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "赵雅芝庆祝生日"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "27.222221,84.930504",
+     "textSize"      : "2.2677395",
+     "textBound"     : "65.44444,2.9261155",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "陈希妍称被男友陈晓求婚"
+    },
+    {
+     "textColor"     : "#ca8500",
+     "textPosition"  : "27.222221,88.88076",
+     "textSize"      : "2.2677395",
+     "textBound"     : "65.44444,2.9261155",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "《康熙来了》寿终正寝"
+    }
+   ]
+  },
+   {
+   "id"            : "Ba010",
+   "groupid"       : "Ba",
+   "path"          : "assets://image/NewsCameraToptitle/Ba010.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Ba010_thumbnail.jpg",
+   "srcbmposition" : "2.4444444,44.98903",
+   "srcbmsize"     : "95.0,49.15874",
+   "toptitle"      : [
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "36.11111,5.267008",
+     "textSize"      : "1.7556694",
+     "textBound"     : "28.0,2.7798097",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "全球最火爆的热门资讯"
+    },
+    {
+     "textColor"     : "#ffffff",
+     "textPosition"  : "7.111111,38.0395",
+     "textSize"      : "4.462326",
+     "textBound"     : "85.111115,5.925384",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "assets://fonts/dazhibao.ttf",
+     "noteText"      : "美国空军阿富汗极限突击"
+    },
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "9.111111,76.73738",
+     "textSize"      : "2.3408926",
+     "textBound"     : "87.333336,2.9261155",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "跨境，"
+    },
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "9.111111,79.6635",
+     "textSize"      : "2.3408926",
+     "textBound"     : "87.333336,2.9261155",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "交易创新高"
+    },
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "9.111111,85.80834",
+     "textSize"      : "2.3408926",
+     "textBound"     : "87.333336,2.9261155",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "合并，"
+    },
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "9.111111,88.73445",
+     "textSize"      : "2.3408926",
+     "textBound"     : "87.333336,2.9261155",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "飚起来！"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wraper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/setting_item_selector2"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/thumb_1"
+        android:text="&apos;小李子&apos;斩获奥斯卡最佳男主角 结束陪跑生涯首都师大速度是多少"
+        android:layout_marginRight="10dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+       android:textColor="#434343"
+        android:textSize="16.0sp" />
+
+        <ImageView
+            android:id="@+id/thumb_1"
+            android:layout_width="87dp"
+            android:layout_height="64dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/deafult_imgloading" 
+             android:scaleType="centerCrop"
+            />
+
+    <TextView
+        android:id="@+id/foldertime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:text="3小时前"
+        android:textColor="@color/bbs_date_color"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp" />
+
+</RelativeLayout>

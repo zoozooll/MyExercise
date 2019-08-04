@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical"
+    tools:context=".ui.activity.TimeCameraSaveActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+        <com.beem.project.btf.ui.EditImageView
+            android:id="@+id/cartoon_image_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <com.beem.project.btf.ui.MagnifyView
+            android:id="@+id/cartoon_magn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/introduce_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/timecamera_help_icon"
+            android:visibility="visible" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textview_cornerbg"
+            android:gravity="center"
+            android:text="请抠选人物" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/time_save_btm_bar_height"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/common_bg_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30dip"
+            android:paddingRight="30dip"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/cartoon_area"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/camera_area_selector"
+                android:text="圈选"
+                android:textColor="@color/tab_text_selector"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/cartoon_add"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/camera_draw_selector"
+                android:text="增加"
+                android:textColor="@color/tab_text_selector"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/cartoon_earse"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/eraser_selector"
+                android:text="擦除"
+                android:textColor="@color/tab_text_selector"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/cartoon_move"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/timecamera_move_selector"
+                android:text="移动"
+                android:textColor="@color/tab_text_selector"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <ImageButton
+                android:id="@+id/cartoon_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:src="@drawable/take_photo_back" />
+
+            <ImageButton
+                android:id="@+id/cartoon_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/blue_btn_selector"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:src="@drawable/take_photo_save_white" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" 
+                android:orientation="horizontal"
+                >
+
+                <ImageButton
+                    android:id="@+id/undobtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:scaleType="fitStart"
+                    android:background="@color/transparent"
+                    android:src="@drawable/undo_selector" />
+
+                <ImageButton
+                    android:id="@+id/redobtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:scaleType="fitEnd"
+                    android:background="@color/transparent"
+                    android:src="@drawable/redo_selector" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

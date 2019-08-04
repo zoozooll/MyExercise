@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="5dip"
+    android:background="@drawable/listitem_click_bg"
+    android:paddingRight="12dip" >
+
+
+    <LinearLayout
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/right"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="7dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/date_wraper"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shapelevels"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/date_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05"
+                android:textColor="@color/text_black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/date_yearAndmonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2015.09"
+                android:textColor="@color/text_gray"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/date_wraper_divider"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@color/oval_1" />
+    </LinearLayout>
+
+    <!-- preference_single_item -->
+
+    <LinearLayout
+        android:id="@+id/right"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dip"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/delete"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/contactlistpseudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/picGroupSign"
+            android:text="sddsd是s首都师大围绕太阳很久很久很久后"
+            android:textColor="#434343"
+            android:textColorHint="@color/text_gray"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <!-- 新添加imageView位置 -->
+
+        <com.butterfly.vv.view.timeflyView.HolderTwowayView
+            android:id="@+id/item_images"
+            android:layout_width="fill_parent"
+            android:layout_height="95dp"
+            android:fadingEdge="@android:color/transparent"
+            android:fadingEdgeLength="0dip"
+            android:orientation="horizontal"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="2dp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.7dp" >
+
+            <TextView
+                android:id="@+id/contactlistmsgperso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(11张)"
+                android:textColor="#888888"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/picgroup_loc"
+                style="@style/picgroupbottom_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/contactlistmsgperso"
+                android:drawableLeft="@drawable/map_icon"
+                android:drawablePadding="5dp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/other_timefly_btns"
+            layout="@layout/other_timefly_comment_btns"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/me_timefly_btns"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal" 
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:id="@+id/limit_flag"
+                style="@style/picgroupbottom_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="公开" />
+
+            <TextView
+                android:id="@+id/Edit_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/time_fly_auth_edit_im_selector"
+                android:drawablePadding="5dip"
+                android:paddingLeft="20dp"
+                android:text="编辑"
+                android:textColor="@color/profile_bottom_text_color"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <com.beem.project.btf.bbs.view.CustomListView
+            android:id="@+id/comment_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp" 
+            android:layout_marginBottom="5dp"
+            />
+
+        <include layout="@layout/include_fillparent_line" />
+    </LinearLayout>
+
+</RelativeLayout>

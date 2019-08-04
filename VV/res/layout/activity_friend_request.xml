@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.beem.project.btf.FriendRequestActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/new_title_bg">
+
+        <!-- Left side -->
+
+        <TextView
+            android:id="@+id/tvw_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:drawableLeft="@drawable/bbs_back_selector"
+            android:drawablePadding="3dp"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:maxWidth="200dp"
+            android:singleLine="true"
+            android:textColor="@color/bbs_content_color_selector"
+            android:textSize="@dimen/gallery_TopbarTitleTextsize" >
+        </TextView>
+        
+        <TextView android:id="@+id/tvw_Title"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerVertical="true"
+		    android:textColor="@color/white"
+		    android:layout_centerHorizontal="true"
+		    android:textSize="16sp"
+			android:text="@string/messagenotify_friendrequest" />
+    </RelativeLayout>
+    
+    <com.pullToRefresh.ui.PullToRefreshListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" >
+        
+    </com.pullToRefresh.ui.PullToRefreshListView>
+
+</LinearLayout>

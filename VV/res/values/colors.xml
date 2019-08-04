@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="msg_cor">#000000</color>
+    <color name="font_attribute">#ff000000</color>
+    <color name="font_value">#ff888271</color>
+    <color name="blue">#ff2EB5F0</color>
+    <color name="devideline">#eaeaea</color>
+    <color name="background_normal">#ffffff</color>
+    <color name="background_normal_press">#ffece7da</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_gray">#ffececec</color>
+    <color name="notes_color">#ff777777</color>
+    <color name="textcolor_disable">#4cbbbbbb</color>
+    <color name="timestampline">#ffe5e1de</color>
+
+    <!-- bbs start -->
+    <!-- bbs内容按下的字体颜色 -->
+    <color name="bbs_preesed_color">#1974ba</color>
+ <!-- #b2b2b2 -->
+    <!-- bbs个人信息颜色 -->
+
+    <color name="bbs_date_color">#CACACA</color>
+    <color name="bbs_content_color">#a3a3a3</color>
+    <color name="bbs_title_color">#3f3f3f</color>
+    <!-- bbs回复楼层颜色 -->
+
+
+    <!-- bbs城市社会内容块色值 -->
+
+
+    <!-- bbs end -->
+    <!-- 谢正根 -->
+
+
+    <!--  -->
+
+
+    <!-- 颜色 start by baoyuedong -->
+    <!-- 分享界面 -->
+
+
+    <!-- 主界面 -->
+    <color name="contact_messagenum_color">#999999</color>
+
+    <!-- 颜色 end by baoyuedong -->
+    <color name="white_font">#FFFFFFFF</color>
+    <color name="regist_btn_default">#92dcfc</color>
+
+    <!-- 设置 -->
+
+
+    <!-- 圆形进度条 -->
+    <color name="circular_progress_default_progress">#fffffbf0</color>
+    <color name="circular_progress_default_background">#787878</color>
+    <color name="circular_progress_default_title">#bada55</color>
+    <color name="circular_progress_default_subtitle">#D1D1D1</color>
+
+    <!-- yangle添加 -->
+    <!-- tab标签文字颜色 -->
+    <color name="org1">#1AAEF1</color>
+    <!-- 统一相关蓝色值 -->
+    <color name="tab_blue">#1AAEF1</color>
+    <!-- 统一深蓝颜色值 -->
+    <color name="deep_blue">#037098</color>
+    <!-- 统一深浅红色值 -->
+    <color name="low_red">#ffb2ac</color>
+    <!-- 统一界面背景色 -->
+    <color name="app_background">#F9FEFF</color>
+    <!-- 统一淡灰色字体 -->
+    <color name="text_gray">#cacaca</color>
+    <!-- 统一灰色字体 -->
+    <color name="text_gray_more">#666666</color>
+    <color name="text_gray_more2">#888888</color>
+    <color name="text_gray_more3">#b2b2b2</color>
+    <!-- 统一黑色字体 -->
+    <color name="text_black">#141414</color>
+    <!-- 统一浅黑色字体 -->
+    <color name="text_shallow_black">#434343</color>
+    <!-- 统一赭褐色颜色值 (像大便的那种颜色) -->
+    <color name="bg_brown">#ef674d</color>
+    <!-- 统一半透明背景颜色 -->
+    <color name="translucent_background">#90000000</color>
+    <!-- 日期文字颜色 -->
+
+    <color name="font_value1">#141414</color>
+    <color name="edittext">#141414</color>
+    <color name="edithint">#cacaca</color>
+    <!-- popupwindow颜色值 -->
+    <color name="bc_normal">#ffffff</color>
+    <color name="bc_pressed">#551f8cf2</color>
+    <!-- 设置界面颜色值 -->
+    <color name="setting_item_pressed">#e5e5e5</color>
+    <color name="setting_exit_normal">#fd5f53</color>
+    <color name="setting_exit_pressed">#df4a3f</color>
+    <color name="setting_text">#141414</color>
+    <!-- 对话框相关颜色值 -->
+    <color name="dialog_btn_pressed">#e5e5e5</color>
+    <color name="dialog_text">#19ADF1</color>
+    <color name="dialog_line">#dad9de</color>
+    <!-- 手绘相机分享界面分割线颜色 -->
+    <color name="cartoon_camera_share_red">#fb5e4c</color>
+    <!-- waizhu tan -->
+    <color name="new_title_bg">#19ADF1</color>
+    <color name="tab_scr_text_color">#ffcacaca</color>
+    <color name="common_bg_color">#fffafdff</color>
+    <color name="common_bg_image_color">#ffeaeaea</color>
+
+    <!-- 主界面圆环颜色 -->
+    <color name="oval_1">#58e810</color>
+    <color name="oval_2">#003cff</color>
+    <color name="oval_3">#ef5252</color>
+    <color name="oval_4">#38a0ff</color>
+    <color name="oval_5">#f78390</color>
+    <!-- UIHelper -->
+
+    <color name="translucent">#77000000</color>
+    <color name="content">#555555</color>
+
+    <!-- 娱乐相机 -->
+
+    <color name="tv_commo_text_color">#ff333333</color>
+    <color name="tv_line">#e2e2e2</color>
+    <color name="tv_small_item">#838383</color>
+    <color name="tv_download_bg">#e5e5e5</color>
+    
+    
+    <color name="share_liked_bg">#FE7083</color>
+	<color name="shareranking_divide">#d3d3d3</color>
+	<color name="shareranking_bottom_normal">#F9F9F9</color>
+	<color name="share_commentItemBg">#eeeeee</color>
+	<color name="support_pressed">#fffaf7</color>
+</resources>

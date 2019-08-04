@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_top_bar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.pullToRefresh.ui.PullToRefreshListView
+            android:id="@+id/chat_messages"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" 
+            >
+        </com.pullToRefresh.ui.PullToRefreshListView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/input_wraper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

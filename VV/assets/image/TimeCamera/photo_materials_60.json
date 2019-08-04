@@ -1,0 +1,73 @@
+﻿{
+	"data":[
+		{
+		"id": "60006",
+		"groupid": "60",
+		"laypath1":"assets://image/TimeCamera/60006_gb1.jpg",
+		"laypath2":"assets://image/TimeCamera/60006_gb2.png",
+		"laypath3":"assets://image/TimeCamera/60006_gb3.png",
+		"posepath":"assets://image/TimeCamera/60006_pose.png",
+		"thumbpath":"assets://image/TimeCamera/60006_thumbnail.jpg",
+		"thumbpathlarge":"",
+		"laycount": "3",
+		"text": "大力支持农夺丰收<@note@>广阔天地，大有作为<@note@>农业学大寨 工业学大庆<@note@>深挖洞 广积粮 不称霸<@note@>跑步进入共产主义<@note@>排除万难 争取丰收",
+        "textposition": "50,93",
+        "textsize": "9",
+        "textcolor": "#D8072A",
+        "bitmapposition": "3,10,38",
+        "mapping":[15,60,37,127,37,127,118, 168,445955,505336,507927,110342,4738,5495,0,0,0,0,0,0,0,0,0]
+		},		
+		{
+		"id": "60010",
+		"groupid": "60",
+		"laypath1":"assets://image/TimeCamera/60010_gb1.jpg",
+		"laypath2":"assets://image/TimeCamera/60010_gb2.png",
+		"laypath3":"assets://image/TimeCamera/60010_gb3.png",
+		"posepath":"assets://image/TimeCamera/60010_pose.png",
+		"thumbpath":"assets://image/TimeCamera/60010_thumbnail.jpg",
+		"thumbpathlarge":"",
+		"laycount": "3",
+		"text": "多生产，多捐献<@note@>工业学大庆<@note@>工业生产多跃进<@note@>无产阶级革命<@note@>工业支持革命",
+        "textposition": "50,90",
+        "textsize": "11",
+        "textcolor": "#de3217",
+        "bitmapposition": "3,13,65",
+        "mapping":[35,60,50,140,88,178,178,228,476939,510602,508830,178664,6384,4763,0,0,0,0,0,0,0,0,0]
+		},		
+		{
+		"id": "60013",
+		"groupid": "60",
+		"laypath1":"assets://image/TimeCamera/60013_gb1.jpg",
+		"laypath2":"assets://image/TimeCamera/60013_gb2.png",
+		"laypath3":"assets://image/TimeCamera/60013_gb3.png",
+		"posepath":"assets://image/TimeCamera/60013_pose.png",
+		"thumbpath":"assets://image/TimeCamera/60013_thumbnail.jpg",
+		"thumbpathlarge":"",
+		"laycount": "3",
+		"text": "团结起来争取更大的革命<@note@>跟着毛主席，世界一片红！<@note@>不忘无产阶级专政<@note@>干革命靠毛泽东思想<@note@>毛泽东思想万岁！万万岁！",
+        "textposition": "50,91",
+        "textsize": "7",
+        "textcolor": "#ff3139",
+        "bitmapposition": "42,21,47",
+        "mapping":[38,60,48,138,73,163,155,205,481606,511384,508278,93942,6980,6313,0,0,0,0,0,0,0,0,0]
+		},
+		{
+		"id": "60014",
+		"groupid": "60",
+		"laypath1":"assets://image/TimeCamera/60014_gb1.jpg",
+		"laypath2":"assets://image/TimeCamera/60014_gb2.png",
+		"laypath3":"assets://image/TimeCamera/60014_gb3.png",
+		"posepath":"assets://image/TimeCamera/60014_pose.png",
+		"thumbpath":"assets://image/TimeCamera/60014_thumbnail.jpg",
+		"thumbpathlarge":"",
+		"laycount": "3",
+		"text": "伟大的中华人民共和国万岁<@note@>千万不要忘记阶级斗争！<@note@>航行靠舵手 干革命靠毛泽东思想<@note@>誓作中央文革的铁拳头<@note@>横扫一切牛鬼蛇神<@note@>全国形势一片大好<@note@>打倒美帝 打倒各国反动派<@note@>头可断 血可流 誓死不低革命头<@note@>以阶级斗争为纲其余都是目<@note@>与人斗，其乐无穷！",
+        "textposition": "50,92",
+        "textsize": "7",
+        "textcolor": "#e2d138",
+        "bitmapposition": "17,14,74",
+        "mapping":[39,60,57,147,66,116,146,196,465816,508240,505510,116389,7773,6319,0,0,0,0,0,0,0,0,0]
+		}
+	]
+}
+

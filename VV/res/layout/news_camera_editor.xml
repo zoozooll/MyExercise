@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.butterfly.vv.GalleryNavigation
+        android:id="@+id/main_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/new_title_bg" />
+
+    <FrameLayout
+        android:id="@+id/content_wraper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/news_type_wraper"
+        android:layout_below="@+id/main_navigation_view" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/news_type_wraper"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_background"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <TextView
+            android:id="@+id/news_toptitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/time_camera_editor_tabbackground_selector"
+            android:drawableBottom="@drawable/time_camera_editor_dot_selector"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingTop="5dp"
+            android:text="头条新闻"
+            android:textColor="@color/voice_btn_text_selector"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/news_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/time_camera_editor_tabbackground_selector"
+            android:drawableBottom="@drawable/time_camera_editor_dot_selector"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingTop="5dp"
+            android:text="电视新闻"
+            android:textColor="@color/voice_btn_text_selector"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_normal"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="10dip" 
+    >
+
+    <include layout="@layout/include_fillparent_line" />
+
+    <!-- <Button
+        android:id="@+id/btn_set_cover"
+        style="@style/PopupWindow_btn_style"
+        android:background="@drawable/blue_btn_selector"
+        android:text="设为封面" />
+
+    <Button
+        android:id="@+id/btn_take_photo"
+        style="@style/PopupWindow_btn_style"
+        android:background="@drawable/blue_btn_selector"
+        android:text="拍照" />
+
+    <Button
+        android:id="@+id/btn_pick_photo"
+        style="@style/PopupWindow_btn_style"
+        android:background="@drawable/blue_btn_selector"
+        android:text="相册选择" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        style="@style/PopupWindow_btn_style"
+        android:background="@drawable/red_btn_selector"
+        android:text="删除头像" /> -->
+
+</LinearLayout>

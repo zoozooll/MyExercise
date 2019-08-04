@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MessageItemLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="200dp"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <include layout="@layout/message_timestamp" />
+
+    <com.beem.project.btf.ui.views.ProgressWebView
+        android:id="@+id/msg_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/transparent" />
+
+</LinearLayout>

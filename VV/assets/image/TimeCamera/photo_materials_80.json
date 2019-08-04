@@ -1,0 +1,73 @@
+﻿{
+	"data":[
+	    {
+	    "id":"80002",
+		"groupid":"80",
+		"laypath1":"assets://image/TimeCamera/80002_gb1.jpg",
+		"laypath2":"assets://image/TimeCamera/80002_gb2.png",
+		"laypath3":"assets://image/TimeCamera/80002_gb3.png",
+		"posepath":"assets://image/TimeCamera/80002_pose.png",
+		"thumbpath":"assets://image/TimeCamera/80002_thumbnail.jpg",
+		"thumbpathlarge":"",
+		"laycount":"3",
+		"text":"机   耕   队<@note@>劳  动  先  锋<@note@>农  业  先  锋<@note@>农 业 大 丰 收",
+		"textposition":"50,4",
+		"textsize":"4",
+		"textcolor":"#c35d59",
+		"bitmapposition":"20,14,40",
+		"mapping":[19,80,55,145,88,178,175,225,487261,506535,505225,32613,6570,3541,0,0,0,0,0,0,0,0,0]
+		},
+		{
+		"id": "80004",
+		"groupid": "80",
+		"laypath1":"assets://image/TimeCamera/80004_gb1.jpg",
+		"laypath2":"assets://image/TimeCamera/80004_gb2.png",
+		"laypath3":"assets://image/TimeCamera/80004_gb3.png",
+		"posepath":"assets://image/TimeCamera/80004_pose.png",
+		"thumbpath":"assets://image/TimeCamera/80004_thumbnail.jpg",
+		"thumbpathlarge":"",
+		"laycount": "3",
+		"text": "搞好环境卫生  保持市容整洁<@note@>将建设和不卫生的习惯斗争进行到底<@note@>开展环境卫生大清整营造整洁市容<@note@>坚决与不卫生的习惯作斗争<@note@>抵制不文明 营造干净整洁市容市貌",
+        "textposition": "50,93",
+        "textsize": "6",
+        "textcolor": "#0081D5",
+        "bitmapposition": "37,2,28",
+        "mapping":[21,80,36,126,90,180,185,235,472767,507950,506287,71857,5579,5277,0,0,0,0,0,0,0,0,0]
+		},
+		{
+		"id": "80006",
+		"groupid": "80",
+		"laypath1":"assets://image/TimeCamera/80006_gb1.jpg",
+		"laypath2":"assets://image/TimeCamera/80006_gb2.png",
+		"laypath3":"assets://image/TimeCamera/80006_gb3.png",
+		"posepath":"assets://image/TimeCamera/80006_pose.png",
+		"thumbpath":"assets://image/TimeCamera/80006_thumbnail.jpg",
+		"thumbpathlarge":"",
+		"laycount": "3",
+		"text": "做共产主义接班人<@note@>争当勤奋学习的好少年<@note@>爱祖国 爱人民 少年先锋<@note@>中国少年先锋队<@note@>做共产主义事业接班人<@note@>争当热爱祖国的好少年",
+        "textposition": "50,96",
+        "textsize": "8",
+        "textcolor": "#890203",
+        "bitmapposition": "27,35,68",
+        "mapping":[23,80,67,117,92,142,152,202,475644,500479,503724,147116,5136,4119,0,0,0,0,0,0,0,0,0]
+		},
+		{
+		"id": "80009",
+		"groupid": "80",
+		"laypath1":"assets://image/TimeCamera/80009_gb1.jpg",
+		"laypath2":"assets://image/TimeCamera/80009_gb2.png",
+		"laypath3":"assets://image/TimeCamera/80009_gb3.png",
+		"posepath":"assets://image/TimeCamera/80009_pose.png",
+		"thumbpath":"assets://image/TimeCamera/80009_thumbnail.jpg",
+		"thumbpathlarge":"",
+		"laycount": "3",
+		"text": "好好学习 天天向上<@note@>把智慧和力量贡献给祖国<@note@>努力学习 ,成为祖国的栋梁之才!<@note@>我们是祖国的未来和希望<@note@>铭记历史 爱国明志 誓做祖国栋梁",
+        "textposition": "50,92",
+        "textsize": "6",
+        "textcolor": "#d00714",
+        "bitmapposition": "17,9,72",
+        "mapping":[42,80,52,142,56,106,134,184,470972,503813,503416,126313,6601,5570,0,0,0,0,0,0,0,0,0]
+		}
+	]
+}
+

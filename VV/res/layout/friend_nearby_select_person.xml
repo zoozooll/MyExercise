@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/friend_nearby_selectperson_bg" >
+
+    <ListView
+        android:id="@+id/lv_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="147dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/devideline"
+        android:dividerHeight="0.3dip"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:visibility="visible" >
+    </ListView>
+
+</LinearLayout>

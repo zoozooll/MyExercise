@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Orion Viewer - pdf, djvu, xps and cbz file viewer for android devices
+  ~
+  ~ Copyright (C) 2011-2014  Michael Bogdanov & Co
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<!--Author: Johannes Römer-->
+<resources>
+    <string name="msg_dialog_search">Suchen</string>
+    <string name="msg_searching">Suchen…</string>
+    <string name="warn_text_not_found">Der gesuchte Text konnte nicht gefunden werden!</string>
+    <string name="warn_no_further_occurrences_found">Keine weiteren Treffer!</string>
+    <string name="msg_dialog_dismis">Abbrechen</string>
+    <string name="msg_error">Fehler</string>
+    <string name="msg_warning">Warnung</string>
+    <string name="msg_specify_keyword_for_search">Kein Suchbegriff angegeben!</string>
+</resources>

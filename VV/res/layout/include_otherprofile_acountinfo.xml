@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile_layout_acount_info"
+    style="@style/main_info_style"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/profile_layout_sex_sign"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip" >
+
+        <TextView
+            android:id="@+id/profile_tv_agenew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/bbs_sexage_foreground_big_selector"
+            android:drawablePadding="3dip"
+            android:text="23"
+            android:textColor="@color/font_value1"
+            android:textSize="13.0sp" />
+
+        <TextView
+            android:id="@+id/profile_tv_constellation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profile_tv_agenew"
+            android:text="天蝎座"
+            android:textColor="@color/font_value1"
+            android:textSize="13.0sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/profile_tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/location_icon"
+                android:drawablePadding="4.0dp"
+                android:text="2.37km"
+                android:textColor="#c8c8c8"
+                android:textSize="13.0sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="15dp"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5dip"
+                android:background="#c8c8c8" />
+
+            <TextView
+                android:id="@+id/profile_tv_time"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="18分钟前"
+                android:textColor="#c8c8c8"
+                android:textSize="13.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textview_aocuntinfo_title"
+            style="@style/info_group_title_style"
+            android:text="基本信息" />
+
+        <include layout="@layout/include_fillparent_blueline" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/momoid_titile"
+        style="@style/group_item_style" >
+
+        <TextView
+            android:id="@+id/textviewmomotitle"
+            style="@style/group_item_text_left"
+            android:text="时光号" />
+
+        <TextView
+            android:id="@+id/profile_tv_momoid"
+            style="@style/group_item_text_right"
+            android:text="12345678" />
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/momoid_name"
+        style="@style/group_item_style" >
+
+        <TextView
+            android:id="@+id/textviewmomoname"
+            style="@style/group_item_text_left"
+            android:text="昵称" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            style="@style/group_item_text_right"
+            android:text="小胖是淡淡的" />
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_phone"
+        style="@style/group_item_style" >
+
+        <TextView
+            style="@style/group_item_text_left"
+            android:text="手机" />
+
+        <TextView
+            android:id="@+id/layout_phone_tv"
+            style="@style/group_item_text_right"
+            android:hint="手机号未知"
+            android:inputType="phone"
+            android:text="13888888888" />
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_email"
+        style="@style/group_item_style" >
+
+        <TextView
+            style="@style/group_item_text_left"
+            android:text="邮箱" />
+
+        <TextView
+            android:id="@+id/layout_email_tv"
+            style="@style/group_item_text_right"
+            android:hint="暂无邮箱"
+            android:text="123465678@qq.com" />
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_signature"
+        style="@style/group_item2_style"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            style="@style/group_item_title"
+            android:text="个人签名" />
+
+        <TextView
+            android:id="@+id/profile_tv_signature"
+            style="@style/group_item_content"
+            android:layout_marginTop="5dp"
+            android:hint="暂无签名"
+            android:text="飒飒西风满院载，蕊寒香冷蝶难来。他年我若为青帝，报与桃花一处开。" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textview_privateinfo_title"
+            style="@style/info_group_title_style"
+            android:text="个人信息" />
+
+        <include layout="@layout/include_fillparent_blueline" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_industry"
+        style="@style/group_item_style" >
+
+        <TextView
+            android:id="@+id/profile_sign_title"
+            style="@style/group_item_text_left"
+            android:text="所在城市" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profile_sign_title"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_industry"
+                style="@style/group_item_text_right"
+                android:text="深圳首都师" />
+        </LinearLayout>
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_school"
+        style="@style/group_item_style" >
+
+        <TextView
+            android:id="@+id/layout_univ_title"
+            style="@style/group_item_text_left"
+            android:text="毕业院校" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/layout_univ_title"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/profile_tv_school"
+                style="@style/group_item_text_right"
+                android:text="吉林艺术学" />
+        </LinearLayout>
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_major"
+        style="@style/group_item_style" >
+
+        <TextView
+            android:id="@+id/profile_intro_company"
+            style="@style/group_item_text_left"
+            android:text="专业" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profile_intro_company"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/profile_tv_major"
+                style="@style/group_item_text_right"
+                android:text="计算机科学与技术" />
+        </LinearLayout>
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_en_time"
+        style="@style/group_item_style" >
+
+        <TextView
+            android:id="@+id/layout_en_time_title"
+            style="@style/group_item_text_left"
+            android:text="入学时间" />
+
+        <TextView
+            android:id="@+id/profile_tv_school_time"
+            style="@style/group_item_text_right"
+            android:text="2010" />
+
+        <View style="@style/group_item_divider_style" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_hobby"
+        style="@style/group_item2_style"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp" 
+        android:paddingBottom="10dp"
+        >
+
+        <TextView
+            android:id="@+id/profile_intro_hobby"
+            style="@style/group_item_title"
+            android:text="兴趣爱好" />
+
+        <TextView
+            android:id="@+id/profile_tv_hobby_sign"
+            style="@style/group_item_content"
+            android:layout_marginTop="5dp"
+            android:text="舞蹈.绘画.看电影.旅游" />
+    </LinearLayout>
+
+</LinearLayout>

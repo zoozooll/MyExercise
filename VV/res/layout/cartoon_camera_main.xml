@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <SurfaceView
+            android:id="@+id/surfaceView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+
+            <ImageView
+                android:id="@+id/face_icon"
+                android:layout_width="250dp"
+                android:layout_height="313dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/consult_avatar" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/face_vp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/change_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/change_camera" />
+
+            <Button
+                android:id="@+id/PreviewPose_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/previewpose_btn_selector" />
+
+            <TextView
+                android:id="@+id/timecamera_note"
+                android:layout_width="fill_parent"
+                android:layout_height="25dip"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@drawable/textview_cornerbg"
+                android:gravity="center"
+                android:text="亲~需要站在纯色背景中拍照哟~"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cartoon_take_photo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/time_save_btm_bar_height"
+            android:background="@color/common_bg_color"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/take_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/take_photo_actionselector" />
+
+            <TextView
+                android:id="@+id/cartooncamera_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/timecamera_album_selector"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/tab_text_selector"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/time_take_photo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/time_save_btm_bar_height"
+            android:background="@color/common_bg_color"
+            android:padding="10dip"
+            android:visibility="gone" >
+
+            <ImageButton
+                android:id="@+id/timecamera_back"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:scaleType="fitStart"
+                android:src="@drawable/take_photo_back" />
+
+            <Button
+                android:id="@+id/timecamera_takephoto"
+                android:layout_width="90dip"
+                android:layout_height="90dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/time_takephoto_selector" />
+
+            <TextView
+                android:id="@+id/timecamera_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/timecamera_album_selector"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="相册"
+                android:textColor="@color/tab_text_selector"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

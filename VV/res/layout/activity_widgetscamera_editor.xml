@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/layout_topbar"
+        layout="@layout/topbar_widgetscamera_editor" />
+
+    <ImageView
+        android:id="@+id/imv_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_topbar" >
+    </ImageView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_widgets_ctrl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/imv_preview"
+        android:layout_alignTop="@+id/imv_preview" />
+
+    <RelativeLayout
+        android:id="@+id/layout_contentSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" >
+
+        <Gallery
+            android:id="@+id/list_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/layout_lastphotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/list_category"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvw_widgets_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/timecamera_album_selector"
+                android:text="更多素材" >
+            </TextView>
+
+            <Gallery
+                android:id="@+id/list_widgets"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_Slider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_lastphotos"
+            android:contentDescription="widget slider"
+            android:src="@drawable/aboutapp_icon" />
+    </RelativeLayout>
+
+</RelativeLayout>

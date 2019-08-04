@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="148dip"
+    android:layout_height="49dip"
+    android:background="@drawable/friend_nearby_selectperson_listitem_selector"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip" >
+
+    <ImageView
+        android:id="@+id/image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:src="@drawable/friend_select_all" />
+
+    <TextView
+        android:id="@+id/text_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dip"
+        android:layout_weight="1"
+        android:text="男生"
+        android:textColor="#434343"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:id="@+id/friend_nearby_item_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="3"
+        android:src="@drawable/friend_nearby_selected"
+        android:visibility="invisible" />
+
+</LinearLayout>

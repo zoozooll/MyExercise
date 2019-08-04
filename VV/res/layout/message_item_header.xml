@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/msg_list"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/setting_item_selector"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentLeft="false"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher" >
+        </ImageView>
+
+        <RelativeLayout
+            android:id="@+id/middle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="18dip"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tvw_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="王明月"
+                android:textColor="#434343"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_ifo_wraper"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="12dp" >
+
+            <TextView
+                android:id="@+id/msg_count"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imv_arrow"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/text_roundbackground"
+                android:gravity="center"
+                android:text="99+"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                android:visibility="gone" />
+            
+            <ImageView android:id="@+id/imv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_listitem_arrow" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/msg_list"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:src="@color/share_commentItemBg" />
+
+</RelativeLayout>

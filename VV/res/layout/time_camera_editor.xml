@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.beem.project.btf"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<com.butterfly.vv.GalleryNavigation
+        android:id="@+id/editor_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/new_title_bg" />
+    <FrameLayout
+        android:id="@+id/fl_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.beem.project.btf.ui.views.SingleTouchView.StaticWrapLayout
+            android:id="@+id/staticWrapLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <ImageView
+                android:id="@+id/layout_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/deafult_imgloading" />
+
+            <com.beem.project.btf.ui.views.SingleTouchView.SingleTouchView
+                android:id="@+id/singleTouchView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:controlDrawable1="@drawable/scale_icon"
+                app:controlDrawable2="@drawable/flip_icon"
+                app:controlLocation1="right_bottom"
+                app:controlLocation2="right_top"
+                app:frameColor="#ffffff"
+                app:image_src="@drawable/img_people"
+                app:scale="1.0" />
+
+            <ImageView
+                android:id="@+id/layout_bg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/transparent" />
+
+            <ImageView
+                android:id="@+id/layout_bg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/transparent"
+                android:visibility="gone" />
+
+            <com.beem.project.btf.ui.views.DragTextView
+                android:id="@+id/myText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="5dip"
+                android:text="千里冰封，万里飘雪"
+                android:textSize="20sp"
+                android:visibility="visible" />
+        </com.beem.project.btf.ui.views.SingleTouchView.StaticWrapLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/app_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dip"
+            android:background="@color/tab_blue" >
+
+            <com.butterfly.vv.view.timeflyView.HorizontalListView
+                android:id="@+id/horizontalListView1"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/decade_wraper"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:orientation="horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip" >
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

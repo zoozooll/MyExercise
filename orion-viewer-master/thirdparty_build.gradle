@@ -1,0 +1,101 @@
+/*CHANGE necessary properties in project.gradle*/
+apply from: 'project.gradle'
+defaultTasks 'buildNativeLibs'
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+def ndkDir = properties.getProperty('ndkDir')
+
+
+buildscript {
+    repositories { mavenCentral() }
+}
+
+/*DJVU CHAIN*/
+task downloadDjvu << {
+    exec {
+        commandLine = ['git', 'clone', 'git://git.code.sf.net/p/djvu/djvulibre-git', djvu]
+    }
+
+    exec {
+        workingDir file(djvu)
+        commandLine = ['git', 'checkout', 'release.3.5.24']
+    }
+}
+
+task patchDjvu << {
+    //NB: ant do incremental copying, gradle default copy task doesn't
+    ant.copy(todir: djvu, overwrite: true, preservelastmodified: true) {
+        fileset(dir : 'orion-viewer/jni/djvu')
+    }
+
+    ant.copy(todir: djvu + '/android/jni', overwrite: true, preservelastmodified: true ) {
+        fileset(dir : 'orion-viewer/jni/common')
+    }
+}
+
+task patchAndBuildDjvu(dependsOn: [patchDjvu]) << {
+    exec {
+        workingDir file(djvu + "/android")
+        commandLine ndkDir + "/ndk-build"
+    }
+}
+
+task djvuChain(dependsOn: [downloadDjvu, patchAndBuildDjvu])
+
+patchDjvu.mustRunAfter downloadDjvu
+
+
+/*MUPDF CHAIN*/
+task downloadMupdf << {
+    exec {
+        commandLine = ['git', 'clone', 'git://git.ghostscript.com/mupdf.git', mupdf]
+    }
+
+    exec {
+        workingDir file(mupdf)
+        commandLine = ['git', 'checkout', '1.3']
+    }
+
+    exec {
+        workingDir file(mupdf)
+        commandLine 'git', 'submodule', 'init'
+    }
+    exec {
+        workingDir file(mupdf)
+        commandLine 'git', 'submodule', 'update'
+    }
+}
+
+task downloadAndMakeMupdf(dependsOn: downloadMupdf) << {
+    /*For more details see mupdf/platform/android/ReadMe.txt*/
+    exec {
+        workingDir file(mupdf)
+        commandLine 'make'
+        ignoreExitValue true
+    }
+}
+
+task patchMupdf() << {
+    ant.copy(todir: mupdf + "/platform/android/jni", overwrite: true, preservelastmodified: true) {
+        fileset(dir : 'orion-viewer/jni/mupdf')
+        fileset(dir : 'orion-viewer/jni/common')
+    }
+}
+
+task patchAndBuildMupdf(dependsOn: [patchMupdf]) << {
+    exec {
+        workingDir file(mupdf + "/platform/android")
+        commandLine ndkDir + "/ndk-build"
+    }
+}
+
+task mupdfChain(dependsOn: [downloadAndMakeMupdf, patchAndBuildMupdf])
+
+patchMupdf.mustRunAfter downloadMupdf
+patchMupdf.mustRunAfter downloadAndMakeMupdf
+mupdfChain.mustRunAfter djvuChain
+
+
+/*!!!!!!!!!!RUN ME!!!!!!!!*/
+task buildNativeLibs(dependsOn: [djvuChain, mupdfChain])

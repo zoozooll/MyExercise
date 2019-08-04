@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- #b2b2b2 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/deep_blue" />
+            <corners android:radius="5dp" />
+        </shape>
+     </item>
+     <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/regist_btn_default" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/tab_blue" />
+            <corners android:radius="5dp" />
+        </shape>
+   </item>
+</selector>

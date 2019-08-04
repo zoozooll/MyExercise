@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_normal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="2dip"
+        android:layout_marginTop="2dip"
+        android:background="@color/background_normal"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip" >
+
+        <TextView
+            android:id="@+id/info_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="共20张图片正在上传"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/bt_delete_all_delayed"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_gravity="right"
+            android:background="@drawable/waitupload_btn_selector"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="全部取消"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_upload_delayed"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/waitupload_btn_selector"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="开始上传"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip" >
+
+        <com.butterfly.vv.view.timeflyView.HorizontalListView
+            android:id="@+id/hlvCustomList_dia"
+            android:layout_width="match_parent"
+            android:layout_height="63dip"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="#cacaca"
+        android:orientation="vertical" />
+
+</LinearLayout>

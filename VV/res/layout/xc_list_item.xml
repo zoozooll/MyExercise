@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="200dip"
+    android:background="@color/common_bg_color"
+    android:focusable="false" >
+
+    <ImageView
+        android:id="@+id/list_latest_img"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/new_list_item_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+         android:scaleType="centerCrop" >
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/list_item_info_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/new_list_item_bottom_bg_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/xc_img_info_layout_bg" >
+
+        <ImageView
+            android:id="@+id/watchtag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dip"
+            android:src="@drawable/xc_time_tag_pic" />
+
+        <TextView
+            android:id="@+id/timetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/watchtag"
+            android:text="15分钟前"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/placetag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@id/timetxt"
+            android:src="@drawable/xc_place_tag_pic" />
+
+        <TextView
+            android:id="@+id/placetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/placetag"
+            android:text="深圳罗湖"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/choicetag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dip"
+            android:background="@drawable/xc_btn_check"
+            android:button="@null"
+            android:focusable="false" />
+    </RelativeLayout>
+
+</RelativeLayout>

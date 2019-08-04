@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundImg="http://schemas.android.com/apk/res/com.beem.project.btf"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" 
+    android:id="@+id/rl_whole">
+
+    <!--
+         <ScrollView
+        android:id="@+id/firstab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dip"
+        android:scrollbars="none"
+        android:visibility="visible" >
+    -->
+
+
+    <!--
+             <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             >
+    -->
+
+    <LinearLayout
+        android:id="@+id/rl_cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingTop="15.0dip" >
+
+        <com.butterfly.vv.view.CircleImageView
+            android:id="@+id/login_photo_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/reg_card"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/create_account_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/transparent"
+            android:drawableLeft="@drawable/register_name_selector"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical|left"
+            android:hint="输入名字"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLength="10"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:singleLine="true"
+            android:textColor="@color/edittext"
+            android:textColorHint="@color/edithint"
+            android:textSize="15sp" />
+
+        <include layout="@layout/include_patterns_divideline" />
+
+        <EditText
+            android:id="@+id/create_account_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/transparent"
+            android:drawableLeft="@drawable/register_password_selector"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical|left"
+            android:hint="请输入至少6位数的密码"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:singleLine="true"
+            android:textColor="@color/edittext"
+            android:textColorHint="@color/edithint"
+            android:textSize="15sp" />
+
+        <include layout="@layout/include_patterns_divideline" />
+
+        <EditText
+            android:id="@+id/create_account_confirm_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/transparent"
+            android:drawableLeft="@drawable/register_repassword_selector"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical|left"
+            android:hint="重复输入密码"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:singleLine="true"
+            android:textColor="@color/edittext"
+            android:textColorHint="@color/edithint"
+            android:textSize="15sp" />
+
+        <include layout="@layout/include_patterns_divideline" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男"
+                android:textColor="@color/text_gray_more" />
+
+            <ToggleButton
+                android:id="@+id/sex_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/ios7_btn"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女"
+                android:textColor="@color/text_gray_more" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/blue_btn_selector"
+            android:gravity="center"
+            android:text="@string/register_btn"
+            android:textColor="@color/white_font"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/rl_cont" >
+
+        <TextView
+            android:id="@+id/rg_tv_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:text="@string/login_register_protocol"
+            android:textColor="#cacaca"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- </RelativeLayout> -->
+    <!-- </ScrollView> -->
+
+</RelativeLayout>

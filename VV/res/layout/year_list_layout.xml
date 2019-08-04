@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/expandable_toggle_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/connectline_top"
+            layout="@layout/timefly_vertical_line"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip" >
+
+            <ImageView
+                android:id="@+id/year_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dip"
+                android:adjustViewBounds="true"
+                android:background="@drawable/timefly_month_1"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/year_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@+id/year_icon"
+                android:text="2014年"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/up_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="23dip"
+                android:layout_toRightOf="@+id/year_text"
+                android:background="@drawable/month_updown_selector"
+                android:clickable="true"
+                android:focusable="true" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/connectline"
+            layout="@layout/timefly_vertical_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/expandable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.tjerkw.slideexpandable.library.SlideExpandableListView
+            android:id="@+id/monthlistview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:divider="#00000000"
+            android:dividerHeight="0dp"
+            android:focusable="false"
+            android:listSelector="#00000000"
+            android:scrollbars="none" >
+        </com.tjerkw.slideexpandable.library.SlideExpandableListView>
+    </LinearLayout>
+
+</LinearLayout>

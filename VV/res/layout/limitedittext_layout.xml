@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dip" >
+
+    <EditText
+        android:id="@+id/ed"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/limitedittext_bg"
+        android:gravity="top|left"
+        android:hint="输入相册签名(最多40个字)"
+        android:padding="4dip"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="4dip"
+        android:layout_marginRight="4dip"
+        android:hint="24" />
+
+</RelativeLayout>

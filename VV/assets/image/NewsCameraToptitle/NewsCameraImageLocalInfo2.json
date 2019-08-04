@@ -1,0 +1,534 @@
+{
+ "data"          : [
+  {
+   "id"            : "Bb001",
+   "groupid"       : "Bb",
+   "path"          : "assets://image/NewsCameraToptitle/Bb001.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bb001_thumbnail.jpg",
+   "srcbmposition" : "4.2222223,6.2179956",
+   "srcbmsize"     : "93.333336,89.46598",
+   "toptitle"      : [
+    {
+     "textColor"     : "#0c0c0c",
+     "textPosition"  : "3.1111112,4.023409",
+     "textSize"      : "2.2677395",
+     "textBound"     : "36.444443,4.2428675",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "25th JUNE 2018"
+    },
+    {
+     "textColor"     : "#0c0c0c",
+     "textPosition"  : "3.1111112,8.412582",
+     "textSize"      : "5.7059255",
+     "textBound"     : "21.777779,7.315289",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "深圳"
+    },
+    {
+     "textColor"     : "#0c0c0c",
+     "textPosition"  : "63.444443,67.95904",
+     "textSize"      : "1.1704463",
+     "textBound"     : "35.333332,1.8288223",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "FRIENDS"
+    },
+    {
+     "textColor"     : "#0c0c0c",
+     "textPosition"  : "56.22222,70.51939",
+     "textSize"      : "1.1704463",
+     "textBound"     : "42.555557,1.8288223",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "PLEASE LET"
+    },
+    {
+     "textColor"     : "#0c0c0c",
+     "textPosition"  : "56.22222,73.079735",
+     "textSize"      : "1.1704463",
+     "textBound"     : "42.666668,1.8288223",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "US BELIEVE"
+    },
+    {
+     "textColor"     : "#0c0c0c",
+     "textPosition"  : "67.0,75.64009",
+     "textSize"      : "1.1704463",
+     "textBound"     : "31.777779,1.8288223",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "IN THE"
+    },
+    {
+     "textColor"     : "#0c0c0c",
+     "textPosition"  : "65.55556,78.20044",
+     "textSize"      : "1.1704463",
+     "textBound"     : "33.22222,1.8288223",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "FUTURE"
+    },
+    {
+     "textColor"     : "#0c0c0c",
+     "textPosition"  : "56.22222,80.76079",
+     "textSize"      : "1.1704463",
+     "textBound"     : "42.666668,1.8288223",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "BELIEVE IN"
+    },
+    {
+     "textColor"     : "#0c0c0c",
+     "textPosition"  : "77.333336,83.321144",
+     "textSize"      : "1.1704463",
+     "textBound"     : "21.444445,1.8288223",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "OUR"
+    },
+    {
+     "textColor"     : "#0c0c0c",
+     "textPosition"  : "51.22222,85.88149",
+     "textSize"      : "1.1704463",
+     "textBound"     : "47.555557,1.8288223",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "UNBENDING"
+    },
+    {
+     "textColor"     : "#0c0c0c",
+     "textPosition"  : "60.88889,88.44184",
+     "textSize"      : "1.1704463",
+     "textBound"     : "37.88889,1.8288223",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "STRIVING"
+    }
+   ]
+  },
+  {
+   "id"            : "Bb002",
+   "groupid"       : "Bb",
+   "path"          : "assets://image/NewsCameraToptitle/Bb002.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bb002_thumbnail.jpg",
+   "srcbmposition" : "14.111111,13.386979",
+   "srcbmsize"     : "72.0,71.982445",
+   "toptitle"      : [
+    {
+     "textColor"     : "#d7232f",
+     "textPosition"  : "15.222222,39.356255",
+     "textSize"      : "1.7556694",
+     "textBound"     : "69.77778,2.706657",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "LIFE IS FULL OF BEAUTY"
+    },
+    {
+     "textColor"     : "#fffefe",
+     "textPosition"  : "10.444445,42.355522",
+     "textSize"      : "1.4630578",
+     "textBound"     : "16.222221,2.706657",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "2018/09/17"
+    },
+    {
+     "textColor"     : "#fffefe",
+     "textPosition"  : "40.333332,42.501827",
+     "textSize"      : "1.975128",
+     "textBound"     : "42.88889,2.706657",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "-INSTAMAG"
+    },
+    {
+     "textColor"     : "#d92230",
+     "textPosition"  : "15.111111,79.6635",
+     "textSize"      : "4.681785",
+     "textBound"     : "69.666664,6.1448426",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "SILENCE"
+    }
+   ]
+  },
+  {
+   "id"            : "Bb003",
+   "groupid"       : "Bb",
+   "path"          : "assets://image/NewsCameraToptitle/Bb003.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bb003_thumbnail.jpg",
+   "srcbmposition" : "0.0,0.0",
+   "srcbmsize"     : "100.0,81.346016",
+   "toptitle"      : [
+    {
+     "textColor"     : "#3a3a3a",
+     "textPosition"  : "6.7777777,18.72714",
+     "textSize"      : "2.4140453",
+     "textBound"     : "17.555555,2.8529627",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "Love"
+    },
+    {
+     "textColor"     : "#3a3a3a",
+     "textPosition"  : "6.7777777,25.676664",
+     "textSize"      : "2.4140453",
+     "textBound"     : "18.333334,2.9261155",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "Time"
+    },
+    {
+     "textColor"     : "#3a3a3a",
+     "textPosition"  : "8.111111,72.860275",
+     "textSize"      : "2.3408926",
+     "textBound"     : "41.22222,5.1938553",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "The Joy of Living"
+    },
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "81.111115,42.501827",
+     "textSize"      : "1.6093636",
+     "textBound"     : "19.0,3.5844915",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "speak"
+    },
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "82.666664,36.72275",
+     "textSize"      : "1.8288223",
+     "textBound"     : "17.333334,3.1455743",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "Eyes"
+    }
+   ]
+  },
+  {
+   "id"            : "Bb004",
+   "groupid"       : "Bb",
+   "path"          : "assets://image/NewsCameraToptitle/Bb004.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bb004_thumbnail.jpg",
+   "srcbmposition" : "3.2222223,12.143379",
+   "srcbmsize"     : "93.0,84.491585",
+   "toptitle"      : [
+    {
+     "textColor"     : "#1C3331",
+     "textPosition"  : "0.8888889,5.413314",
+     "textSize"      : "2.1214337",
+     "textBound"     : "95.0,2.9992685",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "THE SUNDAY TIMES"
+    },
+    {
+     "textColor"     : "#102826",
+     "textPosition"  : "0.8888889,9.070958",
+     "textSize"      : "3.5844915",
+     "textBound"     : "42.444443,5.6327724",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "Dream"
+    },
+    {
+     "textColor"     : "#102826",
+     "textPosition"  : "0.8888889,22.604242",
+     "textSize"      : "1.9019752",
+     "textBound"     : "30.222221,3.218727",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "21 · 4 · 18"
+    },
+    {
+     "textColor"     : "#102826",
+     "textPosition"  : "3.1111112,96.78127",
+     "textSize"      : "1.0241405",
+     "textBound"     : "57.22222,1.8288223",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "深圳	迎龙山公园"
+    }
+   ]
+  },
+  {
+   "id"            : "Bb005",
+   "groupid"       : "Bb",
+   "path"          : "assets://image/NewsCameraToptitle/Bb005.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bb005_thumbnail.jpg",
+   "srcbmposition" : "18.333334,8.924652",
+   "srcbmsize"     : "63.0,80.61449",
+   "toptitle"      : [
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "2.7777777,2.4871984",
+     "textSize"      : "1.3899049",
+     "textBound"     : "79.22222,1.8288223",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "2018年12月3日 深圳"
+    },
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "26.222221,31.309437",
+     "textSize"      : "2.8529627",
+     "textBound"     : "42.77778,3.2918801",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "24 DE XUNO"
+    },
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "29.333334,35.69861",
+     "textSize"      : "2.8529627",
+     "textBound"     : "28.11111,3.365033",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "21:00 H"
+    },
+    {
+     "textColor"     : "#000000",
+     "textPosition"  : "34.77778,79.88296",
+     "textSize"      : "1.7556694",
+     "textBound"     : "32.555557,1.6825165",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "MORNING"
+    }
+   ]
+  },
+  {
+   "id"            : "Bb006",
+   "groupid"       : "Bb",
+   "path"          : "assets://image/NewsCameraToptitle/Bb006.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bb006_thumbnail.jpg",
+   "srcbmposition" : "7.2222223,5.925384",
+   "srcbmsize"     : "87.333336,82.00439",
+   "toptitle"      : [
+    {
+     "textColor"     : "#363636",
+     "textPosition"  : "7.7777777,3.2918801",
+     "textSize"      : "3.5113387",
+     "textBound"     : "48.444443,5.6327724",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "PORTRAIT DE"
+    },
+    {
+     "textColor"     : "#363636",
+     "textPosition"  : "7.7777777,9.217264",
+     "textSize"      : "3.5113387",
+     "textBound"     : "48.444443,5.7059255",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "L`ARTISTE EN"
+    },
+    {
+     "textColor"     : "#363636",
+     "textPosition"  : "7.2222223,89.02707",
+     "textSize"      : "1.9019752",
+     "textBound"     : "31.333334,3.1455743",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "21.03-12.0918"
+    }
+   ]
+  },
+  {
+   "id"            : "Bb007",
+   "groupid"       : "Bb",
+   "path"          : "assets://image/NewsCameraToptitle/Bb007.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bb007_thumbnail.jpg",
+   "srcbmposition" : "2.0,7.0958304",
+   "srcbmsize"     : "96.333336,88.515",
+   "toptitle"      : [
+    {
+     "textColor"     : "#212121",
+     "textPosition"  : "2.6666667,0.43891734",
+     "textSize"      : "1.6825165",
+     "textBound"     : "82.0,2.5603511",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "2018年8月8日    深圳  迎龙山公园"
+    },
+    {
+     "textColor"     : "#18191a",
+     "textPosition"  : "2.6666667,95.97659",
+     "textSize"      : "0.8778347",
+     "textBound"     : "95.333336,2.4871984",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "THE VERY ESSENCE OF BEAUTY IS UNCERTAINTY"
+    }
+   ]
+  },
+  {
+   "id"            : "Bb008",
+   "groupid"       : "Bb",
+   "path"          : "assets://image/NewsCameraToptitle/Bb008.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bb008_thumbnail.jpg",
+   "srcbmposition" : "0.0,0.0",
+   "srcbmsize"     : "100.0,100.0",
+   "toptitle"      : [
+    {
+     "textColor"     : "#828282",
+     "textPosition"  : "0.8888889,3.365033",
+     "textSize"      : "1.5362107",
+     "textBound"     : "21.222221,2.2677395",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "深圳   2018 8  8"
+    },
+   {
+     "textColor"     : "#828282",
+     "textPosition"  : "5.0,13.1675205",
+     "textSize"      : "2.3408926",
+     "textBound"     : "92.44444,2.3408926",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "六月的天像孩子的脸,说变就变,天色忽然变得黑暗了,"
+    },
+    {
+     "textColor"     : "#828282",
+     "textPosition"  : "5.0,15.874177",
+     "textSize"      : "2.3408926",
+     "textBound"     : "92.44444,2.3408926",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "天空平地生出一片铁青色的云,接着激起一片震天动地的雷声,"
+    },
+    {
+     "textColor"     : "#828282",
+     "textPosition"  : "4.7777777,18.288223",
+     "textSize"      : "2.3408926",
+     "textBound"     : "92.44444,2.3408926",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "仿佛要把那座大山炸碎。"
+    },
+    {
+     "textColor"     : "#828282",
+     "textPosition"  : "0.0,88.22238",
+     "textSize"      : "1.5362107",
+     "textBound"     : "97.55556,2.1214337",
+     "textGravity"   : "right",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "Life is fine and enjoyable"
+    }
+   ]
+  },
+  {
+   "id"            : "Bb009",
+   "groupid"       : "Bb",
+   "path"          : "assets://image/NewsCameraToptitle/Bb009.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bb009_thumbnail.jpg",
+   "srcbmposition" : "6.111111,14.557425",
+   "srcbmsize"     : "89.0,58.449158",
+   "toptitle"      : [
+    {
+     "textColor"     : "#f3925c",
+     "textPosition"  : "0.0,0.8778347",
+     "textSize"      : "1.6825165",
+     "textBound"     : "100.0,4.3891735",
+     "textGravity"   : "center",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "DON'  T LET THE PAST STEAL YOUR PRESENT"
+    }
+   ]
+  },
+  {
+   "id"            : "Bb010",
+   "groupid"       : "Bb",
+   "path"          : "assets://image/NewsCameraToptitle/Bb010.png",
+   "paththumb"     : "assets://image/NewsCameraToptitle/Bb010_thumbnail.jpg",
+   "srcbmposition" : "0.0,0.0",
+   "srcbmsize"     : "100.0,100.0",
+   "toptitle"      : [
+    {
+     "textColor"     : "#313131",
+     "textPosition"  : "45.444443,83.906364",
+     "textSize"      : "1.2435992",
+     "textBound"     : "54.666668,2.4871984",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "There is something inside,"
+    },
+    {
+     "textColor"     : "#313131",
+     "textPosition"  : "45.444443,87.05194",
+     "textSize"      : "1.2435992",
+     "textBound"     : "54.666668,2.4871984",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "that they can't get to,"
+    },
+    {
+     "textColor"     : "#313131",
+     "textPosition"  : "45.444443,90.27067",
+     "textSize"      : "1.2435992",
+     "textBound"     : "54.666668,2.4871984",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "that they can't touch."
+    },
+    {
+     "textColor"     : "#313131",
+     "textPosition"  : "45.444443,93.489395",
+     "textSize"      : "1.2435992",
+     "textBound"     : "54.666668,2.4871984",
+     "textGravity"   : "left",
+     "hasShadow"     : "false",
+     "fontPath"      : "",
+     "noteText"      : "That's yours."
+    }
+   ]
+   }
+ ]
+}

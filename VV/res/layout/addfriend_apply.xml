@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9feff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_top_bar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/scroll_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <include layout="@layout/contactlistcontact" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dip"
+                android:paddingLeft="12dip"
+                android:paddingRight="12dip"
+                android:paddingTop="6dip" >
+
+                <TextView
+                    android:id="@+id/verify_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="验证消息 :"
+                    android:textColor="#cacaca"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/apply_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/verify_hint"
+                    android:layout_marginTop="6dip"
+                    android:text="我是xx，我宣你，你造吗，测试测试测试测试测试测试测试测试测试测试测试测试测试试测试测试测试测试测试测试测试测试测试试测试测试测试测试"
+                    android:textColor="#888888"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <include layout="@layout/include_patterns_divideline" />
+
+            <LinearLayout
+                android:id="@+id/apply_choice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="35dip"
+                android:layout_marginRight="35dip"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/refuse"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:background="@drawable/red_btn_selector"
+                    android:clickable="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/refuse_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dip"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/refuse_icon"
+                        android:drawablePadding="5dip"
+                        android:gravity="center"
+                        android:text="拒绝"
+                        android:textColor="@color/white_font" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/agree"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blue_btn_selector"
+                    android:clickable="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/agree_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dip"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/agree_icon"
+                        android:drawablePadding="5dip"
+                        android:gravity="center"
+                        android:text="同意"
+                        android:textColor="@color/white_font" />
+                </LinearLayout>
+            </LinearLayout>
+            
+            <TextView android:id="@+id/tvw_applyResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#434343"
+                android:textSize="16sp"
+                android:text="@string/friend_accessed_message" >
+            </TextView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

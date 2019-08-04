@@ -1,0 +1,66 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dateframelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_color" >
+
+    <!-- 自定义分页ListView -->
+
+    <ListView
+        android:id="@+id/autolist1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/transparent"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent"
+        android:overScrollMode="never" />
+
+    <include
+        android:id="@android:id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/layout_empty"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/popup_seek_button"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/xc_seekbutton" />
+
+    <!--
+    <LinearLayout
+        android:id="@+id/grid_item_indicator"
+        android:layout_width="@dimen/date_grid_item_width"
+        android:layout_height="4dip"
+        android:layout_gravity="right"
+        android:layout_marginTop="66dip"
+        android:background="#ffef5b49"
+        android:visibility="gone"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/dategrid"
+        android:layout_width="@dimen/date_grid_item_width"
+        android:layout_height="fill_parent"
+        android:layout_gravity="right"
+        android:horizontalSpacing="2dip"
+        android:numColumns="1"
+        android:scrollbars="none"
+        android:verticalSpacing="2dip"
+        android:visibility="gone" />
+    -->
+
+
+    <!-- loading progress when loading message -->
+	<include
+        android:id="@+id/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_progress"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/shareranking_divide" />
+
+    <LinearLayout
+        android:id="@+id/layout_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/btn_tagitem0"
+            style="@style/mainpager_tags_tvw"
+            android:drawableTop="@drawable/friend_selector"
+            android:text="@string/friends" />
+
+        <TextView
+            android:id="@+id/btn_tagitem1"
+            style="@style/mainpager_tags_tvw"
+            android:drawableTop="@drawable/time_selector"
+            android:text="@string/time_machine" />
+
+        <TextView
+            android:id="@+id/btn_tagitem2"
+            style="@style/mainpager_tags_tvw"
+            android:drawableTop="@drawable/rss_selector"
+            android:text="@string/vvim_share" />
+
+        <include
+            android:id="@+id/btn_tagitem3"
+            style="@style/mainpager_tags_tvw"
+            layout="@layout/tabs_bg" />
+    </LinearLayout>
+
+</LinearLayout>
