@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res/com.oregonscientific.bbq"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ht"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/actionbarbg" >
+
+        <ImageView
+            android:id="@+id/menuimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_drawer" />
+
+        <ImageView
+            android:id="@+id/homeimg"
+            style="@style/marginleftcenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/menuimg"
+            android:background="@drawable/iconhistoryselected" />
+
+        <TextView
+            android:id="@+id/hometext"
+            style="@style/top_size_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/homeimg"
+            android:text="History" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"	
+            android:textColor="#D3D3D3"	
+            android:text="TextView" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imageView3"
+            android:textSize="20dp"		
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@+id/textView4"
+            android:src="@drawable/iconcountup" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imageView4"
+            android:textSize="20dp"		
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="23dp"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        <com.oregonscientific.bbq.view.DonenessCoordinate
+		    android:id="@+id/DonenessCoordinate1"
+		    android:layout_width="match_parent"
+		    android:layout_height="350dp"
+		    />
+        
+          <TextView
+            android:id="@+id/MEMO"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="MEMO" 
+            android:textColor="#DCDCDC"	
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            />
+		<ImageView android:id="@+id/horizline"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/linet"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/channelchoose"
+            /> 
+                   
+          <EditText
+		  android:id="@+id/EditText01"
+		  android:layout_width="fill_parent"
+		  android:layout_height="wrap_content"
+		  android:layout_marginLeft="10dp"
+		  android:textSize="18sp"	
+		  android:background="@android:color/transparent"
+		  />
+        
+    </LinearLayout>
+
+</LinearLayout>

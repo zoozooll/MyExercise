@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mogoo.market.widget.SegmentedButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedbutton="http://schemas.android.com/apk/res/com.mogoo.market"
+    android:id="@+id/segmented"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tab_bkg_2"
+    segmentedbutton:btnWidth="@dimen/cate_top_btn_width"
+    segmentedbutton:btnHeight="@dimen/cate_top_btn_height"
+	segmentedbutton:normalDrawable="@drawable/btn_tab_normal_2"
+    segmentedbutton:pressedDrawable="@drawable/btn_tab_selected_2"
+    segmentedbutton:selectedDrawable="@drawable/btn_tab_selected_2"
+    segmentedbutton:textStyle="@style/tab_button_text" 
+    segmentedbutton:textSelectedColor="#ffffffff"
+    segmentedbutton:textUnSelectedColor="#ff26495f">
+
+</com.mogoo.market.widget.SegmentedButton>

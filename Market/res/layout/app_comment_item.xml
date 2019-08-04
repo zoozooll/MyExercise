@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/app_comment_item_lay" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	
+	android:paddingLeft="16dip"
+	android:paddingRight="16dip"
+	
+	android:orientation="vertical"
+	android:background="@color/white">
+	
+	<RelativeLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		>
+		
+		<TextView 
+			android:id="@+id/cm_name"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			
+			android:textColor="#193460"
+            android:textSize="12sp"
+                    
+			android:singleLine="true"
+			android:maxLength="8"
+			android:ellipsize="end"
+			>
+		</TextView>
+		
+		<RatingBar 
+			android:id="@+id/cm_rating" 
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/ratingbar_h" 
+			
+			android:layout_alignParentRight="true"
+			
+			style="@style/custom_normal_ratingbar" >
+		</RatingBar>
+		
+	</RelativeLayout>
+	
+	<TextView 
+		android:id="@+id/cm_content"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		
+		android:textColor="#193460"
+        android:textSize="12sp"
+		>
+	</TextView>
+	
+	<TextView 
+		android:id="@+id/cm_date"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		
+		android:gravity="right"
+		
+		android:textColor="#193460"
+        android:textSize="12sp"
+		
+		android:singleLine="true"
+		android:ellipsize="end"
+		>
+	</TextView>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="IrregularButton">
+    <attr name="clickRangeTop" format="dimension" />
+	<attr name="clickRangeLeft" format="dimension" />
+    <attr name="clickRangeBottom" format="dimension" />
+	<attr name="clickRangeRight" format="dimension" />
+  </declare-styleable> 
+</resources>

@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/listitemheight"
+    >
+    <TextView android:id="@+id/tempname"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:text="Medium well"
+   	    android:textColor="#FFFFFF"
+    	style="@style/marginleftcentersize"
+    	android:layout_alignParentLeft="true"
+   	    />
+   	<ImageView android:id="@+id/templ"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:src="@drawable/menu_arrow_start"
+   	    android:layout_toLeftOf="@+id/tempaddpluse"
+   	    style="@style/marginrightcenter"
+   	    />
+   	<TextView android:id="@+id/tempaddpluse"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+    	android:layout_toLeftOf="@+id/tempaddpluseunit"
+    	style="@style/rarewidth"
+   	    />
+   	<TextView android:id="@+id/tempaddpluseunit"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:text="@string/tempf"
+    	android:layout_toLeftOf="@+id/tempr"
+    	style="@style/rarewidth"
+   	    />
+   	<ImageView android:id="@+id/tempr"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:src="@drawable/menu_arrow_end"
+   	    android:layout_alignParentRight="true"
+   	    style="@style/marginrightcenter"
+   	    />
+</RelativeLayout>

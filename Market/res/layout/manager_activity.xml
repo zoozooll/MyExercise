@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:segmentedbutton="http://schemas.android.com/apk/res/com.mogoo.market"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  
+  <!-- <LinearLayout
+        android:id="@+id/topLayout"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/header_layout_h"
+        android:background="@drawable/header_bg" 
+        >
+        
+        <com.mogoo.market.widget.SegmentedButton 
+		    android:id="@+id/segmented"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+			segmentedbutton:normalDrawable="@drawable/btn_segmented_normal"
+		    segmentedbutton:pressedDrawable="@drawable/btn_segmented_selected"
+		    segmentedbutton:selectedDrawable="@drawable/btn_segmented_selected"
+		    segmentedbutton:textStyle="@style/segmented_button_text" >
+		    
+  		</com.mogoo.market.widget.SegmentedButton>
+        
+  </LinearLayout> -->
+        
+    
+</LinearLayout>

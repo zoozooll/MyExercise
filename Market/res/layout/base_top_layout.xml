@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mogoo.market.widget.SegmentedButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedbutton="http://schemas.android.com/apk/res/com.mogoo.market"
+    android:id="@+id/segmented"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/header_bg"
+	segmentedbutton:normalDrawable="@drawable/btn_segmented_normal"
+    segmentedbutton:pressedDrawable="@drawable/btn_segmented_selected"
+    segmentedbutton:selectedDrawable="@drawable/btn_segmented_selected"
+    segmentedbutton:textStyle="@style/segmented_button_text" >
+
+</com.mogoo.market.widget.SegmentedButton>

@@ -1,0 +1,401 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg01_iphone5"
+    >
+	<include android:id="@+id/create_user_top"
+	    layout="@layout/create_user_top"
+	    android:layout_alignParentTop="true"
+	    />
+	
+	<ScrollView android:layout_width="fill_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/create_user_top"
+	    >
+	    <RelativeLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="match_parent"
+	        >
+	        <include android:id="@+id/profile_picture"
+			    layout="@layout/profile_picture"
+			    android:layout_alignParentTop="true"
+			    />
+	        <ImageView android:id="@+id/line1"
+	            android:layout_width="fill_parent"
+	            android:layout_height="15dp"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
+	            android:background="#D7D7D7"
+	            android:layout_below="@+id/profile_picture"
+	            />
+	        
+	        
+	        <RelativeLayout android:id="@+id/create_name"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/line1"
+	            >
+	            <RelativeLayout android:id="@+id/create_name_left"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="20dp"
+	            >
+	            	<ImageView android:id="@+id/icon_name"
+	            	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:background="@drawable/icon_name"
+	            	/>
+	            	<TextView android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_below="@+id/icon_name"
+	            	android:text="@string/create_name"
+	            	android:textColor="#747474"
+	            	/>
+	            </RelativeLayout>
+	            <EditText android:id="@+id/create_name_edit"
+	                android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:hint="@string/create_name"
+	            	android:maxLength="20"
+	            	android:singleLine="true"
+	            	android:layout_centerVertical="true"
+	            	android:layout_alignParentRight="true"
+	            	android:layout_marginRight="20dp"
+	            	android:selectAllOnFocus="true"
+	            	android:background="#00000000"
+	            	android:textColor="#747474"
+	            	/>
+	        </RelativeLayout>
+	        <ImageView android:id="@+id/line2"
+	            android:layout_width="fill_parent"
+	            android:layout_height="15dp"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
+	            android:background="#D7D7D7"
+	            android:layout_below="@+id/create_name"
+	            />
+	        
+	        
+	        <RelativeLayout android:id="@+id/create_birthday"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/line2"
+	            >
+	            <RelativeLayout android:id="@+id/create_birthday_left"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="20dp"
+	            >
+	            	<ImageView android:id="@+id/icon_birthday"
+	            	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:background="@drawable/icon_birth"
+	            	/>
+	            	<TextView android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_below="@+id/icon_birthday"
+	            	android:text="@string/create_birthday"
+	            	android:textColor="#747474"
+	            	/>
+	            </RelativeLayout>
+	            <TextView android:id="@+id/create_birthday_edit"
+	                android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:text="@string/create_birthday_value"
+	            	android:layout_centerVertical="true"
+	            	android:layout_alignParentRight="true"
+	            	android:layout_marginRight="20dp"
+	            	android:textColor="#747474"
+	            	/>
+	        </RelativeLayout>
+	        <ImageView android:id="@+id/line3"
+	            android:layout_width="fill_parent"
+	            android:layout_height="15dp"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
+	            android:background="#D7D7D7"
+	            android:layout_below="@+id/create_birthday"
+	            />
+	        
+	        
+	        <RelativeLayout android:id="@+id/create_gender"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/line3"
+	            >
+	            <RelativeLayout android:id="@+id/create_gender_left"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="20dp"
+	            >
+	            	<ImageView android:id="@+id/icon_gender"
+	            	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:background="@drawable/icon_gender"
+	            	/>
+	            	<TextView android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_below="@+id/icon_gender"
+	            	android:text="@string/create_gender"
+	            	android:textColor="#747474"
+	            	/>
+	            </RelativeLayout>
+	            <ImageView android:id="@+id/create_gender_choose"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	            	android:layout_marginRight="20dp"
+	                android:background="@drawable/gender_male"
+	                />
+	            
+	            <RelativeLayout android:id="@+id/create_gender_isPregnancy"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/create_gender_left"
+	                android:visibility="gone"
+	                >
+	            	<ImageView android:id="@+id/lineisPregnancy"
+		            android:layout_width="fill_parent"
+		            android:layout_height="3dp"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginBottom="10dp"
+		            android:background="#D7D7D7"
+		            android:layout_alignParentTop="true"
+		            />
+	                <RelativeLayout android:id="@+id/create_gender_isPregnancy_left"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_below="@+id/lineisPregnancy"
+		            android:layout_marginLeft="20dp"
+		            >
+		            	<ImageView android:id="@+id/icon_pregnancy"
+		            	android:layout_width="wrap_content"
+		            	android:layout_height="wrap_content"
+		            	android:background="@drawable/icon_pregnancy"
+		            	/>
+		            	<TextView android:layout_width="wrap_content"
+		            	android:layout_height="wrap_content"
+		            	android:layout_below="@+id/icon_pregnancy"
+		            	android:text="@string/create_pregnancy"
+		            	android:textColor="#747474"
+		            	/>
+	            	</RelativeLayout>
+	            	<Switch android:id="@+id/isPregnancy_choose"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true"
+		            	android:layout_marginRight="20dp"
+		                android:textOn="@string/create_pregnancy_yes"
+		                android:textOff="@string/create_pregnancy_no"
+		                android:layout_centerVertical="true"
+		                android:checked="false"
+		                />
+	            </RelativeLayout>
+	            <ImageView android:id="@+id/lineweeksdays"
+		            android:layout_width="fill_parent"
+		            android:layout_height="3dp"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginBottom="10dp"
+		            android:background="#D7D7D7"
+		            android:visibility="gone"
+		            android:layout_below="@+id/create_gender_isPregnancy"
+		            />
+	            
+            	<RelativeLayout android:id="@+id/weeksdays"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_below="@+id/lineweeksdays"
+            	    android:visibility="gone"
+            	    >
+	            	<RelativeLayout android:id="@+id/create_name_left"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="20dp"
+		            >
+		            	<ImageView android:id="@+id/icon_name"
+		            	android:layout_width="wrap_content"
+		            	android:layout_height="wrap_content"
+		            	android:background="@drawable/icon_period"
+		            	/>
+		            	<TextView android:layout_width="wrap_content"
+		            	android:layout_height="wrap_content"
+		            	android:layout_below="@+id/icon_name"
+		            	android:text="@string/create_pregnancy_days"
+		            	android:textColor="#747474"
+		            	/>
+	            	</RelativeLayout>
+	            	<TextView android:id="@+id/pregnancy_weeks_days"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_alignParentRight="true"
+            	    android:layout_marginRight="10dp"
+            	    android:layout_centerVertical="true"
+            	    android:text="@string/pregnancy_weeks_days"
+            	    android:textColor="#747474"
+            	    />
+            	    <!-- <NumberPicker android:id="@+id/isPregnancy_weeks_picker"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_toLeftOf="@+id/isPregnancy_weeks"
+            	    android:layout_marginRight="5dp"
+            	    android:layout_centerVertical="true"
+            	    />
+            		<TextView android:id="@+id/isPregnancy_weeks"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_toLeftOf="@+id/isPregnancy_days_picker"
+            	    android:layout_marginRight="5dp"
+            	    android:layout_centerVertical="true"
+            	    android:text="@string/pregnancy_weeks"
+            	    android:textColor="#747474"
+            	    />
+            		<NumberPicker android:id="@+id/isPregnancy_days_picker"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_toLeftOf="@+id/isPregnancy_days"
+            	    android:layout_marginRight="5dp"
+            	    android:layout_centerVertical="true"
+            	    />
+            		<TextView android:id="@+id/isPregnancy_days"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_alignParentRight="true"
+            	    android:layout_marginRight="10dp"
+            	    android:layout_centerVertical="true"
+            	    android:text="@string/pregnancy_days"
+            	    android:textColor="#747474"
+            	    /> -->
+            	</RelativeLayout>
+	        </RelativeLayout>
+	        <ImageView android:id="@+id/line4"
+	            android:layout_width="fill_parent"
+	            android:layout_height="15dp"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
+	            android:background="#D7D7D7"
+	            android:layout_below="@+id/create_gender"
+	            />
+	        
+	        
+	        <RelativeLayout android:id="@+id/create_height"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/line4"
+	            >
+	            <RelativeLayout android:id="@+id/create_height_left"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="20dp"
+	            >
+	            	<ImageView android:id="@+id/icon_height"
+	            	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:background="@drawable/icon_height"
+	            	/>
+	            	<TextView android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_below="@+id/icon_height"
+	            	android:text="@string/create_height"
+	            	android:textColor="#747474"
+	            	/>
+	            </RelativeLayout>
+	            <EditText android:id="@+id/create_height_edit"
+	                android:layout_width="100dp"
+	            	android:layout_height="wrap_content"
+	            	android:text="130"
+	            	android:gravity="center_horizontal"
+	            	android:inputType="number|numberDecimal"
+	            	android:layout_centerVertical="true"
+	            	android:layout_toLeftOf="@+id/create_height_text"
+	            	android:layout_marginRight="20dp"
+	            	android:background="#00000000"
+	            	android:textColor="#747474"
+	            	/>
+	            <TextView android:id="@+id/create_height_text"
+	                android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_centerVertical="true"
+	            	android:layout_alignParentRight="true"
+	            	android:layout_marginRight="20dp"
+	            	android:textColor="#747474"
+	            	/>
+	        </RelativeLayout>
+	        <ImageView android:id="@+id/line5"
+	            android:layout_width="fill_parent"
+	            android:layout_height="15dp"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
+	            android:background="#D7D7D7"
+	            android:layout_below="@+id/create_height"
+	            />
+	        
+	        
+	        <RelativeLayout android:id="@+id/create_height_unit"
+	            android:layout_width="fill_parent"
+	            android:layout_height="70dp"
+	            android:layout_below="@+id/line5"
+	            >
+            	<TextView android:id="@+id/create_height_left"
+            	    android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_alignParentLeft="true"
+	            	android:layout_marginLeft="20dp"
+	            	android:text="@string/create_height_unit"
+	            	android:layout_centerVertical="true"
+	            	android:textColor="#747474"
+	            	/>
+	            <TextView android:id="@+id/create_height_pop"
+	                android:layout_width="100dp"
+	            	android:layout_height="wrap_content"
+	            	android:text="@string/create_height_cm"
+	            	android:layout_centerVertical="true"
+	            	android:layout_alignParentRight="true"
+	            	android:gravity="center_horizontal"
+	            	android:textColor="#747474"
+	            	/>
+	        </RelativeLayout>
+	        <ImageView android:id="@+id/line6"
+	            android:layout_width="fill_parent"
+	            android:layout_height="3dp"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
+	            android:background="#D7D7D7"
+	            android:layout_below="@+id/create_height_unit"
+	            />
+	        
+	         <RelativeLayout android:id="@+id/create_weight_unit"
+	            android:layout_width="fill_parent"
+	            android:layout_height="70dp"
+	            android:layout_below="@+id/line6"
+	            >
+            	<TextView android:id="@+id/create_weight_left"
+            	    android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_alignParentLeft="true"
+	            	android:layout_marginLeft="20dp"
+	            	android:text="@string/create_weight"
+	            	android:layout_centerVertical="true"
+	            	android:textColor="#747474"
+	            	/>
+	            <TextView android:id="@+id/create_weight_pop"
+	                android:layout_width="100dp"
+	            	android:layout_height="wrap_content"
+	            	android:text="@string/create_weight_kg"
+	            	android:layout_centerVertical="true"
+	            	android:layout_alignParentRight="true"
+	            	android:gravity="center_horizontal"
+	            	android:textColor="#747474"
+	            	/>
+	        </RelativeLayout>
+	     </RelativeLayout>       
+	</ScrollView>
+</RelativeLayout>

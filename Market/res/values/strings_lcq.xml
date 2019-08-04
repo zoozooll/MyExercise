@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_item_down">下载</string>
+    
+	<string name="data_loading">数据加载中...</string>
+	<string name="no_more_data">没有更多数据了</string>
+	<string name="no_data_return">没有加载到数据</string>
+	
+	<string name="app_item_download_failed">下载失败</string>
+	<string name="no_sdcard_toast">没有sdcard，无法下载</string>
+	
+	<string name="install_title">装机必备</string>
+	<string name="install_local_install">本地安装</string>
+	<string name="install_recommend_app">应用推荐</string>
+	<string name="install_scan_sdcard">重新扫描SD卡</string>
+	<string name="install_more_app">点击获取更多应用…</string>
+	<string name="install_app_downing">下载中…</string>
+	
+</resources>

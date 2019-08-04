@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+     >
+
+   	<TextView android:id="@+id/unit"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:text="@string/unit"
+   	    style="@style/linetoptitlesizecolor"
+   	    />
+   	
+   	<ImageView android:id="@+id/line"
+   	    android:layout_width="fill_parent"
+   	    android:layout_height="2dp"
+   	    android:background="@drawable/linet"
+   	    android:layout_below="@id/unit"
+   	    />
+   	<RelativeLayout android:id="@+id/temp"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_below="@id/line"
+   	    android:layout_marginTop="10dp"
+   	    >
+   	    <TextView
+	   	    android:id="@+id/temptv"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:gravity="center"
+	   	    android:text="@string/temperature" 
+	   	    android:textSize="20dp"
+	   	    android:layout_centerVertical="true"
+	   	    />
+   	    <Switch android:id="@+id/switchtempcf"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_alignParentRight="true"
+	   	    android:layout_marginRight="10dp"
+	   	    android:textOn="@string/tempf"
+	   	    android:textOff="@string/tempc"
+	   	    android:layout_centerVertical="true"
+	   	    android:thumb="@drawable/switchorange"
+	   	    android:track="@drawable/switchbg"
+	   	    android:checked="true"
+	   	    />
+   	    <!-- <TextView
+	   	    android:id="@+id/tempc"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:gravity="center"
+	   	    android:text="C" 
+	   	    android:textSize="20dp"
+	   	    android:layout_toLeftOf="@+id/tempf"
+	   	    android:layout_marginRight="20dp"
+	   	    />
+   	    <TextView
+	   	    android:id="@+id/tempf"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:gravity="center"
+	   	    android:text="F" 
+	   	    android:textSize="20dp"
+	   	    android:layout_alignParentRight="true"
+	   	    android:layout_marginRight="10dp"
+	   	    /> -->
+   	</RelativeLayout>
+</RelativeLayout>

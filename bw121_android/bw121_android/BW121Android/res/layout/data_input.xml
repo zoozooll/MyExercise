@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg01_iphone5"
+    >
+    
+	<include layout="@layout/data_input_top"
+	    android:id="@+id/data_top"/>
+	
+	<TextView android:id="@+id/input_data_manually_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:text="@string/input_data_manually" 
+    android:layout_below="@+id/data_top"
+    android:layout_marginTop="10dp"
+    android:textColor="#747474"/>
+
+	<RelativeLayout android:id="@+id/input_choose_date"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/input_data_manually_text" >
+	    <TextView android:id="@+id/input_data_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/input_data_date" 
+        android:layout_marginTop="20dp"
+        android:textColor="#747474"/>
+	    
+	    <RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/input_data_date"
+	    android:layout_marginTop="10dp"
+	    >
+	    	<ImageButton 
+	    	    android:id="@+id/inputL"
+	    	    android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:src="@drawable/arrow_l"
+	    		android:layout_alignParentLeft="true"
+	    		android:background="@android:color/transparent"
+	    		android:layout_centerVertical="true"
+	    		android:layout_marginLeft="10dp"/>
+	    	
+	    	<Button
+	    	    android:id="@+id/input_data_date1"
+	    	    android:layout_width="wrap_content"
+	    	    android:layout_height="wrap_content"
+	    	    android:singleLine="true"
+	    	    android:layout_centerHorizontal="true"
+	    	    android:layout_centerVertical="true"
+	    	    android:gravity="center"
+	    	    android:paddingLeft="10dp"
+	    	    android:paddingRight="10dp"
+	    	    android:background="@android:color/transparent"
+	    	    android:textColor="#747474" />
+	    	
+	    	<ImageButton 
+	    	    android:id="@+id/inputR"
+	    	    android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:src="@drawable/arrow_r"
+	    		android:layout_alignParentRight="true"
+	    		android:background="@android:color/transparent"
+	    		android:layout_centerVertical="true"
+	    		android:layout_marginRight="10dp"/>
+	    </RelativeLayout>
+	</RelativeLayout>
+	
+	<ImageView android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#D7D7D7"
+        android:layout_below="@+id/input_choose_date"
+        />
+	
+	 <RelativeLayout android:id="@+id/input_data_weight"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/line1"
+	    android:layout_marginTop="10dp"
+	    >
+    	<TextView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:text="@string/input_data_weight"
+    		android:layout_alignParentLeft="true"
+    		android:layout_marginLeft="10dp"
+    		android:layout_centerVertical="true"
+    		android:textColor="#747474"
+    		/>
+
+    	<EditText
+    	    android:id="@+id/input_data_date2"
+    	    android:layout_width="50dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_centerVertical="true"
+    	    android:layout_marginRight="10dp"
+    	    android:layout_marginTop="10dp"
+    	    android:layout_toLeftOf="@+id/input_weight_unit"
+    	    android:background="#00000000"
+    	    android:text="0"
+    	    android:singleLine="true"
+	        android:numeric="decimal"
+    	    android:textColor="#747474" />
+
+    	<TextView android:id="@+id/input_weight_unit"
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:text="@string/weight_value_lbs"
+    		android:layout_alignParentRight="true"
+    		android:layout_centerVertical="true"
+    		android:textColor="#747474"
+    		android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+	
+	 <ImageView android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#D7D7D7"
+        android:layout_below="@+id/input_data_weight"
+        />
+	
+	 <RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/line2"
+	    android:layout_marginTop="10dp"
+	    >
+    	<TextView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:text="@string/input_data_height"
+    		android:layout_alignParentLeft="true"
+    		android:layout_marginLeft="10dp"
+    		android:layout_centerVertical="true"
+    		android:textColor="#747474"
+    		/>
+
+    	<EditText
+    	    android:id="@+id/input_data_date3"
+    	    android:layout_width="50dp"
+    	    android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:numeric="decimal"
+    	    android:layout_centerVertical="true"
+    	    android:layout_marginRight="10dp"
+    	    android:layout_marginTop="10dp"
+    	    android:layout_toLeftOf="@+id/input_height_unit"
+    	    android:background="#00000000"
+    	    android:text="0"
+    	    android:textColor="#747474" />
+
+    	<TextView android:id="@+id/input_height_unit"
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:text="@string/create_height_cm"
+    		android:layout_alignParentRight="true"
+    		android:layout_centerVertical="true"
+    		android:textColor="#747474"
+    		android:layout_marginRight="10dp"
+    		/>
+    </RelativeLayout>
+</RelativeLayout>

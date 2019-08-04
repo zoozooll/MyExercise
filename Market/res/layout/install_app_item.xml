@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:irregularbutton="http://schemas.android.com/apk/res/com.mogoo.market"
+    xmlns:textprogressbar="http://schemas.android.com/apk/res/com.mogoo.market"
+    android:id="@+id/app_item_lay"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/app_list_item_h" >
+
+    <!-- 软件图标 -->
+
+    <ImageView
+        android:id="@+id/app_iv"
+        android:layout_width="@dimen/app_list_item_pic_w"
+        android:layout_height="@dimen/app_list_item_pic_h"
+        android:layout_alignParentLeft="true"
+    	android:layout_marginLeft="@dimen/app_list_item_pic_margin_left"
+    	android:layout_marginBottom="0dip"
+    	android:layout_marginTop="@dimen/app_list_item_pic_margin_top" 
+        android:layout_marginRight="@dimen/app_list_item_pic_margin_right" />
+    <!-- 中间的软件名、所属公司名 -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/app_list_item_bottom_space_h"
+        android:layout_below="@id/app_iv" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/app_iv"
+        android:layout_toRightOf="@id/app_iv"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxWidth="@dimen/app_list_item_text_maxwidth"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/app_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/app_name"
+        android:layout_below="@id/app_name"
+        android:layout_marginTop="@dimen/app_list_item_spacing_extra"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLength="15"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:id="@+id/soft_list_rating_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/app_size"
+        android:layout_below="@id/app_size"
+        android:layout_marginTop="@dimen/app_list_item_spacing_extra" >
+
+        <TextView
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/app_item_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="9dip"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true" >
+
+        <Button
+            android:id="@+id/app_down_btn"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            
+            android:background="@drawable/install_white_btn_xml"
+            android:text="@string/app_item_down"
+        	android:textColor="#ff26495f"
+        	android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/app_progress_bar_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="0dip"
+            android:visibility="gone" >
+			<!--
+            <com.mogoo.market.widget.TextProgressBar
+                android:id="@+id/app_progress_bar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="@dimen/app_item_progressbar_width"
+                android:layout_height="@dimen/app_item_progressbar_height"
+ 		        android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dip"
+                android:layout_marginLeft="-3dip"
+                textprogressbar:customTextSize="14sp"
+                textprogressbar:customTextColor="#FFF"
+                android:progressDrawable="@drawable/lcq_progress_horizontal" />
+  			-->
+  			<TextView 
+  				android:id="@+id/app_downloading"
+  				android:layout_width="@dimen/app_item_progressbar_width"
+                android:layout_height="@dimen/app_item_progressbar_height"
+ 		        android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dip"
+                android:layout_marginLeft="-3dip"
+                android:textSize="14sp"
+                android:textColor="#FFF"
+                android:text="@string/downloading"
+                android:gravity="center"
+                android:background="@drawable/app_item_progress_percent"/>
+            <ImageView
+                android:id="@+id/app_progress_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/app_downloading"
+                android:background="@drawable/app_item_progress_left_gray" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView 
+		android:layout_width="fill_parent"
+    	android:layout_height="1dip"
+    	android:layout_alignParentBottom="true"
+    	android:background="@drawable/divider_horizontal_dark_opaque"/>
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:layout_marginTop="10dp"
+    >
+		<RelativeLayout android:id="@+id/settings_reminder"
+		   android:layout_width="fill_parent"
+		   android:layout_height="wrap_content"
+		   android:layout_alignParentTop="true"
+		   >
+			<RelativeLayout android:id="@+id/settings_reminder_left"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="20dp"
+			>
+		       	<ImageView android:id="@+id/icon_name"
+		       	android:layout_width="wrap_content"
+		       	android:layout_height="wrap_content"
+		       	android:background="@drawable/icon_reminder"
+		       	/>
+		       	<TextView android:layout_width="wrap_content"
+		       	android:layout_height="wrap_content"
+		       	android:layout_below="@+id/icon_name"
+		       	android:text="@string/settings_reminder"
+		       	android:textColor="#747474"
+		       	/>
+	        </RelativeLayout>
+	        <Switch android:id="@+id/settings_reminder_choose"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_alignParentRight="true"
+	     	 android:layout_marginRight="20dp"
+	         android:textOn="@string/settings_reminder_on"
+	         android:textOff="@string/settings_reminder_off"
+	         android:layout_centerVertical="true"
+	         android:checked="false"
+	         />
+	     </RelativeLayout>
+      
+       <RelativeLayout android:id="@+id/settings_reminder_datetime_repeat"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/settings_reminder"
+       android:layout_marginTop="20dp"
+       android:visibility="gone" >
+
+	        <RelativeLayout
+	            android:id="@+id/settings_reminder_datetime"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	                android:layout_alignParentTop="true"
+	                android:layout_marginRight="10dp"
+	                android:layout_centerVertical="true">
+
+	            <Button
+	                android:id="@+id/settings_reminder_date"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentBottom="true"
+	                android:layout_alignParentLeft="true"
+	                android:layout_alignParentTop="true"
+	                android:layout_marginLeft="20dp"
+	                android:textSize="20dp"
+	                android:layout_centerVertical="true"
+	                android:background="@android:color/transparent"/>
+
+	            <Button
+	                android:id="@+id/settings_reminder_time"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentBottom="true"
+	                android:layout_marginLeft="20dp"
+	                android:textSize="20dp"
+	                android:singleLine="true"
+	                android:background="@android:color/transparent"
+	                android:layout_centerVertical="true"
+	                android:layout_toRightOf="@+id/settings_reminder_date" />
+
+	            <!-- <ImageButton
+	                android:id="@+id/reminderbutton"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignParentTop="true"
+	                android:layout_marginRight="18dp"
+	                android:background="@android:color/transparent"
+	                android:layout_centerVertical="true"
+	                android:src="@drawable/arrow_r" /> -->
+
+	        </RelativeLayout>
+	        <ImageView android:id="@+id/reminder_line"
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#D7D7D7"
+            android:layout_below="@+id/settings_reminder_datetime"
+             />
+	        <RelativeLayout android:id="@+id/settings_reminder_repeat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reminder_line"
+            >
+	            <RelativeLayout android:id="@+id/settings_reminder_repeat_left"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="20dp"
+	            >
+	            	<ImageView android:id="@+id/icon_repeat"
+	            	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:background="@drawable/icon_repeat"
+	            	android:layout_centerHorizontal="true"
+	            	/>
+	            	<TextView android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_below="@+id/icon_repeat"
+	            	android:text="@string/settings_repeat"
+	            	android:layout_centerHorizontal="true"
+	            	android:textColor="#747474"
+	            	/>
+	            </RelativeLayout>
+
+	            <TextView
+	                android:id="@+id/create_birthday_edit"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"
+	                android:layout_marginRight="20dp"
+	                android:text="@string/settings_repeat_never"
+	                android:textColor="#747474" />
+
+	            <!-- <ImageButton
+	                android:id="@+id/repeatbutton"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"
+	                android:layout_marginRight="16dp"
+	                android:background="@android:color/transparent"
+	                android:src="@drawable/arrow_r" /> -->
+
+	        </RelativeLayout>
+	    </RelativeLayout>
+</RelativeLayout>

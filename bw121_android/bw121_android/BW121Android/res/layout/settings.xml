@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg01_iphone5"
+    >
+	<include android:id="@+id/settings_user_top"
+	    layout="@layout/setting_top"
+	    android:layout_alignParentTop="true"
+	    />
+	
+	<ScrollView android:layout_width="fill_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/settings_user_top"
+	    >
+	    <RelativeLayout 
+        android:layout_width="fill_parent"
+    	android:layout_height="match_parent"
+        >
+        
+			<include android:id="@+id/settings_reminder"
+			    layout="@layout/settings_reminder_repeat"
+			    android:layout_alignParentTop="true"
+			    />
+			
+	         <ImageView android:id="@+id/line1"
+	            android:layout_width="fill_parent"
+	            android:layout_height="15dp"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
+	            android:background="#D7D7D7"
+	            android:layout_below="@+id/settings_reminder"
+	            />
+	        
+	       <RelativeLayout android:id="@+id/settings_target_weight"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/line1"
+	            android:layout_marginBottom="10dp"
+	            >
+	            <RelativeLayout android:id="@+id/settings_target_weight_left"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="20dp"
+	            >
+	            	<ImageView android:id="@+id/icon_target_weight"
+	            	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:background="@drawable/icon_target_weight"
+	            	/>
+	            	<TextView android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_below="@+id/icon_target_weight"
+	            	android:text="@string/settings_target_weight"
+	            	android:textColor="#747474"
+	            	/>
+	           </RelativeLayout>
+			   <Switch
+	               android:id="@+id/settings_target_choose"
+	               android:layout_width="wrap_content"
+	               android:layout_height="wrap_content"
+	               android:layout_alignParentRight="true"
+	               android:layout_centerVertical="true"
+	               android:layout_marginRight="20dp"
+	               android:checked="false"
+	               android:textOff="@string/settings_reminder_off"
+	               android:textOn="@string/settings_reminder_on" 
+	            />
+	        </RelativeLayout>
+	        <RelativeLayout android:id="@+id/settings_target_weight_val"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/settings_target_weight"
+	            android:layout_marginTop="10dp"
+	            >
+			   <ImageView android:id="@+id/line2"
+	            android:layout_width="fill_parent"
+	            android:layout_height="3dp"
+	            android:background="#D7D7D7"
+	            android:layout_marginBottom="10dp"
+	            />
+	            <RelativeLayout android:id="@+id/settings_target_weight_val_left"
+	            android:layout_width="wrap_content"
+	            android:layout_height="70dp"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="20dp"
+	            android:layout_below="@id/line2"
+	            android:layout_centerVertical="true"
+	            >
+	            	<EditText
+	                android:id="@+id/target_weight"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="65"
+	            	android:singleLine="true"
+	            	android:numeric="decimal"
+	                android:layout_centerVertical="true"
+	                android:background="#00000000"
+	                android:textColor="#747474" />
+
+	            	<TextView android:id="@+id/settings_weight_value_lbs"
+	                android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:text="@string/create_weight_kg"
+	            	android:layout_centerVertical="true"
+	            	android:layout_toRightOf="@id/target_weight"
+	            	android:layout_marginLeft="20dp"
+	            	android:textColor="#747474"
+	            	/>
+	           </RelativeLayout>
+	        </RelativeLayout>
+	        
+	        <ImageView android:id="@+id/line3"
+	            android:layout_width="fill_parent"
+	            android:layout_height="15dp"
+	            android:layout_marginBottom="10dp"
+	            android:background="#D7D7D7"
+	            android:layout_below="@+id/settings_target_weight_val"
+	            />
+	      
+	        <RelativeLayout android:id="@+id/settings_cloth_weight"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/line3"
+	            android:layout_marginBottom="10dp"
+	            >
+	            <RelativeLayout android:id="@+id/settings_cloth_weight_left"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="20dp"
+	            >
+	            	<ImageView android:id="@+id/icon_cloth_weight"
+	            	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:background="@drawable/cloth_weight"
+	            	/>
+	            	<TextView android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_below="@+id/icon_cloth_weight"
+	            	android:text="@string/settings_cloth_weight"
+	            	android:textColor="#747474"
+	            	/>
+	           </RelativeLayout>
+			   <Switch
+	               android:id="@+id/settings_cloth_choose"
+	               android:layout_width="wrap_content"
+	               android:layout_height="wrap_content"
+	               android:layout_alignParentRight="true"
+	               android:layout_centerVertical="true"
+	               android:layout_marginRight="20dp"
+	               android:checked="false"
+	               android:textOff="@string/settings_reminder_off"
+	               android:textOn="@string/settings_reminder_on" 
+	            />
+	        </RelativeLayout>
+	        <RelativeLayout android:id="@+id/settings_cloth_weight_val"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/settings_cloth_weight"
+	            android:layout_marginTop="10dp"
+	            >
+			   <ImageView android:id="@+id/line4"
+	            android:layout_width="fill_parent"
+	            android:layout_height="3dp"
+	            android:background="#D7D7D7"
+	            android:layout_marginBottom="10dp"
+	            />
+	            <RelativeLayout android:id="@+id/settings_cloth_weight_val_left"
+	            android:layout_width="wrap_content"
+	            android:layout_height="70dp"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="20dp"
+	            android:layout_below="@id/line4"
+	            android:layout_centerVertical="true"
+	            >
+	            	<EditText
+	                android:id="@+id/cloth_weight"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="5"
+	            	android:singleLine="true"
+	            	android:numeric="decimal"
+	                android:layout_centerVertical="true"
+	                android:background="#00000000"
+	                android:textColor="#747474" />
+
+	            	<TextView android:id="@+id/settings_cloth_value_lbs"
+	                android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:text="@string/create_weight_kg"
+	            	android:layout_centerVertical="true"
+	            	android:layout_toRightOf="@id/cloth_weight"
+	            	android:layout_marginLeft="20dp"
+	            	android:textColor="#747474"
+	            	/>
+	           </RelativeLayout>
+	        </RelativeLayout>
+	        
+        <ImageView android:id="@+id/line5"
+            android:layout_width="fill_parent"
+            android:layout_height="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="#D7D7D7"
+            android:layout_below="@+id/settings_cloth_weight_val"
+            />
+	        
+         <include android:id="@+id/settings_reference"
+		   	android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		   	android:layout_below="@+id/line5"
+		    layout="@layout/settings_reference"
+		   	/>
+         
+	     <ImageView android:id="@+id/line6"
+	         android:layout_width="fill_parent"
+	         android:layout_height="15dp"
+	         android:layout_marginTop="10dp"
+	         android:layout_marginBottom="10dp"
+	         android:background="#D7D7D7"
+	         android:layout_below="@+id/settings_reference"
+	         />
+	     
+     	<RelativeLayout android:id="@+id/settings_product_tour"
+	   		android:layout_width="fill_parent"
+	   		android:layout_height="wrap_content"
+	   		android:layout_below="@+id/line6"
+	   		>
+			<RelativeLayout android:id="@+id/settings_product_tour_left"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="20dp"
+			>
+		       	<ImageView android:id="@+id/icon_producttour"
+		       	android:layout_width="wrap_content"
+		       	android:layout_height="wrap_content"
+		       	android:background="@drawable/icon_producttour"
+		       	/>
+		       	<TextView android:layout_width="wrap_content"
+		       	android:layout_height="wrap_content"
+		       	android:layout_below="@+id/icon_producttour"
+		       	android:text="@string/settings_product_tour"
+		       	android:textColor="#747474"
+		       	/>
+	        </RelativeLayout>
+	        <!-- <ImageButton android:id="@+id/settings_product"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_alignParentRight="true"
+	     	 android:layout_marginRight="20dp"
+	         android:layout_centerVertical="true"
+	         android:background="@android:color/transparent"
+	         android:src="@drawable/arrow_r"
+	         /> -->
+     	</RelativeLayout>
+     	<TextView 
+     	    android:id="@+id/myVersion"
+     	    android:layout_width="fill_parent"
+	       	android:layout_height="wrap_content"
+	       	android:layout_below="@+id/settings_product_tour"
+	       	android:textColor="#747474"
+	       	android:gravity="center_vertical|right"
+	       	android:paddingTop="10dp"
+	       	android:paddingRight="20dp"
+	       	android:paddingBottom="10dp"
+	       	android:background="#D7D7D7"
+	       	/>
+	 </RelativeLayout>       
+	</ScrollView>
+</RelativeLayout>

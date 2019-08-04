@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- 切换卡属性 -->
+    <declare-styleable name="ToolBar">
+    <attr  name="toolbarTextSize" format="dimension" />
+    <attr  name="imagePaddingTop" format="dimension" />
+    <attr name="textPaddingButtom" format="dimension"  />
+	<attr name="selectorPadding" format="dimension" />
+	<attr name="backgroundDrawable" format="reference" />
+	<attr name="selectorDrawable" format="reference" />
+    </declare-styleable>
+
+</resources>

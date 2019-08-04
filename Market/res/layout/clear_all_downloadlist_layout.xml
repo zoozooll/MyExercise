@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+  
+  <LinearLayout 
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:background="@drawable/manager_win_title"
+  	>
+  	<TextView 
+  	android:id="@+id/tv_clear_downloadlist"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:gravity="center_horizontal"
+  	
+  	android:text="@string/clear_all_downloadlist"
+  	android:textColor="#ffffff"
+  	android:textSize="16sp"/>
+  </LinearLayout>
+  
+  <RelativeLayout 
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:background="@drawable/manager_win_content"
+  	
+  	android:paddingLeft="10dip"
+  	android:paddingRight="10dip"
+  	android:paddingBottom="20dip"
+  	>
+  	
+  	<TextView 
+	  	android:id="@+id/tv_clear_all_warn"
+	  	android:layout_width="wrap_content"
+	  	android:layout_height="wrap_content"
+	  	android:layout_gravity="center_horizontal"
+	  	
+	  	android:layout_alignParentTop="true"
+	  	android:layout_marginTop="10dip"
+	  	
+	  	android:text="@string/clear_all_warn"
+	  	android:textColor="#1a294a"
+	  	android:textSize="16sp"
+  	/>
+  	
+  	<ImageView 
+  		android:id="@+id/iv_delete_apk"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:src="@drawable/checkbox_uncheck"
+  		
+  		android:layout_below="@+id/tv_clear_all_warn"
+  		android:layout_alignParentLeft="true"
+  		android:layout_marginTop="10dip"
+  		
+  	/>
+	  	
+  	<TextView 
+	  	android:id="@+id/tv_delete_apk"
+	  	android:layout_width="wrap_content"
+	  	android:layout_height="wrap_content"
+	  	
+	  	android:layout_toRightOf="@+id/iv_delete_apk"
+	  	android:layout_below="@+id/tv_clear_all_warn"
+  		android:layout_marginTop="10dip"
+  		android:layout_marginLeft="10dip"
+	  	
+	  	android:text="@string/clear_all_apk"
+	  	android:textColor="#1a294a"
+	  	android:textSize="16sp"
+  	/>
+  	
+  	<Button 
+  		android:id="@+id/btn_cancel_delete_all_downloadlist"
+  		android:layout_width="100dip"
+  		android:layout_height="wrap_content"
+  		android:text="@string/cancel"
+  		android:textColor="#1a294a"
+  		android:textSize="18sp"
+  		android:background="@drawable/manager_down_pause"
+  		
+  		android:layout_below="@+id/iv_delete_apk"
+  		android:layout_alignParentLeft="true"
+ 		android:layout_marginTop="10dip"
+ 		android:layout_marginLeft="10dip"
+  	/>
+	  	
+	<Button 
+	  	android:id="@+id/btn_ok_delete_all_downloadlist"
+	  	android:layout_width="100dip"
+	  	android:layout_height="wrap_content"
+	  	android:text="@string/sure"
+	  	android:textColor="@color/white"
+	  	android:textSize="18sp"
+	  	android:background="@drawable/manager_win_sure"
+	  	
+	  	android:layout_below="@+id/iv_delete_apk"
+  		android:layout_alignParentRight="true"
+ 		android:layout_marginTop="10dip"
+ 		android:layout_marginRight="10dip"
+  	/>  	
+  	
+  </RelativeLayout>
+    
+</LinearLayout>

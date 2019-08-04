@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <TextView 
+    android:id="@+id/guide_a"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/guide"
+    android:layout_alignParentTop="true"
+    android:gravity="center"
+    android:background="#F89311"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:textColor="#fff"
+    android:textSize="23sp"
+    />
+	<FrameLayout android:id="@+id/guidetop"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/guide_a"
+	    android:orientation="vertical" >
+	    <android.support.v4.view.ViewPager
+	        android:id="@+id/guidePages"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="50dp"  
+	        />
+	       
+	    <RelativeLayout  
+	        android:layout_width="fill_parent"  
+	        android:layout_height="wrap_content" >
+		    <LinearLayout  
+	        android:id="@+id/dianGroup"  
+	        android:layout_width="fill_parent"  
+	        android:layout_height="wrap_content"  
+	        android:layout_alignParentBottom="true"  
+	        android:layout_marginBottom="30dp"  
+	        android:gravity="center_horizontal"  
+	        android:orientation="horizontal" >  
+		    </LinearLayout>  
+	    </RelativeLayout>
+    </FrameLayout>
+    
+</RelativeLayout>

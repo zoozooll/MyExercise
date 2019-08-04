@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/install_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/install_local_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/install_local_left_btn_check"
+            android:textColor="@color/white"
+            android:text="@string/install_local_install" />
+
+        <Button
+            android:id="@+id/install_recommend_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/install_local_right_btn_uncheck"
+            android:textColor="@color/white"
+            android:text="@string/install_recommend_app" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/install_scan_sdcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dip"
+        android:textColor="@color/white"
+        android:background="@drawable/install_rescan_btn_xml"
+        android:text="@string/install_scan_sdcard" />
+
+</LinearLayout>

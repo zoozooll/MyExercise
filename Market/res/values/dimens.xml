@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- "@dimen/Text_size"    getResources().getDimension(R.dimen.xx)-->
+<resources>
+	<!-- 顶部切换卡 -->
+	<dimen name="header_layout_h">40dip</dimen>
+	<dimen name="header_left_text_t">2dip</dimen>
+	<dimen name="header_left_text_b">4dip</dimen>
+	<dimen name="header_left_text_l">10dip</dimen>
+	<dimen name="header_left_text_r">5dip</dimen>
+	
+	<!-- 底部切换卡 -->
+	<dimen name="toolBar_h">55dip</dimen>
+	<dimen name="toolBar_text_size">12sp</dimen>
+	<dimen name="toolBar_text_padding_bottom">8dip</dimen>
+	<dimen name="toolBar_selector_padding">2dip</dimen>
+    
+    <!-- 标题栏 -->
+	<dimen name="titleBar_h">40dip</dimen>
+	<dimen name="titleBar_left_button_marging_left">10dip</dimen>
+    
+    <!-- 屏幕 -->
+    <dimen name="screen_w">320dip</dimen>
+    <dimen name="screen_h">480dip</dimen>
+
+    <!-- for hotActivity -->
+    <dimen name="app_item_pay_btn_height">40dip</dimen>
+     <!--加载图标大小  -->
+    <dimen name="loading_icon">46dip</dimen>
+    <!-- 加载图标位置 -->
+    <dimen name="loading_icon_position">210dip</dimen>
+    <!-- 加载文字位置 -->
+    <dimen name="loading_text_position">60dip</dimen>
+    <!-- 加载文字大小 -->
+    <dimen name="loading_text_size">12dip</dimen>
+     
+      <!-- 搜索 -->
+	<dimen name="search_toase_text_size">12dip</dimen>
+	<dimen name="search_btn_text_size">13dip</dimen>
+	<dimen name="search_hint_text_size">12dip</dimen>
+	<dimen name="search_edit_text_length">237dip</dimen>
+	<dimen name="search_bar_length">320dip</dimen>
+	<dimen name="search_bar_btn_length">51dip</dimen>
+	
+	<!-- 专题一级列表 -->
+	<dimen name="topic_list_item_h">70dip</dimen>
+	<dimen name="topic_list_item_padding_top_bottom">5dip</dimen>
+	<dimen name="topic_list_item_padding_left_right">7dip</dimen>
+	<dimen name="topic_list_item_pic_h">60dip</dimen>
+	<dimen name="topic_list_item_pic_w">120dip</dimen>
+	<dimen name="topic_list_item_pic_margin_right">8dip</dimen>
+	<dimen name="topic_list_item_text_maxwidth">167dip</dimen>
+	<dimen name="topic_list_item_text_spacing_extra">8dip</dimen>
+
+	<!-- 分类一级列表 -->
+	<dimen name="cate_list_item_h">70dip</dimen>
+	<dimen name="cate_list_item_padding_top_bottom">7dip</dimen>
+	<dimen name="cate_list_item_padding_left_right">10dip</dimen>
+	<dimen name="cate_list_item_pic_h">57dip</dimen>
+	<dimen name="cate_list_item_pic_w">57dip</dimen>
+	<dimen name="cate_list_item_pic_margin_right">10dip</dimen>
+	<dimen name="cate_list_item_text_maxwidth">200dip</dimen>
+	<dimen name="cate_list_item_text_spacing_extra">8dip</dimen>
+	<dimen name="cate_list_item_count_margin_right">6dip</dimen>
+	
+	<!-- 通用应用列表 -->
+	<dimen name="app_list_item_h">70dip</dimen>
+	<dimen name="app_list_item_bottom_space_h">7dip</dimen>
+	<dimen name="app_list_item_pic_h">57dip</dimen>
+	<dimen name="app_list_item_pic_w">57dip</dimen>
+	<dimen name="app_list_item_pic_margin_top">7dip</dimen>
+	<dimen name="app_list_item_pic_margin_left">10dip</dimen>
+	<dimen name="app_list_item_pic_margin_right">10dip</dimen>
+	<dimen name="app_list_item_size_margin_right">107dip</dimen>
+	<dimen name="app_list_item_text_maxwidth">153dip</dimen>
+	<dimen name="app_list_item_spacing_extra">4dip</dimen>   
+	<dimen name="app_item_down_btn_height">50dip</dimen> 
+	<dimen name="app_item_progressbar_height">31dip</dimen>
+	<dimen name="app_item_progressbar_width">56dip</dimen>
+		
+	<!-- 应用详情  软件推荐-->
+	<dimen name="ratingbar_h">19dip</dimen>
+	<dimen name="appdetail_icon_size">59dip</dimen>
+	<dimen name="gallery_like_scrollview_height">100dip</dimen>
+	<dimen name="gallery_like_item_height">90dip</dimen>
+    <dimen name="gallery_like_item_width">80dip</dimen>
+    <dimen name="gallery_like_item_image_size">57dip</dimen>
+    <dimen name="gallery_like_item_text_height">30dip</dimen>
+    
+    <dimen name="baseinfo_icon_margin_left">5dip</dimen>
+    <dimen name="baseinfo_icon_margin_right">10dip</dimen>
+    <dimen name="baseinfo_margin_right">8dip</dimen>
+    
+    <dimen name="appdetail_buttom_h">57dip</dimen>
+    <dimen name="appdetail_buttom_button_h">34dip</dimen>
+    <dimen name="appdetail_buttom_button_textsize">14sp</dimen>
+    
+    <!-- 应用详情  文字大小-->
+    <dimen name="app_detail_baseinfo_size">12sp</dimen>
+    <dimen name="app_detail_description_title_size">12sp</dimen>
+    <dimen name="app_detail_description_size">10sp</dimen>
+    <dimen name="app_detail_comment_size">14sp</dimen>
+    
+    <!-- 应用详情  软件快照-->
+	<dimen name="gallery_shot_scrollview_height">170dip</dimen>
+	<dimen name="gallery_shot_item_height">170dip</dimen>
+    <dimen name="gallery_shot_item_width">110dip</dimen>
+    <dimen name="gallery_shot_item_space">5dip</dimen>
+    
+    <!-- 应用详情  切换卡-->
+	<dimen name="appdetail_tab_height">40dip</dimen>
+	<dimen name="appdetail_tab_textsize">12sp</dimen>
+	<dimen name="appdetail_tab_space">5dip</dimen>
+    
+    <!-- 下载管理 -->
+    <dimen name="list_icon_width">54dip</dimen>
+    <dimen name="list_icon_height">54dip</dimen>
+    <dimen name="view_padding">5dip</dimen>
+    <dimen name="clear_all_h">50dip</dimen>
+    <dimen name="clear_all_btn_h">32dip</dimen>
+    <dimen name="clear_all_btn_w">266dip</dimen>
+    <dimen name="manager_item_right_ly_w">110dip</dimen>
+    <dimen name="manager_item_btn_w">46dip</dimen>
+    <dimen name="manager_item_btn_h">30dip</dimen>
+    <dimen name="manager_item_btn_margin">6dip</dimen>
+    <dimen name="manager_more_item_title">16dip</dimen>
+    <dimen name="manager_more_item_title_sub">12dip</dimen>
+    <dimen name="manager_more_item_text_align">10dip</dimen>
+    
+    <!-- 下载管理 一键清除按钮 -->
+    <dimen name="clear_all_btn_marginTop">10dip</dimen>
+    <dimen name="clear_all_btn_textsize">15sp</dimen>
+	
+    <dimen name="irregular_button_click_range_left">156dip</dimen>
+	<dimen name="irregular_button_click_range_top">0dip</dimen>
+	<dimen name="irregular_button_click_range_right">220dip</dimen>
+	<dimen name="irregular_button_click_range_bottom">50dip</dimen>
+	<dimen name="irregular_button_width">218dip</dimen>
+    
+    <dimen name="fixed_tabs_btn_height">25dip</dimen>
+    <dimen name="fixed_tabs_btn_width">106dip</dimen>
+    
+    <dimen name="scrolling_tabs_btn_height">25dip</dimen>
+    <dimen name="scrolling_tabs_btn_width">106dip</dimen>
+    <dimen name="scrolling_tabs_btn_text_size">13sp</dimen>
+    
+    <dimen name="cate_top_btn_height">29dip</dimen>
+    <dimen name="cate_top_btn_width">106dip</dimen>
+    
+    <dimen name="tab_button_text_size">14sp</dimen>
+    
+    <dimen name="install_local_apk_item_text_maxwidth">115dip</dimen>
+</resources>

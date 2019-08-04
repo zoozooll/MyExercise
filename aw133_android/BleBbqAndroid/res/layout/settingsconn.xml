@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+   	<TextView android:id="@+id/pairing"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:text="@string/pairing"
+   	    style="@style/linetoptitlesizecolor"
+   	    />
+   	<ImageView android:id="@+id/line"
+   	    android:layout_width="fill_parent"
+   	    android:layout_height="2dp"
+   	    android:background="@drawable/linet"
+   	    android:layout_below="@id/pairing"
+   	    />
+   	
+   	<RelativeLayout android:id="@+id/temp"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_below="@id/line"
+   	    android:layout_marginTop="10dp"
+   	    >
+   	    <TextView
+	   	    android:id="@+id/conntv"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:gravity="center"
+	   	    android:text="@string/connection" 
+	   	    android:textSize="20dp"
+	   	    />
+   	    <Switch
+	   	    android:id="@+id/switchBleConnection"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_alignParentRight="true"
+		   	style="@style/marginrightcenter"
+	   	    android:thumb="@drawable/switchorange"
+	   	    android:track="@drawable/switchbg"
+	   	    />
+   	</RelativeLayout>
+   	
+   	<RelativeLayout android:id="@+id/deviceSearchingHead"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone" >
+	
+	   <!--  <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@+id/header_view1"
+	        android:layout_marginRight="20dp"
+	        android:layout_centerVertical="true"
+	        android:src="@drawable/icon_progress"
+	        android:contentDescription="@string/app_name" /> -->
+		<ProgressBar
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:layout_toLeftOf="@+id/header_view1"
+	        android:layout_marginRight="20dp"
+	        android:layout_centerVertical="true"
+        	/>
+<!-- 	        android:contentDescription="@string/app_name" -->
+	    <TextView
+	        android:id="@+id/header_view1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:textColor="#CACACB"
+	        android:textSize="20sp"
+	        android:text="@string/str_settings_searching" />
+		
+	</RelativeLayout>
+	
+   	<RelativeLayout android:id="@+id/layoutCurrentConnected"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"  >
+
+    <TextView
+        android:id="@+id/tvwCurrentDeviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="21dp"
+        android:text="@string/ble_connect_success"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    <ImageView
+        android:id="@+id/ivwSettingPairDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_bluetooth_on"
+        style="@style/marginrightcenter"
+        />
+	
+</RelativeLayout>
+   	
+<!--    	<com.oregonscientific.bbq.view.NoScrollListView android:id="@+id/listScanedDevices"
+   	    android:layout_width="wrap_content"
+	   	android:layout_height="wrap_content"
+	   	android:layout_below="@+id/temp"
+   	    /> -->
+
+
+</LinearLayout>

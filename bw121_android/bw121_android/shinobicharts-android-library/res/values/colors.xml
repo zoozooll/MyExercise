@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+		<!--  Default Chart Colours -->
+
+        <color name="sc_chartDefaultTitleColor">#E6252525</color>
+        <color name="sc_axisDefaultTitleColor">#FF252525</color>
+        <color name="sc_axisDefaultLineColor">#00000000</color>
+        <color name="sc_tickDefaultLineColor">#66252525</color>
+        <color name="sc_tickDefaultLabelColor">#FF252525</color>
+        <color name="sc_gridDefaultLineColor">#66CECECE</color>
+        <color name="sc_defaultSelectedSeriesColor">#FF888888</color>
+        
+        <color name="sc_chartDefaultBackgroundColor">#FFFBFBFB</color>
+        <color name="sc_plotDefaultAreaColor">#FFF0F0F0</color>
+        <color name="sc_plotDefaultAreaBorderColor">#B3939393</color>
+        <color name="sc_pieDonutLabelDefaultColor">#FFFBFBFB</color>
+        
+        <color name="sc_legendDefaultTextColor">#FF252525</color>
+        <color name="sc_legendDefaultBorderColor">#B3939393</color>
+        <color name="sc_legendDefaultBackgroundColor">#FFFBFBFB</color>
+
+        <color name="sc_crosshairDefaultLineColor">#FF000000</color>
+        <color name="sc_crosshairTooltipDefaultTextColor">#FF000000</color>
+        <color name="sc_crosshairTooltipDefaultLabelBackgroundColor">#00000000</color>
+        <color name="sc_crosshairTooltipDefaultBackgroundColor">#99FFFFFF</color>
+        <color name="sc_crosshairTooltipDefaultBorderColor">#FFAAAAAA</color>
+
+        <color name="sc_defaultGridStripeColor">#267F7F7F</color>
+        <color name="sc_defaultAlternateGridStripeColor">#00000000</color>
+        
+        <color name="sc_annotationDefaultBackgroundColor">#99FFFFFF</color>
+        <color name="sc_annotationDefaultTextColor">#FF000000</color>
+ 
+        
+        <!-- Dark Theme Colours -->
+        <color name="sc_chartDarkTitleColor">#E6E4E4E4</color>
+        <color name="sc_axisDarkTitleColor">#FFBDBDBD</color>
+        <color name="sc_tickDarkLineColor">#66B0B0B0</color>
+        <color name="sc_tickDarkLabelColor">#FFBDBDBD</color>
+        <color name="sc_gridDarkLineColor">#66A5A5A5</color>
+
+        <color name="sc_chartDarkBackgroundColor">#FF2A2A2A</color>
+        <color name="sc_plotDarkAreaColor">#FF373737</color>
+        <color name="sc_plotDarkAreaBorderColor">#B3B0B0B0</color>
+        <color name="sc_pieDonutLabelDarkColor">#FF2A2A2A</color>
+        
+        <color name="sc_legendDarkTextColor">#E6E4E4E4</color>
+        <color name="sc_legendDarkBorderColor">#B3ACACAC</color>
+        <color name="sc_legendDarkBackgroundColor">#FF2A2A2A</color>
+
+        <color name="sc_crosshairDarkLineColor">#FFCCCCCC</color>
+        <color name="sc_crosshairTooltipDarkTextColor">#FF000000</color>
+        <color name="sc_crosshairTooltipDarkLabelBackgroundColor">#00000000</color>
+        <color name="sc_crosshairTooltipDarkBackgroundColor">#AAFFFFFF</color>
+        <color name="sc_crosshairTooltipDarkBorderColor">#FFAAAAAA</color>
+
+        <color name="sc_darkGridStripeColor">#267F7F7F</color>
+        <color name="sc_darkAlternateGridStripeColor">#00000000</color>
+        
+        <color name="sc_annotationDarkBackgroundColor">#AAFFFFFF</color>
+        <color name="sc_annotationDarkTextColor">#FF000000</color>
+
+        <!-- Line/Area/BarCols Colours -->
+
+        <color name="sc_purpleDark">#FF81507D</color>
+        <color name="sc_purpleLightFill">#FFAD63B0</color>
+        <color name="sc_purpleDarkFill">#FF5E335F</color>
+        <color name="sc_purpleDarkFillAlpha">#B35E335F</color>
+
+        <color name="sc_blueDark">#FF14656A</color>
+        <color name="sc_blueLightFill">#FF3BACC8</color>
+        <color name="sc_blueDarkFill">#FF1A60A4</color>
+        <color name="sc_blueDarkFillAlpha">#B31A60A4</color>
+
+        <color name="sc_orangeDark">#FFAC4721</color>
+        <color name="sc_orangeLightFill">#FFFB7B3A</color>
+        <color name="sc_orangeDarkFill">#FFB02B19</color>
+        <color name="sc_orangeDarkFillAlpha">#B3B02B19</color>
+
+        <color name="sc_greenDark">#FF175457</color>
+        <color name="sc_greenLightFill">#FF02B26D</color>
+        <color name="sc_greenDarkFill">#FF14582B</color>
+        <color name="sc_greenDarkFillAlpha">#B314582B</color>
+
+        <color name="sc_yellowDark">#FFAE8C22</color>
+        <color name="sc_yellowLightFill">#FFF0BD1E</color>
+        <color name="sc_yellowDarkFill">#FFC26A10</color>
+        <color name="sc_yellowDarkFillAlpha">#B3C26A10</color>
+
+        <color name="sc_pinkDark">#FFA33451</color>
+        <color name="sc_pinkLightFill">#FFF55D97</color>
+        <color name="sc_pinkDarkFill">#FFBC2E40</color>
+        <color name="sc_pinkDarkFillAlpha">#B3BC2E40</color>
+
+        <!-- Donut Colours -->
+
+        <color name="sc_radialPurple">#FF9B4C97</color>
+        <color name="sc_radialBlue">#FF2A8AB3</color>
+        <color name="sc_radialOrange">#FFF5652F</color>
+        <color name="sc_radialGreen">#FF67A942</color>
+        <color name="sc_radialYellow">#FFF8B83C</color>
+        <color name="sc_radialPink">#FFE94A72</color>
+        <color name="sc_crustColor">#FF000000</color>
+
+        <!--  Financial Colours -->
+        <color name="sc_financialGreen">#FF306811</color>
+        <color name="sc_financialRed">#FF781B16</color>
+        <color name="sc_financialBlue">#7A9EAA</color>
+        <color name="sc_financialBlueAlpha">#807A9EAA</color>
+</resources>

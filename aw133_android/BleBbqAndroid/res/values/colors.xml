@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bbq_orange">#f68823</color>
+    <!-- the doneness level colors at rotary bar -->
+    <color name="doneness_rare">#F8EE22</color>
+    <color name="doneness_mediumrare">#FCBD10</color>
+    <color name="doneness_medium">#FAA71D</color>
+    <color name="doneness_mediumwell">#F49423</color>
+    <color name="doneness_welldone">#F68424</color>
+    <color name="doneness_overdone">#F80000</color>
+    <color name="translucent_background">#F80000</color>
+    <color name="textcolor_calendarview">#333333</color>
+    
+</resources>

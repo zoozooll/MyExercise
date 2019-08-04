@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/appdetail_shot_bg">
+    <com.mogoo.market.widget.TitleBar
+  		android:id="@+id/idTitlebar"
+       	android:layout_width="fill_parent"   
+   		android:layout_height="@dimen/titleBar_h"
+   		android:layout_alignParentTop="true"
+  		>
+    </com.mogoo.market.widget.TitleBar>
+    
+    <Gallery 
+    android:id="@+id/view_shot"
+    android:layout_height="fill_parent" 
+    android:layout_width="fill_parent"
+    android:spacing="2dip">
+    </Gallery>
+</LinearLayout>

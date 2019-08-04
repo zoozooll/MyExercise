@@ -1,0 +1,58 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mogoo.ping"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+
+    <application android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme"
+        >
+		<activity android:name="MainActivity" 
+		    android:launchMode="singleTask"
+		     android:screenOrientation="portrait">
+		    <intent-filter >
+		        <action android:name="android.intent.action.MAIN"/>
+		        <category android:name="android.intent.category.LAUNCHER"/>
+		    </intent-filter>
+		</activity>
+		<receiver android:name=".app.DownloadReceiver"
+		    android:permission="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS"
+		    >
+		    <intent-filter >
+		        <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+		    </intent-filter>
+		</receiver>
+		
+		<activity
+            android:name=".app.MessageDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/push_dialog_style" >
+        </activity>
+        <receiver android:name=".app.BootReceiver" >
+            <intent-filter>
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- receive the broadcast when the system shut down -->
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/> 
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name=".app.ApkInstallReceiver" >
+            <intent-filter>
+            	<action android:name="android.intent.action.PACKAGE_REMOVED" />  
+            	<data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+</application>
+</manifest>

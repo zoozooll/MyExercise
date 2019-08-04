@@ -1,0 +1,61 @@
+<resources>
+    <!-- <string name="app_name">MogooPing</string>
+    
+    <string name="toast_download_finish">DownLoad is Complement</string>
+    <string name="toast_download_fail">DownLoad is Fail</string>
+    <string name="toast_download_running">DownLoading</string>
+    <string name="toast_update_success">last update time：</string>
+    <string name="toast_update_data_format">yyyy-MM-dd</string>
+    <string name="toast_update_fail">net work is fail</string>
+    <string name="toast_noconnect">Download is not working</string>
+    <string name="toast_sdcard_nomounted">SDCard is not found</string>
+    
+    <string name="title_applications_lasted">Lasted Apps</string>
+    <string name="title_applications_recomend">Recomend Apps</string>
+    <string name="title_applications_used">Used Apps</string>
+    <string name="title_games_lasted">Lasted Games</string>
+    <string name="title_games_recomend">Recomend Games</string>
+    <string name="title_games_used">Used Games</string>
+    <string name="secondtitle_lasted">LASTED</string>
+    <string name="secondtitle_recommend">RECOMMEND</string>
+    <string name="secondtitle_used">USED</string>
+    <string name="app_down">Install</string>
+    <string name="app_cancel">Cancel</string>
+    <string name="app_type">Type:</string>
+    <string name="app_version">Version:</string>
+    <string name="app_size">Size:</string>
+    show applications type strings
+    <string name="apptype_showstring_appslasted">"最新热门应用"</string>
+    <string name="apptype_showstring_appsrecommend">"应用精品推荐"</string>
+    <string name="apptype_showstring_gameslasted">"最新热门游戏"</string>
+    <string name="apptype_showstring_gamesrecomend">"游戏精品推荐"</string> -->
+    
+    <!-- show in Chinese -->
+    <string name="app_name">蘑菇屏</string>
+    <string name="secondtitle_lasted">最新热门</string>
+    <string name="secondtitle_recommend">精品推荐</string>
+    <string name="secondtitle_used">最近使用</string>
+    
+    <string name="toast_download_finish">下载完成</string>
+    <string name="toast_download_fail">下载失败</string>
+    <string name="toast_noconnect">没有可用网络连接，请设置网络</string>
+    <string name="toast_download_running">"正在下载..."</string>
+    <string name="toast_sdcard_nomounted">没有可用的SDCard</string>
+    <string name="toast_update_success">更新时间：</string>
+    <string name="toast_update_data_format">yyyy年MM月dd日</string>
+    <string name="toast_update_fail">网络连接问题，更新失败</string>
+    
+    <string name="app_type">类型:</string>
+    <string name="app_version">版本:</string>
+    <string name="app_size">软件大小:</string>
+    <string name="app_down">下载安装</string>
+    <string name="app_cancel">取消</string>
+    
+     <string name="apptype_showstring_appslasted">"最新热门应用"</string>
+    <string name="apptype_showstring_appsrecommend">"应用精品推荐"</string>
+    <string name="apptype_showstring_gameslasted">"最新热门游戏"</string>
+    <string name="apptype_showstring_gamesrecomend">"游戏精品推荐"</string>
+    <string name="detailed_loading_dialog">loading...</string>
+    <!-- end -->
+    
+</resources>

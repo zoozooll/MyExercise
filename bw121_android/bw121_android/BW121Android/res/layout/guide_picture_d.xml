@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity" 
+    >
+	
+	<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/guide_d"
+	    >
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    tools:context=".MainActivity" 
+	    >
+	    <ImageView android:id="@+id/description_pic_d"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="10dp"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/producttour_p04"
+			/>
+	    
+	    <TextView 
+	        android:id="@+id/description_tv_d"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/description_pic_d"
+	        android:text="@string/guide_textfore"
+	        android:layout_marginBottom="50dp"  
+	        android:layout_centerInParent="true"
+	        android:paddingLeft="35dp"
+		        android:paddingRight="35dp"
+	        android:textSize="20sp"
+	        android:textColor="#E15F00"
+	        />
+	</RelativeLayout>
+	</ScrollView>
+	</RelativeLayout>

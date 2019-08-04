@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res/com.oregonscientific.bbq"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@android:color/white">>
+	<RelativeLayout
+        android:id="@+id/ht"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/actionbarbg"
+        >
+	     <ImageView
+	        android:id="@+id/menuimg"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:background="@drawable/ic_drawer"
+	        />
+	     <ImageView
+	        android:id="@+id/homeimg"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/menuimg"
+	        style="@style/marginleftcenter"
+	        android:background="@drawable/iconhistoryselected"
+	        />
+	    <TextView
+	        android:id="@+id/hometext"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/homeimg"
+	        android:text="History"
+	   		style="@style/top_size_color"/>
+	</RelativeLayout>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+
+		<com.oregonscientific.bbq.view.CalendarFilperView
+		    android:id="@+id/calendarView1"
+		    android:layout_width="match_parent"
+		    android:layout_height="270dp"
+		    style="@style/Widget.Holo.CalendarFilperView"
+        	my:cv_showWeekNumber="false"
+		    />	    
+		     
+		
+		<ImageView android:id="@+id/horizline"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/linet"
+            android:layout_below="@+id/calendarView1"
+            />
+		<ListView
+		    android:id="@+id/history_ListView"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+		</ListView>
+
+	</LinearLayout>
+
+</LinearLayout>

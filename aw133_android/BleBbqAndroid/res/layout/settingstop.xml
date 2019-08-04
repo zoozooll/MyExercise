@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/actionbarbg"
+    >
+
+   	<ImageView android:id="@+id/settingsbackiv"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    style="@style/marginleftcenter"
+   	    android:src="@drawable/iconback"
+   	    />
+   	<ImageView android:id="@+id/setingsicon"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_toRightOf="@+id/settingsbackiv"
+   	    style="@style/marginleftcenter"
+   	    android:background="@drawable/iconsettings"
+   	    />
+   	<TextView
+   	    android:id="@+id/settingstv"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_toRightOf="@+id/setingsicon"
+   	    android:text="@string/settings"
+   	    style="@style/top_size_color"
+   	    />
+
+</RelativeLayout>

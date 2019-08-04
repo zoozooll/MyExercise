@@ -1,0 +1,56 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/meattypetv"
+            style="@style/linetoptitlesize"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/meat_typebig" />
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/meattypetv"
+            android:background="@drawable/linet" />
+
+        <GridView
+            android:id="@+id/gridMeattype"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/line"
+            android:background="?android:attr/activatedBackgroundIndicator"
+            android:choiceMode="singleChoice"
+            android:numColumns="4" />
+
+        <TextView
+            android:id="@+id/donn"
+            style="@style/linetoptitlesize"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gridMeattype"
+            android:text="@string/donenessbig" />
+
+        <ImageView
+            android:id="@+id/linet"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/donn"
+            android:background="@drawable/linet" />
+
+        <GridView
+            android:id="@+id/gridDonenellChooser"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/linet"
+            android:numColumns="2" />
+    </RelativeLayout>
+
+</ScrollView>

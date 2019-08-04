@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="com/mogoo/ping/utils/ImageDownloader.java|com/mogoo/ping/ctrl/TabContentController1.java|com/mogoo/ping/ctrl/ContentsPaperAdapter.java|com/mogoo/ping/ctrl/TabWidgetController1.java|com/mogoo/ping/ctrl/GridSoftwaresController1.java" kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+	<RelativeLayout android:id="@+id/top"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+	    >
+		<ImageView android:id="@+id/munu_button"
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:src="@drawable/menu_button"
+	        android:layout_centerVertical="true"
+		    />
+		<LinearLayout android:id="@+id/main_user_pic_name"
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        >
+		    <ImageView android:id="@+id/main_user_pic"
+			    android:layout_width="40dp"
+		        android:layout_height="40dp"
+		        android:src="@drawable/profile_picture"
+		        android:layout_marginRight="3dp"
+			    />
+		    <TextView android:id="@+id/main_user_name"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/create_user_profile" 
+		        android:gravity="center_vertical"
+		        android:layout_gravity="center_vertical"
+		        android:textColor="#fff"
+		        android:textSize="23sp"
+		        />
+		</LinearLayout>
+	    <!-- <TextView android:id="@+id/main_get_weight"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:text="@string/main_scale" 
+	        android:gravity="center"
+	        android:textColor="#fff"
+	        android:layout_marginRight="20dp"
+	        android:layout_alignParentRight="true"
+	        android:textSize="18sp"
+	        /> -->
+    </RelativeLayout>
+    <ImageView android:id="@+id/top_line"
+       android:layout_width="fill_parent"
+       android:layout_height="3dp"
+       android:background="#D7D7D7"
+       android:layout_below="@+id/top"
+       />
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:orientation="vertical" >
+	    <TabWidget android:id="@android:id/tabs"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:gravity="fill_horizontal"></TabWidget>
+		<FrameLayout android:id="@android:id/tabcontent"
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1">
+		    <include android:id="@+id/layout_tab_content_applications"
+		        layout="@layout/tab_content_celllayout1"
+		        android:layout_width="match_parent"
+	    		android:layout_height="match_parent"/>
+		    <include android:id="@+id/layout_tab_content_game"
+		        layout="@layout/tab_content_celllayout1"
+		        android:layout_width="match_parent"
+	    		android:layout_height="match_parent"
+	    		/>
+		    <WebView android:id="@+id/webview_tab_content_favorite"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:visibility="gone" />
+		</FrameLayout>
+	</LinearLayout>
+</TabHost>

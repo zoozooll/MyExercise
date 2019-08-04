@@ -1,0 +1,19 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Wallpaper.NoTitleBar" >
+    </style>
+    
+    <style name="tab_content_gridview">
+        <item name="android:numColumns">4</item>
+        <item name="android:gravity">center_horizontal|top</item>
+        <item name="android:horizontalSpacing">20dp</item>
+        <item name="android:verticalSpacing">40dp</item>
+    </style>
+    
+     <style name="tab_secondtitle_textview" >
+         <item name="android:gravity">center</item>
+         <item name="android:text">@string/secondtitle_lasted</item>
+         <item name="android:textColor">@color/secondtitle_textcolor</item>
+         <item name="android:textSize">18sp</item>
+     </style>
+</resources>

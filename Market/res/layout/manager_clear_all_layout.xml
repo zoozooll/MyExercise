@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="@dimen/clear_all_h"
+  android:gravity="center_horizontal">
+  
+  <Button 
+		android:id="@+id/btn_clear_all"
+		android:layout_width="@dimen/clear_all_btn_w"
+		android:layout_height="@dimen/clear_all_btn_h"
+		android:background="@drawable/manager_clear_all"
+		
+		android:layout_marginTop="@dimen/clear_all_btn_marginTop"
+		android:layout_marginBottom="@dimen/clear_all_btn_marginTop"
+		
+		android:textColor="#1b5479"
+        android:textSize="@dimen/clear_all_btn_textsize"
+	/>
+	
+	<!-- 	
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#bcceda"
+    	>
+    </LinearLayout>
+ 	-->    
+</LinearLayout>

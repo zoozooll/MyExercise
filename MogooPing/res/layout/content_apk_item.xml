@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- modify the file by lizuokang 2012-10-17
+	show the software items with layout instead of single textview -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+    <ImageView android:id="@+id/ivw_griditem_icon"
+       android:layout_width="50dp"
+	   android:layout_height="50dp"
+	   android:scaleType="fitXY"
+	   />
+	<TextView android:id="@+id/tvw_griditem_title"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:textColor="#ffffffff"
+	    android:singleLine="true"
+	    android:ellipsize="marquee">
+	</TextView>
+</LinearLayout>

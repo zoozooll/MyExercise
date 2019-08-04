@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    >
+    <RelativeLayout android:id="@+id/main_weightvalue_before"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"
+		>
+	    <ImageView android:id="@+id/step_one"
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:src="@drawable/step01_num"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="30dp"
+		    />
+		<TextView
+		    android:id="@+id/step_one_text"
+		    android:layout_width="100dp"
+		    android:layout_height="wrap_content"
+		    android:layout_centerVertical="true"
+		    android:layout_toLeftOf="@+id/step_one_people"
+		    android:layout_toRightOf="@+id/step_one"
+		    android:text="@string/step_one"
+		    android:textColor="#fff"
+		    android:textSize="20dp" 
+		    android:layout_marginLeft="10dp"/>
+		<ImageView android:id="@+id/step_one_people"
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:src="@drawable/step01_gfx_orange"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="30dp"
+		    />
+    </RelativeLayout>
+    
+    <RelativeLayout android:id="@+id/main_weightvalue_after"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+		>
+	    <RelativeLayout android:id="@+id/main_weightvalue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topline"
+		>
+			<ImageView android:id="@+id/crease_image"
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_centerVertical="true"
+		        android:layout_marginLeft="20dp"
+			    />
+			<TextView android:id="@+id/crease_value"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerVertical="true"
+		        android:layout_toRightOf="@+id/crease_image"		        
+		        android:textColor="#000"
+		        android:textSize="20sp"
+		        />
+			<!-- <TextView android:id="@+id/crease_value_unit"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerVertical="true"
+		        android:layout_toRightOf="@+id/crease_value"
+		        android:textColor="#000"
+		        /> -->
+			<TextView android:id="@+id/current_weight_value"
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:text="0.0"
+		        android:textSize="60sp"
+		        android:textColor="#fff"
+			    />
+		    <TextView android:id="@+id/current_weight_value_lbs"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/weight_value_lbs" 
+		        android:layout_toRightOf="@+id/current_weight_value"
+		        android:textColor="#fff"
+		        android:layout_centerVertical="true"
+		        />
+	    </RelativeLayout>
+	    <RelativeLayout android:id="@+id/main_weight_bmi"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/main_weightvalue"
+	        android:layout_marginTop="30dp"
+	        android:layout_marginLeft="10dp"
+	       	android:layout_marginRight="10dp"
+			>
+			<com.idt.bw.view.BMILevelView 
+			    android:id="@+id/weight_bmi"
+			    android:layout_width="fill_parent"
+		        android:layout_height="40dp"
+		        android:layout_marginLeft="10dp"
+	       		android:layout_marginRight="10dp"
+			    />
+			<!-- <ImageView android:id="@+id/weight_bmi_image"
+			    android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/weight_bmi"
+		        android:src="@drawable/hori_arrow01"
+		        android:layout_alignLeft="@+id/weight_bmi"
+		        android:layout_alignRight="@+id/weight_bmi"
+			    /> -->
+			<TextView android:id="@+id/bmi_value"
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/weight_bmi"
+		        android:layout_alignLeft="@+id/weight_bmi"
+		        android:textColor="#fff"
+			    />
+			<TextView android:id="@+id/bmi_state"
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/weight_bmi"
+		        android:layout_alignRight="@+id/weight_bmi"
+		        android:textColor="#fff"
+			    />
+	    </RelativeLayout>
+    </RelativeLayout>  
+
+</RelativeLayout>

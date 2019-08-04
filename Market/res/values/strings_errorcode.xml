@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- 服务器返回的错误信息 -->
+<string name="tip_error_default">返回结果错误！</string>
+<string name="tip_error_akey_wrong">AKEY值错误！</string>
+<string name="tip_error_args_mismatch">参数错误！</string>
+<string name="tip_error_session_invalid">会话无效！</string>
+<string name="tip_error_aid_invalid">用户名无效！</string>
+<string name="tip_error_attention_exist">用户已经被关注！</string>
+<string name="tip_error_attention_fail">关注失败</string>
+<string name="tip_error_attention_null">用户不存在！</string>
+<string name="tip_error_sex_empty">性别不能为空</string>
+<string name="tip_error_birthday_empty">生日不能为空</string>
+<string name="tip_error_username_empty">姓名不能为空</string>
+<string name="tip_error_system">系统错误</string>
+
+<!-- 蘑菇商城 -->
+<string name="tip_store_page_fail">page格式错误。</string>
+<string name="tip_store_pagesize_fail">pagesize格式错误。</string>
+<string name="tip_parent_id_fail">parentId格式错误。</string>
+<string name="tip_classification_fail">分类格式错误。</string>
+<string name="tip_subcategory_fail">子分类格式错误。</string>
+<string name="tip_appid_empty">应用id为空。</string>
+<string name="tip_installation_field">无法安装字段必须为0或者1。</string>
+    <string name="tip_run_fail">运行出错必须为0或者1。</string>
+<string name="tip_store_database_fail">数据库运行错误。</string>
+<string name="tip_grade_fail">评分必须为浮点数。</string>
+<string name="tip_apkid_fail">apkId格式错误。</string>
+<string name="tip_apkid_empty">apkId为空。</string>
+<string name="tip_app_empty">应用软件app为空。</string>
+<string name="tip_comment_title_empty">评论标题为空。</string>
+<string name="tip_comment_version_empty">被评论的软件版本号为空。</string>
+<string name="tip_username_empty">用户名为空。</string>
+<string name="tip_grade_empty">评分为空。</string>
+<string name="tip_grade_time_empty">评分时间为空。</string>
+<string name="tip_time_fail">日期格式错误。</string>
+<string name="tip_apkid_not_exist">apkId不存在。</string>
+<string name="tip_topicid_fail">topicId格式错误。</string>
+
+<!-- 网络相关 -->
+<string name="tip_network_inactive">当前网络不可用，请检查网络连接!</string>
+<string name="tip_server_error">服务器响应出错！</string>
+<string name="network_connection_timeout">网络连接超时</string>
+</resources>

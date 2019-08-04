@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:appdetail_tabbar="http://schemas.android.com/apk/res/com.mogoo.market"
+  android:orientation="vertical"
+  android:id="@+id/app_detail_activity_layout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white">
+  
+  <com.mogoo.market.widget.TitleBar
+  		android:id="@+id/idTitlebar"
+       	android:layout_width="fill_parent"   
+   		android:layout_height="@dimen/titleBar_h"
+   		android:layout_alignParentTop="true"
+  		>
+  </com.mogoo.market.widget.TitleBar>
+  
+  <RelativeLayout
+  	android:id="@+id/app_detail_activity_content" 
+  	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:layout_below="@+id/idTitlebar"
+  	>
+  	
+    <com.mogoo.market.widget.AppDetailTabbar
+        android:id="@+id/idAppDetailTabBar"
+       	android:layout_width="fill_parent"   
+   		android:layout_height="@dimen/appdetail_tab_height"
+   		
+   		appdetail_tabbar:textSize="@dimen/appdetail_tab_textsize"
+   		appdetail_tabbar:space="@dimen/appdetail_tab_space"
+   		>
+    </com.mogoo.market.widget.AppDetailTabbar>
+    
+    <LinearLayout 
+        android:id="@+id/idAppDetailContainer"
+   		android:layout_width="fill_parent"
+   		android:layout_height="fill_parent"
+   		
+   		android:layout_above="@+id/idAppDetailButtomLayout"
+   		android:layout_below="@+id/idAppDetailTabBar"
+   		>
+    </LinearLayout>
+    
+    <!-- 底端软件管理部分 -->
+    <RelativeLayout 
+        android:id="@+id/idAppDetailButtomLayout"
+   		android:layout_width="fill_parent"
+   		android:layout_height="@dimen/appdetail_buttom_h"
+   		android:background="#0090c6"
+   		android:layout_alignParentBottom="true"
+   		>
+   		
+   		<Button 
+   			android:id="@+id/idAppDetailDownloadBtn"
+	   		android:layout_width="160dip"
+	   		android:layout_height="@dimen/appdetail_buttom_button_h"
+	   		android:layout_centerInParent="true"
+	   		
+	   		android:textColor="#1b5479"
+	   		android:textSize="@dimen/appdetail_buttom_button_textsize"
+	   		android:text="@string/download"
+	   		
+	   		android:background="@drawable/appdetail_down_btn"
+  			/>
+  			
+  		<ImageView 
+  			android:id="@+id/idAppDetailDownloadPause"
+	   		android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		
+	   		android:src="@drawable/appdetail_pause"
+	   		
+	   		android:layout_alignParentLeft="true"
+	   		android:layout_centerVertical="true"
+	   		android:layout_marginLeft="8dip"
+	   		android:layout_marginRight="8dip"
+  			/>
+   			
+		<com.mogoo.market.widget.TextProgressBar
+              android:id="@+id/idAppDetail_progress_bar"
+              style="@android:style/Widget.ProgressBar.Horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="@dimen/appdetail_buttom_button_h"
+              android:layout_toLeftOf="@+id/idAppDetailDownloadCancel"
+   			  android:layout_toRightOf="@+id/idAppDetailDownloadPause"
+   			  android:layout_centerVertical="true"
+              android:progressDrawable="@drawable/appdetail_progressbar_style"
+              />
+		 			
+		<ImageView 
+			android:id="@+id/idAppDetailDownloadCancel"
+	   		android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		
+	   		android:src="@drawable/appdetail_cancel"
+	   		
+	   		android:layout_alignParentRight="true"
+	   		android:layout_centerVertical="true"
+	   		android:layout_marginLeft="8dip"
+	   		android:layout_marginRight="8dip"
+	 		/>
+   		
+    	</RelativeLayout>
+    	
+  	</RelativeLayout>
+  	
+  	<LinearLayout
+	  	android:id="@+id/loading_data" 
+	  	android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/idTitlebar"
+		android:gravity="center"
+	  	>
+	  	<ProgressBar 
+	        android:id="@+id/upload_progress"
+	        android:layout_width="66dip"
+	     	android:layout_height="66dip"
+			android:indeterminate="false"
+			style="?android:attr/progressBarStyleLarge"
+	        />
+  	</LinearLayout>
+    
+	<RelativeLayout
+        android:id="@+id/rl_no_records"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center" 
+        android:visibility="gone">
+
+        <!-- 没有数据 -->
+
+        <TextView
+            android:id="@+id/tv_empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip_to_refresh"
+            android:textSize="16sp"
+            android:textColor="@drawable/btn_refresh_text_bg" 
+            android:background="@drawable/btn_refresh_bg"/>
+
+    </RelativeLayout>
+</RelativeLayout>

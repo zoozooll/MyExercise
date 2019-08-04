@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 这些属性值应用在哪个layout文件上，要指明路径 -->
+    <declare-styleable name="com.mogoo.components.ad.AdViewLayout">
+
+        <!-- 广告文字颜色[只对文字广告有效]，(取值范围为#000000至#ffffff -->
+        <attr format="color" name="textColor" />
+        <!-- 广告背景色[只对文字广告有效]，取值范围为#000000至#ffffff -->
+        <attr format="color" name="backgroundColor" />
+        <!-- 广告背景透明度[只对文字广告有效]，默认为 255，设置范围0-255 -->
+        <attr format="integer" name="backgroundTransparent" />
+
+        <!-- 缺省的广告图片 -->
+        <attr format="reference" name="defaultAdImg" />
+
+        <!-- 获取展示数据的服务器URL，比如:http://ftp-leo3780267.q5.dns-dns.net/test/test2.txt?appId=356&positionId=1,2,3,4 -->
+        <attr format="string" name="url" />
+
+
+        <!-- 请求服务器间隔时长(单位为:秒)，默认为0,表示只在显示时请求一次服务器，之后不会自动去请求 -->
+        <attr format="integer" name="updateTime" />
+
+        <!-- 轮播间隔时长(单位为:秒)，默认为0，表示不轮播;当 isDoubleRow属性设置为true时，此refreshTime属性无效-->
+        <attr format="integer" name="refreshTime" />
+
+        <!-- 是否为双行广告，默认为false -->
+        <attr format="boolean" name="isDoubleRow" />
+
+        <!-- 双行广告可滑动总页数，，只有把isDoubleRow属性设置为true时，此属性才有效 -->
+        <attr format="integer" name="page" />
+
+        <!-- 展示位之间的间距，只有把isDoubleRow属性设置为true时，此属性才有效 -->
+        <attr format="integer" name="adPading" />
+        <!-- 展示区域的高度 -->
+        <attr format="integer" name="adHeight" />
+    </declare-styleable>
+
+</resources>

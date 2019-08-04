@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- "@dimen/Text_size"    getResources().getDimension(R.dimen.xx)-->
+<resources>
+	<dimen name="app_down_cancel_btn_width">107dip</dimen>
+	<dimen name="app_down_cancel_btn_height">37dip</dimen>
+	
+	<dimen name="app_top_height">54dip</dimen>
+	<dimen name="app_content_height">75dip</dimen>
+	<dimen name="pic_preview_height">230dip</dimen>
+	<dimen name="pic_preview_width">128dip</dimen>
+	
+	<dimen name="push_dialog_width">282dip</dimen>
+
+	
+    
+</resources>

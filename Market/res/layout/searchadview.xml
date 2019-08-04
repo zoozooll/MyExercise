@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mogoosdk="http://schemas.android.com/apk/res/com.mogoo.market"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+<!--   <TextView android:text="TextView" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView> -->
+
+    <com.mogoo.components.ad.AdViewLayout
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        mogoosdk:backgroundColor="#808080"
+        mogoosdk:backgroundTransparent="155"
+        mogoosdk:defaultAdImg="@drawable/searchaddeafult"
+        mogoosdk:refreshTime="5"
+        mogoosdk:textColor="#ffffff" 
+        android:textSize="18dip"
+        />
+
+    <Button
+        android:id="@+id/baidu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gobaidu"
+        android:textSize="18dip"
+        android:visibility="gone" >
+    </Button>
+
+</LinearLayout>

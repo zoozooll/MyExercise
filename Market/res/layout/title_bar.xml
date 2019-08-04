@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/titleBarLayout" 
+	android:layout_width="fill_parent"
+	android:layout_height="@dimen/titleBar_h" 
+	android:background="@drawable/bottom_bg"
+	android:gravity="center_vertical">
+
+	<!-- 左边图片按钮,如果没有文字，需要将text设置为空，再改变背景 -->
+	<Button android:id="@+id/leftBtn" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_alignParentLeft="true"
+		android:background="@drawable/btn_titlebar_left"
+		android:layout_centerVertical="true" 
+		android:layout_marginLeft="@dimen/titleBar_left_button_marging_left"
+		android:textSize="12sp" 
+		android:textColor="@drawable/btn_back_text_bg"
+		android:text="@string/titlebar_back" 
+		android:paddingTop="@dimen/header_left_text_t"
+		android:paddingBottom="@dimen/header_left_text_b"
+		android:paddingLeft="@dimen/header_left_text_l"
+		android:paddingRight="@dimen/header_left_text_r"
+		/>
+
+	<!-- 右边图片按钮,如果没有文字，需要将text设置为空，再改变背景 -->
+	<Button 
+		android:id="@+id/rightBtn"
+		android:layout_width="52dip"
+		android:layout_height="wrap_content" 
+		android:layout_alignParentRight="true"
+		android:background="@drawable/btn_titlebar_right"
+		android:layout_centerVertical="true" 
+		android:layout_marginRight="5dip"
+		android:textSize="12sp" 
+		android:textColor="@drawable/btn_back_text_bg"
+		android:visibility="invisible"
+		>
+	</Button>
+
+
+	<!-- 中间标题 -->
+	<TextView 
+		android:id="@+id/textView" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:layout_toLeftOf="@+id/rightBtn"
+		android:layout_toRightOf="@+id/leftBtn" 
+		android:gravity="center"
+		android:layout_centerVertical="true" 
+		android:textSize="14sp"
+		android:textColor="@android:color/white" 
+		android:shadowRadius="1.0"
+		android:shadowColor="@android:color/black" 
+		android:shadowDx="0"
+		android:textStyle="bold" 
+		android:shadowDy="-1"
+		android:singleLine="true" android:ellipsize="end"
+		android:text="@string/default_title">
+	</TextView>
+
+</RelativeLayout>
+

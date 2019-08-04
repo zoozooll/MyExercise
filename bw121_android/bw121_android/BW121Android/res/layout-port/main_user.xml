@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <RelativeLayout android:id="@+id/main_user"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	>
+	    <include 
+		    android:id="@+id/top_bar"
+		    layout="@layout/main_top_bar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+		    />
+	    
+		<com.idt.bw.view.CustomScrollView android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/top_bar"
+		    >
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+		        >
+
+		        <include
+		            android:id="@+id/main_user_top"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true"
+		            layout="@layout/main_top" />
+
+		        <include android:id="@+id/main_user_bottom"
+				    layout="@layout/main_bottom"
+				    android:layout_width="match_parent"
+		        	android:layout_height="wrap_content"
+			        android:layout_below="@+id/main_user_top" 
+				    />
+<!-- 
+		        <RelativeLayout
+		            android:id="@+id/threebutton"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentRight="true"
+		            android:background="#FFFFFFFF">
+
+		            <ImageButton
+		                android:id="@+id/imageButton1"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerHorizontal="true"
+		                android:layout_centerVertical="true"
+		                android:src="@drawable/arrow_l" />
+
+		            <ImageButton
+		                android:id="@+id/imageButton3"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentLeft="true"
+		                android:layout_centerVertical="true"
+		                android:layout_marginLeft="50dp"
+		                android:src="@drawable/arrow_l" />
+
+		            <ImageButton
+		                android:id="@+id/imageButton2"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true"
+		                android:layout_alignParentTop="true"
+		                android:layout_marginRight="38dp"
+		                android:src="@drawable/arrow_r" />
+
+		        </RelativeLayout>
+ -->
+		     </RelativeLayout>       
+		</com.idt.bw.view.CustomScrollView>
+		
+	</RelativeLayout>
+</RelativeLayout>

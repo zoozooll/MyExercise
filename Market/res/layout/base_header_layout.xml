@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mogoosdk="http://schemas.android.com/apk/res/com.mogoo.market"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ad_bg"
+    android:orientation="vertical" >
+
+    <com.mogoo.components.ad.AdViewLayout
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        mogoosdk:adPading="8"
+        mogoosdk:defaultAdImg="@drawable/addeafult"
+        mogoosdk:isDoubleRow="true"
+        mogoosdk:page="3" />
+
+    <TextView
+        android:id="@+id/nodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/nodata"
+        android:textSize="14dip" />
+
+    <com.mogoo.components.ad.DoubleRowSlideButtomView
+        android:id="@+id/buttomView"
+        android:layout_width="fill_parent"
+        android:layout_height="18dip" />
+
+</LinearLayout>

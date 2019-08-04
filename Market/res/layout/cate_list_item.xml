@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="match_parent"
+  	android:layout_height="@dimen/cate_list_item_h" >
+	<RelativeLayout
+		android:id="@+id/rl_cate_item"
+	  	android:layout_width="match_parent"
+	  	android:layout_height="@dimen/cate_list_item_h" 
+	  	android:paddingTop="@dimen/cate_list_item_padding_top_bottom"
+	  	android:paddingBottom="@dimen/cate_list_item_padding_top_bottom"
+	  	android:paddingLeft="@dimen/cate_list_item_padding_left_right"
+		android:paddingRight="@dimen/cate_list_item_padding_left_right"
+		android:background="@drawable/list_item_bg">
+		
+		<ImageView 
+			android:id="@+id/iv_cate_pic"
+			android:layout_width="@dimen/cate_list_item_pic_w"
+			android:layout_height="@dimen/cate_list_item_pic_h"
+			android:layout_alignParentLeft="true"
+			android:layout_marginRight="@dimen/cate_list_item_pic_margin_right"/> 
+		<TextView 
+			android:id="@+id/tv_cate_desc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@id/iv_cate_pic"
+			android:layout_toRightOf="@id/iv_cate_pic"
+			android:layout_marginTop="@dimen/cate_list_item_text_spacing_extra"
+			android:layout_marginBottom="@dimen/cate_list_item_text_spacing_extra"
+			android:maxWidth="@dimen/cate_list_item_text_maxwidth"
+			style="@style/topic_list_item_desc_text"/>  
+		<TextView 
+			android:id="@+id/tv_cate_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@id/tv_cate_desc"
+			android:layout_above="@id/tv_cate_desc"
+			android:maxWidth="@dimen/cate_list_item_text_maxwidth"
+			style="@style/topic_list_item_name_text"/> 
+		<TextView 
+			android:id="@+id/tv_cate_count"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="@dimen/cate_list_item_count_margin_right"
+			style="@style/cate_list_item_count_text"/>
+	</RelativeLayout>
+	<TextView 
+		android:layout_width="fill_parent"
+    	android:layout_height="1dip"
+    	android:layout_alignParentBottom="true"
+    	android:background="@drawable/divider_horizontal_dark_opaque"/>
+</RelativeLayout>

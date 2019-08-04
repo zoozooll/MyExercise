@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/header_bg">
+
+	<!--com.mogoo.component.pushview.MogooPushView
+		android:id="@+id/pushview" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:gravity="center_vertical"
+		/-->
+
+	<com.mogoo.market.widget.SearchBar
+		android:id="@+id/SearchBar" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+			
+</LinearLayout>

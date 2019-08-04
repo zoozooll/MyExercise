@@ -1,0 +1,82 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="@drawable/actionbarbg"
+    >
+    	<ImageView android:id="@+id/donenessbackiv"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:src="@drawable/iconback"
+    	    style="@style/marginleftcenter"
+    	    />
+    	<TextView android:id="@+id/donenessback"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_toRightOf="@+id/donenessbackiv"
+    	    android:text="@string/back"
+    	    style="@style/top_size_color"
+    	    />
+    	<TextView android:id="@+id/tvwDonenessTitle"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:gravity="center"
+    	    android:layout_centerInParent="true"
+    	    style="@style/top_chsize"
+    	    />
+    	<!-- <TextView android:id="@+id/done"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentRight="true"
+    	    android:text="@string/done"
+    	    android:textColor="#F89B45"
+   	    	android:textSize="20dp"
+    	    android:gravity="center"
+    	    android:layout_centerVertical="true"
+    	    android:layout_marginRight="10dp"
+    	    /> -->
+    </RelativeLayout>
+    <LinearLayout android:id="@+id/defcustomize"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    >
+	    <TextView
+	        android:id="@+id/donedefault"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:text="@string/def"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        style="@style/top_chsize"
+	        android:background="@drawable/tab_unselected_left"
+	        />
+	    <TextView
+            android:id="@+id/vertline"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/tab_sperator"
+            android:gravity="center"
+            />
+	    <TextView
+	        android:id="@+id/donecustomize"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:text="@string/customize"
+	        android:gravity="center"
+	        android:layout_weight="1"
+	        style="@style/top_chsize"
+	        android:background="@drawable/tab_selected_right"
+	        />
+	</LinearLayout>
+	<ImageView android:id="@+id/horizline"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/linet"
+            android:layout_below="@+id/defcustomize"
+            />
+</LinearLayout>

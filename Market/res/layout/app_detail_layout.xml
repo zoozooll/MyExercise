@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+  
+  <ScrollView
+        android:id="@+id/contentFrame1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            
+	        <!-- 软件简介 软件图标、软件版本、软件大小等基本信息 -->
+	        <include layout="@layout/app_detail_baseinfo"
+	        />
+	        <LinearLayout
+	            android:id="@+id/gallery_shot_parent"
+	            android:layout_width="fill_parent"
+                android:layout_height="@dimen/gallery_shot_scrollview_height"
+                android:visibility="gone"
+                android:background="@drawable/appdetail_shot_bg"
+                android:paddingLeft="@dimen/gallery_shot_item_space"
+                android:paddingRight="@dimen/gallery_shot_item_space"
+              >
+	        <!-- 软件快照 -->
+	        <!-- <HorizontalScrollView
+	        	android:id="@+id/gallery_shot_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/gallery_shot_scrollview_height"
+                android:scrollbars="none"
+                android:visibility="gone"
+                android:background="@drawable/appdetail_shot_bg"
+                
+                android:paddingLeft="@dimen/gallery_shot_item_space"
+                android:paddingRight="@dimen/gallery_shot_item_space"
+                > -->
+                
+                <Gallery 
+		        	android:id="@+id/gallery_shot"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+		        	android:spacing="5dip"
+		        	android:paddingTop="5dip"
+		        	android:paddingBottom="5dip"
+		            android:gravity="center_vertical"
+		        	android:fadingEdge="none"
+	        	>
+	        	</Gallery >
+	        <!-- </HorizontalScrollView> -->
+	        </LinearLayout>
+	        
+	        <!-- 软件描述 -->
+            <RelativeLayout
+                android:id="@+id/app_detail_desc_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+                
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip">
+
+				<TextView
+					android:id="@+id/app_detail_desc_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:maxLines="5"
+                    android:textColor="#1b5479"
+                    android:textSize="@dimen/app_detail_description_title_size"
+                    android:text="@string/app_detail_description" />
+                    
+                <TextView
+                    android:id="@+id/app_detail_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:layout_below="@+id/app_detail_desc_title"
+                    
+                    android:maxLines="5"
+                    android:textColor="#1b5479"
+                    android:textSize="@dimen/app_detail_description_size"
+                    />
+
+                <TextView
+                    android:id="@+id/app_detail_see_more_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:layout_below="@+id/app_detail_description"
+                    android:layout_alignParentRight="true"
+                    
+                    android:text="@string/app_detail_see_more"
+                    android:textColor="#1b5479"
+                    android:textSize="@dimen/app_detail_description_title_size"
+                    android:textStyle="bold"
+                     />
+                        
+            </RelativeLayout>
+            
+            <LinearLayout 
+            	android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#bcceda"
+                
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+            	>
+            </LinearLayout>
+            
+            <!-- 其他用户下载了的软件 -->
+            <RelativeLayout
+                android:id="@+id/app_detail_other_recomment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                	android:id="@+id/like_tx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:maxLines="5"
+                    android:textColor="#1b5479"
+                    android:textSize="@dimen/app_detail_description_title_size"
+                    android:text="@string/app_detail_other_recommend" 
+                    
+                    android:layout_marginLeft="8dip"
+                	android:layout_marginRight="8dip"/>
+				
+				<!-- 推荐的应用 -->
+				<HorizontalScrollView
+					android:id="@+id/gallery_like_parent"
+	                android:layout_width="fill_parent"
+	                android:layout_height="@dimen/gallery_like_scrollview_height"
+	                android:scrollbars="none"
+	                android:layout_below="@+id/like_tx"
+	                android:visibility="gone"
+	                >
+	                
+	                <LinearLayout 
+			        	android:id="@+id/gallery_like"
+		                android:layout_width="wrap_content"
+		                android:layout_height="fill_parent"
+			        	android:background="@color/white"
+			        	
+			        	android:orientation="horizontal"
+			        	android:gravity="center_vertical"
+		        	>
+		        	</LinearLayout>
+	            </HorizontalScrollView>
+
+            </RelativeLayout>
+        
+        </LinearLayout>
+  </ScrollView>
+  
+</LinearLayout>

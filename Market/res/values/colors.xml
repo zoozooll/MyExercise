@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- list item 选择背景色 -->
+    <color name="soft_list_item_1">#ffffffff</color>
+
+    <!-- 全局视图背景色 -->
+    <color name="g_bg">#FFDBDBDB</color>
+
+    <!-- 全局 黑色 文本色 -->
+    <color name="text_black">#ff242424</color>
+
+    <!-- 全局 灰白色 文本色 -->
+    <color name="text_white">#ffffffff</color>
+
+    <!-- 全局 暗褐色 文本色 -->
+    <color name="text_gray">#ff494949</color>
+
+    <!-- 全局 浅灰色 文本色 -->
+    <color name="text_s_gray">#FFDBDBDB</color>
+
+    <!-- List Item background color -->
+    <drawable name="item_bg_0">#ff98979C</drawable>
+    <drawable name="item_bg_1">#ffADACB1</drawable>
+    <drawable name="item_pressed_bg">#ff058af4</drawable>
+    <drawable name="item_sepr">#ffA9A8AD</drawable>
+  <drawable name="item_bgcolor">#00000000</drawable>
+    <color name="white">#ffffff</color> <!-- 白色 -->
+    <color name="black">#000000</color> <!-- 黑色 -->
+    <color name="lightgrey">#444344</color> <!-- 正在播放列表亮灰色分隔 -->
+
+    <color name="unfocused">#ffffffff</color>
+    <color name="pressed">#ffffffff</color>
+    <color name="selected">#ff0000ff</color>
+    <color name="focused">#ffffffff</color>
+    <color name="green">#12872F</color>
+    <color name="blue">#2E6BD9</color>
+    <color name="yellow">#F3B93E</color>
+    <color name="violet">#A330D5</color>
+    <color name="chinese_red">#A80000</color>
+    <color name="color_transparent">#00ffffff</color>
+    <!-- <color name="color_label">#ff000000</color> -->
+
+    <color name="translucent_background">#50000000</color>
+
+	<color name="cancel_text_color">#7e98a9</color>
+	<color name="app_size_color">#4e4e4e</color>
+	
+	<color name="install_bg">#cc466985</color>
+</resources>

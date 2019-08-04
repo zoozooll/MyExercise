@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<string name="iphone_app_name">应用市场</string>
+<string name="mogoo_app_name">蘑菇商城</string>
+<string name="exit_toast_text">再按一次返回键将退出该应用</string>
+<string name="connect_tip">网络已断开，请连接网络</string>
+
+<string name="tab_main">首页</string>
+<string name="tab_cate">分类</string>
+<string name="tab_top">排行</string>
+<string name="tab_search">搜索</string>
+<string name="tab_manager">管理</string>
+
+<!-- 进度条 -->
+    <string name="in_loading">加载中...</string>
+    <string name="in_progress">正在进行中...</string>
+    
+	<!-- 分类 -->
+	<string name="cate_activity_btn_topic">专题</string>
+	<string name="cate_activity_btn_apps">应用</string>
+	<string name="cate_activity_btn_game">游戏</string>
+    <string name="cate_item_new">最新加入: <xliff:g id="name">%1$2s</xliff:g></string>
+    
+    <!-- 软件简介 -->
+    <string name="app_detail_detail">软件简介</string>
+    <string name="app_detail_comment">用户评论</string>
+    <string name="app_detail_see_more">查看更多简介</string>
+    <string name="app_detail_see_more_col">收起</string>
+    <string name="app_detail_description">软件描述：</string>
+    <string name="app_detail_other_recommend">下载此软件的用户还下载了：</string>
+    <string name="app_detail_input_name">请输入昵称，谢谢！</string>
+    <string name="app_detail_input_content">请输入评论内容，谢谢！</string>
+    <string name="app_detail_post_comment_redo">评论正在提交，请稍候...</string>
+    <string name="app_detail_post_comment_success">评论提交成功！感谢您的支持！</string>
+    <string name="app_detail_post_comment_fail">评论提交失败！请稍后重试，非常感谢！</string>
+    <string name="app_detail_error_apkid">无效应用ID：</string>
+    <string name="app_detail_getdetail_fail">获取应用信息失败！</string>
+    <string name="no_comment">没有评论信息</string>
+    <string name="niming">匿名用户</string>
+    <string name="nothing">暂无</string>
+    <string name="open_failed">打开应用失败</string>
+    <string name="soft_shot">软件快照</string>
+    
+    <!-- 管理 -->
+    <string name="download_manager">下载</string>
+    <string name="soft_manager">已安装</string>
+     <string name="more_settings">更多</string>
+    <string name="installUpdate">安装更新</string>
+    <string name="clear_all">一键清除</string>
+    <string name="update_all">全部更新</string>
+    <string name="scan_sdcard">重新扫描SD卡</string>
+    <string name="clear_all_downloadlist">清除下载列表</string>
+    <string name="clear_all_warn">此操作仅删除所有的下载列表，不删除已下载的安装包！</string>
+    <string name="clear_all_apk">同时删除已下载的安装包</string>
+    <string name="no_down">&#160;&#160;您还没有下载任何应用，\n快去商城下载体验一把吧！</string>
+    <string name="no_install">&#160;&#160;您还没有安装任何应用，\n快去商城下载体验一把吧！</string>
+    <string name="no_sd_apk">&#160;&#160;没有任何安装包，\n快去商城下载体验！</string>
+    <string name="no_ram_apk">&#160;&#160;您内存没有第三方应用，\n快去商城下载体验一把吧！</string>
+    <string name="soft_move">软件搬家</string>
+    <string name="soft_subtitle_move">将软件从手机内存搬到SD卡</string>
+    <string name="delete_install_package">从存储卡管理应用</string>
+    <string name="delete_install_subtitle_package">搜索SD卡，安装，删除应用</string>
+    <string name="no_sdcard_tip">设备没有SD卡，请插入SD卡再操作</string>
+    <string name="scan_sdcard_tip">正在扫描SD卡，请稍等……</string>
+    
+    <!-- 下载状态 -->
+	<string name="downloading">下载中  </string>
+	<string name="zhzaidownloading">&#160;&#160;正在下载&#160;&#160;</string>
+	<string name="paused">暂停中  </string>
+	<string name="downloadone">已下载  </string>
+	<string name="version_download_manager">版本  </string>
+	<string name="open_application">打开</string>
+	<string name="app_size">软件大小:</string>
+	<string name="app_pause">暂停下载</string>
+	<string name="app_continue">继续下载</string>
+	<string name="download_failed">下载失败</string>
+    <string name="uninstall_sdcard">存储卡已卸载</string>
+    
+    <!-- 通用 -->
+    <string name="download">下载</string>
+    <string name="pause">暂停</string>
+    <string name="restart">继续</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="delete">删除</string>
+    <string name="open">打开</string>
+    <string name="install">安装</string>
+    <string name="uninstall">卸载</string>
+    <string name="version">版本:  </string>
+    <string name="version1">版</string>
+    <string name="mark">评分次数:  </string>
+    <string name="time">更新时间:  </string>
+    <string name="size">大小:  </string>
+    <string name="download_num">次下载</string>
+    <string name="st_ci">次</string>
+    <string name="nick_name">昵称: </string>
+    <string name="content">内容: </string>
+    <string name="post_comment">发表</string>
+    <string name="app_update">更新</string>
+    
+    <!-- 标题栏 -->
+    <string name="titlebar_back">返回</string>
+    <string name="default_title">. . .</string>
+
+    <!-- 广告 -->
+    <string name="nodata">您好，此目录暂时没有应用，请稍后再看。</string>
+    <!-- 搜索 -->
+    <string name="gobaidu">前往百度应用中心下载</string>
+    <string name="tv_sear">搜索</string>
+    <string name="tv_sear_result">搜索结果</string>
+    <string name="mobi">蘑币</string>
+    <string name="install_no_sdcard">没有插入SDCard，不能进行下载安装！</string>
+    <string name="sdcard_full">SD卡已满，无法继续下载安装，需释放足够空间！</string>  
+    <string name="search_tip_text">滑动一下有惊喜哦！</string>
+    <string name="key_words_tip">请输入搜索内容！</string>
+    <string name="search_empty_tip">没有搜索到相关的内容</string>
+     
+    <!-- 首面activity -->
+    <string name="app_recommend">推荐</string>
+    <string name="app_latest">最新</string>
+    <string name="app_necessary">必备</string>
+    <string name="app_item_free">免费</string>
+    <string name="app_item_version">版本:<xliff:g id="version">%1$2s</xliff:g></string>
+    <string name="app_item_installed">已安装</string>
+    
+    <!-- 加载页 -->
+    <string name="loading_first_page_data">正在加载数据…</string>
+    <string name="loading_first_page_no_network">网络连接失败，请检查网络设置…</string>
+    
+    <!-- 排行 -->
+	<string name="top_activity_btn_hot">热门</string>
+	<string name="top_activity_btn_apps">应用</string>
+	<string name="top_activity_btn_game">游戏</string>
+	
+	<string name="tip_to_refresh">获取数据失败，点击刷新</string>
+	<string name="tip_no_network">网络连接失败</string>
+	
+	<!-- 应用二级分类 -->
+	<string-array name="cate_apps_subclss">
+		<item>应用分类</item>
+		<item>精品应用</item>
+		<item>最新应用</item>
+	</string-array>
+	<!-- 游戏二级分类 -->
+	<string-array name="cate_game_subclss">
+		<item>游戏分类</item>
+		<item>精品游戏</item>
+		<item>最新游戏</item>
+	</string-array>
+</resources>

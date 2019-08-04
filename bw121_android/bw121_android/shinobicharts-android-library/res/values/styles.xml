@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- A Base theme for attributes that are common to both default styles -->
+    <style name="Theme.Default" parent ="@android:style/Theme">        
+	    <item name="sc_showGridLines">@bool/sc_defaultShowGridLines</item>
+	    <item name="sc_dashedGridLines">@bool/sc_dashedGridLines</item>   
+		<item name="sc_showGridStripes">@bool/sc_showGridStripes</item>        
+		<item name="sc_gridStripeColor">@color/sc_defaultGridStripeColor</item>
+	    <item name="sc_alternateGridStripeColor">@color/sc_defaultAlternateGridStripeColor</item>      
+	    <item name="sc_defaultSelectedSeriesColor">@color/sc_defaultSelectedSeriesColor</item>
+	        
+		<item name="sc_seriesLineColor1">@color/sc_purpleDark</item>
+		<item name="sc_seriesAreaColor1">@color/sc_purpleLightFill</item>
+		<item name="sc_seriesAreaGradientColor1">@color/sc_purpleDarkFill</item>
+		<item name="sc_seriesAreaGradientTransparentColor1">@color/sc_purpleDarkFillAlpha</item>
+	
+		<item name="sc_seriesLineColor2">@color/sc_blueDark</item>
+		<item name="sc_seriesAreaColor2">@color/sc_blueLightFill</item>
+		<item name="sc_seriesAreaGradientColor2">@color/sc_blueDarkFill</item>
+		<item name="sc_seriesAreaGradientTransparentColor2">@color/sc_blueDarkFillAlpha</item>
+	
+		<item name="sc_seriesLineColor3">@color/sc_orangeDark</item>
+		<item name="sc_seriesAreaColor3">@color/sc_orangeLightFill</item>
+		<item name="sc_seriesAreaGradientColor3">@color/sc_orangeDarkFill</item>
+		<item name="sc_seriesAreaGradientTransparentColor3">@color/sc_orangeDarkFillAlpha</item>
+	
+		<item name="sc_seriesLineColor4">@color/sc_greenDark</item>
+		<item name="sc_seriesAreaColor4">@color/sc_greenLightFill</item>
+		<item name="sc_seriesAreaGradientColor4">@color/sc_greenDarkFill</item>
+		<item name="sc_seriesAreaGradientTransparentColor4">@color/sc_greenDarkFillAlpha</item>
+	
+		<item name="sc_seriesLineColor5">@color/sc_yellowDark</item>
+		<item name="sc_seriesAreaColor5">@color/sc_yellowLightFill</item>
+		<item name="sc_seriesAreaGradientColor5">@color/sc_yellowDarkFill</item>
+		<item name="sc_seriesAreaGradientTransparentColor5">@color/sc_yellowDarkFillAlpha</item>
+	
+		<item name="sc_seriesLineColor6">@color/sc_pinkDark</item>
+		<item name="sc_seriesAreaColor6">@color/sc_pinkLightFill</item>
+		<item name="sc_seriesAreaGradientColor6">@color/sc_pinkDarkFill</item>
+		<item name="sc_seriesAreaGradientTransparentColor6">@color/sc_pinkDarkFillAlpha</item>
+	
+		<item name="sc_pieDonutFlavorColor1">@color/sc_radialPurple</item>
+       	<item name="sc_pieDonutFlavorColor2">@color/sc_radialBlue</item>
+       	<item name="sc_pieDonutFlavorColor3">@color/sc_radialOrange</item>
+       	<item name="sc_pieDonutFlavorColor4">@color/sc_radialGreen</item>
+       	<item name="sc_pieDonutFlavorColor5">@color/sc_radialYellow</item>
+       	<item name="sc_pieDonutFlavorColor6">@color/sc_radialPink</item>
+       	<item name="sc_defaultCrustColor">@color/sc_crustColor</item>
+
+        <item name="sc_financialRisingColor">@color/sc_financialGreen</item>
+        <item name="sc_financialFallingColor">@color/sc_financialRed</item>
+        <item name="sc_bandSeriesHighColor">@color/sc_financialBlue</item>
+        <item name="sc_bandSeriesLowColor">@color/sc_financialBlue</item>
+        <item name="sc_bandSeriesAreaColor">@color/sc_financialBlueAlpha</item>
+        <item name="sc_bandSeriesAreaInvertedColor">@color/sc_financialBlueAlpha</item>
+
+        <item name="sc_titlePadding">@dimen/sc_defaultTitlePadding</item>
+        <item name="sc_titleMargin">@dimen/sc_defaultTitleMargin</item>
+        
+        <item name="sc_annotationBackgroundColor">@color/sc_annotationDefaultBackgroundColor</item>
+        <item name="sc_annotationTextColor">@color/sc_annotationDefaultTextColor</item>
+        <item name="sc_annotationTextSize">@dimen/sc_defaultAnnotationTextSize</item>
+    </style>
+
+    <!--  The Light theme, Brighter colors based on a white background. The default chart theme -->
+    <style name="Theme.Default.Light">
+        <item name="sc_chartTitleColor">@color/sc_chartDefaultTitleColor</item>
+        <item name="sc_axisTitleColor">@color/sc_axisDefaultTitleColor</item>
+        <item name="sc_tickLineColor">@color/sc_tickDefaultLineColor</item>
+        <item name="sc_tickLabelColor">@color/sc_tickDefaultLabelColor</item>   
+        <item name="sc_showGridLines">@bool/sc_defaultShowGridLines</item>
+        
+        <item name="sc_gridLineColor">@color/sc_gridDefaultLineColor</item>
+     	        
+        <item name="sc_chartBackgroundColor">@color/sc_chartDefaultBackgroundColor</item>
+        <item name="sc_plotAreaColor">@color/sc_plotDefaultAreaColor</item>
+        <item name="sc_pieDonutLabelColor">@color/sc_pieDonutLabelDefaultColor</item>
+
+        <item name="sc_legendTextColor">@color/sc_legendDefaultTextColor</item>
+        <item name="sc_legendBorderColor">@color/sc_legendDefaultBorderColor</item>
+        <item name="sc_legendBackgroundColor">@color/sc_legendDefaultBackgroundColor</item>
+
+        <item name="sc_crosshairLineColor">@color/sc_crosshairDefaultLineColor</item>
+        <item name="sc_crosshairTooltipTextColor">@color/sc_crosshairTooltipDefaultTextColor</item>
+        <item name="sc_crosshairTooltipLabelBackgroundColor">@color/sc_crosshairTooltipDefaultLabelBackgroundColor</item>
+        <item name="sc_crosshairTooltipBackgroundColor">@color/sc_crosshairTooltipDefaultBackgroundColor</item>
+        <item name="sc_crosshairTooltipBorderColor">@color/sc_crosshairTooltipDefaultBorderColor</item>
+    </style>
+
+    <!-- The Dark theme, Softer colors on a black background -->
+    <style name="Theme.Default.Dark">
+        <item name="sc_chartTitleColor">@color/sc_chartDarkTitleColor</item>
+        <item name="sc_axisTitleColor">@color/sc_axisDarkTitleColor</item>
+        <item name="sc_tickLineColor">@color/sc_tickDarkLineColor</item>
+        <item name="sc_tickLabelColor">@color/sc_tickDarkLabelColor</item>
+        <item name="sc_showGridLines">@bool/sc_darkShowGridLines</item>
+        
+        <item name="sc_gridLineColor">@color/sc_gridDarkLineColor</item>
+		<item name="sc_gridStripeColor">@color/sc_darkGridStripeColor</item>
+        <item name="sc_alternateGridStripeColor">@color/sc_darkAlternateGridStripeColor</item>       
+        
+        <item name="sc_chartBackgroundColor">@color/sc_chartDarkBackgroundColor</item>
+        <item name="sc_plotAreaColor">@color/sc_plotDarkAreaColor</item>
+        <item name="sc_pieDonutLabelColor">@color/sc_pieDonutLabelDarkColor</item>
+        
+        <item name="sc_legendTextColor">@color/sc_legendDarkTextColor</item>
+        <item name="sc_legendBorderColor">@color/sc_legendDarkBorderColor</item>
+        <item name="sc_legendBackgroundColor">@color/sc_legendDarkBackgroundColor</item>
+
+        <item name="sc_crosshairLineColor">@color/sc_crosshairDarkLineColor</item>
+        <item name="sc_crosshairTooltipTextColor">@color/sc_crosshairTooltipDarkTextColor</item>
+        <item name="sc_crosshairTooltipLabelBackgroundColor">@color/sc_crosshairTooltipDarkLabelBackgroundColor</item>
+        <item name="sc_crosshairTooltipBackgroundColor">@color/sc_crosshairTooltipDarkBackgroundColor</item>
+        <item name="sc_crosshairTooltipBorderColor">@color/sc_crosshairTooltipDarkBorderColor</item>
+        
+        <item name="sc_annotationBackgroundColor">@color/sc_annotationDarkBackgroundColor</item>
+        <item name="sc_annotationTextColor">@color/sc_annotationDarkTextColor</item>
+    </style>
+</resources>

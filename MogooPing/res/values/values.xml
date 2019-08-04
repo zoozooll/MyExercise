@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id"
+        name="tab_type" />
+    <item type="id"
+        name="tab_packagename" />
+    <item type="id"
+        name="tab_local_path" />
+    <item type="id"
+        name="tab_remote_path" />
+    <item type="id"
+        name="tab_launch_intent" />
+    <item type="id"
+        name="tab_app_id" />
+    <item type="id"
+        name="tab_app_type" />
+    <item type="id"
+        name="tab_app_downloadid" />
+    <item type="id"
+        name="boolean_key" />
+    
+</resources>

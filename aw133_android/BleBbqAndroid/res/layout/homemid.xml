@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:layout_centerHorizontal="true" >
+       <RelativeLayout
+           android:id="@+id/mode"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           style="@style/margintop"
+           android:gravity="center_horizontal">
+           <ImageView
+               android:id="@+id/ivTopIcon"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:src="@drawable/hcon_beef" 
+               />
+           <TextView
+               android:id="@+id/tvwTopMsg"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_toRightOf="@+id/ivTopIcon"
+               style="@style/modeshow"
+                />
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:id="@+id/current"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@+id/mode"
+           android:layout_above="@+id/currentTimePro"
+           android:gravity="center_horizontal"
+		>
+		    <com.oregonscientific.bbq.view.CookProgressBar
+		        android:id="@+id/cpbPercetial"
+		        style="@style/cookProgressBar" />
+            <TextView
+               android:id="@+id/tvwCurrentTemp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="--"
+               style="@style/cookCurrentTemp" 
+               />
+            <TextView
+               android:id="@+id/tvwCurrentTempUnit"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/tvwCurrentTemp"
+               style="@style/cookCurrentTempUnit" 
+               />
+            <TextView
+               android:id="@+id/tvwCurrentStatus"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/tvwCurrentTemp"
+               android:layout_centerHorizontal="true"
+               style="@style/top_chsize"
+                />
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:id="@+id/currentTimePro"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_above="@+id/startstoppro"
+           android:layout_centerHorizontal="true"
+           style="@style/margintop"
+           android:gravity="center_horizontal" >
+           <ImageView
+               android:id="@+id/clockicon"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:src="@drawable/iconcountup"
+               style="@style/clock"
+               />
+           <TextView
+               android:id="@+id/tvwTimer"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/clockicon"
+               android:text="@string/zero_timer"
+               style="@style/clockleftcenter"
+               />
+           
+           <ProgressBar android:id="@+id/ivwCookingPercental"
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content" 
+		       android:layout_toLeftOf="@+id/tvwCookingPercental"
+               style="@style/marginrightcenter"
+               android:visibility="invisible"
+        	/>
+<!--            <ImageView
+               android:id="@+id/ivwCookingPercental"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/icon_progress"
+               android:layout_toLeftOf="@+id/tvwCookingPercental"
+               style="@style/marginrightcenter"
+               /> -->
+           <TextView
+               android:id="@+id/tvwCookingPercental"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               style="@style/progresstext"
+               android:text="@string/percent"
+               />
+               
+           <ImageView
+               android:id="@+id/ivwCurrentTimerIcon"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:visibility="gone"
+               />
+           <TextView
+               android:id="@+id/tvwCurrentTimer"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:layout_toRightOf="@+id/ivwCurrentTimerIcon"
+               style="@style/modeshow"
+               android:text="@string/zero_timer"
+               android:visibility="gone"
+               />
+       </RelativeLayout>
+       <!-- <Button
+	        android:id="@+id/btnOperatingCtrl"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentBottom="true"
+	        android:text="@string/str_home_start" 
+	        android:background="@drawable/buttonstart"
+	        style="@style/startbutton"
+	        /> -->
+	        
+        <RelativeLayout
+           android:id="@+id/startstoppro"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+	       android:layout_centerHorizontal="true"
+           android:background="@drawable/buttonstart" 
+           style="@style/startbuttonlayout"
+		 >
+           <TextView
+               android:id="@+id/btnOperatingCtrl"
+               style="@style/startbutton"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:text="@string/str_home_start" />
+           <!-- <ImageView
+               android:id="@+id/buttRightPro"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_toRightOf="@+id/btnOperatingCtrl"
+               android:src="@drawable/icon_progress" 
+               style="@style/marginrightcenter"
+               android:visibility="gone"
+               /> -->
+               <ProgressBar android:id="@+id/buttRightPro"
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content" 
+		       android:layout_alignParentRight="true"
+               android:layout_toRightOf="@+id/btnOperatingCtrl"
+               style="@style/marginrightcenter"
+        	/>
+       </RelativeLayout>
+</RelativeLayout>

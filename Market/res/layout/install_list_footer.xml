@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dip"
+    android:paddingBottom="10dip">
+
+    <RelativeLayout
+        android:id="@+id/loading_footer_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:id="@+id/loading_footer_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_centerVertical="true"
+            style="?android:attr/progressBarStyleSmall"/>
+
+        <TextView
+            android:id="@+id/loading_footer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/loading_footer_progress"
+            android:text="@string/data_loading"
+            android:textSize="16.0dip" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_footer_progress"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content" 
+        style="?android:attr/progressBarStyleSmall"/>
+
+    <TextView
+        android:id="@+id/none_data_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/no_more_data"
+        android:textSize="16.0dip"
+        android:visibility="gone" />
+
+</LinearLayout>

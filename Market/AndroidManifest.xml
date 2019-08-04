@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.mogoo.market" android:versionCode="7" android:versionName="2.1.07">
+
+
+	<original-package android:name="com.mogoo.market" />
+
+	<uses-sdk android:minSdkVersion="8" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	    <!-- android:sharedUserId="android.media" -->
+    <!-- Allows access to the Download Manager -->
+    <permission android:name="imogoo.permission.ACCESS_DOWNLOAD_MANAGER"
+        android:label="@string/permlab_downloadManager"
+        android:description="@string/permdesc_downloadManager"
+        android:protectionLevel="signatureOrSystem" />
+
+    <!-- Allows advanced access to the Download Manager -->
+    <permission android:name="imogoo.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED"
+        android:label="@string/permlab_downloadManagerAdvanced"
+        android:description="@string/permdesc_downloadManagerAdvanced"
+        android:protectionLevel="signatureOrSystem" />
+
+    <!-- Allows to send download completed intents -->
+    <permission android:name="imogoo.permission.SEND_DOWNLOAD_COMPLETED_INTENTS"
+        android:label="@string/permlab_downloadCompletedIntent"
+        android:description="@string/permdesc_downloadCompletedIntent"
+        android:protectionLevel="signature" />
+
+    <!-- Allows to download non-purgeable files to the cache partition through the public API -->
+    <permission android:name="imogoo.permission.DOWNLOAD_CACHE_NON_PURGEABLE"
+        android:label="@string/permlab_downloadCacheNonPurgeable"
+        android:description="@string/permdesc_downloadCacheNonPurgeable"
+        android:protectionLevel="signatureOrSystem"/>
+
+    <!-- Allows to queue downloads without a notification shown while the download runs. -->
+    <permission android:name="imogoo.permission.DOWNLOAD_WITHOUT_NOTIFICATION"
+        android:permissionGroup="android.permission-group.NETWORK"
+        android:label="@string/permlab_downloadWithoutNotification"
+        android:description="@string/permdesc_downloadWithoutNotification"
+        android:protectionLevel="normal"/>
+
+    <!-- Allows an app to access all downloads in the system via the /all_downloads/ URIs.  The
+         protection level could be relaxed in the future to support third-party download
+         managers. -->
+    <permission android:name="imogoo.permission.ACCESS_ALL_DOWNLOADS"
+        android:label="@string/permlab_accessAllDownloads"
+        android:description="@string/permdesc_accessAllDownloads"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="imogoo.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM" />
+    <uses-permission android:name="imogoo.permission.SEND_DOWNLOAD_COMPLETED_INTENTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="imogoo.permission.ACCESS_ALL_DOWNLOADS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+	<application android:icon="@drawable/ic_launcher" android:label="@string/iphone_app_name"
+		android:name=".MarketApplication">
+		
+	     <activity 
+            android:name=".ui.InstallousActivity"
+            android:icon="@drawable/installous_icon"
+            android:label="@string/install_title"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+        </activity>
+		
+        <activity 
+            android:name=".ui.LoadingFirstPage"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+ 			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+ 			
+        </activity>
+        
+		<activity 
+			android:name=".ui.MarketGroupActivity"
+			android:windowSoftInputMode="adjustPan"
+			android:launchMode="singleTask" 
+			android:screenOrientation="portrait"
+			android:theme="@android:style/Theme.NoTitleBar">
+<!-- 			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter> -->
+<!-- 			<intent-filter>
+			<action android:name="com.mogoo.market.action.MarketGroupActivity"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter> -->
+			<intent-filter>
+				<action android:name="com.mogoo.market.action.NECESSARY"/>
+				<action android:name="com.mogoo.market.action.RECOMMEND"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="com.mogoo.market.action.GAMECENTER"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+		
+		<activity 
+			android:name="com.mogoo.market.ui.MainActivity" 
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+		
+		<activity 
+			android:name="com.mogoo.market.ui.CateActivity" 
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+		
+		<activity 
+			android:name="com.mogoo.market.ui.ChildCateActivity" 
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar">
+		</activity>		
+		
+		<activity 
+			android:name="com.mogoo.market.ui.TopActivity" 
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+		
+		<activity 
+			android:name="com.mogoo.market.ui.SearchActivity"
+			android:screenOrientation="portrait" 
+			android:windowSoftInputMode="adjustPan"
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+		
+	        <activity 
+			android:name="com.mogoo.market.ui.SearchKeywordListActivity" 
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar">
+		</activity>	
+		
+		<activity 
+			android:name="com.mogoo.market.ui.ManagerActivity"
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:launchMode="singleInstance"
+			android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+		
+		<activity 
+			android:name="com.mogoo.market.ui.SoftMoveActivity" 
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar">
+		</activity>	
+		
+		<activity 
+			android:name="com.mogoo.market.ui.SdcardInstallDeleteActivity" 
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar">
+		</activity>	
+		
+		<activity 
+			android:name="com.mogoo.market.ui.AdAppActivity"
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:windowSoftInputMode="adjustPan"
+			android:theme="@android:style/Theme.NoTitleBar">
+			<intent-filter>
+				<action android:name="com.mogoo.market.ui.AdAppActivity" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
+		<activity 
+			android:name="com.mogoo.market.ui.AppDetailActivity"
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:windowSoftInputMode="adjustPan"
+			android:theme="@android:style/Theme.NoTitleBar">
+			<intent-filter>
+				<action android:name="com.mogoo.market.ui.AppDetailActivity"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+		
+		<activity 
+			android:name="com.mogoo.market.ui.GalleryShotActivity" 
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar">
+		</activity>	
+		
+		<activity 
+			android:name=".ui.ReturnIbeParamsActivity"
+			android:screenOrientation="portrait" 
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar">
+			<intent-filter>
+				<action android:name="com.mogoo.market.action.IBE_PARAMS"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+		</activity>
+		
+		<!-- 注册文字广告的广播 -->
+		<receiver 
+			android:name="com.mogoo.market.MainLaunchReceiver">
+			<intent-filter>
+				<action android:name="com.android.mms.action.AD_SERVING" />
+			</intent-filter>
+		</receiver>
+		
+		<provider 
+			android:name="cn.imogoo.providers.downloads.DownloadProvider"
+            android:authorities="mydownloads"
+            android:permission="imogoo.permission.ACCESS_ALL_DOWNLOADS">          
+          <!-- Anyone can access /my_downloads, the provider internally restricts access by UID for
+               these URIs -->
+          <path-permission android:pathPrefix="/my_downloads"
+                           android:permission="android.permission.INTERNET"/>
+          <!-- Temporary, for backwards compatibility -->
+          <path-permission android:pathPrefix="/download"
+                           android:permission="android.permission.INTERNET"/>
+          <!-- Apps with access to /all_downloads/... can grant permissions, allowing them to share
+               downloaded files with other viewers -->
+          <grant-uri-permission android:pathPrefix="/all_downloads/"/>
+        </provider>
+        <!--service android:name="com.android.providers.mydownloads.DownloadService"
+                android:permission="imogoo.permission.ACCESS_DOWNLOAD_MANAGER" /-->
+        <service 
+        	android:name="cn.imogoo.providers.downloads.DownloadService"/>        
+        <receiver 
+        	android:name="cn.imogoo.providers.downloads.DownloadReceiver" 
+        	android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity 
+        	android:name=".SizeLimitActivity"
+			android:launchMode="singleTask"
+            android:theme="@style/Theme.Translucent"/>
+
+	</application>
+
+	<supports-screens android:smallScreens="true"
+		android:normalScreens="true" android:largeScreens="true"
+		android:anyDensity="true" />
+</manifest>

@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package com.mogoo.ping.utils;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+/**
+ * @author Aaron Lee
+ * MD5加密数据
+ * @Date 上午10:59:56  2012-9-17
+ */
+public class MD5 {
+        
+    public static String getMD5(String content) {  
+        try {  
+            MessageDigest digest = MessageDigest.getInstance("MD5");  
+            digest.update(content.getBytes());  
+            return getHashString(digest);  
+              
+        } catch (NoSuchAlgorithmException e) {  
+            e.printStackTrace();  
+        }  
+        return null;  
+    }  
+      
+    private static String getHashString(MessageDigest digest) {  
+        StringBuilder builder = new StringBuilder();  
+        for (byte b : digest.digest()) {  
+            builder.append(Integer.toHexString((b >> 4) & 0xf));  
+            builder.append(Integer.toHexString(b & 0xf));  
+        }  
+        return builder.toString();  
+    }  
+}

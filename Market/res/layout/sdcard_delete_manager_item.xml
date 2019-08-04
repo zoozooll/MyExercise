@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sdcard_delete_app_item_lay"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+     >
+     
+
+    <!-- 软件图标 -->
+    <RelativeLayout
+        android:id="@+id/sdcard_delete_list_iv_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/view_padding"
+        >
+        <ImageView
+            android:id="@+id/sdcard_delete_app_icon"
+            android:layout_width="@dimen/list_icon_width"
+            android:layout_height="@dimen/list_icon_height"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    
+	
+	<!-- 中间布局 -->
+	<LinearLayout 
+		android:id="@+id/sdcard_delete_mid_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        
+        android:layout_toRightOf="@+id/sdcard_delete_list_iv_layout"
+        
+        >
+        
+        <!-- 1.名称 -->
+	    <TextView
+	        android:id="@+id/sdcard_delete_app_name"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        
+	        android:layout_marginLeft="5dip"
+	        
+	        android:focusable="true"
+	        android:focusableInTouchMode="true"
+	        android:clickable="true"
+	        android:ellipsize="marquee"
+	        android:marqueeRepeatLimit="marquee_forever"
+	        android:scrollHorizontally="true"
+	        android:singleLine="true"
+	        android:textColor="#184e70"
+	        android:textSize="14sp"
+	        android:textStyle="bold" />
+	        
+	    <!-- 2.软件状态及大小 -->
+	    <TextView
+	        android:id="@+id/sdcard_delete_app_size"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        
+	        android:layout_marginLeft="5dip"
+	        
+	        android:focusable="true"
+	        android:focusableInTouchMode="true"
+	        android:clickable="true"
+	        android:ellipsize="marquee"
+	        android:marqueeRepeatLimit="marquee_forever"
+	        android:scrollHorizontally="true"
+	        android:singleLine="true"
+	        android:textColor="#4e4e4e"
+	        android:textSize="14sp"
+	        android:textStyle="bold" />
+	      <!-- 3.版本 -->
+	     <RelativeLayout 
+	    	android:id="@+id/sdcard_delete_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="16dip"
+	        android:gravity="center_vertical"
+	    	>
+	     <TextView 
+	    		android:id="@+id/sdcard_delete_app_version"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_alignParentLeft="true"
+		        android:layout_centerVertical="true"
+		        
+		        android:paddingLeft="5dip"
+		        
+		        android:textColor="#4e4e4e"
+		        android:textSize="12sp"
+	    	/>
+	    </RelativeLayout>
+	</LinearLayout>
+	
+	<!-- 控制按钮 -->
+	<RelativeLayout 
+		android:id="@+id/sdcard_delete_item_right_ly"
+        android:layout_width="@dimen/manager_item_right_ly_w"
+        android:layout_height="@dimen/manager_item_btn_h"
+        
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+		>
+		
+		<Button
+	        android:id="@+id/sdcard_install_item_btn1"
+	        android:layout_width="@dimen/manager_item_btn_w"
+	        android:layout_height="@dimen/manager_item_btn_h"
+	        android:background="@drawable/manager_down_pause"
+	        
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginRight="@dimen/manager_item_btn_margin"
+	        
+	        android:gravity="center"
+	        android:textColor="#134260"
+	        android:textSize="13sp"
+	        android:textStyle="bold"
+	        />
+	        
+		<Button
+	        android:id="@+id/sdcard_delete_item_btn2"
+	        android:layout_width="@dimen/manager_item_btn_w"
+	        android:layout_height="@dimen/manager_item_btn_h"
+	        android:background="@drawable/manager_down_delete"
+	        
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="@dimen/manager_item_btn_margin"
+	        
+	        android:gravity="center"
+	        android:textColor="#ffffff"
+	        android:textSize="13sp"
+	        android:textStyle="bold"
+	        />
+	 </RelativeLayout>
+</RelativeLayout>

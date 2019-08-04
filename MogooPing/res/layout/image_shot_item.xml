@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 软件详细信息界面中 软件快照 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/image_lay"
+    android:layout_width="@dimen/pic_preview_width"
+    android:layout_height="@dimen/pic_preview_height"
+    android:padding="2dip" >
+
+    <ImageView
+        android:id="@+id/app_iv"
+        android:layout_width="@dimen/pic_preview_width"
+        android:layout_height="@dimen/pic_preview_height"
+        android:scaleType="fitXY" />
+
+</RelativeLayout>

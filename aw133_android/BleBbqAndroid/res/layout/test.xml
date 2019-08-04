@@ -1,0 +1,22 @@
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="10dp" > -->
+
+    <!-- <ImageView android:id="@+id/meaticon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:layout_centerHorizontal="true"
+        /> -->
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/meatname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/meaticon"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        />
+<!-- </RelativeLayout> -->

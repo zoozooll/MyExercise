@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/app_item_lay"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+     >
+     
+
+    <!-- 软件图标 -->
+    <RelativeLayout
+        android:id="@+id/soft_list_iv_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/view_padding"
+        >
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="@dimen/list_icon_width"
+            android:layout_height="@dimen/list_icon_height"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    
+	
+	<!-- 中间布局 -->
+	<LinearLayout 
+		android:id="@+id/mid_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        
+        android:layout_toRightOf="@+id/soft_list_iv_layout"
+        android:layout_toLeftOf="@+id/down_install_item_right_ly"
+        >
+        
+        <!-- 1.名称 -->
+	    <TextView
+	        android:id="@+id/app_name"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        
+	        android:layout_marginLeft="5dip"
+	        
+	        android:focusable="true"
+	        android:focusableInTouchMode="true"
+	        android:clickable="true"
+	        android:ellipsize="marquee"
+	        android:marqueeRepeatLimit="marquee_forever"
+	        android:scrollHorizontally="true"
+	        android:singleLine="true"
+	        android:textColor="#184e70"
+	        android:textSize="14sp"
+	        android:textStyle="bold" />
+	        
+	    <!-- 2.软件状态及大小 -->
+	    <TextView
+	        android:id="@+id/app_size"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        
+	        android:layout_marginLeft="5dip"
+	        
+	        android:focusable="true"
+	        android:focusableInTouchMode="true"
+	        android:clickable="true"
+	        android:ellipsize="marquee"
+	        android:marqueeRepeatLimit="marquee_forever"
+	        android:scrollHorizontally="true"
+	        android:singleLine="true"
+	        android:textColor="#4e4e4e"
+	        android:textSize="14sp"
+	        android:textStyle="bold" />
+	    
+	    <!-- 3.下载进度 -->
+	    <RelativeLayout 
+	    	android:id="@+id/download_progress_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="16dip"
+	        android:gravity="center_vertical"
+	    	>
+	    	
+	    	<com.mogoo.market.widget.TextProgressBar
+                android:id="@+id/idDownload_progressbar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="10dip"
+                android:layout_alignParentLeft="true"
+		        android:layout_toLeftOf="@+id/tv_download_progress"
+		        android:layout_centerVertical="true"
+		        android:paddingLeft="3dip"
+		        android:paddingRight="3dip"
+                android:progressDrawable="@drawable/down_progressbar_style"
+                />
+	    	
+	    	<TextView 
+	    		android:id="@+id/tv_download_progress"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_centerVertical="true"
+		        
+		        android:paddingLeft="2dip"
+		        android:paddingRight="2dip"
+		        
+		        android:textColor="#4e4e4e"
+		        android:textSize="12sp"
+	    	/>
+	    	
+	    	<TextView 
+	    		android:id="@+id/app_version"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_alignParentLeft="true"
+		        android:layout_centerVertical="true"
+		        
+		        android:paddingLeft="5dip"
+		        
+		        android:textColor="#4e4e4e"
+		        android:textSize="12sp"
+	    	/>
+	    	
+	    </RelativeLayout>
+	    
+	    <!-- 4.评级 -->
+	    <LinearLayout
+	        android:id="@+id/soft_list_rating_layout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        
+	        android:layout_alignParentBottom="true"
+	        android:layout_toRightOf="@+id/soft_list_iv_layout"
+	        android:paddingLeft="5dip"
+	        android:visibility="gone"
+	        >
+	        <RatingBar
+	            android:id="@+id/app_rating"
+	            style="@style/custom_normal_ratingbar"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="right" />
+	    </LinearLayout>
+        
+	
+	</LinearLayout>
+
+
+	<!-- 控制按钮 -->
+	<RelativeLayout 
+		android:id="@+id/down_install_item_right_ly"
+        android:layout_width="@dimen/manager_item_right_ly_w"
+        android:layout_height="@dimen/manager_item_btn_h"
+        
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+		>
+		
+		<Button
+	        android:id="@+id/down_install_item_btn2"
+	        android:layout_width="@dimen/manager_item_btn_w"
+	        android:layout_height="@dimen/manager_item_btn_h"
+	        android:background="@drawable/manager_down_cancel"
+	        
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="@dimen/manager_item_btn_margin"
+	        
+	        android:gravity="center"
+	        android:textColor="#134260"
+	        android:textSize="13sp"
+	        android:textStyle="bold"
+	        />
+	
+	    <Button
+	        android:id="@+id/down_install_item_btn1"
+	        android:layout_width="@dimen/manager_item_btn_w"
+	        android:layout_height="@dimen/manager_item_btn_h"
+	        android:background="@drawable/manager_down_pause"
+	        
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="@dimen/manager_item_btn_margin"
+	        
+	        android:gravity="center"
+	        android:textColor="@color/cancel_text_color"
+	        android:textSize="13sp"
+	        android:textStyle="bold"
+	        />
+	        
+	    <Button
+	        android:id="@+id/down_install_item_btn3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="@dimen/manager_item_btn_h"
+	        android:background="@drawable/manager_down_cancel_normal"
+	        
+	        android:layout_centerInParent="true"
+	        
+	        android:gravity="center"
+	        android:textColor="#134260"
+	        android:textSize="13sp"
+	        android:textStyle="bold"
+	        
+	        android:visibility="gone"
+	        />
+	   	
+	   	<!-- 更新中 布局 -->
+	   	<com.mogoo.market.widget.TextProgressBar
+			android:id="@+id/update_progress_bar"
+			style="@android:style/Widget.ProgressBar.Horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="@dimen/manager_item_btn_h"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:progressDrawable="@drawable/appdetail_progressbar_style"
+			android:visibility="gone"
+	         /> 
+	
+	</RelativeLayout>
+
+</RelativeLayout>

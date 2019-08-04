@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/search_back">
+
+<!-- 	<LinearLayout 
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical"> -->
+
+	<!-- <com.mogoo.component.pushview.MogooPushView
+		android:id="@+id/pushview" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:gravity="center_vertical"
+		/>
+
+	<com.mogoo.market.widget.SearchBar
+		android:id="@+id/SearchBar" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" /> -->
+		
+	<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_back"
+    android:orientation="vertical" >
+	
+	<ViewFlipper android:id="@+id/search_viewflipper"
+	       android:layout_width="fill_parent"
+	       android:layout_height="fill_parent"
+	       android:layout_below="@+id/SearchBar"
+	       >
+	       	
+	<com.mogoo.market.widget.KeywordsFlow android:id="@+id/keywordsFlow"
+	       
+	       android:layout_width="fill_parent"
+	       android:layout_height="fill_parent" />
+	       
+	       
+	</ViewFlipper>
+	
+		
+    蒙板 	
+	<ImageView android:id="@+id/maskLayer"
+		android:layout_width="match_parent" 
+		android:layout_height="fill_parent"
+		android:layout_centerHorizontal="true" 
+		android:layout_below="@+id/SearchBar"
+		android:visibility="gone"
+
+		/>
+     </RelativeLayout>
+
+<!-- </LinearLayout> -->
+	
+</LinearLayout>

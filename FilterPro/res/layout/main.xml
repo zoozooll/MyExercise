@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aaron.filter.ScrollLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollLayoutTest"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+   <com.aaron.filter.MyDrawView 
+       android:layout_width = "fill_parent"
+       android:layout_height = "fill_parent"
+       />
+
+</com.aaron.filter.ScrollLayout>

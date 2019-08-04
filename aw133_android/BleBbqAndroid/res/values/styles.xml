@@ -1,0 +1,219 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+    
+	<style name="Operation">
+	    
+	</style>
+	
+	<style name="Operation.MarginTopLeftItem">
+	    <item name="android:layout_marginLeft">50dp</item>
+	    <item name="android:layout_marginTop">20dp</item>
+	</style>
+	<style name="Operation.MarginTopLeftItems">
+	    <item name="android:layout_marginLeft">50dp</item>
+	    <item name="android:layout_marginTop">10dp</item>
+	</style>
+	<style name="Operation.MarginTopRightItem">
+	    <item name="android:layout_marginRight">50dp</item>>
+	</style>
+	
+	
+	
+	
+	<style name="top_size_color">
+	    <item name="android:textSize">30sp</item>
+	    <item name="android:textColor">#F89B45</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:layout_centerVertical">true</item>
+	</style>
+	
+	<style name="top_chsize">
+	    <item name="android:textSize">20sp</item>
+	    <item name="android:textColor">#95989B</item>
+	</style>
+	
+	<style name="clock">
+	    <item name="android:layout_marginLeft">16dp</item>
+	    <item name="android:layout_centerVertical">true</item>
+	</style>
+	<style name="clockleftcenter">
+	    <item name="android:textColor">#95989B</item>
+	    <item name="android:textSize">30sp</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:layout_centerVertical">true</item>
+	</style>
+	<style name="progresstext">
+	    <item name="android:textColor">#95989B</item>
+	    <item name="android:layout_marginRight">30dp</item>
+	    <item name="android:textSize">30sp</item>
+	</style>
+	
+	<style name="startbutton">
+	    <item name="android:layout_marginBottom">35dp</item>
+	    <item name="android:layout_marginLeft">16dp</item>
+	    <item name="android:layout_marginRight">16dp</item>
+	    <item name="android:layout_marginTop">30dp</item>
+	    <item name="android:textSize">30sp</item>
+	    <item name="android:textColor">#FFFFFF</item>
+	</style>
+	
+	<style name="modeshow">
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:textSize">30sp</item>
+	    <item name="android:textColor">#95989B</item>
+	    <item name="android:singleLine">true</item>
+	    <item name="android:layout_centerVertical">true</item>
+	</style>
+	
+	<style name="linetoptitlesize">
+	    <item name="android:textSize">20sp</item>
+	    <item name="android:textColor">#95989B</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:layout_marginBottom">16dp</item>
+	</style>
+	
+	<style name="item_beefsize">
+	    <item name="android:textSize">20sp</item>
+	    <item name="android:singleLine">true</item>
+	</style>
+	
+	<style name="listitemheight">
+	    <item name="android:paddingTop">10dp</item>
+	</style>
+	<style name="item_donenesstv">
+	    <item name="android:textSize">20sp</item>
+	    <item name="android:layout_height">50dp</item>
+	    <item name="android:layout_marginTop">20dp</item>
+	</style>
+	
+	<style name="marginleftcentersize">
+	    <item name="android:textSize">20sp</item>
+	    <item name="android:layout_marginLeft">20dp</item>
+	    <item name="android:layout_centerVertical">true</item>
+	</style>
+	<style name="defcus">
+	    <item name="android:textColor">#CACACB</item>
+	    <item name="android:textSize">20sp</item>
+	    <item name="android:layout_marginRight">20dp</item>
+	    <item name="android:layout_centerVertical">true</item>
+	</style>
+	<style name="rarewidth">
+	    <item name="android:textColor">#FFFFFF</item>
+	    <item name="android:textSize">20sp</item>
+	    <item name="android:layout_marginRight">3dp</item>
+	    <item name="android:layout_centerVertical">true</item>
+	</style>
+	
+	<style name="meatlistheight">
+	    <item name="android:paddingTop">5dp</item>
+	    <item name="android:layout_marginTop">30dp</item>
+	    <item name="android:layout_marginBottom">30dp</item>
+	</style>
+	<style name="marginleftcenter">
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:layout_centerVertical">true</item>
+	</style>
+	
+	<style name="marginrightcenter">
+	    <item name="android:layout_marginRight">10dp</item>
+	    <item name="android:layout_centerVertical">true</item>
+	</style>
+	<style name="margintop">
+	    <item name="android:layout_marginTop">20dp</item>
+	</style>
+	
+	<style name="marginleftsize">
+	    <item name="android:layout_marginLeft">30dp</item>
+	    <item name="android:textSize">30sp</item>
+	</style>
+	<style name="marginrightsize">
+	    <item name="android:layout_marginRight">30dp</item>
+	    <item name="android:textSize">30sp</item>
+	</style>
+	
+
+	
+	<style name="cookProgressBar">
+	    <item name="android:layout_width">300dp</item>
+	    <item name="android:layout_height">300dp</item>
+	    <item name="android:layout_marginTop">20dp</item>
+	    <item name="android:layout_centerInParent">true</item>
+	</style>
+	<style name="cookCurrentTemp">
+	    <item name="android:textColor">#F89B45</item>
+	    <item name="android:textSize">50dp</item>
+	    <item name="android:layout_centerInParent">true</item>
+	</style>
+	<style name="cookCurrentTempUnit">
+	    <item name="android:textColor">#F89B45</item>
+	    <item name="android:textSize">20dp</item>
+	    <item name="android:layout_centerInParent">true</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	</style>
+	
+	<style name="linetoptitlesizecolor">
+	    <item name="android:textSize">20sp</item>
+	    <item name="android:textColor">#F89B45</item>
+	    <item name="android:layout_marginBottom">10dp</item>
+	</style>
+	<style name="Widget">
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+    </style>
+
+    <style name="Widget.CalendarView">
+        <item name="cv_showWeekNumber">true</item>
+        <item name="cv_firstDayOfWeek">1</item>
+        <item name="cv_minDate">01/01/1900</item>
+        <item name="cv_maxDate">12/31/2100</item>
+        <item name="cv_shownWeekCount">6</item>
+        <item name="cv_selectedWeekBackgroundColor">#330099FF</item>
+        <item name="cv_focusedMonthDateColor">#FFFFFFFF</item>
+        <item name="cv_unfocusedMonthDateColor">#66FFFFFF</item>
+        <item name="cv_weekNumberColor">#33FFFFFF</item>
+        <item name="cv_weekSeparatorLineColor">#19FFFFFF</item>
+        <item name="cv_weekDayTextAppearance">@style/TextAppearance.Small.CalendarViewWeekDayView</item>
+        <item name="cv_dateTextAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+	<style name="TextAppearance.Small.CalendarViewWeekDayView" parent="@android:style/TextAppearance.Small">
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="Widget.Holo.CalendarFilperView" parent="Widget.CalendarView">
+        <item name="cv_selectedWeekBackgroundColor">#00000000</item>
+        <item name="cv_focusedMonthDateColor">@android:color/darker_gray</item>
+        <item name="cv_unfocusedMonthDateColor">@android:color/darker_gray</item>
+        <item name="cv_weekNumberColor">#33FFFFFF</item>
+        <item name="cv_weekSeparatorLineColor">#00000000</item>
+        <item name="cv_selectedDateVerticalBar">@null</item>
+        <item name="cv_weekDayTextAppearance">@style/TextAppearance.Holo.CalendarViewDatetextView</item>
+        <item name="cv_dateTextAppearance">@style/TextAppearance.Holo.CalendarViewDatetextView</item>
+		<item name="cv_monthTextAppearance">@style/TextAppearance.Holo.CalendarViewMonthtextView</item>
+		<item name="android:layout_marginLeft">20dp</item>
+		<item name="android:layout_marginTop">20dp</item>
+		<item name="android:layout_marginRight">20dp</item>
+    </style>
+        <style name="TextAppearance.Holo.CalendarViewDatetextView" parent="TextAppearance.Small.CalendarViewWeekDayView">
+        <item name="android:textColor">#505050</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    	<style name="TextAppearance.Holo.CalendarViewMonthtextView" parent="TextAppearance.Small.CalendarViewWeekDayView">
+		<item name="android:textColor">@color/textcolor_calendarview</item>
+		<item name="android:textSize">10pt</item>
+		<item name="android:textStyle">normal</item>
+    </style>
+    
+    	
+	
+</resources>

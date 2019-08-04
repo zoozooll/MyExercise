@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+      android:id="@+id/settings_reference"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      >
+          <RelativeLayout
+              android:id="@+id/settings_reference_left"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_marginLeft="20dp" >
+              <ImageView
+                  android:id="@+id/icon_reference"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/icon_reference" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/icon_reference"
+                  android:text="@string/settings_reference"
+                  android:textColor="#747474" />
+          </RelativeLayout>
+
+          <Switch
+              android:id="@+id/settings_reference_choose"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="20dp"
+              android:checked="false"
+              android:textOff="@string/settings_reminder_off"
+              android:textOn="@string/settings_reminder_on" />
+      </RelativeLayout>
+      
+      
+      <!-- <RelativeLayout android:id="@+id/settings_talking_autosave"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/settings_reference"
+      android:visibility="gone"
+      >
+          <ImageView android:id="@+id/reference_talking_line"
+	      android:layout_width="fill_parent"
+	      android:layout_height="3dp"
+	      android:layout_marginTop="10dp"
+	      android:layout_marginBottom="10dp"
+	      android:background="#D7D7D7"
+	      />
+         <RelativeLayout android:id="@+id/settings_talking_feature"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/reference_talking_line"
+         >
+			<RelativeLayout android:id="@+id/settings_talking_feature_left"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="20dp"
+			>
+		      	<ImageView android:id="@+id/icon_talking"
+		      	android:layout_width="wrap_content"
+		      	android:layout_height="wrap_content"
+		      	android:background="@drawable/icon_talking"
+		      	/>
+		      	<TextView android:layout_width="wrap_content"
+		      	android:layout_height="wrap_content"
+		      	android:layout_below="@+id/icon_talking"
+		      	android:text="@string/settings_talking"
+		      	android:textColor="#747474"
+		      	/>
+	       </RelativeLayout> 
+	       <Switch android:id="@+id/settings_talking_choose"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_alignParentRight="true"
+	     	 android:layout_marginRight="20dp"
+	         android:textOn="@string/settings_reminder_on"
+	         android:textOff="@string/settings_reminder_off"
+	         android:layout_centerVertical="true"
+	         android:checked="false"
+	         />
+	     </RelativeLayout>
+	     
+	     <ImageView android:id="@+id/talking_autosave_line"
+	      android:layout_width="fill_parent"
+	      android:layout_height="3dp"
+	      android:layout_marginTop="10dp"
+	      android:layout_marginBottom="10dp"
+	      android:background="#D7D7D7"
+	      android:layout_below="@+id/settings_talking_feature"
+	      />
+	     
+	      <RelativeLayout android:id="@+id/settings_autosave"
+		   android:layout_width="fill_parent"
+		   android:layout_height="wrap_content"
+		   android:layout_below="@+id/talking_autosave_line"
+		   >
+				<RelativeLayout android:id="@+id/settings_autosave_left"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_marginLeft="20dp"
+				>
+			       	<ImageView android:id="@+id/icon_autosave"
+			       	android:layout_width="wrap_content"
+			       	android:layout_height="wrap_content"
+			       	android:background="@drawable/icon_autosave"
+			       	/>
+			       	<TextView android:layout_width="wrap_content"
+			       	android:layout_height="wrap_content"
+			       	android:layout_below="@+id/icon_autosave"
+			       	android:text="@string/settings_autosave"
+			       	android:textColor="#747474"
+			       	/>
+		        </RelativeLayout>
+		        <Switch android:id="@+id/settings_autosave_choose"
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:layout_alignParentRight="true"
+		     	 android:layout_marginRight="20dp"
+		         android:textOn="@string/settings_reminder_on"
+		         android:textOff="@string/settings_reminder_off"
+		         android:layout_centerVertical="true"
+		         android:checked="false"
+		         />
+	        </RelativeLayout>
+     </RelativeLayout> -->
+     
+</RelativeLayout>

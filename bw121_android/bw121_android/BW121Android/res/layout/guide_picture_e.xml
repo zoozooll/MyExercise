@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity" 
+    >
+	
+	<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/guide_e"
+	    >
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    tools:context=".MainActivity" 
+	    android:id="@+id/over_guide"
+	    >
+	    <!-- <TextView android:id="@+id/over_guide"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="10dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerHorizontal="true"
+	        android:background="@drawable/producttour_textmask"
+	        android:text="@string/guide_over"
+	        android:gravity="center_vertical|right"
+	        android:paddingRight="20dp"
+			/> -->
+	    
+	    <ImageView android:id="@+id/description_pic_e"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/producttour_p05"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="10dp"
+			/>
+	    
+	    <TextView 
+	        android:id="@+id/description_tv_e"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/description_pic_e"
+	        android:text="@string/guide_textfive"
+	        android:layout_marginBottom="50dp"  
+	        android:layout_centerInParent="true"
+	        android:paddingLeft="35dp"
+		        android:paddingRight="35dp"
+	        android:textSize="20sp"
+	        android:textColor="#E15F00"
+	        />
+	</RelativeLayout>
+	</ScrollView>
+	</RelativeLayout>

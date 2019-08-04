@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ChartTheme">
+        <attr name="sc_chartTitleColor" format="color" />
+        <attr name="sc_chartBackgroundColor" format="color" />
+        <attr name="sc_plotAreaColor" format="color" />
+        <attr name="sc_titlePadding" format="float" />
+        <attr name="sc_titleMargin" format="float" />
+        
+        <attr name="sc_axisTitleColor" format="color" />
+        <attr name="sc_axisTitleTextSize" format="float" />
+        <attr name="sc_axisLineColor" format="color" />
+        <attr name="sc_tickLineColor" format="color" />
+        <attr name="sc_tickLabelColor" format="color" />
+        <attr name="sc_gridLineColor" format="color" />      
+        <attr name="sc_showGridLines" format="boolean" />
+        <attr name="sc_dashedGridLines" format="boolean" />
+        <attr name="sc_showGridStripes" format="boolean" />    
+        <attr name="sc_gridStripeColor" format="color" />
+        <attr name="sc_alternateGridStripeColor" format="color" />      
+        
+        <attr name="sc_legendTextColor" format="color" />
+        <attr name="sc_legendBorderColor" format="color" />
+        <attr name="sc_legendBackgroundColor" format="color" />
+        
+        <attr name="sc_crosshairLineColor" format="color" />
+        <attr name="sc_crosshairTooltipTextColor" format="color" />
+        <attr name="sc_crosshairTooltipLabelBackgroundColor" format="color" />
+        <attr name="sc_crosshairTooltipBackgroundColor" format="color" />
+        <attr name="sc_crosshairTooltipBorderColor" format="color" />
+        <attr name="sc_crosshairLineWidth" format="float" />
+        <attr name="sc_crosshairPadding" format="float" />
+        <attr name="sc_crosshairTooltipTextSize" format="float" />
+        <attr name="sc_crosshairTooltipCornerRadius" format="float" />
+        <attr name="sc_crosshairTooltipBorderWidth" format="float" />
+        
+        <attr name="sc_lineWidth" format="float" />
+        <attr name="sc_defaultSelectedSeriesColor" format="color"/>
+        <attr name="sc_columnLineWidth" format="float" />
+        <attr name="sc_barLineWidth" format="float" />
+                     
+        <attr name="sc_seriesLineColor1" format="color" /> 
+        <attr name="sc_seriesAreaColor1" format="color" /> 
+        <attr name="sc_seriesAreaGradientColor1" format="color" /> 
+        <attr name="sc_seriesAreaGradientTransparentColor1" format="color" /> 
+
+        <attr name="sc_seriesLineColor2" format="color" />
+        <attr name="sc_seriesAreaColor2" format="color" />
+        <attr name="sc_seriesAreaGradientColor2" format="color" />
+        <attr name="sc_seriesAreaGradientTransparentColor2" format="color" />
+
+        <attr name="sc_seriesLineColor3" format="color" />
+        <attr name="sc_seriesAreaColor3" format="color" />
+        <attr name="sc_seriesAreaGradientColor3" format="color" />
+        <attr name="sc_seriesAreaGradientTransparentColor3" format="color" />
+
+        <attr name="sc_seriesLineColor4" format="color" />
+        <attr name="sc_seriesAreaColor4" format="color" />
+        <attr name="sc_seriesAreaGradientColor4" format="color" />
+        <attr name="sc_seriesAreaGradientTransparentColor4" format="color" />
+
+        <attr name="sc_seriesLineColor5" format="color" />
+        <attr name="sc_seriesAreaColor5" format="color" />
+        <attr name="sc_seriesAreaGradientColor5" format="color" />
+        <attr name="sc_seriesAreaGradientTransparentColor5" format="color" />
+
+        <attr name="sc_seriesLineColor6" format="color" />
+        <attr name="sc_seriesAreaColor6" format="color" />
+        <attr name="sc_seriesAreaGradientColor6" format="color" />
+        <attr name="sc_seriesAreaGradientTransparentColor6" format="color" />
+
+        
+        <attr name="sc_pieDonutFlavorColor1" format="color" />
+        <attr name="sc_pieDonutFlavorColor2" format="color" />
+        <attr name="sc_pieDonutFlavorColor3" format="color" />
+        <attr name="sc_pieDonutFlavorColor4" format="color" />
+        <attr name="sc_pieDonutFlavorColor5" format="color" />
+        <attr name="sc_pieDonutFlavorColor6" format="color" />
+        
+        <attr name="sc_defaultCrustColor" format="color" />
+        <attr name="sc_donutCrustThickness" format="float" />
+        <attr name="sc_pieDonutLabelColor" format="color"/>   
+
+        <attr name="sc_financialRisingColor" format="color" />
+        <attr name="sc_financialFallingColor" format="color" />
+        <attr name="sc_bandSeriesHighColor" format="color" />
+        <attr name="sc_bandSeriesLowColor" format="color" />
+        <attr name="sc_bandSeriesAreaColor" format="color" />
+        <attr name="sc_bandSeriesAreaInvertedColor" format="color" />
+
+        
+        <attr name="sc_annotationBackgroundColor" format="color" />
+        <attr name="sc_annotationTextColor" format="color" />
+        <attr name="sc_annotationTextSize" format="float" />
+    </declare-styleable>
+</resources>

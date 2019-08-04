@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+     >
+
+   	<TextView android:id="@+id/firmware"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:text="@string/firmware"
+   	    style="@style/linetoptitlesizecolor"
+   	    />
+   	<ImageView android:id="@+id/line"
+   	    android:layout_width="fill_parent"
+   	    android:layout_height="2dp"
+   	    android:background="@drawable/linet"
+   	    android:layout_below="@id/firmware"
+   	    />
+   	<RelativeLayout android:id="@+id/firm"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_below="@id/line"
+   	    android:layout_marginTop="10dp"
+   	    >
+   	    <TextView
+	   	    android:id="@+id/version"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:gravity="center"
+	   	    android:text="@string/version" 
+	   	    android:textSize="20dp"
+	   	    />
+   	    <TextView
+	   	    android:id="@+id/versionnum"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:gravity="center"
+	   	    android:textSize="20dp"
+	   	    android:layout_toLeftOf="@+id/versioncount"
+	   	    android:layout_marginRight="20dp"
+	   	    />
+   	    <TextView
+	   	    android:id="@+id/versioncount"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:gravity="center"
+	   	    android:textSize="20dp"
+	   	    android:layout_alignParentRight="true"
+	   	    android:layout_marginRight="10dp"
+	   	    />
+   	</RelativeLayout>
+   	<!-- <ListView android:id="@+id/pairingble"
+   	    android:layout_width="wrap_content"
+	   	android:layout_height="wrap_content"
+	   	android:layout_below="@+id/conn"
+   	    ></ListView>
+ -->
+</RelativeLayout>

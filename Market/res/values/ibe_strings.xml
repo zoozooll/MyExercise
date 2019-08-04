@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+add by fdl
+线上地址      http://www.imogoo.cn/MAS
+线上测试地址   http://test.imogoo.cn:8088/MAS
+102服务器地址  http://test.htw.cc:9000/MAS  对应 http://192.168.10.5:9000/MAS
+             http://192.168.0.177:9000/MAS 对应 http://192.168.10.4:9000/MAS
+ -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="akey">999.999.999.999</string>
+	<string name="server_debug_address">http://192.168.10.5:9000</string>
+	<string name="server_address">http://www.imogoo.cn</string>
+</resources>

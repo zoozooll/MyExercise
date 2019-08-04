@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView android:id="@+id/timertv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/timerbig"
+		style="@style/linetoptitlesize"        
+        />
+    <ImageView android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/linet"
+        android:layout_below="@+id/timertv"
+        />
+    <LinearLayout android:id="@+id/wheeltimer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        >
+	    <NumberPicker  
+	        android:id="@+id/num_picker_hour"  
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"  
+	        android:layout_weight="1"
+	        /> 
+	    <TextView
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/unithr"
+	        android:singleLine="true"
+	        android:layout_gravity="center_vertical"
+	        android:gravity="center"
+	        style="@style/top_chsize"
+	        />
+	    <!-- <com.oregonscientific.bbq.wheel.WheelView
+	        android:id="@+id/wheelTimerhr"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        /> -->
+	    <NumberPicker  
+	        android:id="@+id/num_picker_min"  
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"  
+	        android:layout_weight="1"
+	        /> 
+	    <TextView
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/unitmin"
+	        android:singleLine="true"
+	        android:layout_gravity="center_vertical"
+	        android:gravity="center"
+	        style="@style/top_chsize"
+	        />
+	    <!-- <com.oregonscientific.bbq.wheel.WheelView
+	        android:id="@+id/wheelTimermin"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        /> -->
+	    <NumberPicker  
+	        android:id="@+id/num_picker_sec"  
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"  
+	        android:layout_weight="1"
+	        /> 
+	    <TextView
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/unitsec"
+	        android:singleLine="true"
+	        android:layout_gravity="center_vertical"
+	        android:gravity="center"
+	        style="@style/top_chsize"
+	        />
+	    <!-- <com.oregonscientific.bbq.wheel.WheelView
+	        android:id="@+id/wheelTimersec"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        /> -->
+	</LinearLayout>
+</RelativeLayout>

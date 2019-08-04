@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/meatlistheight">
+
+    <TextView android:id="@+id/meatnames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beef"
+        style="@style/marginleftcentersize"
+        />
+
+    <TextView
+        android:id="@+id/defcus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/arrowicon"
+        android:text="Default" 
+        style="@style/defcus"
+        />
+
+    <ImageView android:id="@+id/arrowicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/menu_arrow_end" />
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.mogoo.ping"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <!-- <View
+        android:id="@+id/light"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#42BDEF" /> -->
+    
+    <com.astuetz.viewpager.extensions.FixedTabsView
+        android:id="@+id/fixed_icon_tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:dividerColor="#33FFFFFF"
+        app:dividerMarginBottom="12dip"
+        app:dividerMarginTop="12dip" />
+
+    <!-- <View
+        android:id="@+id/shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:layout_below="@+id/fixed_icon_tabs"
+        android:background="@drawable/shadow" /> -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin ="15dp" />
+
+</LinearLayout>

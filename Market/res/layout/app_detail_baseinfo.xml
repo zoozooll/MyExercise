@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 软件简介 软件图标、软件版本、软件大小等基本信息 -->
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:id="@+id/app_detail_baseinfo"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="@color/white"
+  
+  android:layout_marginTop="5dip"
+  android:layout_marginBottom="5dip"
+  android:layout_marginRight="@dimen/baseinfo_margin_right"
+  >
+  
+  <!-- 软件图片 -->
+  <ImageView
+  	  android:id="@+id/baseinfo_icon"
+	  android:layout_width="@dimen/appdetail_icon_size"
+	  android:layout_height="@dimen/appdetail_icon_size"
+	  
+	  android:layout_centerVertical="true"
+	  android:layout_marginLeft="@dimen/baseinfo_icon_margin_left"
+	  android:layout_marginRight="@dimen/baseinfo_icon_margin_right"
+	  
+	  android:src="@drawable/defautl_list_itme_pic_loading"
+  />
+  
+  <!-- 版本、评分、时间 -->
+  <LinearLayout 
+  	 android:id="@+id/baseinfo_mid_layout"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     
+     android:layout_centerVertical="true"
+     android:layout_toRightOf="@+id/baseinfo_icon"
+  	>
+  	<TextView 
+	  	 android:id="@+id/baseinfo_version"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     
+	     android:textColor="#4c575d"
+	     android:textSize="@dimen/app_detail_baseinfo_size"
+	     
+	     android:singleLine="true"
+	     android:ellipsize="marquee"
+	     android:marqueeRepeatLimit="marquee_forever"
+	     android:maxLength="15"
+  	/>
+  	<TextView 
+  		 android:id="@+id/baseinfo_size"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     
+	     android:textColor="#4c575d"
+	     android:textSize="@dimen/app_detail_baseinfo_size"
+	     
+	     android:singleLine="true"
+	     android:ellipsize="marquee"
+	     android:marqueeRepeatLimit="marquee_forever"
+	     android:maxLength="12"
+  	/>
+  	<TextView 
+  	     android:id="@+id/baseinfo_mark_times"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     
+	     android:textColor="#4c575d"
+	     android:textSize="@dimen/app_detail_baseinfo_size"
+	     
+	     android:singleLine="true"
+	     android:ellipsize="marquee"
+	     android:marqueeRepeatLimit="marquee_forever"
+	     android:maxLength="15"
+  	/>
+  </LinearLayout>
+  
+  <!-- 大小、下载、评级 -->
+  <LinearLayout 
+  	 android:id="@+id/baseinfo_right_layout"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     
+     android:layout_centerVertical="true"
+     android:layout_alignParentRight="true"
+     android:layout_toRightOf="@+id/baseinfo_mid_layout"
+     
+     android:paddingLeft="5dip"
+     android:gravity="right"
+  	>
+  	<TextView 
+  		 android:id="@+id/baseinfo_download_num"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     
+	     android:textColor="#4c575d"
+	     android:textSize="@dimen/app_detail_baseinfo_size"
+	     
+	     android:singleLine="true"
+	     android:ellipsize="marquee"
+	     android:marqueeRepeatLimit="marquee_forever"
+  	/>
+  	<TextView 
+  		 android:id="@+id/baseinfo_time"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     
+	     android:textColor="#4c575d"
+	     android:textSize="@dimen/app_detail_baseinfo_size"
+	     
+	     android:singleLine="true"
+	     android:ellipsize="marquee"
+	     android:marqueeRepeatLimit="marquee_forever"
+  	/>
+  	<RatingBar 
+	  	android:id="@+id/baseinfo_rating"
+		style="@style/custom_normal_ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ratingbar_h"
+        android:layout_gravity="right"
+	/>
+  </LinearLayout>
+    
+</RelativeLayout>

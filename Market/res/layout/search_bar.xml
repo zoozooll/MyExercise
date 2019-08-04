@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mogoo_search_header"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@drawable/header_bg">
+    
+    <RelativeLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    
+    <FrameLayout
+        android:id="@+id/search_edit_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:layout_marginLeft="5dip"
+        android:layout_toLeftOf="@+id/search_btn"
+        >
+        
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:hint="@string/tv_sear"
+            android:paddingRight="33dip"
+            android:paddingTop="3dip"
+            android:paddingBottom="3dip"
+            android:textColorHint="#a9a9a9"
+            android:textSize="@dimen/search_hint_text_size" 
+            android:singleLine="true"
+            android:paddingLeft="25dip"
+            android:background="@drawable/bg_text"
+            />
+         <ImageView
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginRight="10dip"
+            android:paddingLeft="5dip"
+            android:src="@drawable/search_log" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="@dimen/search_bar_btn_length"
+        android:layout_height="30dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="10dip"
+        android:layout_gravity="right|center_vertical"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_search_normal"
+        android:gravity="center"
+        android:text="@string/tv_sear"
+        android:textColor="#2f4f4f"
+        android:textSize="15dip" 
+        />
+    </RelativeLayout>
+</LinearLayout>

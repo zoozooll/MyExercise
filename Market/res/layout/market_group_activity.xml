@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 商城主框架 -->
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toolbar="http://schemas.android.com/apk/res/com.mogoo.market"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout 
+		android:id="@+id/idContainer"
+        android:layout_above="@+id/idToolBar"
+		android:layout_below="@+id/idTitleBar"
+		android:layout_width="fill_parent"
+   		android:layout_height="fill_parent"
+   		android:background="@color/white">
+    </LinearLayout>
+   <!--   android:layout_above="@+id/idToolBar"
+        android:layout_below="@+id/idContainer" -->
+   <LinearLayout
+        android:id="@+id/connectTip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/idToolBar"
+        android:background="@drawable/network_tip_bg"
+        android:gravity="center"
+        android:visibility="gone"> 
+        <TextView 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/connect_tip"
+          android:textSize="9dip"
+          android:textColor="#ffffff"/>
+    </LinearLayout>
+    <com.mogoo.market.widget.ToolBar 
+		android:id="@+id/idToolBar"
+       	android:layout_width="wrap_content"   
+   		android:layout_height="@dimen/toolBar_h"
+   		android:layout_alignParentBottom="true"
+   		toolbar:toolbarTextSize="@dimen/toolBar_text_size"
+   		toolbar:textPaddingButtom="@dimen/toolBar_text_padding_bottom"
+   		toolbar:backgroundDrawable="@drawable/bottom_bg"
+   		toolbar:selectorPadding="@dimen/toolBar_selector_padding"
+   		toolbar:selectorDrawable="@drawable/tab_selector_bg">
+   
+    </com.mogoo.market.widget.ToolBar>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    style="@style/margintop"
+    >
+    <ImageView android:id="@+id/meaticon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:layout_centerHorizontal="true"
+        style="@style/margintop"
+        />
+    <TextView android:id="@+id/meatname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/meaticon"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        style="@style/item_beefsize"
+        />
+</RelativeLayout>

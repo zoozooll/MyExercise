@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_light" >
+
+    <RelativeLayout
+        android:id="@+id/no_records_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center" 
+        android:visibility="gone">
+
+        <!-- 没有数据 -->
+
+        <TextView
+            android:id="@+id/empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip_to_refresh"
+            android:textSize="16sp"
+            android:textColor="@drawable/btn_refresh_text_bg" 
+            android:background="@drawable/btn_refresh_bg"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/loading_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- 正在加载 -->
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</RelativeLayout>

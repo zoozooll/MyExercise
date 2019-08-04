@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- "@dimen/Text_size"    getResources().getDimension(R.dimen.xx)-->
+<resources>
+	<dimen name="app_item_down_btn_height">48dip</dimen> 
+	<dimen name="app_item_progressbar_height">30dip</dimen>
+</resources>

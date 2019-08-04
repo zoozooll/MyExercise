@@ -1,0 +1,257 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <!-- <RelativeLayout
+        android:id="@+id/chart_three"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <ImageView
+            android:id="@+id/char_weight_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/chart_weight_hl" />
+        <ImageView
+            android:id="@+id/char_height_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/char_weight_land"
+            android:src="@drawable/chart_height_normal" />
+        <ImageView
+            android:id="@+id/char_bmi_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/char_height_land"
+            android:src="@drawable/chart_bmi_normal" />
+        <ImageView
+            android:id="@+id/char_back_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/horizon_leftbtn" />
+    </RelativeLayout> -->
+    
+    <!-- <ImageView
+       android:id="@+id/main_chart_arrow_land"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_toRightOf="@+id/chart_three"
+       android:src="@drawable/vert_arrow01" 
+       />
+    
+    <RelativeLayout android:id="@+id/main_user_graph_land"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/main_chart_arrow_land"
+        android:background="@drawable/hori_arrow01"
+		>
+		<com.idt.bw.view.TimeSeriesChartView
+        android:id="@+id/TimeSeriesChart"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"/>
+	</RelativeLayout> -->
+	<RelativeLayout android:id="@+id/main_user_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="20dp"
+        android:background="@drawable/verti_transparentbar"
+        >
+	    <ImageView
+            android:id="@+id/char_weight_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chart_weight_hl" 
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            />
+	    <ImageView
+            android:id="@+id/char_weight_arrow_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_r_green" 
+            android:layout_toRightOf="@+id/char_weight_land"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="1dp"
+            android:layout_alignTop="@+id/char_weight_land"
+            android:layout_alignBottom="@+id/char_weight_land"
+            android:visibility="visible"
+            />
+	    
+	    <ImageView
+            android:id="@+id/char_height_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chart_height_normal" 
+            android:layout_above="@+id/char_weight_land"
+            android:layout_marginBottom="20dp"
+            />
+	    <ImageView
+            android:id="@+id/char_height_arrow_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_r_orange" 
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="1dp"
+            android:layout_alignTop="@+id/char_height_land"
+            android:layout_alignBottom="@+id/char_height_land"
+            android:layout_toRightOf="@id/char_height_land"
+            android:visibility="invisible"
+            />
+	    
+	    <ImageView
+            android:id="@+id/char_bmi_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chart_bmi_normal" 
+            android:layout_above="@+id/char_height_land"
+            android:layout_marginBottom="20dp"
+            />
+	    <ImageView
+            android:id="@+id/char_bmi_arrow_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_r_purple" 
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="1dp"
+            android:layout_alignTop="@+id/char_bmi_land"
+            android:layout_alignBottom="@+id/char_bmi_land"
+            android:layout_toRightOf="@id/char_bmi_land"
+            android:visibility="invisible"
+            />
+	    
+	    <ImageView
+            android:id="@+id/char_back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/horizon_leftbtn" 
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            />
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/main_user_graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/main_user_chart"
+		>
+        <!-- <ImageView
+        android:id="@+id/main_chart_arrow_land"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" 
+        android:src="@drawable/vert_arrow01"
+        android:scaleType="fitXY" 
+        /> -->
+	    <RelativeLayout android:id="@+id/graph_top"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingTop="10dp"
+			android:background="#E7E7E7" 
+			>
+		    <RelativeLayout android:id="@+id/graph_top_date"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				>
+		    	<ImageButton 
+		    	    android:id="@+id/previousDay"
+		    	    android:layout_width="wrap_content"
+		    		android:layout_height="wrap_content"
+		    		android:src="@drawable/arrow_l"
+		    		android:layout_alignParentLeft="true"
+		    		android:background="@android:color/transparent"
+		    		android:layout_centerVertical="true"
+		    		android:layout_marginLeft="20dp"
+		    		 />
+		    	<TextView
+		    	    android:id="@+id/input_data_date1"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:singleLine="true"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_centerVertical="true"
+		    	    android:gravity="center"
+		    	    android:paddingLeft="20dp"
+		    	    android:paddingRight="20dp"
+		    	    android:background="@android:color/transparent"
+		    	    android:textColor="#747474" 
+		    	    android:textSize="25sp"/>
+		    	<ImageButton 
+		    	    android:id="@+id/nextDay"
+		    	    android:layout_width="wrap_content"
+		    		android:layout_height="wrap_content"
+		    		android:src="@drawable/arrow_r"
+		    		android:layout_alignParentRight="true"
+		    		android:background="@android:color/transparent"
+		    		android:layout_centerVertical="true"
+		    		android:layout_marginRight="20dp"
+		    		/>
+			</RelativeLayout>
+			<LinearLayout android:id="@+id/graph_top_choose"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/graph_top_date"
+		        android:gravity="center_vertical"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="20dp"
+		        >
+			    <TextView
+		            android:id="@+id/choose_weekly"
+		            android:layout_width="wrap_content"
+		            android:layout_height="30dp"
+		            android:text="@string/graph_weekly" 
+		            android:layout_weight="1"
+		            android:gravity="center"
+		            android:background="@drawable/weekly_selector"
+		            />
+			    <!-- <TextView
+		            android:id="@+id/vertline"
+		            android:layout_width="2dp"
+		            android:layout_height="match_parent"
+		            android:background="@drawable/tab_sperator"
+		            android:gravity="center"
+		            /> -->
+		        <TextView
+		            android:id="@+id/choose_monthly"
+		            android:layout_width="wrap_content"
+		            android:layout_height="30dp"
+		            android:text="@string/graph_monthly" 
+		            android:layout_weight="1"
+		            android:gravity="center"
+		            android:background="@drawable/weekly_selector"
+		            />
+		        <TextView
+		            android:id="@+id/choose_yearly"
+		            android:layout_width="wrap_content"
+		            android:layout_height="30dp"
+		            android:text="@string/graph_yearly" 
+		            android:layout_weight="1"
+		            android:gravity="center"
+		            android:background="@drawable/weekly_selector"
+		            />
+			</LinearLayout>
+		</RelativeLayout>
+        
+		<fragment
+			class="com.idt.bw.activity.BWChartFragment"
+	        android:id="@+id/TimeSeriesChart"
+	        android:layout_width="wrap_content"
+	        android:layout_height="500dp"
+	        android:layout_below="@id/graph_top"
+	        android:layout_toRightOf="@+id/main_chart_arrow_land"
+	        android:layout_alignLeft="@id/graph_top"
+	        />
+		
+	</RelativeLayout>
+</RelativeLayout>

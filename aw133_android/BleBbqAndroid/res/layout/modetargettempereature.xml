@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView android:id="@+id/temperaturetv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/temperaturebig"
+        style="@style/linetoptitlesize"
+        />
+    <ImageView android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/linet"
+        android:layout_below="@+id/temperaturetv"
+        />
+    
+    <LinearLayout android:id="@+id/wheel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        >
+        <NumberPicker  
+	        android:id="@+id/num_picker_hundred"  
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"  
+	        android:layout_weight="1"
+	        /> 
+        <NumberPicker  
+	        android:id="@+id/num_picker_ten"  
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"  
+	        android:layout_weight="1"
+	        /> 
+        <NumberPicker  
+	        android:id="@+id/num_picker_one"  
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"  
+	        android:layout_weight="1"
+	        /> 
+        
+        <!-- <com.oregonscientific.bbq.wheel.WheelView android:id="@+id/wheelTempratureHundreds"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        />
+	    <com.oregonscientific.bbq.wheel.WheelView
+	        android:id="@+id/wheelTempratureTens"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        />
+	    <com.oregonscientific.bbq.wheel.WheelView
+	        android:id="@+id/wheelTempratureOnes"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        />  
+        <com.oregonscientific.bbq.wheel.WheelView
+	        android:id="@+id/wheelTempratureUnit"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        /> -->
+		<TextView android:id="@+id/wheeltempf"
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/tempf"
+	        android:singleLine="true"
+	        android:layout_gravity="center_vertical"
+	        android:gravity="center"
+	        style="@style/top_chsize"
+	        />
+    </LinearLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="version_num">1.0.6 Build 6</string>
+    <string name="version_unknown">version unknown</string>
+    <string name="app_name">BW121</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+
+    
+    <array name="nav_drawer_icons">
+        <item>@drawable/menu_user</item>
+        <item>@drawable/menu_setting</item>
+        <item>@drawable/menu_share</item>
+        <item>@drawable/menu_input</item>
+    </array>
+    <array name="nav_drawer_title">
+        <item>Change User</item>
+        <item>Settings</item>
+        <item>Share</item>
+        <item>Input data</item>
+    </array>
+    <array name="height_unit">
+        <item>cm</item>
+        <item>ft</item>
+    </array>
+    <array name="weight_unit">
+        <item>kg</item>
+        <item>lb</item>
+    </array>
+    <array name="delete_user">
+        <item>Delete</item>
+        <item>Cancel</item>
+    </array>
+    
+    <array name="RepeatitemsShow0">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </array>
+    <array name="Repeatitems0">
+        <item>Every Sunday</item>
+        <item>Every Monday</item>
+        <item>Every Tuesday</item>
+        <item>Every Wednesday</item>
+        <item>Every Thursday</item>
+        <item>Every Friday</item>
+        <item>Every Saturday</item>
+    </array>
+      
+    <string name="choose_height_unit">Choose Height unit</string>
+    <string name="choose_weight_unit">Choose Weight unit</string>
+    <string name="choose_whether_deleteuser">Please choose whether or not to remove the user</string>
+    <string name="choose_sure_cancel">Please choose</string>
+    <string name="choose_sure">Ok</string>
+    <string name="choose_cancel">Cancel</string>
+    
+    <string name="connect_fail">Fail to connect BW121</string>
+    <string name="connect_device_notfound">Cannot found BW121</string>
+    
+    <string name="choose_user">Choose User</string>
+    <string name="create_user_profile">Profile</string>
+    <string name="create_user_done">Done</string>
+    
+    <string name="create_profile_picture">Profile picture</string>
+    <string name="create_name">Name</string>
+    <string name="create_birthday">Birthday</string>
+    <string name="create_birthday_value">2014-3-13</string>
+    <string name="create_gender">Gender</string>
+    <string name="create_pregnancy">Pregnancy</string>
+    <string name="create_pregnancy_days">Days of pregnancy</string>
+    <string name="create_pregnancy_yes">Yes</string>
+    <string name="create_pregnancy_no">No</string>
+    <string name="pregnancy_weeks">weeks</string>
+    <string name="pregnancy_days">days</string>
+    <string name="pregnancy_weeks_days">32weeks,3days</string>
+    <string name="nameisnull">Name cannot be null</string>
+    <string name="birthisbig">Birthdays can not larger than the current date</string>
+    
+    
+    <string name="setting_title">Settings</string>
+    <string name="settings_reminder">Reminder</string>
+    <string name="settings_reminder_on">On</string>
+    <string name="settings_reminder_off">Off</string>
+    <string name="settings_repeat">Repeat</string>
+    <string name="settings_repeat_never">Never</string>
+    <string name="settings_repeat_every">Every Day</string>
+    <string name="settings_target_weight">Set target weight</string>
+    <string name="settings_cloth_weight">Cloth weight adjustment</string>
+    <string name="settings_reference">General Reference</string>
+    <string name="settings_talking">Talking feature</string>
+    <string name="settings_autosave">Auto save</string>
+    <string name="settings_product_tour">Product tour</string>
+    
+    <string name="input_data">Input data</string>
+    <string name="input_data_manually">You can manually input your data here</string>
+    <string name="input_data_date">Date to input</string>
+    <string name="input_data_date_text">08 May 2013</string>
+    <string name="input_data_none">None</string>
+    <string name="input_data_height">Height</string>
+    <string name="input_data_weight">Weight</string>
+    
+    
+    <string name="create_height">Height</string>
+    <string name="create_height_unit">Height Unit</string>
+    <string name="create_weight">Weight Unit</string>
+    <string name="create_height_cm">cm</string>
+    <string name="create_height_ft">ft</string>
+    <string name="create_weight_kg">kg</string>
+    <string name="create_weight_lb">lb</string>
+    <string name="weight_value_lbs">lbs</string>
+    
+    <string name="main_scale">Scale</string>
+    <string name="main_scaling">Scaling</string>
+    <string name="main_scaled">Scaled</string>
+    <string name="main_toast_scaling_failed">Failed to scale, please try again!</string>
+    
+    <string name="choose_from_photo">Take photo</string>
+    <string name="choose_from_gallery">Choose photo from Gallery</string>
+    
+    <string name="step_one">Please step on to weighting your body weight.</string>
+    <string name="step_two">Please hold a baby and step on scale again.</string>
+    <string name="birthToast">Birthday can not biger than today</string>
+    
+    
+    <string name="guide">Product Tour</string>
+    <string name="guide_textone">Thank you for using Ssmart FamilyFit app. This app turns your Ssmart FamilyFit Scale BW121 to a smarter device that records the weight and BMI of your whole family via Bluetooth Low Energy connection. Also, the app provides a general statistics weight information for your workout reference. Start using the Ssmart FamilyFit Scale with app, it brings you a new experience on training and workout.</string>
+    <string name="guide_texttwo">You can add various user accounts for your family members.</string>
+    <string name="guide_textthree">Follow the on screen instruction to get your weight.</string>
+    <string name="guide_textfore">You can review your weight, BMI, height history in the chart.</string>
+    <string name="guide_textfive">Your workout result can be shared with your friends.</string>
+    <string name="guide_over">Over</string>
+    
+    
+    <string name="graph_dayly">Daily</string>
+    <string name="graph_weekly">Weekly</string>
+    <string name="graph_monthly">Monthly</string>
+    <string name="graph_yearly">Yearly</string>
+    
+    <string name="bmi_state_underweight">Underweight</string>
+    <string name="bmi_state_normal">Normal</string>
+    <string name="bmi_state_pre_obese">Pre-obese</string>
+    <string name="bmi_state_obese">Obese</string>
+    
+    <!-- strings about chart -->
+    <string name="chart_range_weightcategory">Weight/kg</string>
+    <string name="chart_range_heightcategory">Height/cm</string>
+    <string name="chart_range_bmicategory">BMI</string>
+    <string name="chart_domain_title">Date</string>
+    <string name="chart_range_weightcategory_lbs">Weights/lbs</string>
+    <string name="chart_range_heightcategory_ft">Height/ft</string>
+    
+    <!-- strings to notify -->
+    <string name="notify_title">Notify Title</string>
+    <string name="notify_timeon">Hi %s It is time to scale your weight!</string>
+    
+</resources>

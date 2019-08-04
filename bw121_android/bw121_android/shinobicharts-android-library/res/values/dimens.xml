@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="sc_axisTitleTextSize" format="float" type="dimen">16</item>
+    <item name="sc_defaultLineWidth" format="float" type="dimen">1.0</item>
+    <item name="sc_defaultColumnLineWidth" format="float" type="dimen">1.0</item>
+    <item name="sc_defaultBarLineWidth" format="float" type="dimen">1.0</item>
+    <item name="sc_defaultDonutCrustThickness" format="float" type="dimen">4.0</item>
+    <item name="sc_defaultCrosshairLineWidth" format="float" type="dimen">1.0</item>
+    <item name="sc_defaultCrosshairPadding" format="float" type="dimen">7.0</item>
+    <item name="sc_defaultCrosshairTooltipTextSize" format="float" type="dimen">12.0</item>
+    <item name="sc_defaultCrosshairTooltipCornerRadius" format="float" type="dimen">8.0</item>
+    <item name="sc_defaultCrosshairTooltipBorderWidth" format="float" type="dimen">1.0</item>    
+    <item name="sc_defaultTitlePadding" format="float" type="dimen">6.0</item>
+    <item name="sc_defaultTitleMargin" format="float" type="dimen">10.0</item>
+    <item name="sc_defaultAnnotationTextSize" format="float" type="dimen">12.0</item>
+</resources>
