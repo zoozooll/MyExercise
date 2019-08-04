@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="custom_rules" default="debug">
+<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="ant-contrib-1.0b3.jar" />
+        </classpath>
+    </taskdef>
+
+<path id="android.antlibs">
+        <pathelement path="${sdk.dir}/tools/lib/ant-tasks.jar" />
+    </path>
+	<taskdef resource="anttasks.properties" classpathref="android.antlibs" />
+	 <property name="emma.dir" value="${sdk.dir}/tools/lib" />
+    <path id="emma.lib">
+        <pathelement location="${emma.dir}/emma.jar" />
+        <pathelement location="${emma.dir}/emma_ant.jar" />
+    </path>
+    <taskdef resource="emma_ant.properties" classpathref="emma.lib" />
+	
+	<property name="manifest.file" value="AndroidManifest.xml" />
+    <property name="manifest.abs.file" location="${manifest.file}" />
+	
+
+
+	<tstamp prefix="t">
+        <format property="day" pattern="yyyy-MM-dd"/>
+        <format property="time" pattern="HH:mm:ss"/>
+        <format property="datetime" pattern="yyyyMMdd_HHmmss"/>
+    </tstamp>
+				
+				
+
+ <target name="-pre-build">
+	
+
+ </target>
+
+ 
+  <target name="buildforchannel" if="scondition">
+   <echo>set property------------with channel_name</echo>
+	</target>
+	
+    <target name="normalbuild" unless="scondition">
+        <echo>clear bin</echo>
+		<delete includeEmptyDirs="true" failonerror="false" >
+			<fileset dir="${out.dir}" includes="**/*"/>		
+		</delete>
+		<echo>set property------------without channel_name</echo>
+    </target>
+ 
+		
+ <target name="hasChannel" if="scondition">
+        <echo>handle manifest***********************************************************************************************************************************</echo>
+		<replace encoding="utf-8" file ="${out.manifest.abs.file}" token="ANT_CHANNEL_NAME" value="${CHANNEL_NAME}" />
+	</target>
+	
+	  <property name="buildnumber" value="1" />
+	  
+	 <target name="replaceBuildNo">
+	 
+		<var name="op1" value="${buildno}"/>
+		<var name="op2" value="1"/>
+		<var name="op" value="+"/>
+		<math result="newbuild" operand1="${op1}"
+		operation="${op}"
+		operand2="${op2}"
+			datatype="int"/>
+		<echo>${op1} ${op} ${op2} = ${newbuild}</echo>
+		<var name="buildnumber" value="${buildno}" />
+		<replace encoding="utf-8" file ="${buildfile}" token="${buildno}" value="${newbuild}" />
+		
+        <echo>replace Build No in manifest ${buildnumber}***********************************************************************************************************************************</echo>
+		
+		<replace encoding="utf-8" file ="${out.manifest.abs.file}" token="${apkVersionName}" value="${apkVersionName}.${buildnumber}" />
+	</target>
+	
+    <target name="noChannel" unless="scondition">
+        <echo>is false===============================================================================================================================</echo>
+    </target>
+  <target name="test">
+         
+    </target>
+
+  <target name="-post-build" />
+  
+      <target name="-set-mode-check">
+        <fail if="build.is.mode.set"
+                message="Cannot run two different modes at the same time. If you are running more than one debug/release/instrument type targets, call them from different Ant calls." />
+					
+		<antcall target="normalbuild" />
+    </target>
+  	<property name="buildfile" value="buildnumber.txt" />
+  <target name="-set-debug-files" depends="-set-mode-check">
+  		<loadfile property="buildno" srcFile="${buildfile}" encoding="utf-8"/> 
+		<antcall target="mergetmanefist"></antcall>
+		<xpath input="${out.manifest.abs.file}" expression="/manifest/@android:versionName"
+                output="apkVersionName" default=""/>
+				
+			<var name="op1" value="${buildno}"/>
+		<var name="op2" value="1"/>
+		<var name="op" value="+"/>
+		<math result="newbuild" operand1="${op1}"
+		operation="${op}"
+		operand2="${op2}"
+			datatype="int"/>
+		<echo>${op1} ${op} ${op2} = ${newbuild}</echo>
+		<var name="buildnumber" value="${buildno}" />
+		<replace encoding="utf-8" file ="${buildfile}" token="${buildno}" value="${newbuild}" />
+		
+        <echo>replace Build No in manifest ${buildnumber}***********************************************************************************************************************************</echo>
+		
+		<replace encoding="utf-8" file ="${out.manifest.abs.file}" token="${apkVersionName}" value="${apkVersionName}.${buildnumber}" />
+		
+		  <property name="finalapk" value="${ant.project.name}_${apkVersionName}.${buildnumber}_${t.datetime}" />
+		
+		<echo>*******${finalapk}*****************</echo>
+        <property name="out.packaged.file" location="${out.absolute.dir}/${finalapk}-debug-unaligned.apk" />
+        <property name="out.final.file" location="${out.absolute.dir}/${finalapk}_debug.apk" />
+        <property name="build.is.mode.set" value="true" />
+  </target>
+  
+  <target name="mergetmanefist"   >
+     <mergemanifest
+                appManifest="${manifest.abs.file}"
+                outManifest="${out.manifest.abs.file}"
+                enabled="${manifestmerger.enabled}">
+            
+        </mergemanifest>
+		<echo>mergetmanefist out ${out.manifest.abs.file}</echo>
+		</target>
+  
+  
+  <target name="-set-release-mode" depends="-set-mode-check">
+<antcall target="mergetmanefist"></antcall>
+	
+		<loadfile property="buildno" srcFile="${buildfile}" encoding="utf-8"/> 
+		<antcall target="mergetmanefist"></antcall>
+		<xpath input="${out.manifest.abs.file}" expression="/manifest/@android:versionName"
+                output="apkVersionName" default=""/>
+				
+			<var name="op1" value="${buildno}"/>
+		<var name="op2" value="1"/>
+		<var name="op" value="+"/>
+		<math result="newbuild" operand1="${op1}"
+		operation="${op}"
+		operand2="${op2}"
+			datatype="int"/>
+		<echo>${op1} ${op} ${op2} = ${newbuild}</echo>
+		<var name="buildnumber" value="${buildno}" />
+		<replace encoding="utf-8" file ="${buildfile}" token="${buildno}" value="${newbuild}" />
+		
+        <echo>replace Build No in manifest ${buildnumber}***********************************************************************************************************************************</echo>
+		
+		<replace encoding="utf-8" file ="${out.manifest.abs.file}" token="${apkVersionName}" value="${apkVersionName}.${buildnumber}" />
+		
+		<property name="finalapk" value="${ant.project.name}_${apkVersionName}.${buildnumber}_${t.datetime}" />
+		
+		<echo>*******${finalapk}*****************</echo>
+        <property name="out.packaged.file" location="${out.absolute.dir}/${finalapk}-release-unsigned.apk" />
+        <property name="out.final.file" location="${out.absolute.dir}/${finalapk}.apk" />
+        <property name="build.is.mode.set" value="true" />
+
+        <!-- record the current build target -->
+        <property name="build.target" value="release" />
+
+        <property name="build.is.instrumented" value="false" />
+
+        <!-- release mode is only valid if the manifest does not explicitly
+             set debuggable to true. default is false. -->
+        <xpath input="${manifest.abs.file}" expression="/manifest/application/@android:debuggable"
+                output="build.is.packaging.debug" default="false"/>
+
+        <!-- signing mode: release -->
+        <property name="build.is.signing.debug" value="false" />
+
+        <!-- Renderscript optimization level: aggressive -->
+        <property name="renderscript.opt.level" value="${renderscript.release.opt.level}" />
+
+        <if condition="${build.is.packaging.debug}">
+            <then>
+                <echo>*************************************************</echo>
+                <echo>****  Android Manifest has debuggable=true   ****</echo>
+                <echo>**** Doing DEBUG packaging with RELEASE keys ****</echo>
+                <echo>*************************************************</echo>
+            </then>
+            <else>
+                <!-- property only set in release mode.
+                     Useful for if/unless attributes in target node
+                     when using Ant before 1.8 -->
+                <property name="build.is.mode.release" value="true"/>
+            </else>
+        </if>
+    </target>
+	
+	
+	    <!-- Code Generation: compile resources (aapt -> R.java), aidl, renderscript -->
+    <target name="-code-gen">
+        <!-- always merge manifest -->
+     
+		
+		<!--<antcall target="hasChannel"></antcall> -->
+		
+		
+		
+        <do-only-if-manifest-hasCode
+                elseText="hasCode = false. Skipping aidl/renderscript/R.java">
+            <echo level="info">Handling aidl files...</echo>
+            <aidl executable="${aidl}"
+                    framework="${project.target.framework.aidl}"
+                    libraryBinAidlFolderPathRefid="project.library.bin.aidl.folder.path"
+                    genFolder="${gen.absolute.dir}"
+                    aidlOutFolder="${out.aidl.absolute.dir}">
+                <source path="${source.absolute.dir}"/>
+            </aidl>
+
+            <!-- renderscript generates resources so it must be called before aapt -->
+            <echo level="info">----------</echo>
+            <echo level="info">Handling RenderScript files...</echo>
+            <!-- set the rs target prop in case it hasn't been set. -->
+            <property name="renderscript.target" value="${project.minSdkVersion}" />
+            <renderscript
+                    buildToolsRoot="${android.build.tools.dir}"
+                    genFolder="${gen.absolute.dir}"
+                    resFolder="${out.res.absolute.dir}"
+                    rsObjFolder="${out.rs.obj.absolute.dir}"
+                    libsFolder="${out.rs.libs.absolute.dir}"
+                    targetApi="${renderscript.target}"
+                    optLevel="${renderscript.opt.level}"
+                    supportMode="${renderscript.support.mode}"
+                    binFolder="${out.absolute.dir}"
+                    buildType="${build.is.packaging.debug}"
+                    previousBuildType="${build.last.is.packaging.debug}">
+                <source path="${source.absolute.dir}"/>
+            </renderscript>
+
+            <echo level="info">----------</echo>
+            <echo level="info">Handling Resources...</echo>
+            <aapt executable="${aapt}"
+                    command="package"
+                    verbose="${verbose}"
+                    manifest="${out.manifest.abs.file}"
+                    originalManifestPackage="${project.app.package}"
+                    androidjar="${project.target.android.jar}"
+                    rfolder="${gen.absolute.dir}"
+                    nonConstantId="${android.library}"
+                    libraryResFolderPathRefid="project.library.res.folder.path"
+                    libraryPackagesRefid="project.library.packages"
+                    libraryRFileRefid="project.library.bin.r.file.path"
+                    ignoreAssets="${aapt.ignore.assets}"
+                    binFolder="${out.absolute.dir}"
+                    proguardFile="${out.absolute.dir}/proguard.txt">
+                <res path="${out.res.absolute.dir}" />
+                <res path="${resource.absolute.dir}" />
+            </aapt>
+
+            <echo level="info">----------</echo>
+            <echo level="info">Handling BuildConfig class...</echo>
+            <buildconfig
+                    genFolder="${gen.absolute.dir}"
+                    package="${project.app.package}"
+                    buildType="${build.is.packaging.debug}"
+                    previousBuildType="${build.last.is.packaging.debug}"/>
+
+        </do-only-if-manifest-hasCode>
+    </target>
+	
+	</project>

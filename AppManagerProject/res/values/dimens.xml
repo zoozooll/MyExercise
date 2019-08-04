@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="app_text_size_10sp">10sp</dimen> 
+    <dimen name="app_text_size_12sp">12sp</dimen> 
+    <dimen name="app_text_size_13sp">13sp</dimen> 
+    <dimen name="app_text_size_14sp">14sp</dimen> 
+    <dimen name="app_text_size_16sp">16sp</dimen>
+    <dimen name="app_text_size_17sp">17sp</dimen>
+    <dimen name="app_text_size_18sp">18sp</dimen>
+    <dimen name="app_text_size_20sp">20sp</dimen>
+    <dimen name="app_text_size_22sp">22sp</dimen>
+    <dimen name="app_text_size_24sp">24sp</dimen>
+    <dimen name="app_text_size_30sp">30sp</dimen>
+
+    <!--首页溢出菜单的宽度-->
+    <dimen name="main_overflow_widht">200dip</dimen>
+</resources>

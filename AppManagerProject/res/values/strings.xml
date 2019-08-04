@@ -1,0 +1,169 @@
+<resources>
+
+    <string name="app_name">Manager</string>
+    <string name="update">Update Download Completed</string>
+
+    <!-- 主页面 -->
+    <string name="main_label_01">App Manager</string>
+    <string name="main_label_manager">App Stats</string>
+    <string name="main_label_memery">Memory</string>
+    <string name="main_label_battery">Battery</string>
+    <string name="main_label_data">Data</string>
+    <string name="main_label_storage">Storage</string>
+    <string name="main_popwindow_about_us">About us</string>
+    <string name="main_exit_tips_msg">Press back key again to exit application.</string>
+    <string name="main_optimize_needed">Optimize</string>
+    <string name="main_optimize_needed2">Optimize Needed</string>
+    <string name="main_optimized">Optimized</string>
+    <string name="main_healthy">Healthy Status</string>
+    <!-- main list中item显示项 -->
+    <string name="main_list_item_label_01">Processes Optimized: </string>
+    <string name="main_list_item_label_02">Memory Released: </string>
+    <string name="main_list_item_label_03">Apps</string>
+    <string name="main_list_item_label_05">Battery Optimize: </string>
+    <string name="main_list_item_label_06">Recommend to disable Auto-Start</string>
+    <string name="main_list_item_label_07">Data Optimize: </string>
+    <string name="main_list_item_label_08">Recommend to disable Data Access</string>
+    <string name="main_list_ok">OK</string>
+    <string name="main_size_danwei">MB</string>
+    
+    <!-- main scanning -->
+    <string name="main_scenning_memory">Scanning system</string>
+    <string name="main_scenning_cache">Scanning cache</string>
+    <string name="main_scenning_risk">Scanning risk</string>
+
+    <!-- manager list -->
+    <string name="managerlist_tab_title">App Manager</string>
+    <string name="managerlist_tab_01">Overall</string>
+    <string name="managerlist_tab_02">Memory</string>
+    <string name="managerlist_tab_03">Battery</string>
+    <string name="managerlist_tab_04">Data</string>
+    <string name="managerlist_tab_05">Storage</string>
+
+    <!-- Optimized -->
+    <string name="optimized_title_battery">Battery Issues Optimized(%1$d)</string>
+    <string name="optimized_title_data">Data Issues Optimized(%1$d)</string>
+    <string name="optimized_label_battery">The app(s) below will not run only when you open it.</string>
+    <string name="optimized_label_data">The app(s) below will not have data access when this button switched to OFF</string>
+    <string name="optimized_switch_on">ON</string>
+    <string name="optimized_switch_off">OFF</string>
+    <string name="optimized_actionbar_title">Optimized</string>
+
+    <!-- Statistic -->
+    <string name="statistic_actionbar_title">App Stats</string>
+    <!-- <string name="statistic_item_score">Score</string> -->
+    <!-- <string name="statistic_item_frequency">%1$d time(s)/day    %2$s/day</string>
+    <string name="statistic_item_memory">%1$.0fMB</string>
+    <string name="statistic_item_battery">%1$.0f%%</string>
+    <string name="statistic_item_data">Today: %1$s\n%2$s/day</string> -->
+
+    <!-- miniapp -->
+    <string name="miniapp_name">App Manager</string>
+    <string name="miniapp_label_01">Score</string>
+    <string name="miniapp_label_02">Apps installed:</string>
+    <string name="miniapp_label_03">Your phone is very healthy.</string>
+    <string name="miniapp_label_04">Optimizable Issues:</string>
+	<string name="miniapp_label_05">Optimized Issues:</string>
+	<string name="miniapp_label_06">Recommend to optimize now.</string>
+	<string name="miniapp_label_07">Details</string>
+	<string name="miniapp_label_08">Optimizing</string>
+	<string name="miniapp_label_09">issue(s) need advanced optimization.</string>
+	<string name="miniapp_label_10">Advanced Optimization Needed</string>
+	
+    <!-- MEMORY、BATTERY、DATA、STORAGE相关 -->
+    <string name="app_list_memory_title_text">Memory</string>
+    <string name="app_list_battery_title_text">Battery</string>
+    <string name="app_list_data_title_text">Data</string>
+    <string name="app_list_storage_title_text">Storage</string>
+    <string name="app_list_memory_clear_guide_text">%1$s available. Stop %2$s apps to release %3$s memory</string>
+    <string name="app_list_battery_run_guide_text">Allow %1$s App(s) to run on start up</string>
+    <string name="app_list_data_access_guide_text">Allow %1$s App(s) to Data Access</string>
+    <string name="app_list_storage_occupy_guide_text">%1$s is occupied by %2$s App(s)</string>
+    <string name="app_data_access_turn_off_guide_text">If Data Access is turned off, the app will have access to mobile data.Such as 2G/3G/4G.</string>
+    <string name="app_data_access_turn_on_guide_text">The app(s) below will not have data access when this button is switched to OFF</string>
+    <string name="app_auto_start_turn_off_guide_text">If Auto-Start is turned off, the app will not run automatically unless you open it.</string>
+    <string name="app_auto_start_turn_on_guide_text">The app(s) below will not start only when you activate it.</string>
+    <string name="app_data_battery_btn_turn_off_tips_text">Do you confirm to turn it off?</string>
+    <string name="app_data_battery_btn_turn_on_tips_text">Do you confirm to turn it on?</string>
+    <string name="app_list_fre_used_text">Frequently Used</string>
+    <string name="app_list_nor_used_text">Normally  Used</string>
+    <string name="app_list_bar_used_text">Barely Used</string>
+    <string name="app_list_nev_used_text">Never Used</string>
+    <string name="app_list_unrecord_text">- - -</string>
+    <string name="app_list_today_text">Today</string>
+    <string name="app_list_per_day_text">/day</string>
+    <string name="app_list_app_size_text">Size</string>
+    <string name="app_list_app_app_text">App</string>
+    <string name="app_list_app_data_text">Data</string>
+
+    <!-- 详情相关 -->
+    <string name="app_detail_title_text">AppDetail</string>
+    <string name="app_detail_hours_per_day_text">hours/day</string>
+    <string name="app_detail_mins_per_day_text">mins/day</string>
+    <string name="app_detail_times_per_day_text">times/day</string>
+    <string name="app_detail_fre_used_text">Frequently Used</string>
+    <string name="app_detail_nor_used_text">Normally  Used</string>
+    <string name="app_detail_bar_used_text">Barely Used</string>
+    <string name="app_detail_nev_used_text">Never Used</string>
+    <string name="app_detail_unrecord_text">- - -</string>
+    <string name="app_detail_score_text">Score</string>
+    <string name="app_detail_memory_text">Memory</string>
+    <string name="app_detail_battery_text">Battery</string>
+    <string name="app_detail_data_text">Data</string>
+    <string name="app_detail_storage_text">Storage</string>
+    <string name="app_detail_today_text">Today</string>
+    <string name="app_detail_per_day_text">/day</string>
+    <string name="app_detail_app_text">App</string>
+    <string name="app_detail_app_data_text">Data</string>
+    <string name="app_detail_diagnosis_text">Diagnosis</string>
+    <string name="app_detail_diagnosis_data_text">Data consumption is high. Recommend to disable data access.</string>
+    <string name="app_detail_diagnosis_battery_text">Battery consumption is  high. Recommend to disable Auto-Start.</string>
+    <string name="app_detail_diagnosis_bd_text">Battery and Data consumption is high. Recommend to disable Auto-Start and Data Access.</string>
+    <string name="app_detail_diagnosis_uninstall_text">Low Rating Application.Recommend to Uninstall.</string>
+    <string name="app_detail_diagnosis_healthy_text">This app is running properly.</string>
+    
+    <string name="app_detail_running_text">Running</string>
+    <string name="app_detail_auto_start_text">Auto-Start</string>
+    <string name="app_detail_data_access_text">Data Access</string>
+    <string name="app_detail_turn_off_guide_text">Recommend to turn off</string>
+
+    <!-- 推荐相关 -->
+    <string name="recomm_app_title_text">Recommend: </string>
+
+    <!-- 符号、单位相关 -->
+    <string name="app_sign_percent">%</string>
+    <string name="app_sign_colon">:</string>
+
+    <!-- 按钮相关 -->
+    <string name="app_btn_text_stop">Stop</string>
+    <string name="app_btn_text_uninstall">Uninstall</string>
+    <string name="app_btn_text_on">On</string>
+    <string name="app_btn_text_off">Off</string>
+
+    <!-- customs dialog相关 文本 -->
+    <string name="dialog_default_left_button">CANCEL</string>
+    <string name="dialog_default_right_button">CONFIRM</string>
+    <string name="dialog_default_confirm_again">Do you confirm to turn it off?</string>
+    <string name="dialog_autostart_on_title">Turn On Data</string>
+    <string name="dialog_autostart_off_title">Turn Off Data</string>
+    <string name="dialog_mobiledata_on_title">Turn On Auto-Start</string>
+    <string name="dialog_mobiledata_off_title">Turn Off Auto-Start</string>
+    <!-- 后台杀进程 -->
+    <string name="release_notification">App Manager help you stoped %1$s,%2$s apps running at the background that you have forbided these apps\'Auto-Start.</string>
+    <string name="stop_apps">Force Stop Apps</string>
+    <string name="backgroup_notification_title">Stopped %1$d Apps For You</string>
+    <string name="check_version_title">New Version</string>
+    <string name="update_cancle">Cancel</string>
+    <string name="update_update_now">Update Now</string>
+    <string name="update_vision">Version:</string>
+    <string name="update_size">Size:</string>
+    <string name="update_contents">Update Contents</string>
+    
+    
+    <!-- loading相关 -->
+    <string name="app_loading_desc_text">Loading</string>
+    
+    <!-- About us  -->
+    <string name="about_checkupate_text">Check Update</string>
+
+</resources>

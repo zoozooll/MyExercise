@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_grid_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/main_memery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_memory"
+                android:gravity="center_horizontal"
+                android:text="@string/main_label_memery"
+                android:textColor="@color/main_textcolor_01"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/main_divider" />
+
+        <RelativeLayout
+            android:id="@+id/main_battery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_battery"
+                android:gravity="center_horizontal"
+                android:text="@string/main_label_battery"
+                android:textColor="@color/main_textcolor_01"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/main_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/main_data"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_data"
+                android:gravity="center_horizontal"
+                android:text="@string/main_label_data"
+                android:textColor="@color/main_textcolor_01"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/main_divider" />
+
+        <RelativeLayout
+            android:id="@+id/main_storage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_storage"
+                android:gravity="center_horizontal"
+                android:text="@string/main_label_storage"
+                android:textColor="@color/main_textcolor_01"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

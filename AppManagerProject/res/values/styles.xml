@@ -1,0 +1,138 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+    -->
+    <style name="Theme.AppBaseTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+        -->
+
+        <item name="android:selectableItemBackground">@drawable/selector_list_holo</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="Theme.AppTheme" parent="Theme.AppBaseTheme">
+        <item name="android:windowAnimationStyle">@style/ActivitySwitchTheme</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="Transparent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- 推荐相关 -->
+    <style name="recomm_app">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <!-- headerBar相关 -->
+    <style name="header_action_bar_theme">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/header_bar_bg_color</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="header_action_bar_title_text">
+        <item name="android:textSize">@dimen/app_text_size_20sp</item>
+        <item name="android:textColor">@color/title_text_color</item>
+    </style>
+
+    <!-- Styles for statistic item -->
+    <style name="staticstic_item_image">
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">47dp</item>
+    </style>
+
+    <style name="staticstic_item_text">
+        <item name="android:textColor">@color/optimized_textcolor_content</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_marginLeft">3dp</item>
+   </style>
+   
+      <!-- 自定dialog样式 -->
+    <style name="FullHeightDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- Styles for manager list -->
+    <style name="manager_listview_base">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:divider">@color/fragment_list_item_line1_color</item>
+        <item name="android:dividerHeight">0.5dip</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+        <item name="android:listSelector">@drawable/selector_list_holo</item>
+    </style>
+
+    <style name="optimized_listview" parent="@style/manager_listview_base">
+        <item name="android:divider">@color/optimized_list_divider_color</item>
+    </style>
+
+    <style name="dialog_custom" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+    
+    <style name="dialog_scan_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+
+    <!-- Acitivity切换动画 -->
+    <style name="ActivitySwitchTheme" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_out_from_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_out_from_right</item>
+    </style>
+    
+    <style name="NotificationTime" parent="@android:style/TextAppearance.StatusBar.EventContent">
+        <item name="android:textColor">#555555</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="LoadingView">
+        android:indeterminateDrawable="@drawable/loading_bar1
+    </style>
+
+    <style name="main_overflow_menus" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:listPreferredItemHeightSmall">48dip</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

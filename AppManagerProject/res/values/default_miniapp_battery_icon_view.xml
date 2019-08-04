@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 默认miniapp电池图标属性值 -->
+    <color name="default_miniapp_battery_bar_color">#FF7E00</color>
+    <dimen name="default_miniapp_battery_bar_width">3dp</dimen>
+    <color name="default_miniapp_battery_rim_color">#DCDCDC</color>
+    <dimen name="default_miniapp_battery_textsize">10sp</dimen>
+    
+    
+     <dimen name="default_miniapp_bar_width">2dp</dimen>
+    <dimen name="default_miniapp_rim_width">2dp</dimen>
+    <dimen name="default_miniapp_score_textsize">40sp</dimen>
+    <dimen name="default_miniapp_desc_textsize">10sp</dimen>
+</resources>

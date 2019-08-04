@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 默认主界面图标属性值 -->
+    <dimen name="default_main_bar_width">4dp</dimen>
+    <dimen name="default_main_rim_width">3dp</dimen>
+    <dimen name="default_main_score_textsize">100sp</dimen>
+    <dimen name="default_main_desc_textsize">14sp</dimen>
+    
+</resources>

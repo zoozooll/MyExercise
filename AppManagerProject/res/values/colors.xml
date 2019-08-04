@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dark">#85000000</color>
+    <color name="transparent">#00000000</color>
+    
+    <!-- 主页颜色 -->
+    <color name="main_danger">#E51C23</color>
+    <color name="main_normal">#F57C00</color>
+    <color name="main_good">#2BAF2B</color>
+    <color name="main_grid_tab_pressed">#f2f2f2</color>
+    <color name="main_score_circle_pressed">#33FFFFFF</color>
+    <color name="main_divider">#e5e5e5</color>
+    <color name="main_textcolor_01">#9a9a9a</color>
+    
+    <!-- colors for optimized -->
+    <color name="optimized_textcolor_title">#2E353E</color>
+    <color name="optimized_textcolor_content">#ABACAC</color>
+    <color name="optimized_division">#F2F0F0</color>
+    <color name="optimized_textcolor_content2">#2B2F31</color>
+    <color name="optimized_list_divider_color">#F2F1F1</color>
+    
+    <!-- colors for statistic -->
+    <color name="statistic_item_score">#2BAF2B</color>
+    
+    <!-- manager list颜色值 -->
+    <color name="managerlist_tab_pressed">#6633B5E5</color>
+    <color name="managerlist_tab_normal">#2E353E</color>
+    
+    <!-- miniapp各项颜色值 -->
+    <color name="miniapp_bg_dialog">#EAEBEC</color>
+    <color name="miniapp_description">#383838</color>
+    <color name="miniapp_textcolor_01">#A1A1A2</color>
+    
+	
+    <!-- 推荐list相关颜色 -->
+    <color name="recomm_app_bg_color">#f9f9f9</color>
+	<color name="recomm_app_line_color">#e5e5e5</color> 
+	<color name="recomm_app_title_color">#2b2f31</color>
+	
+	<!-- shape_btn1_sel颜色 -->
+	<color name="shape_btn1_stroke_color">#e51c23</color>
+	<color name="shape_btn1_solid1_color">#ffffff</color> 
+	<color name="shape_btn1_solid2_color">#d5efd5</color>
+	<!-- shape_btn2_sel颜色 -->
+	<color name="shape_btn2_stroke_color">#2aaf2b</color>
+	<color name="shape_btn2_solid1_color">#ffffff</color> 
+	<color name="shape_btn2_solid2_color">#d5efd5</color>
+	<color name="shape_btn2_solid3_color">#e5e5ef</color>
+	
+	<!-- headerBar相关 -->
+	<color name="header_bar_bg_color">#2BAF2B</color>
+	<color name="title_text_color">#ffffff</color>
+	
+	<!-- Memory、Battery、Data、Storage list相关 -->
+	<color name="fragment_list_item_line1_color">#e5e5e5</color>
+	<color name="fragment_list_item_text1_color">#2e353e</color> 
+	<color name="fragment_list_item_text2_color">#abacac</color>  
+	<color name="fragment_list_item_text3_color">#2baf2b</color> 
+	<color name="fragment_list_bg1_color">#e5e5ef</color>
+	<color name="fragment_list_bg2_color">#e5e5ef</color>
+	<color name="fragment_list_bg3_color">#ffffff</color>
+	<!-- 详情相关意思  --> 
+	<color name="app_detail_bg1_color">#fafafa</color> 
+	<color name="app_detail_text0_color">#F57C00</color> 
+	<color name="app_detail_text1_color">#000000</color> 
+	<color name="app_detail_text2_color">#abacac</color> 
+	<color name="app_detail_text3_color">#2baf2b</color> 
+	<color name="app_detail_text4_color">#b7b7b7</color> 
+	<color name="app_detail_text5_color">#2b2f31</color> 
+	<color name="app_detail_text6_color">#abacac</color> 
+	<color name="app_detail_text7_color">#e51c23</color> 
+	<color name="app_detail_line1_color">#e5e5e5</color> 
+	<color name="app_detail_line2_color">#eeeeee</color> 
+	<color name="app_detail_line3_color">#f2f1f1</color> 
+	
+	<!-- colors for dialog -->
+	<color name="dialog_textcolor_msg">#868686</color>
+    <!-- loading相关 -->
+    <color name="app_loading_text1_color">#abacac</color>
+    <!-- defalut icon相关 -->
+    <color name="app_ic_defalut_bg_color">#05af10</color>
+    
+    <color name= "notification_content_textcolor">#515151</color>
+</resources>

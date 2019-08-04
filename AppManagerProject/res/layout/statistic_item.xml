@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+	    
+	<RelativeLayout android:id="@+id/layout_toper"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="16dp"
+	    android:paddingBottom="16dp"  >
+	
+	    <com.tcl.manager.view.CornerImageView
+	        android:id="@+id/imageIcon"
+	        android:layout_width="60dp"
+	        android:layout_height="60dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp"
+	        android:src="@drawable/ic_default" />
+	
+	    <TextView
+	        android:id="@+id/textTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/imageIcon"
+	        android:layout_toRightOf="@+id/imageIcon"
+	        android:layout_toLeftOf="@+id/textScore"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="5dp"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:singleLine="true"
+	        android:textColor="@color/optimized_textcolor_title"
+	        android:textSize="17sp" />
+	
+	    <TextView
+	        android:id="@+id/textState"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/textTitle"
+	        android:layout_alignLeft="@+id/textTitle"
+	        android:layout_alignRight="@+id/textTitle"
+	        android:textColor="@color/optimized_textcolor_content"
+	        android:singleLine="true"
+	        android:textSize="14sp" />
+	
+	    <TextView
+	        android:id="@+id/textFrequency"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/textState"
+	        android:layout_alignLeft="@+id/textTitle"
+	        android:layout_alignRight="@+id/textTitle"
+	        android:textColor="@color/optimized_textcolor_content"
+	        android:singleLine="true"
+	        android:textSize="14sp"
+	         />
+	
+	<!--     <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@+id/imageRight"
+	        android:layout_marginRight="21dp"
+	        android:orientation="vertical" > -->
+	
+	        <TextView
+	            android:id="@+id/textScore"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@+id/imageRight"
+	            android:layout_centerVertical="true"
+	            android:singleLine="true"
+	            android:textColor="@color/statistic_item_score"
+	            android:textSize="30sp"
+	            android:text="65"
+	             />
+	
+	   <!--      <TextView
+	            android:id="@+id/textScoreLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_horizontal"
+	            android:textColor="@color/app_detail_text4_color"
+	            android:textSize="13sp"
+	            android:text="@string/statistic_item_score"
+	            /> -->
+	  <!--   </LinearLayout -->
+	
+	    <ImageView
+	        android:id="@+id/imageRight"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:minHeight="65dp"
+	        android:paddingLeft="20dp"
+	        android:paddingRight="20dp"
+	        android:src="@drawable/ic_go" >
+	    </ImageView>
+	
+	</RelativeLayout>
+	
+	<LinearLayout android:id="@+id/layoutBottom"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingLeft="20dp"
+	    android:paddingRight="20dp"
+	    android:paddingBottom="16dp"
+	    android:gravity="center_horizontal"
+	    android:orientation="horizontal"
+	     >
+	    <LinearLayout 
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    >
+
+	    	<ImageView
+	    	    android:id="@+id/imageMemoery"
+	    	    android:layout_width="45dp"
+	    	    android:layout_height="47dp"
+	    	    android:layout_gravity="center_vertical"
+	    	    android:src="@drawable/ic_memory_round"
+	    	    style="@style/staticstic_item_image" />
+
+	    	<TextView android:id="@+id/textMemoery"
+	    	    android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:layout_gravity="center_vertical"
+		    	style="@style/staticstic_item_text" />
+	    
+		</LinearLayout>
+		<LinearLayout 
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:orientation="horizontal">
+		    
+
+	    	<ImageView
+	    	    android:id="@+id/imageBattery"
+	    	    android:layout_width="45dp"
+	    	    android:layout_height="47dp"
+	    	    android:layout_gravity="center_vertical"
+	    	    android:src="@drawable/ic_battery_round"
+	    	    style="@style/staticstic_item_image" />
+
+	    	<TextView android:id="@+id/textBattery"
+	    	    android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:layout_gravity="center_vertical"
+	    	    style="@style/staticstic_item_text" />
+	    
+		</LinearLayout>
+		<LinearLayout 
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:orientation="horizontal" >
+
+	    	<ImageView
+	    	    android:id="@+id/imageData"
+	    	    android:layout_width="45dp"
+	    	    android:layout_height="47dp"
+	    	    android:layout_gravity="center_vertical"
+	    	    style="@style/staticstic_item_image"
+	    	    android:src="@drawable/ic_data_round" />
+
+	    	<TextView android:id="@+id/textData"
+	    	    android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:layout_gravity="center_vertical"
+	    	    style="@style/staticstic_item_text" />
+	    
+		</LinearLayout>
+	    
+	</LinearLayout>
+
+</LinearLayout>

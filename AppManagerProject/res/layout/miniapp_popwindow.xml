@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/miniapp_bg_dialog"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/miniapp_window_score_layout"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:clickable="true"
+            android:focusable="true" >
+
+            <TextView
+                android:id="@+id/miniapp_window_bg"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_oval_well" />
+
+            <TextView
+                android:id="@+id/miniapp_window_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:text="99"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_miniapp_score_textsize" />
+
+            <TextView
+                android:id="@+id/miniapp_window_score_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/miniapp_window_score"
+                android:layout_centerHorizontal="true"
+                android:text="@string/miniapp_label_01"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_miniapp_desc_textsize" />
+            
+            <View 
+                android:id="@+id/miniapp_window_circle"
+               android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_centerInParent="true"
+               android:background="@drawable/miniapp_optimized_circle"
+                />
+        </RelativeLayout>
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="optimizing..."
+            android:textColor="@color/black"
+            />
+        
+    </LinearLayout>
+
+</RelativeLayout>

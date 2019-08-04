@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="12dp"
+    android:paddingRight="6dp"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageIcon"
+        android:layout_marginLeft="12dp"
+        android:layout_toLeftOf="@+id/textTime"
+        android:layout_toRightOf="@+id/imageIcon"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+         />
+
+    <LinearLayout
+        android:id="@+id/list_clean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textTitle"
+        android:layout_below="@+id/textTitle"
+        android:layout_toLeftOf="@+id/textTime"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imageApp1"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageApp2"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_margin="5dp"
+             />
+
+        <ImageView
+            android:id="@+id/imageApp3"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_margin="5dp"
+             />
+
+        <ImageView
+            android:id="@+id/imageApp4"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_margin="5dp"
+             />
+
+        <ImageView
+            android:id="@+id/imageApp5"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_margin="5dp"
+             />
+
+        <ImageView
+            android:id="@+id/imageApp6"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_margin="5dp"
+             />
+
+        <ImageView
+            android:id="@+id/imageApp7"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_margin="5dp"
+             />
+
+        <ImageView
+            android:id="@+id/imageApp8"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_margin="5dp"
+             />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textTitle"
+        android:layout_alignParentRight="true"
+        android:textAppearance="@style/NotificationTime"
+        />
+
+</RelativeLayout>

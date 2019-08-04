@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_miniapp_bg"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                 android:id="@+id/miniapp_window_score_layout"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="31dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="31dp" 
+                >
+                <TextView 
+                    android:id="@+id/miniapp_window_bg"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                     android:background="@drawable/shape_oval_well"
+                     android:layout_centerInParent="true"
+                    />
+                
+                <TextView 
+                    android:id="@+id/miniapp_window_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_miniapp_score_textsize"
+                    android:text="99"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="22dp"
+                    />
+                
+                 <TextView 
+                    android:id="@+id/miniapp_window_score_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_miniapp_desc_textsize"
+                    android:layout_below="@id/miniapp_window_score"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/main_optimize_needed"
+                    android:visibility="gone"
+                    />
+                 
+                 <RelativeLayout 
+                     android:id="@+id/miniapp_anim_layout"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     >
+                     <include layout="@layout/miniapp_anim_layout"/>
+                 </RelativeLayout>
+                   <RelativeLayout 
+                     android:id="@+id/miniapp_anim_layout_optimize"
+                     android:layout_width="115dp"
+                     android:layout_height="115dp"
+                     android:layout_centerInParent="true"
+                     >
+                 </RelativeLayout>
+               
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/miniapp_window_right_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                 >
+
+                <TextView
+                    android:id="@+id/miniapp_window_status_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/miniapp_description"
+                    android:text="@string/main_healthy"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/miniapp_window_detail_desc"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/miniapp_window_status_desc"
+                    android:layout_height="65dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/miniapp_textcolor_01"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/miniapp_window_manager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                     android:layout_below="@id/miniapp_window_detail_desc"
+                    android:background="@drawable/selector_blue_corners"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="@string/miniapp_label_07"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+                
+                
+                <TextView 
+                    android:id="@+id/miniapp_window_optimizing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/miniapp_label_08"
+                    android:background="@color/miniapp_bg_dialog"
+                    android:textColor="@color/miniapp_description"
+                    android:paddingTop="10dp"
+                    android:layout_alignTop="@id/miniapp_window_status_desc"
+                    android:layout_alignBottom="@id/miniapp_window_manager"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

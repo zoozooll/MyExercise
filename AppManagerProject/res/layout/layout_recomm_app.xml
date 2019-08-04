@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/recomm_app_bg_color"
+    android:orientation="vertical" >
+
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/recomm_app_line_color"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/recomm_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/recomm_app_title_text"
+            android:textColor="@color/recomm_app_title_color"
+            android:textSize="@dimen/app_text_size_14sp" />
+
+        <TextView
+            android:id="@+id/recomm_tv_resume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/tv_title"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="@dimen/app_text_size_13sp" />
+    </RelativeLayout>
+
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/recomm_app_line_color"/>
+    
+    <LinearLayout
+        android:id="@+id/recomm_ll_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp" 
+        android:layout_marginRight="20dp" 
+        android:layout_marginTop="12dp" 
+        android:layout_marginBottom="16dp" 
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/recomm_ll_list_item1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.tcl.manager.view.CornerImageView
+                android:id="@+id/recomm_civ_item1_icon" 
+                style="@style/recomm_app" />
+
+            <TextView
+                android:id="@+id/recomm_tv_item1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+	            android:ellipsize="marquee"
+	            android:singleLine="true"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textColor="@color/recomm_app_title_color"
+                android:textSize="@dimen/app_text_size_13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recomm_ll_list_item2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" 
+            android:orientation="vertical">
+
+            <com.tcl.manager.view.CornerImageView
+                android:id="@+id/recomm_civ_item2_icon" 
+                style="@style/recomm_app" />
+
+            <TextView
+                android:id="@+id/recomm_tv_item2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+            	android:ellipsize="marquee"
+            	android:singleLine="true"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textColor="@color/recomm_app_title_color"
+                android:textSize="@dimen/app_text_size_13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recomm_ll_list_item3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" 
+            android:orientation="vertical">
+
+            <com.tcl.manager.view.CornerImageView
+                android:id="@+id/recomm_civ_item3_icon" 
+                style="@style/recomm_app" />
+
+            <TextView
+                android:id="@+id/recomm_tv_item3_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+	            android:ellipsize="marquee"
+	            android:singleLine="true"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textColor="@color/recomm_app_title_color"
+                android:textSize="@dimen/app_text_size_13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recomm_ll_list_item4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1"
+            android:gravity="center" 
+            android:orientation="vertical">
+
+            <com.tcl.manager.view.CornerImageView
+                android:id="@+id/recomm_civ_item4_icon" 
+                style="@style/recomm_app" />
+
+            <TextView
+                android:id="@+id/recomm_tv_item4_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+	            android:ellipsize="marquee"
+	            android:singleLine="true"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textColor="@color/recomm_app_title_color"
+                android:textSize="@dimen/app_text_size_13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

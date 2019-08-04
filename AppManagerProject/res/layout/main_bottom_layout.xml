@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_bottom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    
+     >
+
+    <RelativeLayout
+        android:id="@+id/main_bottom_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+         >
+
+        <View
+            android:id="@+id/main_label_01"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/shape_jb_bg" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/main_label_01" >
+
+            <Button
+                android:id="@+id/main_bottom_button"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_ok"
+                android:text="@string/main_list_ok"
+                android:textColor="@color/main_good"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/main_expandalelistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_bottom_button_layout"
+        android:layout_marginTop="30dp"
+        android:divider="@null"
+        android:dividerHeight="8dp"
+        android:listSelector="@color/transparent"
+        android:padding="12dp"
+        android:scrollbarStyle="outsideOverlay" />
+
+</RelativeLayout>

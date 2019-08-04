@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="frequencyLevel">
+        <item >@string/app_list_fre_used_text</item>
+        <item >@string/app_list_nor_used_text</item>
+        <item >@string/app_list_bar_used_text</item>
+        <item >@string/app_list_nev_used_text</item>
+        <item >@string/app_list_unrecord_text</item>
+    </string-array>
+</resources>

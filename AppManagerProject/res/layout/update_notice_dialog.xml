@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:view="http://schemas.android.com/apk/res/com.aotain.zfmobile"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/clickline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/loading_bg_normal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/check_version_title"
+                android:textColor="#595959"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#ebebeb" />
+
+            <ScrollView
+                android:id="@+id/scroll_view_id"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:scrollbars="none" >
+
+                <TextView
+                    android:id="@+id/dec_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:singleLine="false"
+                    android:textColor="#4e4e4e" />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_buttom"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/dialog_button_ok"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_dialog_click"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/dialog_button_cancel"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_dialog_click"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

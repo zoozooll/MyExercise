@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.AppBaseTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <!--<item name="android:colorPrimary">@color/black</item>-->
+        <!--状态栏的颜色-->
+        <item name="android:colorPrimaryDark">@color/black</item>
+        <!--ProgressBar的颜色-->
+        <item name="android:colorControlActivated">@color/header_bar_bg_color</item>
+    </style>
+
+    <style name="main_overflow_menus" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:listPreferredItemHeightSmall">48dip</item>
+        <item name="android:windowIsFloating">false</item>
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="manager_listview_base">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:divider">@color/fragment_list_item_line1_color</item>
+        <item name="android:dividerHeight">0.5dip</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+        <!--<item name="android:listSelector">@drawable/selector_list_holo</item>-->
+    </style>
+
+    <style name="manager_listview_base_md">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:divider">@color/fragment_list_item_line1_color</item>
+        <item name="android:dividerHeight">0.5dip</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+    </style>
+
+    <style name="LoadingView" parent="android:style/Widget.Material.ProgressBar.Large">
+    </style>
+
+</resources>

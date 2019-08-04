@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+   <RelativeLayout
+        android:id="@+id/main_list_view_item_linear_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:clickable="true"
+        >
+
+        <ImageView
+            android:id="@+id/main_list_view_item_icon"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_tanhao"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/main_list_view_item_desc"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_toRightOf="@id/main_list_view_item_icon"
+            android:paddingLeft="10dp"
+            android:text="Battery Consume Risk:"
+            android:textColor="#2e353e"/>
+		<TextView 
+		    android:id="@+id/main_list_view_item_count"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="14sp"
+		    android:layout_below="@id/main_list_view_item_desc"
+		    android:layout_toRightOf="@id/main_list_view_item_icon"
+		    android:paddingLeft="10dp"
+		    android:text="Sugesst to close Auto-Start"
+		    android:textColor="#868686"
+		    />
+		
+    </RelativeLayout>
+	
+   <com.tcl.manager.view.AutoFitListView
+       android:id="@+id/main_list_item_childlist"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+         android:listSelector="@color/transparent"
+       
+       
+   />
+
+</LinearLayout>
