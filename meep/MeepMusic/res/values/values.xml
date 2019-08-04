@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="TAG"></item>
+    <item type="id" name="LeftID"></item>
+    <item type="id" name="RightID"></item>
+</resources>

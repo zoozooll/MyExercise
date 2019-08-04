@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/registerLayout"
+    style="@style/ParentLayoutStyle">
+	<!-- action bar -->
+	<FrameLayout
+	    android:id="@+id/actionBar"
+	    style="@style/ActionBar">
+	    <LinearLayout 
+		    android:layout_gravity="left|center_vertical"
+	        style="@style/wrap_content">
+	    	<ImageButton
+			    android:id="@+id/barImageButtonBack"
+			    android:contentDescription="@string/main_button_back"
+			    android:src="@drawable/topbar_arrow_icon" 
+			    style="@style/BarImageButton_Main"/>
+	    	<View  
+	    	    style="@style/BarDivider"/>
+	    </LinearLayout>
+	    <TextView
+		    android:id="@+id/RegisterTitle"
+		    android:text="@string/main_select_child_title"
+		    style="@style/BarTitle" />
+	    <LinearLayout 
+			    android:layout_gravity="right|center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content">
+			    <View  style="@style/BarDivider"/>
+				<ImageButton
+				    android:id="@+id/barImageButtonAdd"
+				    android:src="@drawable/topbar_add_icon" 
+				    android:contentDescription="@string/main_button_kid"
+				    style="@style/BarImageButton_Main"/>
+		        
+	    </LinearLayout>
+	</FrameLayout>
+	<!-- bar shadow -->
+	<!-- <View android:layout_below="@id/actionBar"
+ 		 style="@style/BarShadow"/> -->
+	<!-- dialog title bar -->
+		<LinearLayout 
+		    android:id="@+id/dialogBar"
+		    style="@style/LinearDialog"
+		    android:layout_below="@id/actionBar" >
+		    <TextView 
+    		    style="@style/MainPageTitle"
+    		    android:text="@string/main_select_child_label"/>
+    	</LinearLayout>
+		<!-- listview main page -->
+		<LinearLayout 
+		    style="@style/OutOfListView"
+		    android:id="@+id/outListKids"
+		    android:layout_below="@id/dialogBar"
+		     android:orientation="vertical">
+			<ListView
+			    android:id="@+id/listKids"
+			    style="@style/ListViewStyle">
+			</ListView>
+		</LinearLayout>
+</RelativeLayout>

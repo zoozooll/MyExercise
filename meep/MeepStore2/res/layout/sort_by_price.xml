@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/background_half_trans">
+    <ImageButton 
+        android:id="@+id/btnClose"
+        style="@style/wrap_content"
+        android:src="@drawable/btn_close"
+        android:background="@null"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/close"/>
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" 
+	    android:layout_marginTop="30dp"
+	    android:gravity="center_horizontal"
+	    android:orientation="vertical">
+	    <TextView 
+	        style="@style/wrap_content"
+	        android:layout_marginRight="40dp"
+	        android:background="@drawable/meep_market_sortbar_orange"
+	        android:contentDescription="@string/sort_price"
+	        android:text="@string/sort_price"
+	        android:gravity="center_vertical"
+	        android:textColor="@color/text_dark_red"
+	        android:shadowColor="@color/text_white"
+	        android:textStyle="bold"
+	        android:textSize="30dp"
+	        android:shadowRadius="2"
+	        android:paddingTop="20dp"
+	        android:layout_marginBottom="10dp"
+	        android:paddingLeft="40dp"
+	        />
+	    <LinearLayout style="@style/wrap_content"
+	        android:layout_marginTop="50dp">
+	        <RelativeLayout 
+	            style="@style/relatedlayout_sort"
+	            android:layout_marginTop="-10dp"
+	            >
+		        <ImageButton
+		            android:paddingTop="15dp"
+   		            style="@style/imagebutton_sort"
+		            android:id="@+id/priceAll"
+			        android:src="@drawable/btn_sort_price"
+			        android:contentDescription="@string/category_all"
+			        android:tag="0"
+			        />
+		        <TextView style="@style/text_sort"
+		            android:layout_marginBottom="8dp"
+					android:text="@string/category_all"
+					android:layout_alignBottom="@id/priceAll"
+					/>
+	        </RelativeLayout>
+	        <RelativeLayout 
+	            style="@style/relatedlayout_sort"
+	            >
+		        <ImageButton 
+   		            style="@style/imagebutton_sort"
+		            android:id="@+id/priceFree"
+			        android:src="@drawable/btn_sort_free"
+			        android:contentDescription="@string/price_free"
+			        android:tag="1"
+			        />
+		        <TextView style="@style/text_sort"
+					android:text="@string/price_free"
+					android:layout_alignBottom="@id/priceFree"
+					/>
+	        </RelativeLayout>
+	        <RelativeLayout 
+	            style="@style/relatedlayout_sort"
+	            >
+		        <ImageButton 
+		            style="@style/imagebutton_sort"
+		            android:id="@+id/pricePaid"
+			        android:src="@drawable/btn_sort_paid"
+			        android:contentDescription="@string/price_paid"
+			        android:tag="2"
+			        />
+		        <TextView style="@style/text_sort"
+					android:text="@string/price_paid"
+					android:layout_alignBottom="@id/pricePaid"
+					/>
+	        </RelativeLayout>
+	        <!-- <RelativeLayout 
+	            style="@style/relatedlayout_sort"
+	            >
+		        <ImageButton 
+		            style="@style/imagebutton_sort"
+		            android:id="@+id/priceOthers"
+			        android:src="@drawable/btn_sort_others"
+			        android:contentDescription="@string/price_others"
+			        android:tag="3"
+			        />
+		        <TextView style="@style/text_sort"
+					android:text="@string/price_others"
+					android:layout_alignBottom="@id/priceOthers"
+					/>
+	        </RelativeLayout> -->
+	    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

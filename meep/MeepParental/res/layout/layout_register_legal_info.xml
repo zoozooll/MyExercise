@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fill_parent" >
+
+    <!-- action bar -->
+
+    <FrameLayout
+        android:id="@+id/actionBar"
+        style="@style/ActionBar" >
+
+        <LinearLayout
+            style="@style/wrap_content"
+            android:layout_gravity="left|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/barImageButtonBack"
+                style="@style/BarImageButton_Main"
+                android:contentDescription="@string/main_button_back"
+                android:src="@drawable/topbar_arrow_icon"
+                android:onClick="onClickBack" />
+
+            <View style="@style/BarDivider" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/RegisterTitle"
+            style="@style/BarTitle"
+            android:text="@string/common_term_of_service" />
+    </FrameLayout>
+
+    <FrameLayout
+        style="@style/fill_parent"
+        android:layout_below="@id/actionBar" >
+
+        <LinearLayout
+            android:id="@+id/layout_legal"
+            style="@style/LinearInScroll"
+            android:layout_marginBottom="150dp" >
+
+            <RelativeLayout
+                style="@style/fill_parent"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/register_field" >
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:fadingEdge="vertical"
+                     />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            style="@style/wrap_content_vertical"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp" >
+            <CheckBox
+                android:id="@+id/term_agree"
+                style="@style/wrap_content"
+                android:layout_marginLeft="150dp"
+                android:shadowColor="@color/text_white"
+                android:shadowDx="0"
+                android:shadowDy="0.5"
+                android:shadowRadius="1"
+                android:text="@string/registration_legal_agree"
+                android:textColor="@color/text_register"
+                android:textStyle="bold" 
+                android:textSize="22dp"
+                android:button="@drawable/custom_checkbox"
+                android:paddingLeft="60dp"
+                />
+            <!-- Next Button -->
+
+            <Button
+                android:id="@+id/btnAgree"
+                style="@style/CommonButton"
+                android:layout_below="@id/term_agree"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/common_button_next"
+                android:text="@string/registration_legal_agree_button"
+                android:onClick="onClickButton" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:messagebox="http://schemas.android.com/apk/res/com.oregonscientific.meep.notification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="50dp" >
+
+    <com.oregonscientific.meep.notification.view.NewsMessageBox
+        android:id="@+id/message_list_item_message_box"
+        android:layout_width="900dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingBottom="25dp"
+        android:paddingLeft="220dp"
+        android:paddingRight="50dp"
+        android:paddingTop="30dp"
+        messagebox:bottomBackground="@drawable/n_bg_g_bottom"
+        messagebox:collapseDrawable="@drawable/n_arrow_02_180"
+        messagebox:contentBackground="@drawable/n_bg_g_loop"
+        messagebox:expandDrawable="@drawable/n_arrow_02"
+        messagebox:topBackground="@drawable/n_bg_g_up" >
+
+        <ImageView
+            android:id="@+id/news_list_item_app_icon"
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp" />
+
+        <TextView
+            android:id="@+id/notification_time"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/green"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/message_list_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/notification_time"
+            android:paddingTop="20dp" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/message_list_item_button_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/message_list_item_content"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/message_list_item_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/message_list_item_content" />
+        </LinearLayout>
+    </com.oregonscientific.meep.notification.view.NewsMessageBox>
+
+    <ImageView
+        android:id="@+id/message_list_item_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/n_mark" />
+
+</RelativeLayout>

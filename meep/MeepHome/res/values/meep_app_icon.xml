@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="meep_app_icon">
+        <item >com.android.gallery3d|icon_picture</item>
+        <item >com.oregonscientific.meep.browser|icon_browser</item>
+        <item >com.oregonscientific.meep.communicator|icon_communicator</item>
+        <item >com.oregonscientific.meep.ebook|icon_ebook</item>
+        <item >com.oregonscientific.meep.movie|icon_video</item>
+        <item >com.oregonscientific.meep.game|icon_games</item>
+        <item >com.oregonscientific.meep.app|icon_games</item>
+        <item >com.oregonscientific.meep.meepmusic|icon_music</item>
+        <item >com.oregonscientific.meep.news|icon_news</item>
+        <item >com.oregonscientific.meep.notification|icon_notification</item>
+        <item >com.oregonscientific.meep.photo|icon_picture</item>
+        <item >com.oregonscientific.meep.together|icon_parental_setting</item>
+        <item >com.oregonscientific.meep.safty|icon_safety</item>
+        <item >com.oregonscientific.meep.youtube|icon_youtube</item>
+        <item >com.oregonscientific.meep.store|icon_store</item>
+        <item >com.android.settings|icon_setting</item>
+    </string-array>
+</resources>

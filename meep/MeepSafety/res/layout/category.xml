@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/safty_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="250dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/btnSafty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/safty_btn" />
+
+        <com.oregonscientific.meep.safty.MyTextView
+            android:id="@+id/menu_title_safty"
+            style="@style/right_menu_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/menu_safety"
+            android:textSize="33sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="600dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/btnHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/help_btn" />
+
+        <com.oregonscientific.meep.safty.MyTextView
+            android:id="@+id/menu_title_help"
+            style="@style/right_menu_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/menu_help"
+            android:textSize="33sp" />
+    </LinearLayout>
+
+</RelativeLayout>

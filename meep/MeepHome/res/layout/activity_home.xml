@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home_layout"
+    tools:context=".HomeActivity" >
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="80dp" 
+	    android:background="@drawable/ground"
+	    android:alpha="0.6"
+	    android:layout_alignParentBottom="true" />
+    <com.oregonscientific.meep.home.view.HomeMenu
+        android:id="@+id/homeMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="20dp"
+        android:clipChildren="false"
+        android:clipToPadding="false" >
+    </com.oregonscientific.meep.home.view.HomeMenu>
+	
+</RelativeLayout>

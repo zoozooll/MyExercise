@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <VideoView
+        android:id="@+id/videoView1"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="top|center"/>
+
+    <TextView
+        android:id="@+id/textViewTitleName"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+      
+        android:background="@drawable/player_title"
+        android:gravity="center"
+        android:text="@string/meep_video"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

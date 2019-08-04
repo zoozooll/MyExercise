@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="7%p"
+    android:keyHeight="10%p">
+	<Row android:rowEdgeFlags="top">
+<!--         <Key android:keyLabel=":-)" android:keyOutputText=":-)\u0020" android:keyEdgeFlags="left" /> 
+        <Key android:keyLabel=":-D" android:keyOutputText=":-D\u0020"/>
+        <Key android:keyLabel=";-)" android:keyOutputText=";-)\u0020"/>
+        <Key android:keyLabel=":-P" android:keyOutputText=":-P\u0020"/>
+        <Key android:keyLabel=":-*" android:keyOutputText=":-*\u0020"/>
+        <Key android:keyLabel="B-)" android:keyOutputText="B-)\u0020" android:keyEdgeFlags="right" /> -->
+		<Key android:codes="801" android:keyIcon="@drawable/emoticon1" android:keyEdgeFlags="left" />
+		<Key android:codes="802" android:keyIcon="@drawable/emoticon2"/>
+        <Key android:codes="803" android:keyIcon="@drawable/emoticon3"/>
+        <Key android:codes="804" android:keyIcon="@drawable/emoticon4"/>
+        <Key android:codes="805" android:keyIcon="@drawable/emoticon5"/>
+        <Key android:codes="806" android:keyIcon="@drawable/emoticon6" android:keyEdgeFlags="right" />
+    </Row>
+    <Row>
+    	<Key android:codes="807" android:keyIcon="@drawable/emoticon7" android:keyEdgeFlags="left" />
+		<Key android:codes="808" android:keyIcon="@drawable/emoticon8"/>
+        <Key android:codes="809" android:keyIcon="@drawable/emoticon9"/>
+        <Key android:codes="810" android:keyIcon="@drawable/emoticon10"/>
+        <Key android:codes="811" android:keyIcon="@drawable/emoticon11"/>
+        <Key android:codes="812" android:keyIcon="@drawable/emoticon12" android:keyEdgeFlags="right" />
+    </Row>
+    <Row>
+    	<Key android:codes="813" android:keyIcon="@drawable/emoticon13" android:keyEdgeFlags="left" />
+		<Key android:codes="814" android:keyIcon="@drawable/emoticon14"/>
+        <Key android:codes="815" android:keyIcon="@drawable/emoticon15"/>
+        <Key android:codes="816" android:keyIcon="@drawable/emoticon16"/>
+        <Key android:codes="817" android:keyIcon="@drawable/emoticon17"/>
+        <Key android:codes="818" android:keyIcon="@drawable/emoticon18" android:keyEdgeFlags="right" />
+    </Row>
+    <Row>
+    	<Key android:codes="819" android:keyIcon="@drawable/emoticon19" android:keyEdgeFlags="left" />
+		<Key android:codes="820" android:keyIcon="@drawable/emoticon20"/>
+        <Key android:codes="821" android:keyIcon="@drawable/emoticon21"/>
+        <Key android:codes="822" android:keyIcon="@drawable/emoticon22"/>
+        <Key android:codes="823" android:keyIcon="@drawable/emoticon23"/>
+        <Key android:codes="824" android:keyIcon="@drawable/emoticon24" android:keyEdgeFlags="right" />
+    </Row>
+    <Row>
+    	<Key android:codes="825" android:keyIcon="@drawable/emoticon25" android:keyEdgeFlags="left" />
+		<Key android:codes="826" android:keyIcon="@drawable/emoticon26"/>
+        <Key android:codes="827" android:keyIcon="@drawable/emoticon27"/>
+        <Key android:codes="828" android:keyIcon="@drawable/emoticon28"/>
+        <Key android:codes="829" android:keyIcon="@drawable/emoticon29"/>
+        <Key android:codes="830" android:keyIcon="@drawable/emoticon30" android:keyEdgeFlags="right" />
+    </Row>
+<!--     <Row>
+        <Key android:keyLabel=":-X" android:keyOutputText=":-X\u0020" android:keyEdgeFlags="left" />
+        <Key android:keyLabel=":-I" android:keyOutputText=":-I\u0020"/>
+        <Key android:keyLabel="8-." android:keyOutputText="8-.\u0020"/>
+        <Key android:keyLabel="8-o" android:keyOutputText="8-o\u0020"/>
+		<Key android:keyLabel="\\m/" android:keyOutputText="\\m/\u0020" />
+        <Key android:keyLabel="O_Q" android:keyOutputText="O_Q\u0020" android:keyEdgeFlags="right" />
+    </Row>
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:keyLabel=":-(" android:keyOutputText=":-(\u0020" android:keyEdgeFlags="left" />
+        <Key android:keyLabel=":_(" android:keyOutputText=":_(\u0020"/>
+        <Key android:keyLabel="8-[" android:keyOutputText="8-[\u0020"/>
+        <Key android:keyLabel="xx-P" android:keyOutputText="xx-P\u0020"/>
+        <Key android:keyLabel="|-." android:keyOutputText="|-.\u0020"/>
+        <Key android:keyLabel="}-]" android:keyOutputText="}-]\u0020" android:keyEdgeFlags="right" />
+    </Row> -->
+</Keyboard>

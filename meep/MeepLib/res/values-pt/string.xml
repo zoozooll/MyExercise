@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="app_name">MEEP</string>
+    <string name="notice">Oops</string>
+    <string name="ok">OK</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="delete">Excluir</string>
+    <string name="delete_sure">Você tem certeza de que deseja excluir esse arquivo?</string>
+    <string name="msg_null">Por favor, digite um nome!</string>
+    <string name="msg_error">A palavra que você digitou está bloqueada pela lista de Palavras Censuradas</string>
+    <string name="msg_blocked">Este nome já foi utilizado. Por favor, tente outro nome.</string>
+    <string name="msg_rename_same">O nome escolhido já foi utilizado. Por favor, tente outro nome.</string>
+    <string name="msg_system_file">O CD padrão não pode ser renomeado</string>
+    <string name="msg_system_file_movie">O vídeo padrão não pode ser renomeado</string>
+    <string name="msg_system_file_ebook">O e-book padrão não pode ser renomeado</string>
+    <string name="music_title_rename_error">Erro de renomeação</string>
+    <string name="proceed">Prosseguir</string>
+
+</resources>

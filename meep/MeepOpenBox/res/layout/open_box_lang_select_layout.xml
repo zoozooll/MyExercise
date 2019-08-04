@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:meep="http://schemas.android.com/apk/res/com.oregonscientific.meep.meepopenbox"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/openbox_bg_01"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.oregonscientific.meep.widget.OutlinedTextView
+            android:id="@+id/title_number"
+            style="@style/big_title_number_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-70dp"
+            android:gravity="top"
+            meep:text="@string/title_bar_number_one"
+            meep:textSize="180" />
+
+        <ImageView
+            android:id="@+id/title_icon"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/title_number"
+            android:background="@drawable/openbox_icon_language" />
+
+        <com.oregonscientific.meep.widget.OutlinedTextView
+            android:id="@+id/title"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/title_icon"
+            meep:outlineColor="@color/number_stroke"
+            meep:outlineWidth="8"
+            meep:scaleX="0.8"
+            meep:text="@string/language_selection"
+            meep:textSize="64" />
+
+        <com.oregonscientific.meep.meepopenbox.view.TopNumberView
+            android:id="@+id/arrow02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-5dp"
+            android:layout_toLeftOf="@+id/arrow03"
+            meep:number="@string/title_bar_number_two" >
+        </com.oregonscientific.meep.meepopenbox.view.TopNumberView>
+
+        <com.oregonscientific.meep.meepopenbox.view.TopNumberView
+            android:id="@+id/arrow03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-5dp"
+            android:layout_toLeftOf="@+id/arrow04"
+            meep:number="@string/title_bar_number_three" >
+        </com.oregonscientific.meep.meepopenbox.view.TopNumberView>
+
+        <com.oregonscientific.meep.meepopenbox.view.TopNumberView
+            android:id="@+id/arrow04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            meep:number="@string/title_bar_number_four" >
+        </com.oregonscientific.meep.meepopenbox.view.TopNumberView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="550dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/openbox_popup01" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp" >
+
+            <ListView
+                android:id="@+id/langSelectListView"
+                android:layout_width="450dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:choiceMode="singleChoice"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:fadeScrollbars="false"
+                android:paddingBottom="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="30dp"
+                android:overScrollMode="never"                
+                android:scrollbarStyle="outsideInset"
+                android:scrollbarThumbVertical="@drawable/openbox_scroll_note"
+                android:scrollbarTrackVertical="@color/background_half_trans" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="45dp" >
+
+        <Button
+            android:id="@+id/langSelectNextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/openbox_nextbtn_normal" />
+
+        <com.oregonscientific.meep.widget.StrokedTextView
+            android:id="@+id/langSelectNextText"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:text="@string/next_btn_text"
+            android:textSize="30sp"
+            meep:textStrokeColor="@color/number_stroke"
+            meep:textStrokeWidth="4" />
+    </LinearLayout>
+
+</RelativeLayout>

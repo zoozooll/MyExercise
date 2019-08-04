@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="hello">Olá Mundo!</string>
+    <string name="app_name">e-Books</string>
+    <string name="ebook_btn_ring_delete">Excluir</string>
+    <string name="ebook_btn_ring_rename">Renomear</string>
+    <string name="ebook_title_heads_up">Preste atenção!</string>
+    <string name="ebook_msg_unprotected_web">Você está prestes a ser direcionado para um website desprotegido.</string>
+    <string name="ebook_msg_protected_web">Você está prestes a ser direcionado para um website de terceiro protegido.</string>
+    <string name="ebook_btn_proceed">Prossiga</string>
+    <string name="ebook_btn_ebook_bookmark">Favoritos</string>
+    <string name="ebook_title_uh_oh">Oops!</string>
+    <string name="ebook_msg_xxx_5mins">Você tem somente mais 5 minutos para usar o Leitor de e-books.</string>
+    <string name="ebook_title_times_up">Tempo esgotado!</string>
+    <string name="ebook_msg_try_again_xxx">Desculpe, você não pode usar o Leitor de e-books agora. Tente de novo em %1$d minutos!</string>
+    <string name="ebook_btn_ok">OK</string>
+    <string name="ebook_msg_short_timer_reminder_xxx">Lembrete de Tempo - Leitor de e-books</string>
+    <string name="ebook_msg_short_timeup_xxx">Tempo esgotado! - Leitor de e-books</string>
+    <string name="ebook_title_update">Atualizar</string>
+    <string name="ebook_msg_update_xxx_timer_changed">O tempo de uso do Leitor de e-books foi alterado para %1$d</string>
+    <string name="ebook_msg_update_xxx">Atualizar - Leitor de e-books</string>
+    <string name="ebook_title_blocked">O texto contém caracteres inválidos. Por favor, tente algo diferente.</string>
+    <string name="ebook_msg_sorry_unprotected_web">Desculpe, você não tem permissão para ser redirecionado para um website desprotegido.</string>
+    <string name="ebook_btn_approval">Pedir aprovação</string>
+    <string name="ebook_msg_approval_sent">Pedido de aprovação enviado!</string>
+    <string name="ebook_msg_short_blocked_xxx">Bloqueado - Leitor de e-books</string>
+    <string name="ebook_msg_sorry_protected_web">Desculpe, você não tem permissão para ser redirecionado para um website protegido.</string>
+    <string name="ebook_title_sudden_change">Repentina mudança de acesso</string>
+    <string name="ebook_msg_sudden_parental_change">Desculpe, você não pode usar este aplicativo no momento porque a configuração de acesso no Portal Parental foi modificada.</string>
+    <string name="ebook_btn_ask_access">Pedir acesso</string>
+    <string name="ebook_msg_access_request_sent">Pedido de acesso enviado!</string>
+    <string name="ebook_title_version_update">Atualização da versão</string>
+    <string name="ebook_msg_available_upgrade">Há uma atualização disponível deste aplicativo, você quer atualizá-lo?</string>
+    <string name="ebook_btn_yes">Sim</string>
+    <string name="ebook_btn_no">Não</string>
+    <string name="ebook_msg_xxx_available_update">Atualizar - %1$s %2$s - Atualização da versão disponível</string>
+    <string name="ebook_title_rename_error">Erro de renomeação</string>
+    <string name="ebook_msg_name_invalid">O nome do arquivo não pode começar com \".\", por favor, modifique o nome do arquivo.</string>
+    <string name="ebook_msg_blocked">O texto contém caracteres inválidos. Por favor, tente algo diferente.</string>
+    <string name="ebook_msg_page_XX">Página</string>
+    <string name="ebook_msg_cannot_play_the_video">Oops! Não podemos reproduzir o vídeo...</string>
+    <string name="ebook_msg_cannot_play_the_audio">Oops! Não podemos tocar o áudio...</string>
+    <string name="ebook_msg_end_of_the_book">Este é o fim do livro!</string>
+    <string name="ebook_msg_unsopported_ebook">Desculpe, não é possível ler este e-book...</string>
+    <string name="ebook_msg_cannot_open_ebook">Desculpe, não é possível abrir este e-book...</string>
+    <string name="ebook_msg_bookmark_added">Favorito adicionado</string>
+    <string name="ebook_msg_bookmark_deleted">Favorito excluído</string>
+    <string name="ebook_msg_bookmark">Favorito</string>
+    <string name="ebook_msg_first_page">Primeira página</string>
+    <string name="ebook_msg_end">Fim</string>
+    <string name="ebook_badword_msg">Fim</string>
+    <string name="ebook_update_title">Nota importante</string>
+    <string name="ebook_update_message">Há um e-book novinho para você! Os e-books que você baixou devem ser reinstalados através da MEEP! Store, gratuitamente.</string>
+
+</resources>

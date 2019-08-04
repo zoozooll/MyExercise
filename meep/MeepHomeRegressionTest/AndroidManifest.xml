@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.oregonscientific.meep.meephomeregresssiontest">
+
+    <uses-sdk android:minSdkVersion="15"/>
+	<uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <instrumentation android:name="com.oregonscientific.meep.junit.test.BaseTestRunner" android:targetPackage="com.oregonscientific.meep.home"/>
+
+    <application android:icon="@drawable/ic_launcher" android:label="@string/app_name">
+        <uses-library android:name="android.test.runner"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+
+	<string name="browser_ui_meep_logo">MEEP!</string>
+	<string name="browser_info_search">Buscar</string>
+	<string name="browser_ui_recommend">Recomendado</string>
+	<string name="browser_btn_more">Más (&#8230;)</string>
+	<string name="browser_info_no_result">Sin resultados</string>
+	<string name="browser_title_oops">¡Uy!</string>
+	<string name="browser_msg_web_blocked">¡Esta página web ha sido bloqueada! No puedes usar esta palabra en el buscador Web. ¡Por favor intenta usar otra!</string>
+	<string name="browser_btn_ok">OK</string>
+	<string name="browser_btn_send_request">Enviar solicitud</string>
+	<string name="browser_info_I">|</string>
+	<string name="browser_title_search_result">Buscar resultados</string>
+	<string name="browser_info_no_results">No se encontraron resultados/resultados bloquedados</string>
+	<string name="browser_btn_add">Añadir</string>
+	<string name="browser_btn_rename">Renombrar</string>
+	<string name="browser_btn_delete">Eliminar</string>
+	<string name="browser_title_uh_oh">¡Oh oh!</string>
+	<string name="browser_msg_xxx_5mins">Solo te quedan 5 minutos para utilizar Web Browser.</string>
+	<string name="browser_title_times_up">¡Se acabó el tiempo!</string>
+	<string name="browser_msg_try_again_xxx">Lo siento, no puedes usar Web Browser ahora. ¡Inténtalo de nuevo en %1$d min!</string>
+	<string name="browser_msg_short_timer_reminder_xxx">Recordatorio de temporizador - Web Browser</string>
+	<string name="browser_msg_short_timeup_xxx">¡Se acabó el tiempo! - Web Browser</string>
+	<string name="browser_title_update">Actualizar</string>
+	<string name="browser_msg_update_xxx_timer_changed">El temporizador de Web Browser ha cambiado a %1$d</string>
+	<string name="browser_msg_update_xxx">Actualizar - Web Browser</string>
+	<string name="browser_msg_permission_use_xxx">¡Sí! Ahora puedes utilizar Web Browser libremente.</string>
+	<string name="browser_msg_permission_approval_xxx">Lo siento, necesitas esperar a la aprobación de tus padres antes de utilizar Web Browser.</string>
+	<string name="browser_btn_approval">Solicitar aprobación</string>
+	<string name="browser_msg_approval_sent">¡Solicitud de aprobación enviada!</string>
+	<string name="browser_msg_permission_xxx_notgiven">Lo siento, no puedes utilizar Web Browser ahora, ya que no se ha dado la aprobación.</string>
+	<string name="browser_msg_meep_recommend_updated">Tu lista de recomendaciones de MEEP! se ha actualizado.</string>
+	<string name="browser_msg_parent_recommend_updated">Tu lista de recomendaciones de los padres se ha actualizado.</string>
+	<string name="browser_title_blocked">Bloqueado</string>
+
+	<string name="browser_msg_short_blocked_xxx">Bloqueado - Web Browser</string>
+	<string name="browser_msg_unprotected_web">Lo siento, no te está permitido redirigirte a un sitio web desprotegido.</string>
+	<string name="browser_msg_protected_web">Lo siento, no te está permitido redirigirte a un sitio web protegido.</string>
+	<string name="browser_title_approved">¡Aprobado!</string>
+	<string name="browser_msg_xxx_approved">Tu solicitud para utilizar Web Browser ha sido aprobada.</string>
+	<string name="browser_btn_go">¡Ir!</string>
+	<string name="browser_msg_short_approved_xxx">Aprobado - Web Browser</string>
+	<string name="browser_msg_approved_search_function">¡Sí! Ahora puedes utilizar la función de Búsqueda en Web Browser.</string>
+	<string name="browser_title_refused">¡Rechazado!</string>
+	<string name="browser_msg_xxx_refused">Lo siento, tu solicitud para utilizar Web Browser ha sido rechazada.</string>
+	<string name="browser_msg_short_refused_xxx">Rechazado - Web Browser</string>
+	<string name="browser_msg_refused_search_function">Lo siento, tu solicitud para utilizar la función de Búsqueda en Web Browser ha sido rechazada.</string>
+	<string name="browser_title_sudden_change">Cambio de acceso repentino</string>
+	<string name="browser_msg_sudden_parental_change">Lo siento, no puede utilizar esta aplicación en este momento, ya que el acceso en el Portal Matriz ha cambiado.</string>
+	<string name="browser_btn_ask_access">Solicitar acceso</string>
+	<string name="browser_msg_access_request_sent">¡Solicitud de acceso enviada!</string>
+	<string name="browser_title_version_update">Actualización de versión</string>
+	<string name="browser_msg_available_upgrade">Hay una actualización disponible para esta aplicación, ¿quiere actualizarla?</string>
+	<string name="browser_btn_yes">Sí</string>
+	<string name="browser_btn_no">No</string>
+	<string name="browser_msg_xxx_available_update">Actualizar - %1$s %2$s  - Actualización de versión disponible</string>
+    <string name="browser_msg_no_network">No hay conexión a internet. ¡Asegúrate de que tu MEEP! está conectado al Wi-Fi!</string>
+    <string name="browser_msg_delete_bookmark">Eliminar marcador?</string>
+    <string name="browser_msg_bookmark_deleted">Marcador eliminado.</string>
+    <string name="browser_msg_duplicated_bkmk">Marcador duplicado.</string>
+    <string name="browser_msg_cannot_download">No se pudo descargar el archivo.</string>    
+    <string name="browser_ui_bookmarkurl">URL:</string>
+    <string name="browser_ui_bookmarkname">Nombre:</string>
+    <string name="browser_btn_save">Guardar</string>
+    <string name="browser_loading">Cargando</string>
+
+    
+</resources>

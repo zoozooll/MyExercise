@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MEEP Home</string>
+    <string name="action_settings">Configuración</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- used at menu_icon.xml -->
+    <string name="menu_icon_image_content_desription">Meep Icon Image</string>
+
+    <!-- used at menu item -->
+    <string name="menu_item_title_news">Noticias</string>
+    <string name="menu_item_title_notifications">Notificaciones</string>
+    <string name="menu_item_title_browser">Navegador web</string>
+    <string name="menu_item_title_communicator">Comunicador</string>
+    <string name="menu_item_title_store">MEEP! Store</string>
+    <string name="menu_item_title_youtube">YouTube</string>
+    <string name="menu_item_title_parental_portal">Control parental</string>
+    <string name="menu_item_title_music">Música</string>
+    <string name="menu_item_title_game">Juegos &amp; Apps</string>
+    <string name="menu_item_title_picture">Imágenes</string>
+    <string name="menu_item_title_ebook">E-Books</string>
+    <string name="menu_item_title_movie">Vídeos</string>
+    <string name="menu_item_title_help">Seguridad/Ayuda</string>
+    <string name="menu_item_title_camera">Cámara</string>
+    <string name="menu_item_title_setting">Configuración</string>
+    <string name="menu_item_title_community">Comunidad</string>
+    <string name="menu_item_title_rush">Meep! Rush</string>
+    <string name="menu_item_title_academy">Academia</string>
+
+    <!-- used at menu item header -->
+    <string name="menu_item_header_edit">Editar </string>
+    <string name="menu_item_header_recently_used">Usados ​​recientemente</string>
+    <string name="menu_item_profile_default_name">Invitado</string>
+
+    <!-- the package name to used for launch other app -->
+    <string name="package_meep_photo">com.android.gallery3d</string>
+    <string name="package_meep_music">com.oregonscientific.meep.meepmusic</string>
+    <string name="package_meep_ebook">com.oregonscientific.meep.ebook</string>
+    <string name="package_meep_game">com.oregonscientific.meep.app</string>
+    <string name="package_meep_movie">com.oregonscientific.meep.movie</string>
+    <string name="package_meep_browser">com.oregonscientific.meep.browser</string>
+    <string name="package_meep_youtube">com.oregonscientific.meep.youtube</string>
+    <string name="package_meep_portal">com.oregonscientific.meep.together</string>
+    <string name="package_meep_store">com.oregonscientific.meep.store2</string>
+    <string name="package_meep_safty">com.oregonscientific.meep.safty</string>
+    <string name="package_meep_camera">com.android.gallery3d</string>
+    <string name="package_meep_profile">com.oregonscientific.meep.profile</string>
+    <string name="package_meep_communicator">com.oregonscientific.meep.communicator</string>
+    <string name="meep_app_package_prefix">com.oregonscientific.meep</string>
+    <string name="package_meep_notification">com.oregonscientific.meep.notification</string>
+    <string name="package_meep_settings">com.android.settings</string>
+    <string name="activity_notification">com.oregonscientific.meep.notification.NotificationActivity</string>
+    <string name="activity_news">com.oregonscientific.meep.notification.NewsActivity</string>
+    <string name="activity_action_image_capture">android.media.action.STILL_IMAGE_CAMERA</string>
+	
+    <!-- used for profile setting -->
+    <string name="profile_change_wallpaper">Cambiar el fondo de pantalla</string>
+    <string name="profile_setting_option_title2">Imagen de perfil</string>
+    <string name="profile_setting_option_title">Fondo de pantalla</string>
+    <string name="profile_serial_number">S/N: </string>
+    <string name="profile_version">ver: </string>
+    
+    <!-- used for tutorial -->
+    <string name="tutorial_back">Anterior</string>
+    <string name="tutorial_next">Siguiente</string>
+    
+    <string name="profile_setting_meep_id">MEEP! ID :\u0020</string>
+    <string name="profile_setting_serial_number">Número de serie :\u0020</string>
+    <string name="profile_setting_software_version">Versión de software :\u0020</string>
+    
+    <!-- title -->
+    <string name="title_warning">Advertencia</string>
+    
+    <!-- alert messages -->
+    <string name="alert_network_no_connection">No hay conexión a Internet. ¡Asegúrate de que tu MEEP! está conectado a la red Wi-Fi</string>
+    <string name="alert_volume_too_high">Tu capacidad auditiva puede verse afectada por la escucha prolongada de tu MEEP!X2 a un volumen alto. ¿Aún deseas ajustar el volumen?</string>
+    <string name="alert_volume_too_low">Volumen demasiado bajo</string>
+    <string name="alert_profile_cannot_edit">El perfil no se puede modificar porque tu MEEP! no está registrado. Por favor, regístrate primero y vuelve a intentarlo.</string>
+    <string name="alert_profile_update_failed">Tu foto de perfil no se pudo actualizar. Por favor, vuelve a intentarlo.</string>
+    <string name="alert_profile_no_network">Debes estar conectado a Internet para poder cambiar la foto de tu perfil.</string>
+    <string name="alert_profile_picture_updated">Tu foto de perfil está actualizada.</string>
+    <string name="alert_profile_wallpaper_updated">El fondo de pantalla está actualizado.</string>
+    
+    <string name="alert_button_proceed">Proceder</string>
+    
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>		
+<resources>		
+		
+		
+    	<string name="meep_picture">изображение</string>	
+    	<string name="picture_btn_ring_rename">Переименовать</string>	
+		<string name="picture_btn_ring_delete">Удалить</string>
+    		
+    		
+    	<!--  MEEP! Вместе (Родительский Портал)- Таймер -->	
+    	<string name="picture_title_uh_oh">Ну и ну!</string>	
+		
+    	<string name="picture_title_times_up">Время вышло!</string>	
+    	<string name="picture_msg_try_again_xxx">Извини, ты не можешь использовать просмотр изображений прямо сейчас. Попробуй снова через %1$d минут!</string>	
+    	<string name="picture_btn_ok">OK</string>	
+    		
+    	<string name="picture_msg_short_timer_reminder_xxx">Таймер напоминаний - просмотр изображений</string>	
+    	<string name="picture_msg_short_timeup_xxx">Время вышло! - просмотр изображений</string>	
+    		
+    	<!--  MEEP! Вместе (Родительский Портал)- Обновление -->	
+    	<string name="picture_title_update">Обновление</string>	
+    	<string name="picture_msg_update_xxx_timer_changed">Таймер просмотра изображений был переустановлен на  %1$d</string>	
+    	<string name="picture_msg_update_xxx">Обновление - просмотр изображений</string>	
+    		
+    	<!--  MEEP! Вместе (Родительский Портал)- Неожиданное изменение доступа -->	
+    	<string name="picture_title_sudden_change">Неожиданное изменение доступа</string>	
+    	<string name="picture_msg_sudden_parental_change">Извини, ты не можешь использовать это приложение сейчас, так как настройки доступа на Родительском Портале были изменены.</string>	
+    	<string name="picture_btn_ask_access">Запросить доступ</string>	
+    	<string name="picture_msg_access_request_sent">Запрос доступа отправлен!</string>	
+    		
+    	<!--  MEEP! Вместе (Родительский Портал)- Обновление - Обновление версии содержания - Новое -->	
+    	<string name="picture_title_version_update">Обновление версии</string>	
+    	<string name="picture_msg_available_upgrade">Доступно обновление для этого приложения, хочешь обновить?</string>	
+    	<string name="picture_btn_yes">Да</string>	
+    	<string name="picture_btn_no">Нет</string>	
+    	<string name="picture_msg_xxx_available_update">Обновление - %1$s %2$s -Доступна версия обновления</string>	
+    		
+		
+	<string name="picture_title_rename_error">Ошибка переименования</string>	
+	<string name="picture_msg_rename_error">Здесь уже есть файл с названием %1$S Пожалуйста, проверь ео перед переименованием файла.</string>	
+	<string name="picture_msg_name_invalid">Имя файла не может начинаться с \".\", пожалуйста, измени название файла</string>	
+	<string name="picture_msg_blocked">Заблокировано</string>	
+		
+</resources>		

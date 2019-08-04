@@ -1,0 +1,27 @@
+<resources>
+	
+	
+	<!--This document is in English, please translate it into German  -->
+
+
+
+    <string name="app_name">MEEP</string>
+	<string name="construct_bad_word_list">Liste der schlechten Wörter erstellen...</string>
+	
+	<!--  titles -->
+    <string name="title_notice">Bemerkung</string>
+    <string name="title_timeout">Die Zeit ist um</string>
+    <string name="title_oops">Hoppla!</string>
+    <string name="title_success">Erfolg! </string>
+    
+    <!-- alert messages -->
+    <string name="alert_launch_register">Bitte registriere dein MEEP! X2, bevor du %1$s nutzen kannst! Du kannst deine Eltern fragen,dein MEEP! X2 in der Elternkontrolle zu registrieren und die Einstellungen für %2$s zu ändern.</string>
+    <string name="alert_launch_online">Du musst online sein, damit du %1$s nutzen kannst. Willst du jetzt eine Verbindung herstellen?</string>
+    <string name="alert_permission_denied">Diese Aktion ist von deinen Eltern blockiert werden. Du kannst deine Eltern fragen, die Einstellungen in der Elternkontrolle zu ändern.</string>
+    <string name="alert_permission_timeout">Du kannst deine Eltern fragen, die Einstellungen in der Elternkontrolle zu ändern, wenn du mehr Spielzeit haben willst!</string>
+    
+    <!-- buttons -->
+    <string name="alert_button_ok">OK</string>
+    <string name="alert_button_cancel">Entfernen</string>
+
+</resources>

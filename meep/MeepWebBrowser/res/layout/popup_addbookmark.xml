@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true" 
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_vertical"
+        android:descendantFocusability="beforeDescendants"
+  		android:focusableInTouchMode="true" 
+        >
+
+        <ImageView
+            android:id="@+id/dialogbg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/b_bg_notice" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/dialogbg"
+            android:layout_alignLeft="@id/dialogbg"
+            android:layout_alignRight="@id/dialogbg"
+            android:layout_alignTop="@id/dialogbg" >
+
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/b_btn_close" 
+                android:padding="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                >
+
+                <com.oregonscientific.meep.customfont.AutoResizeMyTextView
+                    android:id="@+id/title"
+                    style="@style/popup_textview"
+                    android:layout_width="280dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/add_bookmark" 
+                    />
+
+                <com.oregonscientific.meep.customfont.MyTextView
+                    android:id="@+id/bookmarkUrl"
+                    style="@style/popup_textview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:textSize="30sp"
+                    android:textStyle="normal"
+                    android:singleLine="true"
+                    />
+
+                <com.oregonscientific.meep.customfont.MyEditText
+                    android:id="@+id/bookmarkName"
+                    style="@style/customfont_edittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/b_box01"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_name"
+                    android:paddingLeft="20dp"
+                    android:textColor="@android:color/black" 
+                    android:singleLine="true"
+                    />
+            </LinearLayout>
+
+            <com.oregonscientific.meep.customfont.MyButton
+                android:id="@+id/btnOk"
+                style="@style/popup_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/b_btn_pop_ok"
+                android:text="@string/ok" 
+                android:onClick="onClick"
+                />
+        </FrameLayout>
+    </RelativeLayout>
+
+</ScrollView>

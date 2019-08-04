@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	 <declare-styleable name="MyGridView">  
+         <attr name="line_background" format="integer"/>  
+	 </declare-styleable>  
+	     
+    <declare-styleable name="TextViewPlus">
+        <attr name="customFont" format="string"/>
+
+		<attr name="strokeWidth" format="float" />
+		<attr name="strokeMiter" format="float" />
+		<attr name="strokeColor" format="color" />
+		<attr name="strokeJoinStyle">
+		    <enum name="miter" value="0" />
+		    <enum name="bevel" value="1" />
+		    <enum name="round" value="2" />
+		</attr>
+    </declare-styleable>    
+</resources>

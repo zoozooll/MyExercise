@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/startUsingLayout"
+    style="@style/ParentLayoutStyle">
+  <!--   <FrameLayout style="@style/wrap_content"
+        android:layout_marginTop="75dp"
+        android:layout_centerHorizontal="true">
+        <ImageView
+        android:layout_width="wrap_content"
+		android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:id="@+id/meepLogo"
+        android:contentDescription="@string/app_name"
+        />
+    </FrameLayout> -->
+    <ViewFlipper android:id="@+id/flipper"
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomLayout"
+        android:layout_marginTop="75dp"
+        >
+   	    <include layout="@layout/layout_start_using_step1"
+   	        android:id="@+id/LayoutCreate"/>
+   	    <include layout="@layout/layout_start_using_step2"
+   	        android:id="@+id/LayoutFinish"/>
+   	</ViewFlipper>
+	<!-- action bar -->
+	<FrameLayout
+	    android:id="@+id/actionBar"
+	    style="@style/ActionBar">
+	    <LinearLayout 
+		    android:layout_gravity="left|center_vertical"
+	        style="@style/wrap_content">
+	    	<ImageButton
+			    android:id="@+id/barImageButtonBack"
+			    android:contentDescription="@string/main_button_back"
+			    android:src="@drawable/topbar_arrow_icon" 
+			    style="@style/BarImageButton_Main"/>
+	    	<View  
+	    	    style="@style/BarDivider"/>
+	    </LinearLayout>
+	    <TextView
+		    android:id="@+id/StratTitle"
+		    android:text="@string/login_start_using"
+		    style="@style/BarTitle" />
+	</FrameLayout>
+	<!-- bar shadow -->
+	<!-- <View android:layout_below="@id/actionBar"
+ 		 style="@style/BarShadow"/> -->
+	<!-- next button -->
+	<FrameLayout 
+	    android:id="@+id/bottomLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="100dp"
+	    android:layout_alignParentBottom="true">
+	   	<!--  Next Button -->
+	    <Button
+	        android:id="@+id/btnNext"
+	        android:text="@string/common_button_next"
+	        android:contentDescription="@string/common_button_next" 
+        	style="@style/CommonButton"/>
+	    <ImageView 
+	        style="@style/ButtonNextArrow"
+			android:src="@drawable/arrow_white"
+			android:contentDescription="@string/app_name"
+	        />
+    </FrameLayout>
+    
+   	
+   	
+   	<!-- <FrameLayout style="@style/fill_parent"
+	    android:id="@+id/load"
+	    android:visibility="gone">
+		<include layout="@layout/loading"/>
+	</FrameLayout> -->
+</RelativeLayout>

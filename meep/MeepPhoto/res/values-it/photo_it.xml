@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+
+	<string name="meep_picture">foto</string>
+	<string name="picture_btn_ring_rename">Rinomina</string>
+	<string name="picture_btn_ring_delete">Elimina</string>
+    	
+    	
+    	<!--  MEEP! Together (Parent Portal)- Timer -->
+	<string name="picture_title_uh_oh">Uh-oh!</string>
+
+	<string name="picture_title_times_up">Tempo scaduto!</string>
+	<string name="picture_msg_try_again_xxx">Spiacenti, non puoi usare il Visualizzatore d\'immagini ora. Riprova tra %1$d min!</string>
+	<string name="picture_btn_ok">OK</string>
+    	
+	<string name="picture_msg_short_timer_reminder_xxx">Promemoria timer - Visualizzatore d\'immagini</string>
+	<string name="picture_msg_short_timeup_xxx">Tempo scaduto! - Visualizzatore d\'immagini</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update -->
+	<string name="picture_title_update">Aggiorna</string>
+	<string name="picture_msg_update_xxx_timer_changed">Il timer del Visualizzatore d\'immagini è stato modificato %1$d</string>
+	<string name="picture_msg_update_xxx">Aggiornamento - Visualizzatore d\'immagini</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Sudden Access Change -->
+	<string name="picture_title_sudden_change">Modifica accesso immediato</string>
+	<string name="picture_msg_sudden_parental_change">Spiacenti, non puoi usare questa applicazione al momento poiché l\'impostazione d\'accesso nel Portale genitori è stata modificata.</string>
+	<string name="picture_btn_ask_access">Richiedi accesso</string>
+	<string name="picture_msg_access_request_sent">Richiesta d\'accesso inviata!</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update - Content Version update - New -->
+	<string name="picture_title_version_update">Aggiornamento versione</string>
+	<string name="picture_msg_available_upgrade">C\'è una nuova versione disponibile per questa applicazione, desideri aggiornarla?</string>
+	<string name="picture_btn_yes">Sì</string>
+	<string name="picture_btn_no">No</string>
+	<string name="picture_msg_xxx_available_update">Aggiorna - %1$s %2$s - Aggiornamento disponibile</string>
+    	
+
+	<string name="picture_title_rename_error">Errore di rinomina</string>
+	<string name="picture_msg_rename_error">Esiste già un file con questo nome %1$S Si prega di controllare prima di rinominare il file.</string>
+	<string name="picture_msg_name_invalid">Il nome del file non può iniziare con \".\", si prega di cambiare il nome del file.</string>
+	<string name="picture_msg_blocked">Non digitare contenuto inappropriato. Il nome contiene caratteri non validi.</string>
+
+</resources>

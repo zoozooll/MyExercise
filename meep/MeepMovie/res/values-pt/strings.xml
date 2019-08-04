@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="hello">Olá Mundo!</string>
+    <string name="app_name">Vídeos</string>
+    <string name="meep_video">Vídeo</string>
+    <string name="video_btn_ring_rename">Renomear</string>
+    <string name="video_btn_ring_delete">Excluir</string>
+    <string name="video_title_uh_oh">Oops!</string>
+    <string name="video_title_times_up">Tempo esgotado!</string>
+    <string name="video_msg_try_again_xxx">Desculpe, você não pode usar o Reprodutor de Vídeos agora. Tente de novo em %1$d minutos!</string>
+    <string name="video_btn_ok">OK</string>
+    <string name="video_msg_short_timer_reminder_xxx">Lembrete de Tempo - Reprodutor de Vídeos</string>
+    <string name="video_msg_short_timeup_xxx">Tempo esgotado! - Reprodutor de Vídeos</string>
+    <string name="video_title_update">Atualizar</string>
+    <string name="video_msg_update_xxx_timer_changed">O tempo de uso do Reprodutor de Vídeos foi alterado para %1$d</string>
+    <string name="video_msg_update_xxx">Atualizar - Reprodutor de Vídeos</string>
+    <string name="video_title_sudden_change">Repentina mudança de acesso</string>
+    <string name="video_msg_sudden_parental_change">Desculpe, você não pode usar este aplicativo no momento porque a configuração de acesso no Portal Parental foi modificada.</string>
+    <string name="video_btn_ask_access">Pedir acesso</string>
+    <string name="video_msg_access_request_sent">Pedido de acesso enviado!</string>
+    <string name="video_title_version_update">Atualização da versão</string>
+    <string name="video_msg_available_upgrade">Há uma atualização disponível deste aplicativo, você quer atualizá-lo?</string>
+    <string name="video_btn_yes">Sim</string>
+    <string name="video_btn_no">Não</string>
+    <string name="video_msg_xxx_available_update">Atualizar - %1$s %2$s - Atualização da versão disponível</string>
+    <string name="video_title_rename_error">Erro de renomeação</string>
+    <string name="video_msg_name_invalid">O nome do arquivo não pode começar com \".\", por favor, modifique o nome do arquivo.</string>
+    <string name="video_msg_blocked">O texto contém caracteres inválidos. Por favor, tente algo diferente.</string>
+
+</resources>

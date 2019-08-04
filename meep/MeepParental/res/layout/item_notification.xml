@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fill_parent"
+    android:minHeight="110dp"
+   	android:gravity="center_vertical"
+   	android:descendantFocusability="blocksDescendants">
+   	<LinearLayout style="@style/wrap_content"
+   	    android:layout_width="0.0dip"
+   	    android:orientation="vertical"
+   	    android:layout_weight="0.6">
+		<TextView 
+		    style="@style/TextLogsInfo"
+		    android:layout_width="72dp"
+		    android:paddingLeft="10dp"
+		    android:id="@+id/textLogsType"
+		    android:text="@string/main_text_type"
+		    android:background="@null"
+		    android:visibility="gone"/>
+	     <ImageView
+	        android:id="@+id/category"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:src="@drawable/buy_apps" 
+	        android:contentDescription="@string/main_menu_icon"/>
+	</LinearLayout>
+	<LinearLayout style="@style/wrap_content"
+	    android:layout_width="0.0dip"
+   	    android:layout_weight="3.5">
+	   	<TextView
+	   	    android:id="@+id/textLogsTime"
+	   	    style="@style/TextLogsInfo"
+	   	    android:text="@string/main_text_time" />
+		<TextView 
+		    style="@style/TextLogsInfo"
+		    android:id="@+id/textLogsInfo"
+		    android:text="@string/main_text_message"/>
+		<TextView 
+		    style="@style/TextLogsInfo"
+		    android:id="@+id/textRequestStatus"
+		    android:text=""/>
+	</LinearLayout>
+	<ImageView 
+        style="@style/ExpandImage"
+        android:id="@+id/expand"
+        android:contentDescription="@string/common_button_next"
+        android:layout_weight="0.3"
+        android:visibility="invisible"/>
+</TableRow>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/background_half_trans">
+		<ImageView 
+		    android:id="@+id/dialogbg"
+		    style="@style/wrap_content"
+		    android:src="@drawable/meep_market_accessdenied_popup"
+		     android:contentDescription="@string/app_name"
+		     android:layout_centerHorizontal="true"
+		     android:layout_marginTop="40dp"
+		     />
+		<FrameLayout
+		    style="@style/wrap_content"
+		    android:layout_alignLeft="@id/dialogbg"
+		    android:layout_alignRight="@id/dialogbg"
+		    android:layout_alignTop="@id/dialogbg"
+		    android:layout_alignBottom="@id/dialogbg">
+		     <Button 
+		         android:id="@+id/confirm"
+		         style="@style/dialog_button"
+		         android:layout_gravity="center_horizontal|bottom"
+		         android:text="@android:string/ok"
+		         android:layout_marginBottom="70dp"
+		         android:layout_marginLeft="30dp"/>
+
+		     <TextView
+				    android:id="@+id/exchangeCode"
+				    android:layout_width="500dp"
+				    android:layout_height="wrap_content"
+
+				    android:text="@string/login_title_msg"
+				    android:textSize="22dp"
+				    android:textStyle="bold"
+				    android:textColor="@color/text_dark_blue2"
+				    android:gravity="center"
+				    android:lineSpacingExtra="10dp"
+				    
+		          android:layout_marginTop="200dp"
+		          android:layout_marginLeft="130dp"/>
+
+	     </FrameLayout>
+        
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="app_name">Comunicador</string>
+    <string name="action_settings">Configurações</string>
+    <string name="hello_world">Olá Mundo!</string>
+    <string name="friend_not_found">Desculpe! Não consigo encontrar seus amigos. Buscar novamente?</string>
+    <string name="add_friends">Adicionar amigos</string>
+    <string name="add">+</string>
+    <string name="add_friend_hint">Olá, %s, eu gostaria de adicioná-lo como amigo.</string>
+    <string name="search_friend_hint">Digite o MEEP! ID do seu amigo aqui</string>
+    <string name="search">Buscar</string>
+    <string name="search_friend">Buscar amigo</string>
+    <string name="type_chat_hint">Digite aqui para conversar</string>
+    <string name="send">Enviar</string>
+    <string name="accept">Aceitar</string>
+    <string name="decline">Rejeitar</string>
+    <string name="accept_friend_title">Solicitação de Amizade</string>
+    <string name="accept_friend">Aceitar amigo</string>
+    <string name="accept_friend_format_string">%s gostaria de adicioná-lo como amigo.</string>
+    <string name="accept_friend_friends_message_format_string">Mensagem de %1$s\n%2$s</string>
+    <string name="ok">OK</string>
+    <string name="error">Oops</string>
+    <string name="error_message_parents_cannot_delete">Pais e supervisores não podem ser deletados.</string>
+    <string name="blocked">Essa palavra está bloqueada pela lista de Palavras Censuradas</string>
+    <string name="cannot_process">Bloqueado</string>
+    <string name="cannot_add_yourself">Você não pode se adicionar como amigo</string>
+    <string name="cannot_add_existing_friend">Este usuário já está na sua lista de amigos</string>
+    <string name="please_enter_meep_id">Por favor, insira um MEEP! ID primeiro</string>
+    <string name="user_already_your_friend">Este usuário já está na sua lista de amigos</string>
+    <string name="duplicated_friend_request">Este usuário já está na sua lista de amigos</string>
+    <string name="no_results">Nenhum resultado</string>
+    <string name="user_not_found">Desculpe, não consigo encontrar um amigo com este nome! Por favor, tente novamente!</string>
+    <string name="oops">Oops</string>
+    <string name="no_network">Por favor, conecte-se à Internet para poder utilizar o Comunicador. Você gostaria de se conectar à uma rede Wi-Fi agora?</string>
+    <string name="network_try_again">Você não está conectado ao nosso servidor. Por favor, tente novamente mais tarde ou verifique sua conexão Wi-Fi.</string>
+    <string name="delete_friend">Excluir amigo</string>
+    <string name="delete_friend_confirm_format">Você tem certeza de que deseja excluir %s da sua lista de amigos?</string>
+    <string name="friend_deleted_message_format">%s foi excluído com sucesso!</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="guest_not_allowed">O convidado não possui permissão para acessar este recurso.</string>
+    <string name="user_not_online">Seu amigo está offline no momento. Por favor, tente novamente mais tarde.</string>
+    <string name="try_again_later">Por favor, tente novamente mais tarde.</string>
+    <string name="friend_request_sent">Solicitação enviada</string>
+    <string name="friend_request_success">Sua solicitação de amizade foi enviada aos seus pais e aos pais de seu amigo para aprovação.</string>
+    <string name="friend_request_pending">Sua solicitação de amizade está pendente.</string>
+    <string name="friend_request_result">Resultado da solicitação de amizade</string>
+    <string name="friend_request_self_parent_reject">Desculpe! Seus pais rejeitaram sua solicitação de amizade com %1$s</string>
+    <string name="friend_request_oppo_parent_reject">Desculpe! Os pais de %1$s rejeitaram sua solicitação de amizade</string>
+    <string name="friend_request_friend_reject">Desculpe! %1$s rejeitou sua solicitação de amizade</string>
+    <string name="friend_request_approved">%1$s é seu amigo no MEEP! agora</string>
+    <string name="nice">Legal!</string>
+    <string name="friend_reject">Sua mensagem foi enviada para %1$s</string>
+
+</resources>

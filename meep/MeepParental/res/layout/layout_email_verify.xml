@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/registerLayout"
+    style="@style/ParentLayoutStyle">
+    <RelativeLayout style="@style/wrap_content_vertical"
+        android:layout_marginTop="75dp">
+        <ImageView
+        android:layout_width="wrap_content"
+		android:layout_height="200dp"
+        android:src="@drawable/red_splash"
+        android:id="@+id/meepLogo"
+        android:contentDescription="@string/app_name"
+        android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+	<!-- action bar -->
+	<FrameLayout
+	    android:id="@+id/actionBar"
+	    style="@style/ActionBar">
+	    <LinearLayout 
+		    android:layout_gravity="left|center_vertical"
+	        style="@style/wrap_content">
+	    	<ImageButton
+			    android:id="@+id/barImageButtonBack"
+			    android:contentDescription="@string/main_button_back"
+			    android:src="@drawable/topbar_arrow_icon" 
+			    style="@style/BarImageButton_Main"/>
+	    	<View  
+	    	    style="@style/BarDivider"/>
+	    </LinearLayout>
+	    <TextView
+		    android:id="@+id/RegisterTitle"
+		    android:text="@string/registration_email_verify_label"
+		    style="@style/BarTitle" />
+	</FrameLayout>
+	
+	<!-- bar shadow -->
+	<!-- <View android:layout_below="@id/actionBar"
+	  style="@style/BarShadow"/> -->
+	<!-- next button layout-->
+
+    <LinearLayout
+        style="@style/wrap_content_vertical"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" 
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="40dp"
+        >
+
+         <ScrollView
+             style="@style/fill_parent"
+             android:layout_marginLeft="70dp"
+             android:layout_marginRight="70dp"
+             android:layout_marginBottom="40dp"
+             android:background="@drawable/register_field" >
+             <TextView
+                 style="@style/fill_parent"
+                 android:text="@string/expired_verify_email"
+                 android:textSize="22sp" />
+         </ScrollView>
+
+        <!-- Resend Button -->
+        <Button
+            android:id="@+id/btnResend"
+            style="@style/CommonButton"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/registration_email_verify_button_resend"
+            android:text="@string/registration_email_verify_button_resend" 
+            android:onClick="onClickButton"/>
+        <!--  Next Button -->
+	    <Button
+	        android:id="@+id/btnBack"
+	        android:text="@string/common_button_back"
+	        android:contentDescription="@string/common_button_next" 
+        	style="@style/CommonButton"/>
+        <!-- Back Button -->
+     </LinearLayout>
+		
+</RelativeLayout>
+	

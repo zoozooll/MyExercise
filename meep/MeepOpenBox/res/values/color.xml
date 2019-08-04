@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="light_gray">#606060</color>
+    <color name="black">#000000</color>
+    <color name="orange">#F7B36C</color>
+    <color name="brown">#700E03</color>
+    <color name="dark_blue">#1D406A</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half_alpha">#80000000</color>
+    <color name="background_half_trans">#C0242424</color>
+    <color name="number_stroke">#E55C2E</color>
+    <color name="parental_settings">#CC642F</color>
+    <color name="meep_store">#138418</color>
+    <color name="communicator">#4698EE</color>
+    <color name="button">#396B26</color>
+
+</resources>

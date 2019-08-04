@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!--This document is in English, please translate it into German  -->
+    
+   	<string name="app_name">MEEP</string>
+   	<string name="notice">Hoppla</string>
+   	<string name="ok">OK</string>   	
+   	
+   	<string name="yes">Ja</string>   	
+   	<string name="no">Nein</string>   
+   	
+   	
+	<string name="delete">Löschen</string>
+	<string name="delete_sure">Bist du sicher, diese Datei zu entfernen?</string>	
+	
+	<string name="msg_null">Bitte gib einen Namen ein!</string>	
+	<string name="msg_error">Dieses Wort steht auf unserer Liste der schlechten Wörter und wurde blockiert.</string>	
+	<string name="msg_blocked">Dieser Name ist bereits vorhanden. Bitte versuche einen anderen Namen.</string>
+	<string name="msg_rename_same">Der Name gleich wie der frühere bedeutet, dass der gewählte Name bereits vergeben wurde, bitte versuche einen anderen Namen.</string>
+	<string name="msg_system_file">Der Standard-CD kann nicht umbenannt werden.</string>	
+	<string name="msg_system_file_movie">Der Standard-Film kann nicht umbenannt werden.</string>	
+	<string name="msg_system_file_ebook">Der Standardwert-Ebook kann nicht umbenannt werden.</string>	
+	<string name="music_title_rename_error">Fehler beim Umbenennen</string>
+   	<string name="proceed">Fortfahren</string>   	
+</resources>

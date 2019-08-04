@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepEbookActivity!</string>
+    <string name="app_name">MeepEbook</string>
+	
+    <string name="ebook_btn_ring_delete">Удалить</string>	
+	<string name="ebook_btn_ring_rename">Переименовать</string>
+	<string name="ebook_title_heads_up">Внимание!</string>
+	<string name="ebook_msg_unprotected_web">"Ты будешь перенаправлен на незащищенный веб-сайт."</string>
+	<string name="ebook_msg_protected_web">Ты будешь перенаправлен на защищенный сайт третьей стороны.</string>
+	<string name="ebook_btn_proceed">Выполнено</string>
+	<string name="ebook_btn_ebook_bookmark">Закладка</string>
+	<string name="ebook_title_uh_oh">Ну и ну!</string>
+	<string name="ebook_msg_xxx_5mins">У тебя осталось только 5 минут для использования Просмотра электронных книг.</string>
+	<string name="ebook_title_times_up">Время вышло!</string>
+	<string name="ebook_msg_try_again_xxx">Извини, ты не можешь использовать Просмотр электронных книг в данный момент. Попробуй еще раз через %1$d минут!</string>
+	<string name="ebook_btn_ok">OK</string>
+	<string name="ebook_msg_short_timer_reminder_xxx">Таймер напоминаний - Просмотр электронных книг</string>
+	<string name="ebook_msg_short_timeup_xxx">Время вышло! - eBook Reader</string>
+	<string name="ebook_title_update">Обновление</string>
+	<string name="ebook_msg_update_xxx_timer_changed">Таймер Просмотра электронных книг был переустановлен на %1$d.</string>
+	<string name="ebook_msg_update_xxx">Обновление - Просмотр электронных книг</string>
+	<string name="ebook_title_blocked">Заблокировано</string>
+	<string name="ebook_msg_sorry_unprotected_web">Извини, у тебя нет разрешения для перехода на незащищенный сайт.</string>
+	<string name="ebook_btn_approval">Запросить разрешение</string>
+	<string name="ebook_msg_approval_sent">Запрос разрешения отправлен!</string>
+	<string name="ebook_msg_short_blocked_xxx">Заблокировано - Просмотр электронных книг</string>
+	<string name="ebook_msg_sorry_protected_web">Извини, у тебя нет разрешения для перехода на защищенный сайт.</string>
+	<string name="ebook_title_sudden_change">Неожиданное изменение доступа</string>
+	<string name="ebook_msg_sudden_parental_change">Извини, ты не можешь сейчас использовать это приложение, поскольку настройки доступа на Родительском Портале были изменены.</string>
+	<string name="ebook_btn_ask_access">Запросить доступ</string>
+	<string name="ebook_msg_access_request_sent">Запрос доступа отправлен!</string>
+	<string name="ebook_title_version_update">Обновление версии</string>
+	<string name="ebook_msg_available_upgrade">Для данного приложения имеется обновление, хотите обновить?</string>
+	<string name="ebook_btn_yes">Да</string>
+	<string name="ebook_btn_no">Нет</string>
+	<string name="ebook_msg_xxx_available_update">Обновление - %1$s %2$s - Доступна версия обновления</string>
+	
+	<string name="ebook_title_rename_error">Ошибка переименования</string>
+	<string name="ebook_msg_rename_error">Здесь уже есть файл с названием %1$S Пожалуйста, проверь его перед переименованием файла.</string>
+	<string name="ebook_msg_name_invalid">Имя файла не может начинаться с \".\", пожалуйста, поменяй имя файла.</string>
+	<string name="ebook_msg_blocked">Заблокировано.</string>
+	<string name="ebook_msg_page_XX">Страница</string>
+	<string name="ebook_msg_cannot_play_the_video">Ой! Не получается воспроизвести видео…</string>
+	<string name="ebook_msg_cannot_play_the_audio">Ой! Не получается воспроизвести аудио…</string>
+	<string name="ebook_msg_end_of_the_book">Это конец книги!</string>
+	<string name="ebook_msg_unsopported_ebook">Извини, не получается прочесть данную электронную книгу...</string>
+	<string name="ebook_msg_cannot_open_ebook">Извини, не получается открыть данную электронную книгу…</string>
+	<string name="ebook_msg_bookmark_added">Закладка добавлена</string>
+	<string name="ebook_msg_bookmark_deleted">Закладка удалена</string>
+	<string name="ebook_msg_bookmark">Закладка</string>
+	<string name="ebook_msg_first_page">Первая страница</string>
+	<string name="ebook_msg_end">Конец</string>
+	<string name="ebook_badword_msg"></string>
+	<!-- Update -->
+	<string name="ebook_update_title">Важное примечание</string>
+	<string name="ebook_update_message">У нас для тебя есть совершенно новый Просмотр электронных книг!\nЗагруженные электронные книги необходимо бесплатно переустановить из магазина MEEP!Store.</string>
+</resources>	
+    

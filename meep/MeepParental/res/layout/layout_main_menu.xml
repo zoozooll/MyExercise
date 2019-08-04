@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fill_parent"
+    android:background="@null" >
+	<FrameLayout
+        android:id="@+id/FrameLayout1"
+        style="@style/fill_parent">
+        <ImageView
+	        style="@style/fill_parent"
+	        android:layout_width="450dp"
+	        android:src="@drawable/left_menu_bg" 
+	        android:scaleType="fitXY"
+	        android:contentDescription="@string/main_menu_title"/>
+    </FrameLayout>
+	<ScrollView style="@style/fill_parent"
+    	android:background="@null"
+    	android:fillViewport="true"
+    	android:layout_marginBottom="48dp"
+    	android:layout_alignLeft="@id/FrameLayout1">
+		<RelativeLayout 
+		style="@style/fill_parent"
+		android:background="@null">
+	   	<!-- userInfo and money -->
+		<LinearLayout
+		    style="@style/LinearHorizontal"
+		    android:id="@+id/user_information"
+		    android:padding="15dp"
+		    android:layout_marginBottom="10dp">
+		    <ImageButton
+		        android:layout_width="70dp"
+		        android:layout_height="70dp"
+		        android:scaleType="fitXY"
+		        android:id="@+id/user_icon"
+		        android:src="@drawable/icon_head" 
+		        android:contentDescription="@string/main_menu_icon"
+		        android:background="@null"/>
+		    <RelativeLayout 
+		        style="@style/LinearVertical"
+		        android:paddingLeft="10dp">
+			    <TextView 
+				    style="@style/PageLableSmall"
+				    android:textStyle="bold"
+				    android:id="@+id/user_name"
+				    android:text="@string/main_menu_name"
+				    android:layout_marginBottom="3dp"/>
+			    <TextView 
+				    style="@style/PageLableSmall"
+				    android:id="@+id/user_coins"
+				    android:layout_marginLeft="36dp"
+				    android:layout_below="@id/user_name"
+				    android:text="@string/main_menu_coin_default"/>
+			    <ImageView 
+			        android:layout_width="24dp"
+			        android:layout_height="24dp"
+				    android:layout_below="@id/user_name"
+				    android:layout_alignParentLeft="true"
+			        android:scaleType="fitCenter"
+			        android:src="@drawable/account_coins" android:contentDescription="@string/main_coins"/>
+		    </RelativeLayout>
+	   	</LinearLayout>
+	   	
+		
+		<!-- menu button -->
+		<LinearLayout style="@style/LinearVertical"
+		    android:id="@+id/menu_botton"
+		    android:layout_below="@id/user_information">
+		     <!-- Parental Settings -->
+	        <View style="@style/MenuHoriDivider"/>
+	        <RelativeLayout style="@style/wrap_content_vertical">
+			    <ImageView style="@style/MenuImage"
+			        android:src="@drawable/left_menu_setting" 
+			        android:contentDescription="@string/main_menu_parental"/>
+		        <ImageView 
+		            style="@style/ButtonMenuArrow"
+			        android:contentDescription="@string/main_menu_parental"/>
+				<Button 
+					style="@style/ButtonMenu"
+					android:id="@+id/menuParental"
+					android:text="@string/main_menu_parental"
+				/>
+		    </RelativeLayout>
+	        <View style="@style/MenuHoriDivider"/>
+		    <!-- Notification -->
+		   <RelativeLayout style="@style/wrap_content_vertical">
+			    <ImageView style="@style/MenuImage"
+			        android:src="@drawable/left_menu_notification" 
+			        android:contentDescription="@string/main_menu_notification"/>
+		        <ImageView
+		            android:id="@+id/arrow"
+		            style="@style/ButtonMenuArrow"
+			        android:contentDescription="@string/main_menu_notification"/>
+		        <TextView
+				    android:id="@+id/notificationNum"
+				    style="@style/PageLableSmall"
+				    android:visibility="invisible"
+				    android:layout_alignTop="@+id/menu_botton"
+				    android:layout_centerVertical="true"
+				    android:background="@drawable/notification_ios"
+				    android:text="@string/main_menu_noti"
+				    android:textStyle="bold" 
+				    android:layout_alignRight="@id/arrow"
+				    android:layout_marginRight="40dp"
+				    />
+		        <Button 
+				    style="@style/ButtonMenu"
+				    android:id="@+id/menuNotification"
+				    android:text="@string/main_menu_notification"
+				    />
+		    </RelativeLayout>
+	        <View style="@style/MenuHoriDivider"/>
+	        <!-- Account -->
+	        <RelativeLayout style="@style/wrap_content_vertical">
+			    <ImageView style="@style/MenuImage"
+			        android:src="@drawable/left_menu_account" 
+			        android:contentDescription="@string/main_menu_account"/>
+		        <ImageView 
+		            style="@style/ButtonMenuArrow"
+			        android:contentDescription="@string/main_menu_account"/>
+				<Button 
+					style="@style/ButtonMenu"
+					android:id="@+id/menuAccount"
+					android:text="@string/main_menu_account"
+				/>
+		    </RelativeLayout>
+		    <View style="@style/MenuHoriDivider"/>
+	        <!-- Coins -->
+	        <RelativeLayout style="@style/wrap_content_vertical">
+			    <ImageView style="@style/MenuImage"
+			        android:src="@drawable/left_menu_coins" 
+			        android:contentDescription="@string/main_menu_coin"/>
+		        <ImageView 
+		            style="@style/ButtonMenuArrow"
+			        android:contentDescription="@string/main_menu_coin"/>
+				<Button 
+					style="@style/ButtonMenu"
+					android:id="@+id/menuCoins"
+					android:text="@string/main_menu_coin"
+				/>
+		    </RelativeLayout>
+		    <View style="@style/MenuHoriDivider"/>
+		    <!-- Open Google Play -->
+	        <RelativeLayout style="@style/wrap_content_vertical">
+			    <ImageView style="@style/MenuImage"
+			        android:src="@drawable/left_menu_googleplay" 
+			        android:contentDescription="@string/main_menu_googleplay"/>
+		        <ImageView 
+		            style="@style/ButtonMenuArrow"
+			        android:contentDescription="@string/main_menu_googleplay"/>
+				<Button 
+					style="@style/ButtonMenu"
+					android:id="@+id/menuGooglePlay"
+					android:text="@string/main_menu_googleplay"
+				/>
+		    </RelativeLayout>
+		    <View style="@style/MenuHoriDivider"/>
+			<!-- Coin -->
+	        <!-- <View style="@style/MenuHoriDivider"/>
+	        <RelativeLayout style="@style/wrap_content_vertical">
+			    <ImageView style="@style/MenuImage"
+			        android:src="@drawable/left_menu_coins" 
+			        android:contentDescription="@string/main_menu_coin"/>
+		        <ImageView 
+		            style="@style/ButtonMenuArrow"
+			        android:contentDescription="@string/main_menu_coin"/>
+				<Button 
+					style="@style/ButtonMenu"
+					android:id="@+id/menuCoin"
+					android:text="@string/main_menu_coin"
+				/>
+		    </RelativeLayout> -->
+			<!-- Logout -->
+		    <RelativeLayout style="@style/wrap_content_vertical">
+			    <ImageView style="@style/MenuImage"
+			        android:src="@drawable/left_menu_logout3" 
+			        android:contentDescription="@string/main_menu_logout"/>
+		        <ImageView 
+		            style="@style/ButtonMenuArrow"
+			        android:contentDescription="@string/main_menu_logout"/>
+		        <Button 
+				    style="@style/ButtonMenu"
+				    android:id="@+id/menuLogout"
+				    android:text="@string/main_menu_logout"
+				    />
+		    </RelativeLayout>
+	        <View style="@style/MenuHoriDivider"/>
+		</LinearLayout>
+		</RelativeLayout>
+	</ScrollView>
+	<!-- <ImageView
+	    android:layout_height="36dp"
+	    android:layout_width="30dp"
+	    android:scaleType="fitCenter"
+	    android:src="@drawable/terms_of_sevices"
+	    android:contentDescription="@string/common_term_of_service"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginLeft="15dip"
+	    /> -->
+	<!-- <Button 
+	    style="@style/wrap_content_vertical"
+	    android:id="@+id/btnTerms"
+	    android:text="@string/common_term_of_service"
+	    android:textColor="@color/text_white"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignLeft="@id/FrameLayout1"
+	    android:textSize="15dip"
+	    android:paddingRight="30dp"
+	    android:layout_height="36dp"
+	    android:gravity="center"
+	    android:background="@null"/> -->
+    <FrameLayout 
+	    android:id="@+id/bottomLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignLeft="@id/FrameLayout1">
+	    <ImageView style="@style/MenuImage"
+	        android:padding="12dp"
+	        android:src="@drawable/terms_of_sevices" 
+	        android:background="@null"
+	        android:contentDescription="@string/common_term_of_service"/>
+
+        <Button
+            android:id="@+id/btnTerms"
+            style="@style/ButtonMenu"
+            android:text="@string/common_term_of_service" />
+
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:meep="http://schemas.android.com/apk/res/com.oregonscientific.meep.home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+        <com.oregonscientific.meep.widget.StrokedTextView
+            android:id="@+id/options_title"
+            style="@style/right_menu_title_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/profile_setting_option_title"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            meep:font="MEEP.ttf"
+            meep:textStrokeColor="@color/shadowyellow"
+            meep:textStrokeWidth="5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/options_pick_photo"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="90dp"
+        android:clickable="true"
+        android:gravity="center_horizontal" >
+        
+        <com.oregonscientific.meep.widget.StrokedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="@string/menu_item_title_picture"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            meep:font="MEEP.ttf"
+            meep:textStrokeColor="@color/shadow_green"
+            meep:textStrokeWidth="5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/options_camera"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal" >
+        
+        <com.oregonscientific.meep.widget.StrokedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="@string/menu_item_title_camera"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            meep:font="MEEP.ttf"
+            meep:textStrokeColor="@color/shadowblue"
+            meep:textStrokeWidth="5" 
+            style="@style/profile_camera_text"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

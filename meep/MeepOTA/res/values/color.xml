@@ -1,0 +1,16 @@
+<resources>
+
+    <color name="holo_orange_light">#ffffbb33</color>
+    <color name="text_dark_blue">#234373</color>
+    <color name="text_orange">#dd671b</color>
+    <color name="text_dark_gray">#A9A9A9</color>
+    <color name="shadowblue">#0A6291</color>
+    <color name="shadowyellow">#D28F21</color>
+    <color name="shadowred">#A0170D</color>
+    <color name="shadow_blue">#4032AD</color>
+    <color name="shadow_yellow">#CE7E00</color>
+    <color name="shadow_red">#C12B00</color>
+    <color name="shadow_greed">#1F8C13</color>
+    <color name="gray">#5A5A5A</color>
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepMusicActivity!</string>
+    <string name="app_name">MeepMusic</string>
+
+	
+    	<string name="meep_music">музыка</string>	
+    	<string name="music_btn_ring_rename">Переименовать</string>	
+		<string name="music_btn_ring_delete">Удалить</string>
+    		
+    		
+    	<!--  MEEP! Вместе (Родительский Портал)- Таймер -->	
+    	<string name="music_title_uh_oh">Ну и ну!</string>	
+		
+    	<string name="music_title_times_up">Время вышло!</string>	
+    	<string name="music_msg_try_again_xxx">Извини, ты не можешь использовать музыкальный плеер прямо сейчас. Попробуй снова через %1$d минут!</string>	
+    	<string name="music_btn_ok">OK</string>	
+    	<string name="music_msg_short_timer_reminder_xxx">Таймер напоминаний - музыкальный плеер</string>	
+    	<string name="music_msg_short_timeup_xxx">Время вышло! музыкальный плеер</string>	
+    		
+    	<!--  MEEP! Вместе (Родительский Портал)- Обновление -->	
+    	<string name="music_title_update">Обновление</string>	
+    	<string name="music_msg_update_xxx_timer_changed">Таймер музыкального плеера был переустановлен на %1$d</string>	
+    	<string name="music_msg_update_xxx">Обновление - музыкальный плеер</string>	
+    		
+    	<!--  MEEP! Вместе (Родительский Портал)- Внезапное изменение доступа -->	
+    	<string name="music_title_sudden_change">Внезапное изменение доступа</string>	
+    	<string name="music_msg_sudden_parental_change">Извини, ты не можешь использовать это приложение сейчас, потому что настройки допуска на Родительском Портале были изменены.</string>	
+    	<string name="music_btn_ask_access">Запросить доступ</string>	
+    	<string name="music_msg_access_request_sent">Запрос доступа отправлен!</string>	
+    		
+    	<!--  MEEP! Вместе (Родительский Портал)- Обновление - Обновление содержания версии - Новое -->	
+    	<string name="music_title_version_update">Обновление версии</string>	
+    	<string name="music_msg_available_upgrade">Доступно обновление для этого приложения, хочешь обновить?</string>	
+    	<string name="music_btn_yes">Да</string>	
+    	<string name="music_btn_no">Нет</string>	
+    	<string name="music_msg_xxx_available_update">Обновление - %1$s %2$s - Доступна версия обновления</string>	
+    		
+	<string name="music_title_rename_error">Ошибка переименования</string>	
+	<string name="music_msg_rename_error">Здесь уже имеется файл с названием %1$S Пожалуйста, проверь его перед переименованием файла.</string>	
+	<string name="music_msg_name_invalid">Название файла не может начинаться с \".\", пожалуйста, поменяй название файла.</string>	
+	<string name="music_msg_blocked">Заблокировано.</string>	
+</resources>		

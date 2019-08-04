@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* 
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License"); 
+** you may not use this file except in compliance with the License. 
+** You may obtain a copy of the License at 
+**
+**     http://www.apache.org/licenses/LICENSE-2.0 
+**
+** Unless required by applicable law or agreed to in writing, software 
+** distributed under the License is distributed on an "AS IS" BASIS, 
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+** See the License for the specific language governing permissions and 
+** limitations under the License.
+*/
+-->
+
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="@dimen/key_width"
+    android:keyHeight="@dimen/key_height"    
+    android:horizontalGap="2px"
+    android:verticalGap="2px"
+    >
+
+    <Row></Row>
+    <Row></Row>
+    <Row></Row>
+    <Row>
+        <Key android:codes="-5"  android:keyWidth="42px" android:keyIcon="@drawable/blackkey_del" android:iconPreview="@drawable/icon_del"
+        	 android:isRepeatable="true" android:keyEdgeFlags="left"/>
+        <Key android:codes="113" android:keyLabel="q"/>
+        <Key android:codes="119" android:keyLabel="w"/>
+        <Key android:codes="101" android:keyLabel="e" android:popupKeyboard="@xml/popup" android:popupCharacters="èéêëęē€" />
+        <Key android:codes="114" android:keyLabel="r"/>
+        <Key android:codes="116" android:keyLabel="t" android:horizontalGap = "300px"/>
+        <Key android:codes="121" android:keyLabel="y" android:popupKeyboard="@xml/popup" android:popupCharacters="ýÿ" />
+        <Key android:codes="117" android:keyLabel="u" android:popupKeyboard="@xml/popup" android:popupCharacters="ùúûüŭűū" />
+        <Key android:codes="105" android:keyLabel="i" android:popupKeyboard="@xml/popup" android:popupCharacters="ìíîïłī" />
+        <Key android:codes="111" android:keyLabel="o" android:popupKeyboard="@xml/popup" android:popupCharacters="òóôõöøőœō" />
+        <Key android:codes="112" android:keyLabel="p"/>
+        <Key android:codes="-5"  android:keyWidth="42px" 
+            android:keyIcon="@drawable/blackkey_del" android:iconPreview="@drawable/icon_del"
+        	android:isRepeatable="true" android:keyEdgeFlags="right"/>
+    </Row>
+    
+    <Row>
+		<Key android:codes="0"  android:keyWidth="55px" android:keyIcon="@drawable/blackkey_photo" android:iconPreview="@drawable/icon_photo"
+                android:keyEdgeFlags="left"/>
+        <Key android:codes="97" android:keyLabel="a" android:popupKeyboard="@xml/popup" android:popupCharacters="àáâãäåæą" />
+        <Key android:codes="115" android:keyLabel="s" android:popupKeyboard="@xml/popup" android:popupCharacters="§ßśŝš" />
+        <Key android:codes="100" android:keyLabel="d" android:popupKeyboard="@xml/popup" android:popupCharacters="đ" />
+        <Key android:codes="102" android:keyLabel="f"/>
+        <Key android:codes="103" android:keyLabel="g" android:popupKeyboard="@xml/popup" android:popupCharacters="ĝ" />
+        <Key android:codes="104" android:keyLabel="h"  android:popupKeyboard="@xml/popup" android:popupCharacters="ĥ" android:horizontalGap = "250px"/>
+        <Key android:codes="106" android:keyLabel="j" android:popupKeyboard="@xml/popup" android:popupCharacters="ĵ" />
+        <Key android:codes="107" android:keyLabel="k"/>
+        <Key android:codes="108" android:keyLabel="l"/>
+        <Key android:codes="39" android:keyLabel="\'"/>
+        <Key android:codes="0"  android:keyWidth="55px" 
+            android:keyIcon ="@drawable/blackkey_video"  android:iconPreview="@drawable/icon_video"
+			android:keyEdgeFlags="right" />
+    </Row>
+    
+    <Row>
+        <Key android:codes="-1"  android:keyWidth="65px" android:keyIcon="@drawable/blackkey_shift" android:iconPreview="@drawable/icon_shift"
+                android:isModifier="true" android:isSticky="true" android:keyEdgeFlags="left"/>
+        <Key android:codes="122" android:keyLabel="z" android:popupKeyboard="@xml/popup" android:popupCharacters="żžź" />
+        <Key android:codes="120" android:keyLabel="x"/>
+        <Key android:codes="99" android:keyLabel="c" android:popupKeyboard="@xml/popup" android:popupCharacters="çćĉč" />
+        <Key android:codes="118" android:keyLabel="v"/>
+        <Key android:codes="98" android:keyLabel="b"/>
+        <Key android:codes="110" android:keyLabel="n" android:popupKeyboard="@xml/popup" android:popupCharacters="ñń" android:horizontalGap = "228px"/>
+        <Key android:codes="109" android:keyLabel="m"/>
+		<Key android:codes="44" android:keyLabel="," />
+		<Key android:codes="46" android:keyLabel="."/>
+        <Key android:codes="63" android:keyLabel="\?"/>
+		<Key android:codes="-1" android:keyIcon="@drawable/blackkey_shift"  android:iconPreview="@drawable/icon_shift"
+		     android:keyWidth="65px" android:isModifier="true" android:isSticky="true" 
+		     android:keyEdgeFlags="right"/>
+    </Row>
+    
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:codes="-3"   android:keyWidth="65px" android:keyIcon="@drawable/blackkey_input"  android:iconPreview="@drawable/icon_input"
+             android:keyEdgeFlags="left"/>
+        <Key android:codes="-2" android:keyIcon="@drawable/blackkey_num" android:iconPreview="@drawable/icon_num"/>
+        <Key android:codes="0" android:keyIcon="@drawable/blackkey_icon" 
+             android:popupKeyboard="@xml/popup_smileys" android:iconPreview="@drawable/icon_icon"/>    
+        <Key android:codes="47" android:keyIcon="@drawable/blackkey_slith" android:iconPreview="@drawable/icon_slith" />
+        <Key android:codes="32" android:keyIcon="@drawable/whitekey_space" android:iconPreview="@drawable/icon_space" 
+             android:keyWidth="84px" android:isRepeatable="true" />
+        <Key android:codes="32" android:keyIcon="@drawable/whitekey_space" android:iconPreview="@drawable/icon_space" 
+             android:keyWidth="84px" android:isRepeatable="true" android:horizontalGap = "230px" />
+        <Key android:codes="999" android:keyIcon="@drawable/blackkey_com" android:horizontalGap = "4px" android:iconPreview="@drawable/icon_com"/>
+        <Key android:codes="21" android:keyIcon="@drawable/whitekey_left" android:iconPreview="@drawable/icon_left"/>
+        <Key android:codes="22" android:keyIcon="@drawable/blackkey_right" android:iconPreview="@drawable/icon_right" />
+        <Key android:codes="10" android:keyIcon="@drawable/blackkey_send"  android:iconPreview="@drawable/icon_send"
+             android:keyEdgeFlags="right" android:horizontalGap = "13px"/>
+    </Row>
+</Keyboard>
+    

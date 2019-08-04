@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/background_half_trans">
+    <ImageSwitcher
+	    android:id="@+id/screenshots"
+	    style="@style/fill_parent"
+		android:layout_margin="60dp"
+	/>
+    <ImageButton 
+        android:id="@+id/btnClose"
+        style="@style/wrap_content"
+        android:src="@drawable/btn_close"
+        android:background="@null"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/close"/>
+
+</RelativeLayout>

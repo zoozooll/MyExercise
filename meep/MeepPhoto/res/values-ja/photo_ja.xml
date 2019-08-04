@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    	<string name="meep_picture">ピクチャー</string>
+    	<string name="picture_btn_ring_rename">名前の変更</string>
+		<string name="picture_btn_ring_delete">消去</string>
+    	
+    	
+    	<!--  MEEP! Together (Parent Portal)- Timer -->
+    	<string name="picture_title_uh_oh">おっと!</string>
+
+    	<string name="picture_title_times_up">時間切れ！</string>
+    	<string name="picture_msg_try_again_xxx">申し訳ございません、現在ピクチャービューアーは使用できません。%1$d分後にもう一度お試しください！</string>
+    	<string name="picture_btn_ok">OK</string>
+    	
+    	<string name="picture_msg_short_timer_reminder_xxx">タイムリマインダー - ピクチャビューアー</string>
+    	<string name="picture_msg_short_timeup_xxx">時間切れ！ - ピクチャービューアー</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update -->
+    	<string name="picture_title_update">更新</string>
+    	<string name="picture_msg_update_xxx_timer_changed">ピクチャービューアーのタイマーが%1$dに変更されました。</string>
+    	<string name="picture_msg_update_xxx">更新 - ピクチャービューアー</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Sudden Access Change -->
+    	<string name="picture_title_sudden_change">突然のアクセス変更</string>
+    	<string name="picture_msg_sudden_parental_change">申し訳ございません、保護者ポータルのアクセス設定が変更されたため、この機能は現在使用できません。</string>
+    	<string name="picture_btn_ask_access">アクセス許可をたのんでみる</string>
+    	<string name="picture_msg_access_request_sent"> リクエストが送信されました！ </string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update - Content Version update - New -->
+    	<string name="picture_title_version_update">バージョンアップデート</string>
+    	<string name="picture_msg_available_upgrade">このアプリを最新版に更新できます。更新しますか？</string>
+    	<string name="picture_btn_yes">はい</string>
+    	<string name="picture_btn_no">いいえ</string>
+    	<string name="picture_msg_xxx_available_update">アップデート - %1$s %2$s - バージョンアップデート</string>
+    	
+
+	<string name="picture_title_rename_error">名前の変更：エラー</string>
+	<string name="picture_msg_rename_error">ファイルネーム %1$S はすでに存在しています。このファイルの名前を変更する前に、他のファイルネームをご確認ください。</string>
+	<string name="picture_msg_name_invalid">ファイルネームを \".\"で始めることはできません。ファイルネームを変更してください。</string>
+	<string name="picture_msg_blocked">この名前には使用できない文字が含まれています。不適切なコンテンツを入力しないでください。</string>
+
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_half_trans"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <ImageView
+        android:id="@+id/dialogbg"
+        style="@style/wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/meep_market_codepopup" />
+
+    <FrameLayout
+        style="@style/wrap_content"
+        android:layout_alignBottom="@id/dialogbg"
+        android:layout_alignLeft="@id/dialogbg"
+        android:layout_alignRight="@id/dialogbg"
+        android:layout_alignTop="@id/dialogbg"
+        android:paddingLeft="185dp">
+
+        <TextView
+            style="@style/popup_title_text"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="110dp"
+            android:text="@string/exchange_title" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" 
+            android:paddingRight="130dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp" >
+
+                <EditText
+                    android:id="@+id/exchangeCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/meep_market_codetextbox"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/errorValid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/exchangeCode"
+                    android:gravity="center"
+                    android:text="@string/exchange_error_valid"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/errorUsed"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/exchangeCode"
+                    android:gravity="center"
+                    android:text="@string/exchange_error_used"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/back"
+                style="@style/dialog_button"
+                android:layout_gravity="left|bottom"
+                android:layout_marginBottom="80dp"
+                android:text="@string/back" />
+
+            <Button
+                android:id="@+id/confirm"
+                style="@style/dialog_button"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="80dp"
+                android:text="@string/confirm" />
+        </FrameLayout>
+    </FrameLayout>
+
+</RelativeLayout>

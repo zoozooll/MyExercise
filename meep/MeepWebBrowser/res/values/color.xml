@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<resources> 
+    <!-- test color -->
+<color name="skyblue">#64A9DF</color>
+<color name="mediumyellow">#F6DD3A</color>
+<color name="lightred">#DE5757</color>
+<color name="lightgreen">#9EC44D</color>
+<color name="darkblue">#293B3C</color>
+<color name="orangered">#DE5114</color>
+<color name="orange">#E0922F</color>
+<color name="lightorange">#E8AE4B</color>
+<color name="red">#CB2228</color>
+
+<color name="half_transparent">#c0242424</color>
+<color name="shadowblue">#0A6291</color>
+<color name="shadowyellow">#D28F21</color>
+<color name="shadowred">#A0170D</color>
+</resources>

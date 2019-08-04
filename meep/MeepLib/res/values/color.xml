@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<resources> 
+<color name="shadowblue">#0A6291</color>
+<color name="shadowyellow">#D28F21</color>
+<color name="shadowred">#A0170D</color>
+
+<color name="shadow_blue">#4032AD</color>
+<color name="shadow_yellow">#CE7E00</color>
+<color name="shadow_red">#C12B00</color>
+<color name="shadow_greed">#1F8C13</color>
+<color name="gray">#5A5A5A</color>
+</resources>

@@ -1,0 +1,30 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+   <style name="text_menu_myapps" parent="text_menu">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/text_orange_trans</item>
+    </style>
+    <style name="text_menu_media" parent="text_menu">
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_weight">0.8</item>
+    </style>
+    <style name="text_menu_game" parent="text_menu">
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="text_menu_apps" parent="text_menu">
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="text_menu_ebook" parent="text_menu">
+        <item name="android:textSize">18dp</item>
+    </style>
+    
+    <style name="text_item_button" parent="wrap_content">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+    </style>
+</resources>

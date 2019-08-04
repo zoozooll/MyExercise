@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/two_button_left"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#b0000000" >
+
+    <RelativeLayout
+        android:id="@+id/contentLayoutleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000" >
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ring_menu_ring_center_circle_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rightTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/background"
+            >
+
+            <ImageButton
+                android:id="@+id/btnRename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_ring_right_up" />
+<!-- 
+            <com.oregonscientific.meep.customfont.MyTextView
+                style="@style/customfont_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rename"
+                android:visibility="gone" /> -->
+        </RelativeLayout>
+
+        <!-- bottom button -->
+        <RelativeLayout
+            android:id="@+id/rightBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rightTop"
+            android:layout_alignBottom="@id/background"
+            android:layout_alignRight="@id/background"
+            android:layout_marginTop="3dp"
+            >
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_ring_right_down" />
+<!-- 
+            <com.oregonscientific.meep.customfont.MyTextView
+                style="@style/customfont_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:visibility="gone" /> -->
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	style="@style/ParentLayoutStyle">
+		<!-- action bar-->
+		<FrameLayout
+		    android:id="@+id/actionBar"
+		    style="@style/ActionBar">
+		    <LinearLayout 
+			    android:layout_gravity="left|center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content">
+			    <ImageButton
+				    android:id="@+id/mainImageButtonBack"
+				    android:contentDescription="@string/main_button_menu"
+				    android:src="@drawable/topbar_arrow_icon"
+				    style="@style/BarImageButton_Main" />
+			    <View  style="@style/BarDivider"/>
+		    </LinearLayout>
+		    <TextView
+			    android:id="@+id/mainBarTitle"
+			    android:text="@string/main_menu_notification"
+			    style="@style/BarTitle" />
+		</FrameLayout>    
+		<!-- bar shadow -->
+		<!-- <View android:layout_below="@id/actionBar"
+	 		 style="@style/BarShadow"/> -->
+		
+		<!-- dialog title bar -->
+		<LinearLayout 
+		    android:id="@+id/dialogBar"
+		    style="@style/LinearDialog"
+		    android:layout_below="@id/actionBar" >
+		    <TextView 
+    		    style="@style/MainPageTitle"
+    		    android:id="@+id/KidName"
+    		    android:text="@string/main_page_notification_pre"/>
+    	</LinearLayout>
+		<!-- listview main page -->
+		<RelativeLayout 
+		    style="@style/OutOfListView"
+		    android:id="@+id/outListRequests"
+		    android:layout_below="@id/dialogBar"
+			android:orientation="vertical">
+		    <ImageView android:src="@drawable/table_bg"
+		        android:layout_marginLeft="-6dp"
+		        android:paddingRight="4.5dp"
+		        style="@style/fill_parent"
+		        android:scaleType="fitXY"
+		        android:contentDescription="@string/main_page_notification_after"/>
+		    <LinearLayout 
+		        android:id="@+id/message"
+		        style="@style/fill_parent"
+		        android:orientation="vertical"
+		        android:gravity="center"
+		        android:padding="35dp">
+		        <LinearLayout style="@style/wrap_content_vertical"
+		            android:orientation="horizontal"
+		            android:layout_marginBottom="25dp">
+		            <ImageButton
+				        android:layout_width="76dp"
+				        android:layout_height="76dp"
+				        android:scaleType="fitXY"
+				        android:id="@+id/user_icon"
+				        android:src="@drawable/default_user_icon" 
+				        android:contentDescription="@string/main_menu_icon"
+				        android:background="@drawable/image_stroke"/>
+		            <TextView style="@style/TextChildrenInfo"
+		                android:id="@+id/textRequest"
+		                android:text="@string/main_text_message"
+		                android:layout_marginLeft="10dp"/>
+		        </LinearLayout>
+		        <FrameLayout style="@style/wrap_content">
+			        <Button 
+						android:id="@+id/btnApprove"
+						android:text="@string/main_page_notification_approve"
+						style="@style/CommonButton"
+						/>
+			        <ImageView style="@style/ButtonDrawable"
+				        android:src="@drawable/tick_green"
+				        android:contentDescription="@string/main_page_notification_approve"
+				        />
+		        </FrameLayout>
+		        <FrameLayout style="@style/wrap_content">
+			        <Button 
+						android:id="@+id/btnReject"
+						android:text="@string/main_page_notification_reject"
+						style="@style/CommonButton"
+						/>
+			        <ImageView style="@style/ButtonDrawable"
+				        android:src="@drawable/reject_red"
+				        android:contentDescription="@string/main_page_notification_reject"/>
+		        </FrameLayout>
+		    </LinearLayout>
+		    
+		    
+		</RelativeLayout>
+		<!-- list view shadow -->
+		
+		
+		
+	</RelativeLayout>

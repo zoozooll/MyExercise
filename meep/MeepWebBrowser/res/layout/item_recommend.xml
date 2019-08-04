@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingLeft="20dp"
+    android:paddingBottom="10dp"
+    >
+    <ImageView
+        android:id="@+id/webImage"
+        android:layout_height="150dp"
+        android:layout_width="235dp"
+        android:src="@drawable/meep_webbrowser_dummy"
+        android:contentDescription="@string/app_name"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:background="@drawable/image_white_stroke"
+        />
+    <TextView
+        android:id="@+id/webText"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:textAppearance="@android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/webImage"
+        android:layout_alignLeft="@id/webImage"
+        android:layout_alignRight="@id/webImage"
+        android:gravity="center_horizontal"
+        
+        android:ellipsize="marquee" 
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:freezesText="true"
+        android:selectAllOnFocus="true"
+        android:layout_marginTop="2dp"
+        
+        />
+</RelativeLayout>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:style/Theme.NoTitleBar" />
+
+    <!-- basic layout -->
+    <style name="fill_parent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="wrap_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="wrap_content_vertical" parent="wrap_content">
+        <item name="android:layout_width">fill_parent</item>
+    </style>
+
+    <style name="wrap_content_horizontal" parent="wrap_content">
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <!-- textview -->
+    <style name="PageTitle">
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/bkg_blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowRadius">2.0</item>
+    </style>
+
+    <style name="PageSubTitle" parent="wrap_content_vertical">
+        <item name="android:textSize">19dp</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowRadius">0.2</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="PageLableBig" parent="wrap_content">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">@color/shadow_start</item>
+        <item name="android:shadowRadius">0.2</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="PageLableSmall" parent="wrap_content">
+        <item name="android:minHeight">20dp</item>
+        <item name="android:minWidth">20dp</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="TextChildrenInfo" parent="wrap_content">
+        <item name="android:textColor">@color/item_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:shadowColor">@color/shadow_start</item>
+        <item name="android:shadowRadius">0.2</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="TextAccountCreateTitle" parent="TextAccountCreateLabel">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+    <style name="TextAccountCreateLabel" parent="wrap_content">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_marginBottom">-5dp</item>
+        <item name="android:textColor">@color/text_register</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:shadowColor">@color/text_white</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0.5</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="TextAccountCreateInfo" parent="wrap_content">
+        <item name="android:textColor">@color/item_text</item>
+        <item name="android:shadowColor">@color/shadow_start</item>
+        <item name="android:shadowRadius">0.2</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_marginBottom">-5dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="TextAccountInfo" parent="wrap_content">
+        <item name="android:textColor">@color/item_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">@color/shadow_start</item>
+        <item name="android:shadowRadius">0.2</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="TextAccountInfoNormal" parent="TextAccountInfo">
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_width">0.0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+    <style name="TextLogsInfo" parent="wrap_content_horizontal">
+        <item name="android:textColor">@color/item_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="BarTitle" parent="wrap_content">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="TextRegister" parent="wrap_content_horizontal">
+        <item name="android:textColor">@color/text_register</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:shadowColor">@color/text_white</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0.5</item>
+    </style>
+    <!-- MainPage Dialog Title -->
+    <style name="MainPageTitle" parent="wrap_content_horizontal">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">28dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowRadius">0.5</item>
+        <item name="android:shadowDy">1</item>
+    </style>
+    <!-- edittext -->
+    <style name="CommonEditText" parent="wrap_content">
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:layout_width">450dp</item>
+        <item name="android:layout_height">70dp</item>
+    </style>
+
+    <style name="listEditText" parent="CommonEditText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:background">@drawable/register_field</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="listEditTextSmall" parent="listEditText">
+        <item name="android:background">@drawable/register_field</item>
+        <item name="android:inputType">datetime</item>
+    </style>
+
+    <style name="listEditTextBkg" parent="CommonEditText">
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/account_field</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:layout_margin">1dp</item>
+    </style>
+
+    <style name="EditHint" parent="CommonEditText">
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+    <!-- button -->
+    <style name="CommonButton" parent="wrap_content">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">28dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:background">@drawable/btn_blue</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowRadius">0.1</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">450dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="ButtonNextArrow" parent="wrap_content">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginLeft">190dp</item>
+    </style>
+
+    <style name="ButtonDrawable" parent="wrap_content">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_gravity">right</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="ButtonMenu" parent="wrap_content_vertical">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="android:paddingLeft">100dp</item>
+        <item name="android:background">@drawable/btn_cover</item>
+    </style>
+
+    <style name="ButtonMenuArrow" parent="wrap_content">
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">380dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@drawable/arrow_white</item>
+    </style>
+
+    <style name="ButtonBottom" parent="wrap_content_vertical">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/bottom_bar</item>
+        <item name="android:drawablePadding">-34dip</item>
+    </style>
+
+    <style name="ButtonBottomForget" parent="ButtonBottom">
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@null</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowRadius">0.1</item>
+    </style>
+
+    <style name="BarImageButton_Main" parent="wrap_content">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="MainImageButton" parent="wrap_content_vertical">
+        <item name="android:layout_height">200dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@drawable/logo</item>
+    </style>
+
+    <style name="StepImageButton" parent="wrap_content">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+    <style name="StepArraw" parent="wrap_content">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <!-- image -->
+    <style name="MenuImage" parent="wrap_content">
+        <item name="android:background">@color/bkg_menu_icon</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="android:layout_width">65dp</item>
+    </style>
+
+    <style name="StepImageRe" parent="wrap_content">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="ExpandImage" parent="wrap_content">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@drawable/table_arrow</item>
+    </style>
+    <!-- divider -->
+    <style name="BarDivider" parent="fill_parent">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+        <item name="android:layout_width">1dp</item>
+    </style>
+
+    <style name="MenuHoriDivider" parent="wrap_content_horizontal">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider_color</item>
+        <!-- <item name="android:background">?android:attr/listDivider</item> -->
+    </style>
+    <!-- shadow -->
+    <style name="BarShadow" parent="wrap_content_vertical">
+        <item name="android:background">@drawable/table_bottom</item>
+        <item name="android:layout_marginTop">-20dp</item>
+        <item name="android:layout_marginRight">-30dp</item>
+    </style>
+
+    <!-- view layout -->
+    <style name="ActionBar" parent="fill_parent">
+        <item name="android:background">@drawable/top_bar</item>
+        <!-- <item name="android:background">@color/bkg_actionbar_dark</item> -->
+        <item name="android:layout_height">85dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LinearVertical" parent="wrap_content_vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LinearHorizontal" parent="wrap_content_vertical">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LinearCenterVertical" parent="wrap_content_horizontal">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ParentLayoutStyle" parent="fill_parent">
+        <item name="android:background">@drawable/app_bg</item>
+    </style>
+
+    <style name="LinearInScroll" parent="fill_parent">
+        <item name="android:orientation">vertical</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="LinearDialog" parent="wrap_content_vertical">
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_marginTop">11dp</item>
+        <item name="android:background">@drawable/table_spash_bar</item>
+        <item name="android:paddingTop">65dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">120dp</item>
+        <item name="android:layout_marginLeft">75dp</item>
+        <item name="android:layout_marginRight">150dp</item>
+    </style>
+
+    <style name="LinearDialogLessLeft" parent="LinearDialog">
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="LinearInMainScroll" parent="fill_parent">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:background">@color/bkg_dialog</item>
+    </style>
+
+    <style name="RelatedButton" parent="wrap_content">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">36dp</item>
+    </style>
+
+    <style name="ListViewStyle" parent="fill_parent">
+        <item name="android:background">@color/item_bkg_double</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:divider">@android:color/white</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:fadeScrollbars">false</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:scrollbarFadeDuration">0</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_vertical_thumb</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_vertical_track</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+    </style>
+
+    <style name="OutOfListView" parent="fill_parent">
+        <item name="android:background">@drawable/table_bottom</item>
+        <item name="android:paddingBottom">50dp</item>
+        <item name="android:layout_marginRight">124dp</item>
+        <item name="android:layout_marginLeft">140dp</item>
+    </style>
+
+    <style name="gender_toggle" parent="wrap_content">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/btn_gender_bkg</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowRadius">0.1</item>
+        <item name="android:paddingLeft">20dp</item>
+    </style>
+    <style name="gender_toggle_text" parent="fill_parent">
+        <item name="android:textSize">23sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowRadius">0.1</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="switcher_toggle_text" parent="wrap_content">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+</resources>

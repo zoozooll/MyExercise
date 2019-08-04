@@ -1,0 +1,114 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- MessageBox -->
+    <style name="Default"></style>
+    <!-- MessageDialog -->
+    <style name="MessageDialogActivity" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/pop_up</item> 
+    </style>
+    
+    <style name="dialogButton" parent="@android:style/Widget.TextView" >
+        <item name="font">MEEP.ttf</item>
+        <item name="textColor">@android:color/white</item>
+        <item name="outlineColor">@color/dialog_button</item>
+        <item name="textSize">36</item>
+        <item name="outlineWidth">5</item>
+    </style>
+    
+    <style name="MessageDialog" parent="MessageDialogActivity">
+        
+    </style>
+
+    <style name="CameraAppIcon">
+        <item name="android:background">@drawable/camera</item>
+    </style>
+
+    <style name="customfont_textview" parent="@android:style/Widget.TextView">
+        <item name="textSize">40</item>
+        <item name="outlineWidth">5</item>
+        <item name="android:textStyle">bold</item>
+        <item name="joinStyle">round</item>
+        <item name="font">MEEP.ttf</item>
+    </style>
+    <style name="customfont_edittext" parent="@android:style/Widget.EditText">
+        <item name="textSize">40</item>
+        <item name="android:textStyle">bold</item>
+        <item name="font">MEEP.ttf</item>
+    </style>
+    <style name="customfont_button" parent="@android:style/Widget.Button">
+        <item name="textSize">40</item>
+        <item name="android:textStyle">bold</item>
+        <item name="font">MEEP.ttf</item>
+    </style>
+    <style name="custom_textview" >
+         <item name="android:textStyle">bold</item>
+         <item name="textColor">@android:color/white</item>
+        <item name="joinStyle">round</item>     
+    </style>
+     <style name="custom_textview_shadow" >
+         <item name="android:textStyle">bold</item>
+        <item name="joinStyle">round</item>   
+        <item name="outlineWidth">5</item>
+        <item name="outlineColor">@color/shadowyellow</item>
+    </style>
+    <style name="right_menu_title" parent="customfont_textview">
+        <item name="textColor">@android:color/white</item>
+    </style>
+    <style name="right_menu_title_shadow" parent="right_menu_title">
+        <item name="textColor">@android:color/white</item>
+        <item name="outlineWidth">5</item>
+        <item name="outlineColor">@color/shadowblue</item>
+        <item name="joinStyle">round</item>
+    </style>
+    <style name="right_menu_title_shadow_blue" parent="right_menu_title_shadow">
+    </style>
+    <style name="right_menu_title_shadow_yellow" parent="right_menu_title_shadow">
+        <item name="outlineColor">@color/shadowyellow</item>
+    </style>
+    <style name="right_menu_title_shadow_brown" parent="right_menu_title_shadow">
+        <item name="outlineColor">@color/shadowbrown</item>
+    </style>
+    <style name="right_menu_title_shadow_red" parent="right_menu_title_shadow">
+        <item name="outlineColor">@color/shadowred</item>
+    </style>
+    <style name="right_menu_title_shadow_green" parent="right_menu_title_shadow">
+        <item name="outlineColor">@color/shadow_green</item>
+    </style>
+    <style name="right_menu_title_shadow_blue" parent="right_menu_title_shadow">
+    </style>
+	<style name="message_dialog" parent="@android:style/Theme.Dialog">
+	    <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:gravity">center</item>
+	</style>
+	<style name="profile_camera_text">
+        <item name="android:textSize">32dp</item>
+    </style>
+</resources>

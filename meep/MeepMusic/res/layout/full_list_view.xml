@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/musicFullListViewLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/player_bg1">
+
+    <!-- <ScrollView
+        android:id="@+id/scrollViewFullList"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_x="0dp"
+        android:layout_y="0dp" >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFullList"
+            android:layout_width="900dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView> -->
+    
+    <!-- <com.oregonscientific.meep.view.MyGridView 
+        xmlns:app="http://schemas.android.com/apk/res/com.oregonscientific.meep.meepmusic"
+	    android:id="@+id/myMusics"
+	    android:layout_width="match_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="100dp"
+	    android:paddingRight="60dp"
+	    android:columnWidth="150dp"
+	    android:stretchMode="columnWidth"
+	    android:numColumns="5"
+	    android:scrollbars="none"
+	    app:line_background="@drawable/movie_shelf"/> -->
+    <GridView
+	    android:id="@+id/myMusics"
+	    android:layout_width="match_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="60dp"
+	    android:paddingRight="60dp"
+	    android:stretchMode="columnWidth"
+	    android:numColumns="5"
+	    android:scrollbars="none"/>
+	    
+
+ <!--    <RelativeLayout
+        android:id="@+id/gridLayoutOption"
+        android:layout_width="285dp"
+        android:layout_height="210dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+		android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/buttonOptionCenterBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="69dp"
+            android:src="@drawable/ringmenu_bluecircle" />
+        
+         <ImageView
+            android:id="@+id/buttonOptionCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="119dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/ringmenu_centercircle" />
+        
+        <ImageView
+            android:id="@+id/imageViewBtnBg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="38dp"
+            android:src="@drawable/ringmenu_btn05" />
+
+        <ImageView
+            android:id="@+id/imageViewBtnBg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ringmenu_btn03" />
+
+        <ImageView
+            android:id="@+id/imageViewBtnBg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="92dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/ringmenu_btn01" />
+
+        <ImageView
+            android:id="@+id/imageViewBtnBg4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="141dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ringmenu_btn02"/>
+        
+         <ImageView
+            android:id="@+id/imageViewBtnBg5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="39dp"
+            android:src="@drawable/ringmenu_btn04" />
+         
+         <ImageView
+            android:id="@+id/imageViewBtnFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="116dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ringmenu_ico_favourite" />
+         <ImageView
+            android:id="@+id/imageViewBtnBlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="165dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ringmenu_ico_block" />
+         <ImageView
+            android:id="@+id/imageViewBtnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ringmenu_ico_edit" />
+         <ImageView
+            android:id="@+id/imageViewBtnMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="203dp"
+            android:layout_marginTop="69dp"
+            android:src="@drawable/ringmenu_ico_message" />
+         <ImageView
+            android:id="@+id/imageViewBtnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/ringmenu_ico_play" />
+
+    </RelativeLayout> -->
+    
+    <RelativeLayout
+        android:id="@+id/relativeLayoutRename"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        android:background="@color/grey"
+        android:visibility="gone">
+        
+		<EditText
+            android:id="@+id/editTextRename"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+			android:inputType="text"
+        	android:imeOptions="actionSearch">
+        </EditText>
+    </RelativeLayout>
+    
+    
+    <ImageView
+           	android:id="@+id/imageViewSnackView"
+           	android:layout_width="80dp"
+           	android:layout_height="80dp"
+           	android:scaleType="center"
+           	android:layout_x="980dp"
+  	 		android:layout_y="10dp"
+           	android:src="@drawable/snake_bk" />
+
+      <Button
+          android:id="@+id/buttonConfirmButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_x="1000dp"
+          android:layout_y="400dp"
+          android:text="@string/music_btn_ok" 
+          android:visibility="gone"/>
+      
+      
+
+</AbsoluteLayout>

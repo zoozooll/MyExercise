@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MeepOTA</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    
+    <string name="ota_local">Download via\n PC/Mac</string>
+    <string name="ota_download">Download and Install\n on the MEEP!</string>
+    <string name="ota">OTA</string>
+    <string name="current_version">Current version :&#160;</string>
+    <string name="new_version">New update :&#160;</string>
+    <string name="not_available">No update currently available</string>
+    <string name="find_file_fail">Can\'t find the OTA package! For more information, please visit this address (http://www.meeptablet.com/ota) from you PC/Mac.</string>
+    <string name="verify_file_fail">The OTA package can\'t be verified. Please try again!</string>
+    <string name="download_abort">Fail to download!</string>
+    <string name="proceeding">Verifying the OTA package…wait a moment!\nYour device will restart automatically after the installation.</string>
+    <string name="information">Information</string>
+    <string name="new_features">New Features</string>
+    <string name="check_agin">Check again</string>
+    <string name="wifi_off">No network! Please turn on your wifi and try again!</string>
+    <string name="downloading">Downloading &#8230;</string>
+    <string name="ota_available_title">OTA Update</string>
+    <string name="ota_available_message">A new OTA %s is now available for your MEEP! Would you like to download it and update your MEEP! now?</string>
+    <string name="ota_available_update">Update Now</string>
+    <string name="ota_available_later">Later</string>
+    <string name="power_connection_needed">Please connect your MEEP!X2 to the power adapter before to proceed with the OTA update.</string>
+</resources>

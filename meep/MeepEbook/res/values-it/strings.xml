@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepEbookActivity!</string>
+    <string name="app_name">MeepEbook</string>
+	
+    
+    <string name="ebook_btn_ring_delete">Elimina</string>
+    <string name="ebook_btn_ring_rename">Rinomina</string>
+
+	<string name="ebook_title_heads_up">Attenzione!</string>
+	<string name="ebook_msg_unprotected_web">Stai per essere reindirizzato a un sito non protetto.</string>
+	<string name="ebook_msg_protected_web">Stai per essere reindirizzato a un sito esterno protetto.</string>
+	<string name="ebook_btn_proceed">Continua</string>
+        <string name="ebook_btn_ebook_bookmark">Segnalibro</string>
+	<string name="ebook_title_uh_oh">Uh-oh!</string>
+	<string name="ebook_msg_xxx_5mins">Ti restano solo 5 min per usare il Lettore e-book.</string>
+	<string name="ebook_title_times_up">Tempo scaduto!</string>
+	<string name="ebook_msg_try_again_xxx">Spiacenti, non puoi usare il Lettore e-book ora. Riprova tra %1$d min!</string>
+	<string name="ebook_btn_ok">OK</string>
+	<string name="ebook_msg_short_timer_reminder_xxx">Promemoria timer - Lettore e-book</string>
+	<string name="ebook_msg_short_timeup_xxx">Tempo scaduto! - Lettore e-book</string>
+	<string name="ebook_title_update">Aggiorna</string>
+	<string name="ebook_msg_update_xxx_timer_changed">Il timer del Lettore e-book è stato modificato %1$d</string>
+	<string name="ebook_msg_update_xxx">Aggiornamento - Lettore e-book</string>
+	<string name="ebook_title_blocked">Bloccato</string>
+	<string name="ebook_msg_sorry_unprotected_web">Spiacenti, non ti è permesso essere reindirizzato a un sito non protetto.</string>
+	<string name="ebook_btn_approval">Richiedi approvazione</string>
+	<string name="ebook_msg_approval_sent">Richiesta d\'approvazione inviata!</string>
+	<string name="ebook_msg_short_blocked_xxx">Bloccato - Lettore e-book</string>
+	<string name="ebook_msg_sorry_protected_web">Spiacenti, non ti è permesso essere reindirizzato al sito protetto.</string>
+	<string name="ebook_title_sudden_change">Modifica accesso immediato</string>
+	<string name="ebook_msg_sudden_parental_change">Spiacenti, non puoi usare questa applicazione al momento poiché l\'impostazione d\'accesso nel Portale genitori è stata modificata.</string>
+	<string name="ebook_btn_ask_access">Richiedi l\'accesso</string>
+	<string name="ebook_msg_access_request_sent">Richiesta d\'accesso inviata!</string>
+	<string name="ebook_title_version_update">Aggiornamento versione</string>
+	<string name="ebook_msg_available_upgrade">C\'è una nuova versione disponibile per questa applicazione, desideri aggiornarla?</string>
+	<string name="ebook_btn_yes">Sì</string>
+	<string name="ebook_btn_no">No</string>
+	<string name="ebook_msg_xxx_available_update">Aggiorna - %1$s %2$s - Aggiornamento disponibile</string>
+    
+    
+	<string name="ebook_title_rename_error">Errore nella rinomina</string>
+	<!-- <string name="ebook_msg_rename_error">This destination already contains a file named %1$S Please check it before renaming this file.</string> -->
+	<string name="ebook_msg_name_invalid">Il nome del file non può iniziare con \".\", si prega di cambiare il nome del file.</string>
+	<string name="ebook_msg_blocked">Non digitare contenuto non appropriato. Il nome contiene caratteri non validi.</string>
+	<string name="ebook_msg_page_XX">Pagina</string>
+	<string name="ebook_msg_cannot_play_the_video">Oops! Il video non può essere visto...</string>
+	<string name="ebook_msg_cannot_play_the_audio">Oops! L\'audio non può essere riprodotto...</string>
+	<string name="ebook_msg_end_of_the_book">Fine del libro!</string>
+	<string name="ebook_msg_unsopported_ebook">Spiacenti, l\'e-book non può essere letto…</string>
+	<string name="ebook_msg_cannot_open_ebook">Spiacenti, l\'e-book non può essere aperto…</string>
+	<string name="ebook_msg_bookmark_added">Segnalibro aggiunto</string>
+	<string name="ebook_msg_bookmark_deleted">Segnalibro eliminato</string>
+	<string name="ebook_msg_bookmark">Segnalibro</string>
+	<string name="ebook_msg_first_page">Prima pagina</string>
+	<string name="ebook_msg_end">Fine</string>
+	<string name="ebook_badword_msg">Blocca</string>
+	<!-- Update -->
+	<string name="ebook_update_title">Avviso importante</string>
+	<string name="ebook_update_message">Abbiamo un lettore e-book nuovo di zecca per te!\nGli e-book che hai scaricato devono essere resinstallati dal MEEP! store gratuitamente.</string>
+</resources>

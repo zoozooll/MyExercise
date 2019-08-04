@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="TAG"></item>
+     <item type="id" name="left_btn_volume"></item>
+     <item type="id" name="right_btn_play"></item>
+</resources>

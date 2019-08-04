@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_half_trans" >
+
+    <ImageView
+        android:id="@+id/dialogbg"
+        style="@style/fill_parent"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pop_up_white_bubble" />
+
+    <RelativeLayout
+        style="@style/wrap_content"
+        android:layout_alignBottom="@id/dialogbg"
+        android:layout_alignLeft="@id/dialogbg"
+        android:layout_alignRight="@id/dialogbg"
+        android:layout_alignTop="@id/dialogbg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/ok"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="140dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="240dp"
+                android:layout_marginRight="220dp"
+                android:gravity="center"
+                android:lineSpacingExtra="20dp"
+                android:maxLines="30"
+                android:scrollbars="none"
+                android:text="test"
+                android:textColor="@android:color/black"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ok"
+            style="@style/CommonButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="150dp"
+            android:background="@drawable/btn_blue"
+            android:text="@android:string/ok" />
+    </RelativeLayout>
+
+</RelativeLayout>

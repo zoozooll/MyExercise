@@ -1,0 +1,849 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+ {
+position: fixed;
+width: 800px;
+height: 444px;
+top: 0px;
+left: 0px;
+background:url('../main_menu/meep_market_mainmenu_bg.png') no-repeat top left fixed;	
+font-family:Arial ,Helvetica,sans-serif;	
+font-weight:bold;
+margin: 0px;
+}
+#error
+{
+position:fixed;
+width:800px;
+height:444px;
+top:0px;
+left:0px;
+z-index:10;
+}
+#error > div
+{
+width:355px;
+margin-top:185px;
+margin-left:226px;
+font-size:18px;
+text-align:center;
+color: rgb(20, 64, 113);
+}
+
+
+
+.logo
+{
+position:absolute;
+width:161px;
+height:64px;
+z-index:4;
+}
+#logo_id
+{
+background:url('../main_menu/meep_market_logo.png') 0 0;
+}
+#logo_id:hover
+{
+background:url('../main_menu/meep_market_logo.png') -161px 0;
+}
+
+
+
+#searchbar
+{
+position:absolute;
+width:174px;
+height:34px;
+margin-top:8px;
+margin-left:295px;
+background:url('../main_menu/meep_market_searchbar.png') no-repeat 0 0;
+z-index:2;
+}
+#searchbar_txt
+{
+position:absolute;
+padding-top: 7px;
+text-indent: 7px;
+color: rgb(185, 196, 210);
+z-index:2;
+}
+#searchbtn_id
+{
+position:absolute;
+width:35px;
+height:31px;
+margin-top: 8px;
+margin-left:464px;
+background:url('../main_menu/meep_market_search01.png') 0 0;
+z-index:2;
+}
+#searchbtn_id:hover
+{
+position:absolute;
+width:35px;
+height:31px;
+margin-top: 8px;
+margin-left:464px;
+background:url('../main_menu/meep_market_search01.png') -31px 0;
+z-index:2;
+}
+
+
+
+#coins_icon
+{
+position:absolute;
+width:160px;
+height:19px;
+margin-top: 15px;
+margin-left:574px;
+background: url('../category/meep_market_coinsicon.png') no-repeat;
+z-index: 3;
+}
+#coins_icon_txt
+{
+text-align: center;
+text-indent: 27px;
+font-size: 18px;
+color: rgb(20, 64, 113);
+text-shadow: 0px 0px 7px #FFFFFF;
+}
+#coins_icon_txt[data-lang='de']
+{
+padding-top:3px;
+text-align: center;
+text-indent: 20px;
+font-size: 13px;
+color: rgb(20, 64, 113);
+text-shadow: 0px 0px 7px #FFFFFF;
+}
+#coins_icon_txt[data-lang='es']
+{
+padding-top:3px;
+text-align: center;
+text-indent:20px;
+font-size: 16px;
+color: rgb(20, 64, 113);
+text-shadow: 0px 0px 7px #FFFFFF;
+}
+#coins_logo_id
+{
+position:absolute;
+width:164px;
+height:69px;
+margin-top: 3px;
+margin-left:638px;
+background-position:0 0;
+}
+#coins_logo_id:hover
+{
+position:absolute;
+width:164px;
+height:69px;
+margin-top: 3px;
+margin-left:638px;
+background-position:-164px 0;
+}
+
+
+
+div.tv
+{
+position:absolute;
+width:270px;
+height:185px;
+margin-top:51px;
+margin-left:257px;
+background:url('../main_menu/meep_market_TV.png') no-repeat 0 0; 
+z-index:2;
+}
+.tv_screen
+{
+width:218px;
+height:158px;
+margin-top:17px;
+margin-left:27px;
+overflow: hidden;
+/* background:url('../main_menu/meep_market_demo_banner.png') no-repeat; */
+z-index:6;
+
+}
+.tv_screen img {
+    background-color: #000000;  	
+	-webkit-mask: url('../main_menu/meep_market_TV.png') no-repeat -297px -17px; 
+}
+
+.arrow
+{
+position:absolute;
+width:12px;
+height:165px;
+z-index:4;
+}
+div#arrow_left
+{
+margin-top:69px;
+margin-left:263px;
+background:url('../main_menu/meep_market_screenleft.png') no-repeat 0 62px;
+}
+div#arrow_left:hover
+{
+margin-top:69px;
+margin-left:263px;
+background:url('../main_menu/meep_market_screenleft.png') no-repeat -12px 62px;
+}
+div#arrow_right
+{
+margin-top:69px;
+margin-left:509px;
+background:url('../main_menu/meep_market_screenright.png') no-repeat 0 62px;
+}
+div#arrow_right:hover
+{
+margin-top:69px;
+margin-left:509px;
+background:url('../main_menu/meep_market_screenright.png') no-repeat -12px 62px;
+}
+
+
+.spotlight
+{
+position:absolute;
+width:141px;
+height:384px;
+z-index:1;
+background:url('../main_menu/meep_market_spotlight.png');
+}
+div#spotlight1
+{
+margin-top:35px;
+margin-left:18px;
+transform:rotate(-8deg);
+-ms-transform:rotate(-8deg); /* IE 9 */
+-moz-transform:rotate(-8deg); /* Firefox */
+-webkit-transform:rotate(-8deg); /* Safari and Chrome */
+-o-transform:rotate(-8deg); /* Opera */
+z-index:-1;
+}
+div#spotlight2
+{
+margin-top:43px;
+margin-left:143px;
+transform:rotate(-8deg) scaleX(0.8);
+-ms-transform:rotate(-8deg) scaleX(0.8); /* IE 9 */
+-moz-transform:rotate(-8deg) scaleX(0.8); /* Firefox */
+-webkit-transform:rotate(-8deg) scaleX(0.8); /* Safari and Chrome */
+-o-transform:rotate(-8deg) scaleX(0.8); /* Opera */
+z-index:-1;
+}
+div#spotlight3
+{
+margin-top:18px;
+margin-left:358px;
+transform:rotate(-8deg);
+-ms-transform:rotate(-8deg); /* IE 9 */
+-moz-transform:rotate(-8deg); /* Firefox */
+-webkit-transform:rotate(7deg); /* Safari and Chrome */
+-o-transform:rotate(-8deg); /* Opera */
+}
+div#spotlight4
+{
+margin-top:25px;
+margin-left:523px;
+transform:rotate(18deg) scaleX(0.9);
+-ms-transform:rotate(18deg) scaleX(0.9); /* IE 9 */
+-moz-transform:rotate(18deg) scaleX(0.9);/* Firefox */
+-webkit-transform:rotate(18deg) scaleX(0.9); /* Safari and Chrome */
+-o-transform:rotate(18deg) scaleX(0.9); /* Opera */
+}
+div#spotlight5
+{
+margin-top:83px;
+margin-left:663px;
+transform:rotate(10deg);
+-ms-transform:rotate(10deg); /* IE 9 */
+-moz-transform:rotate(10deg); /* Firefox */
+-webkit-transform:rotate(10deg); /* Safari and Chrome */
+-o-transform:rotate(10deg); /* Opera */
+z-index:-1;
+}
+
+.movie
+{
+position:absolute;
+width:182px;
+height:229px;
+margin-top:214px;
+margin-left:-16px;
+}	
+div#movie_id
+{
+/* background:url('../main_menu/meep_market_movieicon.png') no-repeat 0 0; */
+background:url('../main_menu/meep_market_movieicon.png') no-repeat -182px 0;
+}
+div#movie_id:hover
+{
+background:url('../main_menu/meep_market_movieicon.png') no-repeat -182px 0;
+}
+div#movie_caption
+{
+top:161px;
+left:84px;
+font-size:27px;
+color: rgb(49, 79, 68);	
+font-family: 'Fredoka One', cursive;
+transform: skewY(-5deg);
+-ms-transform: skewY(-5deg); /* IE 9 */
+-moz-transform: skewY(-5deg); /* Firefox */
+-webkit-transform: skewY(-5deg); /* Safari and Chrome */
+-o-transform: skewY(-5deg); /* Opera */
+}
+div#movie_caption[data-lang='es']
+{
+top:167px;
+font-size:20px;
+}
+
+
+.music
+{
+position:absolute;
+width:134px;
+height:179px;
+margin-top:222px;
+margin-left:158px;
+}
+div#music_id
+{
+/* background:url('../main_menu/meep_market_musicicon.png') no-repeat 0 0; */
+background:url('../main_menu/meep_market_musicicon.png') no-repeat -134px 0;
+}
+div#music_id:hover
+{
+background:url('../main_menu/meep_market_musicicon.png') no-repeat -134px 0;
+}
+div#music_caption
+{
+top:145px;
+left:-10px;
+font-size:20px;
+text-align:right;
+color: rgb(75, 72, 102);	
+font-family: 'Fredoka One', cursive;
+transform: skewY(-4deg);
+-ms-transform: skewY(-4deg); /* IE 9 */
+-moz-transform: skewY(-4deg); /* Firefox */
+-webkit-transform: skewY(-4deg); /* Safari and Chrome */
+-o-transform: skewY(-4deg); /* Opera */
+}
+
+.apps
+{
+position:absolute;
+width:232px;
+height:168px;
+margin-top:256px;
+margin-left:286px;
+}
+div#apps_id
+{
+background:url('../main_menu/meep_market_appsicon.png') no-repeat 0 0;
+}
+div#apps_id:hover
+{
+background:url('../main_menu/meep_market_appsicon.png') no-repeat -232px 0;
+}
+div#apps_caption
+{
+top:128px;
+left:156px;
+font-size:25px;
+color: rgb(54, 82, 116);
+font-family: 'Fredoka One', cursive;
+}
+
+.game
+{
+position:absolute;
+width:145px;
+height:149px;
+margin-top:247px;
+margin-left:496px;
+}
+div#game_id
+{
+background:url('../main_menu/meep_market_gameicon.png') no-repeat 0 0;
+}
+div#game_id:hover
+{
+background:url('../main_menu/meep_market_gameicon.png') no-repeat -145px 0;
+}
+div#game_caption
+{
+top:117px;
+left:-12px;
+font-size:20px;
+text-align:right;
+color: rgb(105, 80, 50);
+font-family: 'Fredoka One', cursive;
+transform: skewY(-5deg);
+-ms-transform: skewY(-5deg); /* IE 9 */
+-moz-transform: skewY(-5deg); /* Firefox */
+-webkit-transform: skewY(-5deg); /* Safari and Chrome */
+-o-transform: skewY(-5deg); /* Opera */
+}
+
+
+.ebook
+{
+position:absolute;
+width:196px;
+height:200px;
+margin-top:240px;
+margin-left:636px;
+clip:rect(0px,164px,200px,0px);
+
+}
+div#ebook_id
+{
+background:url('../main_menu/meep_market_ebookicon.png') no-repeat 0 0; 
+/* background:url('../main_menu/meep_market_ebookicon.png') no-repeat -196px 0; */
+}
+div#ebook_id:hover
+{
+background:url('../main_menu/meep_market_ebookicon.png') no-repeat -196px 0;
+}
+div#ebook_caption
+{
+top:169px;
+left:29px;
+font-size:23px;
+color: rgb(85, 69, 55);
+font-family: 'Fredoka One', cursive;
+transform: skewY(12deg);
+-ms-transform: skewY(12deg); /* IE 9 */
+-moz-transform: skewY(12deg); /* Firefox */
+-webkit-transform: skewY(12deg); /* Safari and Chrome */
+-o-transform: skewY(12deg); /* Opera */
+}
+
+.comingsoon
+{
+font-size: 18px;
+color: white;
+white-space: nowrap;
+}
+#comingsoon_movie
+{
+padding-top:127px;
+padding-left:52px;
+}
+#comingsoon_music
+{
+padding-top:94px;
+padding-left:22px;
+font-size:15px;
+}
+#comingsoon_ebook
+{
+padding-top:103px;
+padding-left:30px;
+}
+
+
+.more_arrow
+{
+position:absolute;
+width:100px;
+height:30px;
+}
+#more_left
+{
+top:122px;
+left:77px;
+text-indent:14px;
+font-size:20px;
+color: rgb(140, 187, 208);
+vertical-align:text-top;
+background:url('../main_menu/meep_market_leftmore.png') no-repeat 0 5px;
+transform: skewY(-8deg); 
+-ms-transform: skewY(-8deg); /* IE 9 */
+-moz-transform: skewY(-8deg);  /* Firefox */
+-webkit-transform: skewY(-8deg); /* Safari and Chrome */
+-o-transform: skewY(-8deg); /* Opera */
+}
+#more_right
+{
+top:128px;
+left:655px;
+text-indent:0px;
+font-size:20px;
+color: rgb(140, 187, 208);
+vertical-align:text-top;
+background:url('../main_menu/meep_market_rightmore.png') no-repeat 50px 5px;
+transform: skewY(9deg); 
+-ms-transform: skewY(9deg); /* IE 9 */
+-moz-transform: skewY(9deg);  /* Firefox */
+-webkit-transform: skewY(9deg); /* Safari and Chrome */
+-o-transform: skewY(9deg); /* Opera */
+}
+
+#popup_id
+{
+position: absolute;
+width: 800px;
+height: 444px;
+
+}
+#popup_bg
+{
+position: absolute;
+width:800px;
+height:444px;
+top:0px;
+left:0px;
+background-color:black;
+opacity:0.7;
+filter:Alpha(opacity=70); /* IE8 and earlier */
+z-index: 5;
+}
+#popup_b
+{
+position: absolute;
+width:557px;
+height:396px;
+margin-top:28px;
+margin-left:95px;
+background:url('../main_menu/meep_market_codepopup_big.png') no-repeat;
+z-index: 6;
+}
+#popup_b_title
+{
+width:355px;
+height:61px;
+margin-top:60px;
+margin-left:175px;
+}
+#popup_b_title_txt
+{
+width:100%;
+padding-top: 10px;	
+font-size:20px;
+text-indent: 50px;
+color: rgb(255, 255, 255);
+}
+#popup_content_box
+{
+float:left;
+width: 459px;
+height: 120px;
+margin-top: 14px;
+margin-left: 72px;
+margin-bottom:-5px;
+padding-left:19px;
+}
+#popup_app_icon_bg
+{
+width: 130px;
+height:120px;
+margin-top: 13px;
+background:url('../main_menu/meep_market_codeblock.png') no-repeat 0 0;
+}
+#popup_app_icon
+{
+width:127px;
+height:103px;
+background:url('../meep_store_icon_dummy.png') no-repeat 3px 10px ;
+background-size:80%;
+-webkit-mask:url('../category/meep_market_game_block.png');
+-webkit-mask-position: -127px 0;
+}
+#popup_b_content_icon
+{
+width:95px;
+height:79px;
+margin-left: 105px;
+background:url('../main_menu/meep_market_coinsicon.png');
+}
+#popup_b_content1
+{
+width:229px;
+height:50px;
+margin-top:-45px;
+margin-left:215px;
+}
+#popup_b_content1_txt
+{
+width:100%;
+font-size: 20px;
+text-align: left;
+color: rgb(20, 64, 113);
+text-shadow: 0px 0px 7px #FFFFFF;
+}
+#popup_b_container1, #popup_b_container2, #popup_b_container3
+{
+float:left;
+width:150px;
+height:160px;
+}
+#popup_b_app1, #popup_b_app2, #popup_b_app3
+{
+float: left;
+width:130px;
+height:120px;
+margin-top:-120px;
+margin-left:0px;
+background-position:14px 15px;
+background-repeat:no-repeat;
+background-size:80px 80px;
+-webkit-mask:url('../main_menu/meep_market_codeblock.png');
+-webkit-mask-position: -120px 0px;
+}
+#popup_b_app1_txt, #popup_b_app2_txt, #popup_b_app3_txt
+{
+width:130px;
+margin-top:-7px;
+margin-left:-7px;
+font-size:18px;
+text-align:center;
+color: rgb(20, 64, 113);
+text-shadow: 0px 0px 7px #FFFFFF;
+}
+#popup_plus_sign1
+{
+float:left;
+width:30px;
+height:30px;
+margin-top:53px;
+margin-left:-28px;
+font-size:35px;
+color: rgb(20, 64, 113);
+text-shadow: 0px 0px 7px #FFFFFF;
+}
+#popup_plus_sign2
+{
+float:left;
+width:30px;
+height:30px;
+margin-top:53px;
+margin-left:-27px;
+font-size:35px;
+color: rgb(20, 64, 113);
+text-shadow: 0px 0px 7px #FFFFFF;
+}
+#popup_b_content2
+{
+width:400px;
+height:50px;
+margin-top:58px;
+margin-left:104px;
+}
+#popup_b_content2_txt
+{
+width:100%;
+padding-top: 20px;
+text-align: center;
+color: rgb(20, 64, 113);
+text-shadow: 0px 0px 7px #FFFFFF;
+}
+#popup_b_btn_box
+{
+width:557px;
+height:50px;
+margin-top:203px;
+padding-top:5px;
+}
+#popup_b_btn1
+{
+width:111px;
+height:47px;
+margin-top: -20px;
+margin-left: 142px;
+background:url('../category/meep_market_requestcoinbtn.png') 0 0;
+}
+#popup_b_btn1:hover
+{
+width:111px;
+height:47px;
+margin-top: -20px;
+margin-left: 142px;
+background:url('../category/meep_market_requestcoinbtn.png') -111px 0;
+}
+#popup_b_btn2
+{
+width:111px;
+height:47px;
+margin-top: -47px;
+margin-left: 369px;
+background:url('../category/meep_market_requestcoinbtn.png') 0 0;
+}
+#popup_b_btn2:hover
+{
+width:111px;
+height:47px;
+margin-top: -47px;
+margin-left: 369px;
+background:url('../category/meep_market_requestcoinbtn.png') -111px 0;
+}
+#popup_b_btn3
+{
+width:111px;
+height:47px;
+margin-top: -20px;
+margin-left: 255px;
+background:url('../category/meep_market_requestcoinbtn.png') 0 0;
+}
+#popup_b_btn3:hover
+{
+width:111px;
+height:47px;
+margin-top: -20px;
+margin-left: 255px;
+background:url('../category/meep_market_requestcoinbtn.png') -111px 0;
+}
+#popup_b_btn1_txt, #popup_b_btn2_txt, #popup_b_btn3_txt
+{
+width: 95px;
+padding-top: 10px;
+padding-left: 5px;
+font-size: 16px;
+color: rgb(20, 64, 113);
+text-shadow: 0px 0px 7px #FFFFFF;
+text-align: center;
+}	
+
+#popup_s
+{
+position: absolute;
+width:531px;
+height:309px;
+margin-top:54px;
+margin-left:114px;
+background:url('../main_menu/meep_market_codepopup.png') no-repeat;
+z-index: 6;
+}
+#popup_s_title
+{
+width:370px;
+height:60px;
+margin-top:60px;
+margin-left:169px;
+}
+#popup_s_title_txt
+{
+width:343px;
+height:50px;
+margin-bottom:18px;
+font-size:18px;
+text-align:left;
+color: white;
+}
+#popup_s_content1
+{
+width:285px;
+height:30px;
+margin-top:16px;
+margin-left:141px;
+/* background:url('../main_menu/meep_market_codetextbox.png') no-repeat ; */
+}
+#popup_s_content1_txt
+{
+width:100%;
+padding-top: 7px;
+text-align: left;
+text-indent: 10px;
+max-width: 270px;
+white-space: nowrap;
+}
+#popup_s_content2
+{
+width:459px;
+height:90px;
+margin-top:10px;
+margin-bottom:10px;
+margin-left:59px;
+}
+#popup_s_content2_txt
+{
+width:100%;
+color: red;
+text-align: center;
+}
+#popup_s_btn1
+{
+width:111px;
+height:47px;
+margin-top: -44px;
+margin-left: 117px;
+background:url('../category/meep_market_requestcoinbtn.png') 0 0;
+}
+#popup_s_btn1:hover
+{
+width:111px;
+height:47px;
+margin-top: -44px;
+margin-left: 117px;
+background:url('../category/meep_market_requestcoinbtn.png') -111px 0;
+}
+#popup_s_btn2
+{
+width:111px;
+height:47px;
+margin-top:-47px;
+margin-left:347px;
+background:url('../category/meep_market_requestcoinbtn.png') 0 0;
+}
+#popup_s_btn2:hover
+{
+width:111px;
+height:47px;
+margin-top:-47px;
+margin-left:347px;
+background:url('../category/meep_market_requestcoinbtn.png') -111px 0;
+}
+#popup_s_btn1_txt, #popup_s_btn2_txt
+{
+width: 95px;
+padding-top: 10px;
+padding-left: 5px;
+font-size: 16px;
+color: rgb(20, 64, 113);
+text-shadow: 0px 0px 7px #FFFFFF;
+text-align: center;
+}	
+	
+	
+#congratulation
+{
+font-size: 30px;
+color: rgb(255, 113, 1);
+text-shadow: 2px 2px #FFFFFF;
+}	
+
+
+input
+{
+width: 100%;
+}
+
+span
+{ 
+  position:absolute; 
+  width:100%;
+  height:100%;
+ 
+ /* edit: added z-index */
+  z-index: 4;
+
+  /* edit: fixes overlap error in IE7/8, 
+     make sure you have an empty gif */
+  background-image: url('empty.gif');
+}   
+
+
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);	
+}

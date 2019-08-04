@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Comunicador</string>
+    <string name="action_settings">Configuración</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Add Friend -->
+    <string name="friend_not_found">¡Lo siento! No se pudo encontrar a sus amigos. ¿Buscar de nuevo?</string>
+    
+    
+    <!-- Friend View -->
+    <string name="add_friends">Añadir amigos</string>
+    <string name="add">+</string>
+    <string name="add_friend_hint">Hola,%s, quiero añadirte como amigo</string>
+    <string name="search_friend_hint">Escribe aquí el nombre de usuario MEEP! de tu amigo aquí para buscarlo.</string>
+    <string name="search">Buscar</string>
+    <string name="search_friend">Buscar amigo</string>
+
+    <!-- Conversation View -->
+    <string name="type_chat_hint">Escribe aquí para chatear</string>
+    <string name="send">Enviar</string>
+
+    <string name="accept">Aceptar</string>
+    <string name="decline">Rechazar</string>
+    
+    <!--  Accept Friend pop up -->
+    <string name="accept_friend_title">Solicitud de amistad</string>
+    <string name="accept_friend">Amigo aceptada</string>
+    <string name="accept_friend_format_string">A %s le gustaría añadirte como amigo</string>
+    <string name="accept_friend_friends_message_format_string">Mensaje de %1$s\n%2$s</string>
+    
+    <!--  Error View -->
+    <string name="ok">OK</string>
+    <string name="error">¡Vaya!</string>
+    <string name="error_message_parents_cannot_delete">Los padres y supervisores no se han podido eliminar.</string>
+    <string name="blocked">Esta palabra está bloqueada por la lista de palabras malas.</string>
+    <string name="cannot_process">Bloqueado</string>
+    <string name="cannot_add_yourself">¡No puedes agregarte a ti mismo como tu amigo!</string>
+    <string name="cannot_add_existing_friend">Este usuario ya está en tu lista de amigos :)</string>
+    <string name="please_enter_meep_id">Por favor, introduce el ID de MEEP! primero!</string>
+    <string name="user_already_your_friend">¡Este usuario ya está en tu lista de amigos!</string>
+    <string name="duplicated_friend_request">¡Este usuario ya está en tu lista de amigos!</string>
+    <string name="no_results">No hay resultados</string>
+    
+    <!--  Search Friend Error  -->
+    <string name="user_not_found">Lo siento, no se ha encontrado a ningún amigo con ese nombre. Por favor, inténtalo de nuevo.</string>
+    
+    <!--  Network Popup -->
+    <string name="oops">¡Vaya!</string>
+    <string name="no_network">Tienes que acceder en línea con el fin de utilizar el comunicador. ¿Deseas conectarte ahora?</string>
+    <string name="network_try_again">No estás conectado a nuestro servidor. Por favor, inténtalo más tarde o comprueba la conexión Wi-Fi.</string>
+    
+    <!--  DeleteFriend Popup -->
+    <string name="delete_friend">Eliminar amigo</string>
+    <string name="delete_friend_confirm_format">¿Estás seguro que quieres eliminar a %s de tu lista de amigos?</string>
+    <string name="friend_deleted_message_format">¡%s se ha eliminado correctamente!</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    
+    <!--  General error message -->
+    <string name="guest_not_allowed">No está permitido a los visitantes el uso de este recurso</string>
+    
+    <!-- Chat message error -->
+    <string name="user_not_online">Tu amigo está fuera de línea de momento. Por favor, vuelve a intentarlo más tarde</string>
+    <string name="try_again_later">Por favor, inténtalo más tarde.</string>
+    
+    <!--  Friend request Popup -->
+    <string name="friend_request_sent">Solicitud enviada</string>
+    <string name="friend_request_success">La solicitud de tu amigo ha sido enviada a tus padres y los suyos para su aprobación.</string>
+    <string name="friend_request_pending">La solicitud de amistad está pendiente. Por favor, espere.</string>
+    
+    <!--  Frien reques status popup -->
+    <string name="friend_request_result">Resultado de solicitud de amistad</string>
+    <string name="friend_request_self_parent_reject"> Lo sentimos, tus padres han rechazado tu solicitud de amistad con %1$s</string>
+    <string name="friend_request_oppo_parent_reject"> Lo sentimos, los padres de %1$s han rechazado tu solicitud de amistad</string>
+    <string name="friend_request_friend_reject"> Lo sentimos,%1$s ha rechazado tu solicitud de amistad</string>
+    <string name="friend_request_approved"> %1$s es ahora tu amigo en MEEP!</string>
+    
+    <string name="nice">¡Bien!</string>
+    <string name="friend_reject">Tu mensaje ha sido enviado a %1$s</string>
+
+</resources>

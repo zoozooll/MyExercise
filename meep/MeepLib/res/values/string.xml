@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	<string name="app_name">meep</string>
+   	<string name="notice">Oops</string>
+   	<string name="ok">OK</string>   	
+   	
+   	<string name="yes">Yes</string>   	
+   	<string name="no">No</string>   
+   	
+   	
+	<string name="delete">Delete</string>
+	<string name="delete_sure">Are you sure you want to delete the file?</string>	
+	
+	<string name="msg_null">Please input a name!</string>	
+	<string name="msg_error">The word you used is blocked by the bad word list</string>	
+	<string name="msg_blocked">That name has already been taken. Please try another name.</string>
+	<string name="msg_rename_same">The name same as previous mean the name you chooses has been taken already, please try another name.</string>
+	<string name="msg_system_file">The default CD can not be renamed.</string>	
+	<string name="msg_system_file_movie">The default Movie can not be renamed.</string>	
+	<string name="msg_system_file_ebook">The default Ebook can not be renamed.</string>	
+	<string name="music_title_rename_error">Rename error</string>
+   	<string name="proceed">Proceed</string>   	
+</resources>

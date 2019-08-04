@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string-array name="array_gender">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+    <string-array name="start_using">
+        <item>Confirmar pagamento</item>
+        <item>Criar conta da criança</item>
+        <item>Finalizado!</item>
+    </string-array>
+    <string-array name="apps_string">
+        <item>Apps</item>
+        <item>Games &amp; Apps</item>
+        <item>Vídeos</item>
+        <item>Músicas</item>
+        <item>e-Books</item>
+        <item>Fotos</item>
+        <item>Navegador</item>
+        <item>YouTube</item>
+        <item>Comunicador</item>
+        <item>Compra na MEEP! Store</item>
+        <item>Compras In-App (dentro do aplicativo) na MEEP! Store</item>
+        <item>Itens do Google Play ™</item>
+        <item>Apenas vídeos e websites sugeridos</item>
+        <item>Filtro de Palavras Censuradas</item>
+    </string-array>
+    <string-array name="time_string">
+        <item>Bloqueado</item>
+        <item>15 Minutos</item>
+        <item>30 Minutos</item>
+        <item>1 Hora</item>
+        <item>2 Horas</item>
+        <item>4 Horas</item>
+        <item>8 Horas</item>
+        <item>12 Horas</item>
+        <item>Ilimitado</item>
+    </string-array>
+    <string-array name="unit_string">
+        <item>Ilimitado</item>
+        <item>Horas</item>
+        <item>Hora</item>
+        <item>Minutos</item>
+        <item>Bloqueado</item>
+    </string-array>
+    <string-array name="permission_string">
+        <item>Bloqueado</item>
+        <item>Aprovação Necessária</item>
+        <item>Acesso completo</item>
+    </string-array>
+    <string-array name="menu_string">
+        <item>Atividades</item>
+        <item>Notificações</item>
+        <item>Conta da criança</item>
+        <item>Controle Parental</item>
+        <item>Sair</item>
+    </string-array>
+    <string-array name="country_string">
+        <item>Austrália</item>
+        <item>Brasil</item>
+        <item>França</item>
+        <item>Alemanha</item>
+        <item>Itália</item>
+        <item>Espanha</item>
+        <item>Reino Unido</item>
+        <item>Estados Unidos</item>
+        <item>Japão</item>
+        <item>Coréia</item>
+        <item>Nenhuma das opções acima</item>
+    </string-array>
+</resources>

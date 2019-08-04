@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutEditUser"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:layout_gravity="center_vertical"
+    android:descendantFocusability="beforeDescendants"
+	android:focusableInTouchMode="true" 
+	android:background="#b0000000"
+    >
+
+    <ImageView
+        android:id="@+id/imageViewEditUserBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/b_bg_notice" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@id/imageViewEditUserBg"
+        android:layout_alignLeft="@id/imageViewEditUserBg"
+        android:layout_alignRight="@id/imageViewEditUserBg"
+        android:layout_alignTop="@id/imageViewEditUserBg" >
+
+        <ImageButton
+            android:id="@+id/imageViewQuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/b_btn_close" 
+            android:padding="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@android:color/transparent"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:layout_marginTop="10dp"
+            >
+
+            <com.oregonscientific.meep.customfont.MyTextView
+                android:id="@+id/textViewNotice"
+                style="@style/popup_textview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="20dp"
+                 />
+
+            <!-- <com.oregonscientific.meep.customfont.MyTextView
+                android:id="@+id/bookmarkUrl"
+                style="@style/popup_textview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:text="http://www.google.com.hk"
+                android:textSize="25sp"
+                android:textStyle="normal" /> -->
+
+            <com.oregonscientific.meep.customfont.MyEditText
+                android:id="@+id/editTextRename"
+                style="@style/customfont_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/b_box01"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textColor="@android:color/black" 
+                android:singleLine="true"
+                />
+        </LinearLayout>
+
+        <com.oregonscientific.meep.customfont.MyButton
+            android:id="@+id/textViewOkBtn"
+            style="@style/popup_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/b_btn_pop_ok"
+            android:text="@string/ok"
+            />
+    </FrameLayout>
+</RelativeLayout>

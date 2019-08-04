@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     style="@style/ParentLayoutStyle"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent" >
+		
+		<ScrollView style="@style/fill_parent"
+		    android:layout_below="@id/actionBar"
+		    android:layout_marginTop="-10dp"
+		    android:scrollbars="none"
+		    android:fadingEdge="none"
+		    android:descendantFocusability="blocksDescendants">
+
+		    <LinearLayout
+		        style="@style/fill_parent"
+		        android:orientation="vertical" >
+		        <RelativeLayout style="@style/fill_parent">
+					<!-- dialog title bar -->
+					<LinearLayout
+			            android:id="@+id/dialogBar1"
+			            style="@style/LinearDialog" >
+					    <TextView 
+			    		    style="@style/MainPageTitle"
+			    		    android:text="@string/main_portal_setting_label_apps_title"
+			    		    />
+			    	</LinearLayout>
+		    	   <Button
+				        style="@style/wrap_content"
+				        android:id="@+id/clearTimer"
+				        android:layout_alignParentRight="true"
+				        android:background="@drawable/clear_time"
+				        android:layout_width="50dp"
+				        android:layout_height="50dp"
+						android:layout_marginRight="160dp"
+						android:layout_marginTop="70dp"
+				        />
+					<!-- listview main page -->
+					<LinearLayout 
+					    android:id="@+id/outListLogs1"
+					    android:layout_below="@id/dialogBar1"
+					    style="@style/OutOfListView"
+						>
+						<ListView
+							android:id="@+id/listAppsTime"
+							style="@style/ListViewStyle"
+							android:layout_marginTop="-1dp"
+							>
+						</ListView>
+					</LinearLayout>
+					<!-- list view shadow -->
+				</RelativeLayout>
+				<RelativeLayout style="@style/wrap_content">
+					<!-- dialog title bar -->
+					<LinearLayout 
+					    android:id="@+id/dialogBar2"
+					    style="@style/LinearDialog"
+					    android:layout_below="@id/actionBar" >
+					    <TextView 
+			    		    style="@style/MainPageTitle"
+			    		    android:text="@string/main_portal_setting_label_purchase"/>
+			    	</LinearLayout>
+					<!-- listview main page -->
+					<LinearLayout 
+					    style="@style/OutOfListView"
+					    android:id="@+id/outListLogs2"
+					    android:layout_below="@id/dialogBar2">
+						<ListView
+							android:id="@+id/listPurchase"
+							style="@style/ListViewStyle">
+						</ListView>
+					</LinearLayout>
+				</RelativeLayout>
+				<RelativeLayout style="@style/wrap_content">
+					<!-- dialog title bar -->
+					<LinearLayout 
+					    android:id="@+id/dialogBar3"
+					    style="@style/LinearDialog"
+					    android:layout_below="@id/actionBar" >
+					    <TextView 
+			    		    style="@style/MainPageTitle"
+			    		    android:text="@string/main_portal_setting_label_internet"/>
+			    	</LinearLayout>
+					<!-- listview main page -->
+					<LinearLayout 
+					    style="@style/OutOfListView"
+					    android:id="@+id/outListLogs3"
+					    android:layout_below="@id/dialogBar3"
+						>
+						<ListView
+							android:id="@+id/listInternet"
+							style="@style/ListViewStyle">
+						</ListView>
+					</LinearLayout>
+				</RelativeLayout>
+			</LinearLayout>
+		</ScrollView>
+		
+		<!-- action bar-->
+		<FrameLayout
+		    android:id="@+id/actionBar"
+		    style="@style/ActionBar">
+		    <LinearLayout 
+			    android:layout_gravity="left|center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content">
+			    <ImageButton
+				    android:id="@+id/mainImageButtonBack"
+				    android:contentDescription="@string/main_button_menu"
+				    android:src="@drawable/topbar_arrow_icon"
+				    style="@style/BarImageButton_Main" />
+			    <View  style="@style/BarDivider"/>
+		    </LinearLayout>
+		    <TextView
+			    android:id="@+id/mainBarTitle"
+			    android:text="@string/main_menu_parental"
+			    style="@style/BarTitle" />
+		</FrameLayout>  
+	</RelativeLayout>

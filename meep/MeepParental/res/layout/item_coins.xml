@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="68dp"
+    android:background="@color/background_trans"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        style="@style/wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/item_bkg_icon" >
+	    <ImageView
+	        android:layout_width="48dp"
+	        android:layout_height="48dp"
+	        android:layout_margin="10dp"
+	        android:scaleType="fitXY"
+	        android:id="@+id/user_icon"
+	        android:src="@drawable/default_user_icon" 
+	        android:contentDescription="@string/main_menu_icon"
+	        android:background="@drawable/image_stroke"/>
+    </LinearLayout>
+    <TableRow 
+        style="@style/fill_parent"
+    	android:gravity="center_vertical"
+    	android:weightSum="10"
+    	>
+        <TextView
+            android:id="@+id/textName"
+            style="@style/TextChildrenInfo"
+            android:layout_width="0.0dip"
+            android:layout_weight="4.5"
+            android:paddingLeft="20dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:gravity="center_vertical"
+            android:text="@string/main_button_kid"
+            android:textSize="20dp" />
+
+		<TableRow 
+		    style="@style/wrap_content"
+		    android:layout_width="0.0dip"
+		    android:layout_weight="3.5"
+		    android:layout_marginLeft="3dp">
+		    <ImageView 
+			    style="@style/TextChildrenInfo"
+		        android:layout_width="28dp"
+		        android:layout_height="28dp"
+		        android:scaleType="fitCenter"
+		        android:layout_marginRight="5dp"
+		        android:textColor="@color/text_blue"
+		        android:src="@drawable/account_coins" 
+		        android:contentDescription="@string/main_coins"/>
+		    <TextView
+			    style="@style/TextChildrenInfo"
+			    android:textStyle="normal"
+			    android:textColor="@color/text_blue"
+			    android:id="@+id/textCoins"
+			    android:text="@string/main_menu_coin"/>
+	    </TableRow>
+
+		<ImageView
+	        style="@style/ExpandImage"
+	        android:layout_weight="2"
+	        android:id="@+id/expand"
+	        android:contentDescription="@string/common_button_next"/>
+    </TableRow>
+</LinearLayout>

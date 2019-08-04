@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_gender">
+        <item>Maschio</item>
+        <item>Femmina</item>
+    </string-array>
+    <string-array name="start_using">
+        <item>Conferma il pagamento</item>
+        <item>Creazione account del bambino</item>
+        <item>Finito!</item>
+    </string-array>
+    <string-array name="apps_string">
+        <item>App</item>
+        <item>Giochi &amp; App</item>
+        <item>Film</item>
+        <item>Musica</item>
+        <item>E-Book</item>
+        <item>Fare Foto &amp; Fotografie</item>
+        <item>Browser</item>
+        <item>YouTube</item>
+        <item>Communicator</item>
+        <item>Download MEEP! Store</item>
+        <item>Acquisto In App MEEP! Store</item>
+        <item>Podotti Google Play ™</item>
+        <item>Solo siti web e video di YouTube consigliati</item>
+        <item>Filtro Parolacce</item>
+    </string-array>
+    <string-array name="time_string">
+        <item>Bloccato</item>
+        <item>15 minuti</item>
+        <item>30 minuti</item>
+        <item>1 ora</item>
+        <item>2 ore</item>
+        <item>4 ore</item>
+        <item>8 ore</item>
+        <item>12 ore</item>
+        <item>Illimitato</item>
+    </string-array>
+    <string-array name="unit_string">
+        <item>Illimitato</item>
+        <item>ore</item>
+        <item>ora</item>
+        <item>Minuti</item>
+        <item>Bloccato</item>
+    </string-array>
+    <string-array name="permission_string">
+        <item>Bloccato</item>
+        <item>Approvazione Necessaria</item>
+        <item>Accesso completo</item>
+    </string-array>
+    <string-array name="menu_string">
+        <item>Attività</item>
+        <item>Notifiche</item>
+        <item>Account del bambino</item>
+        <item>Controllo Genitori</item>
+        <item>Login</item>
+    </string-array>
+    <string-array name="country_string">
+        <item>Australia</item>
+        <item>Brasile</item>
+        <item>Francia</item>
+        <item>Germania</item>
+        <item>Italia</item>
+        <item>Spagna</item>
+        <item>Regno Unito</item>
+        <item>Stati Uniti</item>
+        <item>Giappone</item>
+        <item>Corea</item>
+        <item>Altor</item>
+    </string-array>
+</resources>

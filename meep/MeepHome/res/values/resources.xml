@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="MenuItem">
+        
+        <!-- A drawable to use as the background (drawable/color) -->
+        <attr name="menuItemBackground" format="reference|color"></attr>
+        <!-- Indicates whether the menu item is clickable -->
+        <attr name="menuItemClickable" format="boolean" />
+        
+        <!-- The position of the badge to be displayed in the menu item -->
+        <attr name="badgePosition">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <!-- The background for the badge -->
+        <attr name="badgeBackground" format="reference|color" />
+        <!-- The font family for the text displayed in the badge -->
+        <attr name="badgeTypeface" format="string" />
+        <!-- The color of text in the badge -->
+        <attr name="badgeTextColor" format="reference|color"></attr>
+        <attr name="badgeText" format="string" />
+        
+        <!-- Attributes defining the launch intent of the menu item -->
+        <attr name="launchPackage" format="string"></attr>
+        <attr name="launchActivity" format="string"></attr>
+        <attr name="launchPackageAction" format="string"></attr>
+        
+        <!-- Attributes defining the requirements before the menu item can launch the package -->
+        <attr name="requireNetwork" format="boolean" />
+        <attr name="requireRegisteredUser" format="boolean" />
+    </declare-styleable>
+    
+    <declare-styleable name="MenuHeader">
+
+        <!-- define menu open/close indicator position -->
+        <attr name="indicatorPosition">
+            <!-- indicator placed at left by text. -->
+            <enum name="left" value="0" />
+            <!-- indicator placed at right by text. -->
+            <enum name="right" value="1" />
+        </attr>
+
+        <!-- define should show the refresh button on view -->
+        <attr name="enableRefreshButton" format="boolean" />
+        <!-- define the drawable of refresh button -->
+        <attr name="refreshButtonDrawable" format="reference|color" />
+        <!-- define the drawable of indicator -->
+        <attr name="indicatorDrawable" format="reference|color" />
+        <!-- define show show the indicator -->
+        <attr name="enableIndicator" format="boolean"></attr>
+        <!-- Identifier for the child that represents the handle -->
+        <attr name="panelHandle" format="reference" />
+        <!-- Defines opened handle (drawable/color). -->
+        <attr name="openedDrawable" format="reference|color" />
+        <!-- Defines closed handle (drawable/color). -->
+        <attr name="closedDrawable" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="ContentLayout">
+
+        <!-- define the padding left attribute for set the background -->
+        <attr name="backgroundPaddingLeft" format="integer" />
+        <!-- define the padding top attribute for set the background -->
+        <attr name="backgroundPaddingTop" format="integer" />
+        <!-- define the padding bottom attribute for set the background -->
+        <attr name="backgroundPaddingBottom" format="integer" />
+        <!-- define the padding right attribute for set the background -->
+        <attr name="backgroundPaddingRight" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="Panel">
+
+        <!-- Defines panel animation duration in ms. -->
+        <attr name="animationDuration" format="integer" />
+        <!-- Defines panel position on the screen. -->
+        <attr name="position">
+
+            <!-- Panel placed at top of the screen. -->
+            <enum name="top" value="0" />
+            <!-- Panel placed at bottom of the screen. -->
+            <enum name="bottom" value="1" />
+            <!-- Panel placed at left of the screen. -->
+            <enum name="left" value="2" />
+            <!-- Panel placed at right of the screen. -->
+            <enum name="right" value="3" />
+        </attr>
+        <!-- Identifier for the child that represents the panel's handle. -->
+        <attr name="handle" format="reference" />
+        <!-- Identifier for the child that represents the panel's content. -->
+        <attr name="content" format="reference" />
+        <!-- Defines if flying gesture forces linear interpolator in animation. -->
+        <attr name="linearFlying" format="boolean" />
+        <!-- Defines size relative to parent (must be in form: nn%p). -->
+        <attr name="weight" format="fraction" />
+        <!-- Defines opened handle (drawable/color). -->
+        <attr name="openedHandle" format="reference|color" />
+        <!-- Defines closed handle (drawable/color). -->
+        <attr name="closedHandle" format="reference|color" />
+        <!-- Defines background drawable (drawable/color) -->
+        <attr name="backgroundDrawable" format="reference" />
+        <attr name="header" format="reference"></attr>
+        <attr name="tapArea" format="reference"></attr>
+    </declare-styleable>
+    
+    <declare-styleable name="PanelHandle">
+         <attr name="open" format="reference|color" />
+        <!-- Defines closed handle (drawable/color). -->
+        <attr name="close" format="reference|color" />
+    </declare-styleable>
+    
+    <declare-styleable name="RecentlyUsedApp">
+        <attr name="iconDrawable" format="reference|color"></attr>
+    </declare-styleable>
+    
+     <declare-styleable name="SlidingMenu">
+        <attr name="mode">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="viewAbove" format="reference" />
+        <attr name="viewBehind" format="reference" />
+        <attr name="behindOffset" format="dimension" />
+        <attr name="behindWidth" format="dimension" />
+        <attr name="behindScrollScale" format="float" />
+        <attr name="touchModeAbove">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+        </attr>
+        <attr name="touchModeBehind">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+        </attr>
+        <attr name="shadowDrawable" format="reference" />
+        <attr name="shadowWidth" format="dimension" />
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="fadeDegree" format="float" />
+        <attr name="selectorEnabled" format="boolean" />
+        <attr name="selectorDrawable" format="reference" />
+    </declare-styleable>
+    
+    <declare-styleable name="LargeMenuItem">
+        <attr name="enableSlideShow" format="boolean" />
+    </declare-styleable>
+
+</resources>

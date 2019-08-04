@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepMusicActivity!</string>
+    <string name="app_name">Music</string>
+	
+    <string name="meep_music">music</string>
+    	<string name="music_btn_ring_rename">Rename</string>
+		<string name="music_btn_ring_delete">Delete</string>
+    	
+    	
+    	<!--  MEEP! Together (Parent Portal)- Timer -->
+    	<string name="music_title_uh_oh">Uh-Oh!</string>
+
+    	<string name="music_title_times_up">Time\'s up!</string>
+    	<string name="music_msg_try_again_xxx">Sorry, you can\'t use the music player right now. Try again in %1$d mins!</string>
+    	<string name="music_btn_ok">OK</string>
+    	<string name="music_msg_short_timer_reminder_xxx">Timer reminder - music player</string>
+    	<string name="music_msg_short_timeup_xxx">Time\'s up! - music player</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update -->
+    	<string name="music_title_update">Update</string>
+    	<string name="music_msg_update_xxx_timer_changed">The music player timer has been changed to %1$d</string>
+    	<string name="music_msg_update_xxx">Update - music player</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Sudden Access Change -->
+    	<string name="music_title_sudden_change">Sudden access change</string>
+    	<string name="music_msg_sudden_parental_change">Sorry, you can\'t use this application at the moment as the access setting in the Parent Portal has been changed.</string>
+    	<string name="music_btn_ask_access">Ask for access</string>
+    	<string name="music_msg_access_request_sent">Access request sent!</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update - Content Version update - New -->
+    	<string name="music_title_version_update">Version update</string>
+    	<string name="music_msg_available_upgrade">There is an upgrade available for this app, do you want to upgrade?</string>
+    	<string name="music_btn_yes">Yes</string>
+    	<string name="music_btn_no">No</string>
+    	<string name="music_msg_xxx_available_update">Update - %1$s %2$s - Version update available</string>
+    	
+	<!-- <string name="music_msg_rename_error">This destination already contains a file named %1$S Please check it before renaming this file.</string> -->
+	<string name="music_msg_name_invalid">The file name cannot start with \".\", please change the file name.</string>
+	<string name="music_msg_blocked">The input text contains invalid character(s). Please try something else.</string>	
+</resources>

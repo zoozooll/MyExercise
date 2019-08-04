@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MessageBox">
+        <!-- define attribute for set the message box with top of background drawable -->
+        <attr name="topBackground" format="reference|color"></attr>
+        <!-- define attribute for set the message box with content of background drawable -->
+        <attr name="contentBackground" format="reference|color"></attr>
+        <!-- define attribute for set the message box with bottom of background drawable -->
+        <attr name="bottomBackground" format="reference|color"></attr>
+    </declare-styleable>
+    
+    <declare-styleable name="CustomTextView">
+        <attr name="directory" format="string" />
+    </declare-styleable>
+
+</resources>

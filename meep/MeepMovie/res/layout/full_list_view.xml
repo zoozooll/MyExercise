@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movieFullListViewLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+   android:background="@drawable/meepfulllist_video_bg">
+ 
+    <!-- <ScrollView
+    	
+        android:id="@+id/scrollViewFullList"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_x="0dp"
+        android:layout_y="0dp" >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFullList"
+            android:layout_width="900dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView> -->
+    
+    <GridView 
+	    android:id="@+id/myMovie"
+	    android:layout_width="match_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="60dp"
+	    android:paddingRight="60dp"
+	    android:stretchMode="columnWidth"
+	    android:numColumns="5"
+	    android:scrollbars="none"/>
+
+
+    
+    <RelativeLayout
+        android:id="@+id/relativeLayoutRename"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        android:background="@color/grey"
+        android:visibility="gone">
+        
+		<EditText
+            android:id="@+id/editTextRename"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+			android:inputType="text"
+        	android:imeOptions="actionSearch">
+        </EditText>
+    </RelativeLayout>
+    
+    
+    <ImageView
+           	android:id="@+id/imageViewSnackView"
+           	android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+           	android:scaleType="center"
+           	android:layout_gravity="top|right"
+           	android:layout_marginTop="10dp"
+  	 		android:layout_marginRight="10dp"
+           	android:src="@drawable/btn_snack" />
+
+      <Button
+          android:id="@+id/buttonConfirmButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_x="1000dp"
+          android:layout_y="400dp"
+          android:text="@string/video_btn_ok" 
+          android:visibility="gone"/>
+      
+      
+
+</FrameLayout>

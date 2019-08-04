@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/b_bg_search_bar"
+    android:orientation="horizontal"
+    android:gravity="center_vertical" 
+    >
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="22" >
+
+        <Button
+            android:id="@+id/btnPrevious"
+            style="@style/bar_button_left"
+            android:background="@drawable/b_btn_arrow_left" 
+            android:onClick="onClickMenuButton"
+            />
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/bar_button_left"
+            android:background="@drawable/b_btn_arrow_right"
+            android:onClick="onClickMenuButton"
+             />
+
+        <Button
+            android:id="@+id/btnRefresh"
+            style="@style/bar_button_left"
+            android:background="@drawable/b_btn_reflesh" 
+            android:onClick="onClickMenuButton"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="62" 
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnSearch"
+            style="@style/bar_button"
+            android:background="@drawable/b_btn_search"
+            android:layout_marginTop="-4dp"
+            android:onClick="onClickMenuButton"
+             />
+         <EditText
+            android:id="@+id/searchBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/b_btn_search_bar_box"
+            android:paddingLeft="55dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:layout_marginLeft="-5dp"
+            android:textSize="22sp"
+            android:layout_toRightOf="@id/btnSearch"
+            android:layout_toLeftOf="@+id/btnAddBookmark"
+            />
+        <ImageView
+            android:id="@+id/imgFavicon"
+            android:layout_height="36dp"
+            android:layout_width="36dp"
+            android:src="@drawable/meep_browser_favicon"
+            android:layout_alignLeft="@id/searchBox"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="10dp"
+            />
+       
+        <Button
+            android:id="@+id/btnAddBookmark"
+            style="@style/bar_button"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="-4dp"
+            android:background="@drawable/b_btn_add"
+            android:layout_alignParentRight="true"
+            android:onClick="onClickMenuButton"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="16"
+        android:gravity="right"
+         >
+        <Button
+            android:id="@+id/btnMainPage"
+            style="@style/bar_button"
+            android:background="@drawable/b_btn_home" 
+            android:layout_marginRight="20dp"
+            android:onClick="onClickMenuButton"
+            />
+        <Button
+            android:id="@+id/btnMenu"
+            style="@style/bar_button"
+            android:background="@drawable/b_btn_menu"
+            android:onClick="onClickMenuButton"
+            
+             />
+    </LinearLayout>
+
+</LinearLayout>

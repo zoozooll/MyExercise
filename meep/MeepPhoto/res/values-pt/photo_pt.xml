@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+
+    	<string name="meep_picture">picture</string>
+        <string name="picture_btn_ring_rename">Renomear</string>
+	<string name="picture_btn_ring_delete">Excluir</string>  
+
+
+    	<!--  MEEP! Together (Parent Portal)- Timer -->
+	<string name="picture_title_uh_oh">Uh, oh!</string>
+
+	<string name="picture_title_times_up">Tempo esgotado!</string>
+	<string name="picture_msg_try_again_xxx">Desculpe, você não pode usar o Visor de Imagem agora. Tente de novo em %1$d minutos!</string>
+	<string name="picture_btn_ok">OK</string>
+
+	<string name="picture_msg_short_timer_reminder_xxx">Lembrete de Tempo - Visor de Imagem</string>
+	<string name="picture_msg_short_timeup_xxx">Tempo esgotado! - Visor de Imagem</string>
+
+    	<!--  MEEP! Together (Parent Portal)- Update -->
+	<string name="picture_title_update">Atualização</string>
+	<string name="picture_msg_update_xxx_timer_changed">O timer do visor de imagem foi mudado para %1$d</string>
+	<string name="picture_msg_update_xxx">Atualizar - Visor de Imagem</string>
+
+    	<!--  MEEP! Together (Parent Portal)- Sudden Access Change -->
+	<string name="picture_title_sudden_change">Repentina mudança de acesso</string>
+	<string name="picture_msg_sudden_parental_change">Desculpe, não pode usar esta aplicativo no momento já que a configuração de acesso no Portal de Pais foi mudada.</string>
+	<string name="picture_btn_ask_access">Pedir acesso</string>
+	<string name="picture_msg_access_request_sent">Pedido de acesso enviado!</string>
+
+    	<!--  MEEP! Together (Parent Portal)- Update - Content Version update - New -->
+	<string name="picture_title_version_update">Atualização da versão</string>
+	<string name="picture_msg_available_upgrade">Tem uma atualização disponível deste aplicativo, você quer atualizar?</string>
+	<string name="picture_btn_yes">Sim</string>
+	<string name="picture_btn_no">Não</string>
+	<string name="picture_msg_xxx_available_update">Atualizar - %1$s %2$s - Atualização da versão disponível</string>
+	  
+  
+  	<string name="picture_title_rename_error">Erro de renomeação</string>
+	<string name="picture_msg_rename_error">O destino já possui um arquivo com o nome %1$S Verifique-o antes de renomear este arquivo.</string>
+	<string name="picture_msg_name_invalid">O nome do arquivo não pode começar com \".\" modifique o nome do arquivo.</string>
+	<string name="picture_msg_blocked">Bloqueado</string>
+</resources>

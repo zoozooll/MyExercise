@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res/com.oregonscientific.meep.communicator"
+    xmlns:text="http://schemas.android.com/apk/res/com.oregonscientific.meep.communicator"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="360dp"
+        android:layout_height="190dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/custom_style3" />
+
+    <ImageView
+        android:id="@+id/icon_border"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp" />
+
+    <com.oregonscientific.meep.communicator.view.CustomTextView
+        android:id="@+id/unread_count"
+        android:layout_width="49dp"
+        android:layout_height="53dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bubble01"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/orange"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        font:directory="Rumpelstiltskin.ttf" />
+
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete_friend"
+        android:visibility="gone" />
+
+    <com.oregonscientific.meep.widget.StrokedTextView
+        android:id="@+id/name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="80dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:scaleX="0.85"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="45sp"
+        text:font="MEEP.ttf"
+        text:textStrokeColor="#F25D07"
+        text:textStrokeWidth="4" />
+
+</RelativeLayout>

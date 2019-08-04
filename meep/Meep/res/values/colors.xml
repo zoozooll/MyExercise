@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray">#ff8888</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="shadowblue">#0A6291</color>
+	<color name="shadowyellow">#D28F21</color>
+	<color name="shadowred">#A0170D</color>
+	<color name="shadowbrown">#A42E14</color>
+	<color name="light_green">#007D4B</color>
+	<color name="dark_blue">#0C4A95</color>
+	<color name="dark_orange">#B92100</color>
+	<color name="dark_yellow">#8E6A00</color>
+	<color name="dark_green">#798000</color>
+	<color name="dark_red">#A41706</color>
+	<color name="shadow_green">#007719</color>
+	<color name="shadow_blue">#036D7A</color>
+	<color name="shadow_purple">#67007E</color>
+	<color name="shadow_dark_orange">#B23109</color>
+	<color name="shadow_dark_blue">#00727B</color>
+	<color name="half_transparent">#80000000</color>
+	<color name="dialog_title">#46677A</color>
+	<color name="tutorial_button">#084000</color>
+	<color name="dialog_button">#396B26</color>   
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OpenMeepOTA</string>
+	<string name="title">MeepOTA</string>
+	<string name="alert_message_storage">Sorry, your storage is full. Fail to install.</string>
+	<string name="alert_message_file">Cann\'t find the MeepOTA package for installation.Please try again.</string>
+	<string name="alert_ok">OK</string>
+</resources>

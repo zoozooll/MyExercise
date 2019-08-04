@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepMusicActivity!</string>
+    <string name="app_name">MeepMúsica</string>
+
+
+	<string name="meep_music">música</string>
+	<string name="music_btn_ring_rename">Renombrar</string>
+	<string name="music_btn_ring_delete">Eliminar</string>
+    	
+    	
+    	<!--  MEEP! Together (Parent Portal)- Timer -->
+	<string name="music_title_uh_oh">¡Oh, oh!</string>
+
+	<string name="music_title_times_up">¡Se acabó el tiempo!</string>
+	<string name="music_msg_try_again_xxx">Lo siento, no puedes acceder a Música en este momento. ¡Inténtalo de nuevo en %1$d minuto(s)!</string>
+	<string name="music_btn_ok">Aceptar</string>
+	<string name="music_msg_short_timer_reminder_xxx">Recordatorio de tiempo - Música</string>
+	<string name="music_msg_short_timeup_xxx">¡Se acabó el tiempo! - Música</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update -->
+	<string name="music_title_update">Actualizar</string>
+	<string name="music_msg_update_xxx_timer_changed">El tiempo de acceso a Música ha cambiado %1$d</string>
+	<string name="music_msg_update_xxx">Actualizar - Música</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Sudden Access Change -->
+	<string name="music_title_sudden_change">Cambio de acceso repentino</string>
+	<string name="music_msg_sudden_parental_change">Lo siento, no puedes usar esta aplicación en este momento, ya que la configuración de acceso en el portal paterno ha cambiado.</string>
+	<string name="music_btn_ask_access">Solicitar acceso</string>
+	<string name="music_msg_access_request_sent">¡Solicitud de acceso enviada!</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update - Content Version update - New -->
+	<string name="music_title_version_update">Actualización de versión</string>
+	<string name="music_msg_available_upgrade">Hay una actualización disponible para esta aplicación, ¿quieres actualizarla?</string>
+	<string name="music_btn_yes">Sí</string>
+	<string name="music_btn_no">No</string>
+	<string name="music_msg_xxx_available_update">Actualizar - %1$s %2$s - Actualización de versión disponible</string>
+    	
+	<!-- <string name="music_msg_rename_error">This destination already contains a file named %1$S Please check it before renaming this file.</string> -->
+	<string name="music_msg_name_invalid">El nombre del archivo no puede empezar con ".". Por favor, cambia el nombre del archivo.</string>
+	<string name="music_msg_blocked">No escriba contenido inapropiado. El nombre contiene caracteres inválidos.</string>
+</resources>

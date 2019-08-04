@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/registerLayout"
+    style="@style/ParentLayoutStyle">
+	<!-- action bar -->
+	<!-- <FrameLayout
+	    android:id="@+id/actionBar"
+	    style="@style/ActionBar">
+	    <LinearLayout 
+		    android:layout_gravity="left|center_vertical"
+	        style="@style/wrap_content">
+	    	<ImageButton
+			    android:id="@+id/barImageButtonBack"
+			    android:contentDescription="@string/main_button_back"
+			    android:src="@drawable/topbar_arrow_icon" 
+			    style="@style/BarImageButton_Main"/>
+	    	<View  
+	    	    style="@style/BarDivider"/>
+	    </LinearLayout>
+	    <TextView
+		    android:id="@+id/RegisterTitle"
+		    android:text="@string/registration_title"
+		    style="@style/BarTitle" />
+	</FrameLayout> -->
+	<!-- bar shadow -->
+	<!-- <View android:layout_below="@id/actionBar"
+	  style="@style/BarShadow"/> -->
+	<!-- next button layout-->
+	<!-- <FrameLayout 
+	    android:id="@+id/bottomLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="75dp"
+	    android:layout_alignParentBottom="true">
+	    <Button
+	        android:id="@+id/btnNext"
+	        android:text="@string/common_button_next"
+	        android:contentDescription="@string/common_button_next" 
+        	style="@style/ButtonNext"/>
+	    <ImageView 
+	        style="@style/ButtonNextArrow"
+			android:src="@drawable/arrow_white"
+			android:layout_marginTop="25dp"
+			android:contentDescription="@string/app_name"
+	        />
+    </FrameLayout> -->
+    <!-- Registeration page context -->
+	<ViewFlipper
+	    android:id="@+id/flipper"
+ 		style="@style/ParentLayoutStyle">
+		<include layout="@layout/layout_register_legal_info" 
+			android:id="@+id/registerLayout_legal"/>
+		<include layout="@layout/layout_register_create_account"
+			android:id="@+id/registerLayout_create"/>
+		<include layout="@layout/layout_register_email_verify" 
+		    android:id="@+id/registerLayout_verify"/>
+	</ViewFlipper>
+	
+	<!-- <FrameLayout style="@style/fill_parent"
+	    android:id="@+id/load"
+	    android:visibility="gone">
+		<include layout="@layout/loading"/>
+	</FrameLayout> -->
+	<!-- <Button android:id="@+id/btnHome"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    style="@style/wrap_content"
+	    android:text="Home"
+	    android:paddingTop="20dp"
+	    android:textSize="23sp"
+	    android:textStyle="bold"
+	    android:textColor="@android:color/white"
+	    android:shadowDy="1"
+	    android:shadowColor="@android:color/black"
+	    android:shadowRadius="5"
+	    android:background="@drawable/home_btn"
+	    android:onClick="onClickButton"
+	    /> -->
+<!-- 	<include layout="@layout/layout_home_button"/>
+ --></RelativeLayout>

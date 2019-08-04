@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Communicator</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Add Friend -->
+    <string name="friend_not_found">*Sorry! Can\'t find your friends. Search again?</string>
+    
+    
+    <!-- Friend View -->
+    <string name="add_friends">Add Friends</string>
+    <string name="add">+</string>
+    <string name="add_friend_hint">Hey, %s, I want to add you as my friend</string>
+    <string name="search_friend_hint">Type your friend\'s MEEP! ID Here</string>
+    <string name="search">Search</string>
+    <string name="search_friend">Search Friend</string>
+
+    <!-- Conversation View -->
+    <string name="type_chat_hint">Type here to chat</string>
+    <string name="send">Send</string>
+
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    
+    <!--  Accept Friend pop up -->
+    <string name="accept_friend_title">Friend\'s Request</string>
+    <string name="accept_friend">Accept Friend</string>
+    <string name="accept_friend_format_string">%s would like to add you as a friend.</string>
+    <string name="accept_friend_friends_message_format_string">Message from %1$s\n%2$s</string>
+    
+    <!--  Error View -->
+    <string name="ok">OK</string>
+    <string name="error">Oops</string>
+    <string name="error_message_parents_cannot_delete">Parents and supervisors cannot be deleted</string>
+    <string name="blocked">This word is blocked by the bad word list.</string>
+    <string name="cannot_process">Blocked</string>
+    <string name="cannot_add_yourself">You can\'t add yourself as a friend!</string>
+    <string name="cannot_add_existing_friend">This user is already in your friend list :)</string>
+    <string name="please_enter_meep_id">Please enter a MEEP! ID first!</string>
+    <string name="user_already_your_friend">This user is already on your friend list!</string>
+    <string name="duplicated_friend_request">This user is already on your friend list!</string>
+    <string name="no_results">No Results</string>
+    
+    <!--  Search Friend Error  -->
+    <string name="user_not_found">Sorry, we cannot find a friend with that name! Please try again!</string>
+    
+    <!--  Network Popup -->
+    <string name="oops">Oops</string>
+    <string name="no_network">Please connect online in order to use the communicator. Do you want to connect to the Wi-Fi now?</string>
+    <string name="network_try_again">You are not connected to our server. Please try again later or check your Wi-Fi connection.</string>
+    
+    <!--  DeleteFriend Popup -->
+    <string name="delete_friend">Delete Friend</string>
+    <string name="delete_friend_confirm_format">Do you really want to remove %s from your friend list?</string>
+    <string name="friend_deleted_message_format">%s has been deleted successfully!</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    
+    <!--  General error message -->
+    <string name="guest_not_allowed">Guest is not allowed to use this resource</string>
+    
+    <!-- Chat message error -->
+    <string name="user_not_online">Your friend is offline at the moment. please try again later</string>
+    <string name="try_again_later">Please try again later.</string>
+    
+    <!--  Friend request Popup -->
+    <string name="friend_request_sent">Request Sent</string>
+    <string name="friend_request_success">Your friend request has been sent to your parents and your friend\'s parents for approval.</string>
+    <string name="friend_request_pending">The friend request is pending. Please wait.</string>
+    
+    <!--  Friend request status popup -->
+    <string name="friend_request_result">Friend Request Result</string>
+    <string name="friend_request_self_parent_reject"> Sorry, your parents have rejected your friend\'s request with %1$s </string>
+    <string name="friend_request_oppo_parent_reject"> Sorry, %1$s\'s parents have rejected your friend\'s request</string>
+    <string name="friend_request_friend_reject"> Sorry, %1$s\'s has rejected your friend\'s request</string>
+    <string name="friend_request_approved"> %1$s is now your friend on MEEP!</string>
+    
+    <string name="nice">Nice!</string>
+    <string name="friend_reject">Your message has been sent to %1$s</string>
+	
+    
+</resources>

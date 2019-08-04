@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@null">
+		<ImageView 
+		    android:id="@+id/dialogbg"
+		    style="@style/wrap_content"
+		    android:src="@drawable/meep_inapppurchase_popup"
+		     android:contentDescription="@string/app_name"
+		     android:layout_centerInParent="true"/>
+		<FrameLayout
+		    style="@style/wrap_content"
+		    android:layout_alignLeft="@id/dialogbg"
+		    android:layout_alignRight="@id/dialogbg"
+		    android:layout_alignTop="@id/dialogbg"
+		    android:layout_alignBottom="@id/dialogbg"
+		    android:paddingLeft="125dp"
+		    android:paddingRight="70dp"
+		    >
+		     <ScrollView
+		         android:layout_marginTop="200dp"
+		         android:layout_width="fill_parent"
+		         android:layout_height="fill_parent"
+		         android:layout_marginBottom="150dp"
+		         android:orientation="vertical"
+		         android:scrollbars="none"
+		         >
+		         <TextView
+				    android:id="@+id/exchangeCode"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:text="@string/success"
+				    android:textSize="25dp"
+				    android:textStyle="bold"
+				    android:textColor="@color/text_dark_blue2"
+				    android:gravity="center"
+				    android:lineSpacingExtra="20dp"
+				    />
+		     </ScrollView>
+		     <Button 
+		         android:id="@+id/ok"
+		         style="@style/dialog_button"
+		         android:layout_gravity="center_horizontal|bottom"
+		         android:text="@android:string/ok"
+		         android:layout_marginBottom="80dp"/>
+	     </FrameLayout>
+        
+
+</RelativeLayout>

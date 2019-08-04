@@ -1,0 +1,41 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppTheme" parent="android:style/Theme.NoTitleBar" />
+	<style name="Wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="Fill">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="Fill.width">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="Fill.height">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="text_version" parent="Wrap">
+        <item name="android:textSize">22dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+    </style>
+    <style name="text_section" parent="Wrap">
+        <item name="android:textSize">35dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_orange</item>
+        <item name="android:drawableLeft">@drawable/meep_ota_arrow</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+    <style name="button_upgrade" parent="Wrap">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_dark_blue</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:paddingLeft">32dp</item>
+    </style>
+    <style name="button_upgrade_small" parent="button_upgrade">
+        <item name="android:textSize">15dp</item>
+    </style>
+</resources>

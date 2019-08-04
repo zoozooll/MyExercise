@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/registerLayout"
+    style="@style/ParentLayoutStyle">
+    <FrameLayout style="@style/wrap_content"
+        android:layout_marginTop="48dp">
+    </FrameLayout>
+	<!-- action bar -->
+	<FrameLayout
+	    android:id="@+id/actionBar"
+	    style="@style/ActionBar">
+	    <LinearLayout 
+		    android:layout_gravity="left|center_vertical"
+	        style="@style/wrap_content">
+	    	<ImageButton
+			    android:id="@+id/barImageButtonBack"
+			    android:contentDescription="@string/main_button_back"
+			    android:src="@drawable/topbar_arrow_icon" 
+			    style="@style/BarImageButton_Main"/>
+	    	<View  
+	    	    style="@style/BarDivider"/>
+	    </LinearLayout>
+	    <TextView
+		    android:id="@+id/TermsTitle"
+		    android:text="@string/common_term_of_service"
+		    style="@style/BarTitle" />
+	</FrameLayout>
+	
+	<!-- bar shadow -->
+	<!-- <View android:layout_below="@id/actionBar"
+	  style="@style/BarShadow"/> -->
+	<!-- next button layout-->
+	<FrameLayout 
+	    android:id="@+id/bottomLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="100dp"
+	    android:layout_alignParentBottom="true">
+	   	<!--  Next Button -->
+	    <Button
+	        android:id="@+id/btnBack"
+	        android:text="@string/common_button_back"
+	        android:contentDescription="@string/common_button_next" 
+        	style="@style/CommonButton"/>
+    </FrameLayout>
+   	<RelativeLayout 
+        style="@style/fill_parent"
+        android:background="@drawable/register_field"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/actionBar"
+        android:layout_above="@id/bottomLayout"
+        
+        >
+        <WebView
+            android:layout_height="fill_parent" 
+            android:layout_width="match_parent" 
+            android:fadingEdge="vertical"
+            android:layout_margin="10dp"
+            android:id="@+id/webview" /> 
+    </RelativeLayout>
+		
+</RelativeLayout>
+	

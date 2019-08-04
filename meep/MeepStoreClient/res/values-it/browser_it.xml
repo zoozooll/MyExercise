@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+	<string name="browser_ui_meep_logo">MEEP!</string>
+	<string name="browser_info_search">Cerca</string>
+	<string name="browser_ui_recommend">Consigliato</string>
+	<string name="browser_btn_more">Più (&#8230;)</string>
+	<string name="browser_info_no_result">Nessun risultato</string>
+	<string name="browser_title_oops">Oops!</string>
+	<string name="browser_msg_web_blocked">Questo sito web è stato bloccato! Non hai il permesso di usare questa parola sul browser web. Prova qualcos\'altro!</string>
+	<string name="browser_btn_ok">OK</string>
+	<string name="browser_btn_send_request">Invia Richiesta</string>
+	<string name="browser_info_I">|</string>
+	<string name="browser_title_search_result">Risultati di ricerca</string>
+	<string name="browser_info_no_results">Nessuna combinazione trovata/Risultati bloccati</string>
+	<string name="browser_btn_add">Aggiungi</string>
+	<string name="browser_btn_rename">Rinomina</string>
+	<string name="browser_btn_delete">Elimina</string>
+	<string name="browser_title_uh_oh">Uh-oh!</string>
+	<string name="browser_msg_xxx_5mins">Ti restano solo 5 min per usare il Browser Internet.</string>
+	<string name="browser_title_times_up">Tempo scaduto!</string>
+	<string name="browser_msg_try_again_xxx">Spiacenti, non puoi usare il Browser Internet ora. Riprova tra %1$d min!</string>
+	<string name="browser_msg_short_timer_reminder_xxx">Promemoria timer - Browser Internet</string>
+	<string name="browser_msg_short_timeup_xxx">Tempo scaduto! - Browser Internet</string>
+	<string name="browser_title_update">Aggiorna</string>
+	<string name="browser_msg_update_xxx_timer_changed">Il timer del Browser Internet è stato modificato %1$d</string>
+	<string name="browser_msg_update_xxx">Aggiornamento - Browser Internet</string>
+	<string name="browser_msg_permission_use_xxx">Yeah! Sei libero di usare il Browser Internet ora.</string>
+	<string name="browser_msg_permission_approval_xxx">Spiacenti, devi aspettare l\'approvazione dei tuoi genitori prima di poter usare il Browser Internet.</string>
+	<string name="browser_btn_approval">Richiedi approvazione</string>
+	<string name="browser_msg_approval_sent">Richiesta d\'approvazione inviata!</string>
+	<string name="browser_msg_permission_xxx_notgiven">Spiacenti, non puoi usare il browser Internet ora poiché l\'approvazione non è stata concessa.</string>
+	<string name="browser_msg_meep_recommend_updated">La tua lista consigli MEEP! È stata aggiornata.</string>
+	<string name="browser_msg_parent_recommend_updated">La tua lista consigli dei Genitori è stata aggiornata.</string>
+	<string name="browser_title_blocked">Bloccato</string>
+
+	<string name="browser_msg_short_blocked_xxx">Bloccato - Browser Internet</string>
+	<string name="browser_msg_unprotected_web">Spiacenti, non ti è permesso essere riindirizzato a un sito non protetto.</string>
+	<string name="browser_msg_protected_web">Spiacenti, non ti è permesso essere riindirizzato al sito protetto.</string>
+	<string name="browser_title_approved">Accettato!</string>
+	<string name="browser_msg_xxx_approved">La tua richiesta di usare il Browser Internet è stata accettata.</string>
+	<string name="browser_btn_go">Vai!</string>
+	<string name="browser_msg_short_approved_xxx">Accettato - Browser Internet</string>
+	<string name="browser_msg_approved_search_function">Yeah! Ora puoi usare la funzione Ricerca nel Browser Internet.</string>
+	<string name="browser_title_refused">Rifiutato!</string>
+	<string name="browser_msg_xxx_refused">Spiacenti, la tua richiesta di usare il Browser Internet è stata rifiutata.</string>
+	<string name="browser_msg_short_refused_xxx">Rifiutato - Browser Internet</string>
+	<string name="browser_msg_refused_search_function">Spiacenti, la tua richiesta di usare la funzione Ricerca nel Browser Internet è stata rifiutata.</string>
+	<string name="browser_title_sudden_change">Modifica accesso immediato</string>
+	<string name="browser_msg_sudden_parental_change">Spiacenti, non puoi usare questa applicazione al momento poiché l\'impostazione d\'accesso nel Parent Portal è stata modificata.</string>
+	<string name="browser_btn_ask_access">Richiedi accesso</string>
+	<string name="browser_msg_access_request_sent">Richiesta d\'accesso inviata!</string>
+	<string name="browser_title_version_update">Aggiornamento versione</string>
+	<string name="browser_msg_available_upgrade">C\'è una nuova versione disponibile per questa app, desideri aggiornare?</string>
+	<string name="browser_btn_yes">Sì</string>
+	<string name="browser_btn_no">No</string>
+	<string name="browser_msg_xxx_available_update">Aggiorna - %1$s %2$s - Aggiornamento versione disponibile</string>
+    <string name="browser_msg_no_network">Non c\'è connessione di rete. Assicurati che MEEP! sia collegato al Wi-Fi.</string>
+    <string name="browser_msg_delete_bookmark">Elimina segnalibro.</string>
+    <string name="browser_msg_bookmark_deleted">Segnalibro eliminato?</string>
+    <string name="browser_msg_duplicated_bkmk">Segnalibro duplicato.</string>
+    <string name="browser_msg_cannot_download">Non si può scaricare il file.</string>    
+    <string name="browser_ui_bookmarkurl">URL:</string>
+    <string name="browser_ui_bookmarkname">Nome:</string>
+    <string name="browser_btn_save">Salva</string>
+    <string name="browser_loading">Caricamento</string>
+      
+    
+</resources>

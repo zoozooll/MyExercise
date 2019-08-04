@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notification"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+    
+    
+    
+     <ImageView
+        android:id="@+id/imageViewBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/pop_bg" />
+  
+    <TextView
+        android:id="@+id/textViewNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pop_title"
+        android:text="@string/picture_title_update"
+        android:textSize="23dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="22px"
+ 	    android:layout_marginLeft="180px" />
+
+ 	<TextView
+ 	    android:id="@+id/textViewOkBtn"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_below="@+id/textViewTitle"
+ 	    android:layout_centerHorizontal="true"
+ 	    android:layout_marginTop="122px"
+ 	    android:background="@drawable/btn_ok"
+ 	    android:gravity="center"
+ 	    android:text="@string/picture_btn_ok"
+ 	    android:textColor="#FFFFFF"
+ 	    android:textSize="23dp" />
+      
+
+ 	<ImageView
+ 	    android:id="@+id/imageViewIcon"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignParentLeft="true"
+ 	    android:layout_below="@+id/textViewNotice"
+ 	    android:layout_marginLeft="33dp"
+   	    android:visibility="visible"
+ 	    />
+ 	 
+   <TextView 
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageViewIcon"
+        android:layout_below="@+id/textViewNotice"
+        android:textColor="@android:color/black"
+        android:textSize="23dp"
+        />
+ 
+ 	<ImageView
+ 	 	android:id="@+id/imageViewQuit"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:src="@drawable/quit_room" 
+ 	    android:layout_marginTop="40px"
+ 	    android:layout_marginLeft="390px"
+ 	    android:clickable="true"
+ 	    android:onClick="imageClick"
+ 	    />
+
+ 	<TextView
+ 	    android:id="@+id/textViewMessage"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_marginTop="90px"
+ 	    android:layout_marginLeft="30px"
+ 	    android:textColor="@android:color/black"
+ 	    android:textSize="23dp" />
+
+ 	<EditText
+ 	    android:id="@+id/editTextRename"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_marginLeft="30px"
+ 	    android:layout_marginTop="130px"
+ 	    android:ems="15" 
+ 	    android:inputType="text"
+        android:imeOptions="actionSearch"
+ 	    android:hint = "Type a message">
+ 	    <requestFocus />
+ 	</EditText>
+ 	
+ 	<TextView 
+ 	    android:id="@+id/text_msg"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignLeft="@+id/textViewNotice"
+ 	    android:layout_alignRight="@+id/imageViewQuit"
+ 	    android:layout_below="@+id/textViewTitle"
+ 	    android:layout_marginLeft="22dp"
+ 	    android:ems="10" 
+ 	    android:layout_marginTop="200dp"
+ 	    android:textColor="@android:color/black"
+ 	    android:visibility="gone"/>
+
+</RelativeLayout>

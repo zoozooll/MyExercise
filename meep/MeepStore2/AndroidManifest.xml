@@ -1,0 +1,124 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oregonscientific.meep.store2"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="20"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REMOVED" />
+
+    <application
+        android:name=".global.MeepStoreApplication"
+        android:icon="@drawable/meepstore"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="meepstore" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SearchResult"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".ActivityMyApps"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".ActivityMedia"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".ActivityGame"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".ActivityApp"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".ActivityEbook"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.oregonscientific.meep.store2.inapp.PurchaseActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <service android:name="MeepStoreService" >
+            <category android:name="com.oregonscientific.meep.store.service" />
+        </service>
+        <service
+            android:name=".inapp.InAppPurchaseService"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.oregonscientific.meep.store2.inapp.MeepStoreInAppService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".banner.BannerItemsService"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.oregonscientific.meep.store2.banner.MeepStoreBannerItems" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".ctrl.MyBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="meepstore" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">MeepOTA</string>
+  <string name="hello_world">こんにちは！</string>
+  <string name="menu_settings">設定</string>
+  <string name="title_activity_main">メインアクティビティー</string>
+  <string name="ota_local">PC/Macからダウンロード</string>
+  <string name="ota_download">ダウンロード＆インストール</string>
+  <string name="ota">OTA</string>
+  <string name="current_version">現在のバージョン :</string>
+  <string name="new_version">新しいアップデート :</string>
+  <string name="not_available">利用可能なアップデートはありません</string>
+  <string name="find_file_fail">OTAパッケージを確認できません。詳細はhttp://www.meeptablet.com/otaでご確認ください。</string>
+  <string name="verify_file_fail">OTAパッケージを確認できません。もう一度お試しください！</string>
+  <string name="download_abort">ダウンロード失敗！</string>
+  <string name="proceeding">OTAパッケージを確認しています・・・少々お待ちください。\nお使いのMEEPはインストール後自動的に再起動します。</string>
+  <string name="information">インフォメーション</string>
+  <string name="new_features">新機能</string>
+  <string name="check_agin">もう一度確認してください</string>
+  <string name="wifi_off">インターネットに接続されていません！WiFiに接続してください。</string>
+  <string name="downloading">ダウンロード中・・・</string>
+  <string name="ota_available_title">OTAアップデート</string>
+  <string name="ota_available_message">新しいOTA %s が利用可能になりました！ダウンロード＆アップデートをおこないますか？</string>
+  <string name="ota_available_update">すぐ更新する</string>
+  <string name="ota_available_later">あとで</string>
+  <string name="power_connection_needed">OTAアップデートをおこなう前に本体を充電してください</string>
+</resources>

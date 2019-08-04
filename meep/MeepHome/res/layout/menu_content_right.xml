@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:menuitem="http://schemas.android.com/apk/res/com.oregonscientific.meep.home"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:gravity="right"
+    android:orientation="vertical" >
+
+    <!-- row 1 of right menu -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="3dp"
+        android:tag="0" >
+
+        <com.oregonscientific.meep.home.view.MenuItem2
+            android:id="@+id/menu_item_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            menuitem:badgeBackground="@drawable/bubble04"
+            menuitem:badgePosition="left"
+            menuitem:badgeTextColor="@color/dark_blue"
+            menuitem:badgeTypeface="MEEP.ttf"
+            menuitem:launchPackage="@string/package_meep_music"
+            menuitem:menuItemBackground="@drawable/music"
+            android:gravity="right"
+            android:layout_weight="1"            
+             >
+        </com.oregonscientific.meep.home.view.MenuItem2>
+
+        <com.oregonscientific.meep.home.view.MenuItem2
+            android:id="@+id/menu_item_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            menuitem:launchPackage="@string/package_meep_movie"
+            menuitem:menuItemBackground="@drawable/movie"
+            android:gravity="left"           
+            android:layout_weight="1"
+             >
+        </com.oregonscientific.meep.home.view.MenuItem2>
+    </LinearLayout>
+
+    <!-- row 2 of right menu -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:tag="1" >
+
+        <com.oregonscientific.meep.home.view.MenuItem2
+            android:id="@+id/menu_item_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            menuitem:launchPackage="@string/package_meep_game"
+            menuitem:menuItemBackground="@drawable/game" 
+            android:paddingLeft="35dp"
+            >
+        </com.oregonscientific.meep.home.view.MenuItem2>
+    </LinearLayout>
+
+    <!-- row 3 of right menu -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:tag="2" >
+
+        <com.oregonscientific.meep.home.view.MenuItem2
+            android:id="@+id/menu_item_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            menuitem:launchPackage="@string/package_meep_photo"
+            menuitem:menuItemBackground="@drawable/photo" >
+        </com.oregonscientific.meep.home.view.MenuItem2>
+    </LinearLayout>
+
+    <!-- row 4 of right menu -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingLeft="10dp"
+        android:tag="3" >
+
+        <com.oregonscientific.meep.home.view.MenuItem2
+            android:id="@+id/menu_item_ebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            menuitem:badgeBackground="@drawable/bubble04"
+            menuitem:badgePosition="left"
+            menuitem:badgeTextColor="@color/dark_blue"
+            menuitem:badgeTypeface="MEEP.ttf"
+            menuitem:launchPackage="@string/package_meep_ebook"
+            menuitem:menuItemBackground="@drawable/ebook"
+            android:gravity="right"
+            android:layout_weight="1" >
+        </com.oregonscientific.meep.home.view.MenuItem2>
+
+        <com.oregonscientific.meep.home.view.MenuItem2
+            android:id="@+id/menu_item_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            menuitem:launchPackageAction="@string/activity_action_image_capture"
+            menuitem:menuItemBackground="@drawable/camera"
+            android:gravity="left"
+            android:layout_weight="1" >
+        </com.oregonscientific.meep.home.view.MenuItem2>
+    </LinearLayout>
+
+    <!-- row 5 of right menu -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:tag="4" >
+
+        <com.oregonscientific.meep.home.view.MenuItem2
+            android:id="@+id/menu_item_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            menuitem:launchPackage="@string/package_meep_safty"
+            menuitem:menuItemBackground="@drawable/safety"
+            android:gravity="right"
+            android:paddingLeft="38dp"       
+            >
+        </com.oregonscientific.meep.home.view.MenuItem2>
+    </LinearLayout>
+
+</LinearLayout>

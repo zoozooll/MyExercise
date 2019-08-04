@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Benachrichtigung</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="hello_world">Hello world!</string>
+    
+	<!-- message box item -->
+	<string name="choice_box_approvel">Abnehmen</string>
+	<string name="choice_box_reject">Ablehnen</string>
+	<string name="remove_all">Alle entfernen</string>
+	<string name="news">Nachricht</string>
+	
+</resources>

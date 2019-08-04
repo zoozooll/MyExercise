@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+	<string name="browser_ui_meep_logo">MEEP!</string>
+	<string name="browser_info_search">Pesquisa</string>
+	<string name="browser_ui_recommend">Recomendado</string>
+	<string name="browser_btn_more">Mais (&#8230;)</string>
+	<string name="browser_info_no_result">Sem resultados</string>
+	<string name="browser_title_oops">Uops!</string>
+	<string name="browser_msg_web_blocked">Este website está bloqueado! Você não tem permissão para usar essa palavra em seu Navegador. Por favor tente alguma outra alternativa!</string>
+	<string name="browser_btn_ok">OK</string>
+	<string name="browser_btn_send_request">Enviar Pedido</string>
+	<string name="browser_info_I">|</string>
+	<string name="browser_title_search_result">Resultados da Pesquisa</string>
+	<string name="browser_info_no_results">Sem correspondência/Resultados bloqueados</string>
+	<string name="browser_btn_add">Adicionar</string>
+	<string name="browser_btn_rename">Renomear</string>
+	<string name="browser_btn_delete">Excluir</string>
+	<string name="browser_title_uh_oh">Uh, oh!</string>
+	<string name="browser_msg_xxx_5mins">Você tem somente mais 5 minutos para usar o Navegador da Rede.</string>
+	<string name="browser_title_times_up">Tempo esgotado!</string>
+	<string name="browser_msg_try_again_xxx">Desculpe, você não pode usar o Navegador da Rede agora. Tente de novo em %1$d minutos!</string>
+	<string name="browser_msg_short_timer_reminder_xxx">Lembrete de Tempo - Navegador da Rede</string>
+	<string name="browser_msg_short_timeup_xxx">Tempo esgotado! - Navegador da Rede</string>
+	<string name="browser_title_update">Atualizar</string>
+	<string name="browser_msg_update_xxx_timer_changed">O tempo do Navegador da Rede foi mudado para %1$d </string>
+	<string name="browser_msg_update_xxx">Atualizar - Navegador da Rede</string>
+	<string name="browser_msg_permission_use_xxx">Pronto! Você pode usar o Navegador da Rede agora.</string>
+	<string name="browser_msg_permission_approval_xxx">Desculpe, você precisa aguardar a autorização de seus pais antes de poder usar o Navegador da Rede.</string>
+	<string name="browser_btn_approval">Peça a aprovação </string>
+	<string name="browser_msg_approval_sent">Pedido de aprovação enviado!</string>
+	<string name="browser_msg_permission_xxx_notgiven">Desculpe, você não pode usar o Navegador da Rede agora já que a aprovação não foi dada.</string>
+	<string name="browser_msg_meep_recommend_updated">Sua lista de recomendações MEEP! foi atualizada.</string>
+	<string name="browser_msg_parent_recommend_updated">Sua lista de recomendações dos pais foi atualizada.</string>
+	<string name="browser_title_blocked">Bloqueado</string>
+	<string name="browser_msg_short_blocked_xxx">Navegador da Rede - Bloqueado</string>
+	<string name="browser_msg_unprotected_web">Desculpe, você não tem permissão para ser redirecionado para um website desprotegido.</string>
+	<string name="browser_msg_protected_web">Desculpe, você não tem permissão para ser redirecionado para um website protegido.</string>
+	<string name="browser_title_approved">Aprovado!</string>
+	<string name="browser_msg_xxx_approved">Seu pedido para usar o Navegador da Rede foi aprovado.</string>
+	<string name="browser_btn_go">Vai!</string>
+	<string name="browser_msg_short_approved_xxx">Navegador da Rede - Aprovado.</string>
+	<string name="browser_msg_approved_search_function">Pronto! Você pode usar o Navegador da Rede agora.</string>
+	<string name="browser_title_refused">Recusado!</string>
+	<string name="browser_msg_xxx_refused">Desculpe, o seu pedido para usar o Navegador da Rede foi recusado.</string>
+	<string name="browser_msg_short_refused_xxx">Navegador da Rede - recusado</string>
+	<string name="browser_msg_refused_search_function">Desculpe, o seu pedido para usar a função Pesquisa no Navegador da Rede foi recusado.</string>
+	<string name="browser_title_sudden_change">Repentina mudança de acesso</string>
+	<string name="browser_msg_sudden_parental_change">Desculpe, não pode usar esta aplicativo no momento já que a configuração de acesso no Portal de Pais foi mudada.</string>
+	<string name="browser_btn_ask_access">Pedir acesso</string>
+	<string name="browser_msg_access_request_sent">Pedido de acesso enviado!</string>
+	<string name="browser_title_version_update">Atualização da versão</string>
+	<string name="browser_msg_available_upgrade">Tem uma atualização disponível deste aplicativo, você quer atualizar?</string>
+	<string name="browser_btn_yes">Sim</string>
+	<string name="browser_btn_no">Não</string>
+	<string name="browser_msg_xxx_available_update">Atualizar - %1$s %2$s - Atualização da versão disponível</string>
+    <string name="browser_msg_no_network">Não ha conexão com a rede de Internet. Tenha certeza que seu MEEP! está conectado a uma rede Wi-Fi!</string>
+    <string name="browser_msg_delete_bookmark">Excluir marcador?</string>
+    <string name="browser_msg_bookmark_deleted">Marcador excluído.</string>
+    <string name="browser_msg_duplicated_bkmk">Marcador duplicado.</string>
+    <string name="browser_msg_cannot_download">Não foi possível baixar o arquivo.</string>    
+    <string name="browser_ui_bookmarkurl">URL:</string>
+    <string name="browser_ui_bookmarkname">Nome:</string>
+    <string name="browser_btn_save">Salvar</string>
+    <string name="browser_loading">Carregando</string>
+
+
+</resources>

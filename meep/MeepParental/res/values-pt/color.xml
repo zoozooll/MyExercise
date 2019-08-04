@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="common_button_null_text">#21dbd4</color>
+    <color name="actionbar_background_orange">#ffff6600</color>
+    <color name="background_trans">#00000000</color>
+    <color name="toggle_on_up">#2F69F1</color>
+    <color name="toggle_on_down">#528AF0</color>
+    <color name="toggle_off_up">#999999</color>
+    <color name="toggle_off_down">#CCCCCC</color>
+    <color name="toggle_stroke">#333333</color>
+    <color name="background_half_trans">#30242424</color>
+    <color name="text_hint">#999999</color>
+    <color name="text_register">#993300</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_blue">#215FAB</color>
+    <color name="text_red">#F20019</color>
+    <color name="bkg_white">#FFFFFF</color>
+    <color name="bkg_blue">#1E7FD0</color>
+    <color name="bkg_actionbar_dark">#242424</color>
+    <color name="bkg_menu_text">#00343434</color>
+    <color name="bkg_menu_icon">#772D2D2D</color>
+    <color name="divider_color">#565656</color>
+    <color name="shadow_start">#c0242424</color>
+    <color name="item_bkg_section">#C5E8F0</color>
+    <color name="item_bkg_icon">#a0A0DEFC</color>
+    <color name="item_bkg_single">#D7F0FD</color>
+    <color name="item_bkg_double">#EEFAF5</color>
+    <color name="item_bkg_one">#C5E8F0</color>
+    <color name="item_bkg_two">#DCF3FC</color>
+    <color name="item_bkg_coin">#A6E2FE</color>
+    <color name="item_text">#41403F</color>
+    <color name="bkg_dialog">#2FAAF3</color>
+    <color name="dialog_scrollbar">#0F4B95</color>
+    <color name="btn_cover">#30FFFFFF</color>
+    
+    
+</resources>

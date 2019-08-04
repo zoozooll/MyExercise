@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    >
+    <ImageView
+        android:id="@+id/imageViewEditUserBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/popup_bg"
+        android:contentDescription="@string/app_name" />
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewEditUserBg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/btn_ok"
+        android:gravity="center"
+        android:shadowColor="#80000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" 
+        android:text="@string/ebook_btn_ok"/>
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageViewEditUserBg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-15dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:background="@drawable/popup_popup_title"
+        android:gravity="center"
+        android:text="@string/ebook_update_title"
+         />
+
+    <TextView
+        android:id="@+id/textNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:shadowColor="@android:color/white"
+        android:shadowRadius="1"
+        android:textColor="@color/grey_dark"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="@string/ebook_update_message"
+        android:layout_alignRight="@id/imageViewEditUserBg"
+        android:layout_alignLeft="@id/imageViewEditUserBg"
+        android:layout_margin="70dp"
+        android:lineSpacingExtra="10dp"
+         />
+    <Button
+        android:id="@+id/btnQuit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageViewEditUserBg"
+        android:layout_alignTop="@+id/imageViewEditUserBg"
+        android:layout_marginRight="-8dp"
+        android:layout_marginTop="-8dp"
+        android:background="@drawable/btn_cancel"/>
+ 
+</RelativeLayout>

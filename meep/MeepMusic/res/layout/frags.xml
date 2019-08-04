@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_frags"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/player_bg">
+    <!--	Delete by aaronli at May22,2013	-->
+<!-- 	<fragment android:name="com.oregonscientific.meep.meepmusic.GridViewFragment"
+	    android:id="@+id/gridViewFrag"
+	    android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+	<fragment android:name="com.oregonscientific.meep.meepmusic.SnakeFragment"
+	    android:id="@+id/snakeFrag"
+	    android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/> -->
+</RelativeLayout>

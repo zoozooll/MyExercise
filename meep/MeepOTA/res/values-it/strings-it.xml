@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">MeepOTA</string>
+	<string name="hello_world">Buongiorno!</string>
+	<string name="menu_settings">Impostazioni</string>
+	<string name="title_activity_main">Attività principale</string>
+    
+	<string name="ota_local">Scarica sul \n tuo PC/Mac</string>
+	<string name="ota_download">Scarica e installa\n sul MEEP!</string>
+	<string name="ota">OTA</string>
+	<string name="current_version">Versione attuale : </string>
+	<string name="new_version">Nuovo aggiornamento : </string>
+	<string name="not_available">Al momento non sono disponibili aggiornamenti</string>
+	<string name="find_file_fail">Pacchetto OTA non trovato. Per maggiori informazioni, visitare l’indirizzo (http://www.meeptablet.com/ota) da un PC/Mac. </string>
+	<string name="verify_file_fail">Verifica pacchetto OTA non riuscita. Riprova!</string>
+	<string name="download_abort">Download non riuscito!</string>
+	<string name="proceeding">Verifica del pacchetto OTA in corso… attendere prego! Dopo l’installazione il dispositivo verrà riavviato automaticamente.</string>
+	<string name="information">Informazioni</string>
+	<string name="new_features">Nuove funzioni</string>
+	<string name="check_agin">Ricontrolla </string>
+	<string name="wifi_off">Non c\'è rete! Accendere il Wi-Fi e riprovare!</string>
+	<string name="downloading">Download in corso …</string>
+	<string name="ota_available_title">Aggiornamento OTA</string>
+	<string name="ota_available_message">Un nuovo OTA %s è ora disponibile per il tuo MEEP! Vuoi scaricarlo e aggiornare il tuo MEEP! adesso?</string>
+	<string name="ota_available_update">Aggiorna ora </string>
+	<string name="ota_available_later">Più tardi </string>
+	<string name="power_connection_needed">Si prega di collegare il MEEP! X2 al suo adattatore AC/DC prima di procedere con l\'aggiornamento OTA.</string>
+</resources>

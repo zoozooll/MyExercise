@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>	
+<resources>  	
+    <string name="app_name">MeepYouTube</string>	
+    <string name="youtubeLabel">Последние просмотренные</string>	
+    <string name="youtubeLabelRelated">Похожее видео</string>	
+	<string name="youtubeCentralTitle"></string>
+    <string name="viewVideoButton">Смотреть</string>	
+    <string name="youtubeSearch">Искать</string>	
+    	
+    <!-- Заголовок для использования при поиске -->	
+    <string name="search_label">YouTubeMeep</string>	
+    	
+    <!-- Текст подсказки, которая появляется в окне поиска. -->	
+    <string name="search_hint">Искать на Youtube</string>	
+
+<string name="youtube_ui_logo">YouTube MEEP!</string>
+	<string name="youtube_info_search">Поиск</string>
+	<string name="youtube_ui_recommend">Рекомендовано</string>
+	<string name="youtube_info_search_no_result">Нет результатов</string>
+	<string name="youtube_title_search_results">Поиск результатов</string>
+	<string name="youtube_info_about_xxx_results">Около %1$d результатов</string>
+	<string name="youtube_info_results_blocked">Совпадений не найдено, или результат для данного слова заблокирован. Пожалуйста, попробуй искать заново.</string>
+	<string name="youtube_title_uh_oh">Ну и ну!</string>
+	<string name="youtube_msg_5mins_left">У тебя осталось только 5 минут для просмотра YouTube.</string>
+	<string name="youtube_title_times_up">Время вышло!</string>
+	<string name="youtube_msg_try_again_xxx">Извини, ты не можешь использовать просмотр YouTube сейчас. Попробуй снова через %1$d минут!</string>
+	<string name="youtube_btn_ok">OK</string>
+	<string name="youtube_noti_timer_reminder_xxx">Таймер напоминаний - Просмотр YouTube</string>
+	<string name="youtube_noti_timeup">Время вышло! - Просмотр YouTube </string>
+	<string name="youtube_title_update">Обновление</string>
+	<string name="youtube_msg_update_timer_xxx_changed">Таймер просмотра YouTube был переустановлен на %1$d</string>
+	<string name="youtube_noti_update">Обновление  -Просмотр YouTube</string>
+	<string name="youtube_msg_permission_free">Ура! Сейчас ты можешь использовать Просмотр YouTube.</string>
+	<string name="youtube_msg_wait_approval">"Извини, тебе нужно подождать подтверждение от твоих родителей, чтобы использовать Просмотр  YouTube."</string>
+	<string name="youtube_btn_send_approval">Запрос подтверждения</string>
+	<string name="youtube_msg_approval_sent">Запрос подтверждения отправлен!</string>
+	<string name="youtube_msg_no_permission">Извини, ты не можешь использовать сейчас Просмотр YouTube так как подтверждение не было дано.</string>
+	
+	<string name="youtube_msg_os_recommend_updated">Твой список рекомендаций MEEP! был обновлен.</string>
+	<string name="youtube_msg_parents_recommend_updated">Твой список Родительских рекомендаций был обновлен.</string>
+	<string name="youtube_title_blocked">Заблокировано</string>
+	
+	
+	<string name="youtube_noti_short_blocked">Заблокировано - Просмотр YouTube</string>
+	<string name="youtube_msg_unprotected_web">Извини, у тебя нет разрешения для просмотра незащищенного сайта.</string>
+	<string name="youtube_msg_protected_web">Извини, у тебя нет разрешения для просмотра защищенного сайта.</string>
+	
+	<string name="youtube_title_approved">Подтверждено!</string>
+	<string name="youtube_msg_approveded">Твой запрос на использование Просмотра YouTube был подтвержден.</string>
+	<string name="youtube_btn_go">Начали!</string>
+	<string name="youtube_noti_short_approved">Подтверждено - Просмотр YouTube</string>
+	
+	<string name="youtube_title_refused">Отклонено!</string>
+	<string name="youtube_msg_request_refused">Извини, твой запрос на использование Просмотра YouTube был отклонен.</string>
+	<string name="youtube_noti_short_refused">Отклонено - Просмотр YouTube</string>
+	<string name="youtube_msg_refused_search_function">Извини, твой запрос на использование функции Поиск на Просмотре YouTube был отклонен.</string>
+	<string name="youtube_title_sudden_change">Неожиданное изменение доступа</string>
+	<string name="youtube_msg_sudden_parental_changed">Извини, ты не можешь использовать это приложение сейчас, поскольку настройки на Родительском Портале были изменены.</string>
+	<string name="youtube_btn_ask_access">Запрос доступа</string>
+	<string name="youtube_msg_access_request_sent">Запрос доступа отправлен!</string>
+	<string name="youtube_title_version_update">Обновление версии</string>
+	<string name="youtube_msg_available_upgrade">Доступно обновление для этого приложения, хочешь обновить?</string>
+	<string name="youtube_btn_yes">Да</string>
+	<string name="youtube_btn_no">Нет</string>
+	<string name="youtube_noti_update_available">Обновление - %1$s - Доступна версия обновления</string>
+	
+	<string name="youtube_msg_no_network">Отсутствует подключение к интернет. Убедись, что твой MEEP! поключен к Wi-Fi!</string>
+	
+	<string name="youtube_msg_cannot_find_results_for_this_world">Ой!  Результатов нет…</string>
+	<string name="youtube_msg_uh_oh">Ну вот…</string>
+	<string name="youtube_msg_video_cannot_be_played_at_the_moment">Видео не может быть воспроизведено в данный момент. Пожалуйста, попробуй позже еще раз.</string>
+	<string name="youtube_title_no_of_views">Просмотры</string>
+    	
+    	
+    	
+</resources>	
+    	

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>  
+    <string name="app_name">MeepYouTube</string>
+    <string name="youtubeLabel">Historique</string>
+	<string name="youtubeCentralTitle"></string>
+    <string name="viewVideoButton">Voir</string>
+    <string name="youtubeSearch">Recherche</string>
+    
+    <!-- The label for use as a searchable item -->
+    <string name="search_label">YouTubeMeep</string>
+    
+    <!-- The hint text that appears in the search box. -->
+    <string name="search_hint">Recherche Youtube</string>
+    
+    <string name="hint_search">Recherche&#8230;</string>
+    <string name="add_bookmark">Ajouter Favori</string>
+    <string name="confirm">CONFIRMER</string>
+    <string name="ok">OK</string>
+    <string name="hint_name">Nom:</string>
+    <string name="recently">Vus récemment</string>
+    
+    <string name="menu_bookmark">Favoris</string>
+    <string name="menu_os_recommendations">Recommendations OS</string>
+    <string name="menu_parents_recommendations">Recommendations Parents</string>
+    <string name="menu_os_recommendations_n">OS&#160;&#160;&#160;\nRecommendations</string>
+    <string name="menu_parents_recommendations_n">Parents&#160;&#160;&#160;\nRecommendations</string>
+    
+    
+    <string name="search_res">Environ %1$d résultats</string>
+    <string name="views_res">%1$d vues</string>
+    
+    <string name="nonetwork">Pas de connexion internet! Assure-toi que ta MEEP!X2 est connectée au Wifi.</string>
+    <string name="cannot_use_now">Le lecteur YouTube est bloqué par tes parents. Demande leur de modifier leurs réglages parentaux pour toi.</string>
+    
+<string name="youtube_ui_logo">YouTube MEEP!</string>
+	<string name="youtube_info_search">Recherche</string>
+	<string name="youtube_ui_recommend">Recommandé</string>
+	<string name="youtube_info_search_no_result">Aucuns Résultats</string>
+	<string name="youtube_title_search_results">Résultats de la recherche</string>
+	<string name="youtube_info_about_xxx_results">Environ %1$d résultats</string>
+	<string name="youtube_info_results_blocked">Il n\'y a pas de résultats, ou les résultats ont été bloqués pour cette recherche. Essaye de lancer une autre recherche.</string>
+	<string name="youtube_title_uh_oh">Oh-oh!</string>
+	<string name="youtube_msg_5mins_left">Il ne te reste que 5 mins pour utiliser le Lecteur YouTube</string>
+	<string name="youtube_title_times_up">Expiration du délai!</string>
+	<string name="youtube_msg_try_again_xxx">Désolé, tu ne peux pas utiliser le Lecteur YouTube maintenant. Essaye de nouveau dans %1$d mins!</string>
+	<string name="youtube_btn_ok">OK</string>
+	<string name="youtube_noti_timer_reminder_xxx">Rappel Minuteur - Lecteur YouTube</string>
+	<string name="youtube_noti_timeup">Expiration du délai! - Lecteur YouTube</string>
+	<string name="youtube_title_update">Mise à jour</string>
+	<string name="youtube_msg_update_timer_xxx_changed">Le minuteur du Lecteur YouTube est à présent de %1$d</string>
+	<string name="youtube_noti_update">Mise à jour - Lecteur YouTube</string>
+	<string name="youtube_msg_permission_free">Yeah! Tu es maintenant libre d\'utiliser le Lecteur YouTube</string>
+	<string name="youtube_msg_wait_approval">Désolé, tu dois attendre l\'autorisation de tes parents avant de pouvoir utiliser le Lecteur YouTube</string>
+	<string name="youtube_btn_send_approval">Demande d\'autorisation</string>
+	<string name="youtube_msg_approval_sent">Demande d\'autorisation envoyée!</string>
+	<string name="youtube_msg_no_permission">Désolé, tu ne peux pas utiliser le Lecteur YouTube maintenant car l\'autorisation n\'a pas encore été acceptée. </string>
+	<string name="youtube_msg_os_recommend_updated">Votre liste de recommandations MEEP! a été mise à jour.</string>
+	<string name="youtube_msg_parents_recommend_updated">Votre liste de recommandations parentales a été mise à jour.</string>
+	<string name="youtube_title_blocked">Bloqué</string>
+	<string name="youtube_title_blockedbadword">Désolé</string>		
+	<string name="youtube_title_blockedempty">Oups</string>		
+	<string name="youtube_noti_short_blockedempty">Oups, tu as oublié d\'écrire quelque chose…</string>
+	<string name="youtube_noti_short_blocked">Le texte entré contient un ou plusieurs caractère(s) invalide(s). Essaie autre chose.</string>
+	<string name="youtube_noti_short_blockedbadword">Ce mot est bloqué par notre liste de mots interdits. Essaie une nouvelle recherche.</string>
+	<string name="youtube_noti_short_denysearch">La fonction de recherche a été bloquée par tes parents. Demande-leur de régler le niveau de sécurité Internet sur \' BAS \' dans les paramètres du contrôle parental afin de pouvoir utiliser cette fonction librement.</string>	
+	<string name="youtube_msg_unprotected_web">Désolé, tu n\'es pas autorisé à être redirigé vers un site internet non protégé.</string>
+	<string name="youtube_msg_protected_web">Désolé, tu n\'es pas autorisé à être redirigé vers un site internet protégé.</string>
+	<string name="youtube_title_approved">Approuvé!</string>
+	<string name="youtube_msg_approveded">Ta demande d\'utilisation du Lecteur YouTube a été approuvée.</string>
+	<string name="youtube_btn_go">Go!</string>
+	<string name="youtube_noti_short_approved">Approuvé - Lecteur YouTube</string>
+	<string name="youtube_title_refused">Refusé!</string>
+	<string name="youtube_msg_request_refused">Désolé, ta demande d\'utilisation de YouTube a été refusée.</string>
+	<string name="youtube_noti_short_refused">Refusé - YouTube</string>
+	<string name="youtube_msg_refused_search_function">Désolé, ta demande d\'utilisation de la fonction recherche de YouTube a été refusée.</string>
+	<string name="youtube_title_sudden_change">Changement d\'accès soudain</string>
+	<string name="youtube_msg_sudden_parental_changed">"Désolé, tu ne peux pas utiliser l\'application en ce moment car les réglages d\'accès dans le Portail Contrôle Parental ont été modifiés"</string>
+	<string name="youtube_btn_ask_access">Demande d\'accès</string>
+	<string name="youtube_msg_access_request_sent">Demande d\'accès envoyée!</string>
+	<string name="youtube_title_version_update">Version mise à jour</string>
+	<string name="youtube_msg_available_upgrade">Il existe une version mise à jour de cette application, souhaite-tu effectuer cette mise à jour?</string>
+	<string name="youtube_btn_yes">Oui</string>
+	<string name="youtube_btn_no">Non</string>
+	<string name="youtube_noti_update_available">"Mise à jour - %1$d - Version mise à jour disponible"</string>
+	<string name="youtube_msg_no_network">Pas de connexion internet! Assure-toi que ta MEEP! est bien connectée au Wifi!</string>
+	<string name="youtube_msg_cannot_find_results_for_this_world">Oups! Pas de résultats…</string>
+	<string name="youtube_msg_uh_oh">Oh oh…</string>
+	<string name="youtube_msg_video_cannot_be_played_at_the_moment">La vidéo ne peut être lue pour le moment. Veuillez réessayez ultérieurement.</string>
+	<string name="youtube_title_no_of_views">Vues</string>
+</resources>
+

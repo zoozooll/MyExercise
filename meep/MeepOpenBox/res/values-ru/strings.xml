@@ -1,0 +1,78 @@
+<resources>
+
+    <string name="app_name">MeepOpenBox</string>
+    <string name="mainpage_selection_english">English</string>
+    <string name="mainpage_selection_french">Français</string>
+    <string name="mainpage_selection_spanish">Español</string>
+    <string name="mainpage_selection_italian">Italiano</string>
+    <string name="mainpage_selection_german">Deutsch</string>
+    <string name="mainpage_selection_portuguese">Português</string>
+    <string name="mainpage_selection_russia">Russia</string>
+    <string name="mainpage_selection_japan">日本語</string>
+    <string name="mainpage_selection_korea">한국어</string>
+
+    <!-- Title bar number -->
+    <string name="title_bar_number_one">1</string>
+    <string name="title_bar_number_two">2</string>
+    <string name="title_bar_number_three">3</string>
+    <string name="title_bar_number_four">4</string>
+    <string name="title_bar_number_five">5</string>
+
+    <!-- Button text -->
+    <string name="next_btn_text">Next</string>
+    <string name="back_btn_text">Back</string>
+    <string name="skip_btn_text">Skip</string>
+    <string name="yes_btn_text">Yes</string>
+    <string name="no_btn_text">No</string>
+    <string name="ok_btn_text">OK</string>
+
+    <!-- Title text -->
+    <string name="language_selection">Language Selection</string>
+    <string name="welcome">Welcome!</string>
+    <string name="time_zone">Time Zone</string>
+    <string name="setup_wifi">Setup Wi-Fi</string>
+    <string name="parental_setting">Parental Settings</string>
+
+    <!-- Message text -->
+    <string name="greetings_message">Thank you for choosing the MEEP! Tablet. 
+        We would like to invite you to take a moment to set up your device. </string>
+    <string name="parental_setting_message">In order to let your child use the MEEP! the way you want, 
+        we recommend you to proceed with the setup of the Parental Controls. It will only take a few minutes. 
+        You can use the Parental Controls to manage the playing time of your child on the MEEP!. </string>
+    <string name="parental_setting_question">Would you like to set up the Parental controls now?</string>
+    <string name="skip_parental_setting_message">Are you sure you want to skip the setup of the Parental Controls? 
+        Some features of the MEEP! require the setup of the Parental Controls to be unlocked. </string>
+    <string name="skip_wifi_setup_message">Are you sure you want to skip the setup of WiFi? 
+        Some features of the MEEP! require network connection.</string>
+
+    <!-- Dialog Message text -->
+    <string name="select_language">Please select your language first. </string>
+    <string name="select_time_zone">Please choose your time zone first. </string>
+
+    <!-- WiFi Related text -->
+    <string name="connected">Connected</string>
+    <string name="connecting">Connecting…</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="authenticating">Authenticating…</string>
+    <string name="authentication_problem">Authentication problem</string>
+    <string name="obtaining_ipaddr">Obtaining IP address…</string>
+    <string name="blocked">Blocked</string>
+    <string name="saved">Saved</string>
+    <string name="disabled">Disabled</string>
+    <string name="signal_strength">Signal strength</string>
+    <string name="security">Security</string>
+    <string name="password">Password</string>
+    <string name="show_password">Show password</string>
+    <string name="cancel_btn_text">Cancel</string>
+    <string name="connect_btn_text">Connect</string>
+    <string name="status">Status</string>
+    <string name="link_speed">Link speed</string>
+    <string name="ip_address">IP address</string>
+    <string name="forget_btn_text">Forget</string>
+    <string name="signal_strength_poor">Poor</string>
+    <string name="signal_strength_fair">Fair</string>
+    <string name="signal_strength_good">Good</string>
+    <string name="signal_strength_excellent">Excellent</string>
+    <string name="wifi_security_none">None</string>
+
+</resources>

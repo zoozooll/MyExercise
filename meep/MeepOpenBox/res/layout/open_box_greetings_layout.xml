@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_font="http://schemas.android.com/apk/res/com.oregonscientific.meep.meepopenbox"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/openbox_bg_02" >
+
+    <com.oregonscientific.meep.meepopenbox.view.CustomTextView
+        android:id="@+id/title_number"
+        style="@style/OpenBoxTitleNumber"
+        android:layout_marginLeft="150dp"
+        android:text="@string/title_bar_number_two"
+        custom_font:font_directory="fonts/Roboto-BoldCondensedItalic.ttf" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="18dp" >
+
+        <ImageView
+            android:id="@+id/arrow01"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/openbox_arrow01" />
+
+        <com.oregonscientific.meep.meepopenbox.view.CustomTextView
+            android:id="@+id/title"
+            style="@style/OpenBoxTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80dp"
+            android:layout_toLeftOf="@+id/arrow03"
+            android:layout_toRightOf="@+id/arrow01"
+            android:text="@string/welcome"
+            custom_font:font_directory="fonts/Roboto-BoldCondensedItalic.ttf" />
+
+        <ImageView
+            android:id="@+id/arrow03"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="220dp"
+            android:background="@drawable/openbox_arrow03" />
+
+        <ImageView
+            android:id="@+id/arrow04"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="130dp"
+            android:background="@drawable/openbox_arrow04" />
+
+        <ImageView
+            android:id="@+id/arrow05"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/openbox_arrow05" />
+    </RelativeLayout>
+
+    <com.oregonscientific.meep.meepopenbox.view.CustomTextView
+        android:id="@+id/textViewGreetingsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:gravity="center"
+        android:text="@string/greetings_message"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        custom_font:font_directory="fonts/Roboto-Regular.ttf" />
+
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_width="607dp"
+        android:layout_height="297dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/openbox_splash01" />
+
+    <Button
+        android:id="@+id/greetingsBackBtn"
+        style="@style/OpenBoxBackButton" />
+
+    <TextView
+        android:id="@+id/greetingsBackText"
+        style="@style/OpenBoxButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/greetingsBackBtn"
+        android:layout_alignRight="@+id/greetingsBackBtn"
+        android:layout_below="@+id/greetingsBackBtn"
+        android:gravity="center"
+        android:text="@string/back_btn_text" />
+
+    <Button
+        android:id="@+id/greetingsNextBtn"
+        style="@style/OpenBoxNextButton" />
+
+    <TextView
+        android:id="@+id/greetingsNextText"
+        style="@style/OpenBoxButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/greetingsNextBtn"
+        android:layout_alignRight="@+id/greetingsNextBtn"
+        android:layout_below="@+id/greetingsNextBtn"
+        android:gravity="center"
+        android:text="@string/next_btn_text" />
+
+</RelativeLayout>

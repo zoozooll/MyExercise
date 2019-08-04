@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    	<string name="meep_picture">picture</string>
+    	<string name="picture_btn_ring_rename">Rename</string>
+		<string name="picture_btn_ring_delete">Delete</string>
+    	
+    	
+    	<!--  MEEP! Together (Parent Portal)- Timer -->
+    	<string name="picture_title_uh_oh">Uh-Oh!</string>
+
+    	<string name="picture_title_times_up">Time\'s up!</string>
+    	<string name="picture_msg_try_again_xxx">Sorry, you can\'t use the picture viewer right now. Try again in %1$d mins!</string>
+    	<string name="picture_btn_ok">OK</string>
+    	
+    	<string name="picture_msg_short_timer_reminder_xxx">Timer reminder - picture viewer</string>
+    	<string name="picture_msg_short_timeup_xxx">Time\'s up! - picture viewer</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update -->
+    	<string name="picture_title_update">Update</string>
+    	<string name="picture_msg_update_xxx_timer_changed">The picture viewer timer has been changed to %1$d</string>
+    	<string name="picture_msg_update_xxx">Update - picture viewer</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Sudden Access Change -->
+    	<string name="picture_title_sudden_change">Sudden access change</string>
+    	<string name="picture_msg_sudden_parental_change">Sorry, you can\'t use this application at the moment as the access setting in the Parent Portal has been changed.</string>
+    	<string name="picture_btn_ask_access">Ask for access</string>
+    	<string name="picture_msg_access_request_sent">Access request sent!</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update - Content Version update - New -->
+    	<string name="picture_title_version_update">Version update</string>
+    	<string name="picture_msg_available_upgrade">There is an upgrade available for this app, do you want to upgrade?</string>
+    	<string name="picture_btn_yes">Yes</string>
+    	<string name="picture_btn_no">No</string>
+    	<string name="picture_msg_xxx_available_update">Update - %1$s %2$s - Version update available</string>
+    	
+
+	<string name="picture_title_rename_error">Rename error</string>
+	<string name="picture_msg_rename_error">This destination already contains a file named %1$S Please check it before renaming this file.</string>
+	<string name="picture_msg_name_invalid">The file name cannot start with \".\", please change the file name</string>
+	<string name="picture_msg_blocked">Do not type improper content. Name contains invalid characters.</string>
+
+</resources>

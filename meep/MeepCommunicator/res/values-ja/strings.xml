@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">コミュニケーター</string>
+  <string name="action_settings">設定</string>
+  <string name="hello_world">こんにちは！</string>
+  <string name="friend_not_found">ともだちを探せません。もう一度探しますか？</string>
+  <string name="add_friends">ともだちを追加</string>
+  <string name="add">＋</string>
+  <string name="add_friend_hint">%sさん、こんにちは！ともだちになってください！</string>
+  <string name="search_friend_hint">ともだちのMEEP IDを入力してください</string>
+  <string name="search">検索</string>
+  <string name="search_friend">ともだちを探す</string>
+  <string name="type_chat_hint">チャットはこちら</string>
+  <string name="send">送信</string>
+  <string name="accept">承認</string>
+  <string name="decline">拒否</string>
+  <string name="accept_friend_title">ともだちリクエスト</string>
+  <string name="accept_friend">ともだちになる</string>
+  <string name="accept_friend_format_string">%sからともだちリクエストが届いています！</string>
+  <string name="accept_friend_friends_message_format_string">%1$s\n%2$sからメッセージ</string>
+  <string name="ok">OK</string>
+  <string name="error">おっと！</string>
+  <string name="error_message_parents_cannot_delete">保護者を削除することはできません</string>
+  <string name="blocked">ブラックワードリストでブロックされています</string>
+  <string name="cannot_process">ブロックされました</string>
+  <string name="cannot_add_yourself">自分のアカウントをともだちに追加することはできません</string>
+  <string name="cannot_add_existing_friend">このユーザーとは、すでにともだちです</string>
+  <string name="please_enter_meep_id">MEEP IDを入力してください</string>
+  <string name="user_already_your_friend">このユーザーとは、すでにともだちです</string>
+  <string name="duplicated_friend_request">このユーザーとは、すでにともだちです</string>
+  <string name="no_results">結果なし</string>
+  <string name="user_not_found">その名前のともだちを見つけることができません！もう一度試してください！</string>
+  <string name="oops">おっと！</string>
+  <string name="no_network">コミュニケーターを使用するにはネットワークへの接続が必要です。Wi-Fi設定をおこないますか？</string>
+  <string name="network_try_again">サーバーに接続されていません。あとで試すかWi-Fi接続を確認してください。</string>
+  <string name="delete_friend">ともだちを削除</string>
+  <string name="delete_friend_confirm_format">%sをリストから削除しますか？</string>
+  <string name="friend_deleted_message_format">%sは削除されました！</string>
+  <string name="yes">はい</string>
+  <string name="no">いいえ</string>
+  <string name="guest_not_allowed">ゲストはこのリソースを使用できません</string>
+  <string name="user_not_online">ともだちはオフラインです。あとでもう一度お試しください。</string>
+  <string name="try_again_later">あとでもう一度お試しください</string>
+  <string name="friend_request_sent">リクエストが送信されました</string>
+  <string name="friend_request_success">あなたと\'sの保護者にともだちリクエスト承認が送信されました</string>
+  <string name="friend_request_pending">ともだちリクエスト保留中。お待ちください。</string>
+  <string name="friend_request_result">友達リクエストの結果</string>
+  <string name="friend_request_self_parent_reject">保護者が%1$sとのともだちリクエストを拒否しました</string>
+  <string name="friend_request_oppo_parent_reject">%1$sの保護者がともだちリクエストを拒否しました</string>
+  <string name="friend_request_friend_reject">%1$sがともだちリクエストを拒否しました</string>
+  <string name="friend_request_approved">%1$sとともだちになりました！</string>
+  <string name="nice">やったね！</string>
+  <string name="friend_reject">%1$sにメッセージを送りました</string>
+</resources>

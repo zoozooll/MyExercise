@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oregonscientific.meep.meepopenbox.view.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_font="http://schemas.android.com/apk/res/com.oregonscientific.meep.meepopenbox"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-10dp"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.oregonscientific.meep.meepopenbox.view.CustomTextView
+            android:id="@+id/name"
+            style="@style/OpenBoxListViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:singleLine="true"
+            android:text="@+id/name"
+            custom_font:font_directory="fonts/Roboto-Bold.ttf" />
+
+        <com.oregonscientific.meep.meepopenbox.view.CustomTextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/name"
+            android:layout_below="@+id/name"
+            android:singleLine="true"
+            android:text="@string/connected"
+            android:textColor="@color/brown"
+            android:textSize="12sp"
+            custom_font:font_directory="fonts/Roboto-Regular.ttf" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/status_icon"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            />
+    </RelativeLayout>
+
+</com.oregonscientific.meep.meepopenbox.view.CheckableLinearLayout>

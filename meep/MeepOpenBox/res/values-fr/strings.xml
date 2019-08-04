@@ -1,0 +1,83 @@
+<resources>
+
+	<string name="app_name">MeepOpenBox</string>
+	<string name="mainpage_selection_english">English</string>
+	<string name="mainpage_selection_french">Français</string>
+	<string name="mainpage_selection_spanish">Español</string>
+	<string name="mainpage_selection_italian">Italiano</string>
+	<string name="mainpage_selection_german">Deutsch</string>
+	<string name="mainpage_selection_portuguese">Português</string>
+	<string name="mainpage_selection_russia">Russian</string>
+	<string name="mainpage_selection_japan">日本語</string>
+    <string name="mainpage_selection_korea">한국어</string>
+    
+    <!-- Title bar number -->
+	<string name="title_bar_number_one">1</string>
+	<string name="title_bar_number_two">2</string>
+	<string name="title_bar_number_three">3</string>
+	<string name="title_bar_number_four">4</string>
+	<string name="title_bar_number_five">5</string>
+	
+    <!-- Button text -->
+	<string name="next_btn_text">Suivant</string>
+	<string name="back_btn_text">Retour</string>
+	<string name="skip_btn_text">Ignorer</string>
+	<string name="yes_btn_text">Oui</string>
+	<string name="no_btn_text">Non</string>
+	<string name="ok_btn_text">OK</string>
+	<string name="language_selection">Sélection de la langue</string>
+	<string name="welcome">Bienvenue!</string>
+	<string name="time_zone">Fuseau horaire</string>
+    <string name="country_selection">Sélection du pays</string>
+	<string name="setup_wifi">Réglage du Wi-Fi</string>
+	<string name="parental_setting">Réglages Parentaux</string>
+	<string name="greetings_message">Merci d\'avoir choisi la tablette MEEP!
+        Nous vous invitons à prendre un moment pour régler votre tablette. </string>
+	<string name="parental_setting_message">Créez un compte parent pour accéder aux fonctions suivantes</string>
+	<string name="parental_setting_question">Souhaitez-vous effectuer les réglages parentaux?</string>
+	<string name="skip_parental_setting_message">Êtes-vous sûr de vouloir ignorer le réglage des contrôles parentaux? Certains éléments de la MEEP! requièrent le réglage des contrôles parentaux pour être débloqués. </string>
+	<string name="skip_wifi_setup_message">Êtes-vous sûr de vouloir ignorer le réglage du Wi-Fi? Certaines fonctions de la MEEP! nécessitent une connexion internet.</string>
+	<string name="select_language">Veuillez sélectionner une langue. </string>
+	<string name="select_time_zone">Veuillez sélectionner un fuseau horaire. </string>
+	<string name="connected">Connecté</string>
+	<string name="connecting">En cours de connexion…</string>
+	<string name="disconnected">Déconnecté</string>
+	<string name="authenticating">En cours d\'authentification…</string>
+	<string name="authentication_problem">Problème d\'authentication</string>
+	<string name="obtaining_ipaddr">Obtention de l\'adresse IP…</string>
+	<string name="blocked">Bloqué</string>
+	<string name="saved">Sauvegardé</string>
+	<string name="disabled">Désactivé</string>
+	<string name="signal_strength">Intensité du signal</string>
+	<string name="security">Sécurité</string>
+	<string name="password">Mot de passe</string>
+	<string name="show_password">Afficher le mot de passe</string>
+	<string name="cancel_btn_text">Annuler</string>
+	<string name="connect_btn_text">Se connecter</string>
+	<string name="status">Statut</string>
+	<string name="link_speed">Vitesse du lien</string>
+	<string name="ip_address">Adresse IP</string>
+	<string name="forget_btn_text">Retirer</string>
+	<string name="signal_strength_poor">Faible</string>
+	<string name="signal_strength_fair">Satisfaisante</string>
+	<string name="signal_strength_good">Bonne</string>
+	<string name="signal_strength_excellent">Excellente</string>
+    <string name="wifi_security_none">None</string>
+    <!-- used at top of view -->
+    <string name="top_number_first">1</string>
+    <string name="top_number_second">2</string>
+    <string name="top_number_third">3</string>
+    <string name="top_number_fourth">4</string>
+    
+    <!-- used at parent zone -->
+    <string name="timezone_selection">Fuseau Horaire</string>
+    <string name="parent_zone_title">Zone Parents</string>
+    <string name="parent_zone_description" >Créez un compte parent pour accéder aux fonctions suivantes:</string>
+    <string name="parental_settings">Réglages Parentaux</string>
+    <string name="meep_store">MEEP! Store</string>
+    <string name="communicator">Communicator</string>
+    <string name="parent_zone_prompt">Souhaitez-vous créer un compte parent?</string>
+
+    
+
+</resources>

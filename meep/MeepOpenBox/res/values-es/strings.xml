@@ -1,0 +1,75 @@
+<resources>
+
+	<string name="app_name">MeepOpenBox</string>
+	<string name="mainpage_selection_english">English</string>
+	<string name="mainpage_selection_french">Français</string>
+	<string name="mainpage_selection_spanish">Español</string>
+	<string name="mainpage_selection_italian">Italiano</string>
+	<string name="mainpage_selection_german">Deutsch</string>
+	<string name="mainpage_selection_portuguese">Português</string>
+	<string name="mainpage_selection_russia">русский</string>
+	<string name="mainpage_selection_japan">日本語</string>
+    <string name="mainpage_selection_korea">한국어</string>
+	<string name="title_bar_number_one">1</string>
+	<string name="title_bar_number_two">2</string>
+	<string name="title_bar_number_three">3</string>
+	<string name="title_bar_number_four">4</string>
+	<string name="title_bar_number_five">5</string>
+	<string name="next_btn_text">Siguiente</string>
+	<string name="back_btn_text">Anterior</string>
+	<string name="skip_btn_text">Saltar</string>
+	<string name="yes_btn_text">Sí</string>
+	<string name="no_btn_text">No</string>
+	<string name="ok_btn_text">Aceptar</string>
+	<string name="language_selection">Selección del idioma</string>
+	<string name="welcome">¡Bienvenido!</string>
+	<string name="time_zone">Huso horario</string>
+    <string name="timezone_selection">Selección de zona horaria</string>
+	<string name="setup_wifi">Conexión a WiFi</string>
+	<string name="parental_setting">Control paterno</string>
+	<string name="greetings_message">¡Gracias por elegir la tableta MEEP! Por favor, dedique unos momentos a configurar su dispositivo.</string>
+	<string name="parental_setting_message">Con el fin de que su hijo utilice la tableta MEEP! como usted desea, se recomienda proceder con las configuración del control paterno. Solo le tomará unos minutos. El Control paterno puede utilizarse para gestionar el tiempo que su hijo puede jugar con la tableta MEEP!</string>
+	<string name="parental_setting_question">¿Le gustaría configurar las opciones de control paterno ahora?</string>
+	<string name="skip_parental_setting_message">¿Está seguro de querer omitir la configuración de las opciones del control paterno? Determinadas funciones de la tableta MEEP! requieren el desbloqueo de algunos parámetros del control paterno.</string>
+	<string name="skip_wifi_setup_message">¿Está seguro de querer omitir la configuración de la red Wi-Fi? Algunas funciones de la tableta MEEP! requieren una conexión a red.</string>
+	<string name="select_language">Por favor, seleccione primero su idioma.</string>
+	<string name="select_time_zone">Por favor, seleccione primero su huso horario.</string>
+	<string name="connected">Conectado</string>
+	<string name="connecting">Conectando...</string>
+	<string name="disconnected">Desconectado</string>
+	<string name="authenticating">Autentificando...</string>
+	<string name="authentication_problem">Problema de autentificación</string>
+	<string name="obtaining_ipaddr">Obteniendo la dirección IP…</string>
+	<string name="blocked">Bloqueado</string>
+	<string name="saved">Guardado</string>
+	<string name="disabled">Deshabilitado</string>
+	<string name="signal_strength">Intensidad de la señal</string>
+	<string name="security">Seguridad</string>
+	<string name="password">Contraseña</string>
+	<string name="show_password">Mostrar contraseña</string>
+	<string name="cancel_btn_text">Cancelar</string>
+	<string name="connect_btn_text">Conectar</string>
+	<string name="status">Estado</string>
+	<string name="link_speed">Velocidad</string>
+	<string name="ip_address">Dirección IP</string>
+	<string name="forget_btn_text">Deshacer</string>
+	<string name="signal_strength_poor">Débil</string>
+	<string name="signal_strength_fair">Aceptable</string>
+	<string name="signal_strength_good">Buena</string>
+	<string name="signal_strength_excellent">Excelente</string>
+	<string name="wifi_security_none">Ninguna</string>
+    <!-- used at top of view -->
+    <string name="top_number_first">1</string>
+    <string name="top_number_second">2</string>
+    <string name="top_number_third">3</string>
+    <string name="top_number_fourth">4</string>
+    
+    <!-- used at parent zone -->
+    <string name="parent_zone_title">Zona de padres</string>
+    <string name="parent_zone_description" >Crear una cuenta principal para acceder a las siguientes características:</string>
+    <string name="parental_settings">Control Paterno</string>
+    <string name="meep_store">MEEP! Store</string>
+    <string name="communicator">Comunicador</string>
+    <string name="parent_zone_prompt">¿Quiere crear una cuenta de padres?</string>
+
+</resources>

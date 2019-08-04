@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    	   	style="@style/fill_parent"
+    	   	android:layout_marginTop="10dp"
+    	   	android:scrollbars="none">
+    <LinearLayout
+        style="@style/LinearInScroll">
+        <TableRow style="@style/wrap_content_vertical">
+	            <ImageView
+	                style="@style/StepImageRe"
+	                android:contentDescription="@string/step2"
+	                android:src="@drawable/step2_icon" />
+		        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:text="@string/registration_create_account_owner_title"
+			            style="@style/PageSubTitle"/>
+	        </TableRow>
+        <!--  User Icon -->
+        <ImageButton
+		        android:layout_width="100dp"
+		        android:layout_height="100dp"
+		        android:layout_gravity="center_horizontal"
+		        android:layout_margin="20dp"
+		        android:id="@+id/user_icon"
+		        android:scaleType="fitCenter"
+		        android:src="@drawable/meeper_icon_big" 
+		        android:contentDescription="@string/main_menu_icon"
+		        android:background="@drawable/image_big_stroke_gray"/>
+        
+        <!-- Registeration Information details-->
+		 <!-- Person Name -->
+
+            <TextView
+                style="@style/TextAccountCreateInfo"
+                android:layout_weight="1"
+                android:text="@string/registration_create_account_name_first" />
+            <EditText
+                android:id="@+id/textFirstName"
+                style="@style/listEditText"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textPersonName"
+                />
+            <TextView
+                style="@style/TextAccountCreateInfo"
+                android:layout_weight="1"
+                android:text="@string/registration_create_account_name_last" />
+
+
+            <EditText
+                android:id="@+id/textLastName"
+                style="@style/listEditText"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textPersonName"
+                />
+            
+             <!-- Birthday -->
+
+        <TextView
+            style="@style/TextAccountCreateInfo"
+            android:text="@string/registration_create_account_birthday" />
+
+        <TableRow style="@style/wrap_content_vertical" >
+
+            <TextView
+                style="@style/TextAccountCreateInfo"
+                android:layout_width="0.0dip"
+                android:layout_weight="2"
+                android:text="@string/registration_create_account_birthday_day"
+                android:textStyle="normal" />
+
+            <TextView
+                style="@style/TextAccountCreateInfo"
+                android:layout_width="0.0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:text="@string/registration_create_account_birthday_month"
+                android:textStyle="normal" />
+
+            <TextView
+                style="@style/TextAccountCreateInfo"
+                android:layout_width="0.0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="3"
+                android:text="@string/registration_create_account_birthday_year"
+                android:textStyle="normal" />
+        </TableRow>
+        <TableRow
+            style="@style/wrap_content_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <EditText
+                android:id="@+id/textDay"
+                style="@style/listEditText"
+                android:layout_width="0.0dip"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:hint="@string/registration_create_account_birthday_dd"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"/>
+
+            <EditText
+                android:id="@+id/textMonth"
+                style="@style/listEditText"
+                android:layout_width="0.0dip"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:hint="@string/registration_create_account_birthday_mm"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp" />
+
+            <EditText
+                android:id="@+id/textYear"
+                style="@style/listEditText"
+                android:layout_width="0.0dip"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:hint="@string/registration_create_account_birthday_yyyy"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"/>
+        </TableRow>
+        
+    </LinearLayout>
+ 
+</ScrollView>

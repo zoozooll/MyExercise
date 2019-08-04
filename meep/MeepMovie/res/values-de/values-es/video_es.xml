@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+
+    	<string name="meep_video">video</string>
+	<string name="video_btn_ring_rename">Renombrar</string>
+	<string name="video_btn_ring_delete">Eliminar</string>  
+
+    	<!--  MEEP! Together (Parent Portal)- Timer -->
+	<string name="video_title_uh_oh">¡Oh, oh!</string>
+
+	<string name="video_title_times_up">¡Se acabó el tiempo!</string>
+	<string name="video_msg_try_again_xxx">Lo siento, no puedes usar Video Player ahora. ¡Inténtalo de nuevo en %1$d min!</string>
+	<string name="video_btn_ok">OK</string>
+	<string name="video_msg_short_timer_reminder_xxx">Recordatorio del temporizador - Video Player</string>
+	<string name="video_msg_short_timeup_xxx">¡Se acabó el tiempo! - Video Player</string>
+
+    	<!--  MEEP! Together (Parent Portal)- Update -->
+	<string name="video_title_update">Actualizar</string>
+	<string name="video_msg_update_xxx_timer_changed">El temporizador de Video Player ha cambiado a %1$d</string>
+	<string name="video_msg_update_xxx">Actualizar - Video Player</string>
+
+    	<!--  MEEP! Together (Parent Portal)- Sudden Access Change -->
+	<string name="video_title_sudden_change">Cambio de acceso repentino</string>
+	<string name="video_msg_sudden_parental_change">Lo siento, no puedes usar esta aplicación en este momento ya que la configuración de acceso en el Portal Matriz ha cambiado.</string>
+	<string name="video_btn_ask_access">Solicitar acceso</string>
+	<string name="video_msg_access_request_sent">¡Solicitud de acceso enviada!</string>
+
+    	<!--  MEEP! Together (Parent Portal)- Update - Content Version update - New -->
+	<string name="video_title_version_update">Actualización de versión</string>
+	<string name="video_msg_available_upgrade">Hay una actualización disponible para esta aplicación, ¿quieres actualizarla?</string>
+	<string name="video_btn_yes">Sí</string>
+	<string name="video_btn_no">No</string>
+	<string name="video_msg_xxx_available_update">Actualizar - %1$s %2$s - Actualización de versión disponible</string>
+  
+  
+	<string name="video_title_rename_error">Renombrar error</string>
+	<string name="video_msg_rename_error">Este destino ya contiene un archivo llamado %1$S Por favor, compruébelo antes de renombrar este archivo.</string>
+	<string name="video_msg_name_invalid">El nombre del archivo no se puede iniciar con \".\" por favor, cambie el nombre del archivo.</string>
+	<string name="video_msg_blocked">Bloqueado</string>	
+  
+</resources>

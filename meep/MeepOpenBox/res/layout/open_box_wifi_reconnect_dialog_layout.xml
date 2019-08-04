@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/OpenBoxWifiDialogTitle" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/leftHandSide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3" >
+
+            <TextView
+                android:id="@+id/signalStrengthText"
+                style="@style/OpenBoxWifiDialogField"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:text="@string/signal_strength" />
+
+            <TextView
+                android:id="@+id/securityText"
+                style="@style/OpenBoxWifiDialogField"
+                android:layout_alignLeft="@+id/signalStrengthText"
+                android:layout_below="@+id/signalStrengthText"
+                android:singleLine="true"
+                android:text="@string/security" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rightHandSide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7" >
+
+            <TextView
+                android:id="@+id/signalStrength"
+                style="@style/OpenBoxWifiDialogValueField"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/security"
+                style="@style/OpenBoxWifiDialogValueField"
+                android:layout_alignLeft="@+id/signalStrength"
+                android:layout_below="@+id/signalStrength" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/content"
+        android:layout_marginTop="10dp" >
+
+        <Button
+            android:id="@+id/cancel"
+            style="@style/OpenBoxWifiDialogButton"
+            android:layout_weight=".3"
+            android:text="@string/cancel_btn_text" />
+
+        <Button
+            android:id="@+id/forget"
+            style="@style/OpenBoxWifiDialogButton"
+            android:layout_weight=".3"
+            android:text="@string/forget_btn_text" />
+
+        <Button
+            android:id="@+id/connect"
+            style="@style/OpenBoxWifiDialogButton"
+            android:layout_weight=".3"
+            android:text="@string/connect_btn_text" />
+    </LinearLayout>
+
+</RelativeLayout>

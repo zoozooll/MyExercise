@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ParentLayoutStyle" >
+
+    <ScrollView
+        style="@style/wrap_content_vertical"
+        android:layout_below="@id/actionBar"
+        android:layout_marginTop="-10dp"
+        android:scrollbars="none" >
+
+        <RelativeLayout style="@style/fill_parent" >
+
+            <!-- dialog title bar -->
+
+            <LinearLayout
+                android:id="@+id/dialogBar"
+                style="@style/LinearDialog"
+                android:layout_below="@id/actionBar" >
+
+                <TextView
+                    android:id="@+id/KidName"
+                    style="@style/MainPageTitle"
+                    android:text="@string/main_page_notification_pre" />
+
+               <!--  <TextView
+                    style="@style/MainPageTitle"
+                    android:text="@string/main_page_notification_after" /> -->
+            </LinearLayout>
+            <!-- listview main page -->
+
+            <LinearLayout
+                android:id="@+id/outListRequests"
+                style="@style/OutOfListView"
+                android:layout_below="@id/dialogBar" >
+
+                <ListView
+                    android:id="@+id/listResquests"
+                    style="@style/ListViewStyle"
+                    android:layout_marginRight="10dp"
+                    android:scrollbars="none" >
+                </ListView>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <!-- action bar -->
+
+    <FrameLayout
+        android:id="@+id/actionBar"
+        style="@style/ActionBar" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/mainImageButtonMenu"
+                style="@style/BarImageButton_Main"
+                android:contentDescription="@string/main_button_menu"
+                android:src="@drawable/topbar_left_menu_icon" />
+
+            <View style="@style/BarDivider" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mainBarTitle"
+            style="@style/BarTitle"
+            android:text="@string/main_menu_notification" />
+    </FrameLayout>
+
+</RelativeLayout>

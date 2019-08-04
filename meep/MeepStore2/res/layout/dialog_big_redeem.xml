@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_half_trans" >
+
+    <ImageView
+        android:id="@+id/dialogbg"
+        style="@style/wrap_content"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/meep_market_codepopup_big" />
+
+    <FrameLayout
+        style="@style/wrap_content"
+        android:layout_alignBottom="@id/dialogbg"
+        android:layout_alignLeft="@id/dialogbg"
+        android:layout_alignRight="@id/dialogbg"
+        android:layout_alignTop="@id/dialogbg" >
+
+        <TextView
+            style="@style/wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="110dp"
+            android:text="@string/redeem_title"
+            android:textColor="@color/text_white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+        <!--
+            <com.oregonscientific.meep.store2.custom.scrollview.FlowLayout 
+				 		android:id="@+id/flowlayout"
+						 android:layout_width="fill_parent" 
+						 android:layout_height="fill_parent"
+						 android:layout_marginLeft="100dp"
+						 android:layout_marginRight="60dp"
+						 android:layout_marginTop="160dp"
+						 android:layout_marginBottom="150dp"
+						 >
+	        </com.oregonscientific.meep.store2.custom.scrollview.FlowLayout>
+        -->
+
+        <HorizontalScrollView
+            style="@style/fill_parent"
+            android:layout_marginBottom="150dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="160dp" 
+            android:fadingEdgeLength="30dp"
+            android:scrollbars="none"
+            android:requiresFadingEdge="horizontal"
+            >
+            <LinearLayout
+                android:id="@+id/flowlayout"
+                style="@style/fill_parent"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/cancel"
+            style="@style/dialog_button"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="80dp"
+            android:layout_marginLeft="185dp"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/confirm"
+            style="@style/dialog_button"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="130dp"
+            android:text="@string/confirm" />
+    </FrameLayout>
+
+</RelativeLayout>

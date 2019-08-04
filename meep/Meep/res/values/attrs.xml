@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Text">
+        <attr name="font" format="string" />
+        <attr name="text" format="string" />
+        <attr name="width" format="float" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="float" />
+        <attr name="milter" format="float" />
+        <attr name="joinStyle">
+		    <enum name="miter" value="0" />
+		    <enum name="bevel" value="1" />
+		    <enum name="round" value="2" />
+		</attr>
+		<attr name="scaleX" format="float" />
+		<attr name="outlineColor" format="color" />
+        <attr name="outlineWidth" format="float" />
+        <attr name="maxLines" format="integer" />
+        <attr name="ellipsize">
+            <enum name="none" value="0" />
+		    <enum name="start" value="1" />
+		    <enum name="middle" value="2" />
+		    <enum name="end" value="3" />
+		    <enum name="marquee" value="4" />
+        </attr>
+    </declare-styleable>
+    
+    <!-- StrokedTextView specific attributes. -->
+    <declare-styleable name="StrokedTextView">
+        <!-- The color of the stroke outline -->
+        <attr name="textStrokeColor" format="color" />
+        <!-- The width of the stroke -->
+        <attr name="textStrokeWidth" format="float" />
+    </declare-styleable>
+</resources>

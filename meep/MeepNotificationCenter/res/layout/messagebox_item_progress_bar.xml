@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="match_parent"
+    android:paddingRight="50dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/messagebox_item_title"
+        android:textSize="30sp"
+        />
+    <com.oregonscientific.meep.notification.view.ExpandableTextView  
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/messagebox_item_message"
+        android:textSize="24sp"
+        />
+
+    <ProgressBar
+        android:id="@+id/messagebox_item_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="460dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

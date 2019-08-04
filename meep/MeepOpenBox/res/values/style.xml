@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="text" parent="@android:style/Widget.TextView" >
+        <item name="android:textStyle">bold</item>
+        <item name="font">fonts/MEEP.ttf</item>
+        <item name="textColor">@android:color/white</item>
+    </style>
+    <style name="title_number_button" parent="text" >
+        <item name="textSize">44</item>
+        <item name="outlineWidth">5</item>      
+        <item name="outlineColor">@color/number_stroke</item>
+    </style>
+    <style name="big_title_number_button" parent="text">
+          <item name="textSize">90</item>       
+    </style>
+    <style name="title_of_parental_setting_page" parent="text">
+          <item name="textSize">64</item>       
+    </style>
+</resources>

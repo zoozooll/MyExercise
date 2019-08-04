@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+android:id/background"
+        android:drawable="@drawable/message_bar_normal"/>
+
+    <item
+        android:id="@+android:id/toggle"
+        android:drawable="@drawable/emoticon_selector"/>
+
+</layer-list>

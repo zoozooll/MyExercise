@@ -1,0 +1,66 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+	<style name="customfont_textview" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="font">fonts/Rumpelstiltskin.ttf</item>
+    </style>
+    
+    <style name="customfont_edittext" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="font">fonts/Rumpelstiltskin.ttf</item>
+    </style>
+    
+    <style name="customfont_button" parent="@android:style/Widget.Button">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="font">fonts/Rumpelstiltskin.ttf</item>
+        
+    </style>
+    
+    <style name="right_menu_title" parent="customfont_textview">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    
+    <style name="customfont_textview" parent="@android:style/Widget.TextView">
+        <item name="textSize">40</item>
+        <item name="outlineWidth">5</item>
+        <item name="android:textStyle">bold</item>
+        <item name="joinStyle">round</item>
+        <item name="font">MEEP.ttf</item>
+    </style>
+    
+    <style name="custom_textview_news" >
+         <item name="android:textStyle">bold</item>
+        <item name="joinStyle">round</item>   
+        <item name="outlineWidth">5</item>
+        <item name="font">MEEP.ttf</item>       
+        <item name="outlineColor">@color/green</item>
+    </style>
+    
+    <style name="custom_textview_notification" >
+         <item name="android:textStyle">bold</item>
+        <item name="joinStyle">round</item> 
+        <item name="font">MEEP.ttf</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+       
+</resources>

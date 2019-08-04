@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imageViewPopupBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/communicator_pop_up" />
+
+    <ImageView
+        android:id="@+id/imageViewPopupClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageViewPopupBg"
+        android:layout_alignTop="@+id/imageViewPopupBg"
+        android:layout_marginRight="-8dp"
+        android:layout_marginTop="-8dp"
+        android:src="@drawable/communicator_cancel" />
+
+    <ImageView
+        android:id="@+id/textViewPopupTitleBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageViewPopupBg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-15dp"
+        android:background="@drawable/communicator_popup_title"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/textViewPopupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageViewPopupBg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:shadowColor="#80000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewPopupMsg"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPopupTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="-1"
+        android:shadowDy="-1"
+        android:shadowRadius="4"
+        android:text="@string/mainpage_title_uh_oh"
+        android:textColor="#555555"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewPopupOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewPopupBg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_ok_bg"
+        android:gravity="center"
+        android:shadowColor="#80000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:text="@string/communicator_btn_ok"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

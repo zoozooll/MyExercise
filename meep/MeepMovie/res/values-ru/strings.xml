@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepMovieActivity!</string>
+    <string name="app_name">MeepMovie</string>
+
+	
+   	<string name="meep_video">видео</string>
+   	<string name="video_btn_ring_rename">Переименовать</string>
+	<string name="video_btn_ring_delete">Удалить</string>
+    	
+   	<!--  MEEP! Вместе (Родительский Портал)- Таймер -->
+   	<string name="video_title_uh_oh">Ну и ну!</string>
+	
+   	<string name="video_title_times_up">Время вышло!</string>
+   	<string name="video_msg_try_again_xxx">Извини, ты не можешь использовать Видео плеер прямо сейчас. Попробуй снова через %1$d минут!</string>
+   	<string name="video_btn_ok">OK</string>
+   	<string name="video_msg_short_timer_reminder_xxx">Таймер напоминаний - Видео плеер</string>
+   	<string name="video_msg_short_timeup_xxx">Время вышло! -Видео плеер</string>
+   	
+   	<!--  MEEP! Вместе (Родительский Портал)- Обновление -->
+   	<string name="video_title_update">Обновление</string>
+   	<string name="video_msg_update_xxx_timer_changed">Таймер Видео плеера был переустановлен на %1$d</string>
+   	<string name="video_msg_update_xxx">Обновление - Видео плеер</string>
+   	
+   	<!--  MEEP! Вместе (Родительский Портал)- Неожиданное изменение доступа -->
+   	<string name="video_title_sudden_change">Неожиданное изменение доступа</string>
+   	<string name="video_msg_sudden_parental_change">Извини, ты не можешь использовать это приложение сейчас, поскольку установки доступа на Родительском Портале были изменены.</string>
+   	<string name="video_btn_ask_access">Запрос доступа</string>
+   	<string name="video_msg_access_request_sent">Запрос доступа отправлен!</string>
+   	
+   	<!--  MEEP! Вместе (Родительский Портал)- Обновление - Обновление содержания версии - Новое -->
+   	<string name="video_title_version_update">Обновление версии</string>
+   	<string name="video_msg_available_upgrade">Доступно обновление для этого приложения, хочешь обновить?</string>
+   	<string name="video_btn_yes">Да</string>
+   	<string name="video_btn_no">Нет</string>
+   	<string name="video_msg_xxx_available_update">Обновление - %1$s %2$s - Доступна версия обновления</string>
+	
+	
+	<string name="video_title_rename_error">Ошибка переименования</string>
+	<string name="video_msg_rename_error">Здесь уже есть файл с названием %1$S Пожалуйста, проверь его перед переименованием файла.</string>
+	<string name="video_msg_name_invalid">The file name cannot start with \".\", please change the file name</string>
+	<string name="video_msg_blocked">Заблокировано</string>
+    	
+</resources>	

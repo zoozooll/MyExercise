@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">MEEP</string>
+  <string name="construct_bad_word_list">ブラックワードリストを構築中・・・</string>
+  <string name="title_notice">注意</string>
+  <string name="title_timeout">時間切れ</string>
+  <string name="title_oops">おっと！</string>
+  <string name="title_success">成功しました！</string>
+  <string name="alert_launch_register">%1$sを使用する前に保護者にMEEP!X2を登録を依頼してください。ペアレンタルポータルと同時に%2$sの設定を変更します。</string>
+  <string name="alert_launch_online">%1$sを使用するにはネットワークへの接続が必要です。Wi-Fi設定をおこないますか？</string>
+  <string name="alert_permission_denied">このアクションはロックされています。ペアレンタル設定から変更するよう保護者に確認してください。</string>
+  <string name="alert_permission_timeout">プレイタイムを増やすにはペアレンタル設定から変更するよう保護者に確認してください。</string>
+  <string name="alert_button_ok">OK</string>
+  <string name="alert_button_cancel">キャンセル</string>
+</resources>

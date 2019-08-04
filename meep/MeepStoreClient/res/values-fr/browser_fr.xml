@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+	<string name="browser_ui_meep_logo">MEEP!</string>
+	<string name="browser_info_search">Recherche</string>
+	<string name="browser_ui_recommend">Recommandé</string>
+	<string name="browser_btn_more">Plus (&#8230;)</string>
+	<string name="browser_info_no_result">Aucun résultat</string>
+	<string name="browser_title_oops">Oups!</string>
+	<string name="browser_msg_web_blocked">Le site internet est bloqué! Tu n\'es pas autorisé à utiliser ce mot dans le navigateur web. Essaye autre chose!</string>
+	<string name="browser_btn_ok">OK</string>
+	<string name="browser_btn_send_request">Envoyer Demande</string>
+	<string name="browser_info_I">|</string>
+	<string name="browser_title_search_result">Résultats de la recherche</string>
+	<string name="browser_info_no_results">Aucuns résultats correspondants/ Résultats bloqués.</string>
+	<string name="browser_btn_add">Ajouter</string>
+	<string name="browser_btn_rename">Renommer</string>
+	<string name="browser_btn_delete">Supprimer</string>
+	<string name="browser_title_uh_oh">Oh-oh!</string>
+	<string name="browser_msg_xxx_5mins">Il ne te reste que 5 mins pour utiliser le Navigateur Web</string>
+	<string name="browser_title_times_up">Expiration du délai!</string>
+	<string name="browser_msg_try_again_xxx">Désolé, tu ne peux pas utiliser le Navigateur Web maintenant. Essaye de nouveau dans %1$d mins!</string>
+	<string name="browser_msg_short_timer_reminder_xxx">Rappel Minuteur - Navigateur Web</string>
+	<string name="browser_msg_short_timeup_xxx">Expiration du délai! - Navigateur Web</string>
+	<string name="browser_title_update">Mise à jour</string>
+	<string name="browser_msg_update_xxx_timer_changed">Le minuteur du Navigateur Web est à présent de %1$d</string>
+	<string name="browser_msg_update_xxx">Mise à jour - Navigateur Web</string>
+	<string name="browser_msg_permission_use_xxx">Yeah! Tu es maintenant libre d\'utiliser le Navigateur Web</string>
+	<string name="browser_msg_permission_approval_xxx">Désolé, tu dois attendre l\'autorisation de tes parents avant de pouvoir utiliser le Navigateur Web</string>
+	<string name="browser_btn_approval">Demande d\'autorisation</string>
+	<string name="browser_msg_approval_sent">Demande d\'autorisation envoyée!</string>
+	<string name="browser_msg_permission_xxx_notgiven">Désolé, tu ne peux pas utiliser le Navigateur Web maintenant car l\'autorisation n\'a pas encore été acceptée. </string>
+	<string name="browser_msg_meep_recommend_updated">Votre liste de recommandations MEEP! a été mise à jour.</string>
+	<string name="browser_msg_parent_recommend_updated">Votre liste de recommandations parentales a été mise à jour.</string>
+	<string name="browser_title_blocked">Bloqué</string>
+
+	<string name="browser_msg_short_blocked_xxx">Bloqué - Navigateur Web</string>
+	<string name="browser_msg_unprotected_web">Désolé, tu n\'es pas autorisé à être redirigé vers un site internet non protégé.</string>
+	<string name="browser_msg_protected_web">Désolé, tu n\'es pas autorisé à être redirigé vers un site internet protégé.</string>
+	<string name="browser_title_approved">Approuvé!</string>
+	<string name="browser_msg_xxx_approved">Ta demande d\'utilisation du Navigateur Web a été approuvée.</string>
+	<string name="browser_btn_go">Go!</string>
+	<string name="browser_msg_short_approved_xxx">Approuvé - Navigateur Web</string>
+	<string name="browser_msg_approved_search_function">Yeah! Tu es maintenant libre d\'utiliser la fonction recherche du Navigateur Web.</string>
+	<string name="browser_title_refused">Refusé!</string>
+	<string name="browser_msg_xxx_refused">Désolé, ta demande d\'utilisation du Navigateur Web a été refusée.</string>
+	<string name="browser_msg_short_refused_xxx">Refusé - Navigateur Web</string>
+	<string name="browser_msg_refused_search_function">Désolé, ta demande d\'utilisation de la fonction recherche du Navigateur Web a été refusée.</string>
+	<string name="browser_title_sudden_change">Changement d\'accès soudain</string>
+	<string name="browser_msg_sudden_parental_change">"Désolé, tu ne peux pas utiliser l\'application en ce moment car les réglages d\'accès dans le Portail Contrôle Parental ont été modifiés"</string>
+	<string name="browser_btn_ask_access">Demande d\'accès</string>
+	<string name="browser_msg_access_request_sent">Demande d\'accès envoyée!</string>
+	<string name="browser_title_version_update">Version mise à jour</string>
+	<string name="browser_msg_available_upgrade">Il existe une version mise à jour de cette application, souhaite-tu effectuer cette mise à jour?</string>
+	<string name="browser_btn_yes">Oui</string>
+	<string name="browser_btn_no">Non</string>
+	<string name="browser_msg_xxx_available_update">"Mise à jour - %1$s %2$s - Version mise à jour disponible"</string>
+    <string name="browser_msg_no_network">Pas de connexion internet! Assure-toi que ta MEEP! est bien connectée au Wifi!</string>
+    <string name="browser_msg_delete_bookmark">Supprimer Signet.</string>
+    <string name="browser_msg_bookmark_deleted">Signet supprimé?</string>
+    <string name="browser_msg_duplicated_bkmk">Signet en double.</string>
+    <string name="browser_msg_cannot_download">Téléchargement de fichier impossible.</string>    
+    <string name="browser_ui_bookmarkurl">URL:</string>
+    <string name="browser_ui_bookmarkname">Nom:</string>
+    <string name="browser_btn_save">Sauvegarder</string>
+    <string name="browser_loading">Chargement</string>
+
+       
+</resources>

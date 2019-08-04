@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="75dp"
+    android:background="@color/background_trans">
+    <TextView
+	    style="@style/TextChildrenInfo"
+	    android:height="75dp"
+	    android:gravity="center"
+	    android:id="@+id/textTime"
+	    android:layout_marginLeft="35dp"
+	    android:text="@string/main_text_time"
+	    android:textSize="25dp" 
+	    />
+    <TextView
+	    style="@style/TextChildrenInfo"
+	    android:id="@+id/textUnit"
+	    android:text="@string/main_text_unit"
+	    android:textSize="25dp" 
+	    />
+    <FrameLayout style="@style/fill_parent"
+        android:paddingRight="40dp"
+        >
+	    <ImageView style="@style/wrap_content"
+	        android:visibility="gone"
+	        android:id="@+id/isTick"
+	        android:src="@drawable/tick_green"
+	        android:padding="10dp"
+	        android:contentDescription="@string/main_portal_setting_label_apps"
+	        android:layout_gravity="right"/>
+    </FrameLayout>
+</LinearLayout>

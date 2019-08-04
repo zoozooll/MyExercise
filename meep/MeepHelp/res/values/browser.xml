@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+	<string name="browser_ui_meep_logo">MEEP!</string>
+	<string name="browser_info_search">Search</string>
+	<string name="browser_ui_recommend">Recommend</string>
+	<string name="browser_btn_more">More(&#8230;)</string>
+	<string name="browser_info_no_result">No results</string>
+	<string name="browser_title_oops">Oops!</string>
+	<string name="browser_msg_web_blocked">Website is Blocked!</string>
+	<string name="browser_btn_ok">OK</string>
+	<string name="browser_btn_send_request">Send Request</string>
+	<string name="browser_info_I">|</string>
+	<string name="browser_title_search_result">Search results</string>
+	<string name="browser_info_no_results">No matches found/Results blocked</string>
+	<string name="browser_btn_add">Add</string>
+	<string name="browser_btn_rename">Rename</string>
+	<string name="browser_btn_delete">Delete</string>
+	<string name="browser_title_uh_oh">Oh-oh!</string>
+	<string name="browser_msg_xxx_5mins">You only have 5 mins left to use the Web Browser.</string>
+	<string name="browser_title_times_up">Time\'s up!</string>
+	<string name="browser_msg_try_again_xxx">, you can\'t use the Web Browser right now. Try again in %1$d mins!</string>
+	<string name="browser_msg_short_timer_reminder_xxx">Timer reminder - Web Browser</string>
+	<string name="browser_msg_short_timeup_xxx">Time\'s up! - Web Browser</string>
+	<string name="browser_title_update">Update</string>
+	<string name="browser_msg_update_xxx_timer_changed">The Web Browser timer has been changed to %1$d</string>
+	<string name="browser_msg_update_xxx">Update - Web Browser</string>
+	<string name="browser_msg_permission_use_xxx">Yeah! You are free to use the Web Browser now.</string>
+	<string name="browser_msg_permission_approval_xxx">"Sorry, you need to wait for your parent\'s approval before you can use the Web Browser."</string>
+	<string name="browser_btn_approval">Ask for approval</string>
+	<string name="browser_msg_approval_sent">Approval request sent!</string>
+	<string name="browser_msg_permission_xxx_notgiven">, you can\'t use the Web Browser right now as approval has not been given.</string>
+	<string name="browser_msg_meep_recommend_updated">Your MEEP! recommendations list has been updated.</string>
+	<string name="browser_msg_parent_recommend_updated">Your Parents\' recommendations list has been updated.</string>
+	<string name="browser_title_blocked">Blocked</string>
+
+	<string name="browser_msg_short_blocked_xxx">Blocked - Web Browser</string>
+	<string name="browser_msg_unprotected_web">, you are not allowed to be redirected to an unprotected website.</string>
+	<string name="browser_msg_protected_web">, you are not allowed to be redirected to a protected website.</string>
+	<string name="browser_title_approved">Approved!</string>
+	<string name="browser_msg_xxx_approved">Your request to use the Web Browser has been approved.</string>
+	<string name="browser_btn_go">Go!</string>
+	<string name="browser_msg_short_approved_xxx">Approved - Web Browser</string>
+	<string name="browser_msg_approved_search_function">Yeah! You can now use the Search function in the Web Browser.</string>
+	<string name="browser_title_refused">Refused!</string>
+	<string name="browser_msg_xxx_refused">, your request to use the Web Browser has been refused.</string>
+	<string name="browser_msg_short_refused_xxx">Refused - Web Browser</string>
+	<string name="browser_msg_refused_search_function">, your request to use the Search function in the Web Browser has been refused.</string>
+	<string name="browser_title_sudden_change">Sudden access change</string>
+	<string name="browser_msg_sudden_parental_change">, you can\'t use this application at the moment as the access setting in the Parent Portal has been changed.</string>
+	<string name="browser_btn_ask_access">Ask for access</string>
+	<string name="browser_msg_access_request_sent">Access request sent!</string>
+	<string name="browser_title_version_update">Version update</string>
+	<string name="browser_msg_available_upgrade">There is an upgrade available for this app, do you want to upgrade?</string>
+	<string name="browser_btn_yes">Yes</string>
+	<string name="browser_btn_no">No</string>
+	<string name="browser_msg_xxx_available_update">Update - %1$s - Version update available</string>
+    <string name="browser_msg_no_network">No network connection. Make sure that your MEEP! is connected to Wi-Fi!</string>
+    <string name="browser_msg_delete_bookmark">Delete bookmark?</string>
+    <string name="browser_msg_bookmark_deleted">Bookmark deleted.</string>
+    <string name="browser_msg_duplicated_bkmk">Duplicated bookmark.</string>
+    <string name="browser_msg_cannot_download">Cannot download file.</string>    
+    <string name="browser_ui_bookmarkurl">URL:</string>
+    <string name="browser_ui_bookmarkname">Name:</string>
+    <string name="browser_btn_save">Save</string>
+    <string name="browser_loading">Loading</string>
+
+    
+</resources>

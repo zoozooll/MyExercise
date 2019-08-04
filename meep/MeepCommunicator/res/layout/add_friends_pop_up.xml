@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res/com.oregonscientific.meep.communicator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/panel"
+        android:layout_width="891dp"
+        android:layout_height="510dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/pop_up_panel" />
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="840dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/close_btn" />
+
+    <com.oregonscientific.meep.communicator.view.CustomTextView
+        android:id="@+id/title"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="380dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/white"
+        style="@style/AddFriendsTitleFont"
+	    android:singleLine="true"
+        android:ellipsize="end"
+        font:directory="Rumpelstiltskin.ttf" />
+
+    <RelativeLayout
+        android:id="@+id/message_bar"
+        android:layout_width="650dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"
+        android:focusableInTouchMode="true" >
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="550dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/message_bar2"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/add_button"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="-45dp"
+            android:layout_toRightOf="@+id/text"
+            android:background="@drawable/message_bar_send_normal" />
+
+        <com.oregonscientific.meep.communicator.view.CustomTextView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignTop="@+id/add_button"
+            android:layout_alignLeft="@+id/add_button"
+            android:layout_alignRight="@+id/add_button"
+            android:layout_toRightOf="@+id/text"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            font:directory="Rumpelstiltskin.ttf" />
+    </RelativeLayout>
+
+</RelativeLayout>

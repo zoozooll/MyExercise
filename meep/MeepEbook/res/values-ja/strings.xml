@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="hello">MEEP　Eブックアクティビティーにようこそ！</string>
+  <string name="app_name">Ebook</string>
+  <string name="ebook_btn_ring_delete">削除</string>
+  <string name="ebook_btn_ring_rename">名前の変更</string>
+  <string name="ebook_title_heads_up">警告</string>
+  <string name="ebook_msg_unprotected_web">保護されていないウェブサイトへアクセスしようとしています</string>
+  <string name="ebook_msg_protected_web">保護された第三者ウェブサイトへアクセスしようとしています</string>
+  <string name="ebook_btn_proceed">進む</string>
+  <string name="ebook_btn_ebook_bookmark">ブックマーク</string>
+  <string name="ebook_title_uh_oh">おっと!</string>
+  <string name="ebook_msg_xxx_5mins">あと5分でEブックリーダーを使用できなくなります</string>
+  <string name="ebook_title_times_up">時間切れ!</string>
+  <string name="ebook_msg_try_again_xxx">現在Eブックリーダーは使用できません。%1$d分後にもう一度お試しください！</string>
+  <string name="ebook_btn_ok">OK</string>
+  <string name="ebook_msg_short_timer_reminder_xxx">タイマーリマインダー　-　Eブックリーダー</string>
+  <string name="ebook_msg_short_timeup_xxx">時間切れ!　-　Eブックリーダー</string>
+  <string name="ebook_title_update">アップデート</string>
+  <string name="ebook_msg_update_xxx_timer_changed">Eブックリーダータイマーが%1$dに変更されました</string>
+  <string name="ebook_msg_update_xxx">アップデート　-　Eブックリーダー</string>
+  <string name="ebook_title_blocked">無効な文字が含まれています。ほかの入力を試してください。</string>
+  <string name="ebook_msg_sorry_unprotected_web">保護されていないウェブサイトへのアクセスは許可されていません</string>
+  <string name="ebook_btn_approval">承認をリクエストする</string>
+  <string name="ebook_msg_approval_sent">リクエストが送信されました!</string>
+  <string name="ebook_msg_short_blocked_xxx">ブロック - Eブックリーダー</string>
+  <string name="ebook_msg_sorry_protected_web">保護されたウェブサイトへのアクセスは許可されていません</string>
+  <string name="ebook_title_sudden_change">急なアクセス変更</string>
+  <string name="ebook_msg_sudden_parental_change">ペアレントポータルでアクセス設定変更されたためこの機能は現在使用できません</string>
+  <string name="ebook_btn_ask_access">アクセス許可をリクエスト</string>
+  <string name="ebook_msg_access_request_sent">リクエストが送信されました！</string>
+  <string name="ebook_title_version_update">バージョンアップデート</string>
+  <string name="ebook_msg_available_upgrade">利用可能なアップデートがあります。アップデートしますか？</string>
+  <string name="ebook_btn_yes">はい</string>
+  <string name="ebook_btn_no">いいえ</string>
+  <string name="ebook_msg_xxx_available_update">アップデート　-　%1$s %2$s　-　バージョンアップデート可能</string>
+  <string name="ebook_title_rename_error">名前変更エラー</string>
+  <string name="ebook_msg_name_invalid">ファイル名前\".\"で始められません。ファイル名を変更してください。</string>
+  <string name="ebook_msg_blocked">無効な文字が含まれています。ほかの入力を試してください。</string>
+  <string name="ebook_msg_page_XX">ページ</string>
+  <string name="ebook_msg_cannot_play_the_video">おっと！ビデオを再生できません・・・</string>
+  <string name="ebook_msg_cannot_play_the_audio">おっと！音声を再生できません・・・</string>
+  <string name="ebook_msg_end_of_the_book">この本はここで終わりです！</string>
+  <string name="ebook_msg_unsopported_ebook">このEブックを読み込むことができません</string>
+  <string name="ebook_msg_cannot_open_ebook">このEブックを開けません</string>
+  <string name="ebook_msg_bookmark_added">ブックマークが追加されました</string>
+  <string name="ebook_msg_bookmark_deleted">ブックマークが削除されました</string>
+  <string name="ebook_msg_bookmark">ブックマーク</string>
+  <string name="ebook_msg_first_page">はじめのページ</string>
+  <string name="ebook_msg_end">おわり</string>
+  <string name="ebook_badword_msg">ブロック</string>
+  <string name="ebook_update_title">大切なお知らせ</string>
+  <string name="ebook_update_message">利用可能な最新のEブックリーダーがあります！\nダウンロード済のEブックスはMEEP!ストアから再インストールする必要があります。再インストールは無料です。</string>
+</resources>

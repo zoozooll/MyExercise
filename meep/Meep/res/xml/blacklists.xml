@@ -1,0 +1,2763 @@
+<blacklists>
+
+<blacklist type="badword" locale="en">abortion</blacklist>
+<blacklist type="badword" locale="en">adulterer</blacklist>
+<blacklist type="badword" locale="en">adulteries</blacklist>
+<blacklist type="badword" locale="en">adulterous</blacklist>
+<blacklist type="badword" locale="en">adultery</blacklist>
+<blacklist type="badword" locale="en">a-hole</blacklist>
+<blacklist type="badword" locale="en">alcohol</blacklist>
+<blacklist type="badword" locale="en">alcoholic</blacklist>
+<blacklist type="badword" locale="en">anal</blacklist>
+<blacklist type="badword" locale="en">anal sex</blacklist>
+<blacklist type="badword" locale="en">analsex</blacklist>
+<blacklist type="badword" locale="en">anus</blacklist>
+<blacklist type="badword" locale="en">anuses</blacklist>
+<blacklist type="badword" locale="en">arse</blacklist>
+<blacklist type="badword" locale="en">arse hole</blacklist>
+<blacklist type="badword" locale="en">arsehole</blacklist>
+<blacklist type="badword" locale="en">arses</blacklist>
+<blacklist type="badword" locale="en">ass</blacklist>
+<blacklist type="badword" locale="en">asses</blacklist>
+<blacklist type="badword" locale="en">asshole</blacklist>
+<blacklist type="badword" locale="en">badass</blacklist>
+<blacklist type="badword" locale="en">balls</blacklist>
+<blacklist type="badword" locale="en">bastard</blacklist>
+<blacklist type="badword" locale="en">bastards</blacklist>
+<blacklist type="badword" locale="en">beastial</blacklist>
+<blacklist type="badword" locale="en">beastiality</blacklist>
+<blacklist type="badword" locale="en">beaver</blacklist>
+<blacklist type="badword" locale="en">bestial</blacklist>
+<blacklist type="badword" locale="en">bestiality</blacklist>
+<blacklist type="badword" locale="en">bimbos</blacklist>
+<blacklist type="badword" locale="en">bisexual</blacklist>
+<blacklist type="badword" locale="en">bi-sexual</blacklist>
+<blacklist type="badword" locale="en">bisexuality</blacklist>
+<blacklist type="badword" locale="en">bisexuals</blacklist>
+<blacklist type="badword" locale="en">bi-sexuals</blacklist>
+<blacklist type="badword" locale="en">bitch</blacklist>
+<blacklist type="badword" locale="en">bitched</blacklist>
+<blacklist type="badword" locale="en">bitches</blacklist>
+<blacklist type="badword" locale="en">bitchin</blacklist>
+<blacklist type="badword" locale="en">bitching</blacklist>
+<blacklist type="badword" locale="en">blowjob</blacklist>
+<blacklist type="badword" locale="en">bondage</blacklist>
+<blacklist type="badword" locale="en">boner</blacklist>
+<blacklist type="badword" locale="en">boners</blacklist>
+<blacklist type="badword" locale="en">boob</blacklist>
+<blacklist type="badword" locale="en">boobies</blacklist>
+<blacklist type="badword" locale="en">boobs</blacklist>
+<blacklist type="badword" locale="en">booze</blacklist>
+<blacklist type="badword" locale="en">boozed</blacklist>
+<blacklist type="badword" locale="en">boozer</blacklist>
+<blacklist type="badword" locale="en">boozes</blacklist>
+<blacklist type="badword" locale="en">boozy</blacklist>
+<blacklist type="badword" locale="en">bosom</blacklist>
+<blacklist type="badword" locale="en">bottomless</blacklist>
+<blacklist type="badword" locale="en">bottoms</blacklist>
+<blacklist type="badword" locale="en">breast</blacklist>
+<blacklist type="badword" locale="en">breasts</blacklist>
+<blacklist type="badword" locale="en">brothel</blacklist>
+<blacklist type="badword" locale="en">brothels</blacklist>
+<blacklist type="badword" locale="en">bull shit</blacklist>
+<blacklist type="badword" locale="en">bull shits</blacklist>
+<blacklist type="badword" locale="en">bull shitted</blacklist>
+<blacklist type="badword" locale="en">bull shitter</blacklist>
+<blacklist type="badword" locale="en">bull shitting</blacklist>
+<blacklist type="badword" locale="en">bullshit</blacklist>
+<blacklist type="badword" locale="en">bullshits</blacklist>
+<blacklist type="badword" locale="en">bullshitted</blacklist>
+<blacklist type="badword" locale="en">bullshitter</blacklist>
+<blacklist type="badword" locale="en">bullshitting</blacklist>
+<blacklist type="badword" locale="en">bum</blacklist>
+<blacklist type="badword" locale="en">bum hole</blacklist>
+<blacklist type="badword" locale="en">bumhole</blacklist>
+<blacklist type="badword" locale="en">bum-hole</blacklist>
+<blacklist type="badword" locale="en">bums</blacklist>
+<blacklist type="badword" locale="en">butt</blacklist>
+<blacklist type="badword" locale="en">butt hole</blacklist>
+<blacklist type="badword" locale="en">butt munch</blacklist>
+<blacklist type="badword" locale="en">butt weed</blacklist>
+<blacklist type="badword" locale="en">butthole</blacklist>
+<blacklist type="badword" locale="en">butts</blacklist>
+<blacklist type="badword" locale="en">castrate</blacklist>
+<blacklist type="badword" locale="en">castrated</blacklist>
+<blacklist type="badword" locale="en">castrates</blacklist>
+<blacklist type="badword" locale="en">castration</blacklist>
+<blacklist type="badword" locale="en">chaste</blacklist>
+<blacklist type="badword" locale="en">chastity</blacklist>
+<blacklist type="badword" locale="en">cigarette</blacklist>
+<blacklist type="badword" locale="en">circumcise</blacklist>
+<blacklist type="badword" locale="en">circumcised</blacklist>
+<blacklist type="badword" locale="en">circumcises</blacklist>
+<blacklist type="badword" locale="en">circumcision</blacklist>
+<blacklist type="badword" locale="en">clit</blacklist>
+<blacklist type="badword" locale="en">clitoris</blacklist>
+<blacklist type="badword" locale="en">clits</blacklist>
+<blacklist type="badword" locale="en">cocaine</blacklist>
+<blacklist type="badword" locale="en">cock</blacklist>
+<blacklist type="badword" locale="en">cock ring</blacklist>
+<blacklist type="badword" locale="en">cock sucked</blacklist>
+<blacklist type="badword" locale="en">cock sucker</blacklist>
+<blacklist type="badword" locale="en">cock sucking</blacklist>
+<blacklist type="badword" locale="en">cock sucks</blacklist>
+<blacklist type="badword" locale="en">cocked</blacklist>
+<blacklist type="badword" locale="en">cocking</blacklist>
+<blacklist type="badword" locale="en">cockring</blacklist>
+<blacklist type="badword" locale="en">cocks</blacklist>
+<blacklist type="badword" locale="en">cocksucked</blacklist>
+<blacklist type="badword" locale="en">cocksucker</blacklist>
+<blacklist type="badword" locale="en">cocksucking</blacklist>
+<blacklist type="badword" locale="en">cocksucks</blacklist>
+<blacklist type="badword" locale="en">coke</blacklist>
+<blacklist type="badword" locale="en">condom</blacklist>
+<blacklist type="badword" locale="en">condoms</blacklist>
+<blacklist type="badword" locale="en">copulate</blacklist>
+<blacklist type="badword" locale="en">copulated</blacklist>
+<blacklist type="badword" locale="en">copulates</blacklist>
+<blacklist type="badword" locale="en">copulating</blacklist>
+<blacklist type="badword" locale="en">copulation</blacklist>
+<blacklist type="badword" locale="en">coquette</blacklist>
+<blacklist type="badword" locale="en">crack</blacklist>
+<blacklist type="badword" locale="en">crack whore</blacklist>
+<blacklist type="badword" locale="en">crackwhore</blacklist>
+<blacklist type="badword" locale="en">crotch</blacklist>
+<blacklist type="badword" locale="en">crotches</blacklist>
+<blacklist type="badword" locale="en">cum</blacklist>
+<blacklist type="badword" locale="en">cum stain</blacklist>
+<blacklist type="badword" locale="en">cumming</blacklist>
+<blacklist type="badword" locale="en">cums</blacklist>
+<blacklist type="badword" locale="en">cumstain</blacklist>
+<blacklist type="badword" locale="en">cunnilingus</blacklist>
+<blacklist type="badword" locale="en">cunt</blacklist>
+<blacklist type="badword" locale="en">cunts</blacklist>
+<blacklist type="badword" locale="en">dammit</blacklist>
+<blacklist type="badword" locale="en">damn</blacklist>
+<blacklist type="badword" locale="en">damned</blacklist>
+<blacklist type="badword" locale="en">damning</blacklist>
+<blacklist type="badword" locale="en">damnit</blacklist>
+<blacklist type="badword" locale="en">debauch</blacklist>
+<blacklist type="badword" locale="en">debauched</blacklist>
+<blacklist type="badword" locale="en">debauchery</blacklist>
+<blacklist type="badword" locale="en">defecate</blacklist>
+<blacklist type="badword" locale="en">defecated</blacklist>
+<blacklist type="badword" locale="en">defecates</blacklist>
+<blacklist type="badword" locale="en">defecating</blacklist>
+<blacklist type="badword" locale="en">defecation</blacklist>
+<blacklist type="badword" locale="en">defloration</blacklist>
+<blacklist type="badword" locale="en">deflower</blacklist>
+<blacklist type="badword" locale="en">deflowered</blacklist>
+<blacklist type="badword" locale="en">deflowering</blacklist>
+<blacklist type="badword" locale="en">deflowers</blacklist>
+<blacklist type="badword" locale="en">depucelate</blacklist>
+<blacklist type="badword" locale="en">depucelation</blacklist>
+<blacklist type="badword" locale="en">diarrhea</blacklist>
+<blacklist type="badword" locale="en">diarrhoea</blacklist>
+<blacklist type="badword" locale="en">diarrhoeas</blacklist>
+<blacklist type="badword" locale="en">dick head</blacklist>
+<blacklist type="badword" locale="en">dick ring</blacklist>
+<blacklist type="badword" locale="en">dick sucker</blacklist>
+<blacklist type="badword" locale="en">dick suckers</blacklist>
+<blacklist type="badword" locale="en">dick sucking</blacklist>
+<blacklist type="badword" locale="en">dick sucks</blacklist>
+<blacklist type="badword" locale="en">dick weed</blacklist>
+<blacklist type="badword" locale="en">dickhead</blacklist>
+<blacklist type="badword" locale="en">dickring</blacklist>
+<blacklist type="badword" locale="en">dicks</blacklist>
+<blacklist type="badword" locale="en">dicksucker</blacklist>
+<blacklist type="badword" locale="en">dicksuckers</blacklist>
+<blacklist type="badword" locale="en">dicksucking</blacklist>
+<blacklist type="badword" locale="en">dicksucks</blacklist>
+<blacklist type="badword" locale="en">dickweed</blacklist>
+<blacklist type="badword" locale="en">dildo</blacklist>
+<blacklist type="badword" locale="en">dildoe</blacklist>
+<blacklist type="badword" locale="en">dildoes</blacklist>
+<blacklist type="badword" locale="en">dildos</blacklist>
+<blacklist type="badword" locale="en">dirty ass</blacklist>
+<blacklist type="badword" locale="en">dirty bitch</blacklist>
+<blacklist type="badword" locale="en">dirty fucker</blacklist>
+<blacklist type="badword" locale="en">dirty girl</blacklist>
+<blacklist type="badword" locale="en">dirty sex</blacklist>
+<blacklist type="badword" locale="en">dirtyass</blacklist>
+<blacklist type="badword" locale="en">dirtybitch</blacklist>
+<blacklist type="badword" locale="en">dirtyfucker</blacklist>
+<blacklist type="badword" locale="en">dirtygirl</blacklist>
+<blacklist type="badword" locale="en">dirtysex</blacklist>
+<blacklist type="badword" locale="en">doggy style</blacklist>
+<blacklist type="badword" locale="en">doggystyle</blacklist>
+<blacklist type="badword" locale="en">dogshit</blacklist>
+<blacklist type="badword" locale="en">domination</blacklist>
+<blacklist type="badword" locale="en">dominatrix</blacklist>
+<blacklist type="badword" locale="en">dope</blacklist>
+<blacklist type="badword" locale="en">dopes</blacklist>
+<blacklist type="badword" locale="en">dopey</blacklist>
+<blacklist type="badword" locale="en">dork</blacklist>
+<blacklist type="badword" locale="en">dorks</blacklist>
+<blacklist type="badword" locale="en">douche</blacklist>
+<blacklist type="badword" locale="en">douche bag</blacklist>
+<blacklist type="badword" locale="en">douche bags</blacklist>
+<blacklist type="badword" locale="en">douche job</blacklist>
+<blacklist type="badword" locale="en">douche jobs</blacklist>
+<blacklist type="badword" locale="en">douchebag</blacklist>
+<blacklist type="badword" locale="en">douchebags</blacklist>
+<blacklist type="badword" locale="en">douchejob</blacklist>
+<blacklist type="badword" locale="en">douchejobs</blacklist>
+<blacklist type="badword" locale="en">douches</blacklist>
+<blacklist type="badword" locale="en">eatcunt</blacklist>
+<blacklist type="badword" locale="en">eatpussy</blacklist>
+<blacklist type="badword" locale="en">eatshit</blacklist>
+<blacklist type="badword" locale="en">ecstasy</blacklist>
+<blacklist type="badword" locale="en">ejaculate</blacklist>
+<blacklist type="badword" locale="en">ejaculated</blacklist>
+<blacklist type="badword" locale="en">ejaculates</blacklist>
+<blacklist type="badword" locale="en">ejaculation</blacklist>
+<blacklist type="badword" locale="en">erection</blacklist>
+<blacklist type="badword" locale="en">erections</blacklist>
+<blacklist type="badword" locale="en">erotic</blacklist>
+<blacklist type="badword" locale="en">erotica</blacklist>
+<blacklist type="badword" locale="en">eroticism</blacklist>
+<blacklist type="badword" locale="en">erotism</blacklist>
+<blacklist type="badword" locale="en">erotomania</blacklist>
+<blacklist type="badword" locale="en">exhibitionism</blacklist>
+<blacklist type="badword" locale="en">exploiter</blacklist>
+<blacklist type="badword" locale="en">fag</blacklist>
+<blacklist type="badword" locale="en">faggot</blacklist>
+<blacklist type="badword" locale="en">faggots</blacklist>
+<blacklist type="badword" locale="en">faggy</blacklist>
+<blacklist type="badword" locale="en">fagot</blacklist>
+<blacklist type="badword" locale="en">fagoted</blacklist>
+<blacklist type="badword" locale="en">fagots</blacklist>
+<blacklist type="badword" locale="en">fags</blacklist>
+<blacklist type="badword" locale="en">fart</blacklist>
+<blacklist type="badword" locale="en">farted</blacklist>
+<blacklist type="badword" locale="en">farter</blacklist>
+<blacklist type="badword" locale="en">farting</blacklist>
+<blacklist type="badword" locale="en">farts</blacklist>
+<blacklist type="badword" locale="en">fascist</blacklist>
+<blacklist type="badword" locale="en">fatties</blacklist>
+<blacklist type="badword" locale="en">fattiest</blacklist>
+<blacklist type="badword" locale="en">fellate</blacklist>
+<blacklist type="badword" locale="en">fellatio</blacklist>
+<blacklist type="badword" locale="en">fellatio </blacklist>
+<blacklist type="badword" locale="en">fellation</blacklist>
+<blacklist type="badword" locale="en">fetish</blacklist>
+<blacklist type="badword" locale="en">fetishes</blacklist>
+<blacklist type="badword" locale="en">finger bang</blacklist>
+<blacklist type="badword" locale="en">finger banger</blacklist>
+<blacklist type="badword" locale="en">fingerbang</blacklist>
+<blacklist type="badword" locale="en">fingerbanger</blacklist>
+<blacklist type="badword" locale="en">fisting</blacklist>
+<blacklist type="badword" locale="en">foreskin</blacklist>
+<blacklist type="badword" locale="en">fornicated</blacklist>
+<blacklist type="badword" locale="en">fornicates</blacklist>
+<blacklist type="badword" locale="en">fornicating</blacklist>
+<blacklist type="badword" locale="en">fornication</blacklist>
+<blacklist type="badword" locale="en">fornicator</blacklist>
+<blacklist type="badword" locale="en">frigidity</blacklist>
+<blacklist type="badword" locale="en">fuck</blacklist>
+<blacklist type="badword" locale="en">fuck face</blacklist>
+<blacklist type="badword" locale="en">fuck faces</blacklist>
+<blacklist type="badword" locale="en">fucka</blacklist>
+<blacklist type="badword" locale="en">fuckas</blacklist>
+<blacklist type="badword" locale="en">fucked</blacklist>
+<blacklist type="badword" locale="en">fucker</blacklist>
+<blacklist type="badword" locale="en">fuckers</blacklist>
+<blacklist type="badword" locale="en">fuckface</blacklist>
+<blacklist type="badword" locale="en">fuckfaces</blacklist>
+<blacklist type="badword" locale="en">fucking</blacklist>
+<blacklist type="badword" locale="en">fucks</blacklist>
+<blacklist type="badword" locale="en">gang bang</blacklist>
+<blacklist type="badword" locale="en">gang banger</blacklist>
+<blacklist type="badword" locale="en">gang bangers</blacklist>
+<blacklist type="badword" locale="en">gang banging</blacklist>
+<blacklist type="badword" locale="en">gang bangs</blacklist>
+<blacklist type="badword" locale="en">gangbang</blacklist>
+<blacklist type="badword" locale="en">gangbanger</blacklist>
+<blacklist type="badword" locale="en">gangbangers</blacklist>
+<blacklist type="badword" locale="en">gangbanging</blacklist>
+<blacklist type="badword" locale="en">gangbangs</blacklist>
+<blacklist type="badword" locale="en">gay</blacklist>
+<blacklist type="badword" locale="en">gays</blacklist>
+<blacklist type="badword" locale="en">geisha</blacklist>
+<blacklist type="badword" locale="en">geishas</blacklist>
+<blacklist type="badword" locale="en">genital</blacklist>
+<blacklist type="badword" locale="en">genitalia</blacklist>
+<blacklist type="badword" locale="en">genitals</blacklist>
+<blacklist type="badword" locale="en">gerbiling</blacklist>
+<blacklist type="badword" locale="en">get high</blacklist>
+<blacklist type="badword" locale="en">get laid</blacklist>
+<blacklist type="badword" locale="en">get some</blacklist>
+<blacklist type="badword" locale="en">get some ass</blacklist>
+<blacklist type="badword" locale="en">get some dick</blacklist>
+<blacklist type="badword" locale="en">get some pussy</blacklist>
+<blacklist type="badword" locale="en">getsomeass</blacklist>
+<blacklist type="badword" locale="en">getsomedick</blacklist>
+<blacklist type="badword" locale="en">getsomepussy</blacklist>
+<blacklist type="badword" locale="en">give me head</blacklist>
+<blacklist type="badword" locale="en">givemehead</blacklist>
+<blacklist type="badword" locale="en">god dammit</blacklist>
+<blacklist type="badword" locale="en">god damn</blacklist>
+<blacklist type="badword" locale="en">god damned</blacklist>
+<blacklist type="badword" locale="en">goddammit</blacklist>
+<blacklist type="badword" locale="en">goddamn</blacklist>
+<blacklist type="badword" locale="en">goddamned</blacklist>
+<blacklist type="badword" locale="en">hair circle</blacklist>
+<blacklist type="badword" locale="en">hair pie</blacklist>
+<blacklist type="badword" locale="en">hair pies</blacklist>
+<blacklist type="badword" locale="en">hairpie</blacklist>
+<blacklist type="badword" locale="en">hairpies</blacklist>
+<blacklist type="badword" locale="en">hand job</blacklist>
+<blacklist type="badword" locale="en">hard on</blacklist>
+<blacklist type="badword" locale="en">hard ons</blacklist>
+<blacklist type="badword" locale="en">hardon</blacklist>
+<blacklist type="badword" locale="en">hardons</blacklist>
+<blacklist type="badword" locale="en">hash</blacklist>
+<blacklist type="badword" locale="en">hashish</blacklist>
+<blacklist type="badword" locale="en">hemorrhoid</blacklist>
+<blacklist type="badword" locale="en">hermaphrodite</blacklist>
+<blacklist type="badword" locale="en">hermaphrodites</blacklist>
+<blacklist type="badword" locale="en">Hermaphroditic</blacklist>
+<blacklist type="badword" locale="en">hermaphroditism</blacklist>
+<blacklist type="badword" locale="en">heroin</blacklist>
+<blacklist type="badword" locale="en">herpes</blacklist>
+<blacklist type="badword" locale="en">heterosexuality</blacklist>
+<blacklist type="badword" locale="en">homo</blacklist>
+<blacklist type="badword" locale="en">homo sexual</blacklist>
+<blacklist type="badword" locale="en">homo sexuals</blacklist>
+<blacklist type="badword" locale="en">homos</blacklist>
+<blacklist type="badword" locale="en">homosexual</blacklist>
+<blacklist type="badword" locale="en">homosexuality</blacklist>
+<blacklist type="badword" locale="en">homosexuals</blacklist>
+<blacklist type="badword" locale="en">hooker</blacklist>
+<blacklist type="badword" locale="en">hookers</blacklist>
+<blacklist type="badword" locale="en">hooter</blacklist>
+<blacklist type="badword" locale="en">hooters</blacklist>
+<blacklist type="badword" locale="en">hornie</blacklist>
+<blacklist type="badword" locale="en">horniness</blacklist>
+<blacklist type="badword" locale="en">horny</blacklist>
+<blacklist type="badword" locale="en">horse shit</blacklist>
+<blacklist type="badword" locale="en">horseshit</blacklist>
+<blacklist type="badword" locale="en">hot asspussy</blacklist>
+<blacklist type="badword" locale="en">hot sex</blacklist>
+<blacklist type="badword" locale="en">hymen</blacklist>
+<blacklist type="badword" locale="en">hymens</blacklist>
+<blacklist type="badword" locale="en">I want sex</blacklist>
+<blacklist type="badword" locale="en">idiot</blacklist>
+<blacklist type="badword" locale="en">illicit</blacklist>
+<blacklist type="badword" locale="en">incest</blacklist>
+<blacklist type="badword" locale="en">incestuous</blacklist>
+<blacklist type="badword" locale="en">indecent</blacklist>
+<blacklist type="badword" locale="en">intercourse</blacklist>
+<blacklist type="badword" locale="en">Iwantsex</blacklist>
+<blacklist type="badword" locale="en">jack ass</blacklist>
+<blacklist type="badword" locale="en">jack off</blacklist>
+<blacklist type="badword" locale="en">jackass</blacklist>
+<blacklist type="badword" locale="en">jackasses</blacklist>
+<blacklist type="badword" locale="en">jackoff</blacklist>
+<blacklist type="badword" locale="en">jag off</blacklist>
+<blacklist type="badword" locale="en">jerk</blacklist>
+<blacklist type="badword" locale="en">jerk off</blacklist>
+<blacklist type="badword" locale="en">jerkoff</blacklist>
+<blacklist type="badword" locale="en">jerks</blacklist>
+<blacklist type="badword" locale="en">jew boy</blacklist>
+<blacklist type="badword" locale="en">jewboy</blacklist>
+<blacklist type="badword" locale="en">jewess</blacklist>
+<blacklist type="badword" locale="en">joint</blacklist>
+<blacklist type="badword" locale="en">junked</blacklist>
+<blacklist type="badword" locale="en">junkie</blacklist>
+<blacklist type="badword" locale="en">junkies</blacklist>
+<blacklist type="badword" locale="en">junky</blacklist>
+<blacklist type="badword" locale="en">kiss ass</blacklist>
+<blacklist type="badword" locale="en">kiss my ass</blacklist>
+<blacklist type="badword" locale="en">kissass</blacklist>
+<blacklist type="badword" locale="en">kissherass</blacklist>
+<blacklist type="badword" locale="en">kisshisass</blacklist>
+<blacklist type="badword" locale="en">kissmyass</blacklist>
+<blacklist type="badword" locale="en">kkk</blacklist>
+<blacklist type="badword" locale="en">Ku Klux Klan</blacklist>
+<blacklist type="badword" locale="en">Kuomintang</blacklist>
+<blacklist type="badword" locale="en">lesbian</blacklist>
+<blacklist type="badword" locale="en">lesbianism</blacklist>
+<blacklist type="badword" locale="en">lesbians</blacklist>
+<blacklist type="badword" locale="en">lesbo</blacklist>
+<blacklist type="badword" locale="en">lesbos</blacklist>
+<blacklist type="badword" locale="en">libido</blacklist>
+<blacklist type="badword" locale="en">libidos</blacklist>
+<blacklist type="badword" locale="en">lick my cunt</blacklist>
+<blacklist type="badword" locale="en">lick my dick</blacklist>
+<blacklist type="badword" locale="en">lick my penis</blacklist>
+<blacklist type="badword" locale="en">lick my pussy</blacklist>
+<blacklist type="badword" locale="en">lick my twat</blacklist>
+<blacklist type="badword" locale="en">lingerie</blacklist>
+<blacklist type="badword" locale="en">LSD</blacklist>
+<blacklist type="badword" locale="en">lubricate</blacklist>
+<blacklist type="badword" locale="en">lubricator</blacklist>
+<blacklist type="badword" locale="en">lucifer</blacklist>
+<blacklist type="badword" locale="en">lucifers</blacklist>
+<blacklist type="badword" locale="en">lust</blacklist>
+<blacklist type="badword" locale="en">lusted</blacklist>
+<blacklist type="badword" locale="en">luster</blacklist>
+<blacklist type="badword" locale="en">lustful</blacklist>
+<blacklist type="badword" locale="en">lustful excess</blacklist>
+<blacklist type="badword" locale="en">lustierl</blacklist>
+<blacklist type="badword" locale="en">lustiest</blacklist>
+<blacklist type="badword" locale="en">lustily</blacklist>
+<blacklist type="badword" locale="en">lusting</blacklist>
+<blacklist type="badword" locale="en">lustrier</blacklist>
+<blacklist type="badword" locale="en">lusts</blacklist>
+<blacklist type="badword" locale="en">lusty</blacklist>
+<blacklist type="badword" locale="en">marijuana</blacklist>
+<blacklist type="badword" locale="en">marijuanas</blacklist>
+<blacklist type="badword" locale="en">maryjane</blacklist>
+<blacklist type="badword" locale="en">masochism</blacklist>
+<blacklist type="badword" locale="en">masochist</blacklist>
+<blacklist type="badword" locale="en">masochistic</blacklist>
+<blacklist type="badword" locale="en">masterbate</blacklist>
+<blacklist type="badword" locale="en">masterbates</blacklist>
+<blacklist type="badword" locale="en">masterbating</blacklist>
+<blacklist type="badword" locale="en">masterbation</blacklist>
+<blacklist type="badword" locale="en">masturbate</blacklist>
+<blacklist type="badword" locale="en">masturbated</blacklist>
+<blacklist type="badword" locale="en">masturbates</blacklist>
+<blacklist type="badword" locale="en">masturbating</blacklist>
+<blacklist type="badword" locale="en">masturbation</blacklist>
+<blacklist type="badword" locale="en">masturbator</blacklist>
+<blacklist type="badword" locale="en">menstrual</blacklist>
+<blacklist type="badword" locale="en">menstruate</blacklist>
+<blacklist type="badword" locale="en">menstruates</blacklist>
+<blacklist type="badword" locale="en">menstruation</blacklist>
+<blacklist type="badword" locale="en">merde</blacklist>
+<blacklist type="badword" locale="en">militarism</blacklist>
+<blacklist type="badword" locale="en">mistress</blacklist>
+<blacklist type="badword" locale="en">mother fuck</blacklist>
+<blacklist type="badword" locale="en">mother fucka</blacklist>
+<blacklist type="badword" locale="en">mother fuckas</blacklist>
+<blacklist type="badword" locale="en">mother fucked</blacklist>
+<blacklist type="badword" locale="en">mother fucker</blacklist>
+<blacklist type="badword" locale="en">mother fuckers</blacklist>
+<blacklist type="badword" locale="en">mother fucking</blacklist>
+<blacklist type="badword" locale="en">motherfuck</blacklist>
+<blacklist type="badword" locale="en">motherfucka</blacklist>
+<blacklist type="badword" locale="en">motherfuckas</blacklist>
+<blacklist type="badword" locale="en">motherfucked</blacklist>
+<blacklist type="badword" locale="en">motherfucker</blacklist>
+<blacklist type="badword" locale="en">motherfuckers</blacklist>
+<blacklist type="badword" locale="en">motherfucking</blacklist>
+<blacklist type="badword" locale="en">naked</blacklist>
+<blacklist type="badword" locale="en">nazi</blacklist>
+<blacklist type="badword" locale="en">Nazi</blacklist>
+<blacklist type="badword" locale="en">nazi</blacklist>
+<blacklist type="badword" locale="en">nazies</blacklist>
+<blacklist type="badword" locale="en">nazis</blacklist>
+<blacklist type="badword" locale="en">necromancer</blacklist>
+<blacklist type="badword" locale="en">necromancy</blacklist>
+<blacklist type="badword" locale="en">necromania</blacklist>
+<blacklist type="badword" locale="en">necrophile</blacklist>
+<blacklist type="badword" locale="en">necrophiles</blacklist>
+<blacklist type="badword" locale="en">necrophilia</blacklist>
+<blacklist type="badword" locale="en">necrophiliac</blacklist>
+<blacklist type="badword" locale="en">negress</blacklist>
+<blacklist type="badword" locale="en">negro</blacklist>
+<blacklist type="badword" locale="en">neo-Nazi</blacklist>
+<blacklist type="badword" locale="en">nigga</blacklist>
+<blacklist type="badword" locale="en">niggas</blacklist>
+<blacklist type="badword" locale="en">nigger</blacklist>
+<blacklist type="badword" locale="en">niggers</blacklist>
+<blacklist type="badword" locale="en">nipple</blacklist>
+<blacklist type="badword" locale="en">nipples</blacklist>
+<blacklist type="badword" locale="en">nookie</blacklist>
+<blacklist type="badword" locale="en">nude</blacklist>
+<blacklist type="badword" locale="en">nudes</blacklist>
+<blacklist type="badword" locale="en">nudism</blacklist>
+<blacklist type="badword" locale="en">nudity</blacklist>
+<blacklist type="badword" locale="en">nymph</blacklist>
+<blacklist type="badword" locale="en">nymphet</blacklist>
+<blacklist type="badword" locale="en">nymphette</blacklist>
+<blacklist type="badword" locale="en">nympho</blacklist>
+<blacklist type="badword" locale="en">nympho mania</blacklist>
+<blacklist type="badword" locale="en">nympho maniac</blacklist>
+<blacklist type="badword" locale="en">nympho maniacs</blacklist>
+<blacklist type="badword" locale="en">nympholept</blacklist>
+<blacklist type="badword" locale="en">nymphomania</blacklist>
+<blacklist type="badword" locale="en">nymphomaniac</blacklist>
+<blacklist type="badword" locale="en">nymphomaniacs</blacklist>
+<blacklist type="badword" locale="en">nymphos</blacklist>
+<blacklist type="badword" locale="en">nymphs</blacklist>
+<blacklist type="badword" locale="en">oral sex</blacklist>
+<blacklist type="badword" locale="en">orgasm</blacklist>
+<blacklist type="badword" locale="en">orgasmic</blacklist>
+<blacklist type="badword" locale="en">orgasms</blacklist>
+<blacklist type="badword" locale="en">orgies</blacklist>
+<blacklist type="badword" locale="en">orgy</blacklist>
+<blacklist type="badword" locale="en">ovaries</blacklist>
+<blacklist type="badword" locale="en">ovary</blacklist>
+<blacklist type="badword" locale="en">paedophile</blacklist>
+<blacklist type="badword" locale="en">panties</blacklist>
+<blacklist type="badword" locale="en">panty</blacklist>
+<blacklist type="badword" locale="en">pedophile</blacklist>
+<blacklist type="badword" locale="en">pedophiles</blacklist>
+<blacklist type="badword" locale="en">pedophilia</blacklist>
+<blacklist type="badword" locale="en">pee</blacklist>
+<blacklist type="badword" locale="en">peep show</blacklist>
+<blacklist type="badword" locale="en">peep shows</blacklist>
+<blacklist type="badword" locale="en">peepshow</blacklist>
+<blacklist type="badword" locale="en">peepshows</blacklist>
+<blacklist type="badword" locale="en">penis</blacklist>
+<blacklist type="badword" locale="en">penises</blacklist>
+<blacklist type="badword" locale="en">perv</blacklist>
+<blacklist type="badword" locale="en">perversion</blacklist>
+<blacklist type="badword" locale="en">pervert</blacklist>
+<blacklist type="badword" locale="en">perverted</blacklist>
+<blacklist type="badword" locale="en">perverts</blacklist>
+<blacklist type="badword" locale="en">phallic</blacklist>
+<blacklist type="badword" locale="en">phallus</blacklist>
+<blacklist type="badword" locale="en">pimp</blacklist>
+<blacklist type="badword" locale="en">pimped</blacklist>
+<blacklist type="badword" locale="en">pimping</blacklist>
+<blacklist type="badword" locale="en">pimps</blacklist>
+<blacklist type="badword" locale="en">pinko</blacklist>
+<blacklist type="badword" locale="en">piss</blacklist>
+<blacklist type="badword" locale="en">pissed</blacklist>
+<blacklist type="badword" locale="en">pisser</blacklist>
+<blacklist type="badword" locale="en">pisses</blacklist>
+<blacklist type="badword" locale="en">pissing</blacklist>
+<blacklist type="badword" locale="en">pissoff</blacklist>
+<blacklist type="badword" locale="en">playboy</blacklist>
+<blacklist type="badword" locale="en">porn</blacklist>
+<blacklist type="badword" locale="en">porno</blacklist>
+<blacklist type="badword" locale="en">pornographer</blacklist>
+<blacklist type="badword" locale="en">pornographers</blacklist>
+<blacklist type="badword" locale="en">pornographic</blacklist>
+<blacklist type="badword" locale="en">pornography</blacklist>
+<blacklist type="badword" locale="en">porns</blacklist>
+<blacklist type="badword" locale="en">pot</blacklist>
+<blacklist type="badword" locale="en">pot smoker</blacklist>
+<blacklist type="badword" locale="en">pothead</blacklist>
+<blacklist type="badword" locale="en">potsmoker</blacklist>
+<blacklist type="badword" locale="en">prick</blacklist>
+<blacklist type="badword" locale="en">pricked</blacklist>
+<blacklist type="badword" locale="en">pricks</blacklist>
+<blacklist type="badword" locale="en">pronography</blacklist>
+<blacklist type="badword" locale="en">prostitute</blacklist>
+<blacklist type="badword" locale="en">prostituted</blacklist>
+<blacklist type="badword" locale="en">prostitutes</blacklist>
+<blacklist type="badword" locale="en">prostituting</blacklist>
+<blacklist type="badword" locale="en">prostitution</blacklist>
+<blacklist type="badword" locale="en">pubbie</blacklist>
+<blacklist type="badword" locale="en">pube</blacklist>
+<blacklist type="badword" locale="en">puberty</blacklist>
+<blacklist type="badword" locale="en">pubes</blacklist>
+<blacklist type="badword" locale="en">pubescent</blacklist>
+<blacklist type="badword" locale="en">pubic</blacklist>
+<blacklist type="badword" locale="en">puke</blacklist>
+<blacklist type="badword" locale="en">puked</blacklist>
+<blacklist type="badword" locale="en">pukes</blacklist>
+<blacklist type="badword" locale="en">pussies</blacklist>
+<blacklist type="badword" locale="en">pussy</blacklist>
+<blacklist type="badword" locale="en">queer</blacklist>
+<blacklist type="badword" locale="en">queers</blacklist>
+<blacklist type="badword" locale="en">racial</blacklist>
+<blacklist type="badword" locale="en">racism</blacklist>
+<blacklist type="badword" locale="en">racist</blacklist>
+<blacklist type="badword" locale="en">racists</blacklist>
+<blacklist type="badword" locale="en">rape</blacklist>
+<blacklist type="badword" locale="en">raped</blacklist>
+<blacklist type="badword" locale="en">rapes</blacklist>
+<blacklist type="badword" locale="en">raping</blacklist>
+<blacklist type="badword" locale="en">rapist</blacklist>
+<blacklist type="badword" locale="en">rapture</blacklist>
+<blacklist type="badword" locale="en">rectum</blacklist>
+<blacklist type="badword" locale="en">retard</blacklist>
+<blacklist type="badword" locale="en">rubber</blacklist>
+<blacklist type="badword" locale="en">rubbering</blacklist>
+<blacklist type="badword" locale="en">rubbers</blacklist>
+<blacklist type="badword" locale="en">S&amp;M</blacklist>
+<blacklist type="badword" locale="en">S.O.B</blacklist>
+<blacklist type="badword" locale="en">sadisctic</blacklist>
+<blacklist type="badword" locale="en">sadism</blacklist>
+<blacklist type="badword" locale="en">sadist</blacklist>
+<blacklist type="badword" locale="en">sadistic</blacklist>
+<blacklist type="badword" locale="en">sadists</blacklist>
+<blacklist type="badword" locale="en">sado masochism</blacklist>
+<blacklist type="badword" locale="en">sadomasochism</blacklist>
+<blacklist type="badword" locale="en">sapphic</blacklist>
+<blacklist type="badword" locale="en">sapphism</blacklist>
+<blacklist type="badword" locale="en">sappho</blacklist>
+<blacklist type="badword" locale="en">sapphos</blacklist>
+<blacklist type="badword" locale="en">satan</blacklist>
+<blacklist type="badword" locale="en">satanic</blacklist>
+<blacklist type="badword" locale="en">scatological</blacklist>
+<blacklist type="badword" locale="en">screw</blacklist>
+<blacklist type="badword" locale="en">screwed</blacklist>
+<blacklist type="badword" locale="en">screwing</blacklist>
+<blacklist type="badword" locale="en">screws</blacklist>
+<blacklist type="badword" locale="en">scrotum</blacklist>
+<blacklist type="badword" locale="en">scrotums</blacklist>
+<blacklist type="badword" locale="en">scum</blacklist>
+<blacklist type="badword" locale="en">seduce</blacklist>
+<blacklist type="badword" locale="en">seduced</blacklist>
+<blacklist type="badword" locale="en">seducer</blacklist>
+<blacklist type="badword" locale="en">seduction</blacklist>
+<blacklist type="badword" locale="en">seductive</blacklist>
+<blacklist type="badword" locale="en">semen</blacklist>
+<blacklist type="badword" locale="en">sex</blacklist>
+<blacklist type="badword" locale="en">sex king</blacklist>
+<blacklist type="badword" locale="en">sex kitten</blacklist>
+<blacklist type="badword" locale="en">sex lupine</blacklist>
+<blacklist type="badword" locale="en">sex machine</blacklist>
+<blacklist type="badword" locale="en">sex queen</blacklist>
+<blacklist type="badword" locale="en">sex-appeal</blacklist>
+<blacklist type="badword" locale="en">sexed</blacklist>
+<blacklist type="badword" locale="en">sexiness</blacklist>
+<blacklist type="badword" locale="en">sexking</blacklist>
+<blacklist type="badword" locale="en">sexkitten</blacklist>
+<blacklist type="badword" locale="en">sexmachine</blacklist>
+<blacklist type="badword" locale="en">sexqueen</blacklist>
+<blacklist type="badword" locale="en">sexual</blacklist>
+<blacklist type="badword" locale="en">sexual inadquacy</blacklist>
+<blacklist type="badword" locale="en">sexual perversion</blacklist>
+<blacklist type="badword" locale="en">sexuality</blacklist>
+<blacklist type="badword" locale="en">sexy</blacklist>
+<blacklist type="badword" locale="en">sexy bitch</blacklist>
+<blacklist type="badword" locale="en">sexy bitches</blacklist>
+<blacklist type="badword" locale="en">sexybitch</blacklist>
+<blacklist type="badword" locale="en">sexybitches</blacklist>
+<blacklist type="badword" locale="en">shag</blacklist>
+<blacklist type="badword" locale="en">shagged</blacklist>
+<blacklist type="badword" locale="en">shagging</blacklist>
+<blacklist type="badword" locale="en">shags</blacklist>
+<blacklist type="badword" locale="en">shit</blacklist>
+<blacklist type="badword" locale="en">shit face</blacklist>
+<blacklist type="badword" locale="en">shit head</blacklist>
+<blacklist type="badword" locale="en">shit list</blacklist>
+<blacklist type="badword" locale="en">shited</blacklist>
+<blacklist type="badword" locale="en">shitface</blacklist>
+<blacklist type="badword" locale="en">shit-faced</blacklist>
+<blacklist type="badword" locale="en">shithead</blacklist>
+<blacklist type="badword" locale="en">shitlist</blacklist>
+<blacklist type="badword" locale="en">shits</blacklist>
+<blacklist type="badword" locale="en">shitt</blacklist>
+<blacklist type="badword" locale="en">shitted</blacklist>
+<blacklist type="badword" locale="en">shitter</blacklist>
+<blacklist type="badword" locale="en">shitting</blacklist>
+<blacklist type="badword" locale="en">shitts</blacklist>
+<blacklist type="badword" locale="en">shitty</blacklist>
+<blacklist type="badword" locale="en">sissy</blacklist>
+<blacklist type="badword" locale="en">skrew</blacklist>
+<blacklist type="badword" locale="en">skrewing</blacklist>
+<blacklist type="badword" locale="en">skrews</blacklist>
+<blacklist type="badword" locale="en">slave</blacklist>
+<blacklist type="badword" locale="en">slaves</blacklist>
+<blacklist type="badword" locale="en">sleaze</blacklist>
+<blacklist type="badword" locale="en">sleazy</blacklist>
+<blacklist type="badword" locale="en">sleezy</blacklist>
+<blacklist type="badword" locale="en">slut</blacklist>
+<blacklist type="badword" locale="en">sluts</blacklist>
+<blacklist type="badword" locale="en">slutty</blacklist>
+<blacklist type="badword" locale="en">smack</blacklist>
+<blacklist type="badword" locale="en">smoker</blacklist>
+<blacklist type="badword" locale="en">snatch</blacklist>
+<blacklist type="badword" locale="en">snatches</blacklist>
+<blacklist type="badword" locale="en">snuff</blacklist>
+<blacklist type="badword" locale="en">snuffs</blacklist>
+<blacklist type="badword" locale="en">sod</blacklist>
+<blacklist type="badword" locale="en">soddom</blacklist>
+<blacklist type="badword" locale="en">sodom</blacklist>
+<blacklist type="badword" locale="en">sodomies</blacklist>
+<blacklist type="badword" locale="en">sodomist</blacklist>
+<blacklist type="badword" locale="en">sodomists</blacklist>
+<blacklist type="badword" locale="en">sodomitic</blacklist>
+<blacklist type="badword" locale="en">sodomize</blacklist>
+<blacklist type="badword" locale="en">sodomized</blacklist>
+<blacklist type="badword" locale="en">sodomizing</blacklist>
+<blacklist type="badword" locale="en">sodomy</blacklist>
+<blacklist type="badword" locale="en">son of a bitch</blacklist>
+<blacklist type="badword" locale="en">sonn of a bitch</blacklist>
+<blacklist type="badword" locale="en">sonn ov a bitch</blacklist>
+<blacklist type="badword" locale="en">sonn uv a bitch</blacklist>
+<blacklist type="badword" locale="en">sonnofabitch</blacklist>
+<blacklist type="badword" locale="en">sonnovabitch</blacklist>
+<blacklist type="badword" locale="en">sonnuvabitch</blacklist>
+<blacklist type="badword" locale="en">sonofabitch</blacklist>
+<blacklist type="badword" locale="en">spank</blacklist>
+<blacklist type="badword" locale="en">spanked</blacklist>
+<blacklist type="badword" locale="en">spanking</blacklist>
+<blacklist type="badword" locale="en">spanks</blacklist>
+<blacklist type="badword" locale="en">speed ball</blacklist>
+<blacklist type="badword" locale="en">sperm</blacklist>
+<blacklist type="badword" locale="en">sperm juice</blacklist>
+<blacklist type="badword" locale="en">spermicidal</blacklist>
+<blacklist type="badword" locale="en">spermjuice</blacklist>
+<blacklist type="badword" locale="en">sperms</blacklist>
+<blacklist type="badword" locale="en">sphincter</blacklist>
+<blacklist type="badword" locale="en">submissive</blacklist>
+<blacklist type="badword" locale="en">submissives</blacklist>
+<blacklist type="badword" locale="en">suc</blacklist>
+<blacklist type="badword" locale="en">suc me</blacklist>
+<blacklist type="badword" locale="en">suc me off</blacklist>
+<blacklist type="badword" locale="en">succubus</blacklist>
+<blacklist type="badword" locale="en">suck</blacklist>
+<blacklist type="badword" locale="en">sucked</blacklist>
+<blacklist type="badword" locale="en">sucker</blacklist>
+<blacklist type="badword" locale="en">suckled</blacklist>
+<blacklist type="badword" locale="en">suckles</blacklist>
+<blacklist type="badword" locale="en">sucks</blacklist>
+<blacklist type="badword" locale="en">sucme</blacklist>
+<blacklist type="badword" locale="en">sucmeoff</blacklist>
+<blacklist type="badword" locale="en">suicide</blacklist>
+<blacklist type="badword" locale="en">swallow</blacklist>
+<blacklist type="badword" locale="en">swinger</blacklist>
+<blacklist type="badword" locale="en">swingers</blacklist>
+<blacklist type="badword" locale="en">syphilis</blacklist>
+<blacklist type="badword" locale="en">syphilitic</blacklist>
+<blacklist type="badword" locale="en">tampon</blacklist>
+<blacklist type="badword" locale="en">tampons</blacklist>
+<blacklist type="badword" locale="en">testical</blacklist>
+<blacklist type="badword" locale="en">testicals</blacklist>
+<blacklist type="badword" locale="en">testicle</blacklist>
+<blacklist type="badword" locale="en">testicles</blacklist>
+<blacklist type="badword" locale="en">tit</blacklist>
+<blacklist type="badword" locale="en">tits</blacklist>
+<blacklist type="badword" locale="en">titt</blacklist>
+<blacklist type="badword" locale="en">titties</blacklist>
+<blacklist type="badword" locale="en">titts</blacklist>
+<blacklist type="badword" locale="en">titty</blacklist>
+<blacklist type="badword" locale="en">tran sexual</blacklist>
+<blacklist type="badword" locale="en">tran sexuals</blacklist>
+<blacklist type="badword" locale="en">trans vestite</blacklist>
+<blacklist type="badword" locale="en">trans vestites</blacklist>
+<blacklist type="badword" locale="en">transexual</blacklist>
+<blacklist type="badword" locale="en">transexuals</blacklist>
+<blacklist type="badword" locale="en">transsexual</blacklist>
+<blacklist type="badword" locale="en">transsexuals</blacklist>
+<blacklist type="badword" locale="en">transverstism</blacklist>
+<blacklist type="badword" locale="en">transvestism</blacklist>
+<blacklist type="badword" locale="en">transvestite</blacklist>
+<blacklist type="badword" locale="en">transvestites</blacklist>
+<blacklist type="badword" locale="en">undress</blacklist>
+<blacklist type="badword" locale="en">urinate</blacklist>
+<blacklist type="badword" locale="en">urinated</blacklist>
+<blacklist type="badword" locale="en">urinates</blacklist>
+<blacklist type="badword" locale="en">urinating</blacklist>
+<blacklist type="badword" locale="en">urination</blacklist>
+<blacklist type="badword" locale="en">vagina</blacklist>
+<blacklist type="badword" locale="en">vaginal</blacklist>
+<blacklist type="badword" locale="en">vaginas</blacklist>
+<blacklist type="badword" locale="en">vasectomies</blacklist>
+<blacklist type="badword" locale="en">vasectomy</blacklist>
+<blacklist type="badword" locale="en">very horny</blacklist>
+<blacklist type="badword" locale="en">veryhorny</blacklist>
+<blacklist type="badword" locale="en">vibrate</blacklist>
+<blacklist type="badword" locale="en">vibrator</blacklist>
+<blacklist type="badword" locale="en">vibrators</blacklist>
+<blacklist type="badword" locale="en">violate</blacklist>
+<blacklist type="badword" locale="en">virginal</blacklist>
+<blacklist type="badword" locale="en">virginals</blacklist>
+<blacklist type="badword" locale="en">virginity</blacklist>
+<blacklist type="badword" locale="en">virgins</blacklist>
+<blacklist type="badword" locale="en">voyeur</blacklist>
+<blacklist type="badword" locale="en">voyeurism</blacklist>
+<blacklist type="badword" locale="en">voyeurs</blacklist>
+<blacklist type="badword" locale="en">vulva</blacklist>
+<blacklist type="badword" locale="en">wank</blacklist>
+<blacklist type="badword" locale="en">wanker</blacklist>
+<blacklist type="badword" locale="en">wanking</blacklist>
+<blacklist type="badword" locale="en">weed</blacklist>
+<blacklist type="badword" locale="en">whipping</blacklist>
+<blacklist type="badword" locale="en">whips</blacklist>
+<blacklist type="badword" locale="en">white power</blacklist>
+<blacklist type="badword" locale="en">white primary</blacklist>
+<blacklist type="badword" locale="en">white racism</blacklist>
+<blacklist type="badword" locale="en">white supremacism</blacklist>
+<blacklist type="badword" locale="en">white supremacist</blacklist>
+<blacklist type="badword" locale="en">white supremacy</blacklist>
+<blacklist type="badword" locale="en">White Terror</blacklist>
+<blacklist type="badword" locale="en">white trash</blacklist>
+<blacklist type="badword" locale="en">whitey</blacklist>
+<blacklist type="badword" locale="en">whitie</blacklist>
+<blacklist type="badword" locale="en">whities</blacklist>
+<blacklist type="badword" locale="en">whity</blacklist>
+<blacklist type="badword" locale="en">whore</blacklist>
+<blacklist type="badword" locale="en">whore house</blacklist>
+<blacklist type="badword" locale="en">whored</blacklist>
+<blacklist type="badword" locale="en">whorehouse</blacklist>
+<blacklist type="badword" locale="en">whores</blacklist>
+<blacklist type="badword" locale="en">whoring</blacklist>
+
+<blacklist type="badword" locale="fr">accro</blacklist>
+<blacklist type="badword" locale="fr">acide</blacklist>
+<blacklist type="badword" locale="fr">addict</blacklist>
+<blacklist type="badword" locale="fr">addictif</blacklist>
+<blacklist type="badword" locale="fr">addictive</blacklist>
+<blacklist type="badword" locale="fr">adultère</blacklist>
+<blacklist type="badword" locale="fr">adultères</blacklist>
+<blacklist type="badword" locale="fr">alcool</blacklist>
+<blacklist type="badword" locale="fr">alcoolique</blacklist>
+<blacklist type="badword" locale="fr">amateur</blacklist>
+<blacklist type="badword" locale="fr">amateurisme</blacklist>
+<blacklist type="badword" locale="fr">anal</blacklist>
+<blacklist type="badword" locale="fr">anarchisme</blacklist>
+<blacklist type="badword" locale="fr">anarchiste</blacklist>
+<blacklist type="badword" locale="fr">antéchrist</blacklist>
+<blacklist type="badword" locale="fr">antéchrists</blacklist>
+<blacklist type="badword" locale="fr">anus</blacklist>
+<blacklist type="badword" locale="fr">asexualité</blacklist>
+<blacklist type="badword" locale="fr">asexué</blacklist>
+<blacklist type="badword" locale="fr">assassin</blacklist>
+<blacklist type="badword" locale="fr">assassine</blacklist>
+<blacklist type="badword" locale="fr">avorté</blacklist>
+<blacklist type="badword" locale="fr">avorté</blacklist>
+<blacklist type="badword" locale="fr">avortement</blacklist>
+<blacklist type="badword" locale="fr">avortements</blacklist>
+<blacklist type="badword" locale="fr">avorter</blacklist>
+<blacklist type="badword" locale="fr">bande</blacklist>
+<blacklist type="badword" locale="fr">bander</blacklist>
+<blacklist type="badword" locale="fr">bâtard</blacklist>
+<blacklist type="badword" locale="fr">bâtarde</blacklist>
+<blacklist type="badword" locale="fr">bâtardes</blacklist>
+<blacklist type="badword" locale="fr">bâtardise</blacklist>
+<blacklist type="badword" locale="fr">bâtardises</blacklist>
+<blacklist type="badword" locale="fr">bâtards</blacklist>
+<blacklist type="badword" locale="fr">bestial</blacklist>
+<blacklist type="badword" locale="fr">bestialité</blacklist>
+<blacklist type="badword" locale="fr">bière</blacklist>
+<blacklist type="badword" locale="fr">bisexualité</blacklist>
+<blacklist type="badword" locale="fr">bisexuel</blacklist>
+<blacklist type="badword" locale="fr">bi-sexuel</blacklist>
+<blacklist type="badword" locale="fr">bisexuels</blacklist>
+<blacklist type="badword" locale="fr">bite</blacklist>
+<blacklist type="badword" locale="fr">blasphématoire</blacklist>
+<blacklist type="badword" locale="fr">blasphème</blacklist>
+<blacklist type="badword" locale="fr">blasphémer</blacklist>
+<blacklist type="badword" locale="fr">branleur</blacklist>
+<blacklist type="badword" locale="fr">branleuse</blacklist>
+<blacklist type="badword" locale="fr">caca</blacklist>
+<blacklist type="badword" locale="fr">castration</blacklist>
+<blacklist type="badword" locale="fr">castré</blacklist>
+<blacklist type="badword" locale="fr">castrés</blacklist>
+<blacklist type="badword" locale="fr">célibat</blacklist>
+<blacklist type="badword" locale="fr">célibataire</blacklist>
+<blacklist type="badword" locale="fr">célibataires</blacklist>
+<blacklist type="badword" locale="fr">chaste</blacklist>
+<blacklist type="badword" locale="fr">chasteté</blacklist>
+<blacklist type="badword" locale="fr">chatte</blacklist>
+<blacklist type="badword" locale="fr">chier</blacklist>
+<blacklist type="badword" locale="fr">chieur</blacklist>
+<blacklist type="badword" locale="fr">chieuse</blacklist>
+<blacklist type="badword" locale="fr">cigarette</blacklist>
+<blacklist type="badword" locale="fr">cigarettes</blacklist>
+<blacklist type="badword" locale="fr">circoncis</blacklist>
+<blacklist type="badword" locale="fr">circoncision</blacklist>
+<blacklist type="badword" locale="fr">clit</blacklist>
+<blacklist type="badword" locale="fr">clitoris</blacklist>
+<blacklist type="badword" locale="fr">cocaïne</blacklist>
+<blacklist type="badword" locale="fr">cocaïnomane</blacklist>
+<blacklist type="badword" locale="fr">coït</blacklist>
+<blacklist type="badword" locale="fr">coke</blacklist>
+<blacklist type="badword" locale="fr">con</blacklist>
+<blacklist type="badword" locale="fr">connard</blacklist>
+<blacklist type="badword" locale="fr">connard</blacklist>
+<blacklist type="badword" locale="fr">connards</blacklist>
+<blacklist type="badword" locale="fr">connasse</blacklist>
+<blacklist type="badword" locale="fr">connasse</blacklist>
+<blacklist type="badword" locale="fr">connasses</blacklist>
+<blacklist type="badword" locale="fr">conne</blacklist>
+<blacklist type="badword" locale="fr">copulation</blacklist>
+<blacklist type="badword" locale="fr">copule</blacklist>
+<blacklist type="badword" locale="fr">copuler</blacklist>
+<blacklist type="badword" locale="fr">couilles</blacklist>
+<blacklist type="badword" locale="fr">crémation</blacklist>
+<blacklist type="badword" locale="fr">crématoire</blacklist>
+<blacklist type="badword" locale="fr">crétin</blacklist>
+<blacklist type="badword" locale="fr">crétin</blacklist>
+<blacklist type="badword" locale="fr">crétine</blacklist>
+<blacklist type="badword" locale="fr">crétine</blacklist>
+<blacklist type="badword" locale="fr">croix gammée</blacklist>
+<blacklist type="badword" locale="fr">cuite</blacklist>
+<blacklist type="badword" locale="fr">cul</blacklist>
+<blacklist type="badword" locale="fr">cunnilingus</blacklist>
+<blacklist type="badword" locale="fr">damnation</blacklist>
+<blacklist type="badword" locale="fr">damné</blacklist>
+<blacklist type="badword" locale="fr">dans ton cul</blacklist>
+<blacklist type="badword" locale="fr">débauchage</blacklist>
+<blacklist type="badword" locale="fr">débauche</blacklist>
+<blacklist type="badword" locale="fr">défécation</blacklist>
+<blacklist type="badword" locale="fr">déféquer</blacklist>
+<blacklist type="badword" locale="fr">défleurage</blacklist>
+<blacklist type="badword" locale="fr">défleurer</blacklist>
+<blacklist type="badword" locale="fr">déflorée</blacklist>
+<blacklist type="badword" locale="fr">déflorer</blacklist>
+<blacklist type="badword" locale="fr">défonce</blacklist>
+<blacklist type="badword" locale="fr">défoncé</blacklist>
+<blacklist type="badword" locale="fr">dépucelage</blacklist>
+<blacklist type="badword" locale="fr">dépuceler</blacklist>
+<blacklist type="badword" locale="fr">dominateur</blacklist>
+<blacklist type="badword" locale="fr">dominatrice</blacklist>
+<blacklist type="badword" locale="fr">double pénétration</blacklist>
+<blacklist type="badword" locale="fr">drogue</blacklist>
+<blacklist type="badword" locale="fr">drogué</blacklist>
+<blacklist type="badword" locale="fr">drogues</blacklist>
+<blacklist type="badword" locale="fr">éjaculation</blacklist>
+<blacklist type="badword" locale="fr">éjaculer</blacklist>
+<blacklist type="badword" locale="fr">éjaculeur</blacklist>
+<blacklist type="badword" locale="fr">enculé</blacklist>
+<blacklist type="badword" locale="fr">enculée</blacklist>
+<blacklist type="badword" locale="fr">enculées</blacklist>
+<blacklist type="badword" locale="fr">enculés</blacklist>
+<blacklist type="badword" locale="fr">enfer</blacklist>
+<blacklist type="badword" locale="fr">érotique</blacklist>
+<blacklist type="badword" locale="fr">érotisme</blacklist>
+<blacklist type="badword" locale="fr">esclavage</blacklist>
+<blacklist type="badword" locale="fr">esclavagisme</blacklist>
+<blacklist type="badword" locale="fr">exhibitionnisme</blacklist>
+<blacklist type="badword" locale="fr">exhibitionniste</blacklist>
+<blacklist type="badword" locale="fr">fasciste</blacklist>
+<blacklist type="badword" locale="fr">fellation</blacklist>
+<blacklist type="badword" locale="fr">fellations</blacklist>
+<blacklist type="badword" locale="fr">fesses</blacklist>
+<blacklist type="badword" locale="fr">fétiche</blacklist>
+<blacklist type="badword" locale="fr">fétichisme</blacklist>
+<blacklist type="badword" locale="fr">film de cul</blacklist>
+<blacklist type="badword" locale="fr">film porno</blacklist>
+<blacklist type="badword" locale="fr">film pornographique</blacklist>
+<blacklist type="badword" locale="fr">film X</blacklist>
+<blacklist type="badword" locale="fr">fils de pute</blacklist>
+<blacklist type="badword" locale="fr">fornicateur</blacklist>
+<blacklist type="badword" locale="fr">fornication</blacklist>
+<blacklist type="badword" locale="fr">forniquer</blacklist>
+<blacklist type="badword" locale="fr">fouille merde</blacklist>
+<blacklist type="badword" locale="fr">frigide</blacklist>
+<blacklist type="badword" locale="fr">frigidité</blacklist>
+<blacklist type="badword" locale="fr">fuck</blacklist>
+<blacklist type="badword" locale="fr">gang bang</blacklist>
+<blacklist type="badword" locale="fr">geisha</blacklist>
+<blacklist type="badword" locale="fr">génital</blacklist>
+<blacklist type="badword" locale="fr">génitale</blacklist>
+<blacklist type="badword" locale="fr">gode</blacklist>
+<blacklist type="badword" locale="fr">godemichet</blacklist>
+<blacklist type="badword" locale="fr">gueule</blacklist>
+<blacklist type="badword" locale="fr">handicapé</blacklist>
+<blacklist type="badword" locale="fr">hédonisme</blacklist>
+<blacklist type="badword" locale="fr">hédoniste</blacklist>
+<blacklist type="badword" locale="fr">hétéro</blacklist>
+<blacklist type="badword" locale="fr">hétérosexualité</blacklist>
+<blacklist type="badword" locale="fr">hétérosexuel</blacklist>
+<blacklist type="badword" locale="fr">homosexuel</blacklist>
+<blacklist type="badword" locale="fr">idiot</blacklist>
+<blacklist type="badword" locale="fr">idiote</blacklist>
+<blacklist type="badword" locale="fr">illicite</blacklist>
+<blacklist type="badword" locale="fr">imbécile</blacklist>
+<blacklist type="badword" locale="fr">killer</blacklist>
+<blacklist type="badword" locale="fr">lesbienne</blacklist>
+<blacklist type="badword" locale="fr">lit conjugal</blacklist>
+<blacklist type="badword" locale="fr">loches</blacklist>
+<blacklist type="badword" locale="fr">maniaque</blacklist>
+<blacklist type="badword" locale="fr">masturbation</blacklist>
+<blacklist type="badword" locale="fr">masturbatoire</blacklist>
+<blacklist type="badword" locale="fr">merde</blacklist>
+<blacklist type="badword" locale="fr">meurtre</blacklist>
+<blacklist type="badword" locale="fr">mongole</blacklist>
+<blacklist type="badword" locale="fr">motherfucker</blacklist>
+<blacklist type="badword" locale="fr">mutilé</blacklist>
+<blacklist type="badword" locale="fr">nazi</blacklist>
+<blacklist type="badword" locale="fr">nazisme</blacklist>
+<blacklist type="badword" locale="fr">nègre</blacklist>
+<blacklist type="badword" locale="fr">nique</blacklist>
+<blacklist type="badword" locale="fr">nique ta mère</blacklist>
+<blacklist type="badword" locale="fr">niquer</blacklist>
+<blacklist type="badword" locale="fr">nympho</blacklist>
+<blacklist type="badword" locale="fr">nymphomane</blacklist>
+<blacklist type="badword" locale="fr">ordure</blacklist>
+<blacklist type="badword" locale="fr">orgasme</blacklist>
+<blacklist type="badword" locale="fr">orgasmique</blacklist>
+<blacklist type="badword" locale="fr">pede</blacklist>
+<blacklist type="badword" locale="fr">pédé</blacklist>
+<blacklist type="badword" locale="fr">pédéraste</blacklist>
+<blacklist type="badword" locale="fr">pédéraste</blacklist>
+<blacklist type="badword" locale="fr">pédérastie</blacklist>
+<blacklist type="badword" locale="fr">pédophile</blacklist>
+<blacklist type="badword" locale="fr">pédophilie</blacklist>
+<blacklist type="badword" locale="fr">pénétration</blacklist>
+<blacklist type="badword" locale="fr">péter</blacklist>
+<blacklist type="badword" locale="fr">péteur</blacklist>
+<blacklist type="badword" locale="fr">pipe</blacklist>
+<blacklist type="badword" locale="fr">pipi</blacklist>
+<blacklist type="badword" locale="fr">pisse</blacklist>
+<blacklist type="badword" locale="fr">poitrine</blacklist>
+<blacklist type="badword" locale="fr">poitrines</blacklist>
+<blacklist type="badword" locale="fr">popotin</blacklist>
+<blacklist type="badword" locale="fr">porno</blacklist>
+<blacklist type="badword" locale="fr">pornographie</blacklist>
+<blacklist type="badword" locale="fr">pornographique</blacklist>
+<blacklist type="badword" locale="fr">pouffe</blacklist>
+<blacklist type="badword" locale="fr">pouffiasse</blacklist>
+<blacklist type="badword" locale="fr">prédateur</blacklist>
+<blacklist type="badword" locale="fr">préservatif</blacklist>
+<blacklist type="badword" locale="fr">préservatifs</blacklist>
+<blacklist type="badword" locale="fr">profanation</blacklist>
+<blacklist type="badword" locale="fr">profaner</blacklist>
+<blacklist type="badword" locale="fr">prostate</blacklist>
+<blacklist type="badword" locale="fr">prostitués</blacklist>
+<blacklist type="badword" locale="fr">prostitution</blacklist>
+<blacklist type="badword" locale="fr">puceau</blacklist>
+<blacklist type="badword" locale="fr">pucelle</blacklist>
+<blacklist type="badword" locale="fr">putain</blacklist>
+<blacklist type="badword" locale="fr">pute</blacklist>
+<blacklist type="badword" locale="fr">pute</blacklist>
+<blacklist type="badword" locale="fr">putes</blacklist>
+<blacklist type="badword" locale="fr">putes</blacklist>
+<blacklist type="badword" locale="fr">race</blacklist>
+<blacklist type="badword" locale="fr">racisme</blacklist>
+<blacklist type="badword" locale="fr">raciste</blacklist>
+<blacklist type="badword" locale="fr">Reich</blacklist>
+<blacklist type="badword" locale="fr">rhum</blacklist>
+<blacklist type="badword" locale="fr">sac à merde</blacklist>
+<blacklist type="badword" locale="fr">sadisme</blacklist>
+<blacklist type="badword" locale="fr">Sadomaso</blacklist>
+<blacklist type="badword" locale="fr">Sadomasochisme</blacklist>
+<blacklist type="badword" locale="fr">salaud</blacklist>
+<blacklist type="badword" locale="fr">salauds</blacklist>
+<blacklist type="badword" locale="fr">saligaud</blacklist>
+<blacklist type="badword" locale="fr">salope</blacklist>
+<blacklist type="badword" locale="fr">saloperie</blacklist>
+<blacklist type="badword" locale="fr">saloperies</blacklist>
+<blacklist type="badword" locale="fr">salopes</blacklist>
+<blacklist type="badword" locale="fr">sang</blacklist>
+<blacklist type="badword" locale="fr">sang</blacklist>
+<blacklist type="badword" locale="fr">sanglant</blacklist>
+<blacklist type="badword" locale="fr">sein</blacklist>
+<blacklist type="badword" locale="fr">seins</blacklist>
+<blacklist type="badword" locale="fr">sex</blacklist>
+<blacklist type="badword" locale="fr">sexe</blacklist>
+<blacklist type="badword" locale="fr">sexe anal</blacklist>
+<blacklist type="badword" locale="fr">sexeanal</blacklist>
+<blacklist type="badword" locale="fr">sexisme</blacklist>
+<blacklist type="badword" locale="fr">sexiste</blacklist>
+<blacklist type="badword" locale="fr">sexologie</blacklist>
+<blacklist type="badword" locale="fr">sexologue</blacklist>
+<blacklist type="badword" locale="fr">sexualité</blacklist>
+<blacklist type="badword" locale="fr">sexy</blacklist>
+<blacklist type="badword" locale="fr">sperme</blacklist>
+<blacklist type="badword" locale="fr">suce</blacklist>
+<blacklist type="badword" locale="fr">suceur</blacklist>
+<blacklist type="badword" locale="fr">suceurs</blacklist>
+<blacklist type="badword" locale="fr">suceuse</blacklist>
+<blacklist type="badword" locale="fr">suceuse</blacklist>
+<blacklist type="badword" locale="fr">téquila</blacklist>
+<blacklist type="badword" locale="fr">testicule</blacklist>
+<blacklist type="badword" locale="fr">testicules</blacklist>
+<blacklist type="badword" locale="fr">tortionaire</blacklist>
+<blacklist type="badword" locale="fr">torture</blacklist>
+<blacklist type="badword" locale="fr">travelo</blacklist>
+<blacklist type="badword" locale="fr">travestie</blacklist>
+<blacklist type="badword" locale="fr">triolisme</blacklist>
+<blacklist type="badword" locale="fr">trip</blacklist>
+<blacklist type="badword" locale="fr">trisomique</blacklist>
+<blacklist type="badword" locale="fr">trisomisme</blacklist>
+<blacklist type="badword" locale="fr">trou du cul</blacklist>
+<blacklist type="badword" locale="fr">tuer</blacklist>
+<blacklist type="badword" locale="fr">tueur</blacklist>
+<blacklist type="badword" locale="fr">tueur</blacklist>
+<blacklist type="badword" locale="fr">tueuse</blacklist>
+<blacklist type="badword" locale="fr">tueuse</blacklist>
+<blacklist type="badword" locale="fr">turtlutte</blacklist>
+<blacklist type="badword" locale="fr">urine</blacklist>
+<blacklist type="badword" locale="fr">uriné</blacklist>
+<blacklist type="badword" locale="fr">uriner</blacklist>
+<blacklist type="badword" locale="fr">urinoir</blacklist>
+<blacklist type="badword" locale="fr">vagin</blacklist>
+<blacklist type="badword" locale="fr">vagin</blacklist>
+<blacklist type="badword" locale="fr">vaginale</blacklist>
+<blacklist type="badword" locale="fr">vaginale</blacklist>
+<blacklist type="badword" locale="fr">vin</blacklist>
+<blacklist type="badword" locale="fr">viol</blacklist>
+<blacklist type="badword" locale="fr">violé</blacklist>
+<blacklist type="badword" locale="fr">violeur</blacklist>
+<blacklist type="badword" locale="fr">vodka</blacklist>
+<blacklist type="badword" locale="fr">vomir</blacklist>
+<blacklist type="badword" locale="fr">vomissure</blacklist>
+<blacklist type="badword" locale="fr">vomit</blacklist>
+<blacklist type="badword" locale="fr">voyeur</blacklist>
+<blacklist type="badword" locale="fr">voyeurisme</blacklist>
+<blacklist type="badword" locale="fr">whisky</blacklist>
+<blacklist type="badword" locale="fr">X</blacklist>
+<blacklist type="badword" locale="fr">xx</blacklist>
+<blacklist type="badword" locale="fr">xxx</blacklist>
+<blacklist type="badword" locale="fr">zézette</blacklist>
+<blacklist type="badword" locale="fr">zizi</blacklist>
+<blacklist type="badword" locale="fr">zoophile</blacklist>
+<blacklist type="badword" locale="fr">zoophilie</blacklist>
+
+<blacklist type="badword" locale="de">abgetrieben</blacklist>
+<blacklist type="badword" locale="de">abspritzen</blacklist>
+<blacklist type="badword" locale="de">abtreiben</blacklist>
+<blacklist type="badword" locale="de">abtreibend</blacklist>
+<blacklist type="badword" locale="de">Abtreibung</blacklist>
+<blacklist type="badword" locale="de">Abtreibungen</blacklist>
+<blacklist type="badword" locale="de">Alk</blacklist>
+<blacklist type="badword" locale="de">Alkohol</blacklist>
+<blacklist type="badword" locale="de">alkoholisch</blacklist>
+<blacklist type="badword" locale="de">analer Sex</blacklist>
+<blacklist type="badword" locale="de">Anarchismus</blacklist>
+<blacklist type="badword" locale="de">Anarchist</blacklist>
+<blacklist type="badword" locale="de">anorgasmisch</blacklist>
+<blacklist type="badword" locale="de">Antichrist</blacklist>
+<blacklist type="badword" locale="de">Arsch</blacklist>
+<blacklist type="badword" locale="de">Ärsche</blacklist>
+<blacklist type="badword" locale="de">Arschloch</blacklist>
+<blacklist type="badword" locale="de">Asch</blacklist>
+<blacklist type="badword" locale="de">Asexualität</blacklist>
+<blacklist type="badword" locale="de">asexuell</blacklist>
+<blacklist type="badword" locale="de">außerehelich</blacklist>
+<blacklist type="badword" locale="de">beschneiden</blacklist>
+<blacklist type="badword" locale="de">Beschneidung</blacklist>
+<blacklist type="badword" locale="de">beschnitten</blacklist>
+<blacklist type="badword" locale="de">bestialisch</blacklist>
+<blacklist type="badword" locale="de">Bestialität</blacklist>
+<blacklist type="badword" locale="de">Bidet</blacklist>
+<blacklist type="badword" locale="de">Bisexualität</blacklist>
+<blacklist type="badword" locale="de">bisexuell</blacklist>
+<blacklist type="badword" locale="de">Bisexuelle</blacklist>
+<blacklist type="badword" locale="de">Blow-job</blacklist>
+<blacklist type="badword" locale="de">Bong</blacklist>
+<blacklist type="badword" locale="de">Bordell</blacklist>
+<blacklist type="badword" locale="de">Bordelle</blacklist>
+<blacklist type="badword" locale="de">böses Mädchen</blacklist>
+<blacklist type="badword" locale="de">Brust</blacklist>
+<blacklist type="badword" locale="de">Brüste</blacklist>
+<blacklist type="badword" locale="de">Brustwarze</blacklist>
+<blacklist type="badword" locale="de">Brustwarzen</blacklist>
+<blacklist type="badword" locale="de">brutal</blacklist>
+<blacklist type="badword" locale="de">bumsen</blacklist>
+<blacklist type="badword" locale="de">Busen</blacklist>
+<blacklist type="badword" locale="de">dicke Titten</blacklist>
+<blacklist type="badword" locale="de">Ehe vollziehen</blacklist>
+<blacklist type="badword" locale="de">Ehebett</blacklist>
+<blacklist type="badword" locale="de">Ehebrecher</blacklist>
+<blacklist type="badword" locale="de">Ehebrecherin</blacklist>
+<blacklist type="badword" locale="de">ehebreherisch</blacklist>
+<blacklist type="badword" locale="de">Ehebruch</blacklist>
+<blacklist type="badword" locale="de">Eier</blacklist>
+<blacklist type="badword" locale="de">Eier jucken</blacklist>
+<blacklist type="badword" locale="de">Einlauf</blacklist>
+<blacklist type="badword" locale="de">Einläufe</blacklist>
+<blacklist type="badword" locale="de">Ejakulation</blacklist>
+<blacklist type="badword" locale="de">ejakulieren</blacklist>
+<blacklist type="badword" locale="de">ejakuliert</blacklist>
+<blacklist type="badword" locale="de">ejakulierte</blacklist>
+<blacklist type="badword" locale="de">Ekstase</blacklist>
+<blacklist type="badword" locale="de">Erektion</blacklist>
+<blacklist type="badword" locale="de">Erektionen</blacklist>
+<blacklist type="badword" locale="de">Erotika</blacklist>
+<blacklist type="badword" locale="de">erotisch</blacklist>
+<blacklist type="badword" locale="de">Erotomanie</blacklist>
+<blacklist type="badword" locale="de">Eunuchen </blacklist>
+<blacklist type="badword" locale="de">Exhibitionismus</blacklist>
+<blacklist type="badword" locale="de">Faschist</blacklist>
+<blacklist type="badword" locale="de">Felatio</blacklist>
+<blacklist type="badword" locale="de">Fetisch</blacklist>
+<blacklist type="badword" locale="de">Fetische</blacklist>
+<blacklist type="badword" locale="de">Fick</blacklist>
+<blacklist type="badword" locale="de">fickend</blacklist>
+<blacklist type="badword" locale="de">Ficker</blacklist>
+<blacklist type="badword" locale="de">Ficks</blacklist>
+<blacklist type="badword" locale="de">fisten</blacklist>
+<blacklist type="badword" locale="de">Fotze</blacklist>
+<blacklist type="badword" locale="de">Fotzen</blacklist>
+<blacklist type="badword" locale="de">Freier</blacklist>
+<blacklist type="badword" locale="de">Freudenhaus</blacklist>
+<blacklist type="badword" locale="de">frigide</blacklist>
+<blacklist type="badword" locale="de">Frigidität</blacklist>
+<blacklist type="badword" locale="de">Frottage</blacklist>
+<blacklist type="badword" locale="de">Furz</blacklist>
+<blacklist type="badword" locale="de">Fürze</blacklist>
+<blacklist type="badword" locale="de">furzend</blacklist>
+<blacklist type="badword" locale="de">Furzer</blacklist>
+<blacklist type="badword" locale="de">gefurzt</blacklist>
+<blacklist type="badword" locale="de">geil</blacklist>
+<blacklist type="badword" locale="de">geil</blacklist>
+<blacklist type="badword" locale="de">Geilheit</blacklist>
+<blacklist type="badword" locale="de">Genitalien</blacklist>
+<blacklist type="badword" locale="de">Geschlechtsverkehr</blacklist>
+<blacklist type="badword" locale="de">Gleitmittel</blacklist>
+<blacklist type="badword" locale="de">grapschen</blacklist>
+<blacklist type="badword" locale="de">Halbwelt</blacklist>
+<blacklist type="badword" locale="de">Hämorrhoiden</blacklist>
+<blacklist type="badword" locale="de">Heil Hitler</blacklist>
+<blacklist type="badword" locale="de">heißer Sex</blacklist>
+<blacklist type="badword" locale="de">Hermaphroditen</blacklist>
+<blacklist type="badword" locale="de">hermaphroditisch</blacklist>
+<blacklist type="badword" locale="de">Hermaphroditismus</blacklist>
+<blacklist type="badword" locale="de">Heterosexualität</blacklist>
+<blacklist type="badword" locale="de">Höhepunkt</blacklist>
+<blacklist type="badword" locale="de">Höhepunkte</blacklist>
+<blacklist type="badword" locale="de">Homosexualität</blacklist>
+<blacklist type="badword" locale="de">homosexuell</blacklist>
+<blacklist type="badword" locale="de">Homosexuelle</blacklist>
+<blacklist type="badword" locale="de">Homosexueller</blacklist>
+<blacklist type="badword" locale="de">Hure</blacklist>
+<blacklist type="badword" locale="de">Ich will Sex</blacklist>
+<blacklist type="badword" locale="de">impotent</blacklist>
+<blacklist type="badword" locale="de">Impotenz</blacklist>
+<blacklist type="badword" locale="de">Inzest</blacklist>
+<blacklist type="badword" locale="de">inzestuös</blacklist>
+<blacklist type="badword" locale="de">Jungfernhäutchen</blacklist>
+<blacklist type="badword" locale="de">Kastration</blacklist>
+<blacklist type="badword" locale="de">kastrieren</blacklist>
+<blacklist type="badword" locale="de">kastriert</blacklist>
+<blacklist type="badword" locale="de">keusch</blacklist>
+<blacklist type="badword" locale="de">Keuschheit</blacklist>
+<blacklist type="badword" locale="de">Klitoris</blacklist>
+<blacklist type="badword" locale="de">Koitus</blacklist>
+<blacklist type="badword" locale="de">Kokain</blacklist>
+<blacklist type="badword" locale="de">Koks</blacklist>
+<blacklist type="badword" locale="de">Kondom</blacklist>
+<blacklist type="badword" locale="de">Kondome</blacklist>
+<blacklist type="badword" locale="de">Konkubine</blacklist>
+<blacklist type="badword" locale="de">Konkubinen</blacklist>
+<blacklist type="badword" locale="de">Kontinenz</blacklist>
+<blacklist type="badword" locale="de">Kopulation</blacklist>
+<blacklist type="badword" locale="de">kopulieren</blacklist>
+<blacklist type="badword" locale="de">kopulierend</blacklist>
+<blacklist type="badword" locale="de">Kopulierende</blacklist>
+<blacklist type="badword" locale="de">kopulierten</blacklist>
+<blacklist type="badword" locale="de">Kotze</blacklist>
+<blacklist type="badword" locale="de">lasziv</blacklist>
+<blacklist type="badword" locale="de">Leck meine Möse</blacklist>
+<blacklist type="badword" locale="de">Leck meinen Penis</blacklist>
+<blacklist type="badword" locale="de">Leck meinen Schwanz</blacklist>
+<blacklist type="badword" locale="de">Leck mir die Fotze</blacklist>
+<blacklist type="badword" locale="de">Leck mir die Muschi</blacklist>
+<blacklist type="badword" locale="de">Lesbe</blacklist>
+<blacklist type="badword" locale="de">Lesben</blacklist>
+<blacklist type="badword" locale="de">Lesbianismus</blacklist>
+<blacklist type="badword" locale="de">lesbisch</blacklist>
+<blacklist type="badword" locale="de">Lover</blacklist>
+<blacklist type="badword" locale="de">lüstern</blacklist>
+<blacklist type="badword" locale="de">Luzifer</blacklist>
+<blacklist type="badword" locale="de">Masturbation</blacklist>
+<blacklist type="badword" locale="de">masturbieren</blacklist>
+<blacklist type="badword" locale="de">masturbierend</blacklist>
+<blacklist type="badword" locale="de">masturbiert</blacklist>
+<blacklist type="badword" locale="de">masturbierte</blacklist>
+<blacklist type="badword" locale="de">Menstruation</blacklist>
+<blacklist type="badword" locale="de">Menstruations</blacklist>
+<blacklist type="badword" locale="de">menstruieren</blacklist>
+<blacklist type="badword" locale="de">mensturiert</blacklist>
+<blacklist type="badword" locale="de">Militarismus</blacklist>
+<blacklist type="badword" locale="de">mit Gleitmittel einschmieren</blacklist>
+<blacklist type="badword" locale="de">nackt</blacklist>
+<blacklist type="badword" locale="de">Nackte</blacklist>
+<blacklist type="badword" locale="de">Nacktheit</blacklist>
+<blacklist type="badword" locale="de">Neger</blacklist>
+<blacklist type="badword" locale="de">Negerin</blacklist>
+<blacklist type="badword" locale="de">nekrophil</blacklist>
+<blacklist type="badword" locale="de">Nekrophile</blacklist>
+<blacklist type="badword" locale="de">Nekrophiler</blacklist>
+<blacklist type="badword" locale="de">Nekrophilie</blacklist>
+<blacklist type="badword" locale="de">nen Harten</blacklist>
+<blacklist type="badword" locale="de">Nudismus</blacklist>
+<blacklist type="badword" locale="de">Nymphe</blacklist>
+<blacklist type="badword" locale="de">Puff</blacklist>
+<blacklist type="badword" locale="de">Puffs</blacklist>
+<blacklist type="badword" locale="de">Reizwäsche</blacklist>
+<blacklist type="badword" locale="de">rülpsen</blacklist>
+<blacklist type="badword" locale="de">schmutziger Sex</blacklist>
+<blacklist type="badword" locale="de">schwängern</blacklist>
+<blacklist type="badword" locale="de">Schwanz</blacklist>
+<blacklist type="badword" locale="de">Schwanz gelutscht</blacklist>
+<blacklist type="badword" locale="de">Schwanz lutschen</blacklist>
+<blacklist type="badword" locale="de">Schwanz lutschend</blacklist>
+<blacklist type="badword" locale="de">schwanzgelutscht</blacklist>
+<blacklist type="badword" locale="de">schwanzlutschen</blacklist>
+<blacklist type="badword" locale="de">schwanzlutschend</blacklist>
+<blacklist type="badword" locale="de">Schwanzlutscher</blacklist>
+<blacklist type="badword" locale="de">Schwanzring</blacklist>
+<blacklist type="badword" locale="de">schwul</blacklist>
+<blacklist type="badword" locale="de">Schwule</blacklist>
+<blacklist type="badword" locale="de">Spermafleck</blacklist>
+<blacklist type="badword" locale="de">Ständer</blacklist>
+<blacklist type="badword" locale="de">Titte</blacklist>
+<blacklist type="badword" locale="de">Titten</blacklist>
+<blacklist type="badword" locale="de">Tittenfick</blacklist>
+<blacklist type="badword" locale="de">Titties</blacklist>
+<blacklist type="badword" locale="de">unten ohne</blacklist>
+<blacklist type="badword" locale="de">vollbusig</blacklist>
+<blacklist type="badword" locale="de">Vorhaut</blacklist>
+<blacklist type="badword" locale="de">Vorhäute</blacklist>
+<blacklist type="badword" locale="de">Zölibat</blacklist>
+<blacklist type="badword" locale="de">zölibatär</blacklist>
+<blacklist type="badword" locale="de">Zölibatäre</blacklist>
+<blacklist type="badword" locale="de">Zuhälter</blacklist>
+<blacklist type="badword" locale="it">aborti</blacklist>
+<blacklist type="badword" locale="it">abortito</blacklist>
+<blacklist type="badword" locale="it">aborto</blacklist>
+<blacklist type="badword" locale="it">accidenti!</blacklist>
+<blacklist type="badword" locale="it">accoppiarsi</blacklist>
+<blacklist type="badword" locale="it">accoppiato</blacklist>
+<blacklist type="badword" locale="it">adultera</blacklist>
+<blacklist type="badword" locale="it">adulteri</blacklist>
+<blacklist type="badword" locale="it">adulterio</blacklist>
+<blacklist type="badword" locale="it">alcol</blacklist>
+<blacklist type="badword" locale="it">alcolici</blacklist>
+<blacklist type="badword" locale="it">alcolico</blacklist>
+<blacklist type="badword" locale="it">alla pecorina</blacklist>
+<blacklist type="badword" locale="it">anale</blacklist>
+<blacklist type="badword" locale="it">anarchia</blacklist>
+<blacklist type="badword" locale="it">anarchico</blacklist>
+<blacklist type="badword" locale="it">anello del cazzo</blacklist>
+<blacklist type="badword" locale="it">ani</blacklist>
+<blacklist type="badword" locale="it">ano</blacklist>
+<blacklist type="badword" locale="it">anorgasmia</blacklist>
+<blacklist type="badword" locale="it">anticristi</blacklist>
+<blacklist type="badword" locale="it">anticristo</blacklist>
+<blacklist type="badword" locale="it">arrapante</blacklist>
+<blacklist type="badword" locale="it">arrapatissimo</blacklist>
+<blacklist type="badword" locale="it">asessuale</blacklist>
+<blacklist type="badword" locale="it">asessualità</blacklist>
+<blacklist type="badword" locale="it">baciami il culo</blacklist>
+<blacklist type="badword" locale="it">baldoria</blacklist>
+<blacklist type="badword" locale="it">balle</blacklist>
+<blacklist type="badword" locale="it">bambole</blacklist>
+<blacklist type="badword" locale="it">bastardaggine</blacklist>
+<blacklist type="badword" locale="it">bastardamente</blacklist>
+<blacklist type="badword" locale="it">bastardi</blacklist>
+<blacklist type="badword" locale="it">bastardo</blacklist>
+<blacklist type="badword" locale="it">batacchi</blacklist>
+<blacklist type="badword" locale="it">batacchio</blacklist>
+<blacklist type="badword" locale="it">battona</blacklist>
+<blacklist type="badword" locale="it">battone</blacklist>
+<blacklist type="badword" locale="it">beone</blacklist>
+<blacklist type="badword" locale="it">bianco</blacklist>
+<blacklist type="badword" locale="it">bidè</blacklist>
+<blacklist type="badword" locale="it">biopsie</blacklist>
+<blacklist type="badword" locale="it">bisessuale</blacklist>
+<blacklist type="badword" locale="it">bisessuali</blacklist>
+<blacklist type="badword" locale="it">bisessualità</blacklist>
+<blacklist type="badword" locale="it">bordelli</blacklist>
+<blacklist type="badword" locale="it">bordello</blacklist>
+<blacklist type="badword" locale="it">buco del culo</blacklist>
+<blacklist type="badword" locale="it">budella</blacklist>
+<blacklist type="badword" locale="it">cacca</blacklist>
+<blacklist type="badword" locale="it">canna</blacklist>
+<blacklist type="badword" locale="it">capezzoli</blacklist>
+<blacklist type="badword" locale="it">capezzolo</blacklist>
+<blacklist type="badword" locale="it">carnale</blacklist>
+<blacklist type="badword" locale="it">casino</blacklist>
+<blacklist type="badword" locale="it">castità</blacklist>
+<blacklist type="badword" locale="it">casto</blacklist>
+<blacklist type="badword" locale="it">castrare</blacklist>
+<blacklist type="badword" locale="it">castrato</blacklist>
+<blacklist type="badword" locale="it">castrazione</blacklist>
+<blacklist type="badword" locale="it">cavolate</blacklist>
+<blacklist type="badword" locale="it">cazzate</blacklist>
+<blacklist type="badword" locale="it">cazzi</blacklist>
+<blacklist type="badword" locale="it">cazziata</blacklist>
+<blacklist type="badword" locale="it">cazzo</blacklist>
+<blacklist type="badword" locale="it">cazzone</blacklist>
+<blacklist type="badword" locale="it">cazzoni</blacklist>
+<blacklist type="badword" locale="it">cazzuto</blacklist>
+<blacklist type="badword" locale="it">celibato</blacklist>
+<blacklist type="badword" locale="it">celibe</blacklist>
+<blacklist type="badword" locale="it">celibi</blacklist>
+<blacklist type="badword" locale="it">cervicale</blacklist>
+<blacklist type="badword" locale="it">cervice</blacklist>
+<blacklist type="badword" locale="it">checca</blacklist>
+<blacklist type="badword" locale="it">chiappa</blacklist>
+<blacklist type="badword" locale="it">chiappe</blacklist>
+<blacklist type="badword" locale="it">chiavata</blacklist>
+<blacklist type="badword" locale="it">chiavate</blacklist>
+<blacklist type="badword" locale="it">chica mala</blacklist>
+<blacklist type="badword" locale="it">ciccioni</blacklist>
+<blacklist type="badword" locale="it">circoncidere</blacklist>
+<blacklist type="badword" locale="it">circoncisione</blacklist>
+<blacklist type="badword" locale="it">circonciso</blacklist>
+<blacklist type="badword" locale="it">civetta</blacklist>
+<blacklist type="badword" locale="it">clistere</blacklist>
+<blacklist type="badword" locale="it">clisteri</blacklist>
+<blacklist type="badword" locale="it">clitoridi</blacklist>
+<blacklist type="badword" locale="it">coca</blacklist>
+<blacklist type="badword" locale="it">cocaina</blacklist>
+<blacklist type="badword" locale="it">cocchiume</blacklist>
+<blacklist type="badword" locale="it">coglione</blacklist>
+<blacklist type="badword" locale="it">coito</blacklist>
+<blacklist type="badword" locale="it">colono</blacklist>
+<blacklist type="badword" locale="it">conato di vomito</blacklist>
+<blacklist type="badword" locale="it">concubina</blacklist>
+<blacklist type="badword" locale="it">concubine</blacklist>
+<blacklist type="badword" locale="it">concupiscente</blacklist>
+<blacklist type="badword" locale="it">contaballe</blacklist>
+<blacklist type="badword" locale="it">continenza</blacklist>
+<blacklist type="badword" locale="it">copulazione</blacklist>
+<blacklist type="badword" locale="it">cornuti</blacklist>
+<blacklist type="badword" locale="it">cornuto</blacklist>
+<blacklist type="badword" locale="it">cretino</blacklist>
+<blacklist type="badword" locale="it">culi</blacklist>
+<blacklist type="badword" locale="it">culo</blacklist>
+<blacklist type="badword" locale="it">cunnilingio</blacklist>
+<blacklist type="badword" locale="it">da finocchio</blacklist>
+<blacklist type="badword" locale="it">da sballo</blacklist>
+<blacklist type="badword" locale="it">defecare</blacklist>
+<blacklist type="badword" locale="it">defecato</blacklist>
+<blacklist type="badword" locale="it">defecazione</blacklist>
+<blacklist type="badword" locale="it">deflorare</blacklist>
+<blacklist type="badword" locale="it">deflorata</blacklist>
+<blacklist type="badword" locale="it">deflorazione</blacklist>
+<blacklist type="badword" locale="it">del pene</blacklist>
+<blacklist type="badword" locale="it">depravato</blacklist>
+<blacklist type="badword" locale="it">di colore</blacklist>
+<blacklist type="badword" locale="it">diamine</blacklist>
+<blacklist type="badword" locale="it">diarree</blacklist>
+<blacklist type="badword" locale="it">diavolo!</blacklist>
+<blacklist type="badword" locale="it">dissoluto</blacklist>
+<blacklist type="badword" locale="it">dominatrice</blacklist>
+<blacklist type="badword" locale="it">dominazione</blacklist>
+<blacklist type="badword" locale="it">donnacce</blacklist>
+<blacklist type="badword" locale="it">donnaccia</blacklist>
+<blacklist type="badword" locale="it">donnicciola</blacklist>
+<blacklist type="badword" locale="it">duro</blacklist>
+<blacklist type="badword" locale="it">eiacula</blacklist>
+<blacklist type="badword" locale="it">eiaculare</blacklist>
+<blacklist type="badword" locale="it">eiaculato</blacklist>
+<blacklist type="badword" locale="it">eiaculazione</blacklist>
+<blacklist type="badword" locale="it">emorroide</blacklist>
+<blacklist type="badword" locale="it">erba</blacklist>
+<blacklist type="badword" locale="it">eretto</blacklist>
+<blacklist type="badword" locale="it">erezione</blacklist>
+<blacklist type="badword" locale="it">erezioni</blacklist>
+<blacklist type="badword" locale="it">ermafrodita</blacklist>
+<blacklist type="badword" locale="it">ermafroditi</blacklist>
+<blacklist type="badword" locale="it">ermafroditismo</blacklist>
+<blacklist type="badword" locale="it">ermafrodito</blacklist>
+<blacklist type="badword" locale="it">eroina</blacklist>
+<blacklist type="badword" locale="it">erotico</blacklist>
+<blacklist type="badword" locale="it">erotismo</blacklist>
+<blacklist type="badword" locale="it">esibizionismo</blacklist>
+<blacklist type="badword" locale="it">essere eccitato</blacklist>
+<blacklist type="badword" locale="it">estasi</blacklist>
+<blacklist type="badword" locale="it">eterosessualità</blacklist>
+<blacklist type="badword" locale="it">extraconiugale</blacklist>
+<blacklist type="badword" locale="it">faccia da cazzo</blacklist>
+<blacklist type="badword" locale="it">faccia di merda</blacklist>
+<blacklist type="badword" locale="it">fallico</blacklist>
+<blacklist type="badword" locale="it">fallo</blacklist>
+<blacklist type="badword" locale="it">fare il cascamorto</blacklist>
+<blacklist type="badword" locale="it">fare pompini</blacklist>
+<blacklist type="badword" locale="it">fascino</blacklist>
+<blacklist type="badword" locale="it">fascista</blacklist>
+<blacklist type="badword" locale="it">fatto</blacklist>
+<blacklist type="badword" locale="it">feccia</blacklist>
+<blacklist type="badword" locale="it">fesso</blacklist>
+<blacklist type="badword" locale="it">fica</blacklist>
+<blacklist type="badword" locale="it">fiche</blacklist>
+<blacklist type="badword" locale="it">figli di puttana</blacklist>
+<blacklist type="badword" locale="it">figlio di puttana</blacklist>
+<blacklist type="badword" locale="it">filia</blacklist>
+<blacklist type="badword" locale="it">fimosi</blacklist>
+<blacklist type="badword" locale="it">finocchi</blacklist>
+<blacklist type="badword" locale="it">finocchio</blacklist>
+<blacklist type="badword" locale="it">fornicare</blacklist>
+<blacklist type="badword" locale="it">fornicato</blacklist>
+<blacklist type="badword" locale="it">fornicatore</blacklist>
+<blacklist type="badword" locale="it">fornicazione</blacklist>
+<blacklist type="badword" locale="it">foto di pin-up</blacklist>
+<blacklist type="badword" locale="it">fottuta</blacklist>
+<blacklist type="badword" locale="it">fottutissimo</blacklist>
+<blacklist type="badword" locale="it">fottuto</blacklist>
+<blacklist type="badword" locale="it">frigidità</blacklist>
+<blacklist type="badword" locale="it">froci</blacklist>
+<blacklist type="badword" locale="it">frocio</blacklist>
+<blacklist type="badword" locale="it">fumatore</blacklist>
+<blacklist type="badword" locale="it">fumatore d\'erba</blacklist>
+<blacklist type="badword" locale="it">fumatore di marijuana</blacklist>
+<blacklist type="badword" locale="it">fustigare</blacklist>
+<blacklist type="badword" locale="it">fustigazione</blacklist>
+<blacklist type="badword" locale="it">geishe</blacklist>
+<blacklist type="badword" locale="it">genitale</blacklist>
+<blacklist type="badword" locale="it">genitali</blacklist>
+<blacklist type="badword" locale="it">gonade</blacklist>
+<blacklist type="badword" locale="it">gonadi</blacklist>
+<blacklist type="badword" locale="it">gonorrea</blacklist>
+<blacklist type="badword" locale="it">gonorrico</blacklist>
+<blacklist type="badword" locale="it">gonzo</blacklist>
+<blacklist type="badword" locale="it">grassoccio</blacklist>
+<blacklist type="badword" locale="it">gravida</blacklist>
+<blacklist type="badword" locale="it">gravide</blacklist>
+<blacklist type="badword" locale="it">guanto</blacklist>
+<blacklist type="badword" locale="it">guardone</blacklist>
+<blacklist type="badword" locale="it">guardoni</blacklist>
+<blacklist type="badword" locale="it">hascisc</blacklist>
+<blacklist type="badword" locale="it">idiota</blacklist>
+<blacklist type="badword" locale="it">illecito</blacklist>
+<blacklist type="badword" locale="it">imbastardire</blacklist>
+<blacklist type="badword" locale="it">imbecille</blacklist>
+<blacklist type="badword" locale="it">imbecilli</blacklist>
+<blacklist type="badword" locale="it">imbranato</blacklist>
+<blacklist type="badword" locale="it">imene</blacklist>
+<blacklist type="badword" locale="it">imeni</blacklist>
+<blacklist type="badword" locale="it">impotente</blacklist>
+<blacklist type="badword" locale="it">impotenza</blacklist>
+<blacklist type="badword" locale="it">inadeguatezza sessuale</blacklist>
+<blacklist type="badword" locale="it">incapace</blacklist>
+<blacklist type="badword" locale="it">incasinato</blacklist>
+<blacklist type="badword" locale="it">incazzato</blacklist>
+<blacklist type="badword" locale="it">incesto</blacklist>
+<blacklist type="badword" locale="it">incestuoso</blacklist>
+<blacklist type="badword" locale="it">indecente</blacklist>
+<blacklist type="badword" locale="it">inforcatura</blacklist>
+<blacklist type="badword" locale="it">inforcature</blacklist>
+<blacklist type="badword" locale="it">ingravidamento</blacklist>
+<blacklist type="badword" locale="it">inguine</blacklist>
+<blacklist type="badword" locale="it">inguini</blacklist>
+<blacklist type="badword" locale="it">irrumare</blacklist>
+<blacklist type="badword" locale="it">isterectomia</blacklist>
+<blacklist type="badword" locale="it">isterectomie</blacklist>
+<blacklist type="badword" locale="it">labbra</blacklist>
+<blacklist type="badword" locale="it">labiale</blacklist>
+<blacklist type="badword" locale="it">lascivia</blacklist>
+<blacklist type="badword" locale="it">lascivo</blacklist>
+<blacklist type="badword" locale="it">lavaggi</blacklist>
+<blacklist type="badword" locale="it">lavaggio</blacklist>
+<blacklist type="badword" locale="it">lebbroso</blacklist>
+<blacklist type="badword" locale="it">leccaculi</blacklist>
+<blacklist type="badword" locale="it">leccaculo</blacklist>
+<blacklist type="badword" locale="it">leccami la fica</blacklist>
+<blacklist type="badword" locale="it">leccapiedi</blacklist>
+<blacklist type="badword" locale="it">lesbica</blacklist>
+<blacklist type="badword" locale="it">lesbiche</blacklist>
+<blacklist type="badword" locale="it">letteratura erotica</blacklist>
+<blacklist type="badword" locale="it">letto coniugale</blacklist>
+<blacklist type="badword" locale="it">lsd</blacklist>
+<blacklist type="badword" locale="it">luciferi</blacklist>
+<blacklist type="badword" locale="it">lucifero</blacklist>
+<blacklist type="badword" locale="it">lussuria</blacklist>
+<blacklist type="badword" locale="it">lussurioso</blacklist>
+<blacklist type="badword" locale="it">magnaccia</blacklist>
+<blacklist type="badword" locale="it">maledetti</blacklist>
+<blacklist type="badword" locale="it">maledetto</blacklist>
+<blacklist type="badword" locale="it">mammella</blacklist>
+<blacklist type="badword" locale="it">mammelle</blacklist>
+<blacklist type="badword" locale="it">mangiamerda</blacklist>
+<blacklist type="badword" locale="it">mangiami</blacklist>
+<blacklist type="badword" locale="it">mania</blacklist>
+<blacklist type="badword" locale="it">manie</blacklist>
+<blacklist type="badword" locale="it">mano morta</blacklist>
+<blacklist type="badword" locale="it">mantenuta</blacklist>
+<blacklist type="badword" locale="it">masochismo</blacklist>
+<blacklist type="badword" locale="it">masochista</blacklist>
+<blacklist type="badword" locale="it">masochistico</blacklist>
+<blacklist type="badword" locale="it">masturbarsi</blacklist>
+<blacklist type="badword" locale="it">masturbato</blacklist>
+<blacklist type="badword" locale="it">masturbatore</blacklist>
+<blacklist type="badword" locale="it">masturbazione</blacklist>
+<blacklist type="badword" locale="it">merda</blacklist>
+<blacklist type="badword" locale="it">merde</blacklist>
+<blacklist type="badword" locale="it">merdone</blacklist>
+<blacklist type="badword" locale="it">merdoso</blacklist>
+<blacklist type="badword" locale="it">meschino</blacklist>
+<blacklist type="badword" locale="it">mestruale</blacklist>
+<blacklist type="badword" locale="it">mestruare</blacklist>
+<blacklist type="badword" locale="it">mestruazione</blacklist>
+<blacklist type="badword" locale="it">metamfetamina</blacklist>
+<blacklist type="badword" locale="it">mezzasega</blacklist>
+<blacklist type="badword" locale="it">militarismo</blacklist>
+<blacklist type="badword" locale="it">molestare</blacklist>
+<blacklist type="badword" locale="it">mondi equivoci</blacklist>
+<blacklist type="badword" locale="it">mondo equivoco</blacklist>
+<blacklist type="badword" locale="it">mst</blacklist>
+<blacklist type="badword" locale="it">mutandine</blacklist>
+<blacklist type="badword" locale="it">nani</blacklist>
+<blacklist type="badword" locale="it">nanismi</blacklist>
+<blacklist type="badword" locale="it">nanismo</blacklist>
+<blacklist type="badword" locale="it">nano</blacklist>
+<blacklist type="badword" locale="it">natica</blacklist>
+<blacklist type="badword" locale="it">necrofili</blacklist>
+<blacklist type="badword" locale="it">necrofilia</blacklist>
+<blacklist type="badword" locale="it">necrofilo</blacklist>
+<blacklist type="badword" locale="it">negra</blacklist>
+<blacklist type="badword" locale="it">negretti</blacklist>
+<blacklist type="badword" locale="it">negretto</blacklist>
+<blacklist type="badword" locale="it">negri</blacklist>
+<blacklist type="badword" locale="it">negromante</blacklist>
+<blacklist type="badword" locale="it">negromanzia</blacklist>
+<blacklist type="badword" locale="it">ninfa</blacklist>
+<blacklist type="badword" locale="it">ninfe</blacklist>
+<blacklist type="badword" locale="it">ninfetta</blacklist>
+<blacklist type="badword" locale="it">ninfomane</blacklist>
+<blacklist type="badword" locale="it">ninfomani</blacklist>
+<blacklist type="badword" locale="it">ninfomania</blacklist>
+<blacklist type="badword" locale="it">nudi</blacklist>
+<blacklist type="badword" locale="it">nudismo</blacklist>
+<blacklist type="badword" locale="it">nudità</blacklist>
+<blacklist type="badword" locale="it">nudo</blacklist>
+<blacklist type="badword" locale="it">omo</blacklist>
+<blacklist type="badword" locale="it">omosessuale</blacklist>
+<blacklist type="badword" locale="it">omosessuali</blacklist>
+<blacklist type="badword" locale="it">omosessualità</blacklist>
+<blacklist type="badword" locale="it">onanismo</blacklist>
+<blacklist type="badword" locale="it">orale</blacklist>
+<blacklist type="badword" locale="it">orgasmi</blacklist>
+<blacklist type="badword" locale="it">orgasmico</blacklist>
+<blacklist type="badword" locale="it">orgasmo</blacklist>
+<blacklist type="badword" locale="it">orge</blacklist>
+<blacklist type="badword" locale="it">orgia</blacklist>
+<blacklist type="badword" locale="it">orgiastico</blacklist>
+<blacklist type="badword" locale="it">oscenità</blacklist>
+<blacklist type="badword" locale="it">osceno</blacklist>
+<blacklist type="badword" locale="it">ovaia</blacklist>
+<blacklist type="badword" locale="it">ovaie</blacklist>
+<blacklist type="badword" locale="it">palle</blacklist>
+<blacklist type="badword" locale="it">pappone</blacklist>
+<blacklist type="badword" locale="it">passera</blacklist>
+<blacklist type="badword" locale="it">passere</blacklist>
+<blacklist type="badword" locale="it">pedofili</blacklist>
+<blacklist type="badword" locale="it">pedofilia</blacklist>
+<blacklist type="badword" locale="it">pedofilo</blacklist>
+<blacklist type="badword" locale="it">pene</blacklist>
+<blacklist type="badword" locale="it">peni</blacklist>
+<blacklist type="badword" locale="it">perversione</blacklist>
+<blacklist type="badword" locale="it">perversione sessuale</blacklist>
+<blacklist type="badword" locale="it">pervertiti</blacklist>
+<blacklist type="badword" locale="it">pervertito</blacklist>
+<blacklist type="badword" locale="it">pettoruta</blacklist>
+<blacklist type="badword" locale="it">pirla</blacklist>
+<blacklist type="badword" locale="it">pisciata</blacklist>
+<blacklist type="badword" locale="it">pisciate</blacklist>
+<blacklist type="badword" locale="it">piscio</blacklist>
+<blacklist type="badword" locale="it">pisellino</blacklist>
+<blacklist type="badword" locale="it">pompino</blacklist>
+<blacklist type="badword" locale="it">porcheria</blacklist>
+<blacklist type="badword" locale="it">prepuzi</blacklist>
+<blacklist type="badword" locale="it">prepuzio</blacklist>
+<blacklist type="badword" locale="it">preservativi</blacklist>
+<blacklist type="badword" locale="it">preservativo</blacklist>
+<blacklist type="badword" locale="it">preso per il culo</blacklist>
+<blacklist type="badword" locale="it">profilattico</blacklist>
+<blacklist type="badword" locale="it">promiscuità</blacklist>
+<blacklist type="badword" locale="it">prosperosa</blacklist>
+<blacklist type="badword" locale="it">prostituito</blacklist>
+<blacklist type="badword" locale="it">prostituta</blacklist>
+<blacklist type="badword" locale="it">prostituzione</blacklist>
+<blacklist type="badword" locale="it">provocante</blacklist>
+<blacklist type="badword" locale="it">pubere</blacklist>
+<blacklist type="badword" locale="it">pubertà</blacklist>
+<blacklist type="badword" locale="it">pubico</blacklist>
+<blacklist type="badword" locale="it">puttane</blacklist>
+<blacklist type="badword" locale="it">racchia</blacklist>
+<blacklist type="badword" locale="it">rapporto</blacklist>
+<blacklist type="badword" locale="it">razziale</blacklist>
+<blacklist type="badword" locale="it">razzismo</blacklist>
+<blacklist type="badword" locale="it">razzista</blacklist>
+<blacklist type="badword" locale="it">razzisti</blacklist>
+<blacklist type="badword" locale="it">retto</blacklist>
+<blacklist type="badword" locale="it">ritardato</blacklist>
+<blacklist type="badword" locale="it">rito coniugale</blacklist>
+<blacklist type="badword" locale="it">rompicoglioni</blacklist>
+<blacklist type="badword" locale="it">ruffiani</blacklist>
+<blacklist type="badword" locale="it">ruffiano</blacklist>
+<blacklist type="badword" locale="it">rutto</blacklist>
+<blacklist type="badword" locale="it">s&amp;m</blacklist>
+<blacklist type="badword" locale="it">sadici</blacklist>
+<blacklist type="badword" locale="it">sadico</blacklist>
+<blacklist type="badword" locale="it">sadismo</blacklist>
+<blacklist type="badword" locale="it">sadomasochismo</blacklist>
+<blacklist type="badword" locale="it">saffico</blacklist>
+<blacklist type="badword" locale="it">saffismo</blacklist>
+<blacklist type="badword" locale="it">saffo</blacklist>
+<blacklist type="badword" locale="it">satana</blacklist>
+<blacklist type="badword" locale="it">satanico</blacklist>
+<blacklist type="badword" locale="it">satiro</blacklist>
+<blacklist type="badword" locale="it">sballare</blacklist>
+<blacklist type="badword" locale="it">sborra</blacklist>
+<blacklist type="badword" locale="it">sborre</blacklist>
+<blacklist type="badword" locale="it">sbracato</blacklist>
+<blacklist type="badword" locale="it">sbronzo</blacklist>
+<blacklist type="badword" locale="it">scambista</blacklist>
+<blacklist type="badword" locale="it">scambisti</blacklist>
+<blacklist type="badword" locale="it">scatologico</blacklist>
+<blacklist type="badword" locale="it">scemi</blacklist>
+<blacklist type="badword" locale="it">scemo</blacklist>
+<blacklist type="badword" locale="it">schiavi</blacklist>
+<blacklist type="badword" locale="it">schiavo</blacklist>
+<blacklist type="badword" locale="it">schifo</blacklist>
+<blacklist type="badword" locale="it">sciacquetta</blacklist>
+<blacklist type="badword" locale="it">sciocco</blacklist>
+<blacklist type="badword" locale="it">sconcezze</blacklist>
+<blacklist type="badword" locale="it">sconcio</blacklist>
+<blacklist type="badword" locale="it">scopare</blacklist>
+<blacklist type="badword" locale="it">scopato</blacklist>
+<blacklist type="badword" locale="it">scoregge</blacklist>
+<blacklist type="badword" locale="it">scoreggia</blacklist>
+<blacklist type="badword" locale="it">scroti</blacklist>
+<blacklist type="badword" locale="it">scroto</blacklist>
+<blacklist type="badword" locale="it">sculacciata</blacklist>
+<blacklist type="badword" locale="it">sculacciate</blacklist>
+<blacklist type="badword" locale="it">sedere</blacklist>
+<blacklist type="badword" locale="it">sederi</blacklist>
+<blacklist type="badword" locale="it">sedotto</blacklist>
+<blacklist type="badword" locale="it">seducente</blacklist>
+<blacklist type="badword" locale="it">sedurre</blacklist>
+<blacklist type="badword" locale="it">seduttore</blacklist>
+<blacklist type="badword" locale="it">seduzione</blacklist>
+<blacklist type="badword" locale="it">sega</blacklist>
+<blacklist type="badword" locale="it">segaiolo</blacklist>
+<blacklist type="badword" locale="it">seme</blacklist>
+<blacklist type="badword" locale="it">seni</blacklist>
+<blacklist type="badword" locale="it">seno</blacklist>
+<blacklist type="badword" locale="it">sessantanove</blacklist>
+<blacklist type="badword" locale="it">sesso</blacklist>
+<blacklist type="badword" locale="it">sesso anale</blacklist>
+<blacklist type="badword" locale="it">sesso orale</blacklist>
+<blacklist type="badword" locale="it">sessuale</blacklist>
+<blacklist type="badword" locale="it">sessualità</blacklist>
+<blacklist type="badword" locale="it">sessuato</blacklist>
+<blacklist type="badword" locale="it">sfintere</blacklist>
+<blacklist type="badword" locale="it">sfruttatore</blacklist>
+<blacklist type="badword" locale="it">sgualdrina</blacklist>
+<blacklist type="badword" locale="it">sgualdrine</blacklist>
+<blacklist type="badword" locale="it">sifilide</blacklist>
+<blacklist type="badword" locale="it">sifilitico</blacklist>
+<blacklist type="badword" locale="it">sigaretta</blacklist>
+<blacklist type="badword" locale="it">smidollati</blacklist>
+<blacklist type="badword" locale="it">smidollato</blacklist>
+<blacklist type="badword" locale="it">sodoma</blacklist>
+<blacklist type="badword" locale="it">sodomia</blacklist>
+<blacklist type="badword" locale="it">sodomie</blacklist>
+<blacklist type="badword" locale="it">sodomizzare</blacklist>
+<blacklist type="badword" locale="it">sodomizzato</blacklist>
+<blacklist type="badword" locale="it">sordido</blacklist>
+<blacklist type="badword" locale="it">sottomessi</blacklist>
+<blacklist type="badword" locale="it">sottomesso</blacklist>
+<blacklist type="badword" locale="it">spastico</blacklist>
+<blacklist type="badword" locale="it">sperma</blacklist>
+<blacklist type="badword" locale="it">spermatozoo</blacklist>
+<blacklist type="badword" locale="it">spermicida</blacklist>
+<blacklist type="badword" locale="it">spinello</blacklist>
+<blacklist type="badword" locale="it">stallone</blacklist>
+<blacklist type="badword" locale="it">stalloni</blacklist>
+<blacklist type="badword" locale="it">sterco</blacklist>
+<blacklist type="badword" locale="it">stronzata</blacklist>
+<blacklist type="badword" locale="it">stronzate</blacklist>
+<blacklist type="badword" locale="it">stronzi</blacklist>
+<blacklist type="badword" locale="it">stronzo</blacklist>
+<blacklist type="badword" locale="it">stupidi</blacklist>
+<blacklist type="badword" locale="it">stupido</blacklist>
+<blacklist type="badword" locale="it">stuprare in gruppo</blacklist>
+<blacklist type="badword" locale="it">stuprato</blacklist>
+<blacklist type="badword" locale="it">stupratore di gruppo</blacklist>
+<blacklist type="badword" locale="it">stupratori di gruppo</blacklist>
+<blacklist type="badword" locale="it">stupri</blacklist>
+<blacklist type="badword" locale="it">stupro</blacklist>
+<blacklist type="badword" locale="it">succhiacazzi</blacklist>
+<blacklist type="badword" locale="it">succhiata</blacklist>
+<blacklist type="badword" locale="it">succhiate</blacklist>
+<blacklist type="badword" locale="it">succube</blacklist>
+<blacklist type="badword" locale="it">suicidio</blacklist>
+<blacklist type="badword" locale="it">supremazia bianca</blacklist>
+<blacklist type="badword" locale="it">tampone</blacklist>
+<blacklist type="badword" locale="it">tamponi</blacklist>
+<blacklist type="badword" locale="it">testa di cazzo</blacklist>
+<blacklist type="badword" locale="it">testicoli</blacklist>
+<blacklist type="badword" locale="it">testicolo</blacklist>
+<blacklist type="badword" locale="it">tetta</blacklist>
+<blacklist type="badword" locale="it">tette</blacklist>
+<blacklist type="badword" locale="it">tette sode</blacklist>
+<blacklist type="badword" locale="it">topa</blacklist>
+<blacklist type="badword" locale="it">tope</blacklist>
+<blacklist type="badword" locale="it">tossici</blacklist>
+<blacklist type="badword" locale="it">tossico</blacklist>
+<blacklist type="badword" locale="it">tranquillanti</blacklist>
+<blacklist type="badword" locale="it">transessuali</blacklist>
+<blacklist type="badword" locale="it">travestiti</blacklist>
+<blacklist type="badword" locale="it">travestitismo</blacklist>
+<blacklist type="badword" locale="it">travestito</blacklist>
+<blacklist type="badword" locale="it">troia</blacklist>
+<blacklist type="badword" locale="it">troie</blacklist>
+<blacklist type="badword" locale="it">trombata</blacklist>
+<blacklist type="badword" locale="it">trombate</blacklist>
+<blacklist type="badword" locale="it">uccelli</blacklist>
+<blacklist type="badword" locale="it">uccello</blacklist>
+<blacklist type="badword" locale="it">urinare</blacklist>
+<blacklist type="badword" locale="it">urinazione</blacklist>
+<blacklist type="badword" locale="it">vaginale</blacklist>
+<blacklist type="badword" locale="it">vagine</blacklist>
+<blacklist type="badword" locale="it">vasectomia</blacklist>
+<blacklist type="badword" locale="it">vasectomie</blacklist>
+<blacklist type="badword" locale="it">venereo</blacklist>
+<blacklist type="badword" locale="it">verginale</blacklist>
+<blacklist type="badword" locale="it">vergini</blacklist>
+<blacklist type="badword" locale="it">verginità</blacklist>
+<blacklist type="badword" locale="it">vibrare</blacklist>
+<blacklist type="badword" locale="it">vibratore</blacklist>
+<blacklist type="badword" locale="it">vibratori</blacklist>
+<blacklist type="badword" locale="it">violare</blacklist>
+<blacklist type="badword" locale="it">violentatore</blacklist>
+<blacklist type="badword" locale="it">virginale</blacklist>
+<blacklist type="badword" locale="it">viscere</blacklist>
+<blacklist type="badword" locale="it">voyeurismo</blacklist>
+<blacklist type="badword" locale="it">vulve</blacklist>
+<blacklist type="badword" locale="it">zona pelvica</blacklist>
+<blacklist type="badword" locale="it">zoppo</blacklist>
+<blacklist type="badword" locale="es">¡Vete a la mierda!</blacklist>
+<blacklist type="badword" locale="es">abortado</blacklist>
+<blacklist type="badword" locale="es">abortar</blacklist>
+<blacklist type="badword" locale="es">abortivo</blacklist>
+<blacklist type="badword" locale="es">aborto</blacklist>
+<blacklist type="badword" locale="es">abortos</blacklist>
+<blacklist type="badword" locale="es">acto sexual</blacklist>
+<blacklist type="badword" locale="es">actos sexuales</blacklist>
+<blacklist type="badword" locale="es">adicto</blacklist>
+<blacklist type="badword" locale="es">adictos</blacklist>
+<blacklist type="badword" locale="es">adúltera</blacklist>
+<blacklist type="badword" locale="es">adulterio</blacklist>
+<blacklist type="badword" locale="es">adulterios</blacklist>
+<blacklist type="badword" locale="es">adúltero</blacklist>
+<blacklist type="badword" locale="es">adúlteros</blacklist>
+<blacklist type="badword" locale="es">afeminado</blacklist>
+<blacklist type="badword" locale="es">aguafiestas</blacklist>
+<blacklist type="badword" locale="es">agujero del amor</blacklist>
+<blacklist type="badword" locale="es">agujero del culo</blacklist>
+<blacklist type="badword" locale="es">alcohólico</blacklist>
+<blacklist type="badword" locale="es">alucinógeno</blacklist>
+<blacklist type="badword" locale="es">amante</blacklist>
+<blacklist type="badword" locale="es">anarquismo</blacklist>
+<blacklist type="badword" locale="es">anarquista</blacklist>
+<blacklist type="badword" locale="es">anillo de la polla</blacklist>
+<blacklist type="badword" locale="es">anillo para la polla</blacklist>
+<blacklist type="badword" locale="es">ano</blacklist>
+<blacklist type="badword" locale="es">anorgasmia</blacklist>
+<blacklist type="badword" locale="es">anos</blacklist>
+<blacklist type="badword" locale="es">anticonceptivo intrauterino</blacklist>
+<blacklist type="badword" locale="es">anticonceptivo vaginal</blacklist>
+<blacklist type="badword" locale="es">anticristo</blacklist>
+<blacklist type="badword" locale="es">anticristos</blacklist>
+<blacklist type="badword" locale="es">apesta</blacklist>
+<blacklist type="badword" locale="es">área de la pelvis</blacklist>
+<blacklist type="badword" locale="es">asesinato</blacklist>
+<blacklist type="badword" locale="es">asesinatos</blacklist>
+<blacklist type="badword" locale="es">asexualidad</blacklist>
+<blacklist type="badword" locale="es">asexualmente</blacklist>
+<blacklist type="badword" locale="es">asiático con la cabeza grande</blacklist>
+<blacklist type="badword" locale="es">asiáticos con la cabeza grande</blacklist>
+<blacklist type="badword" locale="es">atontado</blacklist>
+<blacklist type="badword" locale="es">atracción</blacklist>
+<blacklist type="badword" locale="es">attracción sexual</blacklist>
+<blacklist type="badword" locale="es">azotado</blacklist>
+<blacklist type="badword" locale="es">azotaina</blacklist>
+<blacklist type="badword" locale="es">azotar</blacklist>
+<blacklist type="badword" locale="es">azotes</blacklist>
+<blacklist type="badword" locale="es">bar de gente de color</blacklist>
+<blacklist type="badword" locale="es">Barbie</blacklist>
+<blacklist type="badword" locale="es">bastarda</blacklist>
+<blacklist type="badword" locale="es">bastardía</blacklist>
+<blacklist type="badword" locale="es">bastardo</blacklist>
+<blacklist type="badword" locale="es">basura blanca</blacklist>
+<blacklist type="badword" locale="es">beber hasta el fondo</blacklist>
+<blacklist type="badword" locale="es">bebida alcohólica</blacklist>
+<blacklist type="badword" locale="es">bebidas alcohólicas</blacklist>
+<blacklist type="badword" locale="es">bésame el culo</blacklist>
+<blacklist type="badword" locale="es">besarle el culo</blacklist>
+<blacklist type="badword" locale="es">beso con lengua</blacklist>
+<blacklist type="badword" locale="es">bestialidad</blacklist>
+<blacklist type="badword" locale="es">bestialismo</blacklist>
+<blacklist type="badword" locale="es">bidé</blacklist>
+<blacklist type="badword" locale="es">bidés</blacklist>
+<blacklist type="badword" locale="es">biopsias</blacklist>
+<blacklist type="badword" locale="es">bisexuales</blacklist>
+<blacklist type="badword" locale="es">bisexualidad</blacklist>
+<blacklist type="badword" locale="es">blanco</blacklist>
+<blacklist type="badword" locale="es">blancos</blacklist>
+<blacklist type="badword" locale="es">bola de grasa</blacklist>
+<blacklist type="badword" locale="es">bolas</blacklist>
+<blacklist type="badword" locale="es">bolas de grasa</blacklist>
+<blacklist type="badword" locale="es">bollera</blacklist>
+<blacklist type="badword" locale="es">bolleras</blacklist>
+<blacklist type="badword" locale="es">borracho</blacklist>
+<blacklist type="badword" locale="es">bragas</blacklist>
+<blacklist type="badword" locale="es">burdel</blacklist>
+<blacklist type="badword" locale="es">burdeles</blacklist>
+<blacklist type="badword" locale="es">burro</blacklist>
+<blacklist type="badword" locale="es">burros</blacklist>
+<blacklist type="badword" locale="es">busto</blacklist>
+<blacklist type="badword" locale="es">bustos</blacklist>
+<blacklist type="badword" locale="es">cabina privada para ver porno</blacklist>
+<blacklist type="badword" locale="es">cabinas privadas para ver porno</blacklist>
+<blacklist type="badword" locale="es">cabrón</blacklist>
+<blacklist type="badword" locale="es">cabrones</blacklist>
+<blacklist type="badword" locale="es">caca</blacklist>
+<blacklist type="badword" locale="es">cachonda</blacklist>
+<blacklist type="badword" locale="es">cagadero</blacklist>
+<blacklist type="badword" locale="es">cagando</blacklist>
+<blacklist type="badword" locale="es">calentura</blacklist>
+<blacklist type="badword" locale="es">caliente</blacklist>
+<blacklist type="badword" locale="es">cara de mierda</blacklist>
+<blacklist type="badword" locale="es">caras de mierda</blacklist>
+<blacklist type="badword" locale="es">carnal</blacklist>
+<blacklist type="badword" locale="es">castidad</blacklist>
+<blacklist type="badword" locale="es">casto</blacklist>
+<blacklist type="badword" locale="es">castración</blacklist>
+<blacklist type="badword" locale="es">castrado</blacklist>
+<blacklist type="badword" locale="es">castrados</blacklist>
+<blacklist type="badword" locale="es">castrar</blacklist>
+<blacklist type="badword" locale="es">celibato</blacklist>
+<blacklist type="badword" locale="es">célibe</blacklist>
+<blacklist type="badword" locale="es">célibes</blacklist>
+<blacklist type="badword" locale="es">centro de atención</blacklist>
+<blacklist type="badword" locale="es">cerdos</blacklist>
+<blacklist type="badword" locale="es">cervical</blacklist>
+<blacklist type="badword" locale="es">chaval con chaval</blacklist>
+<blacklist type="badword" locale="es">chavales con chavales</blacklist>
+<blacklist type="badword" locale="es">chica con chica</blacklist>
+<blacklist type="badword" locale="es">chicas con chicas</blacklist>
+<blacklist type="badword" locale="es">chico con chico</blacklist>
+<blacklist type="badword" locale="es">chicos con chicos</blacklist>
+<blacklist type="badword" locale="es">chinorro</blacklist>
+<blacklist type="badword" locale="es">chinorros</blacklist>
+<blacklist type="badword" locale="es">chocho</blacklist>
+<blacklist type="badword" locale="es">chochos</blacklist>
+<blacklist type="badword" locale="es">chulo</blacklist>
+<blacklist type="badword" locale="es">chupa</blacklist>
+<blacklist type="badword" locale="es">chupa ano</blacklist>
+<blacklist type="badword" locale="es">chupada</blacklist>
+<blacklist type="badword" locale="es">chupadas</blacklist>
+<blacklist type="badword" locale="es">chupador</blacklist>
+<blacklist type="badword" locale="es">chúpamela</blacklist>
+<blacklist type="badword" locale="es">chupapolla</blacklist>
+<blacklist type="badword" locale="es">chupapollas</blacklist>
+<blacklist type="badword" locale="es">chupar</blacklist>
+<blacklist type="badword" locale="es">chupar la polla</blacklist>
+<blacklist type="badword" locale="es">chutarse</blacklist>
+<blacklist type="badword" locale="es">chute de mezcla de heroína y cocaína</blacklist>
+<blacklist type="badword" locale="es">cigarrillo</blacklist>
+<blacklist type="badword" locale="es">circuncida</blacklist>
+<blacklist type="badword" locale="es">circuncidar</blacklist>
+<blacklist type="badword" locale="es">circuncisión</blacklist>
+<blacklist type="badword" locale="es">circunciso</blacklist>
+<blacklist type="badword" locale="es">clímax</blacklist>
+<blacklist type="badword" locale="es">clítoris</blacklist>
+<blacklist type="badword" locale="es">coño</blacklist>
+<blacklist type="badword" locale="es">coño caliente</blacklist>
+<blacklist type="badword" locale="es">coño</blacklist>
+<blacklist type="badword" locale="es">coca</blacklist>
+<blacklist type="badword" locale="es">cocaína</blacklist>
+<blacklist type="badword" locale="es">codiciaron</blacklist>
+<blacklist type="badword" locale="es">coito</blacklist>
+<blacklist type="badword" locale="es">cojones</blacklist>
+<blacklist type="badword" locale="es">colocarse con setas</blacklist>
+<blacklist type="badword" locale="es">colono</blacklist>
+<blacklist type="badword" locale="es">come mi carne</blacklist>
+<blacklist type="badword" locale="es">comechocho</blacklist>
+<blacklist type="badword" locale="es">comecoño</blacklist>
+<blacklist type="badword" locale="es">cómeme</blacklist>
+<blacklist type="badword" locale="es">comemierda</blacklist>
+<blacklist type="badword" locale="es">comer el coño</blacklist>
+<blacklist type="badword" locale="es">comer la polla</blacklist>
+<blacklist type="badword" locale="es">comunista</blacklist>
+<blacklist type="badword" locale="es">con cojones</blacklist>
+<blacklist type="badword" locale="es">concubina</blacklist>
+<blacklist type="badword" locale="es">concubinas</blacklist>
+<blacklist type="badword" locale="es">concupiscente</blacklist>
+<blacklist type="badword" locale="es">condenatoria</blacklist>
+<blacklist type="badword" locale="es">condón</blacklist>
+<blacklist type="badword" locale="es">condones</blacklist>
+<blacklist type="badword" locale="es">consolador</blacklist>
+<blacklist type="badword" locale="es">consoladores</blacklist>
+<blacklist type="badword" locale="es">continencia</blacklist>
+<blacklist type="badword" locale="es">copula</blacklist>
+<blacklist type="badword" locale="es">cópula</blacklist>
+<blacklist type="badword" locale="es">copulando</blacklist>
+<blacklist type="badword" locale="es">copular</blacklist>
+<blacklist type="badword" locale="es">copularon</blacklist>
+<blacklist type="badword" locale="es">coquetear</blacklist>
+<blacklist type="badword" locale="es">cornudo</blacklist>
+<blacklist type="badword" locale="es">cornudos</blacklist>
+<blacklist type="badword" locale="es">corrompido</blacklist>
+<blacklist type="badword" locale="es">cotius intermammas</blacklist>
+<blacklist type="badword" locale="es">cuello uterino</blacklist>
+<blacklist type="badword" locale="es">culí</blacklist>
+<blacklist type="badword" locale="es">culo</blacklist>
+<blacklist type="badword" locale="es">culo sucio</blacklist>
+<blacklist type="badword" locale="es">culos</blacklist>
+<blacklist type="badword" locale="es">cutre</blacklist>
+<blacklist type="badword" locale="es">de color</blacklist>
+<blacklist type="badword" locale="es">de mierda</blacklist>
+<blacklist type="badword" locale="es">débil</blacklist>
+<blacklist type="badword" locale="es">débiles</blacklist>
+<blacklist type="badword" locale="es">defeca</blacklist>
+<blacklist type="badword" locale="es">defecación</blacklist>
+<blacklist type="badword" locale="es">defecado</blacklist>
+<blacklist type="badword" locale="es">defecar</blacklist>
+<blacklist type="badword" locale="es">degenerar</blacklist>
+<blacklist type="badword" locale="es">demimonde</blacklist>
+<blacklist type="badword" locale="es">demimondes</blacklist>
+<blacklist type="badword" locale="es">desfloración</blacklist>
+<blacklist type="badword" locale="es">desflorada</blacklist>
+<blacklist type="badword" locale="es">desflorar</blacklist>
+<blacklist type="badword" locale="es">desnudarse</blacklist>
+<blacklist type="badword" locale="es">desnudez</blacklist>
+<blacklist type="badword" locale="es">desnudo</blacklist>
+<blacklist type="badword" locale="es">desnudos</blacklist>
+<blacklist type="badword" locale="es">destrozar el agujero</blacklist>
+<blacklist type="badword" locale="es">desvergonzada</blacklist>
+<blacklist type="badword" locale="es">desvirga</blacklist>
+<blacklist type="badword" locale="es">desvirgación</blacklist>
+<blacklist type="badword" locale="es">desvirgar</blacklist>
+<blacklist type="badword" locale="es">diarrea</blacklist>
+<blacklist type="badword" locale="es">diarreas</blacklist>
+<blacklist type="badword" locale="es">dilatador anal</blacklist>
+<blacklist type="badword" locale="es">dominación</blacklist>
+<blacklist type="badword" locale="es">droga</blacklist>
+<blacklist type="badword" locale="es">drogadicto</blacklist>
+<blacklist type="badword" locale="es">drogado</blacklist>
+<blacklist type="badword" locale="es">drogarse</blacklist>
+<blacklist type="badword" locale="es">drogas</blacklist>
+<blacklist type="badword" locale="es">echar un polvo</blacklist>
+<blacklist type="badword" locale="es">ejaculação</blacklist>
+<blacklist type="badword" locale="es">el exceso de lujuria</blacklist>
+<blacklist type="badword" locale="es">el más jorobado</blacklist>
+<blacklist type="badword" locale="es">el sexo de lupino</blacklist>
+<blacklist type="badword" locale="es">el sexo reina</blacklist>
+<blacklist type="badword" locale="es">el sexo Rey</blacklist>
+<blacklist type="badword" locale="es">empujar por el culo</blacklist>
+<blacklist type="badword" locale="es">enanismo</blacklist>
+<blacklist type="badword" locale="es">enano</blacklist>
+<blacklist type="badword" locale="es">enanos</blacklist>
+<blacklist type="badword" locale="es">encuentro sexual</blacklist>
+<blacklist type="badword" locale="es">endogamia</blacklist>
+<blacklist type="badword" locale="es">enema</blacklist>
+<blacklist type="badword" locale="es">enemas</blacklist>
+<blacklist type="badword" locale="es">Enfermedades de transmisión sexual</blacklist>
+<blacklist type="badword" locale="es">entrepierna</blacklist>
+<blacklist type="badword" locale="es">entrepiernas</blacklist>
+<blacklist type="badword" locale="es">ereção</blacklist>
+<blacklist type="badword" locale="es">erección</blacklist>
+<blacklist type="badword" locale="es">erecciones</blacklist>
+<blacklist type="badword" locale="es">erótica</blacklist>
+<blacklist type="badword" locale="es">erótico</blacklist>
+<blacklist type="badword" locale="es">erotismo</blacklist>
+<blacklist type="badword" locale="es">erotomanía</blacklist>
+<blacklist type="badword" locale="es">eructar</blacklist>
+<blacklist type="badword" locale="es">escatológico</blacklist>
+<blacklist type="badword" locale="es">esclavo</blacklist>
+<blacklist type="badword" locale="es">esclavos</blacklist>
+<blacklist type="badword" locale="es">escoria</blacklist>
+<blacklist type="badword" locale="es">escorias</blacklist>
+<blacklist type="badword" locale="es">escroto</blacklist>
+<blacklist type="badword" locale="es">escrotos</blacklist>
+<blacklist type="badword" locale="es">esfínter</blacklist>
+<blacklist type="badword" locale="es">espástico</blacklist>
+<blacklist type="badword" locale="es">esperma</blacklist>
+<blacklist type="badword" locale="es">espermatozoides</blacklist>
+<blacklist type="badword" locale="es">espermicida</blacklist>
+<blacklist type="badword" locale="es">estiércol</blacklist>
+<blacklist type="badword" locale="es">estilo perrito</blacklist>
+<blacklist type="badword" locale="es">estimulación del clítoris</blacklist>
+<blacklist type="badword" locale="es">estúpido</blacklist>
+<blacklist type="badword" locale="es">estúpidos</blacklist>
+<blacklist type="badword" locale="es">exclavitud sexual</blacklist>
+<blacklist type="badword" locale="es">exhibicionismo</blacklist>
+<blacklist type="badword" locale="es">explotador</blacklist>
+<blacklist type="badword" locale="es">extasis</blacklist>
+<blacklist type="badword" locale="es">éxtasis</blacklist>
+<blacklist type="badword" locale="es">extramatrimonial</blacklist>
+<blacklist type="badword" locale="es">eyacula</blacklist>
+<blacklist type="badword" locale="es">eyaculación</blacklist>
+<blacklist type="badword" locale="es">eyaculado</blacklist>
+<blacklist type="badword" locale="es">eyacular</blacklist>
+<blacklist type="badword" locale="es">fálico</blacklist>
+<blacklist type="badword" locale="es">falo</blacklist>
+<blacklist type="badword" locale="es">fascista</blacklist>
+<blacklist type="badword" locale="es">felación</blacklist>
+<blacklist type="badword" locale="es">felaciones</blacklist>
+<blacklist type="badword" locale="es">felador</blacklist>
+<blacklist type="badword" locale="es">felar</blacklist>
+<blacklist type="badword" locale="es">fetiche</blacklist>
+<blacklist type="badword" locale="es">fetiches</blacklist>
+<blacklist type="badword" locale="es">filia</blacklist>
+<blacklist type="badword" locale="es">fimosis</blacklist>
+<blacklist type="badword" locale="es">flagelación</blacklist>
+<blacklist type="badword" locale="es">flagelaciones</blacklist>
+<blacklist type="badword" locale="es">flirtear</blacklist>
+<blacklist type="badword" locale="es">flujo vaginal</blacklist>
+<blacklist type="badword" locale="es">folla</blacklist>
+<blacklist type="badword" locale="es">follada</blacklist>
+<blacklist type="badword" locale="es">follador</blacklist>
+<blacklist type="badword" locale="es">follar</blacklist>
+<blacklist type="badword" locale="es">follar por el culo</blacklist>
+<blacklist type="badword" locale="es">fornica</blacklist>
+<blacklist type="badword" locale="es">fornicación</blacklist>
+<blacklist type="badword" locale="es">fornicado</blacklist>
+<blacklist type="badword" locale="es">fornicador</blacklist>
+<blacklist type="badword" locale="es">fornicando</blacklist>
+<blacklist type="badword" locale="es">fornicar</blacklist>
+<blacklist type="badword" locale="es">frigidez</blacklist>
+<blacklist type="badword" locale="es">friqui</blacklist>
+<blacklist type="badword" locale="es">frotación</blacklist>
+<blacklist type="badword" locale="es">fumador</blacklist>
+<blacklist type="badword" locale="es">gallina</blacklist>
+<blacklist type="badword" locale="es">gatillazo</blacklist>
+<blacklist type="badword" locale="es">gatita sexual</blacklist>
+<blacklist type="badword" locale="es">genitales</blacklist>
+<blacklist type="badword" locale="es">genitales femeninos</blacklist>
+<blacklist type="badword" locale="es">gilipollas</blacklist>
+<blacklist type="badword" locale="es">gónada</blacklist>
+<blacklist type="badword" locale="es">gónadas</blacklist>
+<blacklist type="badword" locale="es">gonorrea</blacklist>
+<blacklist type="badword" locale="es">gonorréico</blacklist>
+<blacklist type="badword" locale="es">gordos</blacklist>
+<blacklist type="badword" locale="es">guarra</blacklist>
+<blacklist type="badword" locale="es">hacer un sesenta y nueve</blacklist>
+<blacklist type="badword" locale="es">porros</blacklist>
+<blacklist type="badword" locale="es">prepúcio</blacklist>
+<blacklist type="badword" locale="es">prepúcios</blacklist>
+<blacklist type="badword" locale="es">prostituta</blacklist>
+<blacklist type="badword" locale="es">hacerlo</blacklist>
+<blacklist type="badword" locale="es">hacerse una paja</blacklist>
+<blacklist type="badword" locale="es">hachís</blacklist>
+<blacklist type="badword" locale="es">hemorroides</blacklist>
+<blacklist type="badword" locale="es">hermafrodita</blacklist>
+<blacklist type="badword" locale="es">hermafroditas</blacklist>
+<blacklist type="badword" locale="es">hermafroditismo</blacklist>
+<blacklist type="badword" locale="es">heroína</blacklist>
+<blacklist type="badword" locale="es">heterosexualidad</blacklist>
+<blacklist type="badword" locale="es">hijo de puta</blacklist>
+<blacklist type="badword" locale="es">hijos de puta</blacklist>
+<blacklist type="badword" locale="es">himen</blacklist>
+<blacklist type="badword" locale="es">hímenes</blacklist>
+<blacklist type="badword" locale="es">histerectomía</blacklist>
+<blacklist type="badword" locale="es">histerectomías</blacklist>
+<blacklist type="badword" locale="es">hombre con hombre</blacklist>
+<blacklist type="badword" locale="es">hombres con hombres</blacklist>
+<blacklist type="badword" locale="es">homosexuales</blacklist>
+<blacklist type="badword" locale="es">homosexualidad</blacklist>
+<blacklist type="badword" locale="es">idea lasciva</blacklist>
+<blacklist type="badword" locale="es">idiota</blacklist>
+<blacklist type="badword" locale="es">idiotas</blacklist>
+<blacklist type="badword" locale="es">idiotez</blacklist>
+<blacklist type="badword" locale="es">ilícito</blacklist>
+<blacklist type="badword" locale="es">imbécil</blacklist>
+<blacklist type="badword" locale="es">impotencia</blacklist>
+<blacklist type="badword" locale="es">impotente</blacklist>
+<blacklist type="badword" locale="es">Impregna</blacklist>
+<blacklist type="badword" locale="es">impregnación</blacklist>
+<blacklist type="badword" locale="es">impregnado</blacklist>
+<blacklist type="badword" locale="es">impregnar</blacklist>
+<blacklist type="badword" locale="es">incesto</blacklist>
+<blacklist type="badword" locale="es">incestuoso</blacklist>
+<blacklist type="badword" locale="es">indecente</blacklist>
+<blacklist type="badword" locale="es">infierno</blacklist>
+<blacklist type="badword" locale="es">innato</blacklist>
+<blacklist type="badword" locale="es">insuficiencia sexual</blacklist>
+<blacklist type="badword" locale="es">intercurso</blacklist>
+<blacklist type="badword" locale="es">inútil</blacklist>
+<blacklist type="badword" locale="es">itiotas</blacklist>
+<blacklist type="badword" locale="es">joder</blacklist>
+<blacklist type="badword" locale="es">joderse y morir</blacklist>
+<blacklist type="badword" locale="es">jodido</blacklist>
+<blacklist type="badword" locale="es">joroba</blacklist>
+<blacklist type="badword" locale="es">jorobas</blacklist>
+<blacklist type="badword" locale="es">judío</blacklist>
+<blacklist type="badword" locale="es">judíos</blacklist>
+<blacklist type="badword" locale="es">jugo de esperma</blacklist>
+<blacklist type="badword" locale="es">la flagelación</blacklist>
+<blacklist type="badword" locale="es">la maldición del dios</blacklist>
+<blacklist type="badword" locale="es">labial</blacklist>
+<blacklist type="badword" locale="es">labio</blacklist>
+<blacklist type="badword" locale="es">labios vaginales</blacklist>
+<blacklist type="badword" locale="es">lamecoños</blacklist>
+<blacklist type="badword" locale="es">lamer el coño</blacklist>
+<blacklist type="badword" locale="es">lamer el esfinter</blacklist>
+<blacklist type="badword" locale="es">lamer mi coño</blacklist>
+<blacklist type="badword" locale="es">lamer mi pene</blacklist>
+<blacklist type="badword" locale="es">lamer mi polla</blacklist>
+<blacklist type="badword" locale="es">lamerme el coño</blacklist>
+<blacklist type="badword" locale="es">lascivia</blacklist>
+<blacklist type="badword" locale="es">lascivo</blacklist>
+<blacklist type="badword" locale="es">látigo</blacklist>
+<blacklist type="badword" locale="es">látigos</blacklist>
+<blacklist type="badword" locale="es">lecho conyugal</blacklist>
+<blacklist type="badword" locale="es">lencería</blacklist>
+<blacklist type="badword" locale="es">leproso</blacklist>
+<blacklist type="badword" locale="es">lesbiana</blacklist>
+<blacklist type="badword" locale="es">lesbianas</blacklist>
+<blacklist type="badword" locale="es">lesbianismo</blacklist>
+<blacklist type="badword" locale="es">libertinaje</blacklist>
+<blacklist type="badword" locale="es">libertino</blacklist>
+<blacklist type="badword" locale="es">libidinoso</blacklist>
+<blacklist type="badword" locale="es">limpiaculos</blacklist>
+<blacklist type="badword" locale="es">lisiado</blacklist>
+<blacklist type="badword" locale="es">lista de mierdas</blacklist>
+<blacklist type="badword" locale="es">los testículos</blacklist>
+<blacklist type="badword" locale="es">lubricador</blacklist>
+<blacklist type="badword" locale="es">lubricar</blacklist>
+<blacklist type="badword" locale="es">luciferes</blacklist>
+<blacklist type="badword" locale="es">lujuria</blacklist>
+<blacklist type="badword" locale="es">lustre</blacklist>
+<blacklist type="badword" locale="es">maldita sea</blacklist>
+<blacklist type="badword" locale="es">maldito</blacklist>
+<blacklist type="badword" locale="es">maldito dios</blacklist>
+<blacklist type="badword" locale="es">mamada</blacklist>
+<blacklist type="badword" locale="es">mamadas</blacklist>
+<blacklist type="badword" locale="es">mancha de semen</blacklist>
+<blacklist type="badword" locale="es">máquina sexual</blacklist>
+<blacklist type="badword" locale="es">máquina sexual (femenino)</blacklist>
+<blacklist type="badword" locale="es">maricón</blacklist>
+<blacklist type="badword" locale="es">maricones</blacklist>
+<blacklist type="badword" locale="es">marihuana</blacklist>
+<blacklist type="badword" locale="es">mariquita</blacklist>
+<blacklist type="badword" locale="es">más gordos</blacklist>
+<blacklist type="badword" locale="es">masoquismo</blacklist>
+<blacklist type="badword" locale="es">masoquista</blacklist>
+<blacklist type="badword" locale="es">masturba</blacklist>
+<blacklist type="badword" locale="es">masturbaba</blacklist>
+<blacklist type="badword" locale="es">masturbación</blacklist>
+<blacklist type="badword" locale="es">masturbador</blacklist>
+<blacklist type="badword" locale="es">masturbándose</blacklist>
+<blacklist type="badword" locale="es">masturbar</blacklist>
+<blacklist type="badword" locale="es">masturbarse</blacklist>
+<blacklist type="badword" locale="es">maturbaciones</blacklist>
+<blacklist type="badword" locale="es">mayor idiota</blacklist>
+<blacklist type="badword" locale="es">mea</blacklist>
+<blacklist type="badword" locale="es">meando</blacklist>
+<blacklist type="badword" locale="es">mear</blacklist>
+<blacklist type="badword" locale="es">menstrúa</blacklist>
+<blacklist type="badword" locale="es">menstruación</blacklist>
+<blacklist type="badword" locale="es">meón</blacklist>
+<blacklist type="badword" locale="es">metanfetamina</blacklist>
+<blacklist type="badword" locale="es">metedor del dedo</blacklist>
+<blacklist type="badword" locale="es">meter el dedo</blacklist>
+<blacklist type="badword" locale="es">meter el puño</blacklist>
+<blacklist type="badword" locale="es">micción</blacklist>
+<blacklist type="badword" locale="es">mierda</blacklist>
+<blacklist type="badword" locale="es">mierda de perro</blacklist>
+<blacklist type="badword" locale="es">mierdas</blacklist>
+<blacklist type="badword" locale="es">mierdoso</blacklist>
+<blacklist type="badword" locale="es">militarismo</blacklist>
+<blacklist type="badword" locale="es">mocos</blacklist>
+<blacklist type="badword" locale="es">molestar</blacklist>
+<blacklist type="badword" locale="es">molesto</blacklist>
+<blacklist type="badword" locale="es">mosca cojonera</blacklist>
+<blacklist type="badword" locale="es">mujer con curvas</blacklist>
+<blacklist type="badword" locale="es">mujer con mujer</blacklist>
+<blacklist type="badword" locale="es">mujer fácil</blacklist>
+<blacklist type="badword" locale="es">mujeres con mujeres</blacklist>
+<blacklist type="badword" locale="es">mujeres fáciles</blacklist>
+<blacklist type="badword" locale="es">muy caliente</blacklist>
+<blacklist type="badword" locale="es">nalga</blacklist>
+<blacklist type="badword" locale="es">nalgas</blacklist>
+<blacklist type="badword" locale="es">necrofilia</blacklist>
+<blacklist type="badword" locale="es">necrófilo</blacklist>
+<blacklist type="badword" locale="es">necrófilos</blacklist>
+<blacklist type="badword" locale="es">negrata</blacklist>
+<blacklist type="badword" locale="es">negratas</blacklist>
+<blacklist type="badword" locale="es">negros</blacklist>
+<blacklist type="badword" locale="es">neonazi</blacklist>
+<blacklist type="badword" locale="es">nigromancia</blacklist>
+<blacklist type="badword" locale="es">nigromante</blacklist>
+<blacklist type="badword" locale="es">ninfa</blacklist>
+<blacklist type="badword" locale="es">ninfas</blacklist>
+<blacklist type="badword" locale="es">ninfómana</blacklist>
+<blacklist type="badword" locale="es">ninfómana loco</blacklist>
+<blacklist type="badword" locale="es">ninfómana manía</blacklist>
+<blacklist type="badword" locale="es">ninfómana maníacos</blacklist>
+<blacklist type="badword" locale="es">ninfómanas</blacklist>
+<blacklist type="badword" locale="es">ninfomanía</blacklist>
+<blacklist type="badword" locale="es">ninfos</blacklist>
+<blacklist type="badword" locale="es">nínfula</blacklist>
+<blacklist type="badword" locale="es">ningómana</blacklist>
+<blacklist type="badword" locale="es">No judía</blacklist>
+<blacklist type="badword" locale="es">nudismo</blacklist>
+<blacklist type="badword" locale="es">obsceno</blacklist>
+<blacklist type="badword" locale="es">ofrecer sexo oral</blacklist>
+<blacklist type="badword" locale="es">ojos achinados</blacklist>
+<blacklist type="badword" locale="es">ojos rasgados</blacklist>
+<blacklist type="badword" locale="es">onanismo</blacklist>
+<blacklist type="badword" locale="es">oral</blacklist>
+<blacklist type="badword" locale="es">orgásmico</blacklist>
+<blacklist type="badword" locale="es">orgasmo</blacklist>
+<blacklist type="badword" locale="es">orgasmos</blacklist>
+<blacklist type="badword" locale="es">orgia</blacklist>
+<blacklist type="badword" locale="es">orgías</blacklist>
+<blacklist type="badword" locale="es">orgiástico</blacklist>
+<blacklist type="badword" locale="es">orificio trasero</blacklist>
+<blacklist type="badword" locale="es">orina</blacklist>
+<blacklist type="badword" locale="es">orinado</blacklist>
+<blacklist type="badword" locale="es">orinar</blacklist>
+<blacklist type="badword" locale="es">ovario</blacklist>
+<blacklist type="badword" locale="es">ovarios</blacklist>
+<blacklist type="badword" locale="es">pajear</blacklist>
+<blacklist type="badword" locale="es">pakistaní</blacklist>
+<blacklist type="badword" locale="es">pakistaníes</blacklist>
+<blacklist type="badword" locale="es">pala</blacklist>
+<blacklist type="badword" locale="es">pandillero</blacklist>
+<blacklist type="badword" locale="es">pandilleros</blacklist>
+<blacklist type="badword" locale="es">pantalones de sordomudos</blacklist>
+<blacklist type="badword" locale="es">pantalones para sordomudos</blacklist>
+<blacklist type="badword" locale="es">pecho</blacklist>
+<blacklist type="badword" locale="es">pechos</blacklist>
+<blacklist type="badword" locale="es">pechugona</blacklist>
+<blacklist type="badword" locale="es">pedo</blacklist>
+<blacklist type="badword" locale="es">pedofilia</blacklist>
+<blacklist type="badword" locale="es">pedófilo</blacklist>
+<blacklist type="badword" locale="es">pedófilos</blacklist>
+<blacklist type="badword" locale="es">pedorro</blacklist>
+<blacklist type="badword" locale="es">pedos</blacklist>
+<blacklist type="badword" locale="es">pelanduscas</blacklist>
+<blacklist type="badword" locale="es">pelo de coño</blacklist>
+<blacklist type="badword" locale="es">pelos de coño</blacklist>
+<blacklist type="badword" locale="es">pelusa</blacklist>
+<blacklist type="badword" locale="es">pene</blacklist>
+<blacklist type="badword" locale="es">penes</blacklist>
+<blacklist type="badword" locale="es">perra</blacklist>
+<blacklist type="badword" locale="es">perra sucia</blacklist>
+<blacklist type="badword" locale="es">perras</blacklist>
+<blacklist type="badword" locale="es">perras sexy</blacklist>
+<blacklist type="badword" locale="es">perro de mierda</blacklist>
+<blacklist type="badword" locale="es">perversión</blacklist>
+<blacklist type="badword" locale="es">perversión sexual</blacklist>
+<blacklist type="badword" locale="es">pervertido</blacklist>
+<blacklist type="badword" locale="es">pervertidos</blacklist>
+<blacklist type="badword" locale="es">pervertir</blacklist>
+<blacklist type="badword" locale="es">pezón</blacklist>
+<blacklist type="badword" locale="es">pezones</blacklist>
+<blacklist type="badword" locale="es">picha</blacklist>
+<blacklist type="badword" locale="es">pichas</blacklist>
+<blacklist type="badword" locale="es">piel roja</blacklist>
+<blacklist type="badword" locale="es">pieles rojas</blacklist>
+<blacklist type="badword" locale="es">pito</blacklist>
+<blacklist type="badword" locale="es">poder blanco</blacklist>
+<blacklist type="badword" locale="es">polla</blacklist>
+<blacklist type="badword" locale="es">polla chupada</blacklist>
+<blacklist type="badword" locale="es">polla pequeña</blacklist>
+<blacklist type="badword" locale="es">pollas</blacklist>
+<blacklist type="badword" locale="es">pollón</blacklist>
+<blacklist type="badword" locale="es">pollones</blacklist>
+<blacklist type="badword" locale="es">polvo anal</blacklist>
+<blacklist type="badword" locale="es">pornografía</blacklist>
+<blacklist type="badword" locale="es">pornográfico</blacklist>
+<blacklist type="badword" locale="es">pornógrafo</blacklist>
+<blacklist type="badword" locale="es">pornógrafos</blacklist>
+<blacklist type="badword" locale="es">porro</blacklist>
+<blacklist type="badword" locale="es">porros</blacklist>
+<blacklist type="badword" locale="es">posición con las rodillas en el pecho</blacklist>
+<blacklist type="badword" locale="es">prepucio</blacklist>
+<blacklist type="badword" locale="es">prepucios</blacklist>
+<blacklist type="badword" locale="es">primacía blanca</blacklist>
+<blacklist type="badword" locale="es">profiláctico</blacklist>
+<blacklist type="badword" locale="es">promiscua</blacklist>
+<blacklist type="badword" locale="es">promiscuidad</blacklist>
+<blacklist type="badword" locale="es">prostíbulo</blacklist>
+<blacklist type="badword" locale="es">prostitución</blacklist>
+<blacklist type="badword" locale="es">prostituidas</blacklist>
+<blacklist type="badword" locale="es">prostituta</blacklist>
+<blacklist type="badword" locale="es">prostitutas</blacklist>
+<blacklist type="badword" locale="es">prostituyendo</blacklist>
+<blacklist type="badword" locale="es">proxeneta</blacklist>
+<blacklist type="badword" locale="es">proxenetas</blacklist>
+<blacklist type="badword" locale="es">proxenetismo</blacklist>
+<blacklist type="badword" locale="es">pubertad</blacklist>
+<blacklist type="badword" locale="es">pubescente</blacklist>
+<blacklist type="badword" locale="es">púbico</blacklist>
+<blacklist type="badword" locale="es">pubis</blacklist>
+<blacklist type="badword" locale="es">puta</blacklist>
+<blacklist type="badword" locale="es">puta por crack</blacklist>
+<blacklist type="badword" locale="es">puta sexy</blacklist>
+<blacklist type="badword" locale="es">putas</blacklist>
+<blacklist type="badword" locale="es">putear</blacklist>
+<blacklist type="badword" locale="es">puticlub</blacklist>
+<blacklist type="badword" locale="es">que te jodan</blacklist>
+<blacklist type="badword" locale="es">que tiene filia</blacklist>
+<blacklist type="badword" locale="es">que tienen filias</blacklist>
+<blacklist type="badword" locale="es">quien practica sexo anal</blacklist>
+<blacklist type="badword" locale="es">Quiero sexo</blacklist>
+<blacklist type="badword" locale="es">rabia</blacklist>
+<blacklist type="badword" locale="es">racismo</blacklist>
+<blacklist type="badword" locale="es">racismo blanco</blacklist>
+<blacklist type="badword" locale="es">racista</blacklist>
+<blacklist type="badword" locale="es">racistas</blacklist>
+<blacklist type="badword" locale="es">rapto</blacklist>
+<blacklist type="badword" locale="es">recto</blacklist>
+<blacklist type="badword" locale="es">reina del sexo</blacklist>
+<blacklist type="badword" locale="es">relaciones sexuales fuertes</blacklist>
+<blacklist type="badword" locale="es">retardado</blacklist>
+<blacklist type="badword" locale="es">retarsados</blacklist>
+<blacklist type="badword" locale="es">rey del sexo</blacklist>
+<blacklist type="badword" locale="es">rito conyugal</blacklist>
+<blacklist type="badword" locale="es">ruso</blacklist>
+<blacklist type="badword" locale="es">rusos</blacklist>
+<blacklist type="badword" locale="es">sádicos</blacklist>
+<blacklist type="badword" locale="es">sadismo</blacklist>
+<blacklist type="badword" locale="es">sadomasoquismo</blacklist>
+<blacklist type="badword" locale="es">sadomasoquista</blacklist>
+<blacklist type="badword" locale="es">sáfico</blacklist>
+<blacklist type="badword" locale="es">safismo</blacklist>
+<blacklist type="badword" locale="es">Satanás</blacklist>
+<blacklist type="badword" locale="es">satánica</blacklist>
+<blacklist type="badword" locale="es">sátiro</blacklist>
+<blacklist type="badword" locale="es">se masturba</blacklist>
+<blacklist type="badword" locale="es">seducción</blacklist>
+<blacklist type="badword" locale="es">seducir</blacklist>
+<blacklist type="badword" locale="es">seductor</blacklist>
+<blacklist type="badword" locale="es">semental</blacklist>
+<blacklist type="badword" locale="es">sementales</blacklist>
+<blacklist type="badword" locale="es">seno</blacklist>
+<blacklist type="badword" locale="es">sesenta y nueve</blacklist>
+<blacklist type="badword" locale="es">sexo</blacklist>
+<blacklist type="badword" locale="es">sexo anal</blacklist>
+<blacklist type="badword" locale="es">sexo caliente</blacklist>
+<blacklist type="badword" locale="es">sexo con la ropa puesta</blacklist>
+<blacklist type="badword" locale="es">sexo oral</blacklist>
+<blacklist type="badword" locale="es">sexo sucio</blacklist>
+<blacklist type="badword" locale="es">sexuado</blacklist>
+<blacklist type="badword" locale="es">sexual</blacklist>
+<blacklist type="badword" locale="es">sexualidad</blacklist>
+<blacklist type="badword" locale="es">sífilis</blacklist>
+<blacklist type="badword" locale="es">sifilítico</blacklist>
+<blacklist type="badword" locale="es">sin culo</blacklist>
+<blacklist type="badword" locale="es">sin papeles</blacklist>
+<blacklist type="badword" locale="es">Sodoma</blacklist>
+<blacklist type="badword" locale="es">sodomía</blacklist>
+<blacklist type="badword" locale="es">sodomías</blacklist>
+<blacklist type="badword" locale="es">sodomita</blacklist>
+<blacklist type="badword" locale="es">sodomitas</blacklist>
+<blacklist type="badword" locale="es">sodomítica</blacklist>
+<blacklist type="badword" locale="es">sodomizado</blacklist>
+<blacklist type="badword" locale="es">sodomizar</blacklist>
+<blacklist type="badword" locale="es">sórdido</blacklist>
+<blacklist type="badword" locale="es">succiona</blacklist>
+<blacklist type="badword" locale="es">sucio hijo de puta</blacklist>
+<blacklist type="badword" locale="es">súcubo</blacklist>
+<blacklist type="badword" locale="es">sudacas</blacklist>
+<blacklist type="badword" locale="es">suicidio</blacklist>
+<blacklist type="badword" locale="es">sumiso</blacklist>
+<blacklist type="badword" locale="es">sumisos</blacklist>
+<blacklist type="badword" locale="es">supremacía blanca</blacklist>
+<blacklist type="badword" locale="es">tampón</blacklist>
+<blacklist type="badword" locale="es">tampones</blacklist>
+<blacklist type="badword" locale="es">tapa de cuello uterino</blacklist>
+<blacklist type="badword" locale="es">tener sexo</blacklist>
+<blacklist type="badword" locale="es">Terror Blanco</blacklist>
+<blacklist type="badword" locale="es">testículo</blacklist>
+<blacklist type="badword" locale="es">testículos</blacklist>
+<blacklist type="badword" locale="es">teta</blacklist>
+<blacklist type="badword" locale="es">tetas</blacklist>
+<blacklist type="badword" locale="es">tetona</blacklist>
+<blacklist type="badword" locale="es">toca el culo</blacklist>
+<blacklist type="badword" locale="es">tocapelotas</blacklist>
+<blacklist type="badword" locale="es">tocapelotas</blacklist>
+<blacklist type="badword" locale="es">toquetear</blacklist>
+<blacklist type="badword" locale="es">tortazo</blacklist>
+<blacklist type="badword" locale="es">tragar</blacklist>
+<blacklist type="badword" locale="es">tranquilizantes</blacklist>
+<blacklist type="badword" locale="es">transexuales</blacklist>
+<blacklist type="badword" locale="es">trasero</blacklist>
+<blacklist type="badword" locale="es">traseros</blacklist>
+<blacklist type="badword" locale="es">travestido</blacklist>
+<blacklist type="badword" locale="es">travestidos</blacklist>
+<blacklist type="badword" locale="es">travestis</blacklist>
+<blacklist type="badword" locale="es">travestismo</blacklist>
+<blacklist type="badword" locale="es">un rapidito</blacklist>
+<blacklist type="badword" locale="es">una palmada</blacklist>
+<blacklist type="badword" locale="es">vasectomía</blacklist>
+<blacklist type="badword" locale="es">vasectomías</blacklist>
+<blacklist type="badword" locale="es">venéreo</blacklist>
+<blacklist type="badword" locale="es">vibrador</blacklist>
+<blacklist type="badword" locale="es">vibradores</blacklist>
+<blacklist type="badword" locale="es">vibrar</blacklist>
+<blacklist type="badword" locale="es">violación</blacklist>
+<blacklist type="badword" locale="es">violaciones</blacklist>
+<blacklist type="badword" locale="es">violada</blacklist>
+<blacklist type="badword" locale="es">violador</blacklist>
+<blacklist type="badword" locale="es">violar</blacklist>
+<blacklist type="badword" locale="es">vírgenes</blacklist>
+<blacklist type="badword" locale="es">virginales</blacklist>
+<blacklist type="badword" locale="es">virginidad</blacklist>
+<blacklist type="badword" locale="es">vomitar</blacklist>
+<blacklist type="badword" locale="es">vomitó</blacklist>
+<blacklist type="badword" locale="es">vómito</blacklist>
+<blacklist type="badword" locale="es">vómitos</blacklist>
+<blacklist type="badword" locale="es">voyeur</blacklist>
+<blacklist type="badword" locale="es">voyeurismo</blacklist>
+<blacklist type="badword" locale="pt"> de </blacklist>
+<blacklist type="badword" locale="pt"> rápido</blacklist>
+<blacklist type="badword" locale="pt">a flagelação</blacklist>
+<blacklist type="badword" locale="pt">a maldição de deus</blacklist>
+<blacklist type="badword" locale="pt">abortado</blacklist>
+<blacklist type="badword" locale="pt">abortar</blacklist>
+<blacklist type="badword" locale="pt">abortivo</blacklist>
+<blacklist type="badword" locale="pt">aborto</blacklist>
+<blacklist type="badword" locale="pt">abortos</blacklist>
+<blacklist type="badword" locale="pt">adicto</blacklist>
+<blacklist type="badword" locale="pt">adictos</blacklist>
+<blacklist type="badword" locale="pt">adúltera</blacklist>
+<blacklist type="badword" locale="pt">adultério</blacklist>
+<blacklist type="badword" locale="pt">adultérios</blacklist>
+<blacklist type="badword" locale="pt">adúltero</blacklist>
+<blacklist type="badword" locale="pt">adúlteros</blacklist>
+<blacklist type="badword" locale="pt">afeminado</blacklist>
+<blacklist type="badword" locale="pt">álcool</blacklist>
+<blacklist type="badword" locale="pt">alcoólico</blacklist>
+<blacklist type="badword" locale="pt">alucinógeno</blacklist>
+<blacklist type="badword" locale="pt">amante</blacklist>
+<blacklist type="badword" locale="pt">anão</blacklist>
+<blacklist type="badword" locale="pt">anarquismo</blacklist>
+<blacklist type="badword" locale="pt">anarquista</blacklist>
+<blacklist type="badword" locale="pt">ano</blacklist>
+<blacklist type="badword" locale="pt">anões</blacklist>
+<blacklist type="badword" locale="pt">anorgasmia</blacklist>
+<blacklist type="badword" locale="pt">anos</blacklist>
+<blacklist type="badword" locale="pt">anticonceptivo intrauterino</blacklist>
+<blacklist type="badword" locale="pt">anticristo</blacklist>
+<blacklist type="badword" locale="pt">anticristos</blacklist>
+<blacklist type="badword" locale="pt">arrotar</blacklist>
+<blacklist type="badword" locale="pt">assexual</blacklist>
+<blacklist type="badword" locale="pt">ato sexual</blacklist>
+<blacklist type="badword" locale="pt">atontado</blacklist>
+<blacklist type="badword" locale="pt">atos sexuais</blacklist>
+<blacklist type="badword" locale="pt">atracción</blacklist>
+<blacklist type="badword" locale="pt">bar de gente de cor</blacklist>
+<blacklist type="badword" locale="pt">Barbie</blacklist>
+<blacklist type="badword" locale="pt">bastarda</blacklist>
+<blacklist type="badword" locale="pt">bastardo</blacklist>
+<blacklist type="badword" locale="pt">bebida alcoólica</blacklist>
+<blacklist type="badword" locale="pt">bebidas alcoólicas</blacklist>
+<blacklist type="badword" locale="pt">beijo com língua</blacklist>
+<blacklist type="badword" locale="pt">besta</blacklist>
+<blacklist type="badword" locale="pt">bestialidade</blacklist>
+<blacklist type="badword" locale="pt">bidé</blacklist>
+<blacklist type="badword" locale="pt">bidés</blacklist>
+<blacklist type="badword" locale="pt">biopsias</blacklist>
+<blacklist type="badword" locale="pt">bissexual</blacklist>
+<blacklist type="badword" locale="pt">bissexualidade</blacklist>
+<blacklist type="badword" locale="pt">Blanco</blacklist>
+<blacklist type="badword" locale="pt">bolas</blacklist>
+<blacklist type="badword" locale="pt">bordéis</blacklist>
+<blacklist type="badword" locale="pt">bordel</blacklist>
+<blacklist type="badword" locale="pt">borracho</blacklist>
+<blacklist type="badword" locale="pt">bunda</blacklist>
+<blacklist type="badword" locale="pt">bundas</blacklist>
+<blacklist type="badword" locale="pt">burro</blacklist>
+<blacklist type="badword" locale="pt">burros</blacklist>
+<blacklist type="badword" locale="pt">busto</blacklist>
+<blacklist type="badword" locale="pt">bustos</blacklist>
+<blacklist type="badword" locale="pt">calentura</blacklist>
+<blacklist type="badword" locale="pt">camisinha</blacklist>
+<blacklist type="badword" locale="pt">camisinhas</blacklist>
+<blacklist type="badword" locale="pt">cara de merda</blacklist>
+<blacklist type="badword" locale="pt">caras de merda</blacklist>
+<blacklist type="badword" locale="pt">carnal</blacklist>
+<blacklist type="badword" locale="pt">castidad</blacklist>
+<blacklist type="badword" locale="pt">casto</blacklist>
+<blacklist type="badword" locale="pt">castración</blacklist>
+<blacklist type="badword" locale="pt">castrado</blacklist>
+<blacklist type="badword" locale="pt">castrados</blacklist>
+<blacklist type="badword" locale="pt">castrar</blacklist>
+<blacklist type="badword" locale="pt">celibato</blacklist>
+<blacklist type="badword" locale="pt">centro de atención</blacklist>
+<blacklist type="badword" locale="pt">cervical</blacklist>
+<blacklist type="badword" locale="pt">chica com chica</blacklist>
+<blacklist type="badword" locale="pt">chica má</blacklist>
+<blacklist type="badword" locale="pt">chicas com chicas</blacklist>
+<blacklist type="badword" locale="pt">chicas con chicas</blacklist>
+<blacklist type="badword" locale="pt">chico com chico</blacklist>
+<blacklist type="badword" locale="pt">chicos com chicos</blacklist>
+<blacklist type="badword" locale="pt">chupadas</blacklist>
+<blacklist type="badword" locale="pt">chupador</blacklist>
+<blacklist type="badword" locale="pt">chupar</blacklist>
+<blacklist type="badword" locale="pt">cigarrillo</blacklist>
+<blacklist type="badword" locale="pt">circuncida</blacklist>
+<blacklist type="badword" locale="pt">circuncidar</blacklist>
+<blacklist type="badword" locale="pt">circuncisión</blacklist>
+<blacklist type="badword" locale="pt">circunciso</blacklist>
+<blacklist type="badword" locale="pt">clímax</blacklist>
+<blacklist type="badword" locale="pt">clítoris</blacklist>
+<blacklist type="badword" locale="pt">coca</blacklist>
+<blacklist type="badword" locale="pt">cocaína</blacklist>
+<blacklist type="badword" locale="pt">cocos</blacklist>
+<blacklist type="badword" locale="pt">coito</blacklist>
+<blacklist type="badword" locale="pt">colono</blacklist>
+<blacklist type="badword" locale="pt">come mi carne</blacklist>
+<blacklist type="badword" locale="pt">come-me</blacklist>
+<blacklist type="badword" locale="pt">concubina</blacklist>
+<blacklist type="badword" locale="pt">concubinas</blacklist>
+<blacklist type="badword" locale="pt">condenatória</blacklist>
+<blacklist type="badword" locale="pt">consolador</blacklist>
+<blacklist type="badword" locale="pt">consoladores</blacklist>
+<blacklist type="badword" locale="pt">continência</blacklist>
+<blacklist type="badword" locale="pt">copular</blacklist>
+<blacklist type="badword" locale="pt">cornudo</blacklist>
+<blacklist type="badword" locale="pt">cornudos</blacklist>
+<blacklist type="badword" locale="pt">corrompido</blacklist>
+<blacklist type="badword" locale="pt">cu</blacklist>
+<blacklist type="badword" locale="pt">cú</blacklist>
+<blacklist type="badword" locale="pt">cu trazer</blacklist>
+<blacklist type="badword" locale="pt">cus</blacklist>
+<blacklist type="badword" locale="pt">de cor</blacklist>
+<blacklist type="badword" locale="pt">defecação</blacklist>
+<blacklist type="badword" locale="pt">defecado</blacklist>
+<blacklist type="badword" locale="pt">defecar</blacklist>
+<blacklist type="badword" locale="pt">defloração</blacklist>
+<blacklist type="badword" locale="pt">deflorada</blacklist>
+<blacklist type="badword" locale="pt">deflorar</blacklist>
+<blacklist type="badword" locale="pt">degenerar</blacklist>
+<blacklist type="badword" locale="pt">diarreia</blacklist>
+<blacklist type="badword" locale="pt">diarreias</blacklist>
+<blacklist type="badword" locale="pt">dominação</blacklist>
+<blacklist type="badword" locale="pt">droga</blacklist>
+<blacklist type="badword" locale="pt">drogadicto</blacklist>
+<blacklist type="badword" locale="pt">drogado</blacklist>
+<blacklist type="badword" locale="pt">drogar-se</blacklist>
+<blacklist type="badword" locale="pt">drogas</blacklist>
+<blacklist type="badword" locale="pt">ejacula</blacklist>
+<blacklist type="badword" locale="pt">ejaculado</blacklist>
+<blacklist type="badword" locale="pt">ejacular</blacklist>
+<blacklist type="badword" locale="pt">ereção</blacklist>
+<blacklist type="badword" locale="pt">erección</blacklist>
+<blacklist type="badword" locale="pt">erecciones</blacklist>
+<blacklist type="badword" locale="pt">ereções</blacklist>
+<blacklist type="badword" locale="pt">erótica</blacklist>
+<blacklist type="badword" locale="pt">erótico</blacklist>
+<blacklist type="badword" locale="pt">erotismo</blacklist>
+<blacklist type="badword" locale="pt">escravidão sexual</blacklist>
+<blacklist type="badword" locale="pt">esterol</blacklist>
+<blacklist type="badword" locale="pt">estimulação do clitóris</blacklist>
+<blacklist type="badword" locale="pt">estúpido</blacklist>
+<blacklist type="badword" locale="pt">estúpidos</blacklist>
+<blacklist type="badword" locale="pt">exibicionismo</blacklist>
+<blacklist type="badword" locale="pt">explorador</blacklist>
+<blacklist type="badword" locale="pt">êxtases</blacklist>
+<blacklist type="badword" locale="pt">éxtasis</blacklist>
+<blacklist type="badword" locale="pt">extramatrimonial</blacklist>
+<blacklist type="badword" locale="pt">fascista</blacklist>
+<blacklist type="badword" locale="pt">felação</blacklist>
+<blacklist type="badword" locale="pt">felador</blacklist>
+<blacklist type="badword" locale="pt">felar</blacklist>
+<blacklist type="badword" locale="pt">fetiche</blacklist>
+<blacklist type="badword" locale="pt">fetiches</blacklist>
+<blacklist type="badword" locale="pt">filho de puta</blacklist>
+<blacklist type="badword" locale="pt">filhos de puta</blacklist>
+<blacklist type="badword" locale="pt">flagelações</blacklist>
+<blacklist type="badword" locale="pt">foder</blacklist>
+<blacklist type="badword" locale="pt">folar</blacklist>
+<blacklist type="badword" locale="pt">fornica</blacklist>
+<blacklist type="badword" locale="pt">fornicação</blacklist>
+<blacklist type="badword" locale="pt">fornicador</blacklist>
+<blacklist type="badword" locale="pt">fornicar</blacklist>
+<blacklist type="badword" locale="pt">frigidez</blacklist>
+<blacklist type="badword" locale="pt">gallina</blacklist>
+<blacklist type="badword" locale="pt">genitálias</blacklist>
+<blacklist type="badword" locale="pt">gonorreia</blacklist>
+<blacklist type="badword" locale="pt">gonorreico</blacklist>
+<blacklist type="badword" locale="pt">gordos</blacklist>
+<blacklist type="badword" locale="pt">hemorroidas</blacklist>
+<blacklist type="badword" locale="pt">Hermafrodita</blacklist>
+<blacklist type="badword" locale="pt">hermafroditismo</blacklist>
+<blacklist type="badword" locale="pt">heroína</blacklist>
+<blacklist type="badword" locale="pt">heterossexualidade</blacklist>
+<blacklist type="badword" locale="pt">hombre com hombre</blacklist>
+<blacklist type="badword" locale="pt">homem com homem</blacklist>
+<blacklist type="badword" locale="pt">homens com homens</blacklist>
+<blacklist type="badword" locale="pt">homossexual</blacklist>
+<blacklist type="badword" locale="pt">ideia lasciva</blacklist>
+<blacklist type="badword" locale="pt">idiota</blacklist>
+<blacklist type="badword" locale="pt">idiotas</blacklist>
+<blacklist type="badword" locale="pt">idiotia</blacklist>
+<blacklist type="badword" locale="pt">ilícito</blacklist>
+<blacklist type="badword" locale="pt">imbecil</blacklist>
+<blacklist type="badword" locale="pt">impotência</blacklist>
+<blacklist type="badword" locale="pt">impotente</blacklist>
+<blacklist type="badword" locale="pt">Impregna</blacklist>
+<blacklist type="badword" locale="pt">impregnação</blacklist>
+<blacklist type="badword" locale="pt">impregnado</blacklist>
+<blacklist type="badword" locale="pt">impregnar</blacklist>
+<blacklist type="badword" locale="pt">incesto</blacklist>
+<blacklist type="badword" locale="pt">incestuoso</blacklist>
+<blacklist type="badword" locale="pt">indecente</blacklist>
+<blacklist type="badword" locale="pt">inferno</blacklist>
+<blacklist type="badword" locale="pt">intercurso</blacklist>
+<blacklist type="badword" locale="pt">inútil</blacklist>
+<blacklist type="badword" locale="pt">judio</blacklist>
+<blacklist type="badword" locale="pt">labial</blacklist>
+<blacklist type="badword" locale="pt">lábio</blacklist>
+<blacklist type="badword" locale="pt">lascivo</blacklist>
+<blacklist type="badword" locale="pt">leito conjugal</blacklist>
+<blacklist type="badword" locale="pt">leproso</blacklist>
+<blacklist type="badword" locale="pt">lesbiana</blacklist>
+<blacklist type="badword" locale="pt">lesbianas</blacklist>
+<blacklist type="badword" locale="pt">lesbianismo</blacklist>
+<blacklist type="badword" locale="pt">libertinagem</blacklist>
+<blacklist type="badword" locale="pt">libertino</blacklist>
+<blacklist type="badword" locale="pt">libidinoso</blacklist>
+<blacklist type="badword" locale="pt">lubricador</blacklist>
+<blacklist type="badword" locale="pt">lubricar</blacklist>
+<blacklist type="badword" locale="pt">Lúcifer</blacklist>
+<blacklist type="badword" locale="pt">lucíferes</blacklist>
+<blacklist type="badword" locale="pt">lustre</blacklist>
+<blacklist type="badword" locale="pt">luxúria</blacklist>
+<blacklist type="badword" locale="pt">maior idiota</blacklist>
+<blacklist type="badword" locale="pt">maldita seja</blacklist>
+<blacklist type="badword" locale="pt">maldito</blacklist>
+<blacklist type="badword" locale="pt">maldito deus</blacklist>
+<blacklist type="badword" locale="pt">mamada</blacklist>
+<blacklist type="badword" locale="pt">mamadas</blacklist>
+<blacklist type="badword" locale="pt">mancha de semen</blacklist>
+<blacklist type="badword" locale="pt">marica</blacklist>
+<blacklist type="badword" locale="pt">maricas</blacklist>
+<blacklist type="badword" locale="pt">marijuana</blacklist>
+<blacklist type="badword" locale="pt">marijuanas</blacklist>
+<blacklist type="badword" locale="pt">más gordos</blacklist>
+<blacklist type="badword" locale="pt">masoquismo</blacklist>
+<blacklist type="badword" locale="pt">masoquista</blacklist>
+<blacklist type="badword" locale="pt">masturbação</blacklist>
+<blacklist type="badword" locale="pt">masturbado</blacklist>
+<blacklist type="badword" locale="pt">masturbando-se</blacklist>
+<blacklist type="badword" locale="pt">masturbar-se</blacklist>
+<blacklist type="badword" locale="pt">masturbava</blacklist>
+<blacklist type="badword" locale="pt">maturbaciones</blacklist>
+<blacklist type="badword" locale="pt">menstruação</blacklist>
+<blacklist type="badword" locale="pt">merda</blacklist>
+<blacklist type="badword" locale="pt">metanfetamina</blacklist>
+<blacklist type="badword" locale="pt">meter o dedo</blacklist>
+<blacklist type="badword" locale="pt">mierda</blacklist>
+<blacklist type="badword" locale="pt">nanismo</blacklist>
+<blacklist type="badword" locale="pt">negros</blacklist>
+<blacklist type="badword" locale="pt">o excesso de luxúria</blacklist>
+<blacklist type="badword" locale="pt">oferecer sexo oral</blacklist>
+<blacklist type="badword" locale="pt">orgia</blacklist>
+<blacklist type="badword" locale="pt">orgias</blacklist>
+<blacklist type="badword" locale="pt">pecho</blacklist>
+<blacklist type="badword" locale="pt">peido</blacklist>
+<blacklist type="badword" locale="pt">peitos</blacklist>
+<blacklist type="badword" locale="pt">pene</blacklist>
+<blacklist type="badword" locale="pt">penes</blacklist>
+<blacklist type="badword" locale="pt">perra</blacklist>
+<blacklist type="badword" locale="pt">perras</blacklist>
+<blacklist type="badword" locale="pt">pervertido</blacklist>
+<blacklist type="badword" locale="pt">porro</blacklist>
+<blacklist type="badword" locale="pt">prostitutas</blacklist>
+<blacklist type="badword" locale="pt">puta</blacklist>
+<blacklist type="badword" locale="pt">que se foda</blacklist>
+<blacklist type="badword" locale="pt">queimar a rosca</blacklist>
+<blacklist type="badword" locale="pt">quem pratica sexo anal</blacklist>
+<blacklist type="badword" locale="pt">quente</blacklist>
+<blacklist type="badword" locale="pt">Quero sexo</blacklist>
+<blacklist type="badword" locale="pt">retrasado</blacklist>
+<blacklist type="badword" locale="pt">rito conjugal</blacklist>
+<blacklist type="badword" locale="pt">se masturba</blacklist>
+<blacklist type="badword" locale="pt">sêmen</blacklist>
+<blacklist type="badword" locale="pt">seno</blacklist>
+<blacklist type="badword" locale="pt">sexo anal</blacklist>
+<blacklist type="badword" locale="pt">sexo caliente</blacklist>
+<blacklist type="badword" locale="pt">sexo sujo</blacklist>
+<blacklist type="badword" locale="pt">sexualidade</blacklist>
+<blacklist type="badword" locale="pt">sodomizar</blacklist>
+<blacklist type="badword" locale="pt">ter sexo</blacklist>
+<blacklist type="badword" locale="pt">testículos</blacklist>
+<blacklist type="badword" locale="pt">teta</blacklist>
+<blacklist type="badword" locale="pt">tetas</blacklist>
+<blacklist type="badword" locale="pt">tetona</blacklist>
+<blacklist type="badword" locale="pt">tranquilizantes</blacklist>
+<blacklist type="badword" locale="pt">trasero</blacklist>
+<blacklist type="badword" locale="pt">traseros</blacklist>
+<blacklist type="badword" locale="pt">vomitar</blacklist>
+</blacklists>

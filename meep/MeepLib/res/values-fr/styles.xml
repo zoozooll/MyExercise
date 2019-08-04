@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="popup_textview_title" parent="popup_textview">
+        <item name="android:textSize">28sp</item>  
+    </style>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/n_news_bg"
+>
+
+<com.oregonscientific.meep.notification.MEEPTextView
+    android:id="@+id/notification_center_remove_all"
+    android:layout_width="200dp"
+    android:layout_height="60dp"
+    android:background="@drawable/n_logo"
+ />
+
+</RelativeLayout>

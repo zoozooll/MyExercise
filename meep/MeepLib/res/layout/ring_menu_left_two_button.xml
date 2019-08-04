@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/two_button_left"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#b0000000">
+    
+    <RelativeLayout android:id="@+id/contentLayoutleft"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left|top"
+    android:background="#00000000">
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/two_button_left"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" > -->
+
+        <ImageView
+	        android:id="@+id/ring_menu_left2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="0px"
+	        android:layout_marginTop="17px"
+	        android:scaleType="center"
+	        android:background="@drawable/ring_menu_ring_center_circle_bg" />
+        
+        <ImageView
+	        android:id="@+id/ring_menu_top_right_two2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="17px"
+	        android:layout_marginTop="4px"
+	        android:src="@drawable/btn_ring_right_up" />
+        
+        <ImageView
+	        android:id="@+id/ring_menu_bottom_right_two2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="17px"
+	        android:layout_marginTop="84px"
+	        android:src="@drawable/btn_ring_right_down" />
+
+        
+        <ImageView
+	        android:id="@+id/rename2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="77px"
+	        android:layout_marginTop="34px"
+	        android:src="@drawable/ring_rename" />
+        
+        <ImageView
+	        android:id="@+id/rename_glow2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="77px"
+	        android:layout_marginTop="34px"
+	        android:src="@drawable/ring_rename_glow"
+	        android:visibility="gone" />
+        
+        <ImageView
+	        android:id="@+id/delete2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="77px"
+	        android:layout_marginTop="134px"
+	        android:src="@drawable/ring_delete" />
+        
+        <ImageView
+	        android:id="@+id/delete_glow2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="77px"
+	        android:layout_marginTop="134px"
+	        android:src="@drawable/ring_delete_glow"
+	        android:visibility="gone" />
+
+	</RelativeLayout>
+</FrameLayout>

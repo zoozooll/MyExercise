@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_gender">
+	    <item>Hombre</item>
+	    <item>Mujer</item>
+	</string-array>
+    <string-array name="start_using">
+	    <item>Confirmación de pago</item>
+	    <item>Crear cuenta infantil</item>
+	    <item>¡Finalizar!</item>
+	</string-array>
+    <string-array name="apps_string">
+	    <item>Apps</item>
+	    <item>Juegos &amp; Apps</item>
+	    <item>Vídeos</item>
+	    <item>Música</item>
+	    <item>E-Book</item>
+	    <item>Cámara &amp; Imágenes</item>
+	    <item>Navegador web</item>
+	    <item>YouTube</item>
+	    <item>Comunicador</item>
+	    <item>Compra en la MEEP!Store</item>
+	    <item>Compra In App en el MEEP! Store</item>
+	    <item>Artículos Google Play</item>
+	    <item>Sólo Vídeos de YouTube &amp; Sitio Web sugeridos</item>
+	    <item>Filtro de palabras inapropiadas</item>
+	</string-array>
+    <string-array name="time_string">
+	    <item>Bloqueado</item>
+	    <item>15 minutos</item>
+	    <item>30 minutos</item>
+	    <item>1 hora</item>
+	    <item>2 horas</item>
+	    <item>4 horas</item>
+	    <item>8 horas</item>
+	    <item>12 horas</item>
+	    <item>Ilimitado</item>
+	</string-array>
+    <string-array name="unit_string">
+	    <item>Ilimitado</item>
+	    <item>Horas</item>
+	    <item>Hora</item>
+	    <item>Minutos</item>
+	    <item>Bloqueado</item>
+	</string-array>
+    <string-array name="permission_string">
+	    <item>Bloqueado</item>
+	    <item>Autorización necesaria</item>
+	    <item>Acceso completo</item>
+	</string-array>
+    <string-array name="menu_string">
+	    <item>Actividades</item>
+	    <item>Notificaciones</item>
+	    <item>Cuenta infantil</item>
+	    <item>Control paterno</item>
+	    <item>Cierre de sesión</item>
+	</string-array>
+    <string-array name="country_string">
+	    <item>Australia</item>
+	    <item>Brasil</item>
+	    <item>Francia</item>
+	    <item>Alemania</item>
+	    <item>Italia</item>
+	    <item>España</item>
+	    <item>Reino Unido</item>
+	    <item>Estados Unidos</item>
+	    <item>Japón</item>
+	    <item>Corea</item>
+	    <item>Ninguno de los anteriores</item>
+	</string-array>
+	
+</resources>

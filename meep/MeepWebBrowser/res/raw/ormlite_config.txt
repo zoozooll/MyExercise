@@ -1,0 +1,57 @@
+#
+# generated on 2013/04/24 05:05:39
+#
+# --table-start--
+dataClass=com.oregonscientific.meep.browser.database.Bookmark
+tableName=bookmark
+# --table-fields-start--
+# --field-start--
+fieldName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=url
+# --field-end--
+# --field-start--
+fieldName=favicon
+dataPersister=BYTE_ARRAY
+# --field-end--
+# --field-start--
+fieldName=thumbnail
+# --field-end--
+# --field-start--
+fieldName=description
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.oregonscientific.meep.browser.database.History
+tableName=history
+# --table-fields-start--
+# --field-start--
+fieldName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=url
+# --field-end--
+# --field-start--
+fieldName=favicon
+dataPersister=BYTE_ARRAY
+# --field-end--
+# --field-start--
+fieldName=thumbnail
+# --field-end--
+# --field-start--
+fieldName=description
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

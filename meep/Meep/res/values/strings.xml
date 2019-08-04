@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">MEEP</string>
+	<string name="construct_bad_word_list">Constructing bad word list...</string>
+	
+	<!--  titles -->
+    <string name="title_notice">Notice</string>
+    <string name="title_timeout">Time\u0027s up</string>
+    <string name="title_oops">Oops!</string>
+    <string name="title_success">Success!</string>
+    
+    <!-- alert messages -->
+    <string name="alert_launch_register">Please register your MEEP!X2 before you can use %1$s! Ask your parent to register your MEEP!X2 on the MEEP! Together Parental Portal, and change the settings for the %2$s.</string>
+    <string name="alert_launch_online">Please connect online in order to use the %1$s. Do you want to connect to the Wi-Fi now?</string>
+    <string name="alert_permission_denied">This action is blocked by your parents. Please ask them to change their parental settings for you.</string>
+    <string name="alert_permission_timeout">Ask your parents to modify their parental settings if you want more playing time!</string>
+    
+    <!-- buttons -->
+    <string name="alert_button_ok">OK</string>
+    <string name="alert_button_cancel">Cancel</string>
+
+</resources>

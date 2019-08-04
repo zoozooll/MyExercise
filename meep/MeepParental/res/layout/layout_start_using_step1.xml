@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fill_parent">
+    <LinearLayout 
+		style="@style/LinearInScroll"
+		android:paddingTop="30dp"
+		android:layout_marginLeft="250dp"
+		android:layout_marginRight="250dp"
+		>
+	   	<TableRow 
+			android:layout_height="80dp"
+			android:layout_width="180dp"
+	   	    android:layout_gravity="center"
+	   	    android:gravity="center_vertical"
+	   	    android:id="@+id/imageStep1">
+	   	    <ImageView 
+	   	        style="@style/StepImageButton"
+	   	        android:src="@drawable/start_using_step1" 
+	   	        android:contentDescription="@string/step1"
+	   	        android:layout_weight="6"/>
+	   	    <ImageView 
+	   	        style="@style/StepArraw"
+	   	        android:src="@drawable/start_using_arrow" 
+	   	        android:contentDescription="@string/step1"
+	   	        android:layout_weight="3"/>
+	   	    <ImageView 
+	   	        style="@style/StepImageButton"
+	   	        android:src="@drawable/start_using_step2_normal" 
+	   	        android:contentDescription="@string/step2"
+	   	        android:layout_weight="5"/>
+	   	</TableRow>
+	   	<TableRow style="@style/wrap_content_vertical"
+	            android:layout_marginBottom="10dp"
+	            android:gravity="center_vertical">
+	            <ImageView
+	                style="@style/StepImageRe"
+	                android:contentDescription="@string/step1"
+	                android:src="@drawable/step1_icon" />
+		        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:text="@string/start_using_create"
+			            style="@style/PageSubTitle"
+			            android:textSize="22dp"/>
+        </TableRow>
+        <!-- Person Name -->
+
+	        <TableRow
+	            style="@style/wrap_content_vertical"
+	            android:weightSum="2" >
+	
+	            <TextView
+	                style="@style/TextAccountCreateInfo"
+	                android:width="0.0dip"
+	                android:layout_weight="1"
+	                android:text="@string/registration_create_account_name_first" />
+	
+	            <TextView
+	                style="@style/TextAccountCreateInfo"
+	                android:width="0.0dip"
+	                android:layout_weight="1"
+	                android:text="@string/registration_create_account_name_last" />
+	        </TableRow>
+	
+	        <TableRow
+	            style="@style/wrap_content_vertical"
+	            android:weightSum="2" >
+	
+	            <EditText
+	                android:id="@+id/textFirstName"
+	                style="@style/listEditText"
+	                android:layout_width="0.0dip"
+	                android:layout_weight="1"
+	                android:inputType="textPersonName"/>
+	
+	            <EditText
+	                android:id="@+id/textLastName"
+	                style="@style/listEditText"
+	                android:layout_width="0.0dip"
+	                android:layout_weight="1"
+	                android:inputType="textPersonName"/>
+	        </TableRow>
+	        
+	        <!-- UserId -->
+	        
+	        <!-- Birthday -->
+	        <TextView
+	            style="@style/TextAccountCreateInfo"
+	            android:text="@string/registration_create_account_birthday" />
+	
+	        <TableRow style="@style/wrap_content_vertical" 
+	            android:layout_marginBottom="-5dp">
+	
+	            <TextView
+	                style="@style/TextAccountCreateInfo"
+	                android:layout_width="0.0dip"
+	                android:layout_marginBottom="0dp"
+	                android:layout_weight="3"
+	                android:text="@string/registration_create_account_birthday_day"
+	                android:textStyle="normal" />
+	
+	            <TextView
+	                style="@style/TextAccountCreateInfo"
+	                android:layout_marginBottom="0dp"
+	                android:layout_width="0.0dip"
+	                android:layout_marginLeft="5dp"
+	                android:layout_weight="3"
+	                android:text="@string/registration_create_account_birthday_month"
+	                android:textStyle="normal" />
+	
+	            <TextView
+	                style="@style/TextAccountCreateInfo"
+	                android:layout_marginBottom="0dp"
+	                android:layout_width="0.0dip"
+	                android:layout_marginLeft="5dp"
+	                android:layout_weight="4"
+	                android:text="@string/registration_create_account_birthday_year"
+	                android:textStyle="normal" />
+	        </TableRow>
+	
+	        <TableRow
+	            style="@style/wrap_content_vertical">
+	            <EditText
+	                android:id="@+id/textDay"
+	                style="@style/listEditTextSmall"
+	                android:layout_width="0.0dip"
+	                android:layout_weight="3"
+	                android:gravity="center"
+	                android:hint="@string/registration_create_account_birthday_dd"
+	                android:paddingLeft="0dp"
+	                android:paddingRight="0dp"
+	                />
+	
+	            <EditText
+	                android:id="@+id/textMonth"
+	                style="@style/listEditTextSmall"
+	                android:layout_width="0.0dip"
+	                android:layout_weight="3"
+	                android:gravity="center"
+	                android:hint="@string/registration_create_account_birthday_mm"
+	                android:paddingLeft="0dp"
+	                android:paddingRight="0dp"
+	                 />
+	
+	            <EditText
+	                android:id="@+id/textYear"
+	                style="@style/listEditTextSmall"
+	                android:layout_width="0.0dip"
+	                android:layout_weight="4"
+	                android:gravity="center"
+	                android:hint="@string/registration_create_account_birthday_yyyy"
+	                android:paddingLeft="0dp"
+	                android:paddingRight="0dp" 
+	                />
+	        </TableRow>
+    </LinearLayout>
+</ScrollView>

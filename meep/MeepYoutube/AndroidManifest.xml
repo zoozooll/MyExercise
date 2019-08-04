@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.oregonscientific.meep.youtube"
+      android:versionCode="3"
+      android:versionName="1.2">
+      
+    <!-- =============================================================== -->
+    <!-- The OpenYouTubeActivity requires these permissions              --> 
+    <!-- =============================================================== -->
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="17"/>
+	
+	
+    <application android:icon="@drawable/youtube_0009" android:label="@string/app_name">
+        <activity android:name=".MeepYoutubeActivity"
+                  android:label="@string/app_name"
+                  android:windowSoftInputMode="stateHidden"
+				  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				  android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            <!-- Receives the search request. -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <!-- No category needed, because the Intent will specify this class component-->
+            </intent-filter>
+
+            <!-- Points to searchable meta data. -->
+            <meta-data android:name="android.app.searchable"
+                       android:resource="@xml/searchable" />
+            
+                        <!-- Receives the search request. -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <!-- No category needed, because the Intent will specify this class component-->
+            </intent-filter>
+
+            <!-- Points to searchable meta data. -->
+            <meta-data android:name="android.app.searchable"
+                       android:resource="@xml/searchable" />
+        </activity>
+        
+        <!-- =============================================================== -->
+        <!-- This is what you'll need to include in your manifest to declare --> 
+        <!-- the OpenYouTubeActivity in your project                         -->
+        <!-- =============================================================== -->
+        <activity  
+                android:name="com.oregonscientific.meep.youtube.OpenYouTubePlayerActivity"  
+                android:screenOrientation="landscape"
+                android:configChanges="orientation"
+                android:windowSoftInputMode="stateHidden"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:label="@string/app_name">  
+        </activity> 
+
+    </application>
+
+</manifest> 

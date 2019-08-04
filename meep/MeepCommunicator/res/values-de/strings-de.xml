@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Communicator</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Add Friend -->
+    <string name="friend_not_found">*Tut uns leid, wir können keinen Freund mit diesem Namen finden. Bitte versuche es erneut!</string>
+    
+    
+    <!-- Friend View -->
+    <string name="add_friends">Freund hinzufügen</string>
+    <string name="add">+</string>
+    <string name="add_friend_hint">Hey, %s, ich möchte dich als meinen Freund hinzufügen.</string>
+    <string name="search_friend_hint">Gib hier den MEEP! ID des Freundes ein</string>
+    <string name="search">Suchen</string>
+    <string name="search_friend">Freund suchen</string>
+
+    <!-- Conversation View -->
+    <string name="type_chat_hint">Tippe hier, um zu chatten</string>
+    <string name="send">Senden</string>
+
+    <string name="accept">Annehmen</string>
+    <string name="decline">Ablehnen</string>
+    
+    <!--  Accept Friend pop up -->
+    <string name="accept_friend_title">Freundesanfrage</string>
+    <string name="accept_friend">Freund hinzufügen</string>
+    <string name="accept_friend_format_string">%s  hat dich als Freund hinzugefügt.</string>
+    <string name="accept_friend_friends_message_format_string">Nachricht von %1$s\n%2$s</string>
+    
+    <!--  Error View -->
+    <string name="ok">OK</string>
+    <string name="error">Hoppla</string>
+    <string name="error_message_parents_cannot_delete">Eltern und Aufsichtspersonen können nicht gelöscht werden.</string>
+    <string name="blocked">Dieses Wort steht auf der Liste der schlechten Wörter und wurde blockiert.</string>
+    <string name="cannot_process">Geblockt</string>
+    <string name="cannot_add_yourself">Du kannst dich nicht selbst als dein Freund hinzufügen!</string>
+    <string name="cannot_add_existing_friend">Dieser Nutzer ist schon auf deiner Freundesliste:)</string>
+    <string name="please_enter_meep_id">Gib hier zuerst einen MEEP! ID ein!</string>
+    <string name="user_already_your_friend">Dieser Nutzer ist schon auf deiner Freundesliste!</string>
+    <string name="duplicated_friend_request">Dieser Nutzer ist schon auf deiner Freundesliste!</string>
+    <string name="no_results">Keine Ergebnisse</string>
+    
+    <!--  Search Friend Error  -->
+    <string name="user_not_found">Tut uns leid, wir können keinen Freund mit diesem Namen finden. Bitte versuche es erneut!</string>
+    
+    <!--  Network Popup -->
+    <string name="oops">Hoppla!</string>
+    <string name="no_network">Du musst online sein, damit du den Communikator nutzen kannst. Willst du jetzt eine Verbindung herstellen?</string>
+    <string name="network_try_again">Du bist nicht mit unserem Server verbunden. Bitte versuche es später noch einmal oder überprüfe deine Wi-Fi-Verbindung.</string>
+    
+    <!--  DeleteFriend Popup -->
+    <string name="delete_friend">Freund löschen</string>
+    <string name="delete_friend_confirm_format">Möchtest du wirklich %s aus der Freundesliste löschen?</string>
+    <string name="friend_deleted_message_format">%s wurde erfolgreich gelöscht!</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    
+    <!--  General error message -->
+    <string name="guest_not_allowed">Gast darf diese Quelle nicht nutzen.</string>
+    
+    <!-- Chat message error -->
+    <string name="user_not_online">Dein Freund ist momentan nicht online, bitte versuche es später noch einmal.</string>
+    <string name="try_again_later">Bitte versuche es später noch einmal.</string>
+    
+    <!--  Friend request Popup -->
+    <string name="friend_request_sent">Anfrage gesendet</string>
+    <string name="friend_request_success">Deine Anfrage wurde an deine Eltern und Eltern deines Freund zur Genehmigung gesendet worden.</string>
+    <string name="friend_request_pending">Die Freundesanfrage ist noch nicht erledigt. Bitte warte.</string>
+    <!--  Frien reques status popup -->
+    <string name="friend_request_result">Ergebnis der Freundesanfrage</string>
+    <string name="friend_request_self_parent_reject"> Tut uns leid, deine Eltern haben die Freundesanfrage an %1$s abgelehnt.</string>
+    <string name="friend_request_oppo_parent_reject"> Tut uns leid, Eltern von %1$s haben deine Freundesanfrage abgelehnt.</string>
+    <string name="friend_request_friend_reject"> Tut uns leid, %1$s hat deine Freundesanfrage abgelehnt.</string>
+    <string name="friend_request_approved"> %1$s ist jetzt dein Freund auf MEEP!</string>
+    
+    <string name="nice">Schön!</string>
+    <string name="friend_reject">Deine Nachricht wurde an %1$s gesendet.</string>
+
+</resources>

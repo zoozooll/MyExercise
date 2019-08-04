@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:scrollbars="none"
+   	   	style="@style/fill_parent">
+    <LinearLayout
+        style="@style/LinearInScroll">
+         <!--  View Title Label -->
+        <TableRow style="@style/wrap_content_vertical"
+	            android:layout_marginBottom="10dp">
+	            <ImageView
+	                style="@style/StepImageRe"
+	                android:contentDescription="@string/step2"
+	                android:src="@drawable/step3_icon" />
+		        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:text="@string/registration_email_verify_title"
+			            style="@style/PageSubTitle"/>
+		       
+       	</TableRow>
+       	 <!-- Email Information -->
+        <EditText 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:visibility="gone"/>
+        
+    </LinearLayout>
+ 
+</ScrollView>

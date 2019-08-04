@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oregonscientific.meep.notification.view.MessageBox xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:messagebox="http://schemas.android.com/apk/res/com.oregonscientific.meep.notification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    messagebox:bottomBackground="@drawable/message_extenable_down"
+    messagebox:contentBackground="@drawable/message_extenable_middle"
+    messagebox:topBackground="@drawable/message_extenable_up" >
+
+    <ImageView
+        android:id="@+id/messagebox_appicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <com.oregonscientific.meep.notification.view.TextView
+        android:id="@+id/messagebox_appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/messagebox_appicon" />
+
+</com.oregonscientific.meep.notification.view.MessageBox>

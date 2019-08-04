@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loginMainLayout"
+    style="@style/ParentLayoutStyle" >
+
+    <ScrollView
+        style="@style/fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            style="@style/LinearInScroll"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="0dp" >
+
+            <ImageButton
+                android:id="@+id/MainTitleImage"
+                style="@style/MainImageButton"
+                android:layout_height="260dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                style="@style/PageSubTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/already_have_account"
+                android:textSize="28dp" 
+                android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                android:id="@+id/layout_login_choose"
+                style="@style/LinearInScroll"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal"
+                android:visibility="visible" >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp" >
+
+                    <!-- Login Button -->
+
+                    <Button
+                        android:id="@+id/btnToLogin"
+                        style="@style/CommonButton"
+                        android:text="@string/yes" />
+
+                    <ImageView
+                        style="@style/ButtonDrawable"
+                        android:contentDescription="@string/main_page_notification_reject"
+                        android:src="@drawable/tick_green" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <!-- Link to Registration Screen -->
+
+                    <Button
+                        android:id="@+id/btnLinkToRegisterScreen"
+                        style="@style/CommonButton"
+                        android:text="@string/no" />
+
+                    <ImageView
+                        style="@style/ButtonDrawable"
+                        android:contentDescription="@string/main_page_notification_reject"
+                        android:src="@drawable/reject_red" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

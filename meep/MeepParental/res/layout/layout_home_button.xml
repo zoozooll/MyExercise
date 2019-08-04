@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <Button android:id="@+id/btnHome"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    style="@style/wrap_content"
+	    android:text="Home"
+	    android:paddingTop="20dp"
+	    android:textSize="23sp"
+	    android:textStyle="bold"
+	    android:textColor="@android:color/white"
+	    android:shadowDy="1"
+	    android:shadowColor="@android:color/black"
+	    android:shadowRadius="5"
+	    android:background="@drawable/home_btn"
+	    android:onClick="onClickButton"
+	    />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="hello">Meep音楽アクティビティーにようこそ！</string>
+  <string name="app_name">Meep音楽</string>
+  <string name="meep_music">音楽</string>
+  <string name="music_btn_ring_rename">名前の変更</string>
+  <string name="music_btn_ring_delete">削除</string>
+  <string name="music_title_uh_oh">おっと!</string>
+  <string name="music_title_times_up">時間切れ！</string>
+  <string name="music_msg_try_again_xxx">現在音楽プレイヤーは使用できません。%1$d分後にもう一度お試しください！</string>
+  <string name="music_btn_ok">OK</string>
+  <string name="music_msg_short_timer_reminder_xxx">タイマーリマインダー　-　音楽プレイヤー</string>
+  <string name="music_msg_short_timeup_xxx">時間切れ!　-　音楽プレイヤー</string>
+  <string name="music_title_update">アップデート</string>
+  <string name="music_msg_update_xxx_timer_changed">音楽プレイヤータイマーが%1$dに変更されました。</string>
+  <string name="music_msg_update_xxx">アップデート　-　音楽プレイヤー</string>
+  <string name="music_title_sudden_change">急なアクセス変更</string>
+  <string name="music_msg_sudden_parental_change">ペアレントポータルでアクセス設定変更されたためこの機能は現在使用できません。</string>
+  <string name="music_btn_ask_access">アクセス許可をリクエスト</string>
+  <string name="music_msg_access_request_sent">リクエストが送信されました！</string>
+  <string name="music_title_version_update">バージョンアップデート</string>
+  <string name="music_msg_available_upgrade">利用可能なアップデートがあります。アップデートしますか？</string>
+  <string name="music_btn_yes">はい</string>
+  <string name="music_btn_no">いいえ</string>
+  <string name="music_msg_xxx_available_update">アップデート　-　%1$s %2$s　-　バージョンアップデート可能</string>
+  <string name="music_msg_name_invalid">ファイル名前\".\"で始められません。ファイル名を変更してください。</string>
+  <string name="music_msg_blocked">無効な文字が含まれています。ほかの入力を試してください。</string>
+</resources>

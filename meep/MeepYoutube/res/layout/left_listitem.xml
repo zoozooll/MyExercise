@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout   
+        android:layout_width="fill_parent"   
+        xmlns:android="http://schemas.android.com/apk/res/android"   
+        android:orientation="horizontal"  
+        android:layout_height="wrap_content"   
+        android:id="@+id/LeftListItem"
+        android:paddingTop="10dip"
+		android:paddingBottom="10dip">
+
+		<ImageView
+		    android:id="@+id/youtubeImageView"
+		    android:layout_marginLeft="20px"
+		    android:layout_width="100px"
+		    android:layout_height="75px"
+			android:layout_gravity="center_vertical"/>
+
+		<LinearLayout
+		    android:layout_marginLeft="15px"
+		    android:layout_width="140px"
+		    android:layout_height="75px"
+		    android:orientation="vertical"
+		    android:gravity="center_vertical"
+			android:layout_gravity="center_vertical">
+	
+	        <TextView   
+	                android:layout_height="wrap_content"   
+	                android:layout_width="80px"   
+	                android:id="@+id/youtubeId"   
+	                android:textSize="16dip"
+	                android:visibility="gone">  
+	        </TextView>  
+	        <TextView   
+	                android:layout_height="wrap_content"   
+	                android:layout_width="140px"   
+	                android:id="@+id/youtubeTitleLong"   
+	                android:textSize="16dip"
+	                android:visibility="gone">  
+	        </TextView>  
+			<TextView   
+	                android:layout_height="wrap_content"   
+	                android:layout_width="140px"   
+	                android:id="@+id/youtubeViewCount"   
+	                android:textSize="16dip"
+	                android:visibility="gone">  
+	        </TextView> 
+	        <TextView   
+	                android:layout_height="wrap_content"   
+	                android:layout_width="90px"   
+	                android:id="@+id/youtubeTitleShort" 
+	                android:lines="2"
+	                android:textColor="@android:color/white"
+	                android:textSize="16dip">  
+	        </TextView>  
+	        <TextView   
+	                android:layout_height="wrap_content"   
+	                android:layout_width="fill_parent"   
+	                android:id="@+id/youtubeDuration"
+	                android:textSize="16dip"
+	                android:textColor="@android:color/white">  
+	        </TextView>
+		</LinearLayout>
+          
+</LinearLayout>  

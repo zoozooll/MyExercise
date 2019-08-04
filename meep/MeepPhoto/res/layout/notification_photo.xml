@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notification"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+	
+	<ImageView
+        android:id="@+id/imageViewBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/pop_bg" />
+	
+	<ScrollView
+        android:id="@+id/scrollViewFullList"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_x="0dp"
+        android:layout_y="0dp" >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFullList"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:orientation="vertical">
+        </LinearLayout>
+	</ScrollView>
+  
+    <TextView
+        android:id="@+id/textViewNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/pop_title"
+        android:gravity="center"
+        android:text="@string/picture_btn_ok"
+        android:textSize="23dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewOkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewBg"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_ok"
+        android:gravity="center"
+        android:text="@string/picture_btn_ok"
+        android:textColor="#FFFFFF"
+        android:textSize="23dp" />
+      
+
+ 	<ImageView
+ 	    android:id="@+id/imageViewIcon"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignParentLeft="true"
+ 	    android:layout_below="@+id/textViewNotice"
+ 	    android:layout_marginLeft="33dp"
+   	    android:visibility="visible"
+ 	    />
+ 	 <!-- 	    android:src="@drawable/ic_launcher"  -->
+ 	 
+   <TextView 
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageViewIcon"
+        android:layout_below="@+id/textViewNotice"
+        android:textColor="@android:color/black"
+        android:textSize="23dp"
+        />
+ <!--     android:text="Title"-->  
+ 
+ 	<ImageView
+ 	 	android:id="@+id/imageViewQuit"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_toRightOf="@+id/textViewNotice"
+ 	    android:layout_above="@+id/imageViewIcon"
+ 	    android:src="@drawable/quit_room" 
+ 	    android:layout_marginTop="60dp"
+ 	    android:layout_marginLeft="250dp"
+ 	    android:clickable="true"
+ 	    android:onClick="imageClick"
+ 	    />
+ <!-- 	 	    android:layout_marginLeft="630dp"
+        android:layout_marginTop="85dp" -->
+
+ 	<TextView
+ 	    android:id="@+id/textViewMessage"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignLeft="@+id/textViewTitle"
+ 	    android:layout_below="@+id/imageViewIcon"
+ 	    android:layout_marginTop="32dp"
+ 	    android:textColor="@android:color/black" />
+ 	
+ 	<!--   android:text="This is a warning message" -->
+
+
+ 	<EditText
+ 	    android:id="@+id/editTextRename"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignLeft="@+id/textViewNotice"
+ 	    android:layout_alignRight="@+id/imageViewQuit"
+ 	    android:layout_below="@+id/textViewTitle"
+ 	    android:layout_marginLeft="22dp"
+ 	    android:ems="10" 
+ 	    android:hint = "Type a message"
+ 	    android:layout_marginTop="80dp"
+		android:inputType="text"
+        android:imeOptions="actionSearch">
+
+ 	    <requestFocus />
+ 	</EditText>
+ 	
+ 	<TextView 
+ 	    android:id="@+id/text_msg"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignLeft="@+id/textViewNotice"
+ 	    android:layout_alignRight="@+id/imageViewQuit"
+ 	    android:layout_below="@+id/textViewTitle"
+ 	    android:layout_marginLeft="22dp"
+ 	    android:ems="10" 
+ 	    android:layout_marginTop="200dp"
+ 	    android:textColor="@android:color/black"
+ 	    android:visibility="gone"/>
+ 	
+<!--   	    android:text="Message: " -->
+
+</RelativeLayout>

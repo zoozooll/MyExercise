@@ -1,0 +1,46 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- "shadow" -->
+    <item>
+        <shape android:shape="rectangle" >
+           <solid android:color="@color/background_trans"/>
+           <padding 
+			   android:left="5dp" 
+			   android:top="5dp" 
+			   android:right="5dp" 
+			   android:bottom="5dp" 
+			/>
+        </shape>
+    </item>
+    <item android:bottom="-5dp">
+        <shape android:shape="rectangle"> 
+            <gradient 
+	        android:endColor="@color/background_trans"
+	        android:centerColor="@color/bkg_actionbar_dark"
+	        android:centerX="0.6" android:centerY="0"
+	        android:angle="270"
+        />
+         </shape>
+    </item>
+    <item 
+        android:right="-5dp" >
+        <shape android:shape="rectangle"> 
+            <gradient 
+	        android:endColor="@color/background_trans"
+	        android:centerColor="@color/bkg_actionbar_dark"
+	        android:centerX="0.85" android:centerY="0"/>
+         </shape>
+    </item>
+     <item>
+        <shape android:shape="rectangle" >
+           <solid android:color="@color/bkg_blue"/>
+           <padding 
+			   android:left="0dp" 
+			   android:top="0dp" 
+			   android:right="0dp" 
+			   android:bottom="0dp" 
+			/>
+        </shape>
+    </item>
+
+</layer-list>

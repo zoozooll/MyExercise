@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/dialogbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/b_bg_notice" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@id/dialogbg"
+        android:layout_alignLeft="@id/dialogbg"
+        android:layout_alignRight="@id/dialogbg"
+        android:layout_alignTop="@id/dialogbg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" 
+            android:layout_above="@+id/btnOk"
+            >
+				<!-- <com.oregonscientific.meep.customfont.MyTextView
+                android:id="@+id/title"
+                style="@style/popup_textview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="20dp"
+                android:textSize="35sp"
+                 /> -->
+            <com.oregonscientific.meep.safty.ui.customview.MyTextView
+                android:id="@+id/title"
+                style="@style/popup_textview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="20dp"
+                android:text="TEST" />
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                 >
+                <TextView
+                android:id="@+id/text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:paddingLeft="150dp"
+                android:paddingRight="150dp"
+                android:paddingTop="30dp"
+                android:textStyle="normal"
+                android:textColor="#5A5A5A" />
+                <!-- <com.oregonscientific.meep.safty.ui.customview.MyTextView
+                    android:id="@+id/text"
+                    style="@style/popup_textview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:text="http://www.google.com.hk"
+                    android:textSize="25sp"
+                    android:textStyle="normal" /> -->
+            </ScrollView>
+        </LinearLayout>
+
+        <com.oregonscientific.meep.safty.ui.customview.MyButton
+            android:id="@+id/btnOk"
+            style="@style/popup_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/b_btn_pop_ok"
+            android:text="@android:string/ok" 
+            android:onClick="onClick"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

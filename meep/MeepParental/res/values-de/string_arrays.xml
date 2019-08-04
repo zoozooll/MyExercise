@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_gender">
+        <item>Männlich</item>
+        <item>Weiblich</item>
+    </string-array>
+    <string-array name="start_using">
+        <item>Zahlungsbestätigung</item>
+        <item>Kinder-Konto erstellen</item>
+        <item>Fertig!</item>
+    </string-array>
+    <string-array name="apps_string">
+        <item>Spiele &amp; Apps</item>
+        <item>Spiele &amp; Apps</item>
+        <item>Videos</item>
+        <item>Musik</item>
+        <item>E-Books</item>
+        <item>Bilder &amp; Kamera</item>
+        <item>Internetbrowser</item>
+        <item>YouTube</item>
+        <item>Communicator</item>
+        <item>MEEP!Store-Einkauf</item>
+        <item>In-App-Einkauf im MEEP! Store</item>
+        <item>Google Play Artikel</item>
+        <item>Nur vorgeschlagene Webseiten &amp; YouTube Videos</item>
+        <item>Filterung von Schimpfwörtern</item>
+    </string-array>
+    <string-array name="time_string">
+        <item>Gesperrt</item>
+        <item>15 Minuten</item>
+        <item>30 Minuten</item>
+        <item>1 Stunde</item>
+        <item>2 Stunden</item>
+        <item>4 Stunden</item>
+        <item>8 Stunden</item>
+        <item>12 Stunden</item>
+        <item>Unbegrenzt</item>
+    </string-array>
+    <string-array name="unit_string">
+        <item>Unbegrenzt</item>
+        <item>Stunden</item>
+        <item>Stunde</item>
+        <item>Minuten</item>
+        <item>Gesperrt</item>
+    </string-array>
+    <string-array name="permission_string">
+        <item>Gesperrt</item>
+        <item>Genehmigung erforderlich</item>
+        <item>Voller Zugang</item>
+    </string-array>
+    <string-array name="menu_string">
+        <item>Aktivitäten</item>
+        <item>Benachrichtigungen</item>
+        <item>Kinderkonto</item>
+        <item>Elternkontrolle</item>
+        <item>Abmelden</item>
+    </string-array>
+    <string-array name="country_string">
+        <item>Australien</item>
+        <item>Brasilien</item>
+        <item>Frankreich</item>
+        <item>Deutschland</item>
+        <item>Italien</item>
+        <item>Spanien</item>
+        <item>Großbritannien</item>
+        <item>USA</item>
+        <item>Japan</item>
+        <item>Korea</item>
+        <item>Keins der obigen</item>
+    </string-array>
+</resources>

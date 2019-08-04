@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+ 
+    <TextView 
+	    style="@style/TextLogsInfo"
+	    android:id="@+id/textLogsDate"
+	    android:textStyle="bold"
+	    android:padding="2dp"
+	    android:layout_marginLeft="5dp"
+	    android:text="@string/main_button_kid"/>
+ 
+</LinearLayout>

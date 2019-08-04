@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string-array name="array_gender">
+    <item>男性</item>
+    <item>女性</item>
+  </string-array>
+  <string-array name="start_using">
+    <item>お支払の確認</item>
+    <item>キッズアカウント作成</item>
+    <item>完了!</item>
+  </string-array>
+  <string-array name="apps_string">
+    <item>アプリ</item>
+    <item>ゲーム &amp; アプリ</item>
+    <item>動画</item>
+    <item>音楽</item>
+    <item>Eブック</item>
+    <item>写真＆カメラ</item>
+    <item>インターネット</item>
+    <item>YouTube</item>
+    <item>コミュニケーター</item>
+    <item>MEEP!ストア内での購入</item>
+	<item>App内での購入</item>
+    <item>Google Play ™ アイテム</item>
+    <item>推奨されたウェブサイトのみ</item>
+    <item>ブラックワードフィルタリング</item>
+  </string-array>
+  <string-array name="time_string">
+    <item>ブロック</item>
+    <item>15分</item>
+    <item>30分</item>
+    <item>1時間</item>
+    <item>2時間</item>
+    <item>4時間</item>
+    <item>8時間</item>
+    <item>12時間</item>
+    <item>無制限</item>
+  </string-array>
+  <string-array name="unit_string">
+    <item>無制限</item>
+    <item>時間</item>
+    <item>時間</item>
+    <item>分</item>
+    <item>ブロック</item>
+  </string-array>
+  <string-array name="permission_string">
+    <item>ブロック</item>
+    <item>承認が必要</item>
+    <item>全てアクセス可能</item>
+  </string-array>
+  <string-array name="menu_string">
+    <item>@string/main_menu_parental</item>
+    <item>@string/main_menu_notification</item>
+    <item>@string/main_menu_account</item>
+    <item>@string/main_menu_coin</item>
+    <item>@string/main_menu_googleplay</item>
+    <item>@string/main_menu_logout</item>
+  </string-array>
+  <string-array name="country_string">
+    <item>オーストラリア</item>
+    <item>ブラジル</item>
+    <item>フランス</item>
+    <item>ドイツ</item>
+    <item>イタリア</item>
+    <item>スペイン</item>
+    <item>イギリス</item>
+    <item>アメリカ</item>
+    <item>日本</item>
+    <item>韓国</item>
+    <item>その他</item>
+  </string-array>
+</resources>

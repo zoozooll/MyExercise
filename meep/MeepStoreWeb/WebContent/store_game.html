@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="cache-control" content="no-cache" />
+<link rel="stylesheet" type="text/css" href="css/store.css"/>
+<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+<link href="css/lightbox.css" rel="stylesheet" />
+<script src="jquery-1.8.0.min.js"></script>
+<script src="i18next.js"></script>
+<script src="meep.js"></script>
+<script src="lightbox.js"></script>
+</head>
+
+<body onload="loadGame()" ontouchstart="">
+
+	<div class="logo" id="logo_id" onclick="goBack()"></div>
+	<div id="store_id"></div>
+
+<!--	<div>
+		<div class="search" id="searchbar"></div>
+		<div class="search" id="searchbtn_id"></div>
+	</div>
+-->
+	<div>	
+		<div id="coins_icon"></div>
+	</div>	
+
+	<div id="iframe" style="overflow-x: scroll; overflow-y: hidden" onscroll="getScroll()">
+		<div class="shelf" id="shelf_id" style="overflow: hidden"></div>
+	</div>
+
+<!--	<div class="button" id="button_left_id" onclick="prevShelf()"></div>
+	<div class="button" id="button_right_id" onclick="nextShelf()"></div>
+-->
+	<div class="dsc" id="dsc_id"></div>
+ 
+</body>
+</html>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="75dp"
+    android:background="@color/background_trans" >
+
+    <LinearLayout
+        style="@style/wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/item_bkg_icon" >
+
+        <ImageView
+            android:id="@+id/apps_icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:contentDescription="@string/main_menu_icon"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_user_icon" />
+    </LinearLayout>
+
+    <TableRow
+        style="@style/fill_parent"
+        android:gravity="center_vertical"
+        android:weightSum="10" >
+
+        <TextView
+            android:id="@+id/textName"
+            style="@style/TextChildrenInfo"
+            android:layout_width="0.0dip"
+            android:layout_weight="9.4"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="@string/main_text_type_google"
+            android:textSize="25dp" />
+
+        <RelativeLayout
+            android:layout_width="130dp"
+            android:layout_height="53.5dp" >
+
+            <ToggleButton
+                android:id="@+id/togglebutton"
+                android:layout_width="130dp"
+                android:layout_height="53.5dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/btn_toggle_bkg"
+                android:disabledAlpha="?android:attr/disabledAlpha"
+                android:gravity="right|center_vertical"
+                android:textOff=""
+                android:textOn="" 
+                android:checked="false"
+                />
+            <TextView
+                android:id="@+id/textOff"
+                style="@style/switcher_toggle_text"
+                android:text="@string/off" 
+                android:paddingLeft="60dp"
+                android:textColor="@color/text_gray2"
+                android:visibility="visible"
+                />
+            <TextView
+                android:id="@+id/textOn"
+                style="@style/switcher_toggle_text"
+                android:text="@string/on"
+                android:paddingLeft="31.5dp"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+    </TableRow>
+
+</LinearLayout>

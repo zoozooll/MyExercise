@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <ImageView
+        android:id="@+id/iconMyAppItem"
+        style="@style/image_myapp"
+        android:src="@drawable/meep_market_recoverybtn"
+        android:contentDescription="@string/item"
+        android:layout_centerVertical="true"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:layout_marginLeft="7dp"
+        />
+    <TableRow
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iconMyAppItem"
+        android:layout_toRightOf="@+id/iconMyAppItem"
+        >
+	    <LinearLayout 
+	        android:layout_marginLeft="20dp"
+	        android:layout_height="wrap_content"	
+            android:layout_width="0.0dip"
+	        android:orientation="vertical"
+	        android:layout_weight="15"
+	        android:gravity="center_vertical"
+	        android:layout_marginBottom="8dp"
+	        android:paddingTop="25dp"
+	        >
+	        <TextView style="@style/wrap_content"
+	            android:id="@+id/textMyAppItemName"
+	            android:text="@string/allcontent"
+	            android:textColor="@color/text_dark_blue"
+	            android:textSize="28dp"
+	            android:textStyle="bold"
+	            />
+	        <TextView style="@style/wrap_content"
+	            android:id="@+id/textMyAppItemInfo"
+	            android:text="@string/allinfo"
+	            android:textSize="22dp"
+	            android:textColor="@color/text_dark_blue2"
+	            android:textStyle="bold"
+	            android:paddingRight="30dp"
+	            />
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:layout_height="fill_parent"	
+            android:layout_width="0.0dip"
+	        android:layout_weight="8"
+	        android:gravity="center_vertical"
+	        >
+	    <Button
+	        android:id="@+id/btnRecover"
+	        style="@style/wrap_content"
+	        android:background="@drawable/btn_common_myapps"
+	        android:text="@string/recoverall"
+	        android:textColor="@color/text_white"
+	        android:textSize="16dp"
+	        android:textStyle="bold"
+	        android:shadowColor="@android:color/black"
+	        android:shadowRadius="2"
+	        android:shadowDx="1"
+	        android:shadowDy="1"
+	        />
+	    </LinearLayout>
+    </TableRow>
+    
+
+</RelativeLayout>

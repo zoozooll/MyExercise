@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:messagebox="http://schemas.android.com/apk/res/com.oregonscientific.meep.notification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="5dp" >
+
+    <com.oregonscientific.meep.notification.view.MessageBox
+        android:id="@+id/message_list_item_message_box"
+        android:layout_width="800dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingBottom="55dp"
+        android:paddingLeft="220dp"
+        android:paddingRight="15dp"
+        messagebox:bottomBackground="@drawable/message_extenable_down"
+        messagebox:collapseDrawable="@drawable/arrow_extend"
+        messagebox:contentBackground="@drawable/message_extenable_middle"
+        messagebox:expandDrawable="@drawable/arrow_extend2"
+        messagebox:topBackground="@drawable/message_extenable_up" >
+
+        <RelativeLayout
+            android:id="@+id/message_list_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/message_list_item_button_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="20dp"
+            android:layout_below="@+id/message_list_item_content"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/message_list_item_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notification_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="-10dp"
+            android:layout_below="@+id/message_list_item_content"
+            android:layout_toLeftOf="@id/message_list_item_button_wrapper"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/brown"
+            android:textSize="14sp" />
+    </com.oregonscientific.meep.notification.view.MessageBox>
+
+    <ImageView
+        android:id="@+id/message_list_item_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/bubble_icon" />
+
+</RelativeLayout>

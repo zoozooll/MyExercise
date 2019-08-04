@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res/com.oregonscientific.meep.communicator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:id="@+id/conversations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="74dp"
+        android:layout_marginTop="50dp"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:gravity="center"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:stackFromBottom="true" >
+    </ListView>
+
+    <ImageView
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/chat_room_top_bar" />
+
+    <com.oregonscientific.meep.communicator.view.conversation.ConversationViewPager
+        android:id="@+id/conversation_list"
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+
+    <ImageView
+        android:id="@+id/arrow_left"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/arrow_left" />
+
+    <ImageView
+        android:id="@+id/arrow_right"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/arrow_right" />
+
+    <RelativeLayout
+        android:id="@+id/send_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:focusableInTouchMode="true"
+        android:gravity="center" >
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="650dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/message_bar2"
+            android:ellipsize="end"
+            android:hint="@string/type_chat_hint"
+            android:maxLines="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" />
+
+        <ToggleButton
+            android:id="@+id/emoticon"
+            style="@style/EmoticonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="-5dp"
+            android:layout_alignTop="@+id/text"
+            android:layout_toRightOf="@+id/text" />
+
+        <ImageView
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_toRightOf="@+id/emoticon"
+            android:scaleType="fitXY"
+            android:src="@drawable/message_bar_send_normal" />
+
+        <com.oregonscientific.meep.communicator.view.CustomTextView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@+id/send_button"
+            android:layout_alignRight="@+id/send_button"
+            android:layout_toRightOf="@+id/emoticon"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            font:directory="Rumpelstiltskin.ttf" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/emoticon_section"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/send_bar"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/emoticon_section"
+        android:visibility="invisible" >
+
+        <GridView
+            android:id="@+id/emoticons"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="25dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:overScrollMode="never"
+            android:scrollbarStyle="outsideOverlay"
+            android:stretchMode="columnWidth" >
+        </GridView>
+    </RelativeLayout>
+
+</RelativeLayout>

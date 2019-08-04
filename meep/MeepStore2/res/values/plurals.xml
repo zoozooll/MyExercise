@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="number_of_results">
+        <item quantity="one">@string/result_one</item>
+        <item quantity="other">@string/result_other</item>
+    </plurals>    
+</resources>

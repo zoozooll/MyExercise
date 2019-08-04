@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="220dp"
+    android:layout_height="220dp"
+    android:background="@drawable/y_board01"
+    android:id="@+id/gridview_item"
+    android:layout_marginTop="5dp">
+
+    <ImageView
+        android:id="@+id/picVideo"
+        android:layout_width="170dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/b_box01"
+        android:scaleType="fitXY" />
+
+    <TextView 
+        android:id="@+id/pic_title"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:paddingLeft="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="35dp"
+        android:singleLine="true"
+        android:ellipsize="end"        
+        android:text="Video"
+        android:textColor="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/pic_count"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="35dp"
+        android:gravity="center"
+        android:paddingLeft="3dp"
+        android:singleLine="true"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"       
+        android:text="Youtube"
+        android:textColor="@color/customPink" />
+
+</LinearLayout>

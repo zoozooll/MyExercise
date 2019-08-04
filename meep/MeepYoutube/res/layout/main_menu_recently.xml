@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/youtube_bg"
+    >
+    <LinearLayout android:id="@+id/top"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp" >
+	    <LinearLayout
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="22" >
+	        <Button
+	            android:id="@+id/btnPrevious"
+	            style="@style/bar_button_left"
+	            android:background="@drawable/b_btn_arrow_left"
+	            android:onClick="onClickMenuButton"
+	            android:visibility="invisible" />
+	        <Button
+	            android:id="@+id/btnNext"
+	            style="@style/bar_button_left"
+	            android:background="@drawable/b_btn_arrow_right"
+	            android:onClick="onClickMenuButton"
+	            android:visibility="invisible" />
+	        <Button
+	            android:id="@+id/btnRefresh"
+	            style="@style/bar_button_left"
+	            android:background="@drawable/b_btn_reflesh"
+	            android:onClick="onClickMenuButton"
+	            android:visibility="invisible" />
+	    </LinearLayout>
+	    <RelativeLayout
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="62"
+	        android:orientation="horizontal" >
+	        <Button
+	            android:id="@+id/btnSearch"
+	            style="@style/bar_button"
+	            android:layout_marginTop="-4dp"
+	            android:background="@drawable/y_btn_search"
+	            android:onClick="onClickMenuButton" />
+	        <EditText
+	            android:id="@+id/searchBox"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_marginLeft="-5dp"
+	            android:layout_toLeftOf="@+id/btnAddBookmark"
+	            android:layout_toRightOf="@id/btnSearch"
+	            android:background="@drawable/y_search_box"
+	            android:hint="@string/hint_search"
+	            android:paddingLeft="20dp"
+	            android:singleLine="true" />
+	        <Button
+	            android:id="@+id/btnAddBookmark"
+	            style="@style/bar_button"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginLeft="-5dp"
+	            android:layout_marginTop="-4dp"
+	            android:background="@drawable/b_btn_add"
+	            android:onClick="onClickMenuButton"
+	            android:visibility="invisible" />
+	    </RelativeLayout>
+	    <LinearLayout
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="16"
+	        android:gravity="right" >
+	        <Button
+	            android:id="@+id/btnMainPage"
+	            style="@style/bar_button"
+	            android:layout_marginRight="20dp"
+	            android:background="@drawable/b_btn_home"
+	            android:onClick="onClickMenuButton" />
+	        <Button
+	            android:id="@+id/btnMenu"
+	            style="@style/bar_button"
+	            android:background="@drawable/b_btn_menu"
+	            android:onClick="onClickMenuButton" />
+	    </LinearLayout>
+	</LinearLayout>
+	
+    
+    <LinearLayout android:id="@+id/mid"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" 
+    android:layout_below="@id/top"
+	android:visibility="gone"	>    
+    	<LinearLayout
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="20" >
+	    </LinearLayout>
+	
+	    <RelativeLayout android:id="@+id/linearLayoutCentralTwo"
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="64">
+			<TextView android:text="@string/youtube_title_search_results"
+			    android:layout_width="wrap_content" 
+		        android:layout_height="wrap_content" 
+		        android:textStyle="bold"
+		        android:textSize="30dip"
+		        android:id="@+id/youtubeIdLabelSearchResults"
+		        android:shadowColor="@android:color/black"
+		        android:shadowRadius="2"
+		        android:singleLine="true"
+		        android:textColor="@android:color/white"/>
+			<TextView android:text="6 ge"
+			    android:layout_width="wrap_content" 
+		        android:layout_height="wrap_content" 
+		        android:textStyle="bold"
+		        android:textSize="20dip"
+		        android:shadowColor="@android:color/black"
+		        android:shadowRadius="2"
+		        android:id="@+id/youtubeIdLabelSearchResultsCount"
+		        android:textColor="@color/customPink"
+				android:layout_below="@id/youtubeIdLabelSearchResults"        
+		        />
+	    </RelativeLayout>
+	
+	    <LinearLayout
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="16"
+	        android:gravity="right" >
+	    </LinearLayout>
+	</LinearLayout>
+
+    	
+    <LinearLayout android:id="@+id/bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" 
+    android:layout_below="@id/mid"
+    android:visibility="gone">    
+    	<LinearLayout
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="20" >
+	    </LinearLayout>
+	
+	    <RelativeLayout android:id="@+id/linearLayoutCentralTwo"
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="64">
+			<GridView android:id="@+id/videoItems"
+		     android:layout_width="wrap_content" 
+		     android:layout_height="wrap_content" 
+		     android:stretchMode="columnWidth"
+		     android:numColumns="3"
+		     android:scrollbars="none"></GridView>
+	    </RelativeLayout>
+	
+	    <LinearLayout
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="16"
+	        android:gravity="right" >
+	    </LinearLayout>
+	</LinearLayout>
+	
+    
+	<!--=========================================== Central ==============================================-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/content_backgroundcentr"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_below="@id/mid">
+		<ScrollView
+		    android:id="@+id/scrollViewCentral"
+		    android:layout_width="480px"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="180px"
+		    android:layout_marginTop="60px"
+		    android:scrollbarStyle="insideOverlay"
+		    android:scrollbars="none"
+		    android:orientation="vertical" >
+	
+			<LinearLayout
+			    android:id="@+id/linearLayoutCentral"
+			    android:layout_width="844dp"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical" >
+			    
+			    <!-- recently views and related videos -->
+	
+				<LinearLayout
+				    android:id="@+id/linearLayoutCentralOne"
+				    android:layout_width="609dp"
+				    android:layout_height="match_parent"
+				    android:orientation="vertical" >
+	
+				    <!-- recently viewed -->
+	
+				    <RelativeLayout
+				        android:id="@+id/linearLayoutBigImage"
+				        android:layout_width="442px"
+			            android:layout_height="280px"
+				        android:layout_marginTop="10dip"
+							android:layout_gravity="center"  >
+	
+				        <ImageView
+				            android:id="@+id/youtubeBigImageView"
+				            android:layout_width="442px"
+				            android:layout_height="280px"
+				            android:src="@drawable/videos_bg2"/>
+	
+				        <ImageView
+				            android:id="@+id/youtubeBigImagePlay"
+				            android:layout_width="150px"
+				            android:layout_height="150px"
+				            android:layout_marginLeft="150px"
+				            android:layout_marginTop="60px"
+				            android:scaleType="fitXY"
+				            android:src="@drawable/youtube_play_btn" />
+				    </RelativeLayout>
+
+				    <com.oregonscientific.meep.customfont.MyTextView
+				        android:id="@+id/txtvideoTitleOfRecentlyViewed"
+				        style="@style/customfont_textview"
+				        android:layout_width="630dp"
+				        android:layout_height="wrap_content"
+				        android:gravity="center" />
+	
+				    <TextView
+				        android:id="@+id/youtubeViewCountBig"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_gravity="center_vertical|right"
+				        android:layout_marginBottom="5px"
+				        android:layout_marginRight="45px"
+				        android:layout_marginTop="5px"
+				        android:shadowColor="@android:color/black"
+				        android:shadowRadius="2"
+				        android:text=""
+				        android:textColor="@android:color/white"
+				        android:textSize="20dip" >
+				    </TextView>
+	
+				    <!-- related videos -->
+				    <!--
+	                     <TextView android:text="@string/youtubeLabelRelated" 
+				            		android:layout_width="wrap_content" 
+				            		android:layout_height="wrap_content" 
+				            		android:layout_marginTop="10px"
+				            		android:textStyle="bold"
+				            		android:textSize="30dip"
+				            		android:id="@+id/youtubeIdLabelRelated"
+				            		android:shadowColor="@android:color/black"
+				            		android:shadowRadius="2"
+				            		android:textColor="@android:color/white"></TextView>
+				    -->
+
+				</LinearLayout>
+				
+				<!-- Search results -->
+				<!-- <LinearLayout
+				    android:id="@+id/linearLayoutCentralTwo"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="vertical" 
+				    android:visibility="gone">
+					<TextView android:text="@string/youtube_title_search_results"
+					    android:layout_width="wrap_content" 
+				        android:layout_height="wrap_content" 
+				        android:textStyle="bold"
+				        android:textSize="30dip"
+				        android:id="@+id/youtubeIdLabelSearchResults"
+				        android:shadowColor="@android:color/black"
+				        android:shadowRadius="2"
+				        android:textColor="@android:color/white"></TextView>
+					<TextView android:text=""
+					    android:layout_width="wrap_content" 
+				        android:layout_height="wrap_content" 
+				        android:textStyle="bold"
+				        android:textSize="20dip"
+				        android:shadowColor="@android:color/black"
+				        android:shadowRadius="2"
+				        android:id="@+id/youtubeIdLabelSearchResultsCount"
+				        android:textColor="@color/customPink"></TextView>
+				</LinearLayout> -->
+				
+				<!-- video context -->
+				<LinearLayout
+				    android:id="@+id/linearLayoutCentralThree"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="vertical"
+				    android:layout_marginTop="25dip"
+				    android:layout_marginLeft="10dip"
+				    android:visibility="gone">
+					<com.oregonscientific.meep.youtube.FlowLayout 
+				 		android:id="@+id/flowLayoutCentral"
+						 android:layout_width="fill_parent" 
+						 android:layout_height="0px">
+					</com.oregonscientific.meep.youtube.FlowLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</ScrollView>
+		
+	
+	<!--==================================================================================================-->
+	    <com.oregonscientific.meep.customfont.MyTextView
+	        android:id="@+id/content_title"
+	        style="@style/customfont_textview"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:text="@string/recently"
+	        android:visibility="gone" />
+	
+	    <android.support.v4.view.ViewPager
+	        android:id="@+id/viewpager"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_below="@id/content_title"
+	        android:visibility="gone" />
+	
+	    <com.oregonscientific.meep.customfont.MyTextView
+	        android:id="@+id/MyTextView01"
+	        style="@style/customfont_textview"
+	        android:textColor="@color/white"
+	        android:layout_width="630dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	        android:gravity="center"
+	        android:text="@string/recently" />
+	
+	    <com.oregonscientific.meep.customfont.MyTextView
+	        android:id="@+id/youtubeIdLabel"
+	        style="@style/customfont_textview"
+	        android:layout_width="630dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/scrollViewCentral"
+	        android:layout_alignParentBottom="true"
+	        android:gravity="center"
+	        android:text="@string/recently"
+	         android:visibility="gone"  />
+
+	</RelativeLayout>
+</RelativeLayout>

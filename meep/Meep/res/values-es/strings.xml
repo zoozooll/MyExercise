@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">MEEP</string>
+	<string name="construct_bad_word_list">Elaborando una lista negra de palabras...</string>
+	
+	<!--  titles -->
+    <string name="title_notice">Aviso</string>
+    <string name="title_timeout">¡Se acabó el tiempo!</string>
+    <string name="title_oops">¡Vaya!</string>
+    <string name="title_success">¡Éxito!</string>
+    
+    <!-- alert messages -->
+    <string name="alert_launch_register">¡Registra tu MEEP!X2 antes de usar %1$s! Solicita el permiso de tus padres para poder registrar tu MEEP!X2 en el portal paterno MEEP! Together y cambiar los ajustes de %2$s.</string>
+    <string name="alert_launch_online">Conéctate a Internet para poder usar %1$s. ¿Quieres conectarte ahora a la red WiFi?</string>
+    <string name="alert_permission_denied">Esta acción ha sido bloqueada por tus padres. Pídeles permiso para que te cambien los ajustes parentales.</string>
+    <string name="alert_permission_timeout">Solicita permiso a tus padres para modificar los ajustes parentales para poder tener más tiempo para jugar.</string>
+    
+    <!-- buttons -->
+    <string name="alert_button_ok">Aceptar</string>
+    <string name="alert_button_cancel">Cancelar</string>
+
+</resources>

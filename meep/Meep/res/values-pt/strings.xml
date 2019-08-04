@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="app_name">MEEP</string>
+    <string name="construct_bad_word_list">Criando lista de Palavras Censuradas...</string>
+    <string name="title_notice">Atenção</string>
+    <string name="title_timeout">Tempo esgotado!</string>
+    <string name="title_oops">Oops!</string>
+    <string name="title_success">Pronto!</string>
+    <string name="alert_launch_register">Por favor, registre seu MEEP! X2 antes de utilizar o %1$s! Peça aos seus pais para registrarem seu MEEP! X2 através do Portal Parental MEEP! Together e para modificarem as configurações para %2$s.</string>
+    <string name="alert_launch_online">Por favor, conecte-se à Internet para poder utilizar o %1$s. Você gostaria de se conectar à uma rede Wi-Fi agora?</string>
+    <string name="alert_permission_denied">Esta ação foi bloqueada pelos seus pais. Por favor, peça-os que modifiquem as configurações do controle parental para você.</string>
+    <string name="alert_permission_timeout">Peça aos seus pais que modifiquem as configurações do controle parental se quiser jogar por mais tempo!</string>
+    <string name="alert_button_ok">OK</string>
+    <string name="alert_button_cancel">Cancelar</string>
+
+</resources>

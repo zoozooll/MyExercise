@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">meep</string>
+  <string name="notice">おっと！</string>
+  <string name="ok">OK</string>
+  <string name="yes">はい</string>
+  <string name="no">いいえ</string>
+  <string name="delete">削除</string>
+  <string name="delete_sure">本当に削除しますか？</string>
+  <string name="msg_null">名前を入力してください</string>
+  <string name="msg_error">ブラックワードリストによりブロックされました</string>
+  <string name="msg_blocked">すでに使用されています。別の名前を入力してください。</string>
+  <string name="msg_rename_same">すでに使用されている名前です。別の名前を入力してください。</string>
+  <string name="msg_system_file">デフォルトCDの名前は変更できません</string>
+  <string name="msg_system_file_movie">デフォルト動画の名前は変更できません</string>
+  <string name="msg_system_file_ebook">デフォルトEブックの名前は変更できません</string>
+  <string name="music_title_rename_error">名前変更エラー</string>
+  <string name="proceed">進む</string>
+</resources>

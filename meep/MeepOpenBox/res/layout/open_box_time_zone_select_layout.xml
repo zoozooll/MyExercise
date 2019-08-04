@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:text="http://schemas.android.com/apk/res/com.oregonscientific.meep.meepopenbox"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/openbox_bg_01"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp" >
+
+        <com.oregonscientific.meep.meepopenbox.view.TopNumberView
+            android:id="@+id/arrow01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            text:number="@string/title_bar_number_one" />
+
+        <com.oregonscientific.meep.widget.OutlinedTextView
+            android:id="@+id/title_number"
+            style="@style/big_title_number_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-70dp"
+            android:layout_toRightOf="@+id/arrow01"
+            android:gravity="top"
+            text:text="@string/title_bar_number_two"
+            text:textSize="180" />
+
+        <com.oregonscientific.meep.widget.OutlinedTextView
+            android:id="@+id/title"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/title_icon"
+            text:outlineColor="@color/number_stroke"
+            text:outlineWidth="8"
+            text:scaleX="0.8"
+            text:text="@string/timezone_selection"
+            text:textSize="64" />
+
+        <com.oregonscientific.meep.meepopenbox.view.TopNumberView
+            android:id="@+id/arrow03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/arrow04"
+            text:number="@string/title_bar_number_three" />
+
+        <com.oregonscientific.meep.meepopenbox.view.TopNumberView
+            android:id="@+id/arrow04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            text:number="@string/title_bar_number_four" />
+
+        <ImageView
+            android:id="@+id/title_icon"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-10dp"
+            android:layout_toRightOf="@id/title_number"
+            android:background="@drawable/openbox_icon_timezone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/openbox_popup02"
+        android:padding="11dip" >
+
+        <RelativeLayout
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="20dp" >
+
+            <ListView
+                android:id="@+id/timeZoneSelectListView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:paddingRight="20dp"
+                android:choiceMode="singleChoice"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:fadeScrollbars="false"
+                android:overScrollMode="never"                
+                android:scrollbarStyle="outsideInset"
+                android:scrollbarThumbVertical="@drawable/openbox_scroll_note"
+                android:scrollbarTrackVertical="@color/background_half_trans" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="45dp" >
+
+        <Button
+            android:id="@+id/timeZoneSelectBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/openbox_backbtn_normal" />
+
+        <com.oregonscientific.meep.widget.StrokedTextView
+            android:id="@+id/timeZoneSelectBackText"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:layout_gravity="center"
+            android:text="@string/back_btn_text"
+            android:textSize="30sp"
+            text:textStrokeColor="@color/number_stroke"
+            text:textStrokeWidth="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="45dp" >
+
+        <Button
+            android:id="@+id/timeZoneSelectNextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/openbox_nextbtn_normal" />
+
+        <com.oregonscientific.meep.widget.StrokedTextView
+            android:id="@+id/timeZoneSelectNextText"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:text="@string/next_btn_text"
+            android:textSize="30sp"
+            text:textStrokeColor="@color/number_stroke"
+            text:textStrokeWidth="4" />
+    </LinearLayout>
+
+</RelativeLayout>

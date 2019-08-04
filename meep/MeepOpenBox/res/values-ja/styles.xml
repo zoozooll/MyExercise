@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="title_of_parental_setting_page" parent="text">
+          <item name="textSize">48</item>       
+    </style>
+</resources>

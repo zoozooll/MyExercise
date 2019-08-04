@@ -1,0 +1,22 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fill_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="10dp">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="30dip"
+        android:layout_height="30dip" />
+
+    <TextView 
+        android:text="@string/main_page_logs_show_more"
+        android:visibility="gone"
+        android:id="@+id/showMore" 
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="0dp"
+        style="@style/TextLogsInfo"/>
+</LinearLayout> 

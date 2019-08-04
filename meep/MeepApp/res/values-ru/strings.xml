@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepGameActivity!</string>
+    <string name="app_name">MeepApp</string>
+	<string name="app_btn_ring_delete">Удалить</string>
+	<string name="app_title_heads_up">Осторожно!</string>
+	<string name="app_msg_unprotected_web">"Ты будешь перенаправлен на незащищенный веб-сайт."</string>
+	<string name="app_msg_protected_web">Ты\ будешь перенаправлен на защищенный сайт третьей стороны.</string>
+	<string name="app_btn_proceed">Выполнено</string>
+	<string name="app_title_uh_oh">Ну и ну!</string>
+	<string name="app_msg_xxx_5mins">У тебя осталось только 5 минут для использования запуска приложений.</string>
+	<string name="app_title_times_up">Время\вышло!</string>
+	<string name="app_msg_try_again_xxx">Извини, ты не можешь\использовать запуск приложений в данный момент. Попробуй еще раз через %1$d минут!</string>
+	<string name="app_btn_ok">OK</string>
+	<string name="app_msg_short_timer_reminder_xxx">Таймер напоминаний - Запуск приложений</string>
+	<string name="app_msg_short_timeup_xxx">Время\ вышло! -Запуск приложенийr</string>
+	<string name="app_title_update">Обновление</string>
+	<string name="app_msg_update_xxx_timer_changed">Таймер Запуска приложений был переустановлен на %1$d.</string>
+	<string name="app_msg_update_xxx">Обновление - Запуск приложений</string>
+	<string name="app_msg_permission_use_xxx">Ура! Сейчас ты можешь использовать Запуск приложений.</string>
+	<string name="app_msg_permission_approval_xxx">"Извини, тебе нужно подождать подтверждение от родителей перед тем как использовать Запуск приложений."</string>
+	<string name="app_btn_approval">Запросить подтверждение</string>
+	<string name="app_msg_approval_sent">Запрос подтверждения отправлен!</string>
+	<string name="app_msg_permission_xxx_notgiven">Извини, ты не можешь использовать Запуск приложений сейчас,  потому что подтверждение не было дано.</string>
+	<string name="app_title_blocked">Заблокировано</string>
+	<string name="app_msg_short_blocked_xxx">Заблокировано - Запуск приложений</string>
+	<string name="app_msg_notallowed_unprotected_web">Извини, у тебя нет разрешения для перехода на незащищенный сайт.</string>
+	<string name="app_msg_notallowed_protected_web">Извини, у тебя нет разрешения для перехода на защищенный сайт.</string>
+	<string name="app_title_approved">Подтверждено!</string>
+	<string name="app_msg_xxx_approved">Твой запрос на использование Запуска приложений был подтвержден.</string>
+	<string name="app_btn_go">Начали!</string>
+	<string name="app_msg_short_approved_xxx">Подтверждено - Запуск приложений</string>
+	<string name="app_title_refused">Отказано!</string>
+	<string name="app_msg_xxx_refused">Извини, твой запрос на использование Запуска приложений получил отказ.</string>
+	<string name="app_msg_short_refused_xxx">Отказано - Запуск приложений</string>
+	<string name="app_title_sudden_change">Неожиданное изменение доступа</string>
+	<string name="app_msg_sudden_parental_change">Извини, ты не можешь сейчас использовать это приложение, поскольку настройки доступа на Родительском Портале были изменены.</string>
+	<string name="app_btn_ask_access">Запросить доступ</string>
+	<string name="app_msg_access_request_sent">Запрос доступа отправлен!</string>
+	<string name="app_title_version_update">Обновление версии</string>
+	<string name="app_msg_available_upgrade">Для данного приложения имеется обновление, хотите обновить?</string>
+	<string name="app_btn_yes">Да</string>
+	<string name="app_btn_no">Нет</string>
+	<string name="app_msg_xxx_available_update">Обновление - %1$s %2$s - Доступна версия обновления</string>
+	<string name="app_title_content_upgrade">Обновление содержания</string>
+	<string name="app_msg_content_upgrade_purchase">Содержание будет обновлено после завершения покупки приложения.</string>
+	<string name="app_msg_short_content_upgrade">Обновление содержания - покупка приложения.</string>
+</resources>

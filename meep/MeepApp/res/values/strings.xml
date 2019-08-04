@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepGameActivity!</string>
+    <string name="app_name">Games &amp; Apps</string>
+	<string name="app_btn_ring_delete">Delete</string>
+	<string name="app_title_heads_up">Heads up!</string>
+	<string name="app_msg_unprotected_web">"You’re about to be redirected to an unprotected website."</string>
+	<string name="app_msg_protected_web">You\'re about to be redirected to a protected third party website.</string>
+	<string name="app_btn_proceed">Proceed</string>
+	<string name="app_title_uh_oh">Uh-oh!</string>
+	<string name="app_msg_xxx_5mins">You only have 5 mins left to use the App Launcher.</string>
+	<string name="app_title_times_up">Time\'s up!</string>
+	<string name="app_msg_try_again_xxx">Sorry, you can\'t use the App Launcher right now. Try again in %1$d mins!</string>
+	<string name="app_btn_ok">OK</string>
+	<string name="app_msg_short_timer_reminder_xxx">Timer reminder - App Launcher</string>
+	<string name="app_msg_short_timeup_xxx">Time\'s up! - App Launcher</string>
+	<string name="app_title_update">Update</string>
+	<string name="app_msg_update_xxx_timer_changed">The App Launcher timer has been changed to %1$d.</string>
+	<string name="app_msg_update_xxx">Update - App Launcher</string>
+	<string name="app_msg_permission_use_xxx">Yeah! You are free to use the App Launcher now.</string>
+	<string name="app_msg_permission_approval_xxx">"Sorry, you need to wait for your parent's approval before you can use the App Launcher."</string>
+	<string name="app_btn_approval">Ask for approval</string>
+	<string name="app_msg_approval_sent">Approval request sent!</string>
+	<string name="app_msg_permission_xxx_notgiven">Sorry, you can\'t use the App Launcher right now as approval has not been given.</string>
+	<string name="app_title_blocked">Blocked</string>
+	<string name="app_msg_short_blocked_xxx">Blocked - App Launcher</string>
+	<string name="app_msg_notallowed_unprotected_web">Sorry, you are not allowed to be redirected to an unprotected website.</string>
+	<string name="app_msg_notallowed_protected_web">Sorry, you are not allowed to be redirected to a protected website.</string>
+	<string name="app_title_approved">Approved!</string>
+	<string name="app_msg_xxx_approved">Your request to use the App Launcher has been approved.</string>
+	<string name="app_btn_go">Go!</string>
+	<string name="app_msg_short_approved_xxx">Approved - App Launcher</string>
+	<string name="app_title_refused">Refused!</string>
+	<string name="app_msg_xxx_refused">Sorry, your request to use the App Launcher has been refused.</string>
+	<string name="app_msg_short_refused_xxx">Refused - App Launcher</string>
+	<string name="app_title_sudden_change">Sudden access change</string>
+	<string name="app_msg_sudden_parental_change">Sorry, you can\'t use this application at the moment as the access setting in the Parent Portal has been changed.</string>
+	<string name="app_btn_ask_access">Ask for access</string>
+	<string name="app_msg_access_request_sent">Access request sent!</string>
+	<string name="app_title_version_update">Version update</string>
+	<string name="app_msg_available_upgrade">There is an upgrade available for this app, do you want to upgrade?</string>
+	<string name="app_btn_yes">Yes</string>
+	<string name="app_btn_no">No</string>
+	<string name="app_msg_xxx_available_update">Update - %1$s %2$s - Version update available</string>
+	<string name="app_title_content_upgrade">Content upgrade</string>
+	<string name="app_msg_content_upgrade_purchase">Your content will be upgraded after completing the in-app purchase.</string>
+	
+	<string name="app_msg_short_content_upgrade">Content upgrade - in-app purchase.</string>
+    
+</resources>

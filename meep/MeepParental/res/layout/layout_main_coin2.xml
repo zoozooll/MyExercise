@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ParentLayoutStyle" >
+
+    <!-- bar shadow -->
+    <!--
+         <View android:layout_below="@id/actionBar"
+ 		 style="@style/BarShadow"/>
+    -->
+
+    <ViewFlipper
+        android:id="@+id/coinflipper"
+        style="@style/fill_parent"
+        android:layout_below="@id/actionBar"
+        android:layout_marginTop="-10dp"
+        >
+
+        <!-- 1 -->
+
+        <include
+            android:id="@+id/LayoutCoinAllocate"
+            layout="@layout/layout_main_coin_allocate" />
+        <!-- 2 -->
+
+        <include
+            android:id="@+id/LayoutCoinConfirm"
+            layout="@layout/layout_main_coin_confirm"/>
+        <!-- 3 -->
+
+        <include
+            android:id="@+id/LayoutCoinSuccess"
+            layout="@layout/layout_main_coin_success"/>
+    </ViewFlipper>
+
+    <!-- action bar -->
+
+    <FrameLayout
+        android:id="@+id/actionBar"
+        style="@style/ActionBar" >
+
+        <LinearLayout
+            style="@style/wrap_content"
+            android:layout_gravity="left|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/barImageButtonBack"
+                style="@style/BarImageButton_Main"
+                android:contentDescription="@string/main_button_back"
+                android:src="@drawable/topbar_arrow_icon" />
+
+            <View style="@style/BarDivider" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/AccountTitle"
+            style="@style/BarTitle"
+            android:text="@string/main_page_coins_allocate_title" />
+        <!--
+        <LinearLayout 
+			    android:layout_gravity="right|center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content">
+			    <View  style="@style/BarDivider"/>
+				<ImageButton
+				    android:id="@+id/barImageButtonKid"
+				    android:src="@drawable/topbar_select_child_icon" 
+				    android:contentDescription="@string/main_button_kid"
+				    style="@style/BarImageButton_Main"/>
+		        
+	    </LinearLayout>
+        -->
+    </FrameLayout>
+
+</RelativeLayout>

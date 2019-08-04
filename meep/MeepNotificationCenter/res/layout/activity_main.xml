@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:text="http://schemas.android.com/apk/res/com.oregonscientific.meep.notification"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/notifications_bg" >
+
+    <com.oregonscientific.meep.notification.view.MessageListView
+        android:id="@+id/notifications_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="false"
+        android:listSelector="@android:color/transparent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="30dp" />
+
+    <LinearLayout
+        android:id="@+id/notification_center_remove_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/clean_all"
+        android:paddingLeft="50dp" >
+
+        <com.oregonscientific.meep.widget.OutlinedTextView
+            style="@style/custom_textview_notification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="20dp"
+            text:text="@string/remove_all"
+            text:textColor="@android:color/white"
+            android:gravity="center"
+            text:textSize="24" />
+    </LinearLayout>
+
+</RelativeLayout>

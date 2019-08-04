@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	<string name="app_name">meep</string>
+   	<string name="notice">¡Vaya!</string>
+   	<string name="ok">Aceptar</string>   	
+   	
+   	<string name="yes">Sí</string>   	
+   	<string name="no">No</string>   
+   	
+   	
+	<string name="delete">Eliminar</string>
+	<string name="delete_sure">¿Estás seguro de que deseas eliminar el archivo?</string>	
+	
+	<string name="msg_null">Por favor, introduce un nombre</string>	
+	<string name="msg_error">La palabra que usaste está bloqueada por la lista negra de palabras.</string>	
+	<string name="msg_blocked">Ese nombre ya existe. Inténtalo con otro nombre.</string>
+	<string name="msg_rename_same">Este nombre ya está en uso. Por favor, inténtalo con otro nombre.</string>
+	<string name="msg_system_file">El nombre del CD no se puede cambiar.</string>	
+	<string name="msg_system_file_movie">El nombre de la película no se puede cambiar.</string>	
+	<string name="msg_system_file_ebook">El nombre del eBook no se puede cambiar.</string>	
+	<string name="music_title_rename_error">Error al cambiar de nombre</string>
+   	<string name="proceed">Proceder</string>   	
+</resources>

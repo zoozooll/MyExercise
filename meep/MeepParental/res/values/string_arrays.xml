@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_gender">
+	    <item>Male</item>
+	    <item>Female</item>
+	</string-array>
+    <string-array name="start_using">
+	    <item>Payment Confirm</item>
+	    <item>Create Child Account</item>
+	    <item>Finish!</item>
+	</string-array>
+    <string-array name="apps_string">
+	    <item>Apps</item>
+	    <item>Game &amp; Apps</item>
+	    <item>Movie</item>
+	    <item>Music</item>
+	    <item>E-Book</item>
+	    <item>Photo &amp; Camera</item>
+	    <item>Browser</item>
+	    <item>YouTube</item>
+	    <item>Communicator</item>
+	    <item>MEEP! Store Purchase</item>
+	    <item>In-App Purchase on the MEEP! Store</item>
+	    <item>Google Play ™ Items</item>
+	    <item>Suggested Websites &amp; YouTube Videos only</item>
+	    <item>Bad words Filtering</item>
+	</string-array>
+    <string-array name="time_string">
+	    <item>Blocked</item>
+	    <item>15 Minutes</item>
+	    <item>30 Minutes</item>
+	    <item>1 Hour</item>
+	    <item>2 Hours</item>
+	    <item>4 Hours</item>
+	    <item>8 Hours</item>
+	    <item>12 Hours</item>
+	    <item>Unlimited</item>
+	</string-array>
+    <string-array name="unit_string">
+	    <item>Unlimited</item>
+	    <item>Hours</item>
+	    <item>Hour</item>
+	    <item>Minutes</item>
+	    <item>Blocked</item>
+	</string-array>
+    <string-array name="permission_string">
+	    <item>Blocked</item>
+	    <item>Approval Needed</item>
+	    <item>Full Access</item>
+	</string-array>
+    <string-array name="menu_string">
+	    <item>Activities</item>
+	    <item>Notifications</item>
+	    <item>Child Account</item>
+	    <item>Parental Settings</item>
+	    <item>Logout</item>
+	</string-array>
+    <string-array name="country_string">
+	    <item>Australia</item>
+	    <item>Brazil</item>
+	    <item>France</item>
+	    <item>Germany</item>
+	    <item>Italy</item>
+	    <item>Spain</item>
+	    <item>United Kingdom</item>
+	    <item>United States</item>
+	    <item>Japan</item>
+	    <item>Korea</item>
+	    <item>None of the Above</item>
+	</string-array>
+	
+</resources>

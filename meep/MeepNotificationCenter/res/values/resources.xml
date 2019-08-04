@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MessageBox">
+        <!-- define attribute for set the message box with top of background drawable -->
+        <attr name="topBackground" format="reference|color"></attr>
+        <!-- define attribute for set the message box with content of background drawable -->
+        <attr name="contentBackground" format="reference|color"></attr>
+        <!-- define attribute for set the message box with bottom of background drawable -->
+        <attr name="bottomBackground" format="reference|color"></attr>
+        <!-- define reference id of message box button -->
+        <attr name="handleButton" format="reference"></attr>
+        <!-- define attribute of message box expand button drawable-->
+        <attr name="expandDrawable" format="reference|color"></attr>
+         <!-- define attribute of message box collapse button drawable-->
+        <attr name="collapseDrawable" format="reference|color"></attr>
+    </declare-styleable>
+    
+   	<declare-styleable name="MessageBoxItem">
+   	       	    <!-- define attribute of style for message box item -->
+   	    <attr name="style">
+   	        <enum name="defaultStyle" value="0"></enum>
+   	        <enum name="choiceBox" value="1"></enum>
+   	        <enum name="progressBar" value="2"></enum>
+   	        <enum name="customStyle" value="3"></enum>
+   	    </attr>
+   	</declare-styleable>
+</resources>

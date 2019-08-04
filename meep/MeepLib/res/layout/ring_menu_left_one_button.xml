@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/one_button_left"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#b0000000">
+    
+    <RelativeLayout android:id="@+id/onecontentLayoutleft"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left|top"
+    android:background="#00000000">
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/one_button_left"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" > -->
+
+        <ImageView
+	        android:id="@+id/ring_left_one3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="0px"
+	        android:layout_marginTop="10px"
+	        android:src="@drawable/ring_menu_ring_center_circle_bg" />
+        
+        <ImageView
+	        android:id="@+id/ring_center3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="63px"
+	        android:layout_marginTop="76px" />
+        
+        <ImageButton
+	        android:id="@+id/ring_menu_right_one3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="74px"
+	        android:layout_marginTop="21px"
+	        android:src="@drawable/ring_menu_right" />
+        
+        <ImageView
+	        android:id="@+id/ring_menu_right_selection_one3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="85px"
+	        android:layout_marginTop="20px"
+	        android:src="@drawable/ring_menu_right_selection"
+	        android:visibility="gone" />
+        
+        <ImageView
+	        android:id="@+id/delete3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="115px"
+	        android:layout_marginTop="77px"
+	        android:src="@drawable/ring_delete" />
+        
+        <ImageView
+	        android:id="@+id/delete_glow3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="115px"
+	        android:layout_marginTop="77px"
+	        android:src="@drawable/ring_delete_glow"
+	        android:visibility="gone" />
+
+</RelativeLayout>
+</FrameLayout>

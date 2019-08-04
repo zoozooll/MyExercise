@@ -1,0 +1,302 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:panel="http://schemas.android.com/apk/res/com.oregonscientific.meep.home"
+    xmlns:menuitem="http://schemas.android.com/apk/res/com.oregonscientific.meep.home"
+    xmlns:menuheader="http://schemas.android.com/apk/res/com.oregonscientific.meep.home"
+    xmlns:contentLayout="http://schemas.android.com/apk/re/com.oregonscientific.meep.home"
+    xmlns:meep="http://schemas.android.com/apk/re/com.oregonscientific.meep.home"
+    xmlns:handle="http://schemas.android.com/apk/re/com.oregonscientific.meep.home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false" >
+
+    <View
+        android:id="@+id/left_menu_bottom_bg"
+        android:layout_width="395dp"
+        android:layout_height="57dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="-45dp"
+        android:background="@drawable/menu_left_bottom" >
+    </View>
+
+    <View
+        android:id="@+id/right_menu_bottom_bg"
+        android:layout_width="390dp"
+        android:layout_height="57dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-10dp"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/menu_right_bottom" >
+    </View>
+
+    <!-- left menu -->
+
+    <RelativeLayout
+        android:id="@+id/left_panel_relativelayout"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/left_menu_bottom_bg"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:clipChildren="false"
+        android:clipToPadding="false" >
+
+        <com.oregonscientific.meep.home.view.DrawerPanel
+            android:id="@+id/leftPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            panel:backgroundDrawable="@drawable/menu_left_bg"
+            panel:content="@+id/leftPanelContent"
+            panel:handle="@+id/leftPanelHandleLayout"
+            panel:tapArea="@+id/left_tap_area"
+            panel:position="bottom" >
+
+            <com.oregonscientific.meep.home.view.ContentLayout
+                android:id="@+id/leftPanelRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" >
+
+                <View
+                    android:layout_width="370dp"
+                    android:layout_height="125px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/left_m_top" >
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp" >
+
+                    <com.oregonscientific.meep.home.view.HeaderMenuItem
+                        android:id="@+id/leftPanelHandleLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        menuheader:closedDrawable="@drawable/down_btn"
+                        menuheader:openedDrawable="@drawable/up_btn"
+                        menuheader:panelHandle="@+id/leftPanelHandle"
+                        menuitem:menuItemBackground="@drawable/profile"
+                        menuitem:menuItemClickable="false" >
+
+                        <Button
+                            android:id="@+id/leftPanelHandle"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="55dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@null"
+                             />
+
+                        <com.oregonscientific.meep.home.view.HeaderProfileView
+                            android:id="@+id/left_menu_header_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_centerInParent="true"
+                            android:paddingRight="10dp" />
+                    </com.oregonscientific.meep.home.view.HeaderMenuItem>
+
+                    <View
+                        android:id="@+id/left_tap_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="-5dp"
+                        >
+                    </View>
+                </RelativeLayout>
+            </com.oregonscientific.meep.home.view.ContentLayout>
+
+            <com.oregonscientific.meep.home.view.ContentLayout
+                android:id="@+id/leftPanelContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginTop="-28dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                contentLayout:backgroundPaddingLeft="20"
+                contentLayout:backgroundPaddingRight="20" >
+
+                <View
+                    android:layout_width="360dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/left_m_content" />
+
+                <com.oregonscientific.meep.home.view.FadingScrollView
+                    android:id="@+id/menu_item_scrollview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="25dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:fadingEdgeLength="0sp"
+                    android:overScrollMode="always"
+                    android:paddingTop="3dp"
+                    android:requiresFadingEdge="none"
+                    android:scrollbars="none" >
+
+                    <include
+                        android:id="@+id/left_menu_item_content"
+                        layout="@layout/menu_content_left" />
+                </com.oregonscientific.meep.home.view.FadingScrollView>
+
+                <View
+                    android:id="@+id/scrollview_fading_up"
+                    android:layout_width="340dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="48dp"
+                    android:background="@drawable/gradient"
+                    android:visibility="gone" >
+                </View>
+            </com.oregonscientific.meep.home.view.ContentLayout>
+        </com.oregonscientific.meep.home.view.DrawerPanel>
+    </RelativeLayout>
+
+    <!-- right menu -->
+
+    <RelativeLayout
+        android:id="@+id/right_panel_relativelayout"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/right_menu_bottom_bg"
+        android:layout_alignParentRight="true"
+        android:clipChildren="false"
+        android:clipToPadding="false" >
+
+        <com.oregonscientific.meep.home.view.DrawerPanel
+            android:id="@+id/rightPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            panel:tapArea="@+id/right_tap_area"            
+            panel:content="@+id/rightPanelContent"
+            panel:handle="@+id/rightPanelHandleArea"
+            panel:position="bottom" >
+
+            <com.oregonscientific.meep.home.view.ContentLayout
+                android:id="@+id/rightPanelRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right" >
+
+                <View
+                    android:layout_width="365dp"
+                    android:layout_height="123px"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/right_m_top" >
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <com.oregonscientific.meep.home.view.HeaderMenuItem
+                        android:id="@+id/rightPanelHandleLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="bottom"
+                        menuitem:launchPackage="@string/package_meep_settings"
+                        menuheader:panelHandle="@+id/rightPanelHandleArea"                     
+                        menuitem:menuItemBackground="@drawable/settings"
+						menuheader:closedDrawable="@drawable/down_btn"
+                        menuheader:openedDrawable="@drawable/up_btn"
+						>
+                    </com.oregonscientific.meep.home.view.HeaderMenuItem>
+
+                    <com.oregonscientific.meep.home.view.DrawerPanelHandle
+                        android:id="@+id/rightPanelHandleArea"
+                        android:layout_width="160dp"
+                        android:layout_height="135dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="35dp"
+                        menuheader:closedDrawable="@drawable/down_btn"
+                        menuheader:openedDrawable="@drawable/up_btn" >
+                    </com.oregonscientific.meep.home.view.DrawerPanelHandle>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/right_tap_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    >
+                </View>
+            </com.oregonscientific.meep.home.view.ContentLayout>
+
+            <com.oregonscientific.meep.home.view.ContentLayout
+                android:id="@+id/rightPanelContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+				android:layout_marginTop="-5dp"                
+                contentLayout:backgroundPaddingLeft="20"
+                contentLayout:backgroundPaddingRight="20" >
+
+                <View
+                    android:layout_width="360dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/right_m_content" />
+
+                <com.oregonscientific.meep.home.view.FadingScrollView
+                    android:id="@+id/menu_item_scrollview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingBottom="5dp"
+                    android:fadingEdgeLength="0sp"
+                    android:requiresFadingEdge="none"
+                    android:scrollbars="none" >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false"
+                        android:clipToPadding="false" >
+
+                        <include
+                            android:id="@+id/right_menu_item_content"
+                            layout="@layout/menu_content_right" />
+                    </FrameLayout>
+                </com.oregonscientific.meep.home.view.FadingScrollView>
+
+                <View
+                    android:id="@+id/scrollview_fading_up"
+                    android:layout_width="330dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/gradient"
+                    android:visibility="gone" >
+                </View>
+            </com.oregonscientific.meep.home.view.ContentLayout>
+        </com.oregonscientific.meep.home.view.DrawerPanel>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- It is never used at all.The layout_x is 1,000 dip -->
+    <!--
+             <ImageView
+	        android:id="@+id/ring_left"
+	        android:layout_width="60dp"
+	        android:layout_height="40dp"
+	        android:layout_x="1000dp"
+	        android:layout_y="30dp"
+	        android:src="@drawable/ring_left" />
+    -->
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceViewOpenGl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <ImageView
+        android:id="@+id/imageViewFullList"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="980dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="center"
+        android:src="@drawable/btn_full" />
+
+    <ImageView
+        android:id="@+id/imageViewBackLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="560dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/photo_spotlight_big"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="96dp"
+        android:gravity="right"
+        android:singleLine="true"
+        android:text="@string/meep_picture"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/grey"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</FrameLayout>

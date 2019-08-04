@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">MEEP</string>
+	<string name="construct_bad_word_list">Lista Parole escluse...</string>
+	
+	<!--  titles -->
+    <string name="title_notice">Avvertenza</string>
+    <string name="title_timeout">Tempo scaduto</string>
+    <string name="title_oops">Oops!</string>
+    <string name="title_success">Hai avuto Successo!</string>
+    
+    <!-- alert messages -->
+    <string name="alert_launch_register">Si prega di registrare il vostro MEEPX2 prima di poterlo usare %1$s. Chiedere ai genitori di registrare il vostro MEEPx2 sul MEEP!Insieme al Portale dei genitori e ricordarsi di cambiare le impostazioni per il %2$s.</string>
+    <string name="alert_launch_online">Devi andare online per usare %1$s. Vuoi connetterti ora?</string>
+    <string name="alert_permission_denied">Questa operazione e\' bloccata dai genitori. Per avere l\'accesso, chiedete di cambiare le impostazioni.</string>
+    <string name="alert_permission_timeout">Chiedete ai vostri genitori di modificare le impostazioni se desiderate giocare piu\' a lungo!</string>
+    
+    <!-- buttons -->
+    <string name="alert_button_ok">OK</string>
+    <string name="alert_button_cancel">Cancellare</string>
+
+</resources>

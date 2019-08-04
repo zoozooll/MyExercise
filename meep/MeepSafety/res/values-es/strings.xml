@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepSaftyActivity!</string>
+    <string name="app_name">Seguridad y Ayuda</string>
+	<string name="URL_MEEP_STORE">https://store.meeptablet.com/safety</string>
+	<string name="safety_title_uh_oh">¡Oh, oh!</string>
+	<string name="safety_msg_no_network">No hay conexión a Internet. ¡Asegúrate de que tu tableta MEEP! está conectada a la red Wi-Fi!</string>
+    <string name="menu_help">Ayuda</string>
+    <string name="menu_safety">Seguridad</string>
+</resources>

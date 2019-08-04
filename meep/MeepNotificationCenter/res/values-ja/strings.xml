@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">お知らせ</string>
+  <string name="action_settings">設定</string>
+  <string name="hello_world">こんにちは！</string>
+  <string name="choice_box_approvel">承認</string>
+  <string name="choice_box_reject">拒否</string>
+  <string name="remove_all">すべて削除</string>
+  <string name="news">ニュース</string>
+</resources>

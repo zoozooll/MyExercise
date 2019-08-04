@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_background"
+    android:layout_width="406dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/b_left_bg_os"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <com.oregonscientific.meep.customfont.MyTextView
+            android:id="@+id/menu_title_shadow"
+            style="@style/right_menu_title_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/menu_os_recommendations"
+            android:textSize="33sp" />
+
+        <com.oregonscientific.meep.customfont.MyTextView
+            android:id="@+id/menu_title"
+            style="@style/right_menu_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/menu_os_recommendations"
+            android:textSize="33sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_marginTop="-18dp"
+        >
+
+        <ListView
+            android:id="@+id/listview"
+            style="@style/listview"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="5.3" />
+
+        <RelativeLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="-8dp"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:contentDescription="@drawable/b_left_btn"
+                android:scaleType="centerCrop"
+                android:src="@drawable/b_left_btn" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/tab_os"
+                    style="@style/right_menu_button" />
+
+                <Button
+                    android:id="@+id/tab_parents"
+                    style="@style/right_menu_button" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

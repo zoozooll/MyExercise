@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="app_name">Notificações</string>
+    <string name="action_settings">Configurações</string>
+    <string name="hello_world">Olá Mundo!</string>
+    <string name="choice_box_approvel">Aprovar</string>
+    <string name="choice_box_reject">Rejeitar</string>
+    <string name="remove_all">Remover todos</string>
+    <string name="news">Novidades</string>
+
+</resources>

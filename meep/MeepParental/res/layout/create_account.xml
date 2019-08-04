@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    	   	style="@style/fill_parent"
+    	   	android:layout_marginTop="10dp"
+    	   	android:scrollbars="none">
+    <LinearLayout
+        style="@style/LinearInScroll">
+        <TableRow style="@style/wrap_content_vertical"
+	            android:layout_marginBottom="10dp">
+	            <ImageView
+	                style="@style/StepImageRe"
+	                android:contentDescription="@string/step3"
+	                android:src="@drawable/step3_icon" />
+		        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:text="@string/registration_create_account_title"
+			            style="@style/PageSubTitle"/>
+	        </TableRow>
+        <!--  User Icon -->
+        <ImageButton
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_horizontal"
+		        android:layout_margin="20dp"
+		        android:id="@+id/user_icon"
+		        android:src="@drawable/default_user_icon" 
+		        android:contentDescription="@string/main_menu_icon"
+		        android:background="@drawable/image_big_stroke"/>
+        <!-- Registeration Information details-->
+		<!-- Username -->
+		<EditText 
+		    style="@style/listEditText"
+		    android:hint="@string/registration_create_account_username"
+		    android:inputType="text"/>
+		<!-- Password -->
+		<EditText 
+		    android:id="@+id/textSetPassword"
+		    style="@style/listEditText"
+		    android:hint="@string/registration_create_account_setpass"
+		    android:inputType="text"/>
+		<EditText 
+		    android:id="@+id/textConfirmPassword"
+		    style="@style/listEditText"
+	     	android:hint="@string/registration_create_account_conpass"
+		    android:inputType="text"/>
+		<!-- Birthday -->
+		<TableRow 
+			style="@style/wrap_content_vertical"
+			>
+			<EditText
+			    style="@style/listEditText"
+			    android:layout_width="0.0dip"
+			    android:hint="@string/registration_create_account_birthday_day"
+			    android:inputType="datetime"
+			    android:layout_weight="2"/>
+			<EditText
+			    style="@style/listEditText"
+			    android:layout_width="0.0dip"
+			    android:hint="@string/registration_create_account_birthday_month"
+			    android:inputType="datetime"
+			    android:layout_weight="2"/>
+			<EditText
+			    style="@style/listEditText"
+			    android:layout_width="0.0dip"
+			    android:hint="@string/registration_create_account_birthday_year"
+			    android:inputType="datetime"
+			    android:layout_weight="3"/>
+		</TableRow>
+		<!-- Gender -->
+		<EditText 
+		    android:id="@+id/textGender"
+		    style="@style/listEditText"
+		    android:hint="@string/registration_create_account_gender"
+		    android:inputType="text"/>
+		<!-- Person Name -->
+		<TableRow 
+			style="@style/wrap_content_vertical"
+			android:weightSum="2">
+			<EditText 
+			    android:id="@+id/textFirstName"
+			    style="@style/listEditText"
+			    android:layout_width="wrap_content"
+			    android:hint="@string/registration_create_account_name_first"
+			    android:inputType="textPersonName"
+			    android:layout_weight="1"/>
+			<EditText 
+			    android:id="@+id/textLastName"
+			    style="@style/listEditText"
+			    android:layout_width="wrap_content"
+			    android:hint="@string/registration_create_account_name_last"
+			    android:inputType="textPersonName"
+			    android:layout_weight="1"/>
+        </TableRow>
+        <!-- Email Address -->
+		<EditText 
+		    android:id="@+id/textEmail"
+		    style="@style/listEditText"
+		    android:hint="@string/registration_create_account_email"
+		    android:inputType="textEmailAddress"/>
+		<EditText 
+		    android:id="@+id/textConfirmEmail"
+		    style="@style/listEditText"
+		    android:hint="@string/registration_create_account_conemail" 
+		    android:inputType="textEmailAddress"/>
+		<!-- Tel/Mobile -->
+		<EditText 
+		    android:id="@+id/textTelMobile"
+		    style="@style/listEditText"
+		    android:hint="@string/registration_create_account_tel"
+		    android:inputType="phone"/>
+		<!-- Address -->
+		<EditText 
+		    android:id="@+id/textAddress"
+		    style="@style/listEditText"
+		    android:layout_height="96dp"
+		    android:minLines="3"
+		    android:layout_gravity="left|top"
+		    android:hint="@string/registration_create_account_address"
+		    android:inputType="textPostalAddress"/>
+		<!-- Location -->
+		<TableRow android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+	        <TextView
+			    android:text="@string/registration_create_account_location"
+			    style="@style/PageLableSmall"/>
+	        <Spinner
+	            android:id="@+id/spinnerLocation"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"/>
+		</TableRow>
+		<!-- Language -->
+		<TableRow android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+	        <TextView
+			    android:text="@string/registration_create_account_language"
+			    style="@style/PageLableSmall"/>
+	        <Spinner
+	            android:id="@+id/spinnerLanguage"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"/>
+		</TableRow>
+		
+		<FrameLayout android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="@string/registration_create_account_required"
+			    android:layout_gravity="right"
+			    style="@style/PageLableSmall"/>
+		</FrameLayout>
+        <!--  Confirm Button 
+        <Button
+            android:id="@+id/btnConfirmAccount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="@string/common_button_Confirm" />
+            -->
+    </LinearLayout>
+ 
+</ScrollView>

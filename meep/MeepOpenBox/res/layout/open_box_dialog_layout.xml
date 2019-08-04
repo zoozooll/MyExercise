@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:text="http://schemas.android.com/apk/res/com.oregonscientific.meep.meepopenbox"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true" >
+
+    <RelativeLayout
+        android:id="@+id/message_box"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/openbox_popup04"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/OpenBoxNormalText"
+            android:layout_width="470dp"
+            android:layout_height="175dp"
+            android:layout_marginLeft="170dp"
+            android:gravity="left|center_vertical"
+            android:scrollbarThumbVertical="@drawable/openbox_scroll_note"
+            android:scrollbars="vertical"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/message"
+            android:paddingTop="5dp" >
+
+            <RelativeLayout
+                android:id="@+id/dialog_button_left_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:visibility="gone" >
+
+                <ImageButton
+                    android:id="@+id/skipBtn"
+                    style="@style/OpenBoxCommonButton"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone" />
+
+                <com.oregonscientific.meep.widget.OutlinedTextView
+                    android:id="@+id/skipBtnText"
+                    style="@style/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="15dp"
+                    android:visibility="gone"
+                    text:outlineColor="@color/button"
+                    text:outlineWidth="5"
+                    text:text="@string/ok_btn_text"
+                    text:textSize="30" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dialog_button_right_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingRight="30dp"
+                android:visibility="gone" >
+
+                <ImageButton
+                    android:id="@+id/okBtn"
+                    style="@style/OpenBoxCommonButton"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone" />
+
+                <com.oregonscientific.meep.widget.OutlinedTextView
+                    android:id="@+id/okBtnText"
+                    style="@style/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="15dp"
+                    android:visibility="gone"
+                    text:outlineColor="@color/button"
+                    text:outlineWidth="5"
+                    text:text="@string/ok_btn_text"
+                    text:textSize="30" />
+
+                <ImageButton
+                    android:id="@+id/backBtn"
+                    style="@style/OpenBoxCommonButton"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone" />
+
+                <com.oregonscientific.meep.widget.OutlinedTextView
+                    android:id="@+id/backBtnText"
+                    style="@style/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="15dp"
+                    android:visibility="gone"
+                    text:outlineColor="@color/button"
+                    text:outlineWidth="5"
+                    text:text="@string/back_btn_text"
+                    text:textSize="30" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout   
+        xmlns:android="http://schemas.android.com/apk/res/android"   
+        android:orientation="vertical"
+        android:layout_height="135px"
+		android:layout_width="140px"  
+        android:id="@+id/centerListItem"
+		android:background="@layout/center_item_round_shape">
+		<ImageView
+		    android:id="@+id/youtubeImageView"
+		    android:layout_width="135px"
+		    android:layout_height="75px"
+			android:layout_gravity="center"
+			android:layout_marginTop="5dip"/>
+		
+    	<TextView   
+	                android:layout_height="wrap_content"   
+	                android:layout_width="110px"   
+	                android:id="@+id/youtubeTitleShort"
+	                android:layout_gravity="center_horizontal"   
+	                android:textSize="16dip"
+	                android:textStyle="bold"
+	                android:singleLine="true"
+					android:ellipsize="marquee"
+					android:marqueeRepeatLimit="marquee_forever"
+					android:scrollHorizontally="true"
+					android:focusable="true"
+					android:shadowColor="@android:color/black"
+			        android:shadowRadius="1"
+			        android:layout_marginTop="5px"
+			        android:layout_marginBottom="4px"
+					android:textColor="@android:color/white"> 
+	     </TextView>  
+	     
+	     <TextView   
+	                android:layout_height="wrap_content"   
+	                android:layout_width="110px"   
+	                android:id="@+id/youtubeViewCount"   
+	                android:layout_gravity="center_horizontal"
+	                android:textSize="16dip"
+	                android:textStyle="bold"
+	                android:singleLine="true"
+					android:ellipsize="marquee"
+					android:marqueeRepeatLimit="marquee_forever"
+					android:scrollHorizontally="true"
+					android:focusable="true"
+					android:shadowColor="@android:color/black"
+			        android:shadowRadius="1"
+					android:textColor="#FFAEAC"> 
+	    </TextView>
+		
+		
+		<TextView   
+	                android:layout_height="wrap_content"   
+	                android:layout_width="110px"   
+	                android:id="@+id/youtubeId"   
+	                android:textSize="16dip"
+	                android:layout_gravity="center_horizontal"
+	                android:visibility="gone">  
+	    </TextView>  
+	    
+	    <TextView   
+	                android:layout_height="wrap_content"   
+	                android:layout_width="110px"   
+	                android:id="@+id/youtubeTitleLong"   
+	                android:textSize="16dip"
+	                android:layout_gravity="center_horizontal"
+	                android:visibility="gone">  
+	    </TextView>  
+	     
+	    <TextView   
+	                android:layout_height="wrap_content"   
+	                android:layout_width="110px"   
+	                android:id="@+id/youtubeDuration"   
+	                android:textSize="16dip"
+	                android:layout_gravity="center_horizontal"
+	                android:visibility="gone"> 
+	    </TextView>  
+	            
+</LinearLayout>

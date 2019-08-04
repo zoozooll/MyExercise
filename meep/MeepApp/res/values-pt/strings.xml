@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="hello">Olá Mundo!</string>
+    <string name="app_name">Games &amp; Apps</string>
+    <string name="app_btn_ring_delete">Excluir</string>
+    <string name="app_title_heads_up">Preste atenção!</string>
+    <string name="app_msg_unprotected_web">Você está prestes a ser direcionado para um website desprotegido.</string>
+    <string name="app_msg_protected_web">Você está prestes a ser direcionado para um website de terceiro protegido.</string>
+    <string name="app_btn_proceed">Prossiga</string>
+    <string name="app_title_uh_oh">Oops!</string>
+    <string name="app_msg_xxx_5mins">Você tem somente mais 5 minutos para usar os Aplicativos.</string>
+    <string name="app_title_times_up">Tempo esgotado!</string>
+    <string name="app_msg_try_again_xxx">Desculpe, você não pode usar os Aplicativos agora. Tente de novo em %1$d minutos!</string>
+    <string name="app_btn_ok">OK</string>
+    <string name="app_msg_short_timer_reminder_xxx">Lembrete de Tempo - Aplicativos</string>
+    <string name="app_msg_short_timeup_xxx">Tempo esgotado! - Aplicativos</string>
+    <string name="app_title_update">Atualizar</string>
+    <string name="app_msg_update_xxx_timer_changed">O tempo de uso dos Aplicativos foi alterado para %1$d</string>
+    <string name="app_msg_update_xxx">Atualizar - Aplicativos</string>
+    <string name="app_msg_permission_use_xxx">Pronto! Você pode usar os Aplicativos agora.</string>
+    <string name="app_msg_permission_approval_xxx">Desculpe, você precisa aguardar a autorização de seus pais antes de poder usar os Aplicativos.</string>
+    <string name="app_btn_approval">Pedir aprovação</string>
+    <string name="app_msg_approval_sent">Pedido de aprovação enviado!</string>
+    <string name="app_msg_permission_xxx_notgiven">Desculpe, você não pode usar os Aplicativos agora porque a aprovação não foi dada.</string>
+    <string name="app_title_blocked">Bloqueado</string>
+    <string name="app_msg_short_blocked_xxx">Bloqueado - Aplicativos</string>
+    <string name="app_msg_notallowed_unprotected_web">Desculpe, você não tem permissão para ser redirecionado para um website desprotegido.</string>
+    <string name="app_msg_notallowed_protected_web">Desculpe, você não tem permissão para ser redirecionado para um website protegido.</string>
+    <string name="app_title_approved">Aprovado!</string>
+    <string name="app_msg_xxx_approved">Seu pedido para uso dos Aplicativos foi aprovado.</string>
+    <string name="app_btn_go">Vai!</string>
+    <string name="app_msg_short_approved_xxx">Aprovado - Aplicativos</string>
+    <string name="app_title_refused">Recusado!</string>
+    <string name="app_msg_xxx_refused">Desculpe, seu pedido para usar os Aplicativos foi recusado.</string>
+    <string name="app_msg_short_refused_xxx">Recusado - Aplicativos</string>
+    <string name="app_title_sudden_change">Repentina mudança de acesso</string>
+    <string name="app_msg_sudden_parental_change">Desculpe, você não pode usar este aplicativo no momento porque a configuração de acesso no Portal Parental foi modificada.</string>
+    <string name="app_btn_ask_access">Pedir acesso</string>
+    <string name="app_msg_access_request_sent">Pedido de acesso enviado!</string>
+    <string name="app_title_version_update">Atualização da versão</string>
+    <string name="app_msg_available_upgrade">Há uma atualização disponível deste aplicativo, você quer atualizá-lo?</string>
+    <string name="app_btn_yes">Sim</string>
+    <string name="app_btn_no">Não</string>
+    <string name="app_msg_xxx_available_update">Atualizar - %1$s %2$s - Atualização da versão disponível</string>
+    <string name="app_title_content_upgrade">Atualização de conteúdo</string>
+    <string name="app_msg_content_upgrade_purchase">Seu conteúdo será atualizado após a finalização da compra in-app (dentro do aplicativo).</string>
+    <string name="app_msg_short_content_upgrade">Atualização de conteúdo - compra in-app</string>
+
+</resources>

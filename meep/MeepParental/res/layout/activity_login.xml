@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loginMainLayout"
+    style="@style/ParentLayoutStyle" >
+
+    <!--
+    Link to Forget Password 
+	<Button 
+		    android:layout_gravity="bottom"
+		    android:id="@+id/btnLinkToForgetPassword"
+		    android:layout_alignParentBottom="true"
+		    style="@style/wrap_content_vertical"
+		    android:text="@string/login_forget_password"
+		    android:textColor="@color/text_white"
+		    android:layout_height="48dp"
+		    android:gravity="center"
+		    android:background="@drawable/bottom_bar"
+		    android:drawableLeft="@drawable/action_about"/>
+    -->
+
+    <FrameLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/btnLinkToForgetPassword"
+            style="@style/ButtonBottomForget"
+            android:contentDescription="@string/login_forget_password"
+            android:text="@string/login_forget_password" 
+            />
+    </FrameLayout>
+    <!--  -->
+
+    <ScrollView
+        style="@style/fill_parent"
+        android:layout_above="@id/bottomLayout"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            style="@style/LinearInScroll"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="0dp" >
+
+            <ImageButton
+                android:id="@+id/MainTitleImage"
+                style="@style/MainImageButton"
+                android:layout_height="230dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name" />
+            <!--
+            remember me checkbox 
+	        <CheckBox
+	            android:id="@+id/checkBox1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/login_remember" />
+            -->
+            <!-- login choice -->
+
+            <RelativeLayout
+                style="@style/fill_parent"
+                android:layout_weight="1"
+                android:gravity="center" 
+                >
+
+                <LinearLayout
+                    android:id="@+id/layout_login_choose"
+                    style="@style/LinearInScroll"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center" 
+                    android:visibility="visible"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp" >
+
+                        <!-- Login Button -->
+
+                        <Button
+                            android:id="@+id/btnToLogin"
+                            style="@style/CommonButton"
+                            android:text="@string/login_login" />
+
+                        <ImageView
+                            style="@style/ButtonNextArrow"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/arrow_white" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" >
+
+                        <!-- Link to Registration Screen -->
+
+                        <Button
+                            android:id="@+id/btnLinkToRegisterScreen"
+                            style="@style/CommonButton"
+                            android:text="@string/login_create_account" />
+
+                        <ImageView
+                            style="@style/ButtonNextArrow"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/arrow_white" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- login detail -->
+
+                <LinearLayout
+                    android:id="@+id/layout_login_edit"
+                    style="@style/LinearInScroll"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone">
+
+                    <!-- Email TextField -->
+
+                    <EditText
+                        android:id="@+id/loginEmail"
+                        style="@style/listEditText"
+                        android:layout_width="450dp"
+                        android:hint="@string/login_userid"
+                        android:inputType="textEmailAddress|text"
+                        android:text="" 
+                        android:imeOptions="actionNext"
+                        />
+                    <!-- Password TextField -->
+
+                    <EditText
+                        android:id="@+id/loginPassword"
+                        style="@style/listEditText"
+                        android:layout_width="450dp"
+                        android:hint="@string/login_password"
+                        android:inputType="textPassword"
+                        android:text=""
+                        android:imeOptions="actionDone"
+                        />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp" >
+                        <!-- Login Button -->
+                        <Button
+                            android:id="@+id/btnLogin"
+                            style="@style/CommonButton"
+                            android:text="@string/login_login" 
+                            />
+                        <ImageView
+                            style="@style/ButtonNextArrow"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/arrow_white" />
+                    </FrameLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/forgetLayout"
+        style="@style/fill_parent"
+        android:visibility="gone" >
+
+        <include layout="@layout/layout_forget_password" />
+    </FrameLayout>
+    <!--
+    <FrameLayout style="@style/fill_parent"
+	    android:id="@+id/load"
+	    android:visibility="gone">
+		<include layout="@layout/loading"/>
+	</FrameLayout>
+    -->
+
+</RelativeLayout>

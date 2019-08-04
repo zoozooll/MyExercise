@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainAllLayout"
+    style="@style/fill_parent">
+    
+    <!-- Menu under -->
+	<include android:id="@+id/mainMenuLayout"
+	    style="@style/fill_parent"
+	    layout="@layout/layout_main_menu"/>
+	
+    <!-- Main content -->
+    <RelativeLayout
+		android:id="@+id/mainContentLayout"
+    	style="@style/ParentLayoutStyle">
+    	
+		   <ViewFlipper style="@style/fill_parent"
+		       android:id="@+id/flipper"
+		       android:visibility="visible">
+		       <!-- LEVEL 1 -->
+		       <!-- 0 -->
+		       <include layout="@layout/layout_main_portal_setting_select_security_level"
+		           android:id="@+id/LayoutPortalSetting"/>
+		       <!-- 1 -->
+		       <include layout="@layout/layout_main_notification"
+		           android:id="@+id/LayoutNotification"/>
+		   </ViewFlipper>
+		   
+		   <FrameLayout
+	        android:id="@+id/FrameClick"
+	        style="@style/fill_parent" android:visibility="gone">
+		   </FrameLayout>
+    </RelativeLayout>
+    <!-- <FrameLayout style="@style/fill_parent"
+	    android:id="@+id/load"
+	    android:visibility="gone">
+		<include layout="@layout/loading"/>
+	</FrameLayout> -->
+</RelativeLayout>

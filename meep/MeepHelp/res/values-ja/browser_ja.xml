@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+	<string name="browser_ui_meep_logo">MEEP!</string>
+	<string name="browser_info_search">検索</string>
+	<string name="browser_ui_recommend">おすすめ</string>
+	<string name="browser_btn_more">もっと(&#8230;)</string>
+	<string name="browser_info_no_result">該当なし</string>
+	<string name="browser_title_oops">おっと!</string>
+	<string name="browser_msg_web_blocked">ウェブは使用できません!</string>
+	<string name="browser_btn_ok">OK</string>
+	<string name="browser_btn_send_request">リクエストを送る</string>
+	<string name="browser_info_I">|</string>
+	<string name="browser_title_search_result">検索結果</string>
+	<string name="browser_info_no_results">ヒットしませんでした。もしくは結果がブロックされています。</string>
+	<string name="browser_btn_add">追加</string>
+	<string name="browser_btn_rename">名前変更</string>
+	<string name="browser_btn_delete">消去</string>
+	<string name="browser_title_uh_oh">おっと!</string>
+	<string name="browser_msg_xxx_5mins">ウェブブラウザを使える時間は残り５分です！</string>
+	<string name="browser_title_times_up">時間切れ!</string>
+	<string name="browser_msg_try_again_xxx">ごめんなさい、現在ウェブブラウザは使用できません。%1$d分後にもう一度お試しください！</string>
+	<string name="browser_msg_short_timer_reminder_xxx">タイムリマインダー　- ウェブブラウザ</string>
+	<string name="browser_msg_short_timeup_xxx">時間切れ! - ウェブブラウザ</string>
+	<string name="browser_title_update">更新</string>
+	<string name="browser_msg_update_xxx_timer_changed">ウェブブラウザのタイマーが%1$dに変更されました</string>
+	<string name="browser_msg_update_xxx">更新 - ウェブブラウザ</string>
+	<string name="browser_msg_permission_use_xxx">やった! あなたは現在ウェブブラウザを自由に使用できます！</string>
+	<string name="browser_msg_permission_approval_xxx">"ごめんなさい、ウェブブラウザの使用には保護者の承認が必要です。"</string>
+	<string name="browser_btn_approval">承認をたのむ</string>
+	<string name="browser_msg_approval_sent">承認のリクエストが送信されました!</string>
+	<string name="browser_msg_permission_xxx_notgiven">ごめんなさい、まだ承認されていないため、ウェブブラウザを使うことができません。</string>
+	<string name="browser_msg_meep_recommend_updated">あなたの MEEP!おすすめリストが更新されました。</string>
+	<string name="browser_msg_parent_recommend_updated"> 保護者おすすめリストが更新されました。</string>
+	<string name="browser_title_blocked">使用不可</string>
+
+	<string name="browser_msg_short_blocked_xxx">使用不可  - ウェブブラウザ</string>
+	<string name="browser_msg_unprotected_web">ごめんなさい、保護されていないウェブサイトへのアクセスは許可されていません。</string>
+	<string name="browser_msg_protected_web">ごめんなさい、保護されたウェブサイトへのアクセスは許可されていません。</string>
+	<string name="browser_title_approved">承認されました!</string>
+	<string name="browser_msg_xxx_approved">ウェブブラウザ使用許可のリクエストが承認されました。</string>
+	<string name="browser_btn_go">Go!</string>
+	<string name="browser_msg_short_approved_xxx">承認 - ウェブブラウザ</string>
+	<string name="browser_msg_approved_search_function">やった! あなたは現在ウェブブラウザでの検索機能を使用できます！</string>
+	<string name="browser_title_refused">承認されませんでした!</string>
+	<string name="browser_msg_xxx_refused">ごめんなさい、ウェブブラウザ使用許可のリクエストは拒否されました。</string>
+	<string name="browser_msg_short_refused_xxx">拒否 - ウェブブラウザ</string>
+	<string name="browser_msg_refused_search_function">ごめんなさい、ウェブブラウザ内の検索機能使用許可のリクエストは拒否されました。 </string>
+	<string name="browser_title_sudden_change">突然のアクセス変更</string>
+	<string name="browser_msg_sudden_parental_change">ごめんなさい、保護者ポータルのアクセス設定が変更されたため、この機能は現在使用できません。</string>
+	<string name="browser_btn_ask_access">アクセス許可をたのんでみる</string>
+	<string name="browser_msg_access_request_sent">リクエストが送信されました！</string>
+	<string name="browser_title_version_update">バージョンアップデート</string>
+	<string name="browser_msg_available_upgrade">このアプリを最新版に更新できます。更新しますか？</string>
+	<string name="browser_btn_yes">はい</string>
+	<string name="browser_btn_no">いいえ</string>
+	<string name="browser_msg_xxx_available_update">アップデート - %1$s - バージョンアップデート</string>
+    <string name="browser_msg_no_network">ネットワークに接続されていません。\nMEEP!がWi-Fiに接続されているか確認\nしてください！</string>
+    <string name="browser_msg_delete_bookmark">ブックマークを消去しますか？</string>
+    <string name="browser_msg_bookmark_deleted">ブックマークが消去されました。</string>
+    <string name="browser_msg_duplicated_bkmk">ブックマークを複製しました。</string>
+    <string name="browser_msg_cannot_download">ファイルをダウンロードできません。</string>    
+    <string name="browser_ui_bookmarkurl">URL:</string>
+    <string name="browser_ui_bookmarkname">名前:</string>
+    <string name="browser_btn_save">保存</string>
+    <string name="browser_loading">ロード中</string>
+
+    
+</resources>

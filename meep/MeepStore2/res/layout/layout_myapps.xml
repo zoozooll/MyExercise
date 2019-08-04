@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <!-- Left -->
+	<LinearLayout 
+		style="@style/wrap_content"
+		android:layout_alignParentLeft="true"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:orientation="vertical"
+		>
+		<RelativeLayout 
+			style="@style/wrap_content">
+			<Button
+			    android:id="@+id/meepstoreicon"
+			    style="@style/wrap_content"
+			    android:background="@drawable/btn_logo"
+			    android:contentDescription="@string/app_name"
+			    android:src="@drawable/btn_logo"
+			    android:layout_marginBottom="15dp" 
+			    />
+			<TextView 
+			    style="@style/text_white_shadow"
+			    android:layout_marginTop="25dp"
+			    android:layout_marginLeft="135dp"
+			    android:drawableLeft="@drawable/meep_market_arrow"
+			    android:drawablePadding="5dp"
+			    android:text="@string/myapps"
+			    android:textSize="20dp"
+			    android:textColor="@color/text_dark_blue"
+			    android:gravity="center_vertical"
+			    android:textStyle="bold"
+			    />
+			
+		</RelativeLayout>
+	</LinearLayout>
+
+    <RelativeLayout 
+		android:layout_width="wrap_content" 
+		android:layout_height="fill_parent"
+		>
+		<ImageView
+		    android:id="@+id/popup"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentBottom="true"
+		    style="@style/wrap_content"
+		    android:src="@drawable/meep_market_myapps_popup"
+		    android:contentDescription="@string/myapps"/>
+		<ListView
+		    android:id="@+id/listViewMyApp"
+		    style="@style/ListViewStyle"
+		    android:layout_alignLeft="@id/popup"
+		    android:layout_alignTop="@id/popup"
+		    android:layout_marginLeft="46dp"
+		    android:layout_marginTop="20dp"
+		    android:divider="@null"
+		    android:fadingEdge="vertical"
+		    android:fadingEdgeLength="10dp"
+		    ></ListView>
+	</RelativeLayout>
+
+</RelativeLayout>

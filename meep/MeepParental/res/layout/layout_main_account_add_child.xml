@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerLayout"
+    style="@style/ParentLayoutStyle" >
+
+    <!-- action bar -->
+
+    <FrameLayout
+        android:id="@+id/actionBar"
+        style="@style/ActionBar" >
+
+        <LinearLayout
+            style="@style/wrap_content"
+            android:layout_gravity="left|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/barImageButtonBack"
+                style="@style/BarImageButton_Main"
+                android:contentDescription="@string/main_button_back"
+                android:src="@drawable/topbar_arrow_icon" />
+
+            <View style="@style/BarDivider" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/RegisterTitle"
+            style="@style/BarTitle"
+            android:text="@string/main_add_child_title" />
+    </FrameLayout>
+    <!-- next button layout -->
+
+    <ScrollView
+       
+        style="@style/fill_parent"
+        android:layout_above="@id/bottomLayout"
+        android:layout_below="@id/actionBar"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            style="@style/LinearInScroll"
+            android:layout_marginLeft="250dp"
+            android:layout_marginRight="250dp"
+            android:paddingTop="0dp" >
+
+            <TableRow style="@style/wrap_content_vertical" >
+            </TableRow>
+            <!-- User Icon -->
+
+            <ImageButton
+                android:id="@+id/user_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:background="@drawable/image_big_stroke_gray"
+                android:contentDescription="@string/main_menu_icon"
+                android:scaleType="fitCenter"
+                android:src="@drawable/meeper_icon_big" />
+
+            <!-- Registeration Information details -->
+            <!-- Person Name -->
+
+            <TableRow
+                style="@style/wrap_content_vertical"
+                android:weightSum="2" >
+
+                <TextView
+                    style="@style/TextAccountCreateLabel"
+                    android:layout_weight="1"
+                    android:text="@string/registration_create_account_name_first" />
+
+                <TextView
+                    style="@style/TextAccountCreateLabel"
+                    android:layout_weight="1"
+                    android:text="@string/registration_create_account_name_last" />
+            </TableRow>
+
+            <TableRow
+                style="@style/wrap_content_vertical"
+                android:weightSum="2" 
+                >
+
+                <EditText
+                    android:id="@+id/textFirstName"
+                    style="@style/listEditText"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/textLastName"
+                    style="@style/listEditText"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <!-- UserId -->
+
+            <TextView
+                style="@style/TextAccountCreateLabel"
+                android:text="@string/registration_create_account_id" />
+
+            <EditText
+                android:id="@+id/textMeeptag"
+                style="@style/listEditText"
+                android:inputType="text" 
+                android:layout_width="fill_parent"
+                />
+
+            <!-- Birthday -->
+
+            <TextView
+                style="@style/TextAccountCreateLabel"
+                android:text="@string/registration_create_account_birthday" />
+
+            <TableRow
+                style="@style/wrap_content_vertical"
+                android:layout_marginBottom="-5dp" >
+
+                <TextView
+                    style="@style/TextAccountCreateLabel"
+                    android:layout_width="0.0dip"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="2"
+                    android:text="@string/registration_create_account_birthday_day"
+                    android:textStyle="normal" />
+
+                <TextView
+                    style="@style/TextAccountCreateLabel"
+                    android:layout_width="0.0dip"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:text="@string/registration_create_account_birthday_month"
+                    android:textStyle="normal" />
+
+                <TextView
+                    style="@style/TextAccountCreateLabel"
+                    android:layout_width="0.0dip"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:text="@string/registration_create_account_birthday_year"
+                    android:textStyle="normal" />
+            </TableRow>
+
+            <TableRow style="@style/wrap_content_vertical" >
+
+                <EditText
+                    android:id="@+id/textDay"
+                    style="@style/listEditTextSmall"
+                    android:layout_width="0.0dip"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:hint="@string/registration_create_account_birthday_dd"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp" />
+
+                <EditText
+                    android:id="@+id/textMonth"
+                    style="@style/listEditTextSmall"
+                    android:layout_width="0.0dip"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:hint="@string/registration_create_account_birthday_mm"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp" />
+
+                <EditText
+                    android:id="@+id/textYear"
+                    style="@style/listEditTextSmall"
+                    android:layout_width="0.0dip"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    android:hint="@string/registration_create_account_birthday_yyyy"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp" />
+            </TableRow>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <!-- Finish Button -->
+                <Button
+                    android:id="@+id/btnConfirm"
+                    style="@style/CommonButton"
+                    android:contentDescription="@string/common_button_next"
+                    android:text="@string/common_button_confirm" />
+                <ImageView
+                    style="@style/ButtonNextArrow"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/arrow_white" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="hello">MEEPゲームアクティビティーへようこそ！</string>
+  <string name="app_name">ゲーム＆アプリ</string>
+  <string name="app_btn_ring_delete">削除</string>
+  <string name="app_title_heads_up">警告</string>
+  <string name="app_msg_unprotected_web">保護されていないウェブサイトへアクセスしようとしています</string>
+  <string name="app_msg_protected_web">保護された第三者ウェブサイトへアクセスしようとしています</string>
+  <string name="app_btn_proceed">進む</string>
+  <string name="app_title_uh_oh">おっと!</string>
+  <string name="app_msg_xxx_5mins">あと5分でアプリランチャーを使用できなくなります</string>
+  <string name="app_title_times_up">時間切れ!</string>
+  <string name="app_msg_try_again_xxx">現在アプリランチャーは使用できません。%1$d分後にもう一度お試しください！</string>
+  <string name="app_btn_ok">OK</string>
+  <string name="app_msg_short_timer_reminder_xxx">タイマーリマインダー　-　アプリランチャー</string>
+  <string name="app_msg_short_timeup_xxx">時間切れ！　-　アプリランチャー</string>
+  <string name="app_title_update">アップデート</string>
+  <string name="app_msg_update_xxx_timer_changed">アプリランチャータイマーが%1$dに変更されました</string>
+  <string name="app_msg_update_xxx">アップデート　-　アプリランチャー</string>
+  <string name="app_msg_permission_use_xxx">アプリランチャーを自由に使用できます！</string>
+  <string name="app_msg_permission_approval_xxx">アプリランチャーを使用するには保護者の承認が必要です</string>
+  <string name="app_btn_approval">承認をリクエストする</string>
+  <string name="app_msg_approval_sent">リクエストが送信されました!</string>
+  <string name="app_msg_permission_xxx_notgiven">まだ承認されていないためアプリランチャーを使用することができません</string>
+  <string name="app_title_blocked">使用不可</string>
+  <string name="app_msg_short_blocked_xxx">使用不可　-　アプリランチャー</string>
+  <string name="app_msg_notallowed_unprotected_web">保護されていないウェブサイトへのアクセスは許可されていません</string>
+  <string name="app_msg_notallowed_protected_web">保護されたウェブサイトへのアクセスは許可されていません</string>
+  <string name="app_title_approved">承認されました!</string>
+  <string name="app_msg_xxx_approved">アプリランチャーの使用が承認されました</string>
+  <string name="app_btn_go">はじめよう！</string>
+  <string name="app_msg_short_approved_xxx">承認　-　アプリランチャー</string>
+  <string name="app_title_refused">拒否されました！</string>
+  <string name="app_msg_xxx_refused">アプリランチャーの使用が拒否されました</string>
+  <string name="app_msg_short_refused_xxx">拒否　-　アプリランチャー</string>
+  <string name="app_title_sudden_change">急なアクセス変更</string>
+  <string name="app_msg_sudden_parental_change">ペアレントポータルでアクセス設定変更されたためこの機能は現在使用できません。</string>
+  <string name="app_btn_ask_access">アクセス許可をリクエスト</string>
+  <string name="app_msg_access_request_sent">リクエストが送信されました！</string>
+  <string name="app_title_version_update">バージョンアップデート</string>
+  <string name="app_msg_available_upgrade">利用可能なアップデートがあります。アップデートしますか？</string>
+  <string name="app_btn_yes">はい</string>
+  <string name="app_btn_no">いいえ</string>
+  <string name="app_msg_xxx_available_update">アップデート　-　%1$s %2$s　-　バージョンアップデート可能</string>
+  <string name="app_title_content_upgrade">コンテンツアップグレード</string>
+  <string name="app_msg_content_upgrade_purchase">アプリ内で購入完了後アップグレードが開始されます</string>
+  <string name="app_msg_short_content_upgrade">コンテンツアップグレード　-　アプリ内購入</string>
+</resources>

@@ -1,0 +1,204 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oregonscientific.meep.together"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+
+    <!-- Allow to connect with internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:icon="@drawable/parental_setting"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name=".MeepParentalApplication"
+        >
+        <activity
+            android:name=".activity.MeepTogetherSplashScreen"
+            android:screenOrientation="landscape"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleTask"
+            
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="meeptogether" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MeepTogetherLoginActivity"
+            android:screenOrientation="landscape"
+            
+            >
+        </activity>
+        <activity
+            android:name=".activity.MeepTogetherRegistrationActivity"
+            android:screenOrientation="landscape"
+             
+           
+            >
+        </activity>
+        <activity
+            android:name=".activity.MeepTogetherMainActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            >
+
+            <!-- android:configChanges="orientation|keyboardHidden"> -->
+
+        </activity>
+        <activity
+            android:name=".activity.MeepTogetherTermsOfServiceActivity"
+            android:screenOrientation="landscape"
+             
+           
+             >
+        </activity>
+        <activity
+            android:name=".activity.MeepTogetherStartUsingActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+             
+           
+             >
+        </activity>
+        <activity
+            android:name=".activity.MeepTogetherEmailVerifyActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+             
+           
+             >
+        </activity>
+        <activity
+            android:name=".activity.PortalSettingsPermission"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+             
+           
+             >
+        </activity>
+        <activity
+            android:name=".activity.PortalSettingsTimeLimit"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" 
+             
+           
+            >
+        </activity>
+        <activity
+            android:name=".activity.SelectChild"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+             
+           
+             >
+        </activity>
+        <activity
+            android:name=".activity.AddChild"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" 
+             
+           
+            >
+        </activity>
+        <activity
+            android:name=".activity.NotificationProcess"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" 
+             
+           
+            >
+        </activity>
+        <activity
+            android:name=".activity.AccountManage"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" 
+             
+           
+            >
+        </activity>
+        <activity
+            android:name=".activity.AccountEditInfo"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+             
+           
+             >
+        </activity>
+        <activity
+            android:name=".activity.AccountEditInfoKid"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" 
+             
+           
+            >
+        </activity>
+        <activity
+            android:name=".activity.AccountEditInfoParent"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+             
+           
+             >
+        </activity>
+        <activity
+            android:name=".activity.AccountInviteSupervisor"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+             
+           
+             >
+        </activity>
+        <activity
+            android:name=".activity.CoinAllocation"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize" 
+             
+           
+            >
+        </activity>
+        <activity
+            android:name=".activity.MeepTogetherExistAccountActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" 
+             
+           
+            >
+        </activity>
+        <activity
+            android:name=".activity.ImagePickerActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            >
+        </activity>
+        <activity
+            android:name=".activity.PortalSettingsDefinedLevel"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize" 
+            >
+            </activity>
+        <activity
+            android:name=".activity.PortalSettingsCustomLevel"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize" 
+            >
+            </activity>
+    </application>
+
+</manifest>

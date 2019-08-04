@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="hello">Meepセーフティーアクティビティーにようこそ!</string>
+  <string name="app_name">Meepセーフティー</string>
+  <string name="URL_MEEP_STORE">https://store.meeptablet.com/safety</string>
+  <string name="safety_title_uh_oh">おっと!</string>
+  <string name="safety_msg_no_network">インターネットに接続されていません！WiFiに接続してください。</string>
+  <string name="menu_help">ヘルプ</string>
+  <string name="menu_safety">セーフティー</string>
+</resources>

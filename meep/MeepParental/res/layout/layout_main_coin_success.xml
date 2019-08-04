@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fill_parent">
+	<!-- dialog title bar -->
+	<LinearLayout 
+	    android:id="@+id/dialogBar"
+	    style="@style/LinearDialog">
+	    <TextView 
+   		    style="@style/MainPageTitle"
+   		    android:text="@string/main_page_coins_allocate_label"/>
+   	</LinearLayout>
+	<!-- listview main page -->
+	<LinearLayout 
+	    style="@style/OutOfListView"
+	    android:id="@+id/outListKids"
+	    android:layout_below="@id/dialogBar">
+		<LinearLayout style="@style/fill_parent"
+		    android:background="@color/item_bkg_two"
+		    android:orientation="vertical"
+		    android:paddingLeft="20dp"
+		    android:paddingRight="20dp"
+		    android:gravity="center_horizontal"
+		    android:layout_marginRight="10dp"
+		    >
+			<ImageView 
+			    android:id="@+id/success"
+			    style="@style/wrap_content"
+			    android:src="@drawable/success1"
+			    android:layout_marginBottom="-10dp"
+			    android:layout_marginTop="30dp"
+			    android:contentDescription="@string/main_page_coins_allocate_3"
+			    android:layout_height="120dp"/>
+			<LinearLayout style="@style/wrap_content_vertical"
+			    android:orientation="horizontal"
+			    android:gravity="center_horizontal"
+			    android:layout_marginLeft="80dp"
+			    android:layout_marginRight="80dp"
+			    >
+			    <RelativeLayout style="@style/wrap_content">
+					<ImageView
+						android:layout_width="64dp"
+						android:layout_height="64dp"
+						android:id="@+id/coin_user_icon2"
+						android:src="@drawable/default_user_icon" 
+						android:contentDescription="@string/main_menu_icon"
+						android:background="@drawable/image_stroke"
+						android:layout_marginTop="10dp"
+						android:scaleType="fitCenter"
+						/>
+					<TextView 
+						android:id="@+id/allocateName3"
+						android:layout_marginTop="3dp"
+						style="@style/wrap_content"
+						android:textColor="@android:color/black"
+						android:layout_centerHorizontal="true"
+						android:text="@string/main_page_coins_allocate_23"
+						android:layout_below="@id/coin_user_icon2"
+						android:textSize="16dp"/>
+			    </RelativeLayout>
+			    <TextView 
+					style="@style/TextChildrenInfo"
+					android:paddingLeft="10dp"
+					android:paddingRight="5dp"
+					android:text="@string/main_page_coins_allocate_3"
+					/>
+			    
+			    <RelativeLayout style="@style/wrap_content_horizontal"
+			        android:layout_marginRight="-12dp"
+			        android:layout_marginLeft="-12dp">
+			        <EditText 
+					    android:id="@+id/coin"
+					    style="@style/listEditText"
+					    android:textStyle="bold"
+					    android:text="@string/main_page_coins_allocate_11"
+					    android:textColor="@color/text_red"
+					    android:gravity="center"
+					    android:layout_centerVertical="true"
+					    android:paddingRight="48dp"
+					    android:background="@drawable/coins_field02"
+					    android:inputType="number"
+					    android:clickable="false"
+					    android:focusable="false"/>
+			        <ImageView
+					    android:layout_width="36dp"
+					    android:layout_height="36dp"
+					    android:layout_marginRight="50dp"
+					    android:layout_centerVertical="true"
+					    android:layout_alignParentRight="true"
+					    android:src="@drawable/account_coins"
+					    android:contentDescription="@string/main_menu_coin"/>
+			    </RelativeLayout>
+			</LinearLayout>
+			<Button
+		        android:id="@+id/btnClose"
+		        android:text="@string/common_button_close"
+		        android:layout_marginBottom="20dp"
+		        android:contentDescription="@string/common_button_invite" 
+		       	style="@style/CommonButton"/>
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

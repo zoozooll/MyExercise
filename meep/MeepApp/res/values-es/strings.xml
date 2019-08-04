@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepGameActivity!</string>
+    <string name="app_name">Juegos y Apps</string>
+	<string name="app_btn_ring_delete">Eliminar</string>
+	<string name="app_title_heads_up">¡Atención!</string>
+	<string name="app_msg_unprotected_web">Estás a punto de ser redirigido a un sitio web desprotegido.</string>
+	<string name="app_msg_protected_web">Estás a punto de ser redirigido a un sitio web de terceros protegido.</string>
+	<string name="app_btn_proceed">Proceder</string>
+	<string name="app_title_uh_oh">¡Oh, oh!</string>
+	<string name="app_msg_xxx_5mins">Solo te quedan 5 minutos de acceso a Apps.</string>
+	<string name="app_title_times_up">¡Se acabó el tiempo!</string>
+	<string name="app_msg_try_again_xxx">Lo siento, no puedes acceder a las aplicaciones en este momento. ¡Inténtalo de nuevo en %1$d minuto(s)!</string>
+	<string name="app_btn_ok">OK</string>
+	<string name="app_msg_short_timer_reminder_xxx">Recordatorio de tiempo - Apps</string>
+	<string name="app_msg_short_timeup_xxx">¡Se acabó el tiempo! - Apps</string>
+	<string name="app_title_update">Actualizar</string>
+	<string name="app_msg_update_xxx_timer_changed">El tiempo de acceso a Apps ha cambiado a %1$d</string>
+	<string name="app_msg_update_xxx">Actualizar - Apps</string>
+	<string name="app_msg_permission_use_xxx">¡Sí! Ahora puedes utilizar el Apps libremente.</string>
+	<string name="app_msg_permission_approval_xxx">Lo siento, necesitas esperar a la aprobación de tus padres antes de acceder a Apps.</string>
+	<string name="app_btn_approval">Solicitar aprobación</string>
+	<string name="app_msg_approval_sent">¡Solicitud de aprobación enviada!</string>
+	<string name="app_msg_permission_xxx_notgiven">Lo siento, no puedes acceder a Apps en este momento, ya que no se ha dado la aprobación.</string>
+	<string name="app_title_blocked">Bloqueado</string>
+	<string name="app_msg_short_blocked_xxx">Bloqueado - Apps</string>
+	<string name="app_msg_notallowed_unprotected_web">Lo siento, no te está permitido redirigirte a un sitio web desprotegido.</string>
+	<string name="app_msg_notallowed_protected_web">Lo siento, no te está permitido redirigirte a un sitio web protegido.</string>
+	<string name="app_title_approved">¡Aprobada!</string>
+	<string name="app_msg_xxx_approved">Tu solicitud para acceder a Apps ha sido aprobada.</string>
+	<string name="app_btn_go">¡Ir!</string>
+	<string name="app_msg_short_approved_xxx">Aprobada - Apps</string>
+	<string name="app_title_refused">¡Rechazada!</string>
+	<string name="app_msg_xxx_refused">Lo siento, tu solicitud para acceder a Apps ha sido rechazada.</string>
+	<string name="app_msg_short_refused_xxx">Rechazada - Apps</string>
+	<string name="app_title_sudden_change">Cambio de acceso repentino</string>
+	<string name="app_msg_sudden_parental_change">Lo siento, no puedes usar esta aplicación en este momento, ya que la configuración de acceso en el portal matriz ha cambiado.</string>
+	<string name="app_btn_ask_access">Solicitar acceso</string>
+	<string name="app_msg_access_request_sent">¡Solicitud de acceso enviada!</string>
+	<string name="app_title_version_update">Actualización de versión</string>
+	<string name="app_msg_available_upgrade">Hay una actualización disponible para esta aplicación, ¿quieres actualizarla?</string>
+	<string name="app_btn_yes">Sí</string>
+	<string name="app_btn_no">No</string>
+	<string name="app_msg_xxx_available_update">Actualizar - %1$s %2$s - Actualización de versión disponible</string>
+	<string name="app_title_content_upgrade">Actualización de contenido</string>
+	<string name="app_msg_content_upgrade_purchase">Tu contenido se actualizará una vez completada  la compra en esta aplicación.</string>
+	
+	<string name="app_msg_short_content_upgrade">Actualización de contenido - compra en la aplicación.</string>
+</resources>

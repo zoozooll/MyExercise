@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="meep_mainpage">mainpage</string>
+    
+    <!--  Communicator Wheel -->
+
+    	<string name="mainpage_title_group">Group</string>
+        <string name="mainpage_btn_group_family">Family</string>
+        <string name="mainpage_btn_group_school">School</string>
+        <string name="mainpage_btn_group_friends">Friends</string>
+        <string name="mainpage_btn_group_grouplist">Group List</string>
+        <string name="mainpage_btn_group_addgroup">Add Group </string>
+        
+        <!--  Entertainment Wheel -->
+        <string name="mainpage_title_menu">Menu</string>
+        <string name="mainpage_btn_movie">Videos</string>
+        <string name="mainpage_btn_picture">Pictures</string>
+        <string name="mainpage_btn_music">Music</string>
+        <string name="mainpage_btn_game">Games</string>
+        <string name="mainpage_btn_app">Apps</string>
+
+        <string name="mainpage_btn_ebook">e-Books</string>
+
+        <string name="mainpage_btn_youtube">YouTube</string>
+        <string name="mainpage_btn_browser">Web Browser</string>
+        <string name="mainpage_btn_camera">Camera</string>
+        <string name="mainpage_btn_settings">Settings</string>
+		<string name="mainpage_btn_safe">Safety</string>
+		<string name="mainpage_btn_help">Help</string>	
+        <string name="mainpage_btn_others">Others</string>
+        
+        <!--  Short Notifications -->
+        <string name="mainpage_title_uh_oh">Uh-oh!</string>
+        <string name="mainpage_msg_xxx_5mins_left">You only have 5 mins left to use the %1$s %2$s.</string>
+        <string name="mainpage_title_approved">Approved!</string>
+        <string name="mainpage_msg_xxx_approved">%1$s %2$s - Your request to use %3$s %4$s has been approved!</string>
+        <string name="mainpage_title_refused">Refused!</string>
+        <string name="mainpage_title_coinsadded">%1$d Play Coins added!</string>
+        <string name="mainpage_title_xxx_coins">%1$s %2$s just bought you %3$d Play Coins!</string>
+        
+        <!--  Short notifications - Sharing -->
+        <string name="mainpage_title_websharing">Website sharing</string>
+        <string name="mainpage_msg_xxx_shared_web">%1$s %2$s has shared a website with you. Use the Web Browser to view it.</string>
+        <string name="mainpage_title_vidsharing">Video Sharing</string>
+        <string name="mainpage_msg_xxx_shared_vid">%1$s %2$s has shared a video with you on YouTube.</string>
+        
+        <!--  Short notifications - Friend Status -->
+        <string name="mainpage_info_xxx_online">%1$s %2$s is online</string>
+        <string name="mainpage_info_xxx_offline">%1$s %2$s is offline</string>
+        <string name="mainpage_msg_friend_add">wants to add you as a friend.</string>
+        <string name="mainpage_msg_friend_accepted">Your friend request has been accepted.</string>
+        <string name="mainpage_msg_xxx_accepted_invi">%1$s %2$s has accepted your MEEP! invitation and has now been added to your Friends group.</string>
+        <string name="mainpage_title_meep">MEEP!</string>
+        <string name="mainpage_msg_sent_invi">Your MEEP! invitation has been sent.</string>
+        
+        <!--  Short notifications - Battery Status -->
+        <string name="mainpage_title_batt_charged">MEEP! fully charged!</string>
+        <string name="mainpage_msg_batt_unplug_charger">You can unplug your charger now.</string>
+        <string name="mainpage_title_batt_low">Battery: 10% remaining!</string>
+        <string name="mainpage_msg_batt_plug_charger">Charge your MEEP! Tablet now.</string>
+        
+        <!--  Short notifications (MEEP! Store) -->
+        <string name="mainpage_title_store_downloading">Downloading:</string>
+        <string name="mainpage_title_store_installing">Installing:</string>
+        <string name="mainpage_title_store_completed">Completed!</string>
+        <string name="mainpage_info_store_xxx_minutes">%1$d minutes left</string>
+        <string name="mainpage_info_store_xxx_percent">%1$d%</string>
+        <string name="mainpage_info_store_xxx_percent_complete">Complete!</string>
+        <string name="mainpage_btn_store_open">Open</string>
+        <string name="mainpage_info_store_downloading_xxx">Downloading: %1$s %2$s</string>
+        <string name="mainpage_info_store_installing_xxx">Installing: %1$s %2$s</string>
+        <string name="mainpage_title_short_coinsadded">%1$d Play Coins added!</string>
+        <string name="mainpage_msg_short_xxx_coins">%1$s %2$s just bought you %3$d Play Coins!</string>
+        <string name="mainpage_msg_approved_purchase_xxx">Approved! Purchase of content: %1$s %2$s</string>
+        <string name="mainpage_msg_refused_purchase_xxx">Refused! Purchase of content: %1$s %2$s</string>
+        
+        <!--  Notification - Approval proceeding (for all apps) -->
+        <string name="mainpage_title_approval_inprogress">Approval - In progress</string>
+        <string name="mainpage_title_approval_dl_inprogress">Your request for approval is in progress. Please wait!</string>
+        
+        
+	<string name="mainpage_title_select_language">Select language</string>
+	<string name="mainpage_selection_english">English</string>
+	<string name="mainpage_selection_french">French</string>
+	<string name="mainpage_selection_spanish">Spanish</string>
+	<string name="mainpage_selection_italian">Italian</string>
+	<string name="mainpage_selection_german">German</string>
+	<string name="mainpage_selection_portuguese">Portuguese</string>
+	<string name="mainpage_info_you_have_selected">You have selected</string>
+	<string name="mainpage_info_xxx">%1$s %2$s</string>
+	<string name="mainpage_msg_change_language_settings">You can change the language at any time by accessing Settings.</string>
+	<string name="mainpage_msg_wifi_set_up">Please access Settings with a grown-up to setup WiFi.</string>
+	<string name="mainpage_title_synchronizing">Synchronizing …</string>
+	<string name="mainpage_info_progress_xxx_syned">%1$d%%</string>
+	<string name="mainpage_msg_enough_battery_complete_operation">Make sure that you have enough battery to complete this operation.</string>
+	<string name="mainpage_msg_atleast_xxx_battery_complete_operation">Make sure your battery is at least %1$d%% to complete this operation</string>
+	<string name="mainpage_title_sync_stopped">Synchronization has stopped</string>
+	<string name="mainpage_msg_sync_latest_version">Please go online to synchronize the latest version.</string>
+	<string name="mainpage_btn_try_again">Try again</string>
+	<string name="mainpage_msg_meep_not_registered_online">This MEEP! has not been registered online.</string>
+	<string name="mainpage_msg_sign_up_master_account">Ask your grown-up to sign up for a MEEP! Master account.</string>
+	<string name="mainpage_msg_protected_os_parents_youtube">This app is protected by Oregon Scientific,  your parents and the nice people from YouTube. This means you should have a safe experience while enjoying this app. However, this can never be 100\% guaranteed.But rest assured, we’ll do our very best to keep your viewing experience as kid friendly as possible!</string>
+			
+
+	<string name="mainpage_title_edit_info">Edit info</string>
+	<string name="mainpage_info_name">Name:</string>
+	<string name="mainpage_info_change_photo">Change photo</string>
+	<string name="mainpage_info_choose_from_album">Choose from Album</string>
+	<string name="mainpage_info_take_a_picture">Take a Picture</string>
+	<string name="mainpage_title_welcome_to_meep">Welcome to MEEP!</string>
+	<string name="mainpage_info_what_is_your_name">What is your name?</string>
+		
+		
+		
+		
+		<string name="mainpage_select_user_icon">Select user icon</string>		
+		<string name="mainpage_meep_store">MEEP! Store</string>
+		
+		<string name="mainpage_ebook">EBook</string>
+		<string name="mainpage_music">Music</string>
+		<string name="mainpage_movie">Movie</string>
+		<string name="mainpage_photo">Photo</string>
+		<string name="mainpage_title_rename_error">Rename error</string>
+		<string name="mainpage_msg_rename_error">This destination already contains a file named %1$S. Please check it before renaming this file.</string>
+		<string name="mainpage_msg_name_invalid">The filename cannot start with \".\". Please change the filename</string>
+		
+        
+
+
+</resources>

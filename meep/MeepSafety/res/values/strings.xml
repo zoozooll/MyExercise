@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepSaftyActivity!</string>
+    <string name="app_name">Safety &amp; Help</string>
+	<string name="URL_MEEP_STORE">https://store.meeptablet.com/safety</string>
+	<string name="safety_title_uh_oh">Oh-oh!</string>
+    <string name="safety_msg_no_network">No network connection. Make sure that your MEEP! is connected to the Wi-Fi!</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_safety">Safety</string>
+	
+</resources>

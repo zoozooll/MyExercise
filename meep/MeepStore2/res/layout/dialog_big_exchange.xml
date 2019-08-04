@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/background_half_trans">
+		<ImageView 
+		    android:id="@+id/dialogbg"
+		    style="@style/wrap_content"
+		    android:src="@drawable/meep_market_codepopup_big"
+		     android:contentDescription="@string/app_name"
+		     android:layout_centerHorizontal="true"/>
+		<FrameLayout
+		    style="@style/wrap_content"
+		    android:layout_alignLeft="@id/dialogbg"
+		    android:layout_alignRight="@id/dialogbg"
+		    android:layout_alignTop="@id/dialogbg"
+		    android:layout_alignBottom="@id/dialogbg"
+		    android:paddingLeft="185dp"
+		    android:paddingRight="130dp"
+		    >
+			<TextView 
+			    style="@style/wrap_content"
+			    android:text="@string/exchange_title2"
+			    android:layout_marginTop="110dp"
+			    android:layout_gravity="center_horizontal"
+			    android:textSize="25dp"
+			    android:textStyle="bold"
+			    android:textColor="@color/text_white"/>
+			<TextView
+			    android:id="@+id/textCoins"
+				style="@style/wrap_content"
+				android:drawableLeft="@drawable/meep_market_coinsgroup"
+				android:text="@string/exchange_info"
+				android:textColor="@color/text_dark_blue"
+				android:drawablePadding="10dp"
+				android:textSize="25dp"
+				android:textStyle="bold"
+				android:gravity="center_vertical"
+				android:layout_gravity="center"
+				android:layout_marginTop="30dp"
+				android:layout_marginRight="10dp"
+				
+			/>
+		         
+		     <Button 
+		         android:id="@+id/cancel"
+		         style="@style/dialog_button"
+		         android:layout_gravity="left|bottom"
+		         android:text="@string/cancel"
+		         android:layout_marginBottom="80dp"/>
+		     <Button 
+		         android:id="@+id/confirm"
+		         style="@style/dialog_button"
+		         android:layout_gravity="right|bottom"
+		         android:text="@string/confirm"
+		         android:layout_marginBottom="80dp"/>
+	     </FrameLayout>
+        
+
+</RelativeLayout>

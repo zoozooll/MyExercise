@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbars="none"
+   	style="@style/fill_parent"
+   	android:layout_marginBottom="48dp">
+    <LinearLayout 
+		style="@style/LinearInScroll"
+		android:paddingTop="30dp"
+		android:layout_marginLeft="250dp"
+		android:layout_marginRight="250dp"
+		>
+	   	<TableRow 
+			android:layout_height="80dp"
+			android:layout_width="180dp"
+	   	    android:layout_gravity="center"
+	   	    android:gravity="center_vertical"
+	   	    android:id="@+id/imageStep2">
+	   	    <ImageView style="@style/StepImageButton"
+	   	        android:src="@drawable/start_using_step1_normal" 
+	   	        android:contentDescription="@string/step1"
+	   	        android:layout_weight="5"/>
+	   	    <ImageView style="@style/StepArraw"
+	   	        android:src="@drawable/start_using_arrow_normal" 
+	   	        android:contentDescription="@string/step1"
+	   	        android:layout_weight="2"
+	   	        android:paddingLeft="5dp"/>
+	   	    <ImageView style="@style/StepImageButton"
+	   	        android:src="@drawable/start_using_step2" 
+	   	        android:contentDescription="@string/step2"
+	   	        android:layout_weight="6"/>
+	   	</TableRow>
+	   	<TableRow style="@style/wrap_content_vertical"
+	            android:layout_marginBottom="10dp"
+	            android:gravity="center_vertical">
+	            <ImageView
+	                style="@style/StepImageRe"
+	                android:contentDescription="@string/step2"
+	                android:src="@drawable/step2_icon" />
+		        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:text="@string/registration_email_verify_title"
+			            style="@style/PageSubTitle"
+			            android:textSize="22dp"/>
+        </TableRow>
+    </LinearLayout>
+</ScrollView>

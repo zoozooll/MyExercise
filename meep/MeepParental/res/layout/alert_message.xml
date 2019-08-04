@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_half_trans" >
+
+    <ImageView
+        android:id="@+id/dialogbg"
+        style="@style/fill_parent"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pop_up_white_bubble" />
+
+    <RelativeLayout
+        style="@style/wrap_content"
+        android:layout_alignBottom="@id/dialogbg"
+        android:layout_alignLeft="@id/dialogbg"
+        android:layout_alignRight="@id/dialogbg"
+        android:layout_alignTop="@id/dialogbg" >
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="250dp"
+            android:layout_marginRight="220dp"
+            android:layout_marginTop="150dp"
+            android:orientation="vertical"
+            android:layout_above="@+id/buttons"
+             >
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lineSpacingExtra="20dp"
+                android:text="@string/clear_timer"
+                android:textColor="@android:color/black"
+                android:textSize="25dp" />
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/buttons"
+            style="@style/wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="150dp" >
+
+            <Button
+                android:id="@+id/ok"
+                style="@style/CommonButton"
+                android:layout_width="200dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/btn_blue"
+                android:text="@android:string/ok" />
+
+            <Button
+                android:id="@+id/cancel"
+                style="@style/CommonButton"
+                android:layout_width="200dp"
+                android:background="@drawable/btn_blue"
+                android:text="@android:string/cancel" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

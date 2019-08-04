@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">meep</string>
+	<string name="notice">Oops</string>
+	<string name="ok">OK</string>
+   	
+	<string name="yes">Sì</string>
+	<string name="no">No</string>
+   	
+   	
+	<string name="delete">Elimina</string>
+	<string name="delete_sure">Sei sicuro di voler eliminare il file?</string>
+	
+	<string name="msg_null">Si prega di inserire un nome!</string>
+	<string name="msg_error">La parola usata è bloccata dalla lista parolacce</string>
+	<string name="msg_blocked">Il nome esiste già. Si prega di provarne un altro.</string>
+	<string name="msg_rename_same">Il nome che hai scelto è già presente, si prega di provarne un altro.</string>
+	<string name="msg_system_file">Il CD predefinito non può essere rinominato.</string>
+	<string name="msg_system_file_movie">Il Film predefinito non può essere rinominato.</string>
+	<string name="msg_system_file_ebook">L\'Ebook predefinito non può essere rinominato.</string>
+	<string name="music_title_rename_error">Errore di rinominazione</string>
+	<string name="proceed">Procedi</string>
+</resources>

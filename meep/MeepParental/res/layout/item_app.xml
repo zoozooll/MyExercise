@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="75dp"
+    android:descendantFocusability="blocksDescendants">
+    <LinearLayout
+        style="@style/wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/item_bkg_icon" >
+	    <ImageView
+			        android:id="@+id/apps_icon"
+			        android:layout_width="75dp"
+			        android:layout_height="75dp"
+			        android:layout_gravity="center"
+			        android:scaleType="fitXY"
+			        android:src="@drawable/default_user_icon" 
+			        android:contentDescription="@string/main_menu_icon"
+			        android:background="@null"/>
+    </LinearLayout>
+    <TableRow 
+        style="@style/fill_parent"
+    	android:gravity="center_vertical"
+    	android:weightSum="11"
+    	>
+        <TextView
+            android:id="@+id/textName"
+            style="@style/TextChildrenInfo"
+            android:layout_width="0.0dip"
+            android:layout_weight="6"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/main_text_type_google"
+            android:textSize="25dp" />
+        <LinearLayout style="@style/wrap_content"
+            android:layout_width="0.0dip"
+	    	android:layout_weight="4"
+	    	android:gravity="right">
+		    <TextView
+			    style="@style/TextChildrenInfo"
+			    android:id="@+id/textTime"
+			    android:textStyle="normal"
+			    android:textSize="22dp"
+			    android:text="@string/main_text_time"
+			    android:textColor="@color/text_blue"
+			    />
+		    <TextView
+			    style="@style/TextChildrenInfo"
+			    android:id="@+id/textUnit"
+			    android:textStyle="normal"
+			    android:textSize="22dp"
+			    android:text="@string/main_text_unit"
+			    android:textColor="@color/text_blue"
+			    />
+	    </LinearLayout>
+	    <ImageView 
+	        style="@style/ExpandImage"
+	        android:id="@+id/expand"
+	        android:contentDescription="@string/common_button_next"
+	        android:layout_weight="1"/>
+    </TableRow>
+</LinearLayout>

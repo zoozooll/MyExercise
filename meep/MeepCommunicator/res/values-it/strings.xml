@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Communicator</string>
+	<string name="action_settings">Impostazioni</string>
+	<string name="hello_world">Hello world!</string>
+
+    <!-- Add Friend -->
+	<string name="friend_not_found">Spiacenti! Non troviamo nessun amico. Cerca ancora?</string>
+    
+    
+    <!-- Friend View -->
+	<string name="add_friends">Aggiungi Amici</string>
+	<string name="add">+</string>
+	<string name="add_friend_hint">Hey, %s, voglio aggiungerti come amico</string>
+	<string name="search_friend_hint">Inserisci il MEEP! ID del tuo amico qui</string>
+	<string name="search">Cerca</string>
+	<string name="search_friend">Cerca Amico</string>
+
+    <!-- Conversation View -->
+	<string name="type_chat_hint">Digitare qui per chattare</string>
+	<string name="send">Invia</string>
+
+	<string name="accept">Accetta</string>
+	<string name="decline">Rifiuta</string>
+    
+    <!--  Accept Friend pop up -->
+	<string name="accept_friend_title">Richiesta d\'amicizia </string>
+	<string name="accept_friend">Amicizia Accettata</string>
+	<string name="accept_friend_format_string">%s vorrebbe aggiungerti come amico.</string>
+	<string name="accept_friend_friends_message_format_string">Messaggio da %1$s\n%2$s</string>
+    
+    <!--  Error View -->
+	<string name="ok">OK</string>
+	<string name="error">Oops</string>
+	<string name="error_message_parents_cannot_delete">Genitori e supervisori non possono essere eliminati</string>
+	<string name="blocked">La parola è bloccata dalla lista parolacce.</string>
+	<string name="cannot_process">Bloccato</string>
+	<string name="cannot_add_yourself">Non puoi aggiungerti come amico!</string>
+	<string name="cannot_add_existing_friend">L\'utente è già nella lista amici :)</string>
+	<string name="please_enter_meep_id">Si prega prima di inserire un ID MEEP!</string>
+	<string name="user_already_your_friend">L\'utente è già nella lista amici!</string>
+	<string name="duplicated_friend_request">L\'utente è già nella lista amici!</string>
+    	<string name="no_results">Nessun risultato</string>
+    
+    <!--  Search Friend Error  -->
+	<string name="user_not_found">Spiacenti, non troviamo un amico con quel nome! Si prega di riprovare!</string>
+    
+    <!--  Network Popup -->
+	<string name="oops">Oops</string>
+	<string name="no_network">Devi andare online per usare communicator. Vuoi connetterti ora?</string>
+	<string name="network_try_again">Non sei connesso al nostro server. Si prega di riprovare più tardi o controllare la connessione Wi-Fi.</string>
+    
+    <!--  DeleteFriend Popup -->
+	<string name="delete_friend">Elimina Amico</string>
+	<string name="delete_friend_confirm_format">Vuoi davvero rimuovere %s dalla lista amici?</string>
+	<string name="friend_deleted_message_format">%s è stato eliminato con successo!</string>
+	<string name="yes">Sì</string>
+	<string name="no">No</string>
+    
+    <!--  General error message -->
+	<string name="guest_not_allowed">All\'ospite non è permesso usare la risorsa</string>
+    
+    <!-- Chat message error -->
+	<string name="user_not_online">L\'amico è offline al momento. Si prega di riprovare più tardi</string>
+   	<string name="try_again_later">Si prega di riprovare dopo.</string>
+    
+    <!--  Friend request Popup -->
+	<string name="friend_request_sent">Richiesta Inviata</string>
+    <string name="friend_request_success">La richiesta del tuo amico e\'stata inviata ai tuoi genitori e a quelli del tuo amico per l\'approvazione.</string>
+	<string name="friend_request_pending">La richiesta d\'amicizia è in sospeso. Si prega di attendere.</string>
+    
+    <!--  Frien reques status popup -->
+	<string name="friend_request_result">Risultato Richiesta d\'amicizia</string>
+	<string name="friend_request_self_parent_reject">Spiacenti, i genitori hanno rifiutato la richiesta d\'amicizia con %1$s</string>
+	<string name="friend_request_oppo_parent_reject">Spiacenti, i genitori di %1$s hanno rifiutato la tua richiesta d\'amicizia</string>
+	<string name="friend_request_friend_reject">Spiacenti, %1$s ha rifiutato la tua richiesta d\'amicizia</string>
+	<string name="friend_request_approved">%1$s è ora un tuo amico su MEEP!</string>
+    
+	<string name="nice">Bene!</string>
+	<string name="friend_reject">Il messaggio è stato inviato a %1$s</string>
+
+</resources>

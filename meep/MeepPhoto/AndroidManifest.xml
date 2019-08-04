@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oregonscientific.meep.meepphoto"
+    android:versionCode="15"
+    android:versionName="1.5" >
+
+    <uses-sdk android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:icon="@drawable/photo_0050"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".MeepPhotoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        	<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+				
+               <!--  <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".FullListViewActivity" 
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+              <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+				
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+ 
+        
+        <activity
+            android:name=".MeepPhotoViewPagerActivity" 
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+              <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+				
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/jpeg"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

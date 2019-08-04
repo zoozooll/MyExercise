@@ -1,0 +1,9 @@
+com.oregonscientific.meep
+com.oregonscientific.meep.database
+com.oregonscientific.meep.log
+com.oregonscientific.meep.logging
+com.oregonscientific.meep.msm
+com.oregonscientific.meep.notification
+com.oregonscientific.meep.permission
+com.oregonscientific.meep.recommendation
+com.oregonscientific.meep.util

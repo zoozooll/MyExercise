@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+	<string name="meep_picture">Imagen</string>
+	<string name="picture_btn_ring_rename">Renombrar</string>
+	<string name="picture_btn_ring_delete">Eliminar</string>
+    	
+    	
+    	<!--  MEEP! Together (Parent Portal)- Timer -->
+	<string name="picture_title_uh_oh">¡Oh, oh!</string>
+
+	<string name="picture_title_times_up">¡Se acabó el tiempo!</string>
+	<string name="picture_msg_try_again_xxx">Lo siento, no puedes acceder a Imágenes en este momento.   ¡Inténtalo de nuevo en %1$d minuto(s)!</string>
+	<string name="picture_btn_ok">OK</string>
+    	
+	<string name="picture_msg_short_timer_reminder_xxx">Recordatorio de tiempo - Imágenes</string>
+	<string name="picture_msg_short_timeup_xxx">¡Se acabó el tiempo! - Imágenes</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update -->
+	<string name="picture_title_update">Actualizar</string>
+	<string name="picture_msg_update_xxx_timer_changed">El tiempo de acceso a Imágenes ha cambiado a %1$d.</string>
+	<string name="picture_msg_update_xxx">Actualizar - Imágenes</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Sudden Access Change -->
+	<string name="picture_title_sudden_change">Cambio de acceso repentino</string>
+	<string name="picture_msg_sudden_parental_change">Lo siento, no puedes usar esta aplicación en este momento, ya que la configuración de acceso en el portal matriz ha cambiado.</string>
+	<string name="picture_btn_ask_access">Solicitar acceso</string>
+	<string name="picture_msg_access_request_sent">¡Solicitud de acceso enviada!</string>
+    	
+    	<!--  MEEP! Together (Parent Portal)- Update - Content Version update - New -->
+	<string name="picture_title_version_update">Actualización de versión</string>
+	<string name="picture_msg_available_upgrade">Hay una actualización disponible para esta aplicación, ¿quieres actualizarla?</string>
+	<string name="picture_btn_yes">Sí</string>
+	<string name="picture_btn_no">No</string>
+	<string name="picture_msg_xxx_available_update">Actualizar - %1$s %2$s - Actualización de versión disponible</string>
+    	
+
+	<string name="picture_title_rename_error">Error al renombrar</string>
+	<string name="picture_msg_rename_error">Esta ruta de destino ya contiene un archivo llamado %1$S. Por favor, compruébalo antes de renombrar este archivo.</string>
+	<string name="picture_msg_name_invalid">El nombre del archivo no puede empezar con ".". Por favor, cambia el nombre del archivo.</string>
+	<string name="picture_msg_blocked">No escriba contenido inapropiado. El nombre contiene caracteres inválidos.</string>
+
+</resources>

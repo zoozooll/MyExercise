@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, WebkitTestActivity!</string>
+    <string name="app_name">MeepWebBrowser</string>
+
+    	
+	<string name="browser_ui_meep_logo">MEEP!</string>
+	<string name="browser_info_search">Поиск</string>
+	<string name="browser_ui_recommend">Рекомендовано</string>
+	<string name="browser_btn_more">Еще(&#8230;)</string>
+	<string name="browser_info_no_result">Нет результатов</string>
+	<string name="browser_title_oops">Ой!</string>
+	<string name="browser_msg_web_blocked">Этот сайт был заблокирован! У тебя нет разрешения на использование этого слова в веб-браузере. Попробуй что-то другое!</string>
+	<string name="browser_btn_ok">OK</string>
+	<string name="browser_btn_send_request">Отправить запрос</string>
+	<string name="browser_info_I">|</string>
+	<string name="browser_title_search_result">Поиск результатов</string>
+	<string name="browser_info_no_results">Совпадений не найдено/Результаты заблокированы</string>
+	<string name="browser_btn_add">Добавить</string>
+	<string name="browser_btn_rename">Переименовать</string>
+	<string name="browser_btn_delete">Удалить</string>
+	<string name="browser_title_uh_oh">Ну и ну!</string>
+	<string name="browser_msg_xxx_5mins">У тебя осталось только 5 минут для использования веб-браузера.</string>
+	<string name="browser_title_times_up">Время вышло!</string>
+	<string name="browser_msg_try_again_xxx">, Ты не можешь сейчас использовать веб-браузер. Попробуй снова через %1$d минут!</string>
+	<string name="browser_msg_short_timer_reminder_xxx">Таймер напоминаний - веб-браузер</string>
+	<string name="browser_msg_short_timeup_xxx">Время вышло! - Веб-браузер</string>
+	<string name="browser_title_update">Обновление</string>
+	<string name="browser_msg_update_xxx_timer_changed">Таймер веб-браузера был переустановлен на %1$d</string>
+	<string name="browser_msg_update_xxx">Обновление - Веб-браузер</string>
+	<string name="browser_msg_permission_use_xxx">Ура! Сейчас ты можешь использовать веб-браузер.</string>
+	<string name="browser_msg_permission_approval_xxx">"Извини, тебе нужно подождать подтверждение от родителей для использования веб-браузера."</string>
+	<string name="browser_btn_approval">Запросить подтверждение</string>
+	<string name="browser_msg_approval_sent">Запрос на подтверждение отправлен!</string>
+	<string name="browser_msg_permission_xxx_notgiven">, ты не можешь использовать веб-браузер сейчас, потому что подтверждение не было предоставлено.</string>
+	<string name="browser_msg_meep_recommend_updated">Твой список рекомендаций MEEP! был обновлен.</string>
+	<string name="browser_msg_parent_recommend_updated">Твой список родительских рекомендаций был обновлен.</string>
+	<string name="browser_title_blocked">Заблокировано</string>
+	
+	<string name="browser_msg_short_blocked_xxx">Заблокировано - Веб-браузер</string>
+	<string name="browser_msg_unprotected_web">, у тебя нет разрешения для перехода на незащищенный сайт.</string>
+	<string name="browser_msg_protected_web">, у тебя нет разрешения для перехода на защищенный сайт.</string>
+	<string name="browser_title_approved">Подтверждено!</string>
+	<string name="browser_msg_xxx_approved">Твой запрос на использование веб-браузера был подтвержден.</string>
+	<string name="browser_btn_go">Начали!</string>
+	<string name="browser_msg_short_approved_xxx">Подтверждено - Веб-браузер</string>
+	<string name="browser_msg_approved_search_function">Ура! Сейчас ты можешь использовать функцию Поиск в веб-браузере.</string>
+	<string name="browser_title_refused">Отказано!</string>
+	<string name="browser_msg_xxx_refused">, тебе было отказано в использовании веб-браузера.</string>
+	<string name="browser_msg_short_refused_xxx">Отказано - Веб-браузер</string>
+	<string name="browser_msg_refused_search_function">, твой запрос на использование функции Поиск в веб-браузере был отклонен.</string>
+	<string name="browser_title_sudden_change">Неожиданное изменение доступа</string>
+	<string name="browser_msg_sudden_parental_change">, ты не можешь использовать это приложение сейчас, потому что установки доступа на Родительском Портале были изменены.</string>
+	<string name="browser_btn_ask_access">Запросить доступ</string>
+	<string name="browser_msg_access_request_sent">Запрос доступа отправлен!</string>
+	<string name="browser_title_version_update">Обновление версии</string>
+	<string name="browser_msg_available_upgrade">Доступно обновление для этого приложения, хочешь обновить?</string>
+	<string name="browser_btn_yes">Да</string>
+	<string name="browser_btn_no">Нет</string>
+	<string name="browser_msg_xxx_available_update">Обновление - %1$s - Доступна версия обновления</string>
+    <string name="browser_msg_no_network">Отсутствует сетевое подключение.Убедись, что твой планшет  MEEP! Подключен к Wi-Fi!</string>	
+    <string name="browser_msg_delete_bookmark">Удалить закладку?</string>	
+    <string name="browser_msg_bookmark_deleted">Закладка удалена.</string>	
+    <string name="browser_msg_duplicated_bkmk">Повторяющаяся закладка.</string>	
+    <string name="browser_msg_cannot_download">Нельзя загрузить файл.</string>    	
+    <string name="browser_ui_bookmarkurl">URL-адрес:</string>	
+    <string name="browser_ui_bookmarkname">Имя:</string>	
+    <string name="browser_btn_save">Сохранить</string>	
+    <string name="browser_loading">Загрузка</string>	
+	<string name="browser_suggestion_list">Тебе разрешен только доступ к сайтам, рекомендованным компанией Oregon Scientific и твоими родителями. Если ты хочешь получить доступ к другим сайтам, пожалуйста, попроси твоих родителей поменять их настройки на Родительском портале MEEP! Вместе.</string>
+    	
+</resources>	
+    

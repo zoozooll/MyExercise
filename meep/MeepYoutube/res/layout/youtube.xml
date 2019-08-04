@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/youtubeLayoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/youtube_bg"
+    android:orientation="vertical" >
+    
+<!-- <LinearLayout
+    android:id="@+id/linearLayout00"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="true"
+    android:orientation="horizontal" > -->
+
+<!--=========================================== Central ==============================================-->
+
+	<ScrollView
+	    android:id="@+id/scrollViewCentral"
+	    android:layout_width="480px"
+	    android:layout_height="fill_parent"
+	    android:layout_marginLeft="180px"
+	    android:layout_marginTop="60px"
+	    android:orientation="vertical" >
+
+		<LinearLayout
+		    android:id="@+id/linearLayoutCentral"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" >
+		    
+		    <!-- recently views and related videos -->
+			<LinearLayout
+			    android:id="@+id/linearLayoutCentralOne"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical" >
+			    <!-- recently viewed -->
+			       <TextView android:text="@string/youtubeLabel" 
+			            		android:layout_width="wrap_content" 
+			            		android:layout_height="wrap_content" 
+			            		android:textStyle="bold"
+			            		android:textSize="30dip"
+			            		android:id="@+id/youtubeIdLabel"
+			            		android:shadowColor="@android:color/black"
+			            		android:shadowRadius="2"
+			            		android:textColor="@android:color/white"></TextView>
+			        
+			        <TextView android:text="@string/youtubeCentralTitle" 
+			            		android:layout_width="wrap_content" 
+			            		android:layout_height="wrap_content" 
+			            		android:textSize="25dip"
+			            		android:textStyle="bold"
+			            		android:textColor="@color/customPink"
+			            		android:shadowColor="@android:color/black"
+			            		android:shadowRadius="2"
+			            		android:id="@+id/youtubeCentralTitle"></TextView>
+		
+			    <RelativeLayout
+			        android:id="@+id/linearLayoutBigImage"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dip" >
+					<ImageView
+			            android:id="@+id/youtubeBigImageView"
+			            android:layout_width="440px"
+			            android:layout_height="280px"
+			            android:scaleType="fitXY"
+			            android:src="@drawable/videos_bg" />
+		
+					<ImageView
+			            android:id="@+id/youtubeBigImagePlay"
+			            android:layout_width="150px"
+			            android:layout_height="150px"
+			            android:scaleType="fitXY"
+			            android:layout_marginLeft="150px"
+			            android:layout_marginTop="60px"
+			            android:src="@drawable/youtube_play_btn" />
+			    </RelativeLayout>
+			    
+				<TextView android:text="" 
+		            		android:layout_width="wrap_content" 
+		            		android:layout_height="wrap_content" 
+		            		android:textSize="20dip"
+		            		android:layout_marginRight="45px"
+		            		android:layout_marginTop="5px"
+		            		android:layout_marginBottom="5px"
+		            		android:layout_gravity="center_vertical|right"
+		            		android:shadowColor="@android:color/black"
+			            	android:shadowRadius="2"
+			            	android:textColor="@android:color/white"
+		            		android:id="@+id/youtubeViewCountBig"></TextView>
+				
+				<!-- related videos-->
+				 <!--<TextView android:text="@string/youtubeLabelRelated" 
+			            		android:layout_width="wrap_content" 
+			            		android:layout_height="wrap_content" 
+			            		android:layout_marginTop="10px"
+			            		android:textStyle="bold"
+			            		android:textSize="30dip"
+			            		android:id="@+id/youtubeIdLabelRelated"
+			            		android:shadowColor="@android:color/black"
+			            		android:shadowRadius="2"
+			            		android:textColor="@android:color/white"></TextView>-->
+			</LinearLayout>
+			
+			<!-- Search results -->
+			<LinearLayout
+			    android:id="@+id/linearLayoutCentralTwo"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical" 
+			    android:visibility="gone">
+				<TextView android:text="@string/youtube_title_search_results"
+				    android:layout_width="wrap_content" 
+			        android:layout_height="wrap_content" 
+			        android:textStyle="bold"
+			        android:textSize="30dip"
+			        android:id="@+id/youtubeIdLabelSearchResults"
+			        android:shadowColor="@android:color/black"
+			        android:shadowRadius="2"
+			        android:textColor="@android:color/white"></TextView>
+				<TextView android:text=""
+				    android:layout_width="wrap_content" 
+			        android:layout_height="wrap_content" 
+			        android:textStyle="bold"
+			        android:textSize="20dip"
+			        android:shadowColor="@android:color/black"
+			        android:shadowRadius="2"
+			        android:id="@+id/youtubeIdLabelSearchResultsCount"
+			        android:textColor="@color/customPink"></TextView>
+			</LinearLayout>
+			
+			<!-- video context -->
+			<LinearLayout
+			    android:id="@+id/linearLayoutCentralThree"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:layout_marginTop="25dip"
+			    android:layout_marginLeft="10dip"
+			    android:visibility="gone">
+				<com.oregonscientific.meep.youtube.FlowLayout 
+			 		android:id="@+id/flowLayoutCentral"
+					 android:layout_width="fill_parent" 
+					 android:layout_height="0px">
+				</com.oregonscientific.meep.youtube.FlowLayout>
+				
+			</LinearLayout>
+			
+		
+			
+		</LinearLayout>
+		
+	</ScrollView>
+	
+
+<!--==================================================================================================-->
+
+<!--============================================= Left ===============================================-->
+	<LinearLayout
+	    android:id="@+id/linearLayoutLeft"
+	    android:layout_width="150px"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="1"
+	    android:orientation="vertical"
+	    android:layout_marginLeft="-12dp" >
+	    
+	        <ImageView
+	            android:id="@+id/youtubeLogo"
+	            android:layout_width="match_parent"
+	            android:layout_height="100dip"
+	            android:src="@drawable/youtube_logo" />
+	        
+	</LinearLayout>
+	
+	<ImageView
+            android:layout_width="480px"
+            android:layout_height="350px"
+            android:layout_marginLeft="160px"
+            android:layout_marginTop="75px"
+            android:src="@drawable/youtube_middle_line" />
+	
+    <ImageView
+	    android:id="@+id/youtubeLeftBtnOpen"
+	    android:src="@drawable/youtube_left_btn_normal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="-5dp"
+		android:layout_marginTop="220px" />
+	
+	<ImageView
+	    android:id="@+id/youtubeLeftArrowOpen"
+	    android:src="@drawable/youtube_btn_arrow_right"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginTop="220px" />
+	
+   	<LinearLayout
+		android:id="@+id/linearLayoutLeftList"
+   	    android:layout_marginTop="75px"
+   	    android:layout_width="250px"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+		android:background="@drawable/youtube_left_bar"
+		android:visibility="gone" 
+		>
+    	<ListView
+    	    android:id="@+id/leftListViewYoutube"
+    	    android:layout_width="240px"
+    	    android:layout_marginTop="10dp"
+    	    android:layout_height="wrap_content"
+    	    android:divider="#00000000"
+    	    android:cacheColorHint="#00000000"
+    	    android:listSelector="@android:color/transparent" 
+    	    >
+		</ListView>
+	</LinearLayout>
+   	
+    <ImageView
+	    android:id="@+id/youtubeLeftBtnClose"
+	    android:src="@drawable/youtube_left_btn_normal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="240px" 
+		android:layout_marginTop="220px" 
+		android:visibility="gone"/>
+	
+	<ImageView
+	    android:id="@+id/youtubeLeftArrowClose"
+	    android:src="@drawable/youtube_btn_arrow_left"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="240px" 
+		android:layout_marginTop="220px"
+		android:visibility="gone" />
+   	
+<!--==================================================================================================-->
+
+<!--============================================ Right ===============================================-->
+
+    <ImageView
+        android:id="@+id/youtubeRightBtnClose"
+	    android:src="@drawable/youtube_right_btn_normal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="530px" 
+		android:layout_marginTop="220px"
+		android:visibility="gone" />
+	
+	<ImageView
+	    android:id="@+id/youtubeRightArrowClose"
+	    android:src="@drawable/youtube_btn_arrow_right"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="530px" 
+		android:layout_marginTop="220px"
+		android:visibility="gone" />
+	
+    <ImageView
+        android:id="@+id/youtubeRightBtnOpen"
+	    android:src="@drawable/youtube_right_btn_normal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="770px" 
+		android:layout_marginRight="-5dp"
+		android:layout_marginTop="220px" />
+	
+	<ImageView
+	    android:id="@+id/youtubeRightArrowOpen"
+	    android:src="@drawable/youtube_btn_arrow_left"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="770px" 
+		android:layout_marginTop="220px" />
+    
+	<LinearLayout
+	    android:layout_width="250px"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_marginLeft="550px" >
+    	
+	    
+		<LinearLayout
+		    android:layout_width="250px"
+		    android:layout_height="fill_parent"
+		    android:gravity="center_horizontal"
+		    android:orientation="vertical" >
+		    
+		    	<RelativeLayout
+		    	    android:paddingLeft="50px"
+		    	    android:layout_width="210px"
+		    	    android:layout_height="75px"
+		    	    android:paddingTop="10px"
+		    	    android:orientation="horizontal" >
+		        
+					<EditText
+					    android:id="@+id/youtubeSearchText"
+					    android:layout_width="210px"
+					    android:layout_height="33px"
+					    android:lines="1"
+					    android:hint="@string/youtube_info_search"
+					    android:selectAllOnFocus="true"
+					    android:paddingLeft="10px"
+					    android:background="@layout/edittext_round_shape"
+						android:inputType="text"
+        				android:imeOptions="actionSearch">
+					</EditText>
+		    	</RelativeLayout>
+		    	
+		    	<LinearLayout
+		    	    android:id="@+id/linearLayoutRightList"
+		    	    android:layout_width="250px"
+				    android:layout_height="wrap_content"
+				    android:orientation="vertical" 
+					android:background="@drawable/youtube_right_bar"
+					android:visibility="gone" >
+			    	<ListView
+			    	    android:id="@+id/rightListViewYoutube"
+			    	    android:layout_width="240px"
+			    	    android:layout_marginTop="10dp"
+			    	    android:layout_marginLeft="15px"
+			    	    android:layout_height="wrap_content"
+    	    			android:divider="#00000000"
+    	    			android:cacheColorHint="#00000000"
+    	    			android:listSelector="@android:color/transparent" 
+			    	    >
+					</ListView>
+				</LinearLayout>
+	
+		</LinearLayout>
+	</LinearLayout>
+
+<ImageView
+    android:id="@+id/buttonSearch"
+    android:layout_width="38px"
+    android:layout_height="38px"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="32dp"
+    android:src="@android:drawable/ic_menu_search" />
+ 
+<include
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    layout="@layout/layout_popup" />
+
+</RelativeLayout>

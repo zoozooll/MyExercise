@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepEbookActivity!</string>
+    <string name="app_name">MeepEbook</string>
+	
+    <string name="ebook_btn_ring_delete">Supprimer</string>
+	<string name="ebook_btn_ring_rename">Renommer</string>
+	<string name="ebook_title_heads_up">Attention!</string>
+	<string name="ebook_msg_unprotected_web">Tu t\'apprêtes à être redirigé vers un site internet non protégé.</string>
+	<string name="ebook_msg_protected_web">Tu t\'apprêtes à être redirigé vers un site internet tiers protégé.</string>
+	<string name="ebook_btn_proceed">Continuer</string>
+	<string name="ebook_btn_ebook_bookmark">Marque-page</string>
+	<string name="ebook_title_uh_oh">Oh-oh!</string>
+	<string name="ebook_msg_xxx_5mins">Il ne te reste que 5 mins pour utiliser le Lecteur de Livres Numériques</string>
+	<string name="ebook_title_times_up">Expiration du délai!</string>
+	<string name="ebook_msg_try_again_xxx">Désolé, tu ne peux pas utiliser le Lecteur de Livres Numériques maintenant. Essaye de nouveau dans %1$d mins!</string>
+	<string name="ebook_btn_ok">OK</string>
+	<string name="ebook_msg_short_timer_reminder_xxx">Rappel Minuteur - Lecteur de Livres Numériques</string>
+	<string name="ebook_msg_short_timeup_xxx">Expiration du délai! - Lecteur de Livres Numériques</string>
+	<string name="ebook_title_update">Mise à jour</string>
+	<string name="ebook_msg_update_xxx_timer_changed">"Le minuteur du Lecteur de Livres Numériques est à présent de %1$d"</string>
+	<string name="ebook_msg_update_xxx">Mise à jour - Lecteur de Livres Numériques</string>
+	<string name="ebook_title_blocked">Le texte entré contient un ou plusieurs caractère(s) invalide(s). Essaie autre chose</string>
+	<string name="ebook_msg_sorry_unprotected_web">Désolé, tu n\'es pas autorisé à être redirigé vers un site internet non protégé.</string>
+	<string name="ebook_btn_approval">Demande d\'autorisation</string>
+	<string name="ebook_msg_approval_sent">Demande d\'autorisation envoyée!</string>
+	<string name="ebook_msg_short_blocked_xxx">Bloqué - Lecteur de Livres Numériques</string>
+	<string name="ebook_msg_sorry_protected_web">Désolé, tu n\'es pas autorisé à être redirigé vers un site internet protégé.</string>
+	<string name="ebook_title_sudden_change">Changement d\'accès soudain</string>
+	<string name="ebook_msg_sudden_parental_change">"Désolé, tu ne peux pas utiliser l\'application en ce moment car les réglages d\'accès dans le Portail Contrôle Parental ont été modifiés"</string>
+	<string name="ebook_btn_ask_access">Demande d\'accès</string>
+	<string name="ebook_msg_access_request_sent">Demande d\'accès envoyée!</string>
+	<string name="ebook_title_version_update">Version mise à jour</string>
+	<string name="ebook_msg_available_upgrade">Il existe une version mise à jour de cette application, souhaite-tu effectuer cette mise à jour?</string>
+	<string name="ebook_btn_yes">Oui</string>
+	<string name="ebook_btn_no">Non</string>
+	<string name="ebook_msg_xxx_available_update">"Mise à jour - %1$s %2$s - Version mise à jour disponible"</string>
+
+	<string name="ebook_title_rename_error">Erreur renommer</string>
+	<!-- <string name="ebook_msg_rename_error">Cette destination contient déjà un fichier nommé %1$S . Vérifie avant de renommer ce fichier.</string> -->
+	<string name="ebook_msg_name_invalid">Le nom du fichier ne peut pas commencer avec \".\". Modifie le nom du fichier.</string>
+	<string name="ebook_msg_blocked">Le texte entré contient un ou plusieurs caractère(s) invalide(s). S\'il vous plaît essayer autre chose.</string>
+	<string name="ebook_msg_page_XX">Page</string>
+	<string name="ebook_msg_cannot_play_the_video">Oups! Nous ne pouvons pas lire la vidéo...</string>
+	<string name="ebook_msg_cannot_play_the_audio">Oups! Nous ne pouvons pas lire la piste audio...</string>
+	<string name="ebook_msg_end_of_the_book">C\'est la fin du livre!</string>
+	<string name="ebook_msg_unsopported_ebook">Désolé, nous ne pouvons pas lire cet eBook…</string>
+	<string name="ebook_msg_cannot_open_ebook">Désolé, nous ne pouvons pas ouvrir cet eBook…</string>
+	<string name="ebook_msg_bookmark_added">Marque-page ajouté</string>
+	<string name="ebook_msg_bookmark_deleted">Marque-page supprimé</string>
+	<string name="ebook_msg_bookmark">Marque-page</string>
+	<string name="ebook_msg_first_page">Première page</string>
+	<string name="ebook_msg_end">Fin</string>
+	<string name="ebook_badword_msg">Bloqué</string>
+	<!-- Update -->
+	<string name="ebook_update_title">Important notice</string>
+	<string name="ebook_update_message">We have a brand new e-book reader for you!\nThe e-books you have downloaded must be re-installed from the MEEP! store, for free.</string>
+</resources>
+    

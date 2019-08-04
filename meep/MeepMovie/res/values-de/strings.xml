@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepMovieActivity!</string>
+    <string name="app_name">MeepVideos</string>
+	
+    <string name="meep_video">Videos</string>
+	<string name="video_btn_ring_rename">Umbenennen</string>
+	<string name="video_btn_ring_delete">Löschen</string>
+    	
+   	<!--  MEEP! Together (Parent Portal)- Timer -->
+	<string name="video_title_uh_oh">Oh, oh!</string>
+
+	<string name="video_title_times_up">Die Zeit ist um!</string>
+	<string name="video_msg_try_again_xxx">Tut uns leid, du kannst den Video Player im Moment gerade nicht nutzen. Bitte versuche es später noch einmal.</string>
+	<string name="video_btn_ok">OK</string>
+	<string name="video_msg_short_timer_reminder_xxx">Timer Erinnerung - Video Player</string>
+	<string name="video_msg_short_timeup_xxx">Die Zeit ist um - Video Player</string>
+   	
+   	<!--  MEEP! Together (Parent Portal)- Update -->
+	<string name="video_title_update">Update</string>
+	<string name="video_msg_update_xxx_timer_changed">Der Timer für den Video Player wurde geändert auf %1$d</string>
+	<string name="video_msg_update_xxx">Update - Video Player</string>
+   	
+   	<!--  MEEP! Together (Parent Portal)- Sudden Access Change -->
+	<string name="video_title_sudden_change">Plötzlicher Zugangswechsel</string>
+	<string name="video_msg_sudden_parental_change">Tut uns leid, im Moment kannst du diese Anwendung nicht benutzen, weil die Zugangseinstellungen in der Elternkontrolle geändert wurden.</string>
+	<string name="video_btn_ask_access">Nach Zugang fragen</string>
+	<string name="video_msg_access_request_sent">Zugangsanfrage gesendet</string>
+   	
+   	<!--  MEEP! Together (Parent Portal)- Update - Content Version update - New -->
+	<string name="video_title_version_update">Versions-Update</string>
+	<string name="video_msg_available_upgrade">Für dieses App ist ein Upgrade verfügbar, willst du es upgraden?</string>
+	<string name="video_btn_yes">Ja</string>
+	<string name="video_btn_no">Nein</string>
+	<string name="video_msg_xxx_available_update">Update - %1$s %2$s - Versions-Update verfügbar</string>
+
+	
+	<string name="video_title_rename_error">Fehler beim Umbenennen</string>
+	<!-- <string name="video_msg_rename_error">Der Zielort enthält bereits ein Dokument namens %1$S. Bitte überprüfe es vor der Umbenennung dieser Datei...</string> -->
+	<string name="video_msg_name_invalid">Der Name der Datei darf nicht mit \".\" beginnen. Bitte ändere den Dateinamen.</string>
+	<string name="video_msg_blocked">Bitte keine unangemessenen Inhalte eintippen. Der Name enthält ungültige Zeichen.</string>
+    	
+</resources>

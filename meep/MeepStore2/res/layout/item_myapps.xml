@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/iconMyAppItem"
+        style="@style/image_myapp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7dp"
+        android:contentDescription="@string/item"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/meep_market_recoverybtn"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/icon"
+        style="@style/wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35dp"
+            android:contentDescription="@string/item"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/imageblock"
+            style="@style/image_myapp"
+            android:contentDescription="@string/item"
+            android:scaleType="fitXY"
+            android:src="@drawable/meep_market_description_block" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/icon2"
+        style="@style/wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-10dp"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:id="@+id/imagebook"
+            style="@style/image_myapp"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="52dp"
+            android:contentDescription="@string/item"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/imageblockbook"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:contentDescription="@string/item"
+            android:src="@drawable/meep_market_book_block" />
+    </RelativeLayout>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iconMyAppItem"
+        android:layout_toRightOf="@+id/iconMyAppItem" >
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="15"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="20dp" >
+
+            <TextView
+                android:id="@+id/textMyAppItemName"
+                style="@style/wrap_content"
+                android:text="Name"
+                android:textColor="@color/text_dark_blue"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textMyAppItemInfo"
+                style="@style/wrap_content"
+                android:text="itemInfo"
+                android:textColor="@color/text_dark_blue2"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textMyAppItemSize"
+                style="@style/wrap_content"
+                android:text="size"
+                android:textColor="@color/text_dark_green"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+            
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal" 
+                android:id="@+id/progressBarDownload"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:max="100"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical" >
+
+            <Button
+                android:id="@+id/btnRecover"
+                style="@style/myapps_list_button"
+                android:text="@string/install"/>
+        </LinearLayout>
+    </TableRow>
+
+    
+
+</RelativeLayout>

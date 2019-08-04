@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MeepDBrowser!</string>
+    <string name="app_name">MeepEngineerMode</string>
+    <string name="block_message">Blocked</string>
+    <string name="block_btn">Ok</string>
+    
+</resources>
