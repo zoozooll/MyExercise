@@ -19,7 +19,9 @@ MyExercise source code
 - shelves： 书架源代码，可以背景跟着拖动的GridView
 - AppManagerProject : Application Manager in system rom app
 - ~~CanvasDemo :  No complete.~~
+- Clean Up : An Android resource clean up tool. Using in eclipse project.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzk2ODc1NjVdfQ==
+eyJoaXN0b3J5IjpbLTExMzczMjgwNTksLTIwMzk2ODc1NjVdfQ
+==
 -->
