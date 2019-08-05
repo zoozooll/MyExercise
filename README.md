@@ -20,8 +20,7 @@ MyExercise source code
 - AppManagerProject : Application Manager in system rom app
 - ~~CanvasDemo :  No complete.~~
 - Clean Up : An Android resource clean up tool. Using in eclipse project.
-- 
+- CoralSDK_Co
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzczMjgwNTksLTIwMzk2ODc1NjVdfQ
-==
+eyJoaXN0b3J5IjpbLTY0NDAzMTYwMywtMjAzOTY4NzU2NV19
 -->
