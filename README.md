@@ -23,7 +23,8 @@ MyExercise source code
 - CoralSDK_Cocos2d-x_DemoV:  珊瑚支付框架，结合cocos2dx
 - DisplayingBitmap:  显示Bitmap
 - meep: Meep儿童游戏机app软件集合.
+- FilterPro:  使用Canvas 编辑的nei
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzQ5MjI0OSwxMTUyNzY4NDgyLC00OD
-Y1ODM1NjAsLTIwMzk2ODc1NjVdfQ==
+eyJoaXN0b3J5IjpbLTU5Nzk4ODQwMSwtMTU3NDkyMjQ5LDExNT
+I3Njg0ODIsLTQ4NjU4MzU2MCwtMjAzOTY4NzU2NV19
 -->
