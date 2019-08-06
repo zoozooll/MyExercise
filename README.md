@@ -27,14 +27,14 @@ MyExercise source code
 - HelloFPS:   简单的开源Unity 3D FPS游戏（附教程）
 - Market:   蘑菇软件应用市场。
 - MogooPing:  蘑菇屏
-- ~~orion-viewer-master:  过时~~ 通过[Source Forge LINK](https://sourceforge.net/p/orion-viewer/code/ci/master/tree/)查看最新版本源码
+- ~~orion-viewer-master:  阅读电子书软件，本工程的代码已经过时~~ 通过[Source Forge LINK](https://sourceforge.net/p/orion-viewer/code/ci/master/tree/)查看最新版本源码
 - TwentyFourPointPro： 二十四点游戏DEMO
 - WagonWar： cocos2d-x游戏项目
 - bw121_android： 磅秤项目，包含文档
 - aw133_android： 烧烤仪项目，包含文档
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzM2NjYxNiwtMTYwMjczODk0OSw5OT
-c5MDE3MjIsLTMwNzA3NDgzMywxNDAzODA5OTMyLC0xNTc0OTIy
-NDksMTE1Mjc2ODQ4MiwtNDg2NTgzNTYwLC0yMDM5Njg3NTY1XX
-0=
+eyJoaXN0b3J5IjpbLTMzNzQ3ODUyMywtMTA3MzY2NjE2LC0xNj
+AyNzM4OTQ5LDk5NzkwMTcyMiwtMzA3MDc0ODMzLDE0MDM4MDk5
+MzIsLTE1NzQ5MjI0OSwxMTUyNzY4NDgyLC00ODY1ODM1NjAsLT
+IwMzk2ODc1NjVdfQ==
 -->
