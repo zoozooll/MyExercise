@@ -123,7 +123,7 @@
 
 **[TranslationForAndroid](https://github.com/zoozooll/TranslationForAndroid)** **Android Res strings translation tool**
 
-**[Google android develop source code](https://android.googlesource.com/platform/development.git)**
+**[Google android develop source code](https://android.googlesource.com/platform/development.git)** It may
 
 [**Jasonchenlijian /**](https://github.com/Jasonchenlijian/FastBle) [](https://github.com/Jasonchenlijian/FastBle) [**FastBle**](https://github.com/Jasonchenlijian/FastBle)
 
@@ -182,5 +182,5 @@
 [**igniterealtime /**](https://github.com/igniterealtime/Smack) [](https://github.com/igniterealtime/Smack) [**Smack**](https://github.com/igniterealtime/Smack)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NjY5NjM4XX0=
+eyJoaXN0b3J5IjpbMTUxMTU1MTYxNCwxMjU2Njk2MzhdfQ==
 -->
