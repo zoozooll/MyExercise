@@ -23,8 +23,9 @@ MyExercise source code
 - CoralSDK_Cocos2d-x_DemoV:  珊瑚支付框架，结合cocos2dx
 - DisplayingBitmap:  显示Bitmap
 - meep: Meep儿童游戏机app软件集合.
-- FilterPro:  使用Canvas 编辑的nei
+- FilterPro:  使用Canvas 编辑的图片滤镜
+- HelloFPS:   简单的开源Unity 3D FPS游戏（fu'jiao'cheng）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5Nzk4ODQwMSwtMTU3NDkyMjQ5LDExNT
-I3Njg0ODIsLTQ4NjU4MzU2MCwtMjAzOTY4NzU2NV19
+eyJoaXN0b3J5IjpbNzExMzM3MTA1LC0xNTc0OTIyNDksMTE1Mj
+c2ODQ4MiwtNDg2NTgzNTYwLC0yMDM5Njg3NTY1XX0=
 -->
