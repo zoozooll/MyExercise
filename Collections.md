@@ -123,6 +123,8 @@
 
 **[TranslationForAndroid](https://github.com/zoozooll/TranslationForAndroid)** **Android Res strings translation tool**
 
+**[TranslationForAndroid](https://github.com/zoozooll/TranslationForAndroid)** **Android Res strings translation tool**
+
 [**Jasonchenlijian /**](https://github.com/Jasonchenlijian/FastBle) [](https://github.com/Jasonchenlijian/FastBle) [**FastBle**](https://github.com/Jasonchenlijian/FastBle)
 
 [**wandersnail /**](https://github.com/wandersnail/easyble) [](https://github.com/wandersnail/easyble) [**easyble**](https://github.com/wandersnail/easyble)
@@ -179,3 +181,6 @@
 
 [**igniterealtime /**](https://github.com/igniterealtime/Smack) [](https://github.com/igniterealtime/Smack) [**Smack**](https://github.com/igniterealtime/Smack)
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIwMjEwOTYyNjddfQ==
+-->
