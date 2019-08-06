@@ -24,8 +24,11 @@ MyExercise source code
 - DisplayingBitmap:  显示Bitmap
 - meep: Meep儿童游戏机app软件集合.
 - FilterPro:  使用Canvas 编辑的图片滤镜
-- HelloFPS:   简单的开源Unity 3D FPS游戏（fu'jiao'cheng）
+- HelloFPS:   简单的开源Unity 3D FPS游戏（附教程）
+- Market:   蘑菇软件应用市场。
+- MogooPing:  蘑菇屏
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzExMzM3MTA1LC0xNTc0OTIyNDksMTE1Mj
-c2ODQ4MiwtNDg2NTgzNTYwLC0yMDM5Njg3NTY1XX0=
+eyJoaXN0b3J5IjpbMTQwMzgwOTkzMiwtMTU3NDkyMjQ5LDExNT
+I3Njg0ODIsLTQ4NjU4MzU2MCwtMjAzOTY4NzU2NV19
 -->
