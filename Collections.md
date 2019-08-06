@@ -123,7 +123,7 @@
 
 **[TranslationForAndroid](https://github.com/zoozooll/TranslationForAndroid)** **Android Res strings translation tool**
 
-**[Google android develop source code](https://android.googlesource.com/platform/development.git)** It may
+**[Google android develop source code](https://android.googlesource.com/platform/development.git)** It may be blocked by the Great Fire Wall. Use [Mirror](https://github.com/aosp-mirror/platform_development/tree/master/samples) instead.
 
 [**Jasonchenlijian /**](https://github.com/Jasonchenlijian/FastBle) [](https://github.com/Jasonchenlijian/FastBle) [**FastBle**](https://github.com/Jasonchenlijian/FastBle)
 
@@ -182,5 +182,5 @@
 [**igniterealtime /**](https://github.com/igniterealtime/Smack) [](https://github.com/igniterealtime/Smack) [**Smack**](https://github.com/igniterealtime/Smack)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTU1MTYxNCwxMjU2Njk2MzhdfQ==
+eyJoaXN0b3J5IjpbLTE5NTg2NDI5MzgsMTI1NjY5NjM4XX0=
 -->
