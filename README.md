@@ -30,9 +30,9 @@ MyExercise source code
 - ~~orion-viewer-master:  过时~~ 最新应用可以通过[Source Forge LINK](https://sourceforge.net/p/orion-viewer/code/ci/master/tree/)查看
 - TwentyFourPointPro 二十四点游戏DEMO
 - WagonWar cocos2d-x游戏项目
-- bw121_android： shao'ko
+- bw121_android： 烧烤仪项目
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDAxMzQzNDksLTMwNzA3NDgzMywxND
-AzODA5OTMyLC0xNTc0OTIyNDksMTE1Mjc2ODQ4MiwtNDg2NTgz
-NTYwLC0yMDM5Njg3NTY1XX0=
+eyJoaXN0b3J5IjpbMTc0NjIyNDcyOSwtMzA3MDc0ODMzLDE0MD
+M4MDk5MzIsLTE1NzQ5MjI0OSwxMTUyNzY4NDgyLC00ODY1ODM1
+NjAsLTIwMzk2ODc1NjVdfQ==
 -->
