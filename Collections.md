@@ -128,6 +128,8 @@
 
 [**Jasonchenlijian /**](https://github.com/Jasonchenlijian/FastBle) [](https://github.com/Jasonchenlijian/FastBle) [**FastBle**](https://github.com/Jasonchenlijian/FastBle)
 
+[**Crystal Range Seekbar /**](https://github.com/syedowaisali/crystal-range-seekbar) 
+
 [**wandersnail /**](https://github.com/wandersnail/easyble) [](https://github.com/wandersnail/easyble) [**easyble**](https://github.com/wandersnail/easyble)
 
 [**Tencent /**](https://github.com/Tencent/tinker) [](https://github.com/Tencent/tinker) [**tinker**](https://github.com/Tencent/tinker)
